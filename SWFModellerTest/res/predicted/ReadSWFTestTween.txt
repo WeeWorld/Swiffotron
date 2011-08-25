@@ -1,0 +1,100 @@
+SWF stage=550,400, fps=12, bg=#FFFFFF
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect 57.5,65.5->156.5,282.5]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=204, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=2220,1320 fill0/1=,[Solid: Colour=Color [A=255, R=204, G=0, B=0]] line=1]
+            L0,1620 L-820,0 L0,-1620 L820,0 
+            [style change move=3120,5640 fill0/1=, line=]
+            L-1960,0 L0,-1620 L1960,0 L0,1620
+        }
+    }
+    Character '__cid##2'
+    {
+        StartBounds: [Rect 73.5,77.5->175.5,164.5]
+        EndBounds: [Rect 308.45,111.45->474.9,336.15]
+        StartEdgeBounds: [Rect 74,78->175,164]
+        EndEdgeBounds: [Rect 308.95,111.95->474.4,335.65]
+        Original format: DefineMorphShape2
+        StartShape; WithStyle? True
+        {
+            Fill#1: [Solid: StartColour=Color [A=255, R=204, G=0, B=0], EndColour=Color [A=255, R=204, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, startwidth=20,  endwidth=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  startcolour=Color [A=255, R=0, G=0, B=0],  endcolour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1480,1560 fill0/1=, line=1]
+            L2020,0 L0,1720 L-2020,0 L0,-1720 
+            [style change move=, fill0/1=[Solid: StartColour=Color [A=255, R=204, G=0, B=0], EndColour=Color [A=255, R=204, G=0, B=0]], line=]
+            L2020,0 L0,1720 L-2020,0 L0,-1720
+        }
+        EndShape; WithStyle? True
+        {
+            Fill#1: [Solid: StartColour=Color [A=255, R=204, G=0, B=0], EndColour=Color [A=255, R=204, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, startwidth=20,  endwidth=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  startcolour=Color [A=255, R=0, G=0, B=0],  endcolour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=6179,3680 fill0/1=, line=]
+            C1983,-2882:37,2882 C2579,1003:-2579,717 C841,2627:-2861,-2627 L0,-1720 C1983,-2882:37,2882 C2579,1003:-2579,717
+            C841,2627:-2861,-2627 L0,-1720
+        }
+    }
+    Character '__cid##3'
+    {
+        Bounds: [Rect 308.45,111.45->474.9,336.15]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=204, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=8199,5400 fill0/1=,[Solid: Colour=Color [A=255, R=204, G=0, B=0]] line=1]
+            C841,2627:-2861,-2627 L0,-1720 C1983,-2882:37,2882 C2579,1003:-2579,717
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[Shape DefineShape4:64 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    Frame# 2 ;
+    Frame# 3 ;
+    Frame# 4 ;
+    Frame# 5 ;
+    Frame# 6 ;
+    Frame# 7 ;
+    Frame# 8 ;
+    Frame# 9 ;
+    Frame# 10
+    {
+        RemoveObject layer=[layer]
+        PlaceObject char=[MorphShape DefineMorphShape2:148 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    Frame# 11
+    {
+        PlaceObject (move) char=none, layer=[layer], name=none, ratio=9362, matrix=none, cxform=none, clipDepth=none
+    }
+    Frame# 12
+    {
+        PlaceObject (move) char=none, layer=[layer], name=none, ratio=18725, matrix=none, cxform=none, clipDepth=none
+    }
+    Frame# 13
+    {
+        PlaceObject (move) char=none, layer=[layer], name=none, ratio=28087, matrix=none, cxform=none, clipDepth=none
+    }
+    Frame# 14
+    {
+        PlaceObject (move) char=none, layer=[layer], name=none, ratio=37449, matrix=none, cxform=none, clipDepth=none
+    }
+    Frame# 15
+    {
+        PlaceObject (move) char=none, layer=[layer], name=none, ratio=46811, matrix=none, cxform=none, clipDepth=none
+    }
+    Frame# 16
+    {
+        PlaceObject (move) char=none, layer=[layer], name=none, ratio=56174, matrix=none, cxform=none, clipDepth=none
+    }
+    Frame# 17
+    {
+        RemoveObject layer=[layer]
+        PlaceObject char=[Shape DefineShape4:66 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+}

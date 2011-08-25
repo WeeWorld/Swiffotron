@@ -1,0 +1,134 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{EDC941FF-F04E-4087-A3D0-1174F1AABC14}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SWFModellerTestExpress</RootNamespace>
+    <AssemblyName>SWFModellerTestExpress</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;EXPRESS2010</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;EXPRESS2010</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>SWFProcessing.SWFModeller.Test.Express.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Express\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs" />
+    <Compile Include="SWFReaderTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx" />
+    <EmbeddedResource Include="res\AccessModifiers.swf" />
+    <EmbeddedResource Include="res\AssembleExceptions.swf" />
+    <EmbeddedResource Include="res\AssembleRedCircle.swf" />
+    <EmbeddedResource Include="res\AssembleSimplestTimelineScript.swf" />
+    <EmbeddedResource Include="res\AssembleSwitch.swf" />
+    <EmbeddedResource Include="res\predicted\AccessModifiers.txt" />
+    <EmbeddedResource Include="res\predicted\AssembleExceptions.txt" />
+    <EmbeddedResource Include="res\predicted\AssembleRedCircle.txt" />
+    <EmbeddedResource Include="res\predicted\AssembleSimplestTimelineScript.txt" />
+    <EmbeddedResource Include="res\predicted\AssembleSwitch.txt" />
+    <EmbeddedResource Include="res\predicted\ReadAccessories.txt" />
+    <EmbeddedResource Include="res\predicted\ReadBlueCircle.txt" />
+    <EmbeddedResource Include="res\predicted\ReadBothCirclesTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadClassBindingTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadComplexShape.txt" />
+    <EmbeddedResource Include="res\predicted\ReadDeepNestedSWFTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadExceptions.txt" />
+    <EmbeddedResource Include="res\predicted\ReadFonts.txt" />
+    <EmbeddedResource Include="res\predicted\ReadImages.txt" />
+    <EmbeddedResource Include="res\predicted\ReadKeyframes.txt" />
+    <EmbeddedResource Include="res\predicted\ReadMulticlassTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadRedCircleTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadShapeTweenWithBitmaps.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSimpleSWFTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSWFHasBool.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSWFTestBlobs.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSWFTestTween.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSWFTestTweenCompressed.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSwiffotronLogo.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSwitch.txt" />
+    <EmbeddedResource Include="res\predicted\ReadText.txt" />
+    <EmbeddedResource Include="res\predicted\ReadTimelineSWFTest.txt" />
+    <EmbeddedResource Include="res\ReadAccessories.swf" />
+    <EmbeddedResource Include="res\ReadBlueCircle.swf" />
+    <EmbeddedResource Include="res\ReadBothCirclesTest.swf" />
+    <EmbeddedResource Include="res\ReadClassBindingTest.swf" />
+    <EmbeddedResource Include="res\ReadComplexShape.swf" />
+    <EmbeddedResource Include="res\ReadDeepNestedSWFTest.swf" />
+    <EmbeddedResource Include="res\ReadExceptions.swf" />
+    <EmbeddedResource Include="res\ReadFonts.swf" />
+    <EmbeddedResource Include="res\ReadImages.swf" />
+    <EmbeddedResource Include="res\ReadKeyframes.swf" />
+    <EmbeddedResource Include="res\ReadMulticlassTest.swf" />
+    <EmbeddedResource Include="res\ReadRedCircleTest.swf" />
+    <EmbeddedResource Include="res\ReadShapeTweenWithBitmaps.swf" />
+    <EmbeddedResource Include="res\ReadSimpleSWFTest.swf" />
+    <EmbeddedResource Include="res\ReadSWFHasBool.swf" />
+    <EmbeddedResource Include="res\ReadSWFTestBlobs.swf" />
+    <EmbeddedResource Include="res\ReadSWFTestTween.swf" />
+    <EmbeddedResource Include="res\ReadSwiffotronLogo.swf" />
+    <EmbeddedResource Include="res\ReadSwitch.swf" />
+    <EmbeddedResource Include="res\ReadText.swf" />
+    <EmbeddedResource Include="res\ReadTimelineSWFTest.swf" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ExpressTest\ExpressTest.csproj">
+      <Project>{F97FDA69-986E-47F4-B76F-D60C1C448D7F}</Project>
+      <Name>ExpressTest</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SWFModeller\SWFModeller.csproj">
+      <Project>{E584EF20-EB00-463C-8E57-2B3F5D3A5680}</Project>
+      <Name>SWFModeller</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\express\SWFModellerTestExpress.testSet.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

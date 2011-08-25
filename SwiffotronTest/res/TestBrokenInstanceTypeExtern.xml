@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <swf base="store://store/miscparts.blank.swf" id="flat">
+
+    <swfout store="store://store/TestBrokenInstanceTypeExtern.swf" />
+
+    <!-- Note the missing shoes src -->
+    <instance id="emotion_mc"     type="extern" src="store://store/miscparts.blank.swf" class="com.swiffotron.nowt_mc"/>
+    <instance id="body_mc"        type="extern" src="store://store/miscparts.BadlyDrawnBeer.swf" x="99" y="90" class="com.swiffotron.beer_mc"/>
+    <instance id="eyelid_mc"      type="extern" src="store://store/miscparts.WeirdEyes.swf" class="com.swiffotron.eyelid_mc"/>
+    <instance id="shoes_mc"       type="extern" src="store://store/miscparts.notexisty.swf" class="com.swiffotron.shoes_mc"/>
+
+  </swf>
+
+</swiffotron>

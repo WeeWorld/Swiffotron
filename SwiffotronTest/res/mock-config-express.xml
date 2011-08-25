@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="http://www.weeworld.com/ns/2010/02/11/swiffotron-config"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <con:store name="store"
+               classname="SWFProcessing.Swiffotron.Test.MockStore"
+               assembly="SwiffotronTestExpress, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+               init="mock" />
+
+    <con:cache name="cache"
+               classname="SWFProcessing.Swiffotron.Test.MockCache"
+               assembly="SwiffotronTestExpress, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+               init="mock" />
+
+    <con:swfprefs>
+        <con:stricttaglength>true</con:stricttaglength>
+        <con:compression>true</con:compression>
+        <con:debugcode>false</con:debugcode>
+    </con:swfprefs>
+
+</con:config>

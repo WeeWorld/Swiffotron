@@ -1,0 +1,559 @@
+SWF stage=550,400, fps=12, bg=#FFFFFF
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect 5,12->82,62]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=204, B=255]]
+            Fill#2: [Solid: Colour=Color [A=0, R=0, G=0, B=0]]
+            Fill#3: [Solid: Colour=Color [A=0, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=0, R=0, G=0, B=0]]
+            [style change move=1630,985 fill0/1=,[Solid: Colour=Color [A=0, R=255, G=0, B=0]] line=]
+            L5,15 L0,15 L5,15 L0,15 L0,15 L-5,15 L-5,15 L-5,15 L-10,15 L-10,15 L-10,15 L-15,15 L-26,14 C-9,6:-10,5
+            L-26,5 L-29,5 L-30,-6 L-35,-9 L-30,-15 L-15,-15 L-15,-15 L-10,-15 L-10,-15 L-5,-15 L-5,-15 L-5,-15 L0,-15
+            L0,-15 L0,-15 L5,-15 L0,-15 L5,-15 L10,-15 L10,-15 L15,-15 L15,-15 L25,-15 L20,-10 L25,-5 L29,-3 L1,-2
+            L29,6 L36,9 L24,15 L20,16 L16,14 L10,15 L5,15 L10,15 
+            [style change move=860,880 fill0/1=, line=]
+            L29,6 L36,9 L24,15 L20,16 L16,14 L10,15 L5,15 L10,15 L5,15 L0,15 L5,15 L0,15 L0,15 L-5,15 L-5,15 L-5,15
+            L-10,15 L-10,15 L-10,15 L-15,15 L-26,14 L-19,11 L-25,5 L-30,5 L-30,-6 L-35,-9 L-30,-15 L-15,-15 L-15,-15
+            L-10,-15 L-10,-15 L-5,-15 L-5,-15 L-5,-15 L0,-15 L0,-15 L0,-15 L5,-15 L0,-15 L5,-15 L10,-15 L10,-15 L15,-15
+            L15,-15 L25,-15 L20,-10 L25,-5 L29,-3 L1,-2 
+            [style change move=440,400 fill0/1=, line=]
+            L0,135 L0,135 L0,75 L-5,15 L-5,15 L-10,15 L-15,15 L-15,10 L-30,5 L-40,-10 L-20,-15 L-10,-15 L-5,-15 L-5,-15
+            L0,-60 L0,-90 L0,-90 L0,-60 L-45,0 L-35,10 L-20,0 L-40,-10 L-20,-15 L-10,-15 L-5,-15 L-5,-15 L0,-15 L0,-15
+            L5,-15 L10,-15 L15,-15 L15,-15 L15,-10 L10,-4 L29,-7 L90,-26 L21,-8 L29,-2 L1,-3 L20,0 L35,10 L20,15 L10,15
+            L10,15 L5,15 L0,90 
+            [style change move=245,970 fill0/1=, line=]
+            L15,-15 L25,-15 L20,-10 L25,-5 L29,-3 L1,-2 L29,6 L36,9 L24,15 L20,16 L16,14 L10,15 L5,15 L10,15 L5,15
+            L0,15 L5,15 L0,15 L0,15 L-5,15 L-5,15 L-5,15 L-10,15 L-10,15 L-10,15 L-15,15 L-26,14 L-19,11 L-25,5 L-30,5
+            L-30,-6 L-35,-9 L-30,-15 L-15,-15 L-15,-15 L-10,-15 L-10,-15 L-5,-15 L-5,-15 L-5,-15 L0,-15 L0,-15 L0,-15
+            L5,-15 L0,-15 L5,-15 L10,-15 L10,-15 L15,-15
+        }
+    }
+    Character '__cid##10'
+    {
+        Bounds: [Rect -0.5,-7.5->115,124.35]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1128,0 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=2]
+            L17,0 C474,0:335,335 C336,336:0,474 C0,474:-336,335 C-317,318:-440,17 
+            [style change move=, fill0/1=, line=1]
+            L163,188 
+            [style change move=1128,0 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]],[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            L-98,112 C-112,125:-45,76 C-133,223:0,514 C0,494:140,294 C83,172:234,279 
+            [style change move=, fill0/1=, line=2]
+            L-52,1 C-474,0:-336,-336 C-335,-335:0,-474 C0,-474:335,-336 C330,-329:463,-6 
+            [style change move=, fill0/1=, line=1]
+            L112,-140
+        }
+    }
+    Character '__cid##11'
+    {
+        Bounds: [Rect -0.5,-6.5->115,124.35]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            [style change move=1119,1 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=1]
+            L26,-1 C474,0:335,335 C336,336:0,474 C0,474:-336,335 C-335,336:-474,0 L-69,-2 
+            [style change move=, fill0/1=, line=2]
+            C55,92:69,97 
+            [style change move=1119,1 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]],[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            L-134,254 C-80,152:-28,80 C-35,102:-12,144 C-10,127:0,290 C0,470:58,224 C52,203:146,241 
+            [style change move=, fill0/1=, line=1]
+            C-430,-23:-311,-311 C-335,-335:0,-474 C0,-474:335,-336 C327,-326:457,-8 
+            [style change move=, fill0/1=, line=2]
+            L61,-121
+        }
+    }
+    Character '__cid##12'
+    {
+        Bounds: [Rect -0.5,-9.5->115,121.35]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            [style change move=1144,0 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=1]
+            L1,0 C474,0:335,335 C336,336:0,474 C0,474:-336,335 C-317,318:-440,17 
+            [style change move=, fill0/1=, line=2]
+            L23,128 
+            [style change move=1197,2289 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=1]
+            L-52,1 C-474,0:-336,-336 C-335,-335:0,-474 C0,-474:335,-336 C336,-335:473,0 
+            [style change move=, fill0/1=, line=2]
+            L36,-180 
+            [style change move=1144,0 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]],[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            C-144,729:0,311 C0,154:93,527 L104,568
+        }
+    }
+    Character '__cid##13'
+    {
+        Bounds: [Rect -0.5,-1.35->115,115]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=0, G=204, B=0]]
+            Fill#2: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#3: [line cap Round-Round, Round join, width=30,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#4: [line cap Round-Round, Round join, width=40,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#5: [line cap Round-Round, Round join, width=45,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#6: [line cap Round-Round, Round join, width=55,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#7: [line cap Round-Round, Round join, width=60,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#8: [line cap Round-Round, Round join, width=70,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#9: [line cap Round-Round, Round join, width=80,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#10: [line cap Round-Round, Round join, width=85,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#11: [line cap Round-Round, Round join, width=95,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#12: [line cap Round-Round, Round join, width=100,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#13: [line cap Round-Round, Round join, width=110,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#14: [line cap Round-Round, Round join, width=120,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#15: [line cap Round-Round, Round join, width=125,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#16: [line cap Round-Round, Round join, width=135,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#17: [line cap Round-Round, Round join, width=140,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#18: [line cap Round-Round, Round join, width=150,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#19: [line cap Round-Round, Round join, width=160,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#20: [line cap Round-Round, Round join, width=165,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#21: [line cap Round-Round, Round join, width=175,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#22: [line cap Round-Round, Round join, width=180,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#23: [line cap Round-Round, Round join, width=190,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#24: [line cap Round-Round, Round join, width=200,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#25: [line cap Round-Round, Round join, width=205,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#26: [line cap Round-Round, Round join, width=215,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=51, B=204]]
+            Line#27: [line cap Round-Round, Round join, width=215,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#28: [line cap Round-Round, Round join, width=215,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=204]]
+            Line#29: [line cap Round-Round, Round join, width=200,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#30: [line cap Round-Round, Round join, width=190,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#31: [line cap Round-Round, Round join, width=180,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#32: [line cap Round-Round, Round join, width=175,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#33: [line cap Round-Round, Round join, width=165,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#34: [line cap Round-Round, Round join, width=150,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#35: [line cap Round-Round, Round join, width=140,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#36: [line cap Round-Round, Round join, width=135,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#37: [line cap Round-Round, Round join, width=120,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#38: [line cap Round-Round, Round join, width=110,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#39: [line cap Round-Round, Round join, width=100,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#40: [line cap Round-Round, Round join, width=95,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#41: [line cap Round-Round, Round join, width=80,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#42: [line cap Round-Round, Round join, width=70,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#43: [line cap Round-Round, Round join, width=55,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#44: [line cap Round-Round, Round join, width=45,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#45: [line cap Round-Round, Round join, width=40,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#46: [line cap Round-Round, Round join, width=30,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#47: [line cap Round-Round, Round join, width=15,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#48: [line cap Round-Round, Round join, width=5,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#49: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=204, G=255, B=0]]
+            Line#50: [line cap Round-Round, Round join, width=215,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            [style change move=1954,1954 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=1]
+            C-335,336:-474,0 C-474,0:-336,-336 C-335,-335:0,-474 C0,-474:335,-336 C336,-335:474,0 C474,0:335,335 C336,336:0,474
+            C0,474:-336,335 
+            [style change move=1100,80 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]], line=50]
+            L12,1016 C8,671:0,413
+        }
+    }
+    Character '__cid##14'
+    {
+        Bounds: [Rect -0.5,-8.5->115,134.35]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            [style change move=1149,0 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=1]
+            C471,1:334,334 C336,336:0,474 C0,474:-336,335 C-306,307:-423,27 
+            [style change move=, fill0/1=, line=2]
+            L-85,389 
+            [style change move=1149,0 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]],[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            C102,206:71,384 C78,422:0,288 C0,92:-111,572 L-64,324 
+            [style change move=, fill0/1=, line=1]
+            L-80,2 C-474,0:-336,-336 C-335,-335:0,-474 C0,-474:335,-336 C336,-335:474,0 L4,0 
+            [style change move=, fill0/1=, line=2]
+            C-51,-102:-58,-58
+        }
+    }
+    Character '__cid##15'
+    {
+        Bounds: [Rect -0.5,-8.5->115,134.35]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            [style change move=1243,4 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=1]
+            C411,31:300,300 C336,336:0,474 C0,474:-336,335 C-274,274:-366,51 
+            [style change move=, fill0/1=, line=2]
+            C-119,244:-135,154 
+            [style change move=1243,4 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]],[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            C122,152:82,211 C133,341:0,422 C0,140:-72,219 C-71,215:3,176 C2,132:-122,254 L-6,13 
+            [style change move=, fill0/1=, line=1]
+            L-169,11 C-474,0:-336,-336 C-335,-335:0,-474 C0,-474:335,-336 C336,-335:474,0 L98,4 
+            [style change move=, fill0/1=, line=2]
+            C-74,-93:-89,-71
+        }
+    }
+    Character '__cid##16'
+    {
+        Bounds: [Rect -0.5,-7.5->115,128.35]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            [style change move=1237,3 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=1]
+            C415,30:302,302 C336,336:0,474 C0,474:-336,335 C-310,311:-428,23 
+            [style change move=, fill0/1=, line=2]
+            L-236,269 
+            [style change move=1237,3 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]],[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            C65,79:72,80 C145,161:61,77 C89,109:14,374 C8,187:-11,170 C0,382:-280,423 C-67,102:-117,141 
+            [style change move=, fill0/1=, line=1]
+            L-71,2 C-474,0:-336,-336 C-335,-335:0,-474 C0,-474:335,-336 C336,-335:474,0 L92,3 
+            [style change move=, fill0/1=, line=2]
+            L-117,-143
+        }
+    }
+    Character '__cid##17'
+    {
+        Bounds: [Rect -0.5,-6.5->115,122.35]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            [style change move=1184,1 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]],[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=2]
+            L223,145 C197,128:90,98 C118,126:52,180 C56,194:0,318 C0,224:-82,167 C-66,135:-143,139 L-284,253 C-101,92:-82,90
+            [style change move=, fill0/1=, line=1]
+            C463,-6:329,-330 C336,-335:0,-474 C0,-474:-336,-336 C-321,-321:-449,-13 L-39,-1 C-474,0:-336,335 C-335,336:0,474
+            C0,474:335,335 C336,336:474,0 L17,0 
+            [style change move=, fill0/1=, line=2]
+            C-67,74:-55,73 
+            [style change move=1000,-120 fill0/1=, line=]
+            C19,14:165,107
+        }
+    }
+    Character '__cid##18'
+    {
+        Bounds: [Rect -0.5,-0.5->115,117.35]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            [style change move=1103,1 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]],[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=2]
+            C511,135:244,256 C302,317:0,581 C0,225:-380,398 C-147,154:-153,124 L-101,77 
+            [style change move=, fill0/1=, line=1]
+            C326,-64:249,-250 C336,-335:0,-474 C0,-474:-336,-336 C-335,-335:-474,0 L-42,1 C-447,14:-321,320 C-335,336:0,474
+            C0,474:335,335 C336,336:474,0 L234,-22 
+            [style change move=, fill0/1=, line=2]
+            C-74,52:-45,17
+        }
+    }
+    Character '__cid##19'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:167 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+        Frame# 2
+        {
+            PlaceObject (move) char=[Shape DefineShape4:175 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 3
+        {
+            PlaceObject (move) char=[Shape DefineShape4:137 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 4
+        {
+            PlaceObject (move) char=[Shape DefineShape4:144 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 5
+        {
+            PlaceObject (move) char=[Shape DefineShape4:131 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 6
+        {
+            PlaceObject (move) char=[Shape DefineShape4:498 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 7
+        {
+            PlaceObject (move) char=[Shape DefineShape4:135 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 8
+        {
+            PlaceObject (move) char=[Shape DefineShape4:146 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 9
+        {
+            PlaceObject (move) char=[Shape DefineShape4:145 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 10
+        {
+            PlaceObject (move) char=[Shape DefineShape4:152 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 11
+        {
+            PlaceObject (move) char=[Shape DefineShape4:132 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##2'
+    {
+        Bounds: [Rect -0.5,-0.5->110.5,105.5]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1197,100 fill0/1=, line=1]
+            C-284,-44:-212,87 C-144,58:-177,159 C-86,67:-60,58 C-114,109:0,66 L-10,281 L-10,199 C0,203:126,134 C98,105:196,78
+            C86,34:57,71 L87,133 C52,81:60,43 C83,58:135,20 
+            [style change move=0,0 fill0/1=, line=0 {new lines [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]}]
+            [style change move=1280,80 fill0/1=, line=1]
+            L0,-20 L-240,0 L-120,0 C-436,37:-246,276 C-238,268:0,419 C0,388:400,293 C179,131:220,73 C223,75:218,0
+            C431,0:270,-239 C259,-231:0,-350 C0,-194:-90,-218 C-85,-207:-144,-181 C-145,-181:-165,-106 C-175,-113:-156,0
+            L-88,6 C-45,10:-67,44
+        }
+    }
+    Character '__cid##20'
+    {
+        Bounds: [Rect 9,16->82,67]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=204, B=255]]
+            [style change move=1630,1105 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=204, B=255]] line=]
+            L5,15 L0,15 L5,15 L0,15 L0,15 L-5,15 L-5,15 L-5,15 L-10,15 L-10,15 L-10,15 L-15,15 L-26,14 C-9,6:-10,5
+            L-26,5 L-29,5 L-30,-6 L-35,-9 L-30,-15 L-15,-15 L-15,-15 L-10,-15 L-10,-15 L-5,-15 L-5,-15 L-5,-15 L0,-15
+            L0,-15 L0,-15 L5,-15 L0,-15 L5,-15 L10,-15 L10,-15 L15,-15 L15,-15 L25,-15 L20,-10 L25,-5 L29,-3 L1,-2
+            L29,6 L36,9 L24,15 L20,16 L16,14 L10,15 L5,15 L10,15 
+            [style change move=1000,320 fill0/1=, line=]
+            L35,10 L25,15 L15,15 L10,15 L5,15 L5,15 L5,15 L0,15 L0,30 L0,60 L0,60 L0,60 L-5,15 L-5,15 L-10,15 L-15,15
+            L-15,15 L-16,14 L-19,16 L-5,15 L15,10 L15,5 L35,10 L20,15 L10,15 L10,15 L5,15 L0,15 L-5,15 L-5,15 L-10,15
+            L-15,15 L-15,10 L-31,3 L-59,2 L-41,-8 L-159,-22 L-20,-15 L-10,-15 L-5,-15 L-5,-15 L0,-15 L0,-15 L0,-15
+            L0,-15 L5,-15 L5,-15 L10,-15 L20,-15 L30,-15 L30,-15 L5,-15 L10,-15 L15,-15 L15,-15 L15,-15 L15,-15 L15,-15
+            L10,-15 L0,-15 L0,-15 L0,-15 L0,-15 L0,-15 L-15,-10 L-30,15 L-30,16 L-15,9 L-45,10 L-15,10 L-31,4 L-19,1
+            L-40,-10 L-20,-15 L-10,-15 L-5,-15 L-5,-15 L0,-15 L0,-15 L5,-15 L10,-15 L15,-15 L30,-15 L30,-15 L60,-30
+            L50,-25 L10,-3 L29,-4 L1,-3 L100,0 
+            [style change move=340,980 fill0/1=, line=]
+            L29,6 L36,9 L24,15 L20,16 L16,14 L10,15 L5,15 L10,15 L5,15 L0,15 L5,15 L0,15 L0,15 L-5,15 L-5,15 L-5,15
+            L-10,15 L-10,15 L-10,15 L-15,15 L-26,14 C-9,6:-10,5 L-25,5 L-30,5 L-30,-6 L-35,-9 L-30,-15 L-15,-15 L-15,-15
+            L-10,-15 L-10,-15 L-5,-15 L-5,-15 L-5,-15 L0,-15 L0,-15 L0,-15 L5,-15 L0,-15 L5,-15 L10,-15 L10,-15 L15,-15
+            L15,-15 L25,-15 L20,-10 L25,-5 L29,-3 L1,-2 
+            [style change move=805,1070 fill0/1=, line=]
+            L15,-15 L25,-15 L20,-10 L25,-5 L29,-3 L1,-2 L29,6 L36,9 L24,15 L20,16 L16,14 L10,15 L5,15 L10,15 L5,15
+            L0,15 L5,15 L0,15 L0,15 L-5,15 L-5,15 L-5,15 L-10,15 L-10,15 L-10,15 L-15,15 L-26,14 L-19,11 L-25,5 L-30,5
+            L-30,-6 L-35,-9 L-30,-15 L-15,-15 L-15,-15 L-10,-15 L-10,-15 L-5,-15 L-5,-15 L-5,-15 L0,-15 L0,-15 L0,-15
+            L5,-15 L0,-15 L5,-15 L10,-15 L10,-15 L15,-15
+        }
+    }
+    Character '__cid##21'
+    {
+        Bounds: [Rect 12,14->94,68]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=204, B=255]]
+            [style change move=1734,291 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=204, B=255]] line=]
+            L26,8 L35,11 L25,15 L15,15 L10,15 L15,15 L10,15 L5,15 L5,15 L0,15 L0,15 L0,15 L0,15 L0,15 L-5,15 L-10,15
+            L-10,15 L-10,15 L-20,15 L10,15 L10,15 L15,15 L10,15 L5,15 L5,15 L0,15 L0,15 L0,15 L0,15 L0,15 L0,15 L0,15
+            L0,15 L0,15 L-5,15 L-10,15 L-10,15 L-20,15 L-30,15 L-30,16 L-15,9 L-40,5 L-340,5 L-40,-10 L-20,-15 L-10,-15
+            L-5,-15 L-5,-15 L0,-15 L0,-15 L5,-15 L10,-15 L15,-15 L20,-10 L350,-15 L20,-15 L-10,-15 L-10,-15 L-40,-16
+            L-30,-15 L-25,-14 L-10,-15 L-10,-15 L-5,-15 L0,-15 L0,-15 L0,-15 L0,-15 L0,-15 L5,-15 L10,-15 L15,-15
+            L30,-15 L20,-10 L5,-3 L-50,3 L-35,10 L-100,0 L-40,-10 L-20,-15 L-10,-15 L-5,-15 L-5,-15 L0,-15 L0,-15
+            L0,-15 L5,-15 L10,-15 L10,-15 L15,-10 C5,-3:5,0 L29,-4 L1,-3 L35,10 L45,0 L40,-10 L100,0 L34,11 
+            [style change move=1649,986 fill0/1=, line=]
+            L36,9 L24,15 L20,16 L16,14 L10,15 L5,15 L10,15 L5,15 L0,15 L5,15 L0,15 L0,15 L-5,15 L-5,15 L-5,15 L-10,15
+            L-10,15 L-10,15 L-15,15 L-26,14 L-19,11 L-26,5 L-29,5 L-30,-6 L-35,-9 L-30,-15 L-15,-15 L-15,-15 L-10,-15
+            L-10,-15 L-5,-15 L-5,-15 L-5,-15 L0,-15 L0,-15 L0,-15 L5,-15 L0,-15 L5,-15 L10,-15 L10,-15 L15,-15 L15,-15
+            L25,-15 L20,-10 L25,-5 L29,-3 L1,-2 L29,6 
+            [style change move=800,1080 fill0/1=, line=]
+            L10,-15 L15,-15 L15,-15 L25,-15 L20,-10 L25,-5 L29,-3 L1,-2 L29,6 L36,9 L24,15 L20,16 L16,14 L10,15 L5,15
+            L10,15 L5,15 L0,15 L5,15 L0,15 L0,15 L-5,15 L-5,15 L-5,15 L-10,15 L-10,15 L-10,15 L-15,15 L-26,14 L-19,11
+            L-25,5 L-30,5 L-30,-6 L-35,-9 L-30,-15 L-15,-15 L-15,-15 L-10,-15 L-10,-15 L-5,-15 L-5,-15 L-5,-15 L0,-15
+            L0,-15 L0,-15 L5,-15 L0,-15 L5,-15 L10,-15 
+            [style change move=525,1100 fill0/1=, line=]
+            L10,15 L5,15 L10,15 L5,15 L0,15 L5,15 L0,15 L0,15 L-5,15 L-5,15 L-5,15 L-10,15 L-10,15 L-10,15 L-15,15
+            L-26,14 L-19,11 L-25,5 L-30,5 L-30,-6 L-35,-9 L-30,-15 L-15,-15 L-15,-15 L-10,-15 L-10,-15 L-5,-15 L-5,-15
+            L-5,-15 L0,-15 L0,-15 L0,-15 L5,-15 L0,-15 L5,-15 L10,-15 L10,-15 L15,-15 L15,-15 L25,-15 L20,-10 L25,-5
+            L29,-3 L1,-2 L29,6 L36,9 L24,15 L20,16 L16,14
+        }
+    }
+    Character '__cid##3'
+    {
+        Bounds: [Rect -0.5,-0.5->110.5,101.5]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1180,80 fill0/1=, line=1]
+            C-328,4:-215,254 C-217,257:0,395 C0,256:228,360 C236,372:216,42 
+            [style change move=0,0 fill0/1=, line=0 {new lines [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]}]
+            [style change move=1280,80 fill0/1=, line=1]
+            L0,-20 L-240,0 L-120,0 C-436,37:-246,276 C-238,268:0,419 C0,388:400,293 C179,131:220,73 C223,75:218,0
+            C431,0:270,-239 C259,-231:0,-350 C0,-194:-90,-218 C-85,-207:-144,-181 C-145,-181:-165,-106 C-175,-113:-156,0
+            L-88,6 C-45,10:-67,44
+        }
+    }
+    Character '__cid##4'
+    {
+        Bounds: [Rect -0.5,-0.5->110.5,101.5]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1040,60 fill0/1=, line=1]
+            C29,1018:-29,902 
+            [style change move=0,0 fill0/1=, line=0 {new lines [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]}]
+            [style change move=1280,80 fill0/1=, line=1]
+            L0,-20 L-240,0 L-120,0 C-436,37:-246,276 C-238,268:0,419 C0,388:400,293 C179,131:220,73 C223,75:218,0
+            C431,0:270,-239 C259,-231:0,-350 C0,-194:-90,-218 C-85,-207:-144,-181 C-145,-181:-165,-106 C-175,-113:-156,0
+            L-88,6 C-45,10:-67,44
+        }
+    }
+    Character '__cid##5'
+    {
+        Bounds: [Rect -0.5,-0.5->110.5,101.5]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1200,120 fill0/1=, line=1]
+            C148,35:62,84 L68,99 C52,73:70,69 C87,84:48,143 C45,135:0,158 C0,297:-33,139 C-30,129:-78,71 C-29,26:-169,105
+            C-163,102:-138,131 
+            [style change move=0,0 fill0/1=, line=0 {new lines [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]}]
+            [style change move=1280,80 fill0/1=, line=1]
+            L0,-20 L-240,0 L-120,0 C-436,37:-246,276 C-238,268:0,419 C0,388:400,293 C179,131:220,73 C223,75:218,0
+            C431,0:270,-239 C259,-231:0,-350 C0,-194:-90,-218 C-85,-207:-144,-181 C-145,-181:-165,-106 C-175,-113:-156,0
+            L-88,6 C-45,10:-67,44
+        }
+    }
+    Character '__cid##6'
+    {
+        Bounds: [Rect -0.5,-0.5->110.5,107.5]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1240,0 fill0/1=, line=1]
+            C116,16:215,175 C156,126:113,123 C113,122:53,175 C54,176:0,247 C0,193:-55,95 C-21,36:-164,176 C-50,54:-134,211
+            C-133,191:-103,24 
+            [style change move=0,0 fill0/1=, line=0 {new lines [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]}]
+            [style change move=1280,80 fill0/1=, line=1]
+            L0,-20 L-240,0 L-120,0 C-436,37:-246,276 C-238,268:0,419 C0,388:400,293 C179,131:220,73 C223,75:218,0
+            C431,0:270,-239 C259,-231:0,-350 C0,-194:-90,-218 C-85,-207:-144,-181 C-145,-181:-165,-106 C-175,-113:-156,0
+            L-88,6 C-45,10:-67,44
+        }
+    }
+    Character '__cid##7'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:180 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+        Frame# 2
+        {
+            PlaceObject (move) char=[Shape DefineShape4:148 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 3
+        {
+            PlaceObject (move) char=[Shape DefineShape4:131 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 4
+        {
+            PlaceObject (move) char=[Shape DefineShape4:170 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 5
+        {
+            PlaceObject (move) char=[Shape DefineShape4:167 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##8'
+    {
+        Bounds: [Rect -0.5,-0.5->115,117.35]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            [style change move=1180,0 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=1]
+            C451,12:323,323 C336,336:0,474 C0,474:-336,335 C-335,336:-474,0 L-104,-4 
+            [style change move=, fill0/1=, line=2]
+            L159,51 
+            [style change move=1171,0 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            L9,0 
+            [style change move=1163,0 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]], line=]
+            L-9,0 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            C-154,3:-132,29 
+            [style change move=, fill0/1=, line=1]
+            C-283,66:-223,211 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=2]
+            C-26,27:-23,30 C-253,320:0,554 C0,413:375,306 C243,199:363,128 
+            [style change move=, fill0/1=, line=1]
+            C-408,-34:-298,-298 C-335,-335:0,-474 C0,-474:335,-336 L27,-26 
+            [style change move=, fill0/1=, line=2]
+            C195,-211:311,-66 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=1]
+            C132,-32:145,0 L9,0 
+            [style change move=1163,0 fill0/1=, line=]
+            L8,0
+        }
+    }
+    Character '__cid##9'
+    {
+        Bounds: [Rect -0.5,-7.5->115,129.35]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=255]]
+            Line#2: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1220,-140 fill0/1=, line=1]
+            C-46,69:-128,45 C-63,22:-41,21 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=2]
+            L203,-17 C474,0:335,335 C336,336:0,474 C0,474:-336,335 C-335,336:-474,0 L-45,-1 
+            [style change move=, fill0/1=, line=1]
+            L0,8 
+            [style change move=942,17 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]],[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            C-45,22:-17,21 C-32,39:-87,144 L-121,197 C-122,181:-74,169 C-104,236:0,194 C0,251:106,207 C86,167:173,168
+            L312,271 
+            [style change move=, fill0/1=, line=2]
+            L83,5 
+            [style change move=1017,2284 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            C-392,-40:-290,-290 C-335,-335:0,-474 C0,-474:335,-336 C262,-261:345,-57 
+            [style change move=1017,2284 fill0/1=, line=1]
+            L9,7 C198,166:96,120
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[Shape DefineShape:458 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[sprite '__cid##7'], layer=[layer], name=none, ratio=none, matrix=[t:200.3,128.5, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[sprite '__cid##19'], layer=[layer], name=none, ratio=none, matrix=[t:108.95,265.95, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    Frame# 2
+    {
+        PlaceObject (move) char=[Shape DefineShape:540 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+    }
+    Frame# 3
+    {
+        PlaceObject (move) char=[Shape DefineShape:554 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+    }
+}

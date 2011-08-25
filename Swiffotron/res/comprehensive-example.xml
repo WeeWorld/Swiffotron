@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="http://www.weeworld.com/ns/2010/02/11/swiffotron"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<swf base="store:123456" id="s123456" />
+
+	<swf base="store:123459" id="s123459" />
+
+	<swf base="store:123458" id="s1234568">
+
+		<modify qname="insFlange">
+			<settext>Hello</settext>
+		</modify>
+
+		<remove qname="insSplah"/>
+
+		<instance id="insThing2" src="insThing" type="instance" x="2" y="3" z="front" />
+
+		<modify qname="insThing3">
+			<swapmc qname="mcThing2"/>
+			<moveAbs x="2" y="3"/>
+		</modify>
+
+		<movieclip id="mcThing" type="movieclip" swf="s123459" src="mcThing"/>
+		<instance id="newInstance" type="movieclip" src="mcThing"/>
+
+		<modify qname="*">
+			<textreplace find="##name##" replace="Jeff"/>
+		</modify>
+		
+	</swf>
+	
+	<swf width="200" height="300" bgcolor="#ffffff" id="notreferenced">
+		
+		<swfout store="store:12345.swf" />
+		<pngout store="store:12345.png" overwrite="false"/>
+
+		<movieclip id="123456" type="swf" src="s123456"/>
+		<instance id="123456" type="movieclip" src="123456" y="25"/>
+
+		<movieclip id="123459" type="swf" src="s123459"/>
+		<instance id="123459" type="movieclip" src="123459"/>
+
+		<movieclip id="1234568" type="swf" src="s1234568"/>
+		<instance id="1234568" type="movieclip" src="1234568"/>
+
+	</swf>
+
+</swiffotron>

@@ -1,0 +1,33 @@
+SWF stage=550,400, fps=24, bg=#333333
+{
+    Character '__cid##1' = [Image (7825 bytes, DefineBitsJPEG2)]
+    Character '__cid##2'
+    {
+        Bounds: [Rect -3.15,21.95->395.85,338.8]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [NonSmoothClippedBitmap: Bitmap=(none), Pos=[t:0,0, sc:20,20, sk:0,0]]
+            Fill#2: [NonSmoothClippedBitmap: Bitmap=[Image (7825 bytes, DefineBitsJPEG2)], Pos=[t:-3.15,152.8, sc:21.8811,21.8811, sk:-8.840942,8.840942]]
+            [style change move=7917,4159 fill0/1=,[NonSmoothClippedBitmap: Bitmap=[Image (7825 bytes, DefineBitsJPEG2)], Pos=[t:-3.15,152.8, sc:21.8811,21.8811, sk:-8.840942,8.840942]] line=]
+            L-6477,2617 L-1503,-3720 L6477,-2617 L1503,3720
+        }
+    }
+    Character '__cid##3' = [Image (4779 bytes, DefineBits, JPEGTable 0 bytes)]
+    Character '__cid##4'
+    {
+        Bounds: [Rect 0,0->111,111]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [NonSmoothClippedBitmap: Bitmap=[Image (4779 bytes, DefineBits, JPEGTable 0 bytes)], Pos=[t:0,0, sc:20,20, sk:0,0]]
+            [style change move=, fill0/1=,[NonSmoothClippedBitmap: Bitmap=[Image (4779 bytes, DefineBits, JPEGTable 0 bytes)], Pos=[t:0,0, sc:20,20, sk:0,0]] line=]
+            L2220,0 L0,2220 L-2220,0 L0,-2220
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[Shape DefineShape:64 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[Shape DefineShape:34 bytes], layer=[layer], name=none, ratio=none, matrix=[t:319.95,80.95, sc:1.775604,1.775604, sk:0.4427185,-0.4427185], cxform=[add:[r:0, g:0, b:0.25, a:0], mult:[r:0.75, g:0.75, b:0.75]], clipDepth=none
+    }
+}

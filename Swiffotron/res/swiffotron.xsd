@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+  targetNamespace="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+
+  <simpleType name="zType">
+    <restriction base="string">
+      <pattern value="front|back|\-?[0-9]+" />
+    </restriction>
+  </simpleType>
+
+    <simpleType name="insRefTypeType">
+        <annotation>
+            <documentation>
+                Possible values are: 'movieclip' which references a movieclip by ID, 'swf' which
+                references a swf by ID and converts it into a movie clip, 'instance' which references
+                a movieclip via an existing instance of it, 'classname' which references a movieclip
+                that is bound to a class or 'extern' which references a swf file in the store which
+                is then loaded and converted into a movie clip.
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <pattern value="movieclip|swf|instance|extern" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="mcRefTypeType">
+        <annotation>
+            <documentation>
+                Possible values are: 'swf' which references a swf by ID and converts it into a movie
+                clip, or 'extern' which references a swf file in the store which is then loaded and
+                converted into a movie clip.
+            </documentation>
+        </annotation>
+        <restriction base="string">
+            <pattern value="swf|extern" />
+        </restriction>
+    </simpleType>
+
+    <simpleType name="vidContainerType">
+    <restriction base="string">
+      <pattern value="avi|mpg" />
+    </restriction>
+  </simpleType>
+
+  <complexType name="outputType">
+    <attribute name="store" type="string" use="required" />
+    <!-- TODO: The following bool value is probably good during development, but should
+    be false otherwise. -->
+    <attribute name="overwrite" type="boolean" default="true" />
+  </complexType>
+
+  <complexType name="vidoutType">
+    <complexContent>
+      <extension base="swf:outputType">
+        <attribute name="container" type="swf:vidContainerType" default="avi" />
+        <attribute name="compression" type="string" use="required" />
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="swfOutputType">
+    <complexContent>
+      <extension base="swf:outputType">
+        <attribute name="protected" default="false">
+          <!-- TODO: This should include a password. -->
+          <annotation>
+            <documentation>
+              Protect from import by another SWF.
+            </documentation>
+          </annotation>
+        </attribute>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="transformType">
+    <!-- TODO Maybe these should not have defaults. The absence of a value
+         should mean 'unmodified. Imagine a modification where all you want
+         to do is modify the depth for example, or where you only want to
+         change the X value. -->
+    <attribute name="x" type="decimal" default="0" />
+    <attribute name="y" type="decimal" default="0" />
+    <attribute name="rotate" type="decimal" default="0" />
+    <attribute name="scalex" type="decimal" default="1" />
+    <attribute name="scaley" type="decimal" default="1" />
+  </complexType>
+
+  <complexType name="transformWithDepthType">
+    <complexContent>
+      <extension base="swf:transformType">
+        <attribute name="z" type="swf:zType" default="front" />
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="transformRelativeToType">
+    <complexContent>
+      <extension base="swf:transformWithDepthType">
+        <attribute name="relativeTo" type="string">
+          <annotation>
+            <documentation>
+              Optional qname for an instance to move relative to. If omitted, an instance
+              moves relative to its current position. Depth is not relative to the referenced
+              instance; it is rather relative to everything on the stage, just like the
+              absolute positioning.
+            </documentation>
+          </annotation>
+        </attribute>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="removeType">
+    <attribute name="qname" type="string" use="required" />
+  </complexType>
+
+  <complexType name="swapmcType">
+    <attribute name="qname" type="string" use="required" />
+  </complexType>
+
+  <simpleType name="replaceLocationType">
+    <restriction base="string">
+      <pattern value="movieclip|actionscript" />
+    </restriction>
+  </simpleType>
+
+  <complexType name="replaceType">
+    <attribute name="type" type="swf:replaceLocationType" use="required" />
+    <attribute name="path" type="string" use="optional" default="*" />
+    <attribute name="recursive" type="boolean" use="optional" default="false" />
+  </complexType>
+
+  <complexType name="textreplaceType">
+    <sequence>
+      <element name="find" type="string" minOccurs="1" maxOccurs="1" />
+      <element name="replace" type="string" minOccurs="1" maxOccurs="1" />
+      <element name="location" type="swf:replaceType" minOccurs="1" maxOccurs="unbounded" />
+    </sequence>
+  </complexType>
+
+  <complexType name="settextType">
+    <!-- TODO: Add attributes to reference a text element. -->
+    <simpleContent>
+      <extension base="string"/>
+    </simpleContent>
+  </complexType>
+
+  <!-- TODO: Some elements/attributes are camel cased, some not. Camel case them all. Then fix any constants in code. -->
+
+  <complexType name="modifyType">
+    <choice minOccurs="1" maxOccurs="unbounded">
+      <element name="moveAbs" type="swf:transformWithDepthType" />
+      <element name="moveRel" type="swf:transformRelativeToType" />
+      <element name="settext" type="swf:settextType" />
+      <element name="swapmc" type="swf:swapmcType" />
+    </choice>
+    <!-- TODO: The name attribute is a pattern. This means we need to decide what to do in errors. E.g.
+     if you supply a pattern that matches all instances and apply a search replace to the text of a movie
+     clip, then it would be annoying if it errored. We need to either not error on these modifications, or
+     not error only if the name is a pattern. -->
+    <attribute name="qname" type="string" use="required" />
+  </complexType>
+  
+  
+  <!-- TODO: Consistency of terms.. id/name/swf etc etc. Esp. 'name' vs 'id'. -->
+
+  <complexType name="instanceType">
+    <complexContent>
+      <extension base="swf:transformRelativeToType">
+        <attribute name="type" type="swf:insRefTypeType" use="required" />
+        <attribute name="src" type="string" use="required" />
+        <attribute name="id" type="string" />
+        <attribute name="class" type="string">
+          <annotation>
+            <!-- This will be enforced in code. -->
+            <!-- TODO: If a SWF has no timeline class, we still require a class name here,
+                 even though it will not be used. A better constraint would be only to
+                 require class names for SWFs that have timeline classes, and throw an
+                 exception at the point of use. -->
+            <documentation>
+              A class name is required for instances created as 'extern' or 'swf' type. This is
+              the class name that the main timeline of the imported swf will adopt.
+            </documentation>
+          </annotation>
+        </attribute>
+      </extension>
+    </complexContent>
+  </complexType>
+
+  <complexType name="movieclipType">
+    <attribute name="swf" type="IDREF" use="optional"/>
+    <attribute name="type" type="swf:mcRefTypeType" use="required" />
+    <attribute name="id" type="string" use="required" />
+    <attribute name="src" type="string" use="required" />
+    <attribute name="cachekey" type="string" />
+    <attribute name="class" type="string">
+      <annotation>
+        <!-- This will be enforced in code. -->
+        <documentation>
+          A class name is required for instances created as 'extern' or 'swf' type. This is
+          the class name that the main timeline of the imported swf will adopt.
+        </documentation>
+      </annotation>
+    </attribute>
+    <!-- TODO: In code, if exportforscript is true, then a name must be set. -->
+    <attribute name="exportforscript" type="boolean" default="false" />
+    <attribute name="exportonfirstframe" type="boolean" default="false" />
+  </complexType>
+
+  <complexType name="swfType">
+    <choice minOccurs="0" maxOccurs="unbounded">
+      <element name="instance" type="swf:instanceType" /> <!-- TODO: Doc this. It creates things on the stage. -->
+      <element name="modify" type="swf:modifyType" /> <!-- TODO: Doc this. It modifies things on the stage. -->
+      <element name="remove" type="swf:removeType" /> <!-- TODO: Doc this. It removes things from the stage. -->
+      <element name="movieclip" type="swf:movieclipType" /> <!-- TODO: Doc this. It adds a movieclip to the dictionary that can later be instantiated. -->
+      <element name="textreplace" type="swf:textreplaceType" /> <!-- TODO: Doc this. It does text search and replaces within a SWF. -->
+      <element name="swfout" type="swf:swfOutputType" />
+      <element name="pngout" type="swf:outputType" />
+      <element name="vidout" type="swf:vidoutType" />
+    </choice>
+    <attribute name="bgcolor" type="string">
+      <annotation>
+        <documentation>
+          This is the background colour for the SWF, expressed as an HTML colour code, e.g.
+          '#FF0000', or 'red'.
+        </documentation>
+      </annotation>
+    </attribute>
+    <attribute name="height" type="integer" />
+    <attribute name="width" type="integer" />
+    <attribute name="id" type="ID" use="required">
+      <annotation>
+        <documentation>
+          An ID for this SWF which can be referenced from movieclip tags. This has no bearing on the output
+          SWF, but is used internally to organise data, and must be unique.
+        </documentation>
+      </annotation>
+    </attribute>
+    <attribute name="base" type="string">
+      <annotation>
+        <documentation>
+          This is a store reference to a SWF file which will be read in and will act as the basis for
+          the SWF generated for this tag. If omitted, then the SWF will be a blank SWF.
+        </documentation>
+      </annotation>
+    </attribute>
+  </complexType>
+
+  <element name="swiffotron">
+    <complexType>
+      <sequence>
+        <element name="swf" type="swf:swfType" maxOccurs="unbounded" minOccurs="1" />
+      </sequence>
+    </complexType>
+  </element>
+
+</schema>

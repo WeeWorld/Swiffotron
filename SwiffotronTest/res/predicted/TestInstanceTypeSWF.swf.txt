@@ -1,0 +1,488 @@
+SWF stage=200,215, fps=31, bg=#E2E2E2
+Document class:mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotron"; set *
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect 0,0->200,215]
+        Original format: DefineShape3
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=255, G=255, B=255]]
+            [style change move=4000,0 fill0/1=,[Solid: Colour=Color [A=0, R=255, G=255, B=255]] line=]
+            L0,4300 L-4000,0 L0,-4300 L4000,0
+        }
+    }
+    Character '__cid##10'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape3:29 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##11'
+    {
+        Class name:mn QName "EyesMain"; ns Package "com.swiffotron"; set *
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##2'], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##7', mn QName "eyes_3"; ns Package ""; set *], layer=[layer], name=colour_fill, ratio=none, matrix=[t:83.85,74.45, sc:1.640961,1.640961, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[Shape DefineShape:178 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##4'], layer=[layer], name=none, ratio=none, matrix=[t:88.1,79.8, sc:0.9324493,0.9324493, sk:0,0], cxform=[add:, mult:[r:0, g:0, b:0]], clipDepth=none
+            PlaceObject char=[sprite '__cid##4'], layer=[layer], name=none, ratio=none, matrix=[t:109.05,79.8, sc:-0.9324493,0.9324493, sk:0,0], cxform=[add:, mult:[r:0, g:0, b:0]], clipDepth=none
+            PlaceObject char=[sprite '__cid##4'], layer=[layer], name=none, ratio=none, matrix=[t:101.45,76, sc:0.4910431,0.4910431, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##10'], layer=[layer], name=bounds, ratio=none, matrix=[t:98.75,88.6, sc:1.199997,1.199997, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##2'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape3:33 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##3'
+    {
+        Bounds: [Rect 0.55,2.65->8.55,9.8]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=255, G=255, B=255]]
+            [style change move=153,57 fill0/1=,[Solid: Colour=Color [A=0, R=255, G=255, B=255]] line=]
+            C14,5:3,48 C3,46:-8,21 C-6,17:-46,2 L-60,-5 C-15,-5:-16,-47 C-16,-46:7,-19 C6,-17:60,-3 L74,3
+        }
+    }
+    Character '__cid##4'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:49 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##5'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##4'], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##4'], layer=[layer], name=none, ratio=none, matrix=[t:18,0, sc:-1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##6'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##4'], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:0.8135376,0.8031921, sk:0,0], cxform=[add:[r:0.046875, g:0.7226563, b:0.3710938, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+            PlaceObject char=[sprite '__cid##4'], layer=[layer], name=none, ratio=none, matrix=[t:15.8,0, sc:-0.8135376,0.8031921, sk:0,0], cxform=[add:[r:0.046875, g:0.7226563, b:0.3710938, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+        }
+    }
+    Character '__cid##7'
+    {
+        Class name:mn QName "eyes_3"; ns Package ""; set *
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##5'], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=[add:[r:0.6171875, g:0.7148438, b:0.234375, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+            PlaceObject char=[sprite '__cid##6'], layer=[layer], name=none, ratio=none, matrix=[t:1.1,0.75, sc:1,1, sk:0,0], cxform=[add:[r:0.6171875, g:0.7148438, b:0.234375, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+        }
+        Frame# 2 ;
+        Frame# 3 ;
+        Frame# 4 ;
+        Frame# 5
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.3046875, g:0.6875, b:0.8359375, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.3046875, g:0.6875, b:0.8359375, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+        }
+        Frame# 6 ;
+        Frame# 7 ;
+        Frame# 8 ;
+        Frame# 9 ;
+        Frame# 10
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.2070313, g:0.1054688, b:0, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.2070313, g:0.1054688, b:0, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+        }
+        Frame# 11 ;
+        Frame# 12 ;
+        Frame# 13 ;
+        Frame# 14 ;
+        Frame# 15
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.671875, g:0.7265625, b:0.765625, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.671875, g:0.7265625, b:0.765625, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+        }
+        Frame# 16 ;
+        Frame# 17 ;
+        Frame# 18 ;
+        Frame# 19 ;
+        Frame# 20
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.4414063, g:0.21875, b:0, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.4414063, g:0.21875, b:0, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+        }
+        Frame# 21 ;
+        Frame# 22 ;
+        Frame# 23 ;
+        Frame# 24 ;
+        Frame# 25
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.78125, g:0.5898438, b:0.015625, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.78125, g:0.5898438, b:0.015625, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
+        }
+        Frame# 26 ;
+        Frame# 27 ;
+        Frame# 28 ;
+        Frame# 29 ;
+    }
+    Character '__cid##8'
+    {
+        Bounds: [Rect 75.35,58.45->121.3,100.5]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=255, G=255, B=255]]
+            [style change move=2167,1450 fill0/1=[Solid: Colour=Color [A=0, R=255, G=255, B=255]], line=]
+            C-66,38:-18,6 C-47,16:-20,53 L-2,6 C-21,56:24,61 C14,39:26,27 L20,17 L15,10 C6,4:7,19 C11,31:13,74 C19,109:17,-6
+            L65,-241 L15,-17 L17,-34 C5,-16:86,-49 C80,-46:-8,-22 C-10,-27:-71,-58 L-94,-70 C-21,-12:-62,32 
+            [style change move=1869,1261 fill0/1=,[Solid: Colour=Color [A=0, R=255, G=255, B=255]] line=]
+            C51,17:19,58 C20,56:-23,61 C-15,40:-25,26 L-20,17 L-15,10 C-12,8:-29,81 L-12,-42 C-13,-55:-15,8 C-31,19:-18,35
+            L-8,-64 L-16,-17 L-17,-34 C-5,-17:-96,-33 C-89,-31:8,-22 C13,-34:50,-78 C54,-83:23,-15 C21,-12:90,44 C46,23:64,34
+            [style change move=1748,1787 fill0/1=, line=]
+            C-3,-1:-4,-31 L22,16 L3,1 C-11,17:-7,-2
+        }
+    }
+    Character '__cid##9'
+    {
+        Bounds: [Rect -19.65,-19.65->19.7,19.7]
+        Original format: DefineShape3
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=153, G=102, B=153]]
+            [style change move=394,394 fill0/1=,[Solid: Colour=Color [A=0, R=153, G=102, B=153]] line=]
+            L-787,0 L0,-787 L787,0 L0,787
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##11', mn QName "EyesMain"; ns Package "com.swiffotron"; set *], layer=[layer], name=eyes_mc, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	"stop"
+        string #2	""
+        string #3	"http://adobe.com/AS3/2006/builtin"
+        string #4	"flash.display"
+        string #5	"eyes_3"
+        string #6	"flash.display:MovieClip"
+        string #7	"flash.display:Sprite"
+        string #8	"flash.display:DisplayObjectContainer"
+        string #9	"flash.display:InteractiveObject"
+        string #10	"flash.display:DisplayObject"
+        string #11	"flash.events:EventDispatcher"
+        string #12	"Object"
+        string #13	"addFrameScript"
+        string #14	"frame1"
+        string #15	"EyesMain"
+        string #16	"com.swiffotron"
+        string #17	"EventDispatcher"
+        string #18	"flash.events"
+        string #19	"DisplayObject"
+        string #20	"InteractiveObject"
+        string #21	"DisplayObjectContainer"
+        string #22	"Sprite"
+        string #23	"MovieClip"
+        string #24	"MainTimeline"
+        string #25	"miscparts_blank_swf_swiffotron"
+        string #26	"com.swiffotron:EyesMain"
+        string #27	"colour_fill"
+        string #28	"bounds"
+        string #29	"miscparts_blank_swf_swiffotron:MainTimeline"
+        string #30	"eyes_mc"
+        ns #0	ns Ns "*"
+        ns #1	ns Private ""
+        ns #2	ns Package ""
+        ns #3	ns PackageInternal ""
+        ns #4	ns Ns "http://adobe.com/AS3/2006/builtin"
+        ns #5	ns Package "flash.display"
+        ns #6	ns Protected "eyes_3"
+        ns #7	ns StaticProtected "eyes_3"
+        ns #8	ns StaticProtected "flash.display:MovieClip"
+        ns #9	ns StaticProtected "flash.display:Sprite"
+        ns #10	ns StaticProtected "flash.display:DisplayObjectContainer"
+        ns #11	ns StaticProtected "flash.display:InteractiveObject"
+        ns #12	ns StaticProtected "flash.display:DisplayObject"
+        ns #13	ns StaticProtected "flash.events:EventDispatcher"
+        ns #14	ns StaticProtected "Object"
+        ns #15	ns Package "com.swiffotron"
+        ns #16	ns Package "flash.events"
+        ns #17	ns Package "miscparts_blank_swf_swiffotron"
+        ns #18	ns Protected "com.swiffotron:EyesMain"
+        ns #19	ns Protected "miscparts_blank_swf_swiffotron:MainTimeline"
+        ns set #0	(0 items)
+        ns set #1	(15 items)
+            - ns Private ""
+            - ns Private ""
+            - ns Package ""
+            - ns PackageInternal ""
+            - ns Ns "http://adobe.com/AS3/2006/builtin"
+            - ns Package "flash.display"
+            - ns Protected "eyes_3"
+            - ns StaticProtected "eyes_3"
+            - ns StaticProtected "flash.display:MovieClip"
+            - ns StaticProtected "flash.display:Sprite"
+            - ns StaticProtected "flash.display:DisplayObjectContainer"
+            - ns StaticProtected "flash.display:InteractiveObject"
+            - ns StaticProtected "flash.display:DisplayObject"
+            - ns StaticProtected "flash.events:EventDispatcher"
+            - ns StaticProtected "Object"
+        ns set #2	(1 items)
+            - ns Package "com.swiffotron"
+        ns set #3	(1 items)
+            - ns Package ""
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn Multiname "stop"; ns *; set {ns Private "", ns Private "", ns Package "", ns PackageInternal "", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "flash.display", ns Protected "eyes_3", ns StaticProtected "eyes_3", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"}
+        multiname #2	mn Multiname "addFrameScript"; ns *; set {ns Private "", ns Private "", ns Package "", ns PackageInternal "", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "flash.display", ns Protected "eyes_3", ns StaticProtected "eyes_3", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"}
+        multiname #3	mn Multiname "frame1"; ns *; set {ns Private "", ns Private "", ns Package "", ns PackageInternal "", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "flash.display", ns Protected "eyes_3", ns StaticProtected "eyes_3", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"}
+        multiname #4	mn Multiname "EyesMain"; ns *; set {ns Package "com.swiffotron"}
+        multiname #5	mn QName "Object"; ns Package ""; set *
+        multiname #6	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #7	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #8	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #9	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #10	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #11	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #12	mn QName "EyesMain"; ns Package "com.swiffotron"; set *
+        multiname #13	mn Multiname "eyes_3"; ns *; set {ns Package ""}
+        multiname #14	mn QName "eyes_3"; ns Package ""; set *
+        multiname #15	mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotron"; set *
+        multiname #16	mn QName "colour_fill"; ns Package "com.swiffotron"; set *
+        multiname #17	mn QName "bounds"; ns Package "com.swiffotron"; set *
+        multiname #18	mn QName "frame1"; ns PackageInternal ""; set *
+        multiname #19	mn QName "eyes_mc"; ns Package ""; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "com.swiffotron:EyesMain"
+        {
+            class mn QName "EyesMain"; ns Package "com.swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "EyesMain"; ns Package "com.swiffotron"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "colour_fill"; ns Package "com.swiffotron"; set *,Slot] property type : [mn QName "eyes_3"; ns Package ""; set *], val: ConUndefined
+
+
+
+                [mn QName "bounds"; ns Package "com.swiffotron"; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+            }
+        }
+        protected package ns Protected "eyes_3"
+        {
+            class mn QName "eyes_3"; ns Package ""; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "eyes_3"; ns Package ""; set * () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 FindPropStrict(mn Multiname "addFrameScript"; ns *; set {ns Private "", ns Private "", ns Package "", ns PackageInternal "", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "flash.display", ns Protected "eyes_3", ns StaticProtected "eyes_3", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"})
+                    #6 PushByte(0)
+                    #7 GetLex(mn Multiname "frame1"; ns *; set {ns Private "", ns Private "", ns Package "", ns PackageInternal "", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "flash.display", ns Protected "eyes_3", ns StaticProtected "eyes_3", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"})
+                    #8 CallPropVoid(mn Multiname "addFrameScript"; ns *; set {ns Private "", ns Private "", ns Package "", ns PackageInternal "", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "flash.display", ns Protected "eyes_3", ns StaticProtected "eyes_3", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"}, 2)
+                    #9 ReturnVoid()
+                }
+
+
+
+                [mn QName "frame1"; ns PackageInternal ""; set *,Method] function (anon *) () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 FindPropStrict(mn Multiname "stop"; ns *; set {ns Private "", ns Private "", ns Package "", ns PackageInternal "", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "flash.display", ns Protected "eyes_3", ns StaticProtected "eyes_3", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"})
+                    #4 CallPropVoid(mn Multiname "stop"; ns *; set {ns Private "", ns Private "", ns Package "", ns PackageInternal "", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "flash.display", ns Protected "eyes_3", ns StaticProtected "eyes_3", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"}, 0)
+                    #5 ReturnVoid()
+                }
+            }
+        }
+        protected package ns Protected "miscparts_blank_swf_swiffotron:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotron"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "eyes_mc"; ns Package ""; set *,Slot] property type : [mn QName "EyesMain"; ns Package "com.swiffotron"; set *], val: ConUndefined
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "EyesMain"; ns *; set {ns Package "com.swiffotron"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "EyesMain"; ns Package "com.swiffotron"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "EyesMain"; ns Package "com.swiffotron"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "EyesMain"; ns Package "com.swiffotron"; set *,Class] script class trait : mn QName "EyesMain"; ns Package "com.swiffotron"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "eyes_3"; ns *; set {ns Package ""})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "eyes_3"; ns Package ""; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "eyes_3"; ns Package ""; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "eyes_3"; ns Package ""; set *,Class] script class trait : mn QName "eyes_3"; ns Package ""; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotron"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotron"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotron"; set *
+        }
+    }
+}

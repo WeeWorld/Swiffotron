@@ -1,0 +1,221 @@
+SWF stage=550,400, fps=24, bg=#FFFFFF
+Document class:mn QName "MainTimeline"; ns Package "simplest_timeline_script_swiffotron"; set *
+{
+    Character '__cid##1'
+    {
+        Class name:mn QName "STSMain"; ns Package "com.swiffotron"; set *
+        Frame# 1 ;
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##1', mn QName "STSMain"; ns Package "com.swiffotron"; set *], layer=[layer], name=sts_mc, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	"trace"
+        string #2	""
+        string #3	"Hello, World."
+        string #4	"addFrameScript"
+        string #5	"frame1"
+        string #6	"com.swiffotron"
+        string #7	"STSMain"
+        string #8	"Object"
+        string #9	"EventDispatcher"
+        string #10	"flash.events"
+        string #11	"DisplayObject"
+        string #12	"flash.display"
+        string #13	"InteractiveObject"
+        string #14	"DisplayObjectContainer"
+        string #15	"Sprite"
+        string #16	"MovieClip"
+        string #17	"MainTimeline"
+        string #18	"simplest_timeline_script_swiffotron"
+        string #19	"com.swiffotron:STSMain"
+        string #20	"simplest_timeline_script_swiffotron:MainTimeline"
+        string #21	"sts_mc"
+        ns #0	ns Ns "*"
+        ns #1	ns Package ""
+        ns #2	ns PackageInternal "com.swiffotron"
+        ns #3	ns Package "com.swiffotron"
+        ns #4	ns Package "flash.events"
+        ns #5	ns Package "flash.display"
+        ns #6	ns Package "simplest_timeline_script_swiffotron"
+        ns #7	ns Protected "com.swiffotron:STSMain"
+        ns #8	ns Protected "simplest_timeline_script_swiffotron:MainTimeline"
+        ns set #0	(0 items)
+        ns set #1	(1 items)
+            - ns Package "com.swiffotron"
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "trace"; ns Package ""; set *
+        multiname #2	mn QName "addFrameScript"; ns Package ""; set *
+        multiname #3	mn QName "frame1"; ns PackageInternal "com.swiffotron"; set *
+        multiname #4	mn Multiname "STSMain"; ns *; set {ns Package "com.swiffotron"}
+        multiname #5	mn QName "Object"; ns Package ""; set *
+        multiname #6	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #7	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #8	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #9	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #10	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #11	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #12	mn QName "STSMain"; ns Package "com.swiffotron"; set *
+        multiname #13	mn QName "MainTimeline"; ns Package "simplest_timeline_script_swiffotron"; set *
+        multiname #14	mn QName "sts_mc"; ns Package ""; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "com.swiffotron:STSMain"
+        {
+            class mn QName "STSMain"; ns Package "com.swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "STSMain"; ns Package "com.swiffotron"; set * () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 FindPropStrict(mn QName "addFrameScript"; ns Package ""; set *)
+                    #6 PushByte(0)
+                    #7 GetLex(mn QName "frame1"; ns PackageInternal "com.swiffotron"; set *)
+                    #8 CallPropVoid(mn QName "addFrameScript"; ns Package ""; set *, 2)
+                    #9 ReturnVoid()
+                }
+
+
+
+                [mn QName "frame1"; ns PackageInternal "com.swiffotron"; set *,Method] function (anon *) () : Void
+                {
+                    [MaxStack:2, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 FindPropStrict(mn QName "trace"; ns Package ""; set *)
+                    #4 PushString("Hello, World.")
+                    #5 CallPropVoid(mn QName "trace"; ns Package ""; set *, 1)
+                    #6 ReturnVoid()
+                }
+            }
+        }
+        protected package ns Protected "simplest_timeline_script_swiffotron:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "simplest_timeline_script_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "simplest_timeline_script_swiffotron"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "sts_mc"; ns Package ""; set *,Slot] property type : [mn QName "STSMain"; ns Package "com.swiffotron"; set *], val: ConUndefined
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "STSMain"; ns *; set {ns Package "com.swiffotron"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "STSMain"; ns Package "com.swiffotron"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "STSMain"; ns Package "com.swiffotron"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "STSMain"; ns Package "com.swiffotron"; set *,Class] script class trait : mn QName "STSMain"; ns Package "com.swiffotron"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "simplest_timeline_script_swiffotron"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "simplest_timeline_script_swiffotron"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "simplest_timeline_script_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "simplest_timeline_script_swiffotron"; set *
+        }
+    }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <swf id="TestTweens" width="500" height="400">
+
+    <swfout store="store://store/TestTweens.swf" />
+
+    <instance id="bitmaps_mc" type="extern" src="store://store/tweens.bitmaps.swf" class="com.ww.bitmaps"/>
+    <instance id="simple_mc" type="extern" src="store://store/tweens.simple.swf" class="com.ww.simple"/>
+
+  </swf>
+
+</swiffotron>

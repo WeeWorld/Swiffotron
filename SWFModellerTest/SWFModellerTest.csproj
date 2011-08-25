@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{22C72150-B963-4C4A-A25F-7F68D157F29A}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SWFProcessing.SWFModeller.Test</RootNamespace>
+    <AssemblyName>SWFModellerTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SWFReaderTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AuthoringTests.txt" />
+    <EmbeddedResource Include="res\predicted\ReadDefineShape2.txt" />
+    <EmbeddedResource Include="res\ReadDefineShape2.swf" />
+    <EmbeddedResource Include="res\predicted\ReadSwiffotronLogo.txt" />
+    <EmbeddedResource Include="res\predicted\ReadKeyframes.txt" />
+    <EmbeddedResource Include="res\ReadSwiffotronLogo.swf" />
+    <EmbeddedResource Include="res\ReadKeyframes.swf" />
+    <EmbeddedResource Include="res\predicted\ReadShapeTweenWithBitmaps.txt" />
+    <EmbeddedResource Include="res\ReadShapeTweenWithBitmaps.swf" />
+    <EmbeddedResource Include="res\predicted\ReadText.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSwitch.txt" />
+    <EmbeddedResource Include="res\predicted\ReadExceptions.txt" />
+    <EmbeddedResource Include="res\predicted\AssembleSwitch.txt" />
+    <EmbeddedResource Include="res\predicted\AssembleExceptions.txt" />
+    <EmbeddedResource Include="res\predicted\ReadComplexShape.txt" />
+    <EmbeddedResource Include="res\predicted\ReadAccessories.txt" />
+    <EmbeddedResource Include="res\ReadAccessories.swf" />
+    <EmbeddedResource Include="res\ReadComplexShape.swf" />
+    <EmbeddedResource Include="res\predicted\ReadImages.txt" />
+    <EmbeddedResource Include="res\predicted\AccessModifiers.txt" />
+    <EmbeddedResource Include="res\predicted\ReadFonts.txt" />
+    <EmbeddedResource Include="res\ReadFonts.swf" />
+    <EmbeddedResource Include="res\AccessModifiers.swf" />
+    <EmbeddedResource Include="res\ReadImages.swf" />
+    <EmbeddedResource Include="res\ReadText.swf" />
+    <EmbeddedResource Include="res\AssembleSwitch.swf" />
+    <EmbeddedResource Include="res\ReadSwitch.swf" />
+    <EmbeddedResource Include="res\AssembleExceptions.swf" />
+    <EmbeddedResource Include="res\ReadExceptions.swf" />
+    <EmbeddedResource Include="res\predicted\ReadSWFTestTween.txt" />
+    <EmbeddedResource Include="res\predicted\ReadBothCirclesTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadBlueCircle.txt" />
+    <EmbeddedResource Include="res\ReadBlueCircle.swf" />
+    <EmbeddedResource Include="res\predicted\AssembleRedCircle.txt" />
+    <EmbeddedResource Include="res\predicted\ReadDeepNestedSWFTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadMulticlassTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSWFHasBool.txt" />
+    <EmbeddedResource Include="res\predicted\ReadTimelineSWFTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadClassBindingTest.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSWFTestBlobs.txt" />
+    <EmbeddedResource Include="res\predicted\ReadSimpleSWFTest.txt" />
+    <EmbeddedResource Include="res\predicted\AssembleSimplestTimelineScript.txt" />
+    <EmbeddedResource Include="res\AssembleRedCircle.swf" />
+    <EmbeddedResource Include="res\AssembleSimplestTimelineScript.swf" />
+    <EmbeddedResource Include="res\ReadBothCirclesTest.swf" />
+    <EmbeddedResource Include="res\ReadClassBindingTest.swf" />
+    <EmbeddedResource Include="res\ReadDeepNestedSWFTest.swf" />
+    <EmbeddedResource Include="res\ReadMulticlassTest.swf" />
+    <EmbeddedResource Include="res\ReadRedCircleTest.swf" />
+    <EmbeddedResource Include="res\ReadSimpleSWFTest.swf" />
+    <EmbeddedResource Include="res\ReadSWFHasBool.swf" />
+    <EmbeddedResource Include="res\ReadSWFTestBlobs.swf" />
+    <EmbeddedResource Include="res\ReadSWFTestTween.swf" />
+    <EmbeddedResource Include="res\ReadTimelineSWFTest.swf" />
+    <EmbeddedResource Include="res\predicted\ReadRedCircleTest.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SWFModeller\SWFModeller.csproj">
+      <Project>{E584EF20-EB00-463C-8E57-2B3F5D3A5680}</Project>
+      <Name>SWFModeller</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

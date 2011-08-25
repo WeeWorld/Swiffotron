@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schema xmlns="http://www.w3.org/2001/XMLSchema" xmlns:con="urn:swiffotron-schemas:swiffotron-config/24/05/2011"
+  targetNamespace="urn:swiffotron-schemas:swiffotron-config/24/05/2011"
+  elementFormDefault="qualified"
+  attributeFormDefault="unqualified">
+  
+  <complexType name="storeType">
+    <attribute name="name" type="string" use="required" />
+    <attribute name="assembly" type="string">
+      <annotation>
+        <documentation>
+          Omit the assembly attribute to reference classes in the Swiffotron assembly.
+        </documentation>
+      </annotation>
+    </attribute>
+    <attribute name="classname" type="string" use="required" />
+    <attribute name="init" type="string" />
+  </complexType>
+
+  <complexType name="cacheType">
+    <attribute name="name" type="string" use="required" />
+    <attribute name="assembly" type="string">
+      <annotation>
+        <documentation>
+          Omit the assembly attribute to reference classes in the Swiffotron assembly.
+        </documentation>
+      </annotation>
+    </attribute>
+    <attribute name="classname" type="string" use="required" />
+    <attribute name="init" type="string" />
+  </complexType>
+
+  <complexType name="swfPrefsType">
+    <annotation>
+      <documentation>
+        These are options that are passed onto the SWF modeller to control the way
+        SWF files are either read or written.
+      </documentation>
+    </annotation>
+    <sequence>
+      <element name="storeWriteEnabled" type="boolean" default="false" minOccurs="0" maxOccurs="1" />
+      <element name="stricttaglength" type="boolean" default="false" minOccurs="0" maxOccurs="1" />
+      <element name="compression" type="boolean" default="true" minOccurs="0" maxOccurs="1" />
+      <element name="debugcode" type="boolean" default="false" minOccurs="0" maxOccurs="1" />
+    </sequence>
+  </complexType>
+
+  <element name="config">
+    <complexType>
+      <sequence>
+        <element name="store" type="con:storeType" minOccurs="1" maxOccurs="unbounded" />
+        <element name="cache" type="con:cacheType" minOccurs="0" maxOccurs="unbounded" />
+        <element name="swfprefs" type="con:swfPrefsType" minOccurs="1" maxOccurs="1" />
+      </sequence>
+    </complexType>
+  </element>
+
+</schema>

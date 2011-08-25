@@ -1,0 +1,357 @@
+SWF stage=550,400, fps=24, bg=#FFFFFF
+Document class:mn QName "MainTimeline"; ns Package "one_blue_circle_swiffotron"; set *
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect -0.5,-0.5->65,65]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=192, R=0, G=85, B=85]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=645,0 fill0/1=,[Solid: Colour=Color [A=192, R=0, G=85, B=85]] line=1]
+            C267,0:189,189 C189,189:0,267 C0,267:-189,189 C-189,189:-267,0 C-267,0:-189,-189 C-189,-189:0,-267 C0,-267:189,-189
+            C189,-189:267,0
+        }
+    }
+    Character '__cid##2'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:83 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##3'
+    {
+        Class name:mn QName "BlueCircleMain"; ns Package "com.swiffotron"; set *
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##2'], layer=[layer], name=circle_mc, ratio=none, matrix=[t:198.5,141.5, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##3', mn QName "BlueCircleMain"; ns Package "com.swiffotron"; set *], layer=[layer], name=blue, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	"circle_mc"
+        string #2	""
+        string #3	"Event"
+        string #4	"flash.events"
+        string #5	"ENTER_FRAME"
+        string #6	"update"
+        string #7	"addEventListener"
+        string #8	"target"
+        string #9	"x"
+        string #10	"com.swiffotron"
+        string #11	"http://adobe.com/AS3/2006/builtin"
+        string #12	"adobe.utils"
+        string #13	"flash.accessibility"
+        string #14	"flash.display"
+        string #15	"flash.errors"
+        string #16	"flash.external"
+        string #17	"flash.filters"
+        string #18	"flash.geom"
+        string #19	"flash.media"
+        string #20	"flash.net"
+        string #21	"flash.printing"
+        string #22	"flash.system"
+        string #23	"flash.text"
+        string #24	"flash.ui"
+        string #25	"flash.utils"
+        string #26	"flash.xml"
+        string #27	"com.swiffotron:BlueCircleMain"
+        string #28	"flash.display:MovieClip"
+        string #29	"flash.display:Sprite"
+        string #30	"flash.display:DisplayObjectContainer"
+        string #31	"flash.display:InteractiveObject"
+        string #32	"flash.display:DisplayObject"
+        string #33	"flash.events:EventDispatcher"
+        string #34	"Object"
+        string #35	"addFrameScript"
+        string #36	"frame1"
+        string #37	"BlueCircleMain"
+        string #38	"EventDispatcher"
+        string #39	"DisplayObject"
+        string #40	"InteractiveObject"
+        string #41	"DisplayObjectContainer"
+        string #42	"Sprite"
+        string #43	"MovieClip"
+        string #44	"MainTimeline"
+        string #45	"one_blue_circle_swiffotron"
+        string #46	"one_blue_circle_swiffotron:MainTimeline"
+        string #47	"blue"
+        ns #0	ns Ns "*"
+        ns #1	ns Package ""
+        ns #2	ns Package "flash.events"
+        ns #3	ns Private ""
+        ns #4	ns Package "com.swiffotron"
+        ns #5	ns PackageInternal "com.swiffotron"
+        ns #6	ns Ns "http://adobe.com/AS3/2006/builtin"
+        ns #7	ns Package "adobe.utils"
+        ns #8	ns Package "flash.accessibility"
+        ns #9	ns Package "flash.display"
+        ns #10	ns Package "flash.errors"
+        ns #11	ns Package "flash.external"
+        ns #12	ns Package "flash.filters"
+        ns #13	ns Package "flash.geom"
+        ns #14	ns Package "flash.media"
+        ns #15	ns Package "flash.net"
+        ns #16	ns Package "flash.printing"
+        ns #17	ns Package "flash.system"
+        ns #18	ns Package "flash.text"
+        ns #19	ns Package "flash.ui"
+        ns #20	ns Package "flash.utils"
+        ns #21	ns Package "flash.xml"
+        ns #22	ns Protected "com.swiffotron:BlueCircleMain"
+        ns #23	ns StaticProtected "com.swiffotron:BlueCircleMain"
+        ns #24	ns StaticProtected "flash.display:MovieClip"
+        ns #25	ns StaticProtected "flash.display:Sprite"
+        ns #26	ns StaticProtected "flash.display:DisplayObjectContainer"
+        ns #27	ns StaticProtected "flash.display:InteractiveObject"
+        ns #28	ns StaticProtected "flash.display:DisplayObject"
+        ns #29	ns StaticProtected "flash.events:EventDispatcher"
+        ns #30	ns StaticProtected "Object"
+        ns #31	ns Package "one_blue_circle_swiffotron"
+        ns #32	ns Protected "one_blue_circle_swiffotron:MainTimeline"
+        ns set #0	(0 items)
+        ns set #1	(31 items)
+            - ns Private ""
+            - ns Package ""
+            - ns Private ""
+            - ns Package "com.swiffotron"
+            - ns PackageInternal "com.swiffotron"
+            - ns Ns "http://adobe.com/AS3/2006/builtin"
+            - ns Package "adobe.utils"
+            - ns Package "flash.accessibility"
+            - ns Package "flash.display"
+            - ns Package "flash.errors"
+            - ns Package "flash.events"
+            - ns Package "flash.external"
+            - ns Package "flash.filters"
+            - ns Package "flash.geom"
+            - ns Package "flash.media"
+            - ns Package "flash.net"
+            - ns Package "flash.printing"
+            - ns Package "flash.system"
+            - ns Package "flash.text"
+            - ns Package "flash.ui"
+            - ns Package "flash.utils"
+            - ns Package "flash.xml"
+            - ns Protected "com.swiffotron:BlueCircleMain"
+            - ns StaticProtected "com.swiffotron:BlueCircleMain"
+            - ns StaticProtected "flash.display:MovieClip"
+            - ns StaticProtected "flash.display:Sprite"
+            - ns StaticProtected "flash.display:DisplayObjectContainer"
+            - ns StaticProtected "flash.display:InteractiveObject"
+            - ns StaticProtected "flash.display:DisplayObject"
+            - ns StaticProtected "flash.events:EventDispatcher"
+            - ns StaticProtected "Object"
+        ns set #2	(1 items)
+            - ns Package "com.swiffotron"
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "circle_mc"; ns Package ""; set *
+        multiname #2	mn QName "Event"; ns Package "flash.events"; set *
+        multiname #3	mn QName "ENTER_FRAME"; ns Package ""; set *
+        multiname #4	mn QName "update"; ns Package ""; set *
+        multiname #5	mn QName "addEventListener"; ns Package ""; set *
+        multiname #6	mn QName "target"; ns Package ""; set *
+        multiname #7	mn Multiname "x"; ns *; set {ns Private "", ns Package "", ns Private "", ns Package "com.swiffotron", ns PackageInternal "com.swiffotron", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "adobe.utils", ns Package "flash.accessibility", ns Package "flash.display", ns Package "flash.errors", ns Package "flash.events", ns Package "flash.external", ns Package "flash.filters", ns Package "flash.geom", ns Package "flash.media", ns Package "flash.net", ns Package "flash.printing", ns Package "flash.system", ns Package "flash.text", ns Package "flash.ui", ns Package "flash.utils", ns Package "flash.xml", ns Protected "com.swiffotron:BlueCircleMain", ns StaticProtected "com.swiffotron:BlueCircleMain", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"}
+        multiname #8	mn QName "addFrameScript"; ns Package ""; set *
+        multiname #9	mn QName "frame1"; ns PackageInternal "com.swiffotron"; set *
+        multiname #10	mn Multiname "BlueCircleMain"; ns *; set {ns Package "com.swiffotron"}
+        multiname #11	mn QName "Object"; ns Package ""; set *
+        multiname #12	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #13	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #14	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #15	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #16	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #17	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #18	mn QName "BlueCircleMain"; ns Package "com.swiffotron"; set *
+        multiname #19	mn QName "MainTimeline"; ns Package "one_blue_circle_swiffotron"; set *
+        multiname #20	mn QName "blue"; ns Package ""; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "com.swiffotron:BlueCircleMain"
+        {
+            class mn QName "BlueCircleMain"; ns Package "com.swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "BlueCircleMain"; ns Package "com.swiffotron"; set * () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 FindPropStrict(mn QName "addFrameScript"; ns Package ""; set *)
+                    #6 PushByte(0)
+                    #7 GetLex(mn QName "frame1"; ns PackageInternal "com.swiffotron"; set *)
+                    #8 CallPropVoid(mn QName "addFrameScript"; ns Package ""; set *, 2)
+                    #9 ReturnVoid()
+                }
+
+
+
+                [mn QName "frame1"; ns PackageInternal "com.swiffotron"; set *,Method] function (anon *) () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLex(mn QName "circle_mc"; ns Package ""; set *)
+                    #4 GetLex(mn QName "Event"; ns Package "flash.events"; set *)
+                    #5 GetProperty(mn QName "ENTER_FRAME"; ns Package ""; set *)
+                    #6 GetLex(mn QName "update"; ns Package ""; set *)
+                    #7 CallPropVoid(mn QName "addEventListener"; ns Package ""; set *, 2)
+                    #8 ReturnVoid()
+                }
+
+
+
+                [mn QName "circle_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+
+
+
+                [mn QName "update"; ns Package ""; set *,Method] function (anon *) (mn QName "Event"; ns Package "flash.events"; set * param1) : Void
+                {
+                    [MaxStack:3, LocalCount:2, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal1()
+                    #4 GetProperty(mn QName "target"; ns Package ""; set *)
+                    #5 GetLocal1()
+                    #6 GetProperty(mn QName "target"; ns Package ""; set *)
+                    #7 GetProperty(mn Multiname "x"; ns *; set {ns Private "", ns Package "", ns Private "", ns Package "com.swiffotron", ns PackageInternal "com.swiffotron", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "adobe.utils", ns Package "flash.accessibility", ns Package "flash.display", ns Package "flash.errors", ns Package "flash.events", ns Package "flash.external", ns Package "flash.filters", ns Package "flash.geom", ns Package "flash.media", ns Package "flash.net", ns Package "flash.printing", ns Package "flash.system", ns Package "flash.text", ns Package "flash.ui", ns Package "flash.utils", ns Package "flash.xml", ns Protected "com.swiffotron:BlueCircleMain", ns StaticProtected "com.swiffotron:BlueCircleMain", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"})
+                    #8 PushByte(1)
+                    #9 Add()
+                    #10 SetProperty(mn Multiname "x"; ns *; set {ns Private "", ns Package "", ns Private "", ns Package "com.swiffotron", ns PackageInternal "com.swiffotron", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "adobe.utils", ns Package "flash.accessibility", ns Package "flash.display", ns Package "flash.errors", ns Package "flash.events", ns Package "flash.external", ns Package "flash.filters", ns Package "flash.geom", ns Package "flash.media", ns Package "flash.net", ns Package "flash.printing", ns Package "flash.system", ns Package "flash.text", ns Package "flash.ui", ns Package "flash.utils", ns Package "flash.xml", ns Protected "com.swiffotron:BlueCircleMain", ns StaticProtected "com.swiffotron:BlueCircleMain", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"})
+                    #11 ReturnVoid()
+                }
+            }
+        }
+        protected package ns Protected "one_blue_circle_swiffotron:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "one_blue_circle_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "one_blue_circle_swiffotron"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "blue"; ns Package ""; set *,Slot] property type : [mn QName "BlueCircleMain"; ns Package "com.swiffotron"; set *], val: ConUndefined
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "BlueCircleMain"; ns *; set {ns Package "com.swiffotron"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "BlueCircleMain"; ns Package "com.swiffotron"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "BlueCircleMain"; ns Package "com.swiffotron"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "BlueCircleMain"; ns Package "com.swiffotron"; set *,Class] script class trait : mn QName "BlueCircleMain"; ns Package "com.swiffotron"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "one_blue_circle_swiffotron"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "one_blue_circle_swiffotron"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "one_blue_circle_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "one_blue_circle_swiffotron"; set *
+        }
+    }
+}

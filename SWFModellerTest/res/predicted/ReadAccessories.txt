@@ -1,0 +1,507 @@
+SWF stage=200,215, fps=31, bg=#999999
+Document class:mn QName "MainTimeline"; ns Package ""; set *
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect 0,0->200,215]
+        Original format: DefineShape3
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=255, G=255, B=255]]
+            [style change move=4000,4300 fill0/1=,[Solid: Colour=Color [A=0, R=255, G=255, B=255]] line=]
+            L-4000,0 L0,-4300 L4000,0 L0,4300
+        }
+    }
+    Character '__cid##2'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape3:33 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##3'
+    {
+        Bounds: [Rect -24.5,-43.05->23.5,43.45]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=255, G=204, B=51]]
+            [style change move=466,-585 fill0/1=,[Solid: Colour=Color [A=0, R=255, G=204, B=51]] line=]
+            L1,27 L-3,29 L6,55 L-5,66 C-8,59:-17,16 C-17,44:-16,24 C-28,43:-104,0 L-29,-4 L-41,-4 C-59,0:-19,-39 C-10,-20:2,-20
+            L8,-58 L-8,-24 C-8,-20:0,-18 L8,-56 L-4,-15 C-40,0:-18,-11 L-16,-18 L-3,17 L2,13 C0,9:-10,10 C-13,14:-6,17
+            C29,17:0,28 C-17,115:-22,21 L-1,3 C32,18:34,13 C17,8:0,16 C0,30:-27,9 L-4,3 C59,1:0,42 C0,13:-12,24 L-12,27
+            C0,23:28,23 C27,23:0,31 L-8,29 L-9,21 L12,22 L17,31 L2,24 C1,15:11,11 C52,51:0,9 L-10,42 L18,41 C17,39:0,24
+            C0,25:-41,106 L-57,129 C-23,37:-29,25 L-76,58 C-24,18:-53,8 C-51,8:-21,17 C-47,40:-58,0 L-53,-14 L-33,6
+            L-31,5 C-103,0:-27,-89 C-8,-25:0,-79 C0,-30:25,-39 C37,-58:65,21 C21,-18:33,2 L35,5 C31,0:31,-21 C32,-22:65,-1
+            C-4,-19:27,-28 C26,-28:34,-13 C-2,-13:-11,-18 C-10,-16:0,-11 L8,-46 L-27,-32 C-25,-36:4,-69 C10,-33:-21,-12
+            L-42,-21 C-12,-12:-2,-20 L0,-36 C0,-57:-35,-21 C-35,-20:-1,-41 C-2,-68:-13,-18 C-13,-18:0,-34 L8,-59 C0,-15:-25,-29
+            C-26,-29:0,-41 C0,-34:20,-21 C16,-17:-7,-44 C-8,-56:23,-57 L43,-50 L57,-60 C37,-46:23,-9 L21,-14 L14,-15
+            C12,-15:19,2 L44,-6 C63,-30:87,20 L120,40 C33,15:37,41 L38,29 L31,27 L47,116
+        }
+    }
+    Character '__cid##4'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:346 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##5'
+    {
+        Bounds: [Rect -14.9,-38.1->21.75,42.4]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=51, G=51, B=51]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=127, R=51, G=51, B=51]]
+            [style change move=206,-752 fill0/1=[Solid: Colour=Color [A=255, R=51, G=51, B=51]], line=1]
+            L-20,26 C-8,8:-77,11 C-78,10:-41,41 L-4,6 
+            [style change move=, fill0/1=, line=0]
+            L18,20 
+            [style change move=, fill0/1=, line=1]
+            L13,-17 C29,-29:47,23 C46,24:54,-54 C23,-23:11,-31 
+            [style change move=, fill0/1=, line=0]
+            L-13,-15 
+            [style change move=298,-542 fill0/1=, line=]
+            L-2,0 L0,1 L2,-1 
+            [style change move=164,-439 fill0/1=,[Solid: Colour=Color [A=255, R=51, G=51, B=51]] line=1]
+            L38,0 C27,0:37,38 C36,37:43,0 L23,-3 
+            [style change move=, fill0/1=, line=0]
+            L21,-5 C33,0:10,25 L3,25 C0,42:-51,43 C-59,50:-85,0 C-75,0:-11,-15 C-7,-26:-23,-22 C-5,-5:-3,-14 C-3,-15:-10,-8
+            L-18,-20 C-3,-6:0,-15 C0,-29:18,-42 C26,-59:38,24 
+            [style change move=50,-3 fill0/1=[Solid: Colour=Color [A=255, R=51, G=51, B=51]], line=]
+            L-18,-37 
+            [style change move=, fill0/1=, line=1]
+            C-27,2:-33,20 L-39,28 L-55,15 L0,3 L37,2 C46,0:70,-26 L19,-7 
+            [style change move=147,212 fill0/1=, line=0]
+            L-6,-16 
+            [style change move=, fill0/1=, line=1]
+            C-117,58:-41,5 L-23,7 
+            [style change move=, fill0/1=, line=0]
+            L6,15 
+            [style change move=, fill0/1=, line=1]
+            L50,-22 L20,5 L48,-13 L63,-39 
+            [style change move=138,477 fill0/1=,[Solid: Colour=Color [A=255, R=51, G=51, B=51]] line=]
+            L-28,-9 L-91,-14 C-20,-8:-6,-13 L49,10 L105,-17 
+            [style change move=, fill0/1=, line=0]
+            L-9,51 
+            [style change move=-224,-738 fill0/1=[Solid: Colour=Color [A=255, R=51, G=51, B=51]], line=]
+            L-6,24 
+            [style change move=, fill0/1=, line=1]
+            L23,22 C32,26:43,-5 L55,-11 C12,0:18,11 L2,1 
+            [style change move=, fill0/1=, line=0]
+            L5,-20 
+            [style change move=, fill0/1=, line=1]
+            L-3,-2 C-20,-15:-23,0 L-43,7 C-30,0:-32,-15 C-23,-10:-10,-13 
+            [style change move=-288,-267 fill0/1=,[Solid: Colour=Color [A=255, R=51, G=51, B=51]] line=]
+            L1,-1 C27,-12:33,3 L18,0 L38,-30 C23,-15:23,0 L19,3 
+            [style change move=, fill0/1=, line=0]
+            L3,11 
+            [style change move=, fill0/1=, line=1]
+            L-11,1 C-35,4:-10,21 C-7,19:-27,10 C-26,11:-36,0 L-26,-4 
+            [style change move=, fill0/1=, line=0]
+            L-7,-21 
+            [style change move=-171,583 fill0/1=[Solid: Colour=Color [A=255, R=51, G=51, B=51]], line=]
+            L-4,6 L-27,28 
+            [style change move=, fill0/1=, line=1]
+            C20,10:4,28 C2,13:18,15 L32,27 C40,40:10,15 L2,3 
+            [style change move=, fill0/1=, line=0]
+            L34,-35 
+            [style change move=, fill0/1=, line=1]
+            L-28,-26 C-31,-27:-34,-13 L-25,-14 C-14,-12:1,-21 C10,-12:-10,-25 
+            [style change move=-237,838 fill0/1=,[Solid: Colour=Color [A=255, R=51, G=51, B=51]] line=]
+            L-1,-4 L-5,-43 L3,-81 L7,17 C7,19:1,19 L5,42 L18,29 
+            [style change move=, fill0/1=, line=0]
+            L-35,2
+        }
+    }
+    Character '__cid##6'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:383 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##7'
+    {
+        Bounds: [Rect -21.1,-39.9->23.95,43.65]
+        Original format: DefineShape3
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=51, R=0, G=0, B=0]]
+            Fill#2: [Solid: Colour=Color [A=255, R=0, G=0, B=0]]
+            Fill#3: [Solid: Colour=Color [A=51, R=0, G=0, B=0]]
+            [style change move=336,-754 fill0/1=,[Solid: Colour=Color [A=51, R=0, G=0, B=0]] line=]
+            C23,4:35,48 C85,114:0,83 L-2,19 L2,19 C0,94:-16,58 L-8,25 L0,2 C0,15:-39,63 C-41,67:-19,0 C-34,0:-17,-37
+            C-11,-22:-2,-25 L-27,8 L-54,5 C-56,0:-17,-24 C-7,-10:0,-20 C0,-23:20,-16 L19,-17 L-3,-5 L5,3 L22,-31 L21,-40
+            C26,-39:26,0 L11,1 L3,-6 L2,-2 L11,15 L4,4 L-1,-8 C0,-16:6,-9 C8,-12:23,-7 C-10,-13:0,-14 L3,-15 C-8,-3:9,-11
+            L4,4 L4,-14 C0,-10:-60,-18 C-56,-18:14,-43 L1,-1 C-42,6:-18,-20 C-9,-11:0,-15 L5,-19 C7,-14:12,-6 C-15,-22:0,-10
+            C0,-20:15,-12 L37,0 L0,-13 L4,-1 L67,6 L26,31 L12,-2 
+            [style change move=119,-625 fill0/1=, line=]
+            C36,0:3,40 C0,14:-41,28 C-46,32:-43,0 L-4,0 L0,2 C0,21:-16,11 C-19,14:-9,26 L-6,34 C47,-10:3,72 C0,53:12,31
+            L4,10 L4,12 L0,4 L4,24 C4,18:10,23 C17,40:0,24 C0,9:6,11 L6,-3 C71,-27:0,111 L-1,42 L5,25 C7,23:10,11
+            C35,5:10,23 L5,33 L-1,13 C26,43:0,61 L-6,52 C29,25:0,49 C0,32:-22,17 C-25,20:-5,26 L-8,48 C-13,30:-54,14
+            C-4,39:-8,24 C-13,39:-27,28 L-87,63 C-70,45:-12,0 L-33,-2 C-8,46:-56,0 L-38,-9 L-14,-9 L-37,14 C-23,0:-8,-15
+            C-8,-15:-10,0 C-8,0:-15,15 C-16,15:-18,0 C-46,0:-1,-45 L4,-20 L-10,-1 L0,-54 L30,3 L42,-1 L0,-4 C0,-16:13,-14
+            C17,-18:32,0 C18,0:14,7 L23,6 L22,-20 L13,-7 L1,-8 L2,-2 C8,2:4,5 L52,5 C8,-9:-3,-15 L-3,-23 C3,-25:90,-2
+            C38,-1:5,-26 L10,-43 L32,-40 C7,-13:1,-23 C-11,6:0,-15 L4,-3 L9,1 C3,-18:14,-21 L19,-31 L-3,-8 C-9,4:-1,-13
+            C0,-3:3,0 L3,0 L-19,-72 L-3,-48 C-2,-33:-10,-10 C-58,-63:-14,-119 C-1,-15:-21,-32 L-31,-45 L-5,-13 L0,-20
+            L-2,-5 C-9,-23:-1,-24 L1,-10 L-16,0 C-30,-46:-7,-44 C-4,-21:0,-67 L-8,-40 L8,-66 L6,-34 C-20,10:-1,-17
+            L2,-1 C11,-1:7,7 L1,1 L2,-37 L9,-19 L4,-10 L3,-1 L3,2 L9,-7 L15,-5 L4,-11 L7,-9 L10,-33 L-3,-12 L3,-2
+            L6,2 L8,-14 C26,-41:39,-10 C38,-10:26,26 C19,19:8,33 L11,-1 
+            [style change move=129,-635 fill0/1=, line=]
+            L0,2 C-30,11:8,-27 L3,-2 C14,3:5,13 
+            [style change move=309,-392 fill0/1=, line=]
+            L-6,14 L4,0 L2,-10 L0,-4 
+            [style change move=68,61 fill0/1=, line=]
+            L0,30 L25,0 L-25,-30 
+            [style change move=78,331 fill0/1=, line=]
+            L-3,1 C-16,2:6,-13 L3,-2 C17,2:-7,10 
+            [style change move=-52,-683 fill0/1=, line=]
+            L16,16 L1,2 C-29,11:10,-27 L2,-2 
+            [style change move=-86,-598 fill0/1=, line=]
+            L0,2 C-11,15:-7,-18 L4,-4 C9,-3:5,8 
+            [style change move=-355,733 fill0/1=, line=]
+            L0,2 C-21,2:9,-15 L2,-1 C10,3:0,9 
+            [style change move=0,0 fill0/1=, line=0 {new fills [Solid: Colour=Color [A=255, R=0, G=0, B=0]][Solid: Colour=Color [A=51, R=0, G=0, B=0]]}]
+            [style change move=431,-507 fill0/1=,[Solid: Colour=Color [A=51, R=0, G=0, B=0]] line=]
+            L7,-3 L7,3 L3,7 L-3,7 L-7,3 C-4,0:-3,-3 L-3,-7 L3,-7 
+            [style change move=240,-795 fill0/1=, line=]
+            L7,-3 L7,3 L3,7 L-3,7 C-3,3:-4,0 C-4,0:-3,-3 C-3,-3:0,-4 L3,-7 
+            [style change move=278,-783 fill0/1=, line=]
+            L7,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 
+            [style change move=300,-759 fill0/1=, line=]
+            L7,-3 L7,3 L3,7 L-3,7 L-7,3 C-4,0:-3,-3 L-3,-7 L3,-7 
+            [style change move=21,-575 fill0/1=, line=]
+            L7,3 L3,7 L-3,7 L-7,3 C-4,0:-3,-3 C-3,-3:0,-4 L3,-7 L7,-3 
+            [style change move=45,-575 fill0/1=[Solid: Colour=Color [A=51, R=0, G=0, B=0]], line=]
+            L-1,2 L1,5 L0,-7 
+            [style change move=3,-544 fill0/1=,[Solid: Colour=Color [A=51, R=0, G=0, B=0]] line=]
+            L-3,7 C-3,3:-4,0 C-4,0:-3,-3 L-3,-7 L3,-7 L7,-3 L7,3 L3,7 
+            [style change move=361,-705 fill0/1=[Solid: Colour=Color [A=51, R=0, G=0, B=0]], line=]
+            L-3,-2 L-7,3 L-3,7 L3,7 L7,3 L3,0 L0,-18 
+            [style change move=341,-733 fill0/1=,[Solid: Colour=Color [A=51, R=0, G=0, B=0]] line=]
+            L3,7 L-3,7 C-3,3:-4,0 C-4,0:-3,-3 C-3,-3:0,-4 L3,-7 L7,-3 L7,3 
+            [style change move=401,-323 fill0/1=, line=]
+            L3,-7 L7,-3 L7,3 L3,7 L-3,7 C-3,3:-4,0 C-4,0:-3,-3 C-3,-3:0,-4 
+            [style change move=397,-302 fill0/1=, line=]
+            L3,7 L-3,7 C-3,3:-4,0 L-5,-1 L0,-17 L5,-2 L7,3 
+            [style change move=191,-475 fill0/1=, line=]
+            C-3,3:-4,0 C-4,0:-3,-3 L-2,-4 L18,0 L-2,4 
+            [style change move=168,-448 fill0/1=, line=]
+            L3,-7 L7,-3 L7,3 L3,7 L-3,7 C-3,3:-4,0 C-4,0:-3,-3 L-3,-7 
+            [style change move=148,-382 fill0/1=, line=]
+            L3,-7 L7,-3 L7,3 L3,7 L-3,7 L-7,3 C-4,0:-3,-3 L-3,-7 
+            [style change move=159,-423 fill0/1=, line=]
+            L7,-3 L7,3 L3,7 L-3,7 C-3,3:-4,0 C-4,0:-3,-3 C-3,-3:0,-4 L3,-7 
+            [style change move=161,-356 fill0/1=, line=]
+            L7,3 L3,7 L-3,7 L-7,3 C-4,0:-3,-3 L-3,-7 L3,-7 L7,-3 
+            [style change move=175,-324 fill0/1=, line=]
+            L7,3 L2,5 L-9,0 L0,12 C-4,0:-3,-3 C-3,-3:0,-4 L3,-7 L7,-3 
+            [style change move=1,-188 fill0/1=, line=]
+            L0,-14 L3,7 L-3,7 
+            [style change move=14,-168 fill0/1=, line=]
+            L3,7 L-3,7 C-3,3:-4,0 L-6,-2 L0,-15 L6,-3 L7,3 
+            [style change move=14,-137 fill0/1=, line=]
+            L7,-3 L7,3 L3,7 L-3,7 L-7,3 C-4,0:-3,-3 C-3,-3:0,-4 L3,-7 
+            [style change move=60,-74 fill0/1=, line=]
+            L3,7 L-3,7 L-7,3 C-4,0:-3,-3 L-3,-7 L3,-7 L7,-3 L7,3 
+            [style change move=44,-105 fill0/1=, line=]
+            L3,7 L-3,7 C-3,3:-4,0 C-4,0:-3,-3 C-3,-3:0,-4 L3,-7 L7,-3 L7,3 
+            [style change move=65,-25 fill0/1=, line=]
+            C-3,-3:0,-4 L3,-7 L3,-1 L0,17 L-3,-2 
+            [style change move=442,-474 fill0/1=, line=]
+            L7,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 L7,-3 
+            [style change move=442,-438 fill0/1=, line=]
+            L7,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 L7,-3 
+            [style change move=429,-399 fill0/1=, line=]
+            L7,-3 L7,3 L3,7 L-3,7 C-3,3:-4,0 C-4,0:-3,-3 C-3,-3:0,-4 L3,-7 
+            [style change move=433,-349 fill0/1=, line=]
+            L-7,3 C-4,0:-3,-3 L-3,-7 L3,-7 C3,-3:4,0 L7,3 L3,7 L-3,7 
+            [style change move=136,91 fill0/1=[Solid: Colour=Color [A=51, R=0, G=0, B=0]], line=]
+            L-15,0 L-2,6 L3,7 L7,3 L7,-3 L3,-7 L-3,-7 L0,1 
+            [style change move=165,168 fill0/1=,[Solid: Colour=Color [A=51, R=0, G=0, B=0]] line=]
+            L-2,6 L-8,0 L0,4 L-7,-3 L-3,-7 L3,-7 L7,-3 L7,3 L3,7 
+            [style change move=136,125 fill0/1=, line=]
+            L7,-3 L7,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 
+            [style change move=188,332 fill0/1=, line=]
+            L7,3 L3,7 L-3,7 C-3,2:-4,1 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 
+            [style change move=188,367 fill0/1=, line=]
+            L7,3 L3,7 L-3,7 C-3,2:-4,1 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 
+            [style change move=13,357 fill0/1=, line=]
+            L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 C4,0:3,3 L3,7 
+            [style change move=8,323 fill0/1=, line=]
+            L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 C4,0:3,3 L3,7 
+            [style change move=9,425 fill0/1=, line=]
+            L-3,7 C-3,2:-4,1 L-6,-2 L0,-2 L-1,0 L-3,-6 L3,-7 C3,-3:4,0 L7,3 L3,7 
+            [style change move=14,391 fill0/1=, line=]
+            L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 L7,3 L3,7 
+            [style change move=193,406 fill0/1=, line=]
+            L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 L7,3 
+            [style change move=181,459 fill0/1=, line=]
+            L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 L7,3 L3,7 L-3,7 L-7,3 
+            [style change move=167,491 fill0/1=, line=]
+            L-3,-7 L3,-7 C3,-3:4,0 L7,3 L3,7 L-3,7 L-7,3 C-4,0:-3,-3 
+            [style change move=173,519 fill0/1=, line=]
+            L-3,7 L-7,3 L-7,-3 L-3,-7 C0,-4:3,-3 C3,-3:4,0 C4,0:3,3 L3,7 
+            [style change move=161,554 fill0/1=, line=]
+            L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 L7,3 L3,7 
+            [style change move=137,578 fill0/1=, line=]
+            L7,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 
+            [style change move=120,609 fill0/1=, line=]
+            C4,0:3,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 C0,-4:3,-3 C3,-3:4,0 
+            [style change move=94,640 fill0/1=, line=]
+            L7,-3 L7,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 
+            [style change move=72,669 fill0/1=, line=]
+            C3,-3:4,0 C4,0:3,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 C0,-4:3,-3 
+            [style change move=47,693 fill0/1=, line=]
+            C3,-3:4,0 C4,0:3,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 C0,-4:3,-3 
+            [style change move=20,714 fill0/1=, line=]
+            C3,-3:4,0 L7,3 L3,7 L-3,7 L-7,3 C-4,0:-3,-3 L-3,-7 L3,-7 
+            [style change move=11,738 fill0/1=, line=]
+            L-3,7 L-7,3 C-3,-1:-4,-2 L-3,-7 L3,-7 L7,-3 C4,0:3,3 L3,7 
+            [style change move=-80,-743 fill0/1=, line=]
+            L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 L7,-3 C4,0:3,3 L3,7 
+            [style change move=-55,-755 fill0/1=, line=]
+            C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 C4,-1:3,-2 L7,3 L3,7 L-3,7 
+            [style change move=-38,-771 fill0/1=, line=]
+            L-1,-4 L17,0 L-2,4 C-3,3:-4,0 C-4,0:-3,-3 
+            [style change move=-228,-518 fill0/1=, line=]
+            L7,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 L7,-3 
+            [style change move=-109,-717 fill0/1=, line=]
+            L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 L7,-3 L7,3 L3,7 
+            [style change move=-135,-685 fill0/1=, line=]
+            C-3,3:-4,0 C-4,0:-3,-3 L-3,-7 L3,-7 L7,-3 L7,3 L3,7 C0,4:-3,3 
+            [style change move=-172,-664 fill0/1=, line=]
+            L3,-7 L7,-3 L7,3 L3,7 C0,4:-3,3 C-3,3:-4,0 C-4,0:-3,-3 L-3,-7 
+            [style change move=-186,-628 fill0/1=, line=]
+            L-3,-7 L3,-7 L7,-3 L7,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 
+            [style change move=-34,-520 fill0/1=, line=]
+            L7,-3 C4,0:3,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 
+            [style change move=-46,-487 fill0/1=, line=]
+            L7,-3 L7,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 
+            [style change move=-36,-444 fill0/1=, line=]
+            L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 L7,-3 L7,3 L3,7 
+            [style change move=-55,-416 fill0/1=, line=]
+            L7,-3 C4,0:3,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 
+            [style change move=-53,-379 fill0/1=, line=]
+            L7,-3 L7,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 
+            [style change move=-38,-343 fill0/1=[Solid: Colour=Color [A=51, R=0, G=0, B=0]], line=]
+            L-3,-2 C-3,2:-4,1 L-3,7 L3,7 L7,3 L3,0 L0,-18 
+            [style change move=-38,-307 fill0/1=, line=]
+            L-3,1 L-3,7 L3,7 L3,2 L0,-17 
+            [style change move=-227,-467 fill0/1=,[Solid: Colour=Color [A=51, R=0, G=0, B=0]] line=]
+            C-3,3:-4,0 C-4,0:-3,-3 L-3,-7 L3,-7 L7,-3 L7,3 L3,7 C0,4:-3,3 
+            [style change move=-230,-446 fill0/1=, line=]
+            L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 L7,-3 C4,0:3,3 
+            [style change move=-244,-411 fill0/1=, line=]
+            L7,-3 C4,0:3,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 
+            [style change move=-222,-295 fill0/1=, line=]
+            C-3,3:-4,0 C-4,0:-3,-3 L-1,-2 L17,0 L-2,2 
+            [style change move=-234,-268 fill0/1=, line=]
+            L3,-7 L7,-3 L7,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 
+            [style change move=-225,-233 fill0/1=, line=]
+            L3,-7 L7,-3 L7,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 
+            [style change move=-206,-210 fill0/1=, line=]
+            L7,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 
+            [style change move=-205,-167 fill0/1=, line=]
+            L3,-7 L7,-3 C4,0:3,3 L3,7 L0,1 L-19,0 L-1,-1 
+            [style change move=-141,-4 fill0/1=, line=]
+            L17,0 L-2,2 L-7,3 L-7,-3 L-1,-2 
+            [style change move=-91,57 fill0/1=, line=]
+            L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 L7,3 L3,7 
+            [style change move=-76,88 fill0/1=, line=]
+            L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 C4,0:3,3 L3,7 
+            [style change move=-78,115 fill0/1=, line=]
+            L7,-3 L7,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 
+            [style change move=-112,30 fill0/1=, line=]
+            L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 C4,0:3,3 L3,7 L-3,7 
+            [style change move=-47,155 fill0/1=, line=]
+            L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 C4,0:3,3 C3,3:0,4 
+            [style change move=-3,282 fill0/1=, line=]
+            L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L3,-2 L9,0 L2,2 
+            [style change move=-6,452 fill0/1=, line=]
+            L3,7 L-3,7 L-1,1 L0,-16 L1,1 
+            [style change move=-413,615 fill0/1=, line=]
+            L-3,-7 L3,-7 C3,-3:4,0 C4,0:3,3 C3,3:0,4 L-3,7 L-7,3 L-7,-3 
+            [style change move=-419,641 fill0/1=, line=]
+            L-3,-7 L3,-7 L7,-3 C4,0:3,3 L3,7 L-3,7 L-7,3 L-7,-3 
+            [style change move=-412,658 fill0/1=, line=]
+            C4,0:3,3 L3,7 L-1,4 L-17,0 L-2,-4 L3,-7 L7,-3 
+            [style change move=-419,733 fill0/1=, line=]
+            L7,-3 C4,0:3,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 
+            [style change move=-412,766 fill0/1=, line=]
+            C4,0:3,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 
+            [style change move=-414,804 fill0/1=, line=]
+            L3,-7 L7,-3 L7,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 
+            [style change move=-76,539 fill0/1=, line=]
+            L7,-3 C4,0:3,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 
+            [style change move=-89,574 fill0/1=, line=]
+            L-7,3 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 C4,0:3,3 C3,3:0,4 L-3,7 
+            [style change move=-159,584 fill0/1=, line=]
+            C4,0:3,3 C3,3:0,4 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 
+            [style change move=-193,595 fill0/1=, line=]
+            C4,0:3,3 L3,7 L-3,7 L-7,3 L-3,-1 L0,-17 L3,-2 
+            [style change move=-119,575 fill0/1=, line=]
+            C3,3:0,4 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 C4,0:3,3 
+            [style change move=-361,614 fill0/1=, line=]
+            L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 C4,0:3,3 L3,7 
+            [style change move=-333,611 fill0/1=, line=]
+            C4,0:3,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 
+            [style change move=-234,798 fill0/1=, line=]
+            C4,0:3,3 L3,5 L-19,0 L2,-5 C3,-3:4,0 
+            [style change move=-207,796 fill0/1=, line=]
+            L7,-3 C4,0:3,3 L3,7 L-1,3 L-17,0 L-2,-3 L3,-7 
+            [style change move=-261,804 fill0/1=, line=]
+            L2,2 L-17,0 L1,-2 C3,-3:4,0 C4,0:3,3 
+            [style change move=-294,806 fill0/1=, line=]
+            L-15,0 L0,-1 L7,-3 L7,3 L1,1 
+            [style change move=-336,801 fill0/1=, line=]
+            C4,0:3,3 L2,2 L-17,0 L1,-2 L7,-3 
+            [style change move=-363,801 fill0/1=, line=]
+            L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 C4,0:3,3 
+            [style change move=-41,748 fill0/1=, line=]
+            L7,-3 C4,0:3,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 
+            [style change move=-67,757 fill0/1=, line=]
+            C4,0:3,3 L3,7 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 L7,-3 
+            [style change move=-93,771 fill0/1=, line=]
+            C3,3:0,4 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 C4,0:3,3 
+            [style change move=-139,780 fill0/1=, line=]
+            L7,-3 C4,0:3,3 L3,7 L-3,7 C-3,3:-4,0 L-7,-3 L-3,-7 L3,-7 
+            [style change move=-159,789 fill0/1=, line=]
+            C3,3:0,4 L-3,7 L-7,3 L-7,-3 L-3,-7 L3,-7 C3,-3:4,0 C4,0:3,3
+        }
+    }
+    Character '__cid##8'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape3:2605 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##2'], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=[add:, mult:[r:1, g:1, b:1, a:0]], clipDepth=none
+        PlaceObject char=[sprite '__cid##4'], layer=[layer], name=colour_fill, ratio=none, matrix=[t:140.9,131.25, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[sprite '__cid##6'], layer=[layer], name=colour_fill_2, ratio=none, matrix=[t:141.95,131.35, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[sprite '__cid##8'], layer=[layer], name=bounds, ratio=none, matrix=[t:140.1,131.25, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	""
+        string #2	"MainTimeline"
+        string #3	"flash.display"
+        string #4	"MovieClip"
+        string #5	"colour_fill"
+        string #6	"colour_fill_2"
+        string #7	"bounds"
+        string #8	"Object"
+        string #9	"flash.events"
+        string #10	"EventDispatcher"
+        string #11	"DisplayObject"
+        string #12	"InteractiveObject"
+        string #13	"DisplayObjectContainer"
+        string #14	"Sprite"
+        ns #0	ns Ns "*"
+        ns #1	ns Package ""
+        ns #2	ns Package "flash.display"
+        ns #3	ns Protected "MainTimeline"
+        ns #4	ns Package "flash.events"
+        ns set #0	(0 items)
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "MainTimeline"; ns Package ""; set *
+        multiname #2	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #3	mn QName "colour_fill"; ns Package ""; set *
+        multiname #4	mn QName "colour_fill_2"; ns Package ""; set *
+        multiname #5	mn QName "bounds"; ns Package ""; set *
+        multiname #6	mn QName "Object"; ns Package ""; set *
+        multiname #7	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #8	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #9	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #10	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #11	mn QName "Sprite"; ns Package "flash.display"; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package ""; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package ""; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "colour_fill"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+
+
+
+                [mn QName "colour_fill_2"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+
+
+
+                [mn QName "bounds"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package ""; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "MainTimeline"; ns Package ""; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package ""; set *,Class] script class trait : mn QName "MainTimeline"; ns Package ""; set *
+        }
+    }
+}

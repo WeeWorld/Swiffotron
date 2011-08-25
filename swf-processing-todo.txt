@@ -1,0 +1,111 @@
+Unit tests for SWFModeller that need created.
+=============================================
+	
+[ ] Soak test which reads lots and lots of avatar parts.
+
+[ ] TLF Text, with and without fancy formatting.
+
+[ ] Text areas with no embedded fonts, and mixed with those that do.
+
+[ ] Gradient fills (3 types)
+
+
+Unit tests for swiffotron that need created.
+============================================
+
+[ ] Honour the movieclip exportforscript setting, test both true and false.
+
+[ ] Honour the movieclip exportonfirstframe setting, test both true and false.
+
+[ ] MoveAbs test with depth modification.
+
+[ ] MoveAbs test where only the X or Y component is set.
+
+[ ] MoveRel test with depth modification.
+
+[ ] MoveRel test where only the X or Y component is altered.
+
+[ ] Text replace modifications on each of the types of search, and also for
+    'no hits'.
+	
+[ ] Settext test to set the text in a text element. Negative tests referencing
+    elements that are not text, or nothing at all.
+
+[ ] Swapmc to swap an instance for the clip of another. Also to swap for a
+    referenced movieclip in other ways.
+	
+[ ] Remove an instance from a clip that has a class in it. Check that the output
+    also has the class removed. Also test that it is not removed if another
+	instance is a subclass.
+
+[ ] Niggling feeling that DefineShape/2/3/4 are muddled slightly. Only way to
+    verify that we're parsing them all properly is by having an example of each
+    that refers to an image and then saving it back out again so that it's forced
+    to regenerate the shape data. Either that or put in a 'tamper' method on shapes
+    for debug builds.	
+
+Swiffotron TODO list
+====================
+
+[ ] Sweep the codebase for static members that shouldn't be static members.
+    Thread safe, people!
+
+[ ] Extend the textreplace modification to specify where the text to be replaced
+    should be found. All, all the stage, all the code, under a certain clip,
+	in a certain code class. Also, case sensitivity.
+
+[ ] Fix the ReadText unit test by adding text support. Fonts should be written
+    as DefineFont3, taking any layout information into account, then a
+	DefineFontAlignZones tag if needed, and then a DefineFontName tag if needed.
+
+[ ] AbcCode.FindClass has a sub-optimal linear search.
+
+[ ] AbcCode.GetClassByName has a sub-optimal linear search.
+
+[ ] AbcCode.Op should verify lookupswitch parameters
+
+[ ] Debug string indices must always be below 255. Fix is to OpcodeProc all the
+    debug ops and add them to the stringMarshaller first. Ew.
+
+[ ] Add optional argument support on functions
+
+[ ] Add named parameter support.
+
+[ ] Swiffotron provides no mechanism to add initialization code to a generated
+    SWF timeline.
+
+[ ] Frames/display list manipulation is naive and clumsy. No interface to this
+    is exposed by Swiffotron yet.
+
+[ ] Review in-code TODO comments. There's almost a hundred of the fuckers.
+
+[ ] Review the in-xsd TODO comments. There's a fair few of those too.
+
+[ ] Rectangles take up too many bytes in the SWF file
+
+[ ] Add scene and frame label support
+
+[ ] Review the swiffotron comprehensive file, and the XSD to ensure there are
+    unit tests for every feature.
+	
+[ ] Honour the protected flag in swfout nodes.
+
+[ ] Implement the pngout test (Blue sky test).
+
+[ ] Implement the vidout test (Blue sky test).
+	
+[ ] Add SWF RDF metadata claiming that the file was created by almighty
+    SWIFFOTRON.
+	
+[ ] Refactor all the bits of IO onto one place.
+
+[ ] The icon, which is used in several subprojects, doesn't render right. It seems
+    to end up with a black outline, despite the transparent pixels having no
+	black near them. Needs someone who's good at ico files to look at it. Also,
+	it doesn't scale up on extra-large icon view. This is despite being a 128x128
+	image. Apparently the max is 256x256 anyway, so I screwed up there.
+	
+[ ] Text replacement test with the text spread across several text records in a
+    static text tag.
+	
+[ ] Text replacement for recursive/not recursive option.

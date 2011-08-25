@@ -1,0 +1,8 @@
+StyleCop.Cache
+bin
+obj
+*.user
+*.suo
+LocalTestRun.testrunconfig
+*.docstates
+*.vsmdi

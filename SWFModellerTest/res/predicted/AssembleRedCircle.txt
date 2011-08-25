@@ -1,0 +1,339 @@
+SWF stage=550,400, fps=12, bg=#FFFFFF
+Document class:mn QName "MainTimeline"; ns Package "redcircle_fla"; set *
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect -0.5,-0.5->49,49]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=153, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=485,0 fill0/1=,[Solid: Colour=Color [A=255, R=153, G=0, B=0]] line=1]
+            C201,0:142,142 C142,142:0,201 C0,201:-142,142 C-142,142:-201,0 C-201,0:-142,-142 C-142,-142:0,-201 C0,-201:142,-142
+            C142,-142:201,0
+        }
+    }
+    Character '__cid##2'
+    {
+        Class name:mn QName "RedCircle"; ns Package ""; set *
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:78 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##2', mn QName "RedCircle"; ns Package ""; set *], layer=[layer], name=redcircle_mc, ratio=none, matrix=[t:213,136.95, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	"method4.abc"
+        string #2	"x"
+        string #3	""
+        string #4	"method5.abc"
+        string #5	"Event"
+        string #6	"flash.events"
+        string #7	"ENTER_FRAME"
+        string #8	"moveit"
+        string #9	"addEventListener"
+        string #10	"method6.abc"
+        string #11	"method1.abc"
+        string #12	"method2.abc"
+        string #13	"method3.abc"
+        string #14	"RedCircle"
+        string #15	"Object"
+        string #16	"EventDispatcher"
+        string #17	"DisplayObject"
+        string #18	"flash.display"
+        string #19	"InteractiveObject"
+        string #20	"DisplayObjectContainer"
+        string #21	"Sprite"
+        string #22	"MovieClip"
+        string #23	"method0.abc"
+        string #24	"MainTimeline"
+        string #25	"redcircle_fla"
+        string #26	"redcircle_fla:MainTimeline"
+        string #27	"redcircle_mc"
+        ns #0	ns Ns "*"
+        ns #1	ns Package ""
+        ns #2	ns Package "flash.events"
+        ns #3	ns PackageInternal ""
+        ns #4	ns Package "flash.display"
+        ns #5	ns Package "redcircle_fla"
+        ns #6	ns Protected "RedCircle"
+        ns #7	ns Protected "redcircle_fla:MainTimeline"
+        ns set #0	(0 items)
+        ns set #1	(1 items)
+            - ns Package ""
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "x"; ns Package ""; set *
+        multiname #2	mn QName "Event"; ns Package "flash.events"; set *
+        multiname #3	mn QName "ENTER_FRAME"; ns Package ""; set *
+        multiname #4	mn QName "moveit"; ns PackageInternal ""; set *
+        multiname #5	mn QName "addEventListener"; ns Package ""; set *
+        multiname #6	mn Multiname "RedCircle"; ns *; set {ns Package ""}
+        multiname #7	mn QName "Object"; ns Package ""; set *
+        multiname #8	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #9	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #10	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #11	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #12	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #13	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #14	mn QName "RedCircle"; ns Package ""; set *
+        multiname #15	mn QName "MainTimeline"; ns Package "redcircle_fla"; set *
+        multiname #16	mn QName "redcircle_mc"; ns Package ""; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "RedCircle"
+        {
+            class mn QName "RedCircle"; ns Package ""; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 DebugFile("method6.abc")
+                    #2 DebugLine(1)
+                    #3 GetLocal0()
+                    #4 DebugLine(2)
+                    #5 PushScope()
+                    #6 DebugLine(3)
+                    #7 ReturnVoid()
+                }
+
+
+
+                mn QName "RedCircle"; ns Package ""; set * () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 DebugFile("method5.abc")
+                    #2 DebugLine(1)
+                    #3 GetLocal0()
+                    #4 DebugLine(2)
+                    #5 PushScope()
+                    #6 DebugLine(3)
+                    #7 GetLocal0()
+                    #8 DebugLine(4)
+                    #9 ConstructSuper(0)
+                    #10 DebugLine(5)
+                    #11 GetLocal0()
+                    #12 DebugLine(6)
+                    #13 GetLex(mn QName "Event"; ns Package "flash.events"; set *)
+                    #14 DebugLine(7)
+                    #15 GetProperty(mn QName "ENTER_FRAME"; ns Package ""; set *)
+                    #16 DebugLine(8)
+                    #17 GetLex(mn QName "moveit"; ns PackageInternal ""; set *)
+                    #18 DebugLine(9)
+                    #19 CallPropVoid(mn QName "addEventListener"; ns Package ""; set *, 2)
+                    #20 DebugLine(10)
+                    #21 ReturnVoid()
+                }
+
+
+
+                [mn QName "moveit"; ns PackageInternal ""; set *,Method] function (anon *) (mn QName "Event"; ns Package "flash.events"; set * param1) : Void
+                {
+                    [MaxStack:3, LocalCount:2, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 DebugFile("method4.abc")
+                    #2 DebugLine(1)
+                    #3 GetLocal0()
+                    #4 DebugLine(2)
+                    #5 PushScope()
+                    #6 DebugLine(3)
+                    #7 GetLocal0()
+                    #8 DebugLine(4)
+                    #9 GetLocal0()
+                    #10 DebugLine(5)
+                    #11 GetProperty(mn QName "x"; ns Package ""; set *)
+                    #12 DebugLine(6)
+                    #13 Decrement()
+                    #14 DebugLine(7)
+                    #15 SetProperty(mn QName "x"; ns Package ""; set *)
+                    #16 DebugLine(8)
+                    #17 ReturnVoid()
+                }
+            }
+        }
+        protected package ns Protected "redcircle_fla:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "redcircle_fla"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 DebugFile("method2.abc")
+                    #2 DebugLine(1)
+                    #3 GetLocal0()
+                    #4 DebugLine(2)
+                    #5 PushScope()
+                    #6 DebugLine(3)
+                    #7 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "redcircle_fla"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 DebugFile("method1.abc")
+                    #2 DebugLine(1)
+                    #3 GetLocal0()
+                    #4 DebugLine(2)
+                    #5 PushScope()
+                    #6 DebugLine(3)
+                    #7 GetLocal0()
+                    #8 DebugLine(4)
+                    #9 ConstructSuper(0)
+                    #10 DebugLine(5)
+                    #11 ReturnVoid()
+                }
+
+
+
+                [mn QName "redcircle_mc"; ns Package ""; set *,Slot] property type : [mn QName "RedCircle"; ns Package ""; set *], val: ConUndefined
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 DebugFile("method3.abc")
+                #2 DebugLine(1)
+                #3 GetLocal0()
+                #4 DebugLine(2)
+                #5 PushScope()
+                #6 DebugLine(3)
+                #7 FindPropStrict(mn Multiname "RedCircle"; ns *; set {ns Package ""})
+                #8 DebugLine(4)
+                #9 GetLex(mn QName "Object"; ns Package ""; set *)
+                #10 DebugLine(5)
+                #11 PushScope()
+                #12 DebugLine(6)
+                #13 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #14 DebugLine(7)
+                #15 PushScope()
+                #16 DebugLine(8)
+                #17 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #18 DebugLine(9)
+                #19 PushScope()
+                #20 DebugLine(10)
+                #21 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #22 DebugLine(11)
+                #23 PushScope()
+                #24 DebugLine(12)
+                #25 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #26 DebugLine(13)
+                #27 PushScope()
+                #28 DebugLine(14)
+                #29 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #30 DebugLine(15)
+                #31 PushScope()
+                #32 DebugLine(16)
+                #33 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #34 DebugLine(17)
+                #35 PushScope()
+                #36 DebugLine(18)
+                #37 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #38 DebugLine(19)
+                #39 NewClass(mn QName "RedCircle"; ns Package ""; set *)
+                #40 DebugLine(20)
+                #41 PopScope()
+                #42 DebugLine(21)
+                #43 PopScope()
+                #44 DebugLine(22)
+                #45 PopScope()
+                #46 DebugLine(23)
+                #47 PopScope()
+                #48 DebugLine(24)
+                #49 PopScope()
+                #50 DebugLine(25)
+                #51 PopScope()
+                #52 DebugLine(26)
+                #53 PopScope()
+                #54 DebugLine(27)
+                #55 InitProperty(mn QName "RedCircle"; ns Package ""; set *)
+                #56 DebugLine(28)
+                #57 ReturnVoid()
+            }
+            [mn QName "RedCircle"; ns Package ""; set *,Class] script class trait : mn QName "RedCircle"; ns Package ""; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 DebugFile("method0.abc")
+                #2 DebugLine(1)
+                #3 GetLocal0()
+                #4 DebugLine(2)
+                #5 PushScope()
+                #6 DebugLine(3)
+                #7 GetScopeObject(0)
+                #8 DebugLine(4)
+                #9 GetLex(mn QName "Object"; ns Package ""; set *)
+                #10 DebugLine(5)
+                #11 PushScope()
+                #12 DebugLine(6)
+                #13 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #14 DebugLine(7)
+                #15 PushScope()
+                #16 DebugLine(8)
+                #17 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #18 DebugLine(9)
+                #19 PushScope()
+                #20 DebugLine(10)
+                #21 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #22 DebugLine(11)
+                #23 PushScope()
+                #24 DebugLine(12)
+                #25 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #26 DebugLine(13)
+                #27 PushScope()
+                #28 DebugLine(14)
+                #29 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #30 DebugLine(15)
+                #31 PushScope()
+                #32 DebugLine(16)
+                #33 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #34 DebugLine(17)
+                #35 PushScope()
+                #36 DebugLine(18)
+                #37 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #38 DebugLine(19)
+                #39 NewClass(mn QName "MainTimeline"; ns Package "redcircle_fla"; set *)
+                #40 DebugLine(20)
+                #41 PopScope()
+                #42 DebugLine(21)
+                #43 PopScope()
+                #44 DebugLine(22)
+                #45 PopScope()
+                #46 DebugLine(23)
+                #47 PopScope()
+                #48 DebugLine(24)
+                #49 PopScope()
+                #50 DebugLine(25)
+                #51 PopScope()
+                #52 DebugLine(26)
+                #53 PopScope()
+                #54 DebugLine(27)
+                #55 InitProperty(mn QName "MainTimeline"; ns Package "redcircle_fla"; set *)
+                #56 DebugLine(28)
+                #57 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "redcircle_fla"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "redcircle_fla"; set *
+        }
+    }
+}

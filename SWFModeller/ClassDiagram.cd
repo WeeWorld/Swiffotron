@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="SWFProcessing.SWFModeller.Modelling.Timeline" Collapsed="true">
+    <Position X="5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABBEAAAAABAACAAAAYAgAABAAAAAAAEAAAABQAAAAE=</HashCode>
+      <FileName>Modelling\Timeline.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.Characters.Sprite" Collapsed="true">
+    <Position X="4" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAQgCAEAAAAAAAAAAAIAAAAAEAAAAAAAgA=</HashCode>
+      <FileName>Characters\Sprite.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Orientation="Left" Position="0.1" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.SWF" Collapsed="true">
+    <Position X="6.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQoABAAIEAAAASBAAMFAEAREGGACAAAsMEAABAAQAgg=</HashCode>
+      <FileName>Modelling\SWF.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.Frame" Collapsed="true">
+    <Position X="8" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAIAEAAAIAEAACAAAAAAAAAAAAAAAIAAAAAAAgA=</HashCode>
+      <FileName>Modelling\Frame.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.Modelling.Layer" Collapsed="true">
+    <Position X="8" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Modelling\Layer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.SWFReader" Collapsed="true">
+    <Position X="1" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFIRCDIQhCAAQAAAAAFAGAMAGg1CUIEAABBABQQAAAQ=</HashCode>
+      <FileName>IO\SWFReader.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.SWFWriter" Collapsed="true">
+    <Position X="1" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAQAQhAgACAAAANABABFAAAAAkQEAAAASAAAAAAA=</HashCode>
+      <FileName>IO\SWFWriter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.SWFWriterOptions" Collapsed="true">
+    <Position X="1" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>IO\SWFWriterOptions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.ABC.AbcCode" Collapsed="true">
+    <Position X="2" Y="4" Width="1.5" />
+    <AssociationLine Name="Trait" Type="SWFProcessing.SWFModeller.ABC.Code.Trait" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.75" Y="4" />
+        <Point X="2.75" Y="3.625" />
+        <Point X="6.188" Y="3.625" />
+        <Point X="6.188" Y="4" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>KARCDEFAAAuAgQMBmIBEMIQACABQCAkFwwAIRBIQTnA=</HashCode>
+      <FileName>ABC\Code\AbcCode.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="AS3Class" />
+      <Property Name="Trait" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.ABC.Code.AS3Class" Collapsed="true">
+    <Position X="3.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiJAAQBAAgIACEqADAEAwIIAAAAEIgAIAEAYAABiQ=</HashCode>
+      <FileName>ABC\Code\AS3Class.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Trait" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.ABC.Code.ClassTrait" Collapsed="true">
+    <Position X="8" Y="3.75" Width="1.5" />
+    <InheritanceLine Type="SWFProcessing.SWFModeller.ABC.Code.Trait" FixedFromPoint="true">
+      <Path>
+        <Point X="7.25" Y="4.188" />
+        <Point X="8" Y="4.188" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>ABC\Code\ClassTrait.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.ABC.Code.Trait" Collapsed="true">
+    <Position X="5.75" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>ABC\Code\Trait.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.ABC.Code.FunctionTrait" Collapsed="true">
+    <Position X="8" Y="5.25" Width="1.5" />
+    <InheritanceLine Type="SWFProcessing.SWFModeller.ABC.Code.Trait" FixedFromPoint="true">
+      <Path>
+        <Point X="7.25" Y="4.375" />
+        <Point X="7.625" Y="4.375" />
+        <Point X="7.625" Y="5.565" />
+        <Point X="8" Y="5.565" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>QAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>ABC\Code\FunctionTrait.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.ABC.Code.MethodTrait" Collapsed="true">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <InheritanceLine Type="SWFProcessing.SWFModeller.ABC.Code.Trait" FixedFromPoint="true">
+      <Path>
+        <Point X="6.5" Y="4.509" />
+        <Point X="6.5" Y="5" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>ABC\Code\MethodTrait.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Method" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.ABC.Code.Method" Collapsed="true">
+    <Position X="5.75" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABABAEJAAChDESCkIAiAawAAAAgAACAAAAMQAEEAgA=</HashCode>
+      <FileName>ABC\Code\Method.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.ABC.Namespace" Collapsed="true">
+    <Position X="5.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAQEgAAAAAQIAAAAAIAAAAAAAAAAAiA=</HashCode>
+      <FileName>ABC\Code\Namespace.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.ABC.NamespaceSet" Collapsed="true">
+    <Position X="7" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAABAEgABAAAQAAAIAAIABAAAAAAAAAiA=</HashCode>
+      <FileName>ABC\Code\NamespaceSet.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.ABC.Multiname" Collapsed="true">
+    <Position X="3.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABABAAEgAAAAAQIAAAAAIAAAAAAAAAAAiI=</HashCode>
+      <FileName>ABC\Code\Multiname.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.Characters.ShapeProxy" Collapsed="true">
+    <Position X="0.75" Y="6.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAACEAgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Characters\ShapeProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.Characters.UnparsedShape" Collapsed="true">
+    <Position X="0.75" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAEAgAAAAEAAAAAAAAAAAAABIAAAAAAAAAAgA=</HashCode>
+      <FileName>Characters\UnparsedShape.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.Characters.UnparsedMorphShape" Collapsed="true">
+    <Position X="0.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAEAgAAAAAAAAAAAAAAAAAABIAAAAAAAAAAgA=</HashCode>
+      <FileName>Characters\UnparsedMorphShape.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.Characters.MorphShapeProxy" Collapsed="true">
+    <Position X="0.75" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAACEAgAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>Characters\MorphShapeProxy.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.PlaceObject" Collapsed="true">
+    <Position X="3" Y="7" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAAAAASAAAAACAQGAAQAACAgECAEAQABgAABChA=</HashCode>
+      <FileName>DisplayList\PlaceObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="SWFProcessing.SWFModeller.RemoveObject" Collapsed="true">
+    <Position X="3" Y="8" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAEAQABAAAAChA=</HashCode>
+      <FileName>DisplayList\RemoveObject.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Font Name="Tahoma" Size="8.25" />
+</ClassDiagram>

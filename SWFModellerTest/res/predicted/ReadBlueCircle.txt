@@ -1,0 +1,271 @@
+SWF stage=550,400, fps=12, bg=#FFFFFF
+Document class:mn QName "MainTimeline"; ns Package "circle_fla"; set *
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect -0.5,-0.5->65,65]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=192, R=0, G=85, B=85]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=645,0 fill0/1=,[Solid: Colour=Color [A=192, R=0, G=85, B=85]] line=1]
+            C267,0:189,189 C189,189:0,267 C0,267:-189,189 C-189,189:-267,0 C-267,0:-189,-189 C-189,-189:0,-267 C0,-267:189,-189
+            C189,-189:267,0
+        }
+    }
+    Character '__cid##2'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:83 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##2'], layer=[layer], name=circle_mc, ratio=none, matrix=[t:198.5,141.5, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	"flash.events"
+        string #2	"Event"
+        string #3	"circle_fla"
+        string #4	"MainTimeline"
+        string #5	"flash.display"
+        string #6	"MovieClip"
+        string #7	"circle_fla:MainTimeline"
+        string #8	"frame1"
+        string #9	""
+        string #10	"circle_mc"
+        string #11	"update"
+        string #12	"target"
+        string #13	"x"
+        string #14	"http://adobe.com/AS3/2006/builtin"
+        string #15	"adobe.utils"
+        string #16	"flash.accessibility"
+        string #17	"flash.errors"
+        string #18	"flash.external"
+        string #19	"flash.filters"
+        string #20	"flash.geom"
+        string #21	"flash.media"
+        string #22	"flash.net"
+        string #23	"flash.printing"
+        string #24	"flash.system"
+        string #25	"flash.text"
+        string #26	"flash.ui"
+        string #27	"flash.utils"
+        string #28	"flash.xml"
+        string #29	"flash.display:MovieClip"
+        string #30	"flash.display:Sprite"
+        string #31	"flash.display:DisplayObjectContainer"
+        string #32	"flash.display:InteractiveObject"
+        string #33	"flash.display:DisplayObject"
+        string #34	"flash.events:EventDispatcher"
+        string #35	"Object"
+        string #36	"ENTER_FRAME"
+        string #37	"addEventListener"
+        string #38	"addFrameScript"
+        string #39	"EventDispatcher"
+        string #40	"DisplayObject"
+        string #41	"InteractiveObject"
+        string #42	"DisplayObjectContainer"
+        string #43	"Sprite"
+        ns #0	ns Ns "*"
+        ns #1	ns Package "flash.events"
+        ns #2	ns Package "circle_fla"
+        ns #3	ns Package "flash.display"
+        ns #4	ns Protected "circle_fla:MainTimeline"
+        ns #5	ns PackageInternal "circle_fla"
+        ns #6	ns Package ""
+        ns #7	ns Private ""
+        ns #8	ns Private ""
+        ns #9	ns Ns "http://adobe.com/AS3/2006/builtin"
+        ns #10	ns Package "adobe.utils"
+        ns #11	ns Package "flash.accessibility"
+        ns #12	ns Package "flash.errors"
+        ns #13	ns Package "flash.external"
+        ns #14	ns Package "flash.filters"
+        ns #15	ns Package "flash.geom"
+        ns #16	ns Package "flash.media"
+        ns #17	ns Package "flash.net"
+        ns #18	ns Package "flash.printing"
+        ns #19	ns Package "flash.system"
+        ns #20	ns Package "flash.text"
+        ns #21	ns Package "flash.ui"
+        ns #22	ns Package "flash.utils"
+        ns #23	ns Package "flash.xml"
+        ns #24	ns StaticProtected "circle_fla:MainTimeline"
+        ns #25	ns StaticProtected "flash.display:MovieClip"
+        ns #26	ns StaticProtected "flash.display:Sprite"
+        ns #27	ns StaticProtected "flash.display:DisplayObjectContainer"
+        ns #28	ns StaticProtected "flash.display:InteractiveObject"
+        ns #29	ns StaticProtected "flash.display:DisplayObject"
+        ns #30	ns StaticProtected "flash.events:EventDispatcher"
+        ns #31	ns StaticProtected "Object"
+        ns set #0	(0 items)
+        ns set #1	(31 items)
+            - ns Private ""
+            - ns Package ""
+            - ns Private ""
+            - ns Package "circle_fla"
+            - ns PackageInternal "circle_fla"
+            - ns Ns "http://adobe.com/AS3/2006/builtin"
+            - ns Package "adobe.utils"
+            - ns Package "flash.accessibility"
+            - ns Package "flash.display"
+            - ns Package "flash.errors"
+            - ns Package "flash.events"
+            - ns Package "flash.external"
+            - ns Package "flash.filters"
+            - ns Package "flash.geom"
+            - ns Package "flash.media"
+            - ns Package "flash.net"
+            - ns Package "flash.printing"
+            - ns Package "flash.system"
+            - ns Package "flash.text"
+            - ns Package "flash.ui"
+            - ns Package "flash.utils"
+            - ns Package "flash.xml"
+            - ns Protected "circle_fla:MainTimeline"
+            - ns StaticProtected "circle_fla:MainTimeline"
+            - ns StaticProtected "flash.display:MovieClip"
+            - ns StaticProtected "flash.display:Sprite"
+            - ns StaticProtected "flash.display:DisplayObjectContainer"
+            - ns StaticProtected "flash.display:InteractiveObject"
+            - ns StaticProtected "flash.display:DisplayObject"
+            - ns StaticProtected "flash.events:EventDispatcher"
+            - ns StaticProtected "Object"
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "Event"; ns Package "flash.events"; set *
+        multiname #2	mn QName "MainTimeline"; ns Package "circle_fla"; set *
+        multiname #3	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #4	mn QName "frame1"; ns PackageInternal "circle_fla"; set *
+        multiname #5	mn QName "circle_mc"; ns Package ""; set *
+        multiname #6	mn QName "update"; ns Package ""; set *
+        multiname #7	mn QName "target"; ns Package ""; set *
+        multiname #8	mn Multiname "x"; ns *; set {ns Private "", ns Package "", ns Private "", ns Package "circle_fla", ns PackageInternal "circle_fla", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "adobe.utils", ns Package "flash.accessibility", ns Package "flash.display", ns Package "flash.errors", ns Package "flash.events", ns Package "flash.external", ns Package "flash.filters", ns Package "flash.geom", ns Package "flash.media", ns Package "flash.net", ns Package "flash.printing", ns Package "flash.system", ns Package "flash.text", ns Package "flash.ui", ns Package "flash.utils", ns Package "flash.xml", ns Protected "circle_fla:MainTimeline", ns StaticProtected "circle_fla:MainTimeline", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"}
+        multiname #9	mn QName "ENTER_FRAME"; ns Package ""; set *
+        multiname #10	mn QName "addEventListener"; ns Package ""; set *
+        multiname #11	mn QName "addFrameScript"; ns Package ""; set *
+        multiname #12	mn QName "Object"; ns Package ""; set *
+        multiname #13	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #14	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #15	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #16	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #17	mn QName "Sprite"; ns Package "flash.display"; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "circle_fla:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "circle_fla"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "circle_fla"; set * () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 FindPropStrict(mn QName "addFrameScript"; ns Package ""; set *)
+                    #6 PushByte(0)
+                    #7 GetLex(mn QName "frame1"; ns PackageInternal "circle_fla"; set *)
+                    #8 CallPropVoid(mn QName "addFrameScript"; ns Package ""; set *, 2)
+                    #9 ReturnVoid()
+                }
+
+
+
+                [mn QName "frame1"; ns PackageInternal "circle_fla"; set *,Method] function (anon *) () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLex(mn QName "circle_mc"; ns Package ""; set *)
+                    #4 GetLex(mn QName "Event"; ns Package "flash.events"; set *)
+                    #5 GetProperty(mn QName "ENTER_FRAME"; ns Package ""; set *)
+                    #6 GetLex(mn QName "update"; ns Package ""; set *)
+                    #7 CallPropVoid(mn QName "addEventListener"; ns Package ""; set *, 2)
+                    #8 ReturnVoid()
+                }
+
+
+
+                [mn QName "circle_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+
+
+
+                [mn QName "update"; ns Package ""; set *,Method] function (anon *) (mn QName "Event"; ns Package "flash.events"; set * param1) : Void
+                {
+                    [MaxStack:3, LocalCount:2, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal1()
+                    #4 GetProperty(mn QName "target"; ns Package ""; set *)
+                    #5 GetLocal1()
+                    #6 GetProperty(mn QName "target"; ns Package ""; set *)
+                    #7 GetProperty(mn Multiname "x"; ns *; set {ns Private "", ns Package "", ns Private "", ns Package "circle_fla", ns PackageInternal "circle_fla", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "adobe.utils", ns Package "flash.accessibility", ns Package "flash.display", ns Package "flash.errors", ns Package "flash.events", ns Package "flash.external", ns Package "flash.filters", ns Package "flash.geom", ns Package "flash.media", ns Package "flash.net", ns Package "flash.printing", ns Package "flash.system", ns Package "flash.text", ns Package "flash.ui", ns Package "flash.utils", ns Package "flash.xml", ns Protected "circle_fla:MainTimeline", ns StaticProtected "circle_fla:MainTimeline", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"})
+                    #8 PushByte(1)
+                    #9 Add()
+                    #10 SetProperty(mn Multiname "x"; ns *; set {ns Private "", ns Package "", ns Private "", ns Package "circle_fla", ns PackageInternal "circle_fla", ns Ns "http://adobe.com/AS3/2006/builtin", ns Package "adobe.utils", ns Package "flash.accessibility", ns Package "flash.display", ns Package "flash.errors", ns Package "flash.events", ns Package "flash.external", ns Package "flash.filters", ns Package "flash.geom", ns Package "flash.media", ns Package "flash.net", ns Package "flash.printing", ns Package "flash.system", ns Package "flash.text", ns Package "flash.ui", ns Package "flash.utils", ns Package "flash.xml", ns Protected "circle_fla:MainTimeline", ns StaticProtected "circle_fla:MainTimeline", ns StaticProtected "flash.display:MovieClip", ns StaticProtected "flash.display:Sprite", ns StaticProtected "flash.display:DisplayObjectContainer", ns StaticProtected "flash.display:InteractiveObject", ns StaticProtected "flash.display:DisplayObject", ns StaticProtected "flash.events:EventDispatcher", ns StaticProtected "Object"})
+                    #11 ReturnVoid()
+                }
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "circle_fla"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "circle_fla"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "circle_fla"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "circle_fla"; set *
+        }
+    }
+}

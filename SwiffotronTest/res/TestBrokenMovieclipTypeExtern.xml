@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <swf id="TestBrokenMovieclipTypeExtern">
+        
+        <swfout store="store://store/TestBrokenMovieclipTypeExtern.swf"/>
+        
+        <!-- Import the SWF as a MovieClip. Note the broken store path. -->
+        <movieclip type="extern" src="store://store/doesnotexist.swf" id="alien" class="com.ww.UFOClass"/>
+        
+        <!-- Instantiate it -->
+        <instance type="movieclip" src="alien" id="mc_alienpilot" x="40" y="40"/>
+        
+    </swf>
+
+</swiffotron>

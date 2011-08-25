@@ -1,0 +1,167 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E584EF20-EB00-463C-8E57-2B3F5D3A5680}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SWFProcessing.SWFModeller</RootNamespace>
+    <AssemblyName>SWFModeller</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\SWFModeller.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.5.452, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>.\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="ABC\ABCValues.cs" />
+    <Compile Include="ABC\Code\AS3Class.cs" />
+    <Compile Include="ABC\Code\ClassTrait.cs" />
+    <Compile Include="ABC\Code\ExceptionHandler.cs" />
+    <Compile Include="ABC\Code\FunctionalTrait.cs" />
+    <Compile Include="ABC\Code\FunctionTrait.cs" />
+    <Compile Include="ABC\Code\IHasSlotID.cs" />
+    <Compile Include="ABC\Code\Method.cs" />
+    <Compile Include="ABC\Code\MethodTrait.cs" />
+    <Compile Include="ABC\Code\Multiname.cs" />
+    <Compile Include="ABC\Code\Namespace.cs" />
+    <Compile Include="ABC\Code\NamespaceSet.cs" />
+    <Compile Include="ABC\Code\Opcode.cs" />
+    <Compile Include="ABC\Code\OpcodeOffset.cs" />
+    <Compile Include="ABC\Code\Script.cs" />
+    <Compile Include="ABC\Code\SlotTrait.cs" />
+    <Compile Include="ABC\Code\Trait.cs" />
+    <Compile Include="ABC\Debug\IABCLoadInterceptor.cs" />
+    <Compile Include="ABC\DoABC.cs" />
+    <Compile Include="ABC\Code\AbcCode.cs" />
+    <Compile Include="ABC\IO\AbcFileValues.cs" />
+    <Compile Include="ABC\IO\AbcReader.cs" />
+    <Compile Include="ABC\IO\AbcWriter.cs" />
+    <Compile Include="ABC\IO\ABCDataTypeReader.cs" />
+    <Compile Include="ABC\IO\ABCDataTypeWriter.cs" />
+    <Compile Include="Characters\Images\IImage.cs" />
+    <Compile Include="Characters\Images\ImageBlob.cs" />
+    <Compile Include="Characters\Images\JPEGTable.cs" />
+    <Compile Include="Characters\Shapes\IO\ShapeParser.cs" />
+    <Compile Include="Characters\Shapes\IO\ShapeWriter.cs" />
+    <Compile Include="Characters\Shapes\MorphShape.cs" />
+    <Compile Include="Characters\Shapes\Parts\CapStyle.cs" />
+    <Compile Include="Characters\Shapes\Parts\CurvedEdge.cs" />
+    <Compile Include="Characters\Shapes\Parts\FillStyle.cs" />
+    <Compile Include="Characters\Shapes\Parts\FillType.cs" />
+    <Compile Include="Characters\Shapes\Parts\Gradients\FocalGradient.cs" />
+    <Compile Include="Characters\Shapes\Parts\Gradients\Gradient.cs" />
+    <Compile Include="Characters\Shapes\Parts\Gradients\GradientRecord.cs" />
+    <Compile Include="Characters\Shapes\Parts\Gradients\IGradient.cs" />
+    <Compile Include="Characters\Shapes\Parts\Gradients\MorphGradient.cs" />
+    <Compile Include="Characters\Shapes\Parts\Gradients\MorphGradientRecord.cs" />
+    <Compile Include="Characters\Shapes\Parts\IFillStyle.cs" />
+    <Compile Include="Characters\Shapes\Parts\ILineStyle.cs" />
+    <Compile Include="Characters\Shapes\Parts\IShapeRecord.cs" />
+    <Compile Include="Characters\Shapes\Parts\JoinStyle.cs" />
+    <Compile Include="Characters\Shapes\Parts\LineStyle.cs" />
+    <Compile Include="Characters\Shapes\Parts\MorphFillStyle.cs" />
+    <Compile Include="Characters\Shapes\Parts\MorphLineStyle.cs" />
+    <Compile Include="Characters\Shapes\Parts\StraightEdge.cs" />
+    <Compile Include="Characters\Shapes\Parts\StyleChange.cs" />
+    <Compile Include="Characters\Shapes\Shape.cs" />
+    <Compile Include="Characters\Shapes\ShapeDef.cs" />
+    <Compile Include="Characters\Text\EditText.cs" />
+    <Compile Include="Characters\ICharacter.cs" />
+    <Compile Include="Characters\ColorTransform.cs" />
+    <Compile Include="Characters\HDRColor.cs" />
+    <Compile Include="Characters\Text\IFontUserProcessor.cs" />
+    <Compile Include="Characters\Text\IText.cs" />
+    <Compile Include="Characters\Text\TextRecord.cs" />
+    <Compile Include="Characters\Text\IFontUser.cs" />
+    <Compile Include="Characters\Text\StaticText.cs" />
+    <Compile Include="DisplayList\ICharacterReference.cs" />
+    <Compile Include="DisplayList\Debug\DLItemDump.cs" />
+    <Compile Include="IO\IDMarshaller.cs" />
+    <Compile Include="IO\IImageFinder.cs" />
+    <Compile Include="IO\SWFReaderOptions.cs" />
+    <Compile Include="Text\PixelAlignment.cs" />
+    <Compile Include="Text\SWFFont.cs" />
+    <Compile Include="Text\GlyphLayout.cs" />
+    <Compile Include="Text\KerningPair.cs" />
+    <Compile Include="Util\ListSet.cs" />
+    <Compile Include="Util\ValueSetDict.cs" />
+    <Compile Include="Modelling\Frame.cs" />
+    <Compile Include="DisplayList\IDisplayListItem.cs" />
+    <Compile Include="Characters\Shapes\IMorphShape.cs" />
+    <Compile Include="DisplayList\PlaceObject.cs" />
+    <Compile Include="DisplayList\RemoveObject.cs" />
+    <Compile Include="Characters\Shapes\IShape.cs" />
+    <Compile Include="Characters\Geom\Rect.cs" />
+    <Compile Include="Characters\Debug\CharacterDump.cs" />
+    <Compile Include="Characters\Sprite.cs" />
+    <Compile Include="Modelling\Layer.cs" />
+    <Compile Include="Modelling\SWF.cs" />
+    <Compile Include="IO\SWFDataTypeReader.cs" />
+    <Compile Include="IO\SWFDataTypeWriter.cs" />
+    <Compile Include="Modelling\SWFModellerException.cs" />
+    <Compile Include="IO\SWFReader.cs" />
+    <Compile Include="Modelling\Timeline.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Characters\Geom\Matrix.cs" />
+    <Compile Include="Modelling\SWFValues.cs" />
+    <Compile Include="IO\SWFWriter.cs" />
+    <Compile Include="IO\SWFWriterOptions.cs" />
+    <Compile Include="Util\UFP88.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ICSharpCode.SharpZipLib.dll" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

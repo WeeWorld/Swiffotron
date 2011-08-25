@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <swf id="TestBrokenInstanceTypeMovieClip">
+        
+        <swfout store="store://store/TestBrokenInstanceTypeMovieClip.swf"/>
+        
+        <!-- Import the SWF as a MovieClip. -->
+        <movieclip type="swf" src="store://store/monocular-ufo-pilot.swf" id="alien" class="com.ww.Monocular"/>
+
+        <!-- Instantiate it. Note the bad src -->
+        <instance type="movieclip" src="badsrc" id="mc_alienpilot" x="40" y="40"/>
+        
+    </swf>
+
+</swiffotron>

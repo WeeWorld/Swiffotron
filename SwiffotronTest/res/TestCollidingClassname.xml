@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <swf id="TestCollidingClassname" width="300" height="300">
+        
+        <swfout store="store://store/TestCollidingClassname.swf"/>
+        
+        <!-- Import the SWF as a MovieClip -->
+        <movieclip type="extern" src="store://store/miscparts.BadlyDrawnBeer.swf" id="drink" class="com.ww.MyFaveClassname"/>
+        
+        <!-- Oh look, a class name collision. -->
+        <movieclip type="extern" src="store://store/miscparts.WeirdEyes.swf" id="eyes" class="com.ww.MyFaveClassname"/>
+
+        <!-- Instantiate them -->
+        <instance type="movieclip" src="drink" id="mc_drink" x="145" y="145"/>
+        <instance type="movieclip" src="eyes" id="mc_eyes" x="145" y="145"/>
+
+    </swf>
+
+</swiffotron>

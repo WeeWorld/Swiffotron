@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="urn:swiffotron-schemas:swiffotron-config/24/05/2011"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <con:store name="file"
+               classname="SWFProcessing.Swiffotron.IO.FileStore" />
+    
+    <con:store name="db"
+               classname="SWFProcessing.Swiffotron.IO.FileStore"
+               init="Server=myDBserver;database=myDB" />
+
+    <con:cache name="ht"
+               assembly="Swiffotron, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null"
+               classname="SWFProcessing.Swiffotron.IO.HTCache" />
+
+    <con:cache name="cache"
+               classname="SWFProcessing.Swiffotron.IO.HTCache"
+               init="memcacheport=1002" />
+
+    <con:swfprefs>
+        <con:storeWriteEnabled>true</con:storeWriteEnabled>
+        <con:stricttaglength>true</con:stricttaglength>
+        <con:compression>true</con:compression>
+        <con:debugcode>true</con:debugcode>
+    </con:swfprefs>
+
+</con:config>

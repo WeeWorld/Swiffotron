@@ -1,0 +1,321 @@
+SWF stage=550,400, fps=12, bg=#FFFFFF
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect 0,0->66.95,90.15]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=153, G=102, B=204]]
+            [style change move=997,220 fill0/1=,[Solid: Colour=Color [A=0, R=153, G=102, B=204]] line=]
+            C0,137:-34,393 C-31,350:-15,103 L0,270 C282,-25:96,93 C49,47:-7,60 L2,56 C-5,31:-41,19 C-111,49:-455,0
+            C-483,0:-109,-83 C-35,-27:7,-33 L13,-30 C0,-72:40,-40 C24,-23:-1,-20 C-1,-14:10,-2 C25,-4:380,-2 L0,-210
+            C7,-180:33,-225 L0,-165 C-105,78:-121,72 C-168,100:-63,0 C-109,0:-46,-75 C-25,-41:0,-42 C0,-92:241,-164
+            L187,-129 C98,-71:34,-51 C197,-294:132,41 C51,16:30,65 C27,59:0,75
+        }
+    }
+    Character '__cid##10'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:47 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##2'
+    {
+        Class name:mn QName "OneFirstFrame"; ns Package ""; set *
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:143 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##3'
+    {
+        Bounds: [Rect -0.5,-0.5->82.5,55.5]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=153, G=102, B=204]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1640,550 fill0/1=,[Solid: Colour=Color [A=255, R=153, G=102, B=204]] line=1]
+            C0,228:-240,161 C-240,161:-340,0 C-340,0:-240,-161 C-240,-161:0,-228 C0,-228:240,-161 C240,-161:340,0
+            C340,0:240,161 C240,161:0,228
+        }
+    }
+    Character '__cid##4'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:81 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##5'
+    {
+        Bounds: [Rect 0,0->114,96.1]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=255, B=153]]
+            [style change move=0,754 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=255, B=153]] line=]
+            C0,-324:247,-193 C204,-160:347,-53 C286,-44:286,36 C264,34:46,67 C92,135:156,207 L189,263 C163,253:0,274
+            C0,222:-119,161 C-215,290:-546,0 C-841,0:-358,-545 C-118,-178:-52,-218 C-31,-132:0,-95 
+            [style change move=481,1212 fill0/1=, line=]
+            C276,385:638,0 C396,0:124,-173 C62,-88:-17,-92 C0,-39:-70,-174 C-91,-224:-120,-171 C-372,-531:-477,222
+            C-285,77:-124,120 C-101,95:0,128 C0,77:27,101 C41,159:93,128
+        }
+    }
+    Character '__cid##6'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:145 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##7'
+    {
+        Bounds: [Rect 0,0->70.85,64.85]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=153, G=102, B=204]]
+            [style change move=625,8 fill0/1=,[Solid: Colour=Color [A=0, R=153, G=102, B=204]] line=]
+            C107,42:-20,242 C247,71:349,59 C71,12:19,17 C19,17:0,54 C0,61:-53,45 C-35,31:-91,43 C-219,105:-67,100
+            C-23,36:-40,186 C-57,168:-135,0 C-420,0:-156,-215 C-121,-168:0,-387 C0,-68:119,-142 C122,-145:137,-92
+            C158,-106:89,34
+        }
+    }
+    Character '__cid##8'
+    {
+        Class name:mn QName "BlobExported"; ns Package ""; set *
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:91 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##9'
+    {
+        Bounds: [Rect -0.5,-0.5->73.95,73.95]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=153, G=102, B=204]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1469,0 fill0/1=,[Solid: Colour=Color [A=255, R=153, G=102, B=204]] line=1]
+            L0,1469 L-1469,0 L0,-1469 L1469,0
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##4'], layer=[layer], name=none, ratio=none, matrix=[t:120.35,97.85, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    Frame# 2 ;
+    Frame# 3 ;
+    Frame# 4 ;
+    Frame# 5 ;
+    Frame# 6 ;
+    Frame# 7
+    {
+        RemoveObject layer=[layer]
+        PlaceObject char=[sprite '__cid##6'], layer=[layer], name=none, ratio=6, matrix=[t:171.95,144.95, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    Frame# 8 ;
+    Frame# 9 ;
+    Frame# 10 ;
+    Frame# 11 ;
+    Frame# 12
+    {
+        RemoveObject layer=[layer]
+        PlaceObject char=[sprite '__cid##8', mn QName "BlobExported"; ns Package ""; set *], layer=[layer], name=none, ratio=11, matrix=[t:227.55,142.6, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    Frame# 13 ;
+    Frame# 14 ;
+    Frame# 15 ;
+    Frame# 16 ;
+    Frame# 17
+    {
+        RemoveObject layer=[layer]
+        PlaceObject char=[sprite '__cid##2', mn QName "OneFirstFrame"; ns Package ""; set *], layer=[layer], name=none, ratio=16, matrix=[t:238.85,132.95, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    Frame# 18 ;
+    Frame# 19 ;
+    Frame# 20 ;
+    Frame# 21 ;
+    Frame# 22 ;
+    Frame# 23
+    {
+        RemoveObject layer=[layer]
+        PlaceObject char=[sprite '__cid##10'], layer=[layer], name=none, ratio=22, matrix=[t:196.25,137.3, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    Frame# 24 ;
+    Frame# 25 ;
+    Frame# 26 ;
+    Frame# 27 ;
+    Frame# 28 ;
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	""
+        string #2	"BlobExported"
+        string #3	"flash.display"
+        string #4	"MovieClip"
+        string #5	"OneFirstFrame"
+        string #6	"Object"
+        string #7	"flash.events"
+        string #8	"EventDispatcher"
+        string #9	"DisplayObject"
+        string #10	"InteractiveObject"
+        string #11	"DisplayObjectContainer"
+        string #12	"Sprite"
+        ns #0	ns Ns "*"
+        ns #1	ns Package ""
+        ns #2	ns Package "flash.display"
+        ns #3	ns Protected "BlobExported"
+        ns #4	ns Protected "OneFirstFrame"
+        ns #5	ns Package "flash.events"
+        ns set #0	(0 items)
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "BlobExported"; ns Package ""; set *
+        multiname #2	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #3	mn QName "OneFirstFrame"; ns Package ""; set *
+        multiname #4	mn QName "Object"; ns Package ""; set *
+        multiname #5	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #6	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #7	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #8	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #9	mn QName "Sprite"; ns Package "flash.display"; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "BlobExported"
+        {
+            class mn QName "BlobExported"; ns Package ""; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "BlobExported"; ns Package ""; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+            }
+        }
+        protected package ns Protected "OneFirstFrame"
+        {
+            class mn QName "OneFirstFrame"; ns Package ""; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "OneFirstFrame"; ns Package ""; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "BlobExported"; ns Package ""; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "BlobExported"; ns Package ""; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "BlobExported"; ns Package ""; set *,Class] script class trait : mn QName "BlobExported"; ns Package ""; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "OneFirstFrame"; ns Package ""; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "OneFirstFrame"; ns Package ""; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "OneFirstFrame"; ns Package ""; set *,Class] script class trait : mn QName "OneFirstFrame"; ns Package ""; set *
+        }
+    }
+}

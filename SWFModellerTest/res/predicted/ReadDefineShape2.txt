@@ -1,0 +1,116 @@
+SWF stage=200,215, fps=31, bg=#FFFFFF
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect 0,0->200,215]
+        Original format: DefineShape3
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=255, G=255, B=255]]
+            [style change move=4000,0 fill0/1=,[Solid: Colour=Color [A=0, R=255, G=255, B=255]] line=]
+            L0,4300 L-4000,0 L0,-4300 L4000,0
+        }
+    }
+    Character '__cid##2'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape3:33 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##3'
+    {
+        Bounds: [Rect -28.25,-25.15->28.25,25.15]
+        Original format: DefineShape2
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=189, G=172, B=23]]
+            Fill#2: [Solid: Colour=Color [A=0, R=250, G=253, B=206]]
+            Fill#3: [Solid: Colour=Color [A=0, R=106, G=34, B=28]]
+            [style change move=313,-307 fill0/1=,[Solid: Colour=Color [A=0, R=189, G=172, B=23]] line=]
+            C37,0:19,34 C7,0:0,9 C-45,59:-37,26 L-7,8 L-12,9 L25,-9 L13,0 C18,0:13,18 L-6,-9 C196,60:-203,42 C-12,0:-6,9
+            L0,17 C31,-17:38,-9 C19,0:6,17 C0,9:7,0 C-13,34:-19,17 L19,17 C13,-8:12,0 L19,0 C6,85:-138,51 L-19,9 L-13,59
+            L-6,0 C-38,-25:-13,-34 C0,25:-50,0 L-26,-25 L-6,-15 C0,57:-25,69 C0,8:-7,0 C-31,-42:-6,-51 L-38,-9 C-13,-9:0,-17
+            L-6,0 C-32,51:-44,-17 L-44,9 C6,-51:25,-26 C-12,0:-13,-8 C-44,17:-51,-26 C-12,-9:25,-25 L32,-34 L-32,-9
+            C13,-59:50,-9 L-25,0 C-63,77:-89,-26 C-6,0:0,-8 C25,-60:57,-17 L-25,-51 C-6,-9:6,0 C-44,0:-45,-34 C-6,0:0,-9
+            C0,-17:13,-8 C12,-9:19,0 L69,-8 L-6,-9 C-6,-17:13,0 C44,-8:32,8 L6,-17 L13,-8 L6,0 L31,8 C18,-32:35,-31
+            L-34,29 C-31,-17:-7,-68 C-6,-9:13,0 C57,9:31,34 L13,-9 C-7,-8:0,-9 C0,-8:7,0 L19,17 L19,-17 L31,-9 C38,9:25,25
+            C0,-17:7,-8 C6,-9:13,0 C31,51:-25,35 L13,34 C25,-26:38,-8 L6,0 L0,42 C32,-34:38,-17 
+            [style change move=-161,-136 fill0/1=, line=]
+            L-43,8 C18,0:25,26 L25,-26 C-12,-8:-13,0 
+            [style change move=0,0 fill0/1=, line=0 {new fills [Solid: Colour=Color [A=0, R=250, G=253, B=206]]}]
+            [style change move=199,-273 fill0/1=,[Solid: Colour=Color [A=0, R=189, G=172, B=23]] line=]
+            C12,0:7,17 L-32,85 C-25,18:-25,34 C126,-128:145,-111 C13,-9:13,9 C-102,111:-107,94 L38,-18 L19,0 C69,-25:76,-17
+            C44,25:-145,35 C-12,0:-7,8 L-50,51 L195,9 C57,8:51,34 L6,9 C-158,26:-158,-9 L45,34 L-101,9 C132,42:139,52
+            C-133,8:-113,-51 C82,68:82,94 L0,9 C-120,-60:-101,-94 L-69,-77 L-7,0 L51,77 C88,136:82,154 L0,9 C-107,-111:-89,-154
+            C13,43:6,42 C-37,-17:-19,-25 C6,153:-13,171 L0,8 C-31,-196:6,-187 C-15,-28:1,-27 C-20,181:-48,189 C0,-179:31,-162
+            C-25,60:-38,59 C0,9:-6,8 C0,-76:32,-52 L3,-7 C-24,25:-11,0 L25,-41 C-112,156:-140,149 L-7,0 L215,-282
+            L-13,-25 L-6,0 C-114,102:-145,77 L-6,0 L227,-188 C-12,-8:-7,0 L-6,0 L-290,94 C174,-71:159,-100 C-129,69:-167,16
+            C108,-59:113,-34 L-12,0 L69,-43 C-208,34:-202,0 L328,-68 L-19,0 C-69,-8:-64,6 L177,-32 L-19,-26 L-221,-51
+            L7,0 C151,-9:139,51 L-19,-34 L-145,-93 L6,0 L152,68 L25,0 C-76,-60:-69,-68 L6,0 C133,60:107,136 L-19,-26
+            L32,35 L-6,-26 L0,-26 C-83,-128:-37,-153 L6,0 C63,111:51,119 L6,-25 C12,42:19,34 C0,-42:13,-43 C6,17:13,9
+            C-19,-111:6,-128 C26,119:12,128 C26,-85:50,-85 L6,0 C-31,136:-38,128 L0,17 C69,-153:108,-128 C-45,110:-56,94
+            L38,-51 L6,0 
+            [style change move=47,-34 fill0/1=, line=]
+            L0,-25 L-6,8 L0,8 L6,9 
+            [style change move=-3,-60 fill0/1=, line=]
+            L6,0 L-6,-25 L-19,17 C6,8:13,0 
+            [style change move=0,0 fill0/1=, line=0 {new fills [Solid: Colour=Color [A=0, R=106, G=34, B=28]]}]
+            [style change move=275,-307 fill0/1=,[Solid: Colour=Color [A=0, R=189, G=172, B=23]] line=]
+            C38,77:-95,17 C-7,-68:51,-26 L13,0 
+            [style change move=3,-264 fill0/1=, line=]
+            C-44,-52:38,-42 C38,34:-26,51 C0,9:-6,0 
+            [style change move=85,-401 fill0/1=, line=]
+            C0,-8:7,0 C31,25:-19,51 L-6,9 C-44,-17:31,-60 
+            [style change move=142,-358 fill0/1=, line=]
+            C32,51:-57,9 C-7,-35:19,-17 L13,-8 
+            [style change move=331,-119 fill0/1=, line=]
+            L-6,0 C0,-26:19,0 C13,0:6,-8 C63,34:-95,0 
+            [style change move=306,-25 fill0/1=, line=]
+            C38,0:19,25 L6,9 C-44,68:-44,-68 C0,-17:13,-9 C6,-8:6,0 
+            [style change move=300,68 fill0/1=, line=]
+            C50,0:13,60 C-44,51:-44,-68 C0,-17:6,-9 L19,-17 
+            [style change move=268,162 fill0/1=, line=]
+            C32,9:19,34 L6,8 C-82,43:19,-94 L6,0 
+            [style change move=243,230 fill0/1=, line=]
+            L0,9 C-50,34:-7,-68 C0,-17:7,0 C6,-9:6,0 C32,9:6,42 
+            [style change move=16,367 fill0/1=, line=]
+            L-7,9 C-44,-60:44,-51 C45,34:-38,68 
+            [style change move=123,316 fill0/1=, line=]
+            C-44,-43:44,-43 C38,35:-32,42 L-6,9 
+            [style change move=-281,-153 fill0/1=, line=]
+            C32,0:12,34 L0,8 C-25,17:-38,-8 L-6,0 L6,-34 C6,-17:13,0 
+            [style change move=-306,-68 fill0/1=, line=]
+            L6,0 C13,17:6,17 L13,-9 L12,0 C-19,35:-44,17 L-6,0 C6,-17:13,-9 C-13,0:-13,-8 C0,-35:26,-8 
+            [style change move=-167,-205 fill0/1=, line=]
+            C-95,34:19,-76 L6,-9 C38,17:25,34 L7,0 
+            [style change move=-54,-222 fill0/1=, line=]
+            C-88,-34:57,-42 C25,25:6,43 L0,8 
+            [style change move=-218,222 fill0/1=, line=]
+            C-19,-77:63,-25 C26,51:-64,51 L-6,0 
+            [style change move=-212,51 fill0/1=, line=]
+            L13,0 C13,69:-70,-18 C-6,0:0,-8 C13,-43:37,0 
+            [style change move=-129,324 fill0/1=, line=]
+            C-26,-59:57,-43 C19,51:-44,51 L-6,0
+        }
+    }
+    Character '__cid##4'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape2:995 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##5'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##4'], layer=[layer], name=none, ratio=none, matrix=[t:-0.4,-4.05, sc:0.9416046,0.9416046, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##2'], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=[add:, mult:[r:1, g:1, b:1, a:0]], clipDepth=none
+        PlaceObject char=[sprite '__cid##5'], layer=[layer], name=bounds, ratio=none, matrix=[t:97.7,142.35, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+}

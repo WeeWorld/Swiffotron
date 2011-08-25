@@ -1,0 +1,144 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8AC54EF-EBE9-4D30-BDF0-CE525ECFE42F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SWFProcessing.Swiffotron.Test</RootNamespace>
+    <AssemblyName>SwiffotronTest</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.XML" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlueSkyTests.cs" />
+    <Compile Include="MockCache.cs" />
+    <Compile Include="MockStore.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SwiffotronTest.cs" />
+    <Compile Include="TestingBaseClass.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="AuthoringTests.txt" />
+    <EmbeddedResource Include="res\store\miscparts\BadlyDrawnBeer.swf" />
+    <EmbeddedResource Include="res\store\miscparts\blank.swf" />
+    <EmbeddedResource Include="res\store\miscparts\WeirdEyes.swf" />
+    <EmbeddedResource Include="res\predicted\TestTextReplace.swf.txt" />
+    <EmbeddedResource Include="res\TestTextReplace.xml" />
+    <EmbeddedResource Include="res\store\textreplace\textreplace.swf" />
+    <EmbeddedResource Include="res\predicted\TestTweens.swf.txt" />
+    <EmbeddedResource Include="res\store\tweens\bitmaps.swf" />
+    <EmbeddedResource Include="res\store\tweens\simple.swf" />
+    <EmbeddedResource Include="res\TestTweens.xml" />
+    <EmbeddedResource Include="res\predicted\TestMovieclipTypeSWF.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestRemoveInstance.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestInstanceTypeSWF.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestMovieclipTypeExtern.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestImages.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestFontMerge.swf.txt" />
+    <EmbeddedResource Include="res\TestRemoveInstance.xml" />
+    <EmbeddedResource Include="res\TestCollidingClassname.xml" />
+    <EmbeddedResource Include="res\TestBrokenInstanceTypeExtern.xml" />
+    <EmbeddedResource Include="res\TestBrokenInstanceTypeInstance.xml" />
+    <EmbeddedResource Include="res\TestBrokenInstanceTypeSWF.xml" />
+    <EmbeddedResource Include="res\TestInstanceTypeSWF.xml" />
+    <EmbeddedResource Include="res\TestBrokenInstanceTypeMovieClip.xml" />
+    <EmbeddedResource Include="res\TestBrokenMovieclipTypeExtern.xml" />
+    <EmbeddedResource Include="res\TestMovieclipTypeExtern.xml" />
+    <EmbeddedResource Include="res\TestBrokenMovieclipTypeSWF.xml" />
+    <EmbeddedResource Include="res\TestMovieclipTypeSWF.xml" />
+    <EmbeddedResource Include="res\TestFontMerge.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\store\fontmerge\Fonts1.swf" />
+    <EmbeddedResource Include="res\store\fontmerge\Fonts2.swf" />
+    <EmbeddedResource Include="res\TestImages.xml" />
+    <EmbeddedResource Include="res\store\images\images.swf" />
+    <EmbeddedResource Include="res\store\pngout\girl.swf" />
+    <EmbeddedResource Include="res\store\vidout\bounce.swf" />
+    <EmbeddedResource Include="res\TestPNGOut.xml" />
+    <EmbeddedResource Include="res\TestVidOut.xml" />
+    <EmbeddedResource Include="res\predicted\TestForwardReference.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestOneBlueCircle.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestOneRedCircle.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestSimpleJob.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestSimplestTimelineScript.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestUFO.swf.txt" />
+    <EmbeddedResource Include="res\predicted\TestABCCircles.swf.txt" />
+    <EmbeddedResource Include="res\TestSimplestTimelineScript.xml" />
+    <EmbeddedResource Include="res\store\simplesttimelinescript\simplest-timeline-script.swf" />
+    <EmbeddedResource Include="res\TestOneBlueCircle.xml" />
+    <EmbeddedResource Include="res\TestOneRedCircle.xml" />
+    <EmbeddedResource Include="res\store\abccircles\circle.swf" />
+    <EmbeddedResource Include="res\store\abccircles\redcircle.swf" />
+    <EmbeddedResource Include="res\TestABCCircles.xml" />
+    <EmbeddedResource Include="res\TestUFO.xml" />
+    <EmbeddedResource Include="res\store\monocular-ufo-pilot.swf" />
+    <EmbeddedResource Include="res\TestForwardReference.xml" />
+    <EmbeddedResource Include="res\TestBrokenJobValidate.xml" />
+    <EmbeddedResource Include="res\TestBrokenConfig.xml" />
+    <EmbeddedResource Include="res\mock-config.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="res\TestSimpleJob.xml" />
+    <EmbeddedResource Include="res\TestJobValidate.xml" />
+    <EmbeddedResource Include="res\config.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\SWFModeller\SWFModeller.csproj">
+      <Project>{E584EF20-EB00-463C-8E57-2B3F5D3A5680}</Project>
+      <Name>SWFModeller</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Swiffotron\Swiffotron.csproj">
+      <Project>{8D7370B4-6EE3-4753-A048-9EAA36F39D05}</Project>
+      <Name>Swiffotron</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Shadow Include="Test References\Swiffotron.accessor" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

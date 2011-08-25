@@ -1,0 +1,597 @@
+SWF stage=550,400, fps=24, bg=#FFFFFF
+Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeExtern_swiffotron"; set *
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect 0,0->139,42]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=153, B=102]]
+            [style change move=2780,420 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=153, B=102]] line=]
+            C0,174:-407,123 C-407,123:-576,0 C-576,0:-407,-123 C-407,-123:0,-174 C0,-174:407,-123 C407,-123:576,0
+            C576,0:407,123 C407,123:0,174
+        }
+    }
+    Character '__cid##10'
+    {
+        Bounds: [Rect -0.5,-0.5->67.5,67.5]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=255, B=255]]
+            Fill#2: [Solid: Colour=Color [A=255, R=0, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=497,543 fill0/1=[Solid: Colour=Color [A=255, R=255, G=255, B=255]],[Solid: Colour=Color [A=255, R=0, G=0, B=0]] line=]
+            C0,-80:50,-42 C44,-37:66,5 C64,4:46,41 C50,45:0,67 C0,42:-34,48 C-46,65:-80,0 C-91,0:-43,-75 C-26,-45:0,-38
+            [style change move=1144,196 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=255, B=255]] line=1]
+            C196,196:0,278 C0,278:-196,196 C-196,196:-278,0 C-278,0:-196,-196 C-196,-196:0,-278 C0,-278:196,-196 C196,-196:278,0
+            C278,0:196,196
+        }
+    }
+    Character '__cid##11'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:130 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##12'
+    {
+        Class name:mn QName "alienhead_7"; ns Package "monocular_fla"; set *
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:111 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##11'], layer=[layer], name=lefteye_mc, ratio=none, matrix=[t:32.95,23.8, sc:0.3910522,0.3910522, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##13'
+    {
+        Class name:mn QName "alien_5"; ns Package "monocular_fla"; set *
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##8'], layer=[layer], name=alienbody_mc, ratio=none, matrix=[t:0.95,57.2, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##12', mn QName "alienhead_7"; ns Package "monocular_fla"; set *], layer=[layer], name=alienhead_mc, ratio=none, matrix=[t:0,0, sc:0.7118988,0.7118988, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##14'
+    {
+        Bounds: [Rect 0,0->89.5,45.5]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=0, B=153]]
+            Fill#2: [Solid: Colour=Color [A=0, R=255, G=255, B=255]]
+            [style change move=1407,227 fill0/1=[Solid: Colour=Color [A=0, R=0, G=0, B=153]],[Solid: Colour=Color [A=0, R=255, G=255, B=255]] line=]
+            C50,46:0,82 C0,41:-35,49 C-47,65:-78,0 C-91,0:-43,-75 C-26,-45:0,-38 C0,-73:50,-46 C46,-41:64,-3 C65,-2:45,40
+            [style change move=1790,910 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=0, B=153]] line=]
+            L-1790,0 L0,-15 C0,-371:262,-262 C262,-262:371,0 C371,0:262,262 C262,262:0,371 L0,15
+        }
+    }
+    Character '__cid##15'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:95 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##16'
+    {
+        Class name:mn QName "occupied_window_4"; ns Package "monocular_fla"; set *
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##13', mn QName "alien_5"; ns Package "monocular_fla"; set *], layer=[layer], name=alien_mc, ratio=none, matrix=[t:78.25,11.3, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##15'], layer=[layer], name=window_mc, ratio=none, matrix=[t:0,0, sc:2.385468,2.538467, sk:0,0], cxform=[add:, mult:[r:1, g:1, b:1, a:0.421875]], clipDepth=none
+        }
+    }
+    Character '__cid##17'
+    {
+        Bounds: [Rect 0,0->42.95,41.9]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=102, B=153]]
+            [style change move=0,578 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=102, B=153]] line=]
+            L240,0 L-1,-16 L1,-34 C0,-131:90,-137 C82,-123:117,-76 C117,-76:81,19 C90,22:0,137 C0,67:-67,59 C-112,98:-53,76
+            C-14,21:-6,94 L294,0 L0,260 L-859,0 L0,-260
+        }
+    }
+    Character '__cid##18'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:70 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##19'
+    {
+        Class name:mn QName "ufo_1"; ns Package "monocular_fla"; set *
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##6', mn QName "body_2"; ns Package "monocular_fla"; set *], layer=[layer], name=ufobody_mc, ratio=none, matrix=[t:0,37.75, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##16', mn QName "occupied_window_4"; ns Package "monocular_fla"; set *], layer=[layer], name=cockpit_mc, ratio=none, matrix=[t:33.15,0, sc:0.359314,0.359314, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##18'], layer=[layer], name=leftfoot_mc, ratio=none, matrix=[t:20.35,70.8, sc:0.4749451,0.4749451, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##18'], layer=[layer], name=rightfoot_mc, ratio=none, matrix=[t:120.35,70.25, sc:-0.4749451,0.4749451, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##2'
+    {
+        Bounds: [Rect 0,0->112.85,15.65]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=102, G=102, B=0]]
+            Fill#2: [Solid: Colour=Color [A=0, R=255, G=255, B=102]]
+            [style change move=1283,249 fill0/1=,[Solid: Colour=Color [A=0, R=102, G=102, B=0]] line=]
+            C-46,64:-80,0 C-91,0:-43,-75 C-26,-45:0,-38 C0,-80:50,-42 C44,-37:66,5 C64,4:46,41 C50,45:0,67 C0,43:-34,48
+            [style change move=1987,33 fill0/1=, line=]
+            C44,-37:66,5 C64,4:46,41 C50,45:0,67 C0,43:-35,48 C-47,64:-78,0 C-93,0:-42,-75 C-25,-44:0,-39 C0,-80:50,-42
+            [style change move=320,158 fill0/1=,[Solid: Colour=Color [A=0, R=255, G=255, B=102]] line=]
+            C0,43:-34,48 C-47,64:-79,0 C-91,0:-43,-75 C-26,-45:0,-38 C0,-80:50,-42 C44,-37:66,5 C64,4:46,41 C50,45:0,67
+        }
+    }
+    Character '__cid##20'
+    {
+        Class name:mn QName "UFOClass"; ns Package "com.ww"; set *
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##19', mn QName "ufo_1"; ns Package "monocular_fla"; set *], layer=[layer], name=ufo_mc, ratio=none, matrix=[t:28.8,48.25, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##3'
+    {
+        Bounds: [Rect 0,0->112.85,15.65]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=102, G=102, B=0]]
+            Fill#2: [Solid: Colour=Color [A=0, R=255, G=255, B=102]]
+            [style change move=2097,313 fill0/1=,[Solid: Colour=Color [A=0, R=102, G=102, B=0]] line=]
+            C-93,0:-42,-75 C-25,-44:0,-39 C0,-80:50,-42 C44,-37:66,5 C64,4:46,41 C50,45:0,67 C0,43:-35,48 C-47,64:-78,0
+            [style change move=1157,313 fill0/1=,[Solid: Colour=Color [A=0, R=255, G=255, B=102]] line=]
+            C-91,0:-43,-75 C-26,-45:0,-38 C0,-80:50,-42 C44,-37:66,5 C64,4:46,41 C50,45:0,67 C0,43:-34,48 C-46,64:-80,0
+            [style change move=160,313 fill0/1=,[Solid: Colour=Color [A=0, R=102, G=102, B=0]] line=]
+            C-91,0:-43,-75 C-26,-45:0,-38 C0,-80:50,-42 C44,-37:66,5 C64,4:46,41 C50,45:0,67 C0,43:-34,48 C-47,64:-79,0
+        }
+    }
+    Character '__cid##4'
+    {
+        Bounds: [Rect 0,0->112.85,15.65]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=102, G=102, B=0]]
+            Fill#2: [Solid: Colour=Color [A=0, R=255, G=255, B=102]]
+            [style change move=1962,238 fill0/1=,[Solid: Colour=Color [A=0, R=255, G=255, B=102]] line=]
+            C-25,-44:0,-39 C0,-80:50,-42 C44,-37:66,5 C64,4:46,41 C50,45:0,67 C0,43:-35,48 C-47,64:-78,0 C-93,0:-42,-75
+            [style change move=1023,238 fill0/1=,[Solid: Colour=Color [A=0, R=102, G=102, B=0]] line=]
+            C-26,-45:0,-38 C0,-80:50,-42 C44,-37:66,5 C64,4:46,41 C50,45:0,67 C0,43:-34,48 C-46,64:-80,0 C-91,0:-43,-75
+            [style change move=26,238 fill0/1=, line=]
+            C-26,-45:0,-38 C0,-80:50,-42 C44,-37:66,5 C64,4:46,41 C50,45:0,67 C0,43:-34,48 C-47,64:-79,0 C-91,0:-43,-75
+        }
+    }
+    Character '__cid##5'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:144 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+        Frame# 2
+        {
+            PlaceObject (move) char=[Shape DefineShape:145 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 3
+        {
+            PlaceObject (move) char=[Shape DefineShape:144 bytes], layer=[layer], name=none, ratio=none, matrix=none, cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##6'
+    {
+        Class name:mn QName "body_2"; ns Package "monocular_fla"; set *
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:69 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##5'], layer=[layer], name=lights_mc, ratio=none, matrix=[t:13.55,13.55, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##7'
+    {
+        Bounds: [Rect 0,0->66,47]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=102, B=0]]
+            [style change move=660,0 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=102, B=0]] line=]
+            C273,0:193,281 C189,274:5,385 L-1320,0 C5,-385:188,-274 C194,-281:273,0
+        }
+    }
+    Character '__cid##8'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:45 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##9'
+    {
+        Bounds: [Rect 0,0->89.85,89]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=102, B=0]]
+            [style change move=1797,166 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=102, B=0]] line=]
+            C0,34:-264,221 L-4,3 C211,229:0,317 C0,336:-237,237 C-237,237:-336,0 C-336,0:-237,-237 C-237,-237:0,-336
+            C0,-293:181,-218 L-71,-62 C-230,-207:0,13 C0,-149:109,-15 C92,-14:148,81 C110,61:92,85 C170,-92:209,0
+            C171,0:145,62 C87,-81:104,-61 C152,-90:96,11 C112,12:0,153
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##20', mn QName "UFOClass"; ns Package "com.ww"; set *], layer=[layer], name=mc_alienpilot, ratio=none, matrix=[t:40,40, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	"Object"
+        string #2	""
+        string #3	"EventDispatcher"
+        string #4	"flash.events"
+        string #5	"DisplayObject"
+        string #6	"flash.display"
+        string #7	"InteractiveObject"
+        string #8	"DisplayObjectContainer"
+        string #9	"Sprite"
+        string #10	"MovieClip"
+        string #11	"MainTimeline"
+        string #12	"TestMovieclipTypeExtern_swiffotron"
+        string #13	"UFOClass"
+        string #14	"com.ww"
+        string #15	"com.ww:UFOClass"
+        string #16	"ufo_mc"
+        string #17	"alien_5"
+        string #18	"monocular_fla"
+        string #19	"monocular_fla:alien_5"
+        string #20	"alienbody_mc"
+        string #21	"alienhead_mc"
+        string #22	"alienhead_7"
+        string #23	"monocular_fla:alienhead_7"
+        string #24	"lefteye_mc"
+        string #25	"body_2"
+        string #26	"monocular_fla:body_2"
+        string #27	"lights_mc"
+        string #28	"occupied_window_4"
+        string #29	"monocular_fla:occupied_window_4"
+        string #30	"alien_mc"
+        string #31	"window_mc"
+        string #32	"ufo_1"
+        string #33	"monocular_fla:ufo_1"
+        string #34	"leftfoot_mc"
+        string #35	"rightfoot_mc"
+        string #36	"ufobody_mc"
+        string #37	"cockpit_mc"
+        string #38	"TestMovieclipTypeExtern_swiffotron:MainTimeline"
+        string #39	"mc_alienpilot"
+        ns #0	ns Ns "*"
+        ns #1	ns Package ""
+        ns #2	ns Package "flash.events"
+        ns #3	ns Package "flash.display"
+        ns #4	ns Package "TestMovieclipTypeExtern_swiffotron"
+        ns #5	ns Package "com.ww"
+        ns #6	ns Protected "com.ww:UFOClass"
+        ns #7	ns Package "monocular_fla"
+        ns #8	ns Protected "monocular_fla:alien_5"
+        ns #9	ns Protected "monocular_fla:alienhead_7"
+        ns #10	ns Protected "monocular_fla:body_2"
+        ns #11	ns Protected "monocular_fla:occupied_window_4"
+        ns #12	ns Protected "monocular_fla:ufo_1"
+        ns #13	ns Protected "TestMovieclipTypeExtern_swiffotron:MainTimeline"
+        ns set #0	(0 items)
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "Object"; ns Package ""; set *
+        multiname #2	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #3	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #4	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #5	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #6	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #7	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #8	mn QName "MainTimeline"; ns Package "TestMovieclipTypeExtern_swiffotron"; set *
+        multiname #9	mn QName "UFOClass"; ns Package "com.ww"; set *
+        multiname #10	mn QName "ufo_mc"; ns Package ""; set *
+        multiname #11	mn QName "alien_5"; ns Package "monocular_fla"; set *
+        multiname #12	mn QName "alienbody_mc"; ns Package ""; set *
+        multiname #13	mn QName "alienhead_mc"; ns Package ""; set *
+        multiname #14	mn QName "alienhead_7"; ns Package "monocular_fla"; set *
+        multiname #15	mn QName "lefteye_mc"; ns Package ""; set *
+        multiname #16	mn QName "body_2"; ns Package "monocular_fla"; set *
+        multiname #17	mn QName "lights_mc"; ns Package ""; set *
+        multiname #18	mn QName "occupied_window_4"; ns Package "monocular_fla"; set *
+        multiname #19	mn QName "alien_mc"; ns Package ""; set *
+        multiname #20	mn QName "window_mc"; ns Package ""; set *
+        multiname #21	mn QName "ufo_1"; ns Package "monocular_fla"; set *
+        multiname #22	mn QName "leftfoot_mc"; ns Package ""; set *
+        multiname #23	mn QName "rightfoot_mc"; ns Package ""; set *
+        multiname #24	mn QName "ufobody_mc"; ns Package ""; set *
+        multiname #25	mn QName "cockpit_mc"; ns Package ""; set *
+        multiname #26	mn QName "mc_alienpilot"; ns Package ""; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "com.ww:UFOClass"
+        {
+            class mn QName "UFOClass"; ns Package "com.ww"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "UFOClass"; ns Package "com.ww"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "ufo_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+            }
+        }
+        protected package ns Protected "monocular_fla:alien_5"
+        {
+            class mn QName "alien_5"; ns Package "monocular_fla"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "alien_5"; ns Package "monocular_fla"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "alienbody_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+
+
+
+                [mn QName "alienhead_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+            }
+        }
+        protected package ns Protected "monocular_fla:alienhead_7"
+        {
+            class mn QName "alienhead_7"; ns Package "monocular_fla"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "alienhead_7"; ns Package "monocular_fla"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "lefteye_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+            }
+        }
+        protected package ns Protected "monocular_fla:body_2"
+        {
+            class mn QName "body_2"; ns Package "monocular_fla"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "body_2"; ns Package "monocular_fla"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "lights_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+            }
+        }
+        protected package ns Protected "monocular_fla:occupied_window_4"
+        {
+            class mn QName "occupied_window_4"; ns Package "monocular_fla"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "occupied_window_4"; ns Package "monocular_fla"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "alien_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+
+
+
+                [mn QName "window_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+            }
+        }
+        protected package ns Protected "monocular_fla:ufo_1"
+        {
+            class mn QName "ufo_1"; ns Package "monocular_fla"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "ufo_1"; ns Package "monocular_fla"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "leftfoot_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+
+
+
+                [mn QName "rightfoot_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+
+
+
+                [mn QName "ufobody_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+
+
+
+                [mn QName "cockpit_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+            }
+        }
+        protected package ns Protected "TestMovieclipTypeExtern_swiffotron:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "TestMovieclipTypeExtern_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "TestMovieclipTypeExtern_swiffotron"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "mc_alienpilot"; ns Package ""; set *,Slot] property type : [mn QName "UFOClass"; ns Package "com.ww"; set *], val: ConUndefined
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "TestMovieclipTypeExtern_swiffotron"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "TestMovieclipTypeExtern_swiffotron"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "TestMovieclipTypeExtern_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "TestMovieclipTypeExtern_swiffotron"; set *
+        }
+    }
+}

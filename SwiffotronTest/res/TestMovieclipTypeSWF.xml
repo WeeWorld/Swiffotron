@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <swf id="someref">
+
+        <!-- Import the SWF as a MovieClip -->
+        <movieclip type="extern" src="store://store/monocular-ufo-pilot.swf" id="alien" class="com.ww.UFOClass1"/>
+
+        <!-- Instantiate it -->
+        <instance type="movieclip" src="alien" id="mc_alienpilot" x="40" y="40"/>
+
+    </swf>
+
+    <swf id="TestMovieclipTypeSWF">
+        
+        <swfout store="store://store/TestMovieclipTypeSWF.swf"/>
+        
+        <!-- Import the SWF as a MovieClip -->
+        <movieclip type="swf" src="someref" id="myinternalswf" class="com.ww.UFOClass2"/>
+        
+        <!-- Instantiate it -->
+        <instance type="movieclip" src="myinternalswf" id="mc_myinternalswf" x="10" y="10"/>
+        
+    </swf>
+
+</swiffotron>

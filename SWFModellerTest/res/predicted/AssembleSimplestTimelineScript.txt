@@ -1,0 +1,188 @@
+SWF stage=550,400, fps=12, bg=#FFFFFF
+Document class:mn QName "MainTimeline"; ns Package "simplest_fla"; set *
+{
+    Frame# 1 ;
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	"method2.abc"
+        string #2	"trace"
+        string #3	""
+        string #4	"Hello, World."
+        string #5	"method1.abc"
+        string #6	"addFrameScript"
+        string #7	"frame1"
+        string #8	"simplest_fla"
+        string #9	"method3.abc"
+        string #10	"method0.abc"
+        string #11	"Object"
+        string #12	"EventDispatcher"
+        string #13	"flash.events"
+        string #14	"DisplayObject"
+        string #15	"flash.display"
+        string #16	"InteractiveObject"
+        string #17	"DisplayObjectContainer"
+        string #18	"Sprite"
+        string #19	"MovieClip"
+        string #20	"MainTimeline"
+        string #21	"simplest_fla:MainTimeline"
+        ns #0	ns Ns "*"
+        ns #1	ns Package ""
+        ns #2	ns PackageInternal "simplest_fla"
+        ns #3	ns Package "flash.events"
+        ns #4	ns Package "flash.display"
+        ns #5	ns Package "simplest_fla"
+        ns #6	ns Protected "simplest_fla:MainTimeline"
+        ns set #0	(0 items)
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "trace"; ns Package ""; set *
+        multiname #2	mn QName "addFrameScript"; ns Package ""; set *
+        multiname #3	mn QName "frame1"; ns PackageInternal "simplest_fla"; set *
+        multiname #4	mn QName "Object"; ns Package ""; set *
+        multiname #5	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #6	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #7	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #8	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #9	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #10	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #11	mn QName "MainTimeline"; ns Package "simplest_fla"; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "simplest_fla:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "simplest_fla"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 DebugFile("method3.abc")
+                    #2 DebugLine(1)
+                    #3 GetLocal0()
+                    #4 DebugLine(2)
+                    #5 PushScope()
+                    #6 DebugLine(3)
+                    #7 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "simplest_fla"; set * () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 DebugFile("method1.abc")
+                    #2 DebugLine(1)
+                    #3 GetLocal0()
+                    #4 DebugLine(2)
+                    #5 PushScope()
+                    #6 DebugLine(3)
+                    #7 GetLocal0()
+                    #8 DebugLine(4)
+                    #9 ConstructSuper(0)
+                    #10 DebugLine(5)
+                    #11 FindPropStrict(mn QName "addFrameScript"; ns Package ""; set *)
+                    #12 DebugLine(6)
+                    #13 PushByte(0)
+                    #14 DebugLine(7)
+                    #15 GetLex(mn QName "frame1"; ns PackageInternal "simplest_fla"; set *)
+                    #16 DebugLine(8)
+                    #17 CallPropVoid(mn QName "addFrameScript"; ns Package ""; set *, 2)
+                    #18 DebugLine(9)
+                    #19 ReturnVoid()
+                }
+
+
+
+                [mn QName "frame1"; ns PackageInternal "simplest_fla"; set *,Method] function (anon *) () : Void
+                {
+                    [MaxStack:2, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 DebugFile("method2.abc")
+                    #2 DebugLine(1)
+                    #3 GetLocal0()
+                    #4 DebugLine(2)
+                    #5 PushScope()
+                    #6 DebugLine(3)
+                    #7 FindPropStrict(mn QName "trace"; ns Package ""; set *)
+                    #8 DebugLine(4)
+                    #9 PushString("Hello, World.")
+                    #10 DebugLine(5)
+                    #11 CallPropVoid(mn QName "trace"; ns Package ""; set *, 1)
+                    #12 DebugLine(6)
+                    #13 ReturnVoid()
+                }
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 DebugFile("method0.abc")
+                #2 DebugLine(1)
+                #3 GetLocal0()
+                #4 DebugLine(2)
+                #5 PushScope()
+                #6 DebugLine(3)
+                #7 GetScopeObject(0)
+                #8 DebugLine(4)
+                #9 GetLex(mn QName "Object"; ns Package ""; set *)
+                #10 DebugLine(5)
+                #11 PushScope()
+                #12 DebugLine(6)
+                #13 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #14 DebugLine(7)
+                #15 PushScope()
+                #16 DebugLine(8)
+                #17 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #18 DebugLine(9)
+                #19 PushScope()
+                #20 DebugLine(10)
+                #21 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #22 DebugLine(11)
+                #23 PushScope()
+                #24 DebugLine(12)
+                #25 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #26 DebugLine(13)
+                #27 PushScope()
+                #28 DebugLine(14)
+                #29 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #30 DebugLine(15)
+                #31 PushScope()
+                #32 DebugLine(16)
+                #33 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #34 DebugLine(17)
+                #35 PushScope()
+                #36 DebugLine(18)
+                #37 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #38 DebugLine(19)
+                #39 NewClass(mn QName "MainTimeline"; ns Package "simplest_fla"; set *)
+                #40 DebugLine(20)
+                #41 PopScope()
+                #42 DebugLine(21)
+                #43 PopScope()
+                #44 DebugLine(22)
+                #45 PopScope()
+                #46 DebugLine(23)
+                #47 PopScope()
+                #48 DebugLine(24)
+                #49 PopScope()
+                #50 DebugLine(25)
+                #51 PopScope()
+                #52 DebugLine(26)
+                #53 PopScope()
+                #54 DebugLine(27)
+                #55 InitProperty(mn QName "MainTimeline"; ns Package "simplest_fla"; set *)
+                #56 DebugLine(28)
+                #57 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "simplest_fla"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "simplest_fla"; set *
+        }
+    }
+}

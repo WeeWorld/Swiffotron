@@ -1,0 +1,88 @@
+SWF stage=250,260, fps=24, bg=#FFFFFF
+{
+    Character '__cid##1' = [Image (20588 bytes, DefineBitsJPEG2)]
+    Character '__cid##2'
+    {
+        Bounds: [Rect 14.55,12.5->240.55,235.5]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Fill#2: [Solid: Colour=Color [A=255, R=0, G=255, B=0]]
+            Fill#3: [Solid: Colour=Color [A=255, R=0, G=0, B=255]]
+            Fill#4: [Solid: Colour=Color [A=255, R=204, G=255, B=0]]
+            Fill#5: [LinearGradient: Gradient=[Gradient Interp:Normal Spread:Reflect Records:{[Color [A=255, R=255, G=255, B=255], 0], [Color [A=255, R=0, G=0, B=0], 255]}], Pos=[t:85.5,147, sc:0.02258301,0.03479004, sk:0,0]]
+            Fill#6: [Solid: Colour=Color [A=255, R=0, G=0, B=0]]
+            Fill#7: [NonSmoothRepeatingBitmap: Bitmap=(none), Pos=[t:147.25,-52.15, sc:20,20, sk:0,0]]
+            Fill#8: [NonSmoothRepeatingBitmap: Bitmap=(none), Pos=[t:-74.75,-52.15, sc:44.40002,20, sk:0,0]]
+            Fill#9: [NonSmoothRepeatingBitmap: Bitmap=(none), Pos=[t:-314,-692.2, sc:80.80769,96.40137, sk:0,0]]
+            Fill#10: [NonSmoothRepeatingBitmap: Bitmap=(none), Pos=[t:239.35,-35.1, sc:20,20, sk:0,0]]
+            Fill#11: [NonSmoothRepeatingBitmap: Bitmap=(none), Pos=[t:395.85,111.15, sc:2.799988,2.999878, sk:0,0]]
+            Fill#12: [NonSmoothRepeatingBitmap: Bitmap=[Image (20588 bytes, DefineBitsJPEG2)], Pos=[t:156.9,111.15, sc:2.799988,2.999878, sk:0,0]]
+            Fill#13: [NonSmoothRepeatingBitmap: Bitmap=(none), Pos=[t:-182,-172, sc:20,20, sk:0,0]]
+            Line#1: [line cap Round-Round, Round join, width=100,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=255, B=255]]
+            Line#2: [line cap Round-Round, Round join, width=100,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=102, G=102, B=102]]
+            [style change move=2815,973 fill0/1=,[Solid: Colour=Color [A=255, R=0, G=255, B=0]] line=1]
+            C281,-154:345,0 C547,0:386,386 C387,387:0,547 C0,547:-387,386 C-360,361:-500,25 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            C-46,464:-343,342 C-395,396:-559,0 C-559,0:-396,-396 C-395,-395:0,-559 C0,-314:125,-263 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=0, G=0, B=255]] line=2]
+            C-115,-76:-104,-104 C-386,-386:0,-547 C0,-547:386,-387 C387,-386:547,0 C547,0:386,386 C134,134:87,153
+            [style change move=, fill0/1=[Solid: Colour=Color [A=255, R=0, G=255, B=0]], line=0]
+            C113,197:37,230 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=204, G=255, B=0]] line=]
+            L636,0 L0,740 L-722,0 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=0, G=0, B=255]] line=]
+            C-97,225:-188,188 C-143,143:-164,91 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            C87,152:133,133 C387,387:547,0 L73,-1 
+            [style change move=4113,2511 fill0/1=,[NonSmoothRepeatingBitmap: Bitmap=[Image (20588 bytes, DefineBitsJPEG2)], Pos=[t:156.9,111.15, sc:2.799988,2.999878, sk:0,0]] line=]
+            C0,102:-197,292 C-203,282:-13,24 C-27,-10:-2,-20 C3,-22:-5,-10 L-71,33 L-226,0 C-23,-23:-10,-24 C-7,-15:0,-11
+            C0,-49:26,-59 L-111,-7 L-20,-12 C-8,-9:0,-25 C0,-39:49,-50 C32,-34:49,-34 L88,-7 L-188,-147 C-64,-56:0,-74
+            C-4,-43:4,-19 C6,-30:45,-32 C118,-86:72,7 C43,4:53,52 C51,50:37,1 C63,1:106,-94 C86,-76:31,37 C11,14:-2,25
+            C-3,23:-15,17 C169,43:29,19 C19,13:5,21 C4,15:0,42 
+            [style change move=4053,2488 fill0/1=, line=]
+            L-19,0 C0,75:-6,33 L19,-31 L9,-51 L-3,-26 
+            [style change move=3901,2444 fill0/1=, line=]
+            L33,66 C20,39:20,14 L2,-4 L1,-23 C0,-64:-79,-31 L3,3 
+            [style change move=3400,2419 fill0/1=, line=]
+            C-98,-9:-40,44 C-12,15:-6,18 L-2,16 C0,50:66,53 L149,102 C-7,-32:-27,-15 C-23,-12:0,-33 C0,-34:17,-10
+            C29,-16:22,-43 L-53,-57 C-11,-16:-4,-21 
+            [style change move=3397,2871 fill0/1=, line=]
+            L-14,32 L-9,11 L54,0 L23,-32 L6,-11 L-30,-2 L-30,2 
+            [style change move=3601,2940 fill0/1=, line=]
+            C-52,4:-69,47 C-83,54:-8,61 C79,42:67,-19 C41,-12:93,-47 L2,-21 L1,-12 L-42,-4 C-42,-3:-16,-11 L-2,-22
+            L20,-33 L11,-24 
+            [style change move=3564,2878 fill0/1=, line=]
+            L-26,-4 C-13,3:-6,12 L27,-5 L18,-6 
+            [style change move=3850,2542 fill0/1=, line=]
+            L3,6 C6,8:11,4 L8,-4 L-26,-29 L-2,15 
+            [style change move=3887,2679 fill0/1=, line=]
+            L-49,-7 L0,4 L-8,65 L0,18 L30,-28 L27,-30 L0,-22 
+            [style change move=3826,2902 fill0/1=, line=]
+            L21,-31 L-27,-6 L-10,2 L-8,65 L-3,8 L27,-38 
+            [style change move=1881,1940 fill0/1=[Solid: Colour=Color [A=255, R=0, G=0, B=255]], line=]
+            C-103,-8:-48,-87 C-30,-54:0,-51 C0,-96:63,-56 C49,-44:69,-5 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=204, G=255, B=0]] line=]
+            L0,-139 L1084,0 
+            [style change move=1881,1539 fill0/1=[Solid: Colour=Color [A=255, R=204, G=255, B=0]], line=]
+            L19,-1 C81,0:57,50 C62,56:0,96 C0,62:-40,58 C-55,80:-105,0 L-19,0 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=0, G=0, B=255]] line=]
+            L0,200 L998,0 
+            [style change move=1261,1781 fill0/1=[Solid: Colour=Color [A=255, R=0, G=0, B=255]], line=]
+            C-55,79:-106,0 C-117,0:-52,-94 C-31,-55:0,-51 C0,-96:63,-56 C56,-50:81,0 C81,0:57,50 C62,56:0,96 C0,64:-39,57
+            [style change move=1340,2904 fill0/1=,[LinearGradient: Gradient=[Gradient Interp:Normal Spread:Reflect Records:{[Color [A=255, R=255, G=255, B=255], 0], [Color [A=255, R=0, G=0, B=0], 255]}], Pos=[t:85.5,147, sc:0.02258301,0.03479004, sk:0,0]] line=]
+            L0,-534 L740,0 L0,506 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=]
+            C108,-35:99,-54 
+            [style change move=1340,2904 fill0/1=[Solid: Colour=Color [A=255, R=255, G=0, B=0]],[Solid: Colour=Color [A=255, R=0, G=0, B=255]] line=]
+            C-211,-51:-183,-120 
+            [style change move=2080,2876 fill0/1=,[LinearGradient: Gradient=[Gradient Interp:Normal Spread:Reflect Records:{[Color [A=255, R=255, G=255, B=255], 0], [Color [A=255, R=0, G=0, B=0], 255]}], Pos=[t:85.5,147, sc:0.02258301,0.03479004, sk:0,0]] line=]
+            L0,633 L-740,0 L0,-605
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[Shape DefineShape4:815 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+}

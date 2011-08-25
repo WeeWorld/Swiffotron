@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <swf id="myswf">
+
+        <swfout store="store://store/TestForwardReference.swf" />
+
+        <movieclip id="one_mc" exportforscript="true" type="swf" src="myswf1" class="com.ww.one"/>
+        <movieclip id="two_mc" exportforscript="true" type="swf" src="myswf2" class="com.ww.two"/>
+
+    </swf>
+
+    <swf id="myswf2" />
+
+    <swf id="myswf1" />
+
+</swiffotron>

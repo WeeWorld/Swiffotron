@@ -1,0 +1,51 @@
+SWF stage=550,400, fps=12, bg=#FFFFFF
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect -8,112.8->496.85,370.85]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=102, B=204]]
+            Fill#2: [Solid: Colour=Color [A=0, R=0, G=204, B=204]]
+            Fill#3: [Solid: Colour=Color [A=0, R=153, G=255, B=102]]
+            Fill#4: [Solid: Colour=Color [A=0, R=204, G=0, B=0]]
+            [style change move=6106,3642 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=204, B=204]] line=]
+            C749,-9:174,15 C92,7:45,24 C58,30:83,16 C121,23:25,103 C16,69:-27,85 L423,61 L219,34 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=0, R=204, G=0, B=0]] line=]
+            C352,-238:458,163 C185,65:169,121 C147,104:82,105 C302,222:97,245 C61,156:0,292 C0,649:-194,458 C-414,975:-1152,0
+            C-803,0:-396,-709 C-127,-228:-69,-275 C-45,-182:0,-78 C0,-256:51,-186 C57,-205:138,-194 C105,-149:197,-190
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=0, R=0, G=204, B=204]] line=]
+            L-235,69 C-691,198:-842,191 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=0, R=153, G=255, B=102]] line=]
+            C-155,150:-225,137 C-301,184:-343,107 C-384,119:-369,0 C-426,0:-129,-143 C-41,-46:-6,-55 L2,-36 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=0, R=0, G=204, B=204]] line=]
+            L-475,59 C-1522,181:-943,0 C-247,0:-77,-79 C-36,-37:0,-84 C0,-12:35,-61 C35,-61:0,-31 C0,-25:-25,-54 C-25,-54:0,-25
+            C0,-125:108,-91 C148,-127:379,-99 L-9,-52 C-6,-36:0,-32 C0,-222:1113,-293 C565,-149:642,-121 C116,-25:556,-49
+            L26,-3 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=0, R=0, G=102, B=204]] line=]
+            C26,-50:36,-53 C-246,-65:-64,-86 C-25,-34:-4,-47 L-1,-86 C0,-150:83,-103 C83,-103:239,-146 C92,-57:136,-46
+            L239,-72 C295,-87:118,-123 C501,-522:415,216 C149,78:100,156 C87,135:0,99 C0,58:-71,237 L-21,71 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=0, R=153, G=255, B=102]] line=]
+            C98,-8:103,57 C106,59:73,102 C72,102:0,87 C0,47:-11,43 
+            [style change move=, fill0/1=[Solid: Colour=Color [A=0, R=0, G=204, B=204]], line=]
+            C-21,80:-59,66 C-61,68:-140,83 C-158,94:-44,38 C-91,81:0,98 L225,562 C0,145:-169,191 L-71,75 
+            [style change move=8961,4455 fill0/1=,[Solid: Colour=Color [A=0, R=204, G=0, B=0]] line=]
+            C-149,-89:-120,-86 C-82,-60:-254,126 L-314,179 C-633,413:-197,317 C-93,150:-35,177 C-27,140:0,228 C0,62:40,146
+            C57,213:103,176 C317,545:618,0 C847,0:349,-646 C229,-425:0,-689 C0,-221:-59,-123 C-84,-175:-262,-193 C-111,-82:-140,-83
+            [style change move=7285,4765 fill0/1=[Solid: Colour=Color [A=0, R=0, G=204, B=204]], line=]
+            C284,-274:473,-361 L42,-30 
+            [style change move=3498,3933 fill0/1=[Solid: Colour=Color [A=0, R=0, G=102, B=204]],[Solid: Colour=Color [A=0, R=0, G=204, B=204]] line=]
+            C568,-65:349,-118 C73,-24:241,-121 C279,-140:135,-57 C161,-68:111,-21 
+            [style change move=, fill0/1=,[Solid: Colour=Color [A=0, R=153, G=255, B=102]] line=]
+            L7,-9 C91,-133:126,-21 L26,-3 
+            [style change move=3140,5640 fill0/1=[Solid: Colour=Color [A=0, R=0, G=204, B=204]], line=]
+            L0,-13 C0,-239:611,-475 C180,-141:328,-231 L344,-246 L-20,-43 C-23,-53:0,-14 C0,-166:84,-105 C86,-160:252,-165
+            L279,-166 C122,-70:32,-34
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[Shape DefineShape:562 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+}

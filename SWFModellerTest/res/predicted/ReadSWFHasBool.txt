@@ -1,0 +1,438 @@
+SWF stage=550,400, fps=12, bg=#FFFFFF
+Document class:mn QName "MainTimeline"; ns Package "hasbool_fla"; set *
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect 0,0->150.45,150.45]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=102, B=204]]
+            [style change move=3009,0 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=102, B=204]] line=]
+            L0,3009 L-3009,0 L0,-3009 L3009,0
+        }
+    }
+    Character '__cid##2'
+    {
+        Class name:mn QName "BigBlueSquare"; ns Package ""; set *
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:31 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##2', mn QName "BigBlueSquare"; ns Package ""; set *], layer=[layer], name=none, ratio=none, matrix=[t:167,121, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	""
+        string #2	"void"
+        string #3	"hasbool_fla"
+        string #4	"MainTimeline"
+        string #5	"flash.display"
+        string #6	"MovieClip"
+        string #7	"hasbool_fla:MainTimeline"
+        string #8	"frame1"
+        string #9	"SuperClass"
+        string #10	"bbb"
+        string #11	"Boolean"
+        string #12	"aaa"
+        string #13	"BigBlueSquare"
+        string #14	"someMethod"
+        string #15	"someBool"
+        string #16	"someBool5"
+        string #17	"someBool8"
+        string #18	"someBool3"
+        string #19	"someFalseBool"
+        string #20	"someBool9"
+        string #21	"someNull"
+        string #22	"Object"
+        string #23	"someUndefined"
+        string #24	"someBool7"
+        string #25	"someBool4"
+        string #26	"someBool6"
+        string #27	"trace"
+        string #28	"addFrameScript"
+        string #29	"flash.events"
+        string #30	"EventDispatcher"
+        string #31	"DisplayObject"
+        string #32	"InteractiveObject"
+        string #33	"DisplayObjectContainer"
+        string #34	"Sprite"
+        string #35	"This is a boolean : "
+        string #36	"undefined"
+        ns #0	ns Ns "*"
+        ns #1	ns Package ""
+        ns #2	ns Package "hasbool_fla"
+        ns #3	ns Package "flash.display"
+        ns #4	ns Protected "hasbool_fla:MainTimeline"
+        ns #5	ns PackageInternal "hasbool_fla"
+        ns #6	ns Protected "SuperClass"
+        ns #7	ns PackageInternal ""
+        ns #8	ns Protected "BigBlueSquare"
+        ns #9	ns Package "flash.events"
+        ns set #0	(0 items)
+        ns set #1	(1 items)
+            - ns Package ""
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "void"; ns Package ""; set *
+        multiname #2	mn QName "MainTimeline"; ns Package "hasbool_fla"; set *
+        multiname #3	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #4	mn QName "frame1"; ns PackageInternal "hasbool_fla"; set *
+        multiname #5	mn QName "SuperClass"; ns Package ""; set *
+        multiname #6	mn QName "bbb"; ns PackageInternal ""; set *
+        multiname #7	mn QName "Boolean"; ns Package ""; set *
+        multiname #8	mn QName "aaa"; ns PackageInternal ""; set *
+        multiname #9	mn QName "BigBlueSquare"; ns Package ""; set *
+        multiname #10	mn QName "someMethod"; ns Package ""; set *
+        multiname #11	mn QName "someBool"; ns PackageInternal ""; set *
+        multiname #12	mn QName "someBool5"; ns PackageInternal ""; set *
+        multiname #13	mn QName "someBool8"; ns PackageInternal ""; set *
+        multiname #14	mn QName "someBool3"; ns PackageInternal ""; set *
+        multiname #15	mn QName "someFalseBool"; ns PackageInternal ""; set *
+        multiname #16	mn QName "someBool9"; ns PackageInternal ""; set *
+        multiname #17	mn QName "someNull"; ns PackageInternal ""; set *
+        multiname #18	mn QName "Object"; ns Package ""; set *
+        multiname #19	mn QName "someUndefined"; ns PackageInternal ""; set *
+        multiname #20	mn QName "someBool7"; ns PackageInternal ""; set *
+        multiname #21	mn QName "someBool4"; ns PackageInternal ""; set *
+        multiname #22	mn QName "someBool6"; ns PackageInternal ""; set *
+        multiname #23	mn QName "trace"; ns Package ""; set *
+        multiname #24	mn QName "addFrameScript"; ns Package ""; set *
+        multiname #25	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #26	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #27	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #28	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #29	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #30	mn Multiname "SuperClass"; ns *; set {ns Package ""}
+        multiname #31	mn QName "undefined"; ns Package ""; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "hasbool_fla:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "hasbool_fla"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "hasbool_fla"; set * () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 FindPropStrict(mn QName "addFrameScript"; ns Package ""; set *)
+                    #6 PushByte(0)
+                    #7 GetLex(mn QName "frame1"; ns PackageInternal "hasbool_fla"; set *)
+                    #8 CallPropVoid(mn QName "addFrameScript"; ns Package ""; set *, 2)
+                    #9 ReturnVoid()
+                }
+
+
+
+                [mn QName "frame1"; ns PackageInternal "hasbool_fla"; set *,Method] function (anon *) () : Void
+                {
+                    [MaxStack:2, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 FindPropStrict(mn QName "trace"; ns Package ""; set *)
+                    #4 PushTrue()
+                    #5 CallPropVoid(mn QName "trace"; ns Package ""; set *, 1)
+                    #6 ReturnVoid()
+                }
+            }
+        }
+        protected package ns Protected "SuperClass"
+        {
+            class mn QName "SuperClass"; ns Package ""; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "SuperClass"; ns Package ""; set * () : Void
+                {
+                    [MaxStack:2, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 FindProperty(mn QName "aaa"; ns PackageInternal ""; set *)
+                    #4 PushTrue()
+                    #5 InitProperty(mn QName "aaa"; ns PackageInternal ""; set *)
+                    #6 FindProperty(mn QName "bbb"; ns PackageInternal ""; set *)
+                    #7 PushTrue()
+                    #8 InitProperty(mn QName "bbb"; ns PackageInternal ""; set *)
+                    #9 GetLocal0()
+                    #10 ConstructSuper(0)
+                    #11 ReturnVoid()
+                }
+
+
+
+                [mn QName "bbb"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConTrue
+
+
+
+                [mn QName "aaa"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConTrue
+            }
+        }
+        protected package ns Protected "BigBlueSquare"
+        {
+            class mn QName "BigBlueSquare"; ns Package ""; set * extends mn QName "SuperClass"; ns Package ""; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "BigBlueSquare"; ns Package ""; set * () : Void
+                {
+                    [MaxStack:2, LocalCount:1, InitScopeDepth:11, MaxScopeDepth:12]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 FindProperty(mn QName "someNull"; ns PackageInternal ""; set *)
+                    #4 PushNull()
+                    #5 InitProperty(mn QName "someNull"; ns PackageInternal ""; set *)
+                    #6 FindProperty(mn QName "someFalseBool"; ns PackageInternal ""; set *)
+                    #7 PushFalse()
+                    #8 InitProperty(mn QName "someFalseBool"; ns PackageInternal ""; set *)
+                    #9 FindProperty(mn QName "someUndefined"; ns PackageInternal ""; set *)
+                    #10 GetLex(mn QName "undefined"; ns Package ""; set *)
+                    #11 InitProperty(mn QName "someUndefined"; ns PackageInternal ""; set *)
+                    #12 FindProperty(mn QName "someBool"; ns PackageInternal ""; set *)
+                    #13 PushTrue()
+                    #14 InitProperty(mn QName "someBool"; ns PackageInternal ""; set *)
+                    #15 FindProperty(mn QName "someBool3"; ns PackageInternal ""; set *)
+                    #16 PushTrue()
+                    #17 InitProperty(mn QName "someBool3"; ns PackageInternal ""; set *)
+                    #18 FindProperty(mn QName "someBool4"; ns PackageInternal ""; set *)
+                    #19 PushTrue()
+                    #20 InitProperty(mn QName "someBool4"; ns PackageInternal ""; set *)
+                    #21 FindProperty(mn QName "someBool5"; ns PackageInternal ""; set *)
+                    #22 PushTrue()
+                    #23 InitProperty(mn QName "someBool5"; ns PackageInternal ""; set *)
+                    #24 FindProperty(mn QName "someBool6"; ns PackageInternal ""; set *)
+                    #25 PushTrue()
+                    #26 InitProperty(mn QName "someBool6"; ns PackageInternal ""; set *)
+                    #27 FindProperty(mn QName "someBool7"; ns PackageInternal ""; set *)
+                    #28 PushTrue()
+                    #29 InitProperty(mn QName "someBool7"; ns PackageInternal ""; set *)
+                    #30 FindProperty(mn QName "someBool8"; ns PackageInternal ""; set *)
+                    #31 PushTrue()
+                    #32 InitProperty(mn QName "someBool8"; ns PackageInternal ""; set *)
+                    #33 FindProperty(mn QName "someBool9"; ns PackageInternal ""; set *)
+                    #34 PushTrue()
+                    #35 InitProperty(mn QName "someBool9"; ns PackageInternal ""; set *)
+                    #36 GetLocal0()
+                    #37 ConstructSuper(0)
+                    #38 ReturnVoid()
+                }
+
+
+
+                [mn QName "someMethod"; ns Package ""; set *,Method] function (anon *) () : mn QName "void"; ns Package ""; set *
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:11, MaxScopeDepth:12]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 FindPropStrict(mn QName "trace"; ns Package ""; set *)
+                    #4 PushString("This is a boolean : ")
+                    #5 PushFalse()
+                    #6 Add()
+                    #7 CallPropVoid(mn QName "trace"; ns Package ""; set *, 1)
+                    #8 ReturnVoid()
+                }
+
+
+
+                [mn QName "someBool"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConTrue
+
+
+
+                [mn QName "someBool5"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConTrue
+
+
+
+                [mn QName "someBool8"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConTrue
+
+
+
+                [mn QName "someBool3"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConTrue
+
+
+
+                [mn QName "someFalseBool"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConFalse
+
+
+
+                [mn QName "someBool9"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConTrue
+
+
+
+                [mn QName "someNull"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Object"; ns Package ""; set *], val: ConNull
+
+
+
+                [mn QName "someUndefined"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Object"; ns Package ""; set *], val: ConUndefined
+
+
+
+                [mn QName "someBool7"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConTrue
+
+
+
+                [mn QName "someBool4"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConTrue
+
+
+
+                [mn QName "someBool6"; ns PackageInternal ""; set *,Slot] property type : [mn QName "Boolean"; ns Package ""; set *], val: ConTrue
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "hasbool_fla"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "hasbool_fla"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "hasbool_fla"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "hasbool_fla"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "SuperClass"; ns *; set {ns Package ""})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "SuperClass"; ns Package ""; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "SuperClass"; ns Package ""; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "SuperClass"; ns Package ""; set *,Class] script class trait : mn QName "SuperClass"; ns Package ""; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:10]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "SuperClass"; ns Package ""; set *)
+                #19 PushScope()
+                #20 GetLex(mn QName "SuperClass"; ns Package ""; set *)
+                #21 NewClass(mn QName "BigBlueSquare"; ns Package ""; set *)
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 PopScope()
+                #28 PopScope()
+                #29 PopScope()
+                #30 InitProperty(mn QName "BigBlueSquare"; ns Package ""; set *)
+                #31 ReturnVoid()
+            }
+            [mn QName "BigBlueSquare"; ns Package ""; set *,Class] script class trait : mn QName "BigBlueSquare"; ns Package ""; set *
+        }
+    }
+}

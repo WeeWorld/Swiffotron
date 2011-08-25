@@ -1,0 +1,432 @@
+SWF stage=500,400, fps=24, bg=#FFFFFF
+Document class:mn QName "MainTimeline"; ns Package "TestTweens_swiffotron"; set *
+{
+    Character '__cid##1' = [Image (41808 bytes, DefineBitsJPEG2)]
+    Character '__cid##10'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:64 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+            RemoveObject layer=[layer]
+            RemoveObject layer=[layer]
+        }
+        Frame# 2 ;
+        Frame# 3 ;
+        Frame# 4 ;
+        Frame# 5 ;
+        Frame# 6 ;
+        Frame# 7 ;
+        Frame# 8 ;
+        Frame# 9 ;
+        Frame# 10
+        {
+            RemoveObject layer=[layer]
+            PlaceObject char=[MorphShape DefineMorphShape2:148 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+        Frame# 11
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=9362, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 12
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=18725, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 13
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=28087, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 14
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=37449, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 15
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=46811, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 16
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=56174, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 17
+        {
+            RemoveObject layer=[layer]
+            PlaceObject char=[Shape DefineShape4:66 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##2'
+    {
+        StartBounds: [Rect 47.4,55.15->274,259.85]
+        EndBounds: [Rect 291,131.3->520,359.85]
+        StartEdgeBounds: 
+        EndEdgeBounds: 
+        Original format: DefineMorphShape
+        StartShape; WithStyle? True
+        {
+            Fill#1: [NonSmoothRepeatingBitmap: Bitmap=[Image (41808 bytes, DefineBitsJPEG2)], StartPos=[t:56.85,109.95, sc:9.841537,10.19492, sk:-2.637024,2.73172], EndPos=[t:56.85,109.95, sc:9.841537,10.19492, sk:-2.637024,2.73172]]
+            Line#1: [line cap Round-Round, Round join, startwidth=0,  endwidth=0,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  startcolour=Color [A=0, R=0, G=0, B=0],  endcolour=Color [A=0, R=0, G=0, B=0]]
+            [style change move=950,4131 fill0/1=[NonSmoothRepeatingBitmap: Bitmap=[Image (41808 bytes, DefineBitsJPEG2)], StartPos=[t:56.85,109.95, sc:9.841537,10.19492, sk:-2.637024,2.73172], EndPos=[t:56.85,109.95, sc:9.841537,10.19492, sk:-2.637024,2.73172]], line=1]
+            L10,-74 C0,-230:39,-241 C44,-279:97,-292 L8,-22 C142,-358:34,-130 L11,-60 L-27,-93 L-28,-102 C0,-141:70,-151
+            L18,-36 C120,-235:222,-42 C25,-5:42,-23 C44,-24:62,-44 L251,-179 L174,-104 C94,-51:89,-33 C83,-30:79,-16
+            L157,-16 C336,0:34,169 C11,55:-21,73 L-30,83 L-5,15 L97,-63 L83,-64 C114,-93:41,-50 C35,-45:67,-21 L157,-41
+            L31,-8 C116,-32:183,7 L12,0 L144,10 L-2,-12 L27,2 C129,8:70,29 L4,2 C94,42:20,100 C12,67:-16,186 C-21,233:3,143
+            L289,15 C172,16:126,30 C113,27:76,38 L8,4 C161,85:0,150 C0,158:-170,102 L-41,22 C-174,84:-295,5 L-425,-26
+            C-94,424:-138,438 C-107,339:-133,348 C-134,349:-119,230 C-231,444:-179,0 C-294,0:-181,-130 C-70,-50:-36,-51
+            C-39,-55:0,-56 C0,-25:23,-52 C22,-53:0,-25 C0,-60:-57,-112 C-70,-129:-28,-64 L-176,15 L-4,0 C-109,91:-156,152
+            C-130,107:-145,0 C-126,0:-57,-99 C-44,-77:17,-54 C0,-15:-10,-10 C-37,25:-62,20 C-57,18:-59,7 L-75,5 C-227,0:-72,-167
+            L-20,-63 C-17,-72:6,-87 L0,0
+        }
+        EndShape; WithStyle? True
+        {
+            Fill#1: [NonSmoothRepeatingBitmap: Bitmap=[Image (41808 bytes, DefineBitsJPEG2)], StartPos=[t:56.85,109.95, sc:9.841537,10.19492, sk:-2.637024,2.73172], EndPos=[t:56.85,109.95, sc:9.841537,10.19492, sk:-2.637024,2.73172]]
+            Line#1: [line cap Round-Round, Round join, startwidth=0,  endwidth=0,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  startcolour=Color [A=0, R=0, G=0, B=0],  endcolour=Color [A=0, R=0, G=0, B=0]]
+            [style change move=5820,5987 fill0/1=, line=]
+            L0,-74 C4,-276:31,-166 C53,-282:157,-234 L10,-16 C130,-204:11,-290 L-2,-64 L-2,-81 L-1,-99 C0,-171:9,-110
+            L3,-36 C23,-275:33,-154 L15,-64 L36,-110 C52,-135:83,-114 C58,-79:72,-68 C61,-57:68,-88 C58,-64:77,-23
+            C53,-17:109,-6 C159,-9:278,13 L120,6 L84,5 L16,2 L122,8 C48,9:53,15 C92,27:105,44 L107,48 L136,68 L28,14
+            L242,141 L6,4 L147,-16 L14,-2 L26,-4 L186,-23 L4,0 L175,6 L227,30 C205,42:123,92 C116,87:45,131 C36,106:-4,189
+            C-3,151:22,40 L4,6 L175,221 C132,169:47,74 L14,23 C92,167:0,268 C0,200:-51,189 C-104,387:-319,342 C-220,236:-314,206
+            C-245,162:-302,144 C-278,132:-302,106 C-222,78:-235,64 L-145,38 L-107,26 L-67,16 L-70,15 L-158,32 L-209,32
+            L-162,10 L-5,0 C-180,-1:-150,-37 C-146,-36:-118,-70 C-89,-53:-73,-74 C-46,-46:-39,-53 L-12,-18 L-54,-86
+            L-52,-105 L-26,-66 C-57,-159:-17,-188 L-4,-63 L-2,-153 L0,-2
+        }
+    }
+    Character '__cid##3' = [Image (52670 bytes, DefineBitsJPEG2)]
+    Character '__cid##4'
+    {
+        StartBounds: [Rect 291,131.3->520,359.85]
+        EndBounds: [Rect 291,131.3->520,359.85]
+        StartEdgeBounds: 
+        EndEdgeBounds: 
+        Original format: DefineMorphShape
+        StartShape; WithStyle? True
+        {
+            Fill#1: [NonSmoothRepeatingBitmap: Bitmap=[Image (52670 bytes, DefineBitsJPEG2)], StartPos=[t:289.5,123.55, sc:12.47314,12.77496, sk:0,0], EndPos=[t:289.5,123.55, sc:12.47314,12.77496, sk:0,0]]
+            Line#1: [line cap Round-Round, Round join, startwidth=0,  endwidth=0,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  startcolour=Color [A=0, R=0, G=0, B=0],  endcolour=Color [A=0, R=0, G=0, B=0]]
+            [style change move=5820,5987 fill0/1=[NonSmoothRepeatingBitmap: Bitmap=[Image (52670 bytes, DefineBitsJPEG2)], StartPos=[t:289.5,123.55, sc:12.47314,12.77496, sk:0,0], EndPos=[t:289.5,123.55, sc:12.47314,12.77496, sk:0,0]], line=1]
+            C0,-329:35,-187 C53,-282:157,-234 C140,-209:11,-301 C-11,-345:15,-180 C29,-367:45,-162 C83,-300:218,-206
+            C61,-57:68,-88 C58,-64:77,-23 C174,-54:767,56 C224,44:317,167 C158,84:118,75 L187,-22 L186,-23 C762,0:133,388
+            C36,106:-4,189 C-3,164:26,33 C314,389:54,98 C92,167:0,268 C0,609:-474,509 C-392,421:-689,327 C-545,258:-637,160
+            C-518,131:-255,0 C-719,0:-245,-579 C-79,-185:-21,-228 C-6,-66:0,-152
+        }
+        EndShape; WithStyle? True
+        {
+            Fill#1: [NonSmoothRepeatingBitmap: Bitmap=[Image (52670 bytes, DefineBitsJPEG2)], StartPos=[t:289.5,123.55, sc:12.47314,12.77496, sk:0,0], EndPos=[t:289.5,123.55, sc:12.47314,12.77496, sk:0,0]]
+            Line#1: [line cap Round-Round, Round join, startwidth=0,  endwidth=0,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  startcolour=Color [A=0, R=0, G=0, B=0],  endcolour=Color [A=0, R=0, G=0, B=0]]
+            [style change move=5820,5987 fill0/1=, line=]
+            C0,-329:35,-187 C53,-282:157,-234 C140,-209:11,-301 C-11,-345:15,-180 C29,-367:45,-162 C83,-300:218,-206
+            C61,-57:68,-88 C58,-64:77,-23 C174,-54:767,56 C224,44:317,167 C158,84:118,75 L187,-22 L186,-23 C762,0:133,388
+            C36,106:-4,189 C-3,164:26,33 C314,389:54,98 C92,167:0,268 C0,609:-474,509 C-392,421:-689,327 C-545,258:-637,160
+            C-518,131:-255,0 C-719,0:-245,-579 C-79,-185:-21,-228 C-6,-66:0,-152
+        }
+    }
+    Character '__cid##5'
+    {
+        Bounds: [Rect 291,131.3->520,359.85]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [NonSmoothRepeatingBitmap: Bitmap=[Image (52670 bytes, DefineBitsJPEG2)], Pos=[t:289.5,123.55, sc:12.47314,12.77496, sk:0,0]]
+            [style change move=9940,3860 fill0/1=,[NonSmoothRepeatingBitmap: Bitmap=[Image (52670 bytes, DefineBitsJPEG2)], Pos=[t:289.5,123.55, sc:12.47314,12.77496, sk:0,0]] line=]
+            C314,389:54,98 C92,167:0,268 C0,609:-474,509 C-392,421:-689,327 C-545,258:-637,160 C-518,131:-255,0 C-719,0:-245,-579
+            C-79,-185:-21,-228 C-6,-66:0,-152 C0,-329:35,-187 C53,-282:157,-234 C140,-209:11,-301 C-11,-345:15,-180
+            C29,-367:45,-162 C83,-300:218,-206 C61,-57:68,-88 C58,-64:77,-23 C174,-54:767,56 C224,44:317,167 C158,84:118,75
+            L187,-22 L186,-23 C762,0:133,388 C36,106:-4,189 C-3,164:26,33
+        }
+    }
+    Character '__cid##6'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[MorphShape DefineMorphShape:645 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+            RemoveObject layer=[layer]
+        }
+        Frame# 2
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=3449, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 3
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=6899, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 4
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=10348, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 5
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=13797, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 6
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=17246, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 7
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=20696, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 8
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=24145, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 9
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=27594, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 10
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=31043, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 11
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=34493, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 12
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=37942, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 13
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=41391, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 14
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=44840, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 15
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=48290, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 16
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=51739, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 17
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=55188, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 18
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=58637, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 19
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=62087, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 20
+        {
+            PlaceObject (move) char=[MorphShape DefineMorphShape:351 bytes], layer=[layer], name=none, ratio=0, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 21
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=5041, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 22
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=10082, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 23
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=15124, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 24
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=20165, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 25
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=25206, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 26
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=30247, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 27
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=35289, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 28
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=40330, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 29
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=45371, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 30
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=50412, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 31
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=55454, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 32
+        {
+            PlaceObject (move) char=none, layer=[layer], name=none, ratio=60495, matrix=none, cxform=none, clipDepth=none
+        }
+        Frame# 33
+        {
+            RemoveObject layer=[layer]
+            PlaceObject char=[Shape DefineShape:170 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##7'
+    {
+        Bounds: [Rect 57.5,65.5->156.5,282.5]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=204, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=2220,1320 fill0/1=,[Solid: Colour=Color [A=255, R=204, G=0, B=0]] line=1]
+            L0,1620 L-820,0 L0,-1620 L820,0 
+            [style change move=3120,5640 fill0/1=, line=]
+            L-1960,0 L0,-1620 L1960,0 L0,1620
+        }
+    }
+    Character '__cid##8'
+    {
+        StartBounds: [Rect 73.5,77.5->175.5,164.5]
+        EndBounds: [Rect 308.45,111.45->474.9,336.15]
+        StartEdgeBounds: [Rect 74,78->175,164]
+        EndEdgeBounds: [Rect 308.95,111.95->474.4,335.65]
+        Original format: DefineMorphShape2
+        StartShape; WithStyle? True
+        {
+            Fill#1: [Solid: StartColour=Color [A=255, R=204, G=0, B=0], EndColour=Color [A=255, R=204, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, startwidth=20,  endwidth=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  startcolour=Color [A=255, R=0, G=0, B=0],  endcolour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=1480,1560 fill0/1=, line=1]
+            L2020,0 L0,1720 L-2020,0 L0,-1720 
+            [style change move=, fill0/1=[Solid: StartColour=Color [A=255, R=204, G=0, B=0], EndColour=Color [A=255, R=204, G=0, B=0]], line=]
+            L2020,0 L0,1720 L-2020,0 L0,-1720
+        }
+        EndShape; WithStyle? True
+        {
+            Fill#1: [Solid: StartColour=Color [A=255, R=204, G=0, B=0], EndColour=Color [A=255, R=204, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, startwidth=20,  endwidth=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  startcolour=Color [A=255, R=0, G=0, B=0],  endcolour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=6179,3680 fill0/1=, line=]
+            C1983,-2882:37,2882 C2579,1003:-2579,717 C841,2627:-2861,-2627 L0,-1720 C1983,-2882:37,2882 C2579,1003:-2579,717
+            C841,2627:-2861,-2627 L0,-1720
+        }
+    }
+    Character '__cid##9'
+    {
+        Bounds: [Rect 308.45,111.45->474.9,336.15]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=204, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=8199,5400 fill0/1=,[Solid: Colour=Color [A=255, R=204, G=0, B=0]] line=1]
+            C841,2627:-2861,-2627 L0,-1720 C1983,-2882:37,2882 C2579,1003:-2579,717
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##6'], layer=[layer], name=bitmaps_mc, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[sprite '__cid##10'], layer=[layer], name=simple_mc, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	"Object"
+        string #2	""
+        string #3	"EventDispatcher"
+        string #4	"flash.events"
+        string #5	"DisplayObject"
+        string #6	"flash.display"
+        string #7	"InteractiveObject"
+        string #8	"DisplayObjectContainer"
+        string #9	"Sprite"
+        string #10	"MovieClip"
+        string #11	"MainTimeline"
+        string #12	"TestTweens_swiffotron"
+        string #13	"TestTweens_swiffotron:MainTimeline"
+        ns #0	ns Ns "*"
+        ns #1	ns Package ""
+        ns #2	ns Package "flash.events"
+        ns #3	ns Package "flash.display"
+        ns #4	ns Package "TestTweens_swiffotron"
+        ns #5	ns Protected "TestTweens_swiffotron:MainTimeline"
+        ns set #0	(0 items)
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "Object"; ns Package ""; set *
+        multiname #2	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #3	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #4	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #5	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #6	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #7	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #8	mn QName "MainTimeline"; ns Package "TestTweens_swiffotron"; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "TestTweens_swiffotron:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "TestTweens_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "TestTweens_swiffotron"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "TestTweens_swiffotron"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "TestTweens_swiffotron"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "TestTweens_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "TestTweens_swiffotron"; set *
+        }
+    }
+}

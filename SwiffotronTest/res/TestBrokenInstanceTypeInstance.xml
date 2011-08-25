@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <swf base="store://store/monocular-ufo-pilot.swf" id="convoy">
+
+    <swfout store="store://store/TestBrokenInstanceTypeInstance.swf" />
+
+    <modify qname="ufo_mc.cockpit_mc.alien_mc.alienhead_mc.lefteye_mc">
+      <moveRel x="-16" y="0"/>
+    </modify>
+
+    <instance type="instance"
+              src="ufo_mc.cockpit_mc.alien_mc.alienhead_mc.lefteye_mc"
+              id="ufo_mc.cockpit_mc.alien_mc.alienhead_mc.righteye_mc"
+              relativeTo="ufo_mc.cockpit_mc.alien_mc.alienhead_mc.lefteye_mc" x="32"/>
+
+    <modify qname="ufo_mc">
+      <moveAbs x="96" y="69" rotate="20" scalex="0.7" scaley="0.7"/>
+    </modify>
+    
+    <!-- Note the broken src value -->
+    <instance type="instance"
+              src="ufo_mcdonut"
+              id="companion_mc"
+              x="35" y="58" rotate="-10" scalex="0.4" scaley="0.4" />
+
+  </swf>
+
+</swiffotron>

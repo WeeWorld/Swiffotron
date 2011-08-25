@@ -1,0 +1,1482 @@
+SWF stage=550,400, fps=24, bg=#FFFFFF
+Document class:mn QName "MainTimeline"; ns Package "switch_fla"; set *
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect 352.45,85.5->418.45,279.45]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=255, G=0, B=0]]
+            Fill#2: [Solid: Colour=Color [A=255, R=0, G=255, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=7709,1720 fill0/1=,[Solid: Colour=Color [A=255, R=255, G=0, B=0]] line=1]
+            C269,0:190,190 C191,191:0,269 C0,269:-191,190 C-190,191:-269,0 C-269,0:-191,-191 C-190,-190:0,-269 C0,-269:190,-191
+            C191,-190:269,0 
+            [style change move=8359,4929 fill0/1=,[Solid: Colour=Color [A=255, R=0, G=255, B=0]] line=]
+            C0,269:-191,190 C-190,191:-269,0 C-269,0:-191,-191 C-190,-190:0,-269 C0,-269:190,-191 C191,-190:269,0
+            C269,0:190,190 C191,191:0,269
+        }
+    }
+    Character '__cid##3'
+    {
+        EditText: '<p align="left"><font face="Arial" size="23" color="#000000" letterSpacing="0.000000" kerning="1"><b>NOT OK</b></font></p>'
+        Font: 'Arial'
+        FontHeight: '460'
+    }
+    Character '__cid##4'
+    {
+        EditText: '<p align="left"><font face="Arial" size="23" color="#000000" letterSpacing="0.000000" kerning="1"><b>OK</b></font></p>'
+        Font: 'Arial'
+        FontHeight: '460'
+    }
+    Character '__cid##5'
+    {
+        Bounds: [Rect 0,0->183.35,69.75]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=0, B=255]]
+            Fill#2: [Solid: Colour=Color [A=0, R=153, G=0, B=102]]
+            [style change move=3667,657 fill0/1=,[Solid: Colour=Color [A=0, R=153, G=0, B=102]] line=]
+            C0,58:-440,340 C-439,340:-73,0 C-112,0:-42,-83 C-14,-27:-5,-33 L-2,-30 C0,-89:119,-96 L286,-212 L-560,-5
+            C-69,11:-116,42 C-61,22:-254,0 C-846,0:-545,-95 C-494,-86:0,-112 C0,-177:255,0 L742,58 L845,57 C252,0:108,-36
+            C119,-40:419,-9 C-160,-100:-52,-50 C-68,-66:0,-77 C0,-180:189,20 C156,16:259,148 C221,126:193,160 C189,155:0,50
+        }
+    }
+    Character '__cid##6'
+    {
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape:137 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##7'
+    {
+        EditText: '<p align="left"><font face="Arial" size="23" color="#990066" letterSpacing="0.000000" kerning="1"><b>switch statement test file</b></font></p>'
+        Font: 'Arial'
+        FontHeight: '460'
+    }
+    Frame# 1
+    {
+        PlaceObject char=[Shape DefineShape4:144 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[EditText '<p align="left"><font face="Arial" size="23" color="#000000" letterSpacing="0.000000" kerning="1"><b>NOT OK</b></font></p>'], layer=[layer], name=none, ratio=none, matrix=[t:425.95,98.2, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[EditText '<p align="left"><font face="Arial" size="23" color="#000000" letterSpacing="0.000000" kerning="1"><b>OK</b></font></p>'], layer=[layer], name=none, ratio=none, matrix=[t:425.95,231.65, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[sprite '__cid##6'], layer=[layer], name=mc_arrow, ratio=none, matrix=[t:141.25,89, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[EditText '<p align="left"><font face="Arial" size="23" color="#990066" letterSpacing="0.000000" kerning="1"><b>switch statement test file</b></font></p>'], layer=[layer], name=none, ratio=none, matrix=[t:32,9.2, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	"switch_fla"
+        string #2	"MainTimeline"
+        string #3	"flash.display"
+        string #4	"MovieClip"
+        string #5	"switch_fla:MainTimeline"
+        string #6	""
+        string #7	"mc_arrow"
+        string #8	"testsOK"
+        string #9	"int"
+        string #10	"a"
+        string #11	"b"
+        string #12	"frame1"
+        string #13	"y"
+        string #14	"trace"
+        string #15	"Tests passed: "
+        string #16	"addFrameScript"
+        string #17	"Object"
+        string #18	"flash.events"
+        string #19	"EventDispatcher"
+        string #20	"DisplayObject"
+        string #21	"InteractiveObject"
+        string #22	"DisplayObjectContainer"
+        string #23	"Sprite"
+        ns #0	ns Ns "*"
+        ns #1	ns Package "switch_fla"
+        ns #2	ns Package "flash.display"
+        ns #3	ns Protected "switch_fla:MainTimeline"
+        ns #4	ns Package ""
+        ns #5	ns PackageInternal "switch_fla"
+        ns #6	ns Package "flash.events"
+        ns set #0	(0 items)
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "MainTimeline"; ns Package "switch_fla"; set *
+        multiname #2	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #3	mn QName "mc_arrow"; ns Package ""; set *
+        multiname #4	mn QName "testsOK"; ns Package ""; set *
+        multiname #5	mn QName "int"; ns Package ""; set *
+        multiname #6	mn QName "a"; ns Package ""; set *
+        multiname #7	mn QName "b"; ns Package ""; set *
+        multiname #8	mn QName "frame1"; ns PackageInternal "switch_fla"; set *
+        multiname #9	mn QName "y"; ns Package ""; set *
+        multiname #10	mn QName "trace"; ns Package ""; set *
+        multiname #11	mn QName "addFrameScript"; ns Package ""; set *
+        multiname #12	mn QName "Object"; ns Package ""; set *
+        multiname #13	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #14	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #15	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #16	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #17	mn QName "Sprite"; ns Package "flash.display"; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "switch_fla:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "switch_fla"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "switch_fla"; set * () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 FindPropStrict(mn QName "addFrameScript"; ns Package ""; set *)
+                    #6 PushByte(0)
+                    #7 GetLocal0()
+                    #8 GetProperty(mn QName "frame1"; ns PackageInternal "switch_fla"; set *)
+                    #9 CallPropVoid(mn QName "addFrameScript"; ns Package ""; set *, 2)
+                    #10 ReturnVoid()
+                }
+
+
+
+                [mn QName "mc_arrow"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
+
+
+
+                [mn QName "testsOK"; ns Package ""; set *,Slot] property type : [mn QName "int"; ns Package ""; set *], val: ConUndefined
+
+
+
+                [mn QName "a"; ns Package ""; set *,Slot] property type : [mn QName "int"; ns Package ""; set *], val: ConUndefined
+
+
+
+                [mn QName "b"; ns Package ""; set *,Slot] property type : [mn QName "int"; ns Package ""; set *], val: ConUndefined
+
+
+
+                [mn QName "frame1"; ns PackageInternal "switch_fla"; set *,Method] function (anon *) () : Void
+                {
+                    [MaxStack:3, LocalCount:3, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 PushByte(0)
+                    #5 InitProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #6 GetLocal0()
+                    #7 PushByte(4)
+                    #8 InitProperty(mn QName "a"; ns Package ""; set *)
+                    #9 Jump(-> #45 GetLocal0())
+                    #10 Label()
+                    #11 GetLocal0()
+                    #12 PushShort(-1000)
+                    #13 InitProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #14 Jump(-> #79 Jump(-> #98 GetLocal0()))
+                    #15 Label()
+                    #16 GetLocal0()
+                    #17 PushShort(-2000)
+                    #18 InitProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #19 Jump(-> #79 Jump(-> #98 GetLocal0()))
+                    #20 Label()
+                    #21 GetLocal0()
+                    #22 PushShort(-3000)
+                    #23 InitProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #24 Jump(-> #79 Jump(-> #98 GetLocal0()))
+                    #25 Label()
+                    #26 GetLocal0()
+                    #27 Dup()
+                    #28 SetLocal1()
+                    #29 GetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #30 IncrementI()
+                    #31 SetLocal2()
+                    #32 GetLocal1()
+                    #33 GetLocal2()
+                    #34 SetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #35 Kill(2)
+                    #36 Kill(1)
+                    #37 Jump(-> #79 Jump(-> #98 GetLocal0()))
+                    #38 Label()
+                    #39 GetLocal0()
+                    #40 PushShort(-5000)
+                    #41 InitProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #42 Jump(-> #79 Jump(-> #98 GetLocal0()))
+                    #43 Label()
+                    #44 Jump(-> #79 Jump(-> #98 GetLocal0()))
+                    #45 GetLocal0()
+                    #46 GetProperty(mn QName "a"; ns Package ""; set *)
+                    #47 SetLocal1()
+                    #48 PushByte(1)
+                    #49 GetLocal1()
+                    #50 IfStrictNe(-> #53 PushByte(2))
+                    #51 PushByte(0)
+                    #52 Jump(-> #77 Kill(1))
+                    #53 PushByte(2)
+                    #54 GetLocal1()
+                    #55 IfStrictNe(-> #58 PushByte(3))
+                    #56 PushByte(1)
+                    #57 Jump(-> #77 Kill(1))
+                    #58 PushByte(3)
+                    #59 GetLocal1()
+                    #60 IfStrictNe(-> #63 PushByte(4))
+                    #61 PushByte(2)
+                    #62 Jump(-> #77 Kill(1))
+                    #63 PushByte(4)
+                    #64 GetLocal1()
+                    #65 IfStrictNe(-> #68 PushByte(5))
+                    #66 PushByte(3)
+                    #67 Jump(-> #77 Kill(1))
+                    #68 PushByte(5)
+                    #69 GetLocal1()
+                    #70 IfStrictNe(-> #73 Jump(-> #76 PushByte(5)))
+                    #71 PushByte(4)
+                    #72 Jump(-> #77 Kill(1))
+                    #73 Jump(-> #76 PushByte(5))
+                    #74 PushByte(5)
+                    #75 Jump(-> #77 Kill(1))
+                    #76 PushByte(5)
+                    #77 Kill(1)
+                    #78 LookupSwitch(#43 Label(), 5, #10 Label(), #15 Label(), #20 Label(), #25 Label(), #38 Label(), #43 Label())
+                    #79 Jump(-> #98 GetLocal0())
+                    #80 Label()
+                    #81 GetLocal0()
+                    #82 PushShort(-6000)
+                    #83 InitProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #84 Jump(-> #122 GetLocal0())
+                    #85 Label()
+                    #86 GetLocal0()
+                    #87 Dup()
+                    #88 SetLocal1()
+                    #89 GetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #90 IncrementI()
+                    #91 SetLocal2()
+                    #92 GetLocal1()
+                    #93 GetLocal2()
+                    #94 SetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #95 Kill(2)
+                    #96 Kill(1)
+                    #97 Jump(-> #122 GetLocal0())
+                    #98 GetLocal0()
+                    #99 GetProperty(mn QName "a"; ns Package ""; set *)
+                    #100 SetLocal1()
+                    #101 PushByte(1)
+                    #102 GetLocal1()
+                    #103 IfStrictNe(-> #106 PushByte(2))
+                    #104 PushByte(0)
+                    #105 Jump(-> #120 Kill(1))
+                    #106 PushByte(2)
+                    #107 GetLocal1()
+                    #108 IfStrictNe(-> #111 PushByte(3))
+                    #109 PushByte(1)
+                    #110 Jump(-> #120 Kill(1))
+                    #111 PushByte(3)
+                    #112 GetLocal1()
+                    #113 IfStrictNe(-> #116 Jump(-> #119 PushByte(3)))
+                    #114 PushByte(2)
+                    #115 Jump(-> #120 Kill(1))
+                    #116 Jump(-> #119 PushByte(3))
+                    #117 PushByte(3)
+                    #118 Jump(-> #120 Kill(1))
+                    #119 PushByte(3)
+                    #120 Kill(1)
+                    #121 LookupSwitch(#85 Label(), 3, #80 Label(), #80 Label(), #80 Label(), #85 Label())
+                    #122 GetLocal0()
+                    #123 PushByte(2)
+                    #124 InitProperty(mn QName "a"; ns Package ""; set *)
+                    #125 Jump(-> #144 GetLocal0())
+                    #126 Label()
+                    #127 GetLocal0()
+                    #128 Dup()
+                    #129 SetLocal1()
+                    #130 GetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #131 IncrementI()
+                    #132 SetLocal2()
+                    #133 GetLocal1()
+                    #134 GetLocal2()
+                    #135 SetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #136 Kill(2)
+                    #137 Kill(1)
+                    #138 Jump(-> #168 GetLocal0())
+                    #139 Label()
+                    #140 GetLocal0()
+                    #141 PushShort(-7000)
+                    #142 InitProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #143 Jump(-> #168 GetLocal0())
+                    #144 GetLocal0()
+                    #145 GetProperty(mn QName "a"; ns Package ""; set *)
+                    #146 SetLocal1()
+                    #147 PushByte(1)
+                    #148 GetLocal1()
+                    #149 IfStrictNe(-> #152 PushByte(2))
+                    #150 PushByte(0)
+                    #151 Jump(-> #166 Kill(1))
+                    #152 PushByte(2)
+                    #153 GetLocal1()
+                    #154 IfStrictNe(-> #157 PushByte(3))
+                    #155 PushByte(1)
+                    #156 Jump(-> #166 Kill(1))
+                    #157 PushByte(3)
+                    #158 GetLocal1()
+                    #159 IfStrictNe(-> #162 Jump(-> #165 PushByte(3)))
+                    #160 PushByte(2)
+                    #161 Jump(-> #166 Kill(1))
+                    #162 Jump(-> #165 PushByte(3))
+                    #163 PushByte(3)
+                    #164 Jump(-> #166 Kill(1))
+                    #165 PushByte(3)
+                    #166 Kill(1)
+                    #167 LookupSwitch(#139 Label(), 3, #126 Label(), #126 Label(), #126 Label(), #139 Label())
+                    #168 GetLocal0()
+                    #169 PushByte(10)
+                    #170 InitProperty(mn QName "b"; ns Package ""; set *)
+                    #171 Jump(-> #241 GetLocal0())
+                    #172 Label()
+                    #173 GetLocal0()
+                    #174 PushShort(-7000)
+                    #175 InitProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #176 Jump(-> #265 GetLocal0())
+                    #177 Label()
+                    #178 GetLocal0()
+                    #179 Dup()
+                    #180 SetLocal1()
+                    #181 GetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #182 IncrementI()
+                    #183 SetLocal2()
+                    #184 GetLocal1()
+                    #185 GetLocal2()
+                    #186 SetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #187 Kill(2)
+                    #188 Kill(1)
+                    #189 Jump(-> #209 GetLocal0())
+                    #190 Label()
+                    #191 Jump(-> #233 Jump(-> #265 GetLocal0()))
+                    #192 Label()
+                    #193 GetLocal0()
+                    #194 Dup()
+                    #195 SetLocal1()
+                    #196 GetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #197 IncrementI()
+                    #198 SetLocal2()
+                    #199 GetLocal1()
+                    #200 GetLocal2()
+                    #201 SetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #202 Kill(2)
+                    #203 Kill(1)
+                    #204 Jump(-> #233 Jump(-> #265 GetLocal0()))
+                    #205 Label()
+                    #206 Jump(-> #233 Jump(-> #265 GetLocal0()))
+                    #207 Label()
+                    #208 Jump(-> #233 Jump(-> #265 GetLocal0()))
+                    #209 GetLocal0()
+                    #210 GetProperty(mn QName "b"; ns Package ""; set *)
+                    #211 SetLocal1()
+                    #212 PushShort(300)
+                    #213 GetLocal1()
+                    #214 IfStrictNe(-> #217 PushByte(10))
+                    #215 PushByte(0)
+                    #216 Jump(-> #231 Kill(1))
+                    #217 PushByte(10)
+                    #218 GetLocal1()
+                    #219 IfStrictNe(-> #222 PushShort(5000))
+                    #220 PushByte(1)
+                    #221 Jump(-> #231 Kill(1))
+                    #222 PushShort(5000)
+                    #223 GetLocal1()
+                    #224 IfStrictNe(-> #227 Jump(-> #230 PushByte(3)))
+                    #225 PushByte(2)
+                    #226 Jump(-> #231 Kill(1))
+                    #227 Jump(-> #230 PushByte(3))
+                    #228 PushByte(3)
+                    #229 Jump(-> #231 Kill(1))
+                    #230 PushByte(3)
+                    #231 Kill(1)
+                    #232 LookupSwitch(#207 Label(), 3, #190 Label(), #192 Label(), #205 Label(), #207 Label())
+                    #233 Jump(-> #265 GetLocal0())
+                    #234 Label()
+                    #235 GetLocal0()
+                    #236 PushShort(-7000)
+                    #237 InitProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #238 Jump(-> #265 GetLocal0())
+                    #239 Label()
+                    #240 Jump(-> #265 GetLocal0())
+                    #241 GetLocal0()
+                    #242 GetProperty(mn QName "a"; ns Package ""; set *)
+                    #243 SetLocal1()
+                    #244 PushByte(1)
+                    #245 GetLocal1()
+                    #246 IfStrictNe(-> #249 PushByte(2))
+                    #247 PushByte(0)
+                    #248 Jump(-> #263 Kill(1))
+                    #249 PushByte(2)
+                    #250 GetLocal1()
+                    #251 IfStrictNe(-> #254 PushByte(3))
+                    #252 PushByte(1)
+                    #253 Jump(-> #263 Kill(1))
+                    #254 PushByte(3)
+                    #255 GetLocal1()
+                    #256 IfStrictNe(-> #259 Jump(-> #262 PushByte(3)))
+                    #257 PushByte(2)
+                    #258 Jump(-> #263 Kill(1))
+                    #259 Jump(-> #262 PushByte(3))
+                    #260 PushByte(3)
+                    #261 Jump(-> #263 Kill(1))
+                    #262 PushByte(3)
+                    #263 Kill(1)
+                    #264 LookupSwitch(#239 Label(), 3, #172 Label(), #177 Label(), #234 Label(), #239 Label())
+                    #265 GetLocal0()
+                    #266 GetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #267 PushByte(5)
+                    #268 IfNe(-> #274 FindPropStrict(mn QName "trace"; ns Package ""; set *))
+                    #269 GetLocal0()
+                    #270 GetProperty(mn QName "mc_arrow"; ns Package ""; set *)
+                    #271 PushShort(215)
+                    #272 SetProperty(mn QName "y"; ns Package ""; set *)
+                    #273 Jump(-> #280 ReturnVoid())
+                    #274 FindPropStrict(mn QName "trace"; ns Package ""; set *)
+                    #275 PushString("Tests passed: ")
+                    #276 GetLocal0()
+                    #277 GetProperty(mn QName "testsOK"; ns Package ""; set *)
+                    #278 Add()
+                    #279 CallPropVoid(mn QName "trace"; ns Package ""; set *, 1)
+                    #280 ReturnVoid()
+                }
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "switch_fla"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "switch_fla"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "switch_fla"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "switch_fla"; set *
+        }
+    }
+    Fonts
+    {
+        Font: 'Arial'
+        {
+            Bold: True, Italic: False, Small: False
+            Language: Latin
+            Ascent: 18540
+            Descent: 4340
+            Leading: 2400
+            17 glyphs:
+            Glyph #1 ' ' (U+0020): [Shape DefineFont3:2 bytes]
+            Glyph #2 'K' (U+004B): [Shape DefineFont3:47 bytes]
+            Glyph #3 'N' (U+004E): [Shape DefineFont3:38 bytes]
+            Glyph #4 'O' (U+004F): [Shape DefineFont3:142 bytes]
+            Glyph #5 'T' (U+0054): [Shape DefineFont3:29 bytes]
+            Glyph #6 'a' (U+0061): [Shape DefineFont3:216 bytes]
+            Glyph #7 'c' (U+0063): [Shape DefineFont3:126 bytes]
+            Glyph #8 'e' (U+0065): [Shape DefineFont3:131 bytes]
+            Glyph #9 'f' (U+0066): [Shape DefineFont3:85 bytes]
+            Glyph #10 'h' (U+0068): [Shape DefineFont3:99 bytes]
+            Glyph #11 'i' (U+0069): [Shape DefineFont3:33 bytes]
+            Glyph #12 'l' (U+006C): [Shape DefineFont3:18 bytes]
+            Glyph #13 'm' (U+006D): [Shape DefineFont3:159 bytes]
+            Glyph #14 'n' (U+006E): [Shape DefineFont3:100 bytes]
+            Glyph #15 's' (U+0073): [Shape DefineFont3:175 bytes]
+            Glyph #16 't' (U+0074): [Shape DefineFont3:98 bytes]
+            Glyph #17 'w' (U+0077): [Shape DefineFont3:56 bytes]
+
+            Font has extra name info...
+            FullName: Arial Bold
+            Copyright: ? 2008 The Monotype Corporation. All Rights Reserved.
+
+            Font has layout info...
+            Layout #1 ' ' (U+0020): [Adv: 5700, Bounds: [Rect 0,0->0,0]]
+            Layout #2 'K' (U+004B): [Adv: 14800, Bounds: [Rect 0,0->0,0]]
+            Layout #3 'N' (U+004E): [Adv: 14800, Bounds: [Rect 0,0->0,0]]
+            Layout #4 'O' (U+004F): [Adv: 15940, Bounds: [Rect 0,0->0,0]]
+            Layout #5 'T' (U+0054): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #6 'a' (U+0061): [Adv: 11400, Bounds: [Rect 0,0->0,0]]
+            Layout #7 'c' (U+0063): [Adv: 11400, Bounds: [Rect 0,0->0,0]]
+            Layout #8 'e' (U+0065): [Adv: 11400, Bounds: [Rect 0,0->0,0]]
+            Layout #9 'f' (U+0066): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #10 'h' (U+0068): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #11 'i' (U+0069): [Adv: 5700, Bounds: [Rect 0,0->0,0]]
+            Layout #12 'l' (U+006C): [Adv: 5700, Bounds: [Rect 0,0->0,0]]
+            Layout #13 'm' (U+006D): [Adv: 18220, Bounds: [Rect 0,0->0,0]]
+            Layout #14 'n' (U+006E): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #15 's' (U+0073): [Adv: 11400, Bounds: [Rect 0,0->0,0]]
+            Layout #16 't' (U+0074): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #17 'w' (U+0077): [Adv: 15940, Bounds: [Rect 0,0->0,0]]
+
+            Font has pixel alignment info...
+            Thickness hint: Medium
+            PixelAlignment #1 ' ' (U+0020): [HasX: False, HasY: False, {zones (AlignCoord: 0, Range: 0)(AlignCoord: 0, Range: 0)}]
+            PixelAlignment #2 'K' (U+004B): [HasX: True, HasY: True, {zones (AlignCoord: 13918, Range: 0)(AlignCoord: 0, Range: 17118)}]
+            PixelAlignment #3 'N' (U+004E): [HasX: True, HasY: True, {zones (AlignCoord: 13932, Range: 0)(AlignCoord: 16246, Range: 17118)}]
+            PixelAlignment #4 'O' (U+004F): [HasX: True, HasY: True, {zones (AlignCoord: 13053, Range: 0)(AlignCoord: 16938, Range: 17118)}]
+            PixelAlignment #5 'T' (U+0054): [HasX: True, HasY: True, {zones (AlignCoord: 15290, Range: 0)(AlignCoord: 0, Range: 17118)}]
+            PixelAlignment #6 'a' (U+0061): [HasX: True, HasY: True, {zones (AlignCoord: 16093, Range: 0)(AlignCoord: 0, Range: 16916)}]
+            PixelAlignment #7 'c' (U+0063): [HasX: True, HasY: True, {zones (AlignCoord: 12963, Range: 0)(AlignCoord: 0, Range: 16916)}]
+            PixelAlignment #8 'e' (U+0065): [HasX: True, HasY: True, {zones (AlignCoord: 12821, Range: 0)(AlignCoord: 0, Range: 16916)}]
+            PixelAlignment #9 'f' (U+0066): [HasX: True, HasY: True, {zones (AlignCoord: 14046, Range: 0)(AlignCoord: 0, Range: 16916)}]
+            PixelAlignment #10 'h' (U+0068): [HasX: True, HasY: True, {zones (AlignCoord: 13889, Range: 0)(AlignCoord: 16050, Range: 16916)}]
+            PixelAlignment #11 'i' (U+0069): [HasX: True, HasY: True, {zones (AlignCoord: 13902, Range: 0)(AlignCoord: 0, Range: 16916)}]
+            PixelAlignment #12 'l' (U+006C): [HasX: True, HasY: True, {zones (AlignCoord: 13902, Range: 0)(AlignCoord: 0, Range: 16916)}]
+            PixelAlignment #13 'm' (U+006D): [HasX: True, HasY: True, {zones (AlignCoord: 13261, Range: 0)(AlignCoord: 16006, Range: 16916)}]
+            PixelAlignment #14 'n' (U+006E): [HasX: True, HasY: True, {zones (AlignCoord: 13892, Range: 0)(AlignCoord: 16044, Range: 16916)}]
+            PixelAlignment #15 's' (U+0073): [HasX: True, HasY: True, {zones (AlignCoord: 13902, Range: 0)(AlignCoord: 0, Range: 16916)}]
+            PixelAlignment #16 't' (U+0074): [HasX: True, HasY: True, {zones (AlignCoord: 13944, Range: 0)(AlignCoord: 0, Range: 16916)}]
+            PixelAlignment #17 'w' (U+0077): [HasX: True, HasY: True, {zones (AlignCoord: 13902, Range: 0)(AlignCoord: 0, Range: 16916)}]
+
+            Font has kerning table...
+            Kern 'A' (U+0041) +  ' (U+0020) => -760
+            Kern 'L' (U+004C) +  ' (U+0020) => -380
+            Kern 'P' (U+0050) +  ' (U+0020) => -380
+            Kern 'Y' (U+0059) +  ' (U+0020) => -380
+            Kern '?' (U+2019) +  ' (U+0020) => -1140
+            Kern 'F' (U+0046) + ,' (U+002C) => -2280
+            Kern 'P' (U+0050) + ,' (U+002C) => -2640
+            Kern 'T' (U+0054) + ,' (U+002C) => -2280
+            Kern 'V' (U+0056) + ,' (U+002C) => -1880
+            Kern 'W' (U+0057) + ,' (U+002C) => -1140
+            Kern 'Y' (U+0059) + ,' (U+002C) => -2280
+            Kern 'r' (U+0072) + ,' (U+002C) => -1140
+            Kern 'v' (U+0076) + ,' (U+002C) => -1520
+            Kern 'w' (U+0077) + ,' (U+002C) => -760
+            Kern 'y' (U+0079) + ,' (U+002C) => -1520
+            Kern '?' (U+0393) + ,' (U+002C) => -2260
+            Kern '?' (U+03A1) + ,' (U+002C) => -2620
+            Kern '?' (U+03A4) + ,' (U+002C) => -2260
+            Kern '?' (U+03A5) + ,' (U+002C) => -2260
+            Kern '?' (U+0403) + ,' (U+002C) => -2320
+            Kern '?' (U+0413) + ,' (U+002C) => -2320
+            Kern '?' (U+0420) + ,' (U+002C) => -2840
+            Kern '?' (U+0422) + ,' (U+002C) => -2060
+            Kern '?' (U+0423) + ,' (U+002C) => -2320
+            Kern '?' (U+0433) + ,' (U+002C) => -1800
+            Kern '?' (U+0442) + ,' (U+002C) => -1540
+            Kern '?' (U+0443) + ,' (U+002C) => -1540
+            Kern '?' (U+045E) + ,' (U+002C) => -1540
+            Kern '?' (U+0490) + ,' (U+002C) => -1300
+            Kern 'T' (U+0054) + -' (U+002D) => -1140
+            Kern 'V' (U+0056) + -' (U+002D) => -1140
+            Kern 'W' (U+0057) + -' (U+002D) => -420
+            Kern 'Y' (U+0059) + -' (U+002D) => -1140
+            Kern '?' (U+03A4) + -' (U+002D) => -1140
+            Kern '?' (U+03A5) + -' (U+002D) => -1140
+            Kern 'F' (U+0046) + .' (U+002E) => -2280
+            Kern 'P' (U+0050) + .' (U+002E) => -2640
+            Kern 'T' (U+0054) + .' (U+002E) => -2280
+            Kern 'V' (U+0056) + .' (U+002E) => -1880
+            Kern 'W' (U+0057) + .' (U+002E) => -1140
+            Kern 'Y' (U+0059) + .' (U+002E) => -2280
+            Kern 'r' (U+0072) + .' (U+002E) => -1140
+            Kern 'v' (U+0076) + .' (U+002E) => -1520
+            Kern 'w' (U+0077) + .' (U+002E) => -760
+            Kern 'y' (U+0079) + .' (U+002E) => -1520
+            Kern '?' (U+0393) + .' (U+002E) => -2260
+            Kern '?' (U+03A1) + .' (U+002E) => -2620
+            Kern '?' (U+03A4) + .' (U+002E) => -2260
+            Kern '?' (U+03A5) + .' (U+002E) => -2260
+            Kern '?' (U+0403) + .' (U+002E) => -2560
+            Kern '?' (U+0413) + .' (U+002E) => -2560
+            Kern '?' (U+0420) + .' (U+002E) => -3080
+            Kern '?' (U+0422) + .' (U+002E) => -2320
+            Kern '?' (U+0423) + .' (U+002E) => -2560
+            Kern '?' (U+0433) + .' (U+002E) => -2060
+            Kern '?' (U+0442) + .' (U+002E) => -1800
+            Kern '?' (U+0443) + .' (U+002E) => -1800
+            Kern '?' (U+045E) + .' (U+002E) => -1800
+            Kern '?' (U+0490) + .' (U+002E) => -1540
+            Kern '1' (U+0031) + 1' (U+0031) => -1140
+            Kern 'T' (U+0054) + :' (U+003A) => -2280
+            Kern 'V' (U+0056) + :' (U+003A) => -1140
+            Kern 'W' (U+0057) + :' (U+003A) => -380
+            Kern 'Y' (U+0059) + :' (U+003A) => -1520
+            Kern '?' (U+03A4) + :' (U+003A) => -2260
+            Kern '?' (U+03A5) + :' (U+003A) => -1520
+            Kern '?' (U+0403) + :' (U+003A) => -280
+            Kern '?' (U+0413) + :' (U+003A) => -280
+            Kern '?' (U+0420) + :' (U+003A) => -280
+            Kern '?' (U+0422) + :' (U+003A) => -280
+            Kern '?' (U+0423) + :' (U+003A) => -520
+            Kern '?' (U+0443) + :' (U+003A) => -280
+            Kern '?' (U+045E) + :' (U+003A) => -280
+            Kern '?' (U+0490) + :' (U+003A) => -280
+            Kern ' ' (U+0020) + A' (U+0041) => -760
+            Kern 'F' (U+0046) + A' (U+0041) => -1140
+            Kern 'P' (U+0050) + A' (U+0041) => -1520
+            Kern 'T' (U+0054) + A' (U+0041) => -1520
+            Kern 'V' (U+0056) + A' (U+0041) => -1520
+            Kern 'W' (U+0057) + A' (U+0041) => -1140
+            Kern 'Y' (U+0059) + A' (U+0041) => -1880
+            Kern 'T' (U+0054) + O' (U+004F) => -380
+            Kern 'A' (U+0041) + T' (U+0054) => -1520
+            Kern 'L' (U+004C) + T' (U+0054) => -1520
+            Kern 'A' (U+0041) + V' (U+0056) => -1520
+            Kern 'L' (U+004C) + V' (U+0056) => -1520
+            Kern 'R' (U+0052) + V' (U+0056) => -380
+            Kern 'A' (U+0041) + W' (U+0057) => -1140
+            Kern 'L' (U+004C) + W' (U+0057) => -1140
+            Kern 'R' (U+0052) + W' (U+0057) => -380
+            Kern ' ' (U+0020) + Y' (U+0059) => -380
+            Kern 'A' (U+0041) + Y' (U+0059) => -1880
+            Kern 'L' (U+004C) + Y' (U+0059) => -1880
+            Kern 'R' (U+0052) + Y' (U+0059) => -760
+            Kern 'T' (U+0054) + a' (U+0061) => -1520
+            Kern 'V' (U+0056) + a' (U+0061) => -1140
+            Kern 'W' (U+0057) + a' (U+0061) => -760
+            Kern 'Y' (U+0059) + a' (U+0061) => -1140
+            Kern 'T' (U+0054) + c' (U+0063) => -1520
+            Kern 'T' (U+0054) + e' (U+0065) => -1520
+            Kern 'V' (U+0056) + e' (U+0065) => -1140
+            Kern 'W' (U+0057) + e' (U+0065) => -380
+            Kern 'Y' (U+0059) + e' (U+0065) => -1140
+            Kern 'T' (U+0054) + i' (U+0069) => -380
+            Kern 'V' (U+0056) + i' (U+0069) => -380
+            Kern 'W' (U+0057) + i' (U+0069) => -180
+            Kern 'Y' (U+0059) + i' (U+0069) => -760
+            Kern 'T' (U+0054) + o' (U+006F) => -1520
+            Kern 'V' (U+0056) + o' (U+006F) => -1520
+            Kern 'W' (U+0057) + o' (U+006F) => -380
+            Kern 'Y' (U+0059) + o' (U+006F) => -1520
+            Kern 'Y' (U+0059) + p' (U+0070) => -1140
+            Kern 'Y' (U+0059) + q' (U+0071) => -1520
+            Kern 'T' (U+0054) + r' (U+0072) => -1140
+            Kern 'V' (U+0056) + r' (U+0072) => -1140
+            Kern 'W' (U+0057) + r' (U+0072) => -380
+            Kern 'T' (U+0054) + s' (U+0073) => -1520
+            Kern '?' (U+2019) + s' (U+0073) => -760
+            Kern 'T' (U+0054) + u' (U+0075) => -1520
+            Kern 'V' (U+0056) + u' (U+0075) => -760
+            Kern 'W' (U+0057) + u' (U+0075) => -380
+            Kern 'Y' (U+0059) + u' (U+0075) => -1140
+            Kern 'A' (U+0041) + v' (U+0076) => -760
+            Kern 'Y' (U+0059) + v' (U+0076) => -1140
+            Kern 'A' (U+0041) + w' (U+0077) => -380
+            Kern 'T' (U+0054) + w' (U+0077) => -1520
+            Kern 'A' (U+0041) + y' (U+0079) => -760
+            Kern 'L' (U+004C) + y' (U+0079) => -760
+            Kern 'T' (U+0054) + y' (U+0079) => -1520
+            Kern 'V' (U+0056) + y' (U+0079) => -760
+            Kern 'W' (U+0057) + y' (U+0079) => -380
+            Kern '?' (U+0403) + ?' (U+00AB) => -780
+            Kern '?' (U+0413) + ?' (U+00AB) => -780
+            Kern '?' (U+0422) + ?' (U+00AB) => -520
+            Kern '?' (U+0423) + ?' (U+00AB) => -780
+            Kern '?' (U+045E) + ?' (U+00AB) => -520
+            Kern '?' (U+0490) + ?' (U+00AB) => -520
+            Kern '?' (U+0403) + ?' (U+00BB) => -780
+            Kern '?' (U+0413) + ?' (U+00BB) => -780
+            Kern '?' (U+0423) + ?' (U+00BB) => -780
+            Kern '?' (U+0443) + ?' (U+00BB) => 520
+            Kern '?' (U+0490) + ?' (U+00BB) => -520
+            Kern 'T' (U+0054) + ?' (U+037E) => -2280
+            Kern 'V' (U+0056) + ?' (U+037E) => -1140
+            Kern 'W' (U+0057) + ?' (U+037E) => -380
+            Kern 'Y' (U+0059) + ?' (U+037E) => -1520
+            Kern '?' (U+03A4) + ?' (U+037E) => -2260
+            Kern '?' (U+03A5) + ?' (U+037E) => -1520
+            Kern '?' (U+0403) + ?' (U+037E) => -280
+            Kern '?' (U+0413) + ?' (U+037E) => -280
+            Kern '?' (U+0420) + ?' (U+037E) => -280
+            Kern '?' (U+0422) + ?' (U+037E) => -280
+            Kern '?' (U+0423) + ?' (U+037E) => -520
+            Kern '?' (U+0443) + ?' (U+037E) => -280
+            Kern '?' (U+045E) + ?' (U+037E) => -280
+            Kern '?' (U+0490) + ?' (U+037E) => -280
+            Kern ' ' (U+0020) + ?' (U+0386) => -760
+            Kern '?' (U+038E) + ?' (U+0390) => 2560
+            Kern '?' (U+03A4) + ?' (U+0390) => 2420
+            Kern '?' (U+03A5) + ?' (U+0390) => 2560
+            Kern '?' (U+03AB) + ?' (U+0390) => 2560
+            Kern ' ' (U+0020) + ?' (U+0391) => -760
+            Kern '?' (U+038E) + ?' (U+0391) => -1860
+            Kern '?' (U+0393) + ?' (U+0391) => -2240
+            Kern '?' (U+0398) + ?' (U+0391) => -560
+            Kern '?' (U+039F) + ?' (U+0391) => -560
+            Kern '?' (U+03A1) + ?' (U+0391) => -1520
+            Kern '?' (U+03A4) + ?' (U+0391) => -1520
+            Kern '?' (U+03A5) + ?' (U+0391) => -1860
+            Kern '?' (U+03A6) + ?' (U+0391) => -560
+            Kern '?' (U+03AB) + ?' (U+0391) => -1860
+            Kern ' ' (U+0020) + ?' (U+0394) => -760
+            Kern '?' (U+038E) + ?' (U+0394) => -1860
+            Kern '?' (U+0393) + ?' (U+0394) => -2240
+            Kern '?' (U+0398) + ?' (U+0394) => -560
+            Kern '?' (U+039F) + ?' (U+0394) => -560
+            Kern '?' (U+03A1) + ?' (U+0394) => -1520
+            Kern '?' (U+03A4) + ?' (U+0394) => -1640
+            Kern '?' (U+03A5) + ?' (U+0394) => -1860
+            Kern '?' (U+03AB) + ?' (U+0394) => -1860
+            Kern '?' (U+0386) + ?' (U+0398) => -560
+            Kern '?' (U+038E) + ?' (U+0398) => -780
+            Kern '?' (U+0391) + ?' (U+0398) => -560
+            Kern '?' (U+0394) + ?' (U+0398) => -560
+            Kern '?' (U+039A) + ?' (U+0398) => -940
+            Kern '?' (U+039B) + ?' (U+0398) => -560
+            Kern '?' (U+03A4) + ?' (U+0398) => -380
+            Kern '?' (U+03A5) + ?' (U+0398) => -780
+            Kern '?' (U+03AB) + ?' (U+0398) => -780
+            Kern ' ' (U+0020) + ?' (U+039B) => -760
+            Kern '?' (U+038E) + ?' (U+039B) => -1860
+            Kern '?' (U+0393) + ?' (U+039B) => -2240
+            Kern '?' (U+0398) + ?' (U+039B) => -560
+            Kern '?' (U+039F) + ?' (U+039B) => -560
+            Kern '?' (U+03A1) + ?' (U+039B) => -1520
+            Kern '?' (U+03A4) + ?' (U+039B) => -1520
+            Kern '?' (U+03A5) + ?' (U+039B) => -1860
+            Kern '?' (U+03AB) + ?' (U+039B) => -1860
+            Kern '?' (U+0386) + ?' (U+039F) => -560
+            Kern '?' (U+038E) + ?' (U+039F) => -780
+            Kern '?' (U+0391) + ?' (U+039F) => -560
+            Kern '?' (U+0394) + ?' (U+039F) => -560
+            Kern '?' (U+039A) + ?' (U+039F) => -940
+            Kern '?' (U+039B) + ?' (U+039F) => -560
+            Kern '?' (U+03A4) + ?' (U+039F) => -380
+            Kern '?' (U+03A5) + ?' (U+039F) => -780
+            Kern '?' (U+03AB) + ?' (U+039F) => -780
+            Kern '?' (U+0386) + ?' (U+03A4) => -1700
+            Kern '?' (U+0391) + ?' (U+03A4) => -1700
+            Kern '?' (U+0394) + ?' (U+03A4) => -1700
+            Kern '?' (U+039B) + ?' (U+03A4) => -1700
+            Kern '?' (U+03A6) + ?' (U+03A4) => -560
+            Kern ' ' (U+0020) + ?' (U+03A5) => -380
+            Kern '?' (U+0386) + ?' (U+03A5) => -1860
+            Kern '?' (U+038C) + ?' (U+03A5) => -580
+            Kern '?' (U+038F) + ?' (U+03A5) => -580
+            Kern '?' (U+0391) + ?' (U+03A5) => -1860
+            Kern '?' (U+0394) + ?' (U+03A5) => -1860
+            Kern '?' (U+0398) + ?' (U+03A5) => -580
+            Kern '?' (U+039B) + ?' (U+03A5) => -1860
+            Kern '?' (U+039F) + ?' (U+03A5) => -580
+            Kern '?' (U+03A6) + ?' (U+03A5) => -580
+            Kern '?' (U+03A9) + ?' (U+03A5) => -580
+            Kern '?' (U+0386) + ?' (U+03A6) => -560
+            Kern '?' (U+038E) + ?' (U+03A6) => -780
+            Kern '?' (U+0391) + ?' (U+03A6) => -560
+            Kern '?' (U+039A) + ?' (U+03A6) => -940
+            Kern '?' (U+03A4) + ?' (U+03A6) => -560
+            Kern '?' (U+03A5) + ?' (U+03A6) => -780
+            Kern '?' (U+03AB) + ?' (U+03A6) => -780
+            Kern '?' (U+038E) + ?' (U+03A9) => -780
+            Kern '?' (U+03A4) + ?' (U+03A9) => -380
+            Kern '?' (U+03A5) + ?' (U+03A9) => -780
+            Kern '?' (U+03AB) + ?' (U+03A9) => -780
+            Kern ' ' (U+0020) + ?' (U+03AB) => -380
+            Kern '?' (U+0386) + ?' (U+03AB) => -1860
+            Kern '?' (U+038C) + ?' (U+03AB) => -580
+            Kern '?' (U+038F) + ?' (U+03AB) => -580
+            Kern '?' (U+0391) + ?' (U+03AB) => -1860
+            Kern '?' (U+0394) + ?' (U+03AB) => -1860
+            Kern '?' (U+0398) + ?' (U+03AB) => -580
+            Kern '?' (U+039B) + ?' (U+03AB) => -1860
+            Kern '?' (U+039F) + ?' (U+03AB) => -580
+            Kern '?' (U+03A6) + ?' (U+03AB) => -580
+            Kern '?' (U+03A9) + ?' (U+03AB) => -580
+            Kern '?' (U+038E) + ?' (U+03AC) => -1520
+            Kern '?' (U+039A) + ?' (U+03AC) => -480
+            Kern '?' (U+03A4) + ?' (U+03AC) => -1520
+            Kern '?' (U+03A5) + ?' (U+03AC) => -1520
+            Kern '?' (U+03A8) + ?' (U+03AC) => -380
+            Kern '?' (U+03AB) + ?' (U+03AC) => -1520
+            Kern '?' (U+03B6) + ?' (U+03AC) => -1160
+            Kern '?' (U+03BA) + ?' (U+03AC) => -680
+            Kern '?' (U+03BB) + ?' (U+03AC) => -260
+            Kern '?' (U+03BE) + ?' (U+03AC) => -260
+            Kern '?' (U+03C0) + ?' (U+03AC) => -580
+            Kern '?' (U+03C4) + ?' (U+03AC) => -580
+            Kern '?' (U+03C7) + ?' (U+03AC) => -740
+            Kern '?' (U+03A4) + ?' (U+03AD) => -1520
+            Kern '?' (U+038E) + ?' (U+03AE) => -760
+            Kern '?' (U+03A5) + ?' (U+03AE) => -760
+            Kern '?' (U+03AB) + ?' (U+03AE) => -760
+            Kern '?' (U+03B6) + ?' (U+03AE) => -500
+            Kern '?' (U+038E) + ?' (U+03AF) => -760
+            Kern '?' (U+0393) + ?' (U+03AF) => -660
+            Kern '?' (U+03A5) + ?' (U+03AF) => -760
+            Kern '?' (U+03AB) + ?' (U+03AF) => -760
+            Kern '?' (U+03BB) + ?' (U+03B0) => -320
+            Kern '?' (U+038E) + ?' (U+03B1) => -1520
+            Kern '?' (U+039A) + ?' (U+03B1) => -480
+            Kern '?' (U+03A4) + ?' (U+03B1) => -1520
+            Kern '?' (U+03A5) + ?' (U+03B1) => -1520
+            Kern '?' (U+03A8) + ?' (U+03B1) => -380
+            Kern '?' (U+03AB) + ?' (U+03B1) => -1520
+            Kern '?' (U+03B6) + ?' (U+03B1) => -1160
+            Kern '?' (U+03BA) + ?' (U+03B1) => -680
+            Kern '?' (U+03BB) + ?' (U+03B1) => -260
+            Kern '?' (U+03BE) + ?' (U+03B1) => -260
+            Kern '?' (U+03C0) + ?' (U+03B1) => -580
+            Kern '?' (U+03C4) + ?' (U+03B1) => -580
+            Kern '?' (U+03C7) + ?' (U+03B1) => -740
+            Kern '?' (U+0386) + ?' (U+03B3) => -760
+            Kern '?' (U+0391) + ?' (U+03B3) => -760
+            Kern '?' (U+03A4) + ?' (U+03B3) => -1520
+            Kern '?' (U+03A5) + ?' (U+03B3) => -840
+            Kern '?' (U+03B6) + ?' (U+03B3) => -660
+            Kern '?' (U+038E) + ?' (U+03B4) => -760
+            Kern '?' (U+039A) + ?' (U+03B4) => -480
+            Kern '?' (U+03A4) + ?' (U+03B4) => -840
+            Kern '?' (U+03A5) + ?' (U+03B4) => -760
+            Kern '?' (U+03A8) + ?' (U+03B4) => -380
+            Kern '?' (U+03AB) + ?' (U+03B4) => -760
+            Kern '?' (U+03B6) + ?' (U+03B4) => -760
+            Kern '?' (U+03BA) + ?' (U+03B4) => -680
+            Kern '?' (U+03BB) + ?' (U+03B4) => -260
+            Kern '?' (U+03BE) + ?' (U+03B4) => -260
+            Kern '?' (U+03C0) + ?' (U+03B4) => -580
+            Kern '?' (U+03C4) + ?' (U+03B4) => -580
+            Kern '?' (U+03C7) + ?' (U+03B4) => -740
+            Kern '?' (U+03A4) + ?' (U+03B5) => -1520
+            Kern '?' (U+039A) + ?' (U+03B6) => -480
+            Kern '?' (U+03BA) + ?' (U+03B6) => -680
+            Kern '?' (U+03BB) + ?' (U+03B6) => -260
+            Kern '?' (U+03BE) + ?' (U+03B6) => -260
+            Kern '?' (U+03C0) + ?' (U+03B6) => -580
+            Kern '?' (U+03C4) + ?' (U+03B6) => -580
+            Kern '?' (U+03C7) + ?' (U+03B6) => -740
+            Kern '?' (U+038E) + ?' (U+03B7) => -760
+            Kern '?' (U+03A4) + ?' (U+03B7) => -1520
+            Kern '?' (U+03A5) + ?' (U+03B7) => -760
+            Kern '?' (U+03AB) + ?' (U+03B7) => -760
+            Kern '?' (U+03B6) + ?' (U+03B7) => -500
+            Kern '?' (U+039A) + ?' (U+03B8) => -480
+            Kern '?' (U+03B6) + ?' (U+03B8) => -760
+            Kern '?' (U+03BA) + ?' (U+03B8) => -300
+            Kern '?' (U+038E) + ?' (U+03B9) => -760
+            Kern '?' (U+0393) + ?' (U+03B9) => -660
+            Kern '?' (U+03A4) + ?' (U+03B9) => -380
+            Kern '?' (U+03A5) + ?' (U+03B9) => -760
+            Kern '?' (U+03AB) + ?' (U+03B9) => -760
+            Kern '?' (U+03B6) + ?' (U+03B9) => -500
+            Kern '?' (U+038E) + ?' (U+03BA) => -760
+            Kern '?' (U+03A5) + ?' (U+03BA) => -760
+            Kern '?' (U+03AB) + ?' (U+03BA) => -760
+            Kern '?' (U+03B6) + ?' (U+03BA) => -500
+            Kern '?' (U+03C0) + ?' (U+03BB) => -760
+            Kern '?' (U+03C6) + ?' (U+03BB) => -260
+            Kern '?' (U+038E) + ?' (U+03BC) => -760
+            Kern '?' (U+03A4) + ?' (U+03BC) => -1520
+            Kern '?' (U+03A5) + ?' (U+03BC) => -760
+            Kern '?' (U+03AB) + ?' (U+03BC) => -760
+            Kern '?' (U+0386) + ?' (U+03BD) => -760
+            Kern '?' (U+0391) + ?' (U+03BD) => -760
+            Kern '?' (U+03A4) + ?' (U+03BD) => -1520
+            Kern '?' (U+03B6) + ?' (U+03BD) => -660
+            Kern '?' (U+039A) + ?' (U+03BE) => -480
+            Kern '?' (U+03BA) + ?' (U+03BE) => -680
+            Kern '?' (U+03BB) + ?' (U+03BE) => -260
+            Kern '?' (U+03BE) + ?' (U+03BE) => -260
+            Kern '?' (U+038E) + ?' (U+03BF) => -1520
+            Kern '?' (U+039A) + ?' (U+03BF) => -480
+            Kern '?' (U+03A4) + ?' (U+03BF) => -1520
+            Kern '?' (U+03A5) + ?' (U+03BF) => -1520
+            Kern '?' (U+03A8) + ?' (U+03BF) => -380
+            Kern '?' (U+03AB) + ?' (U+03BF) => -1520
+            Kern '?' (U+03B6) + ?' (U+03BF) => -1160
+            Kern '?' (U+03BA) + ?' (U+03BF) => -680
+            Kern '?' (U+03BB) + ?' (U+03BF) => -260
+            Kern '?' (U+03BE) + ?' (U+03BF) => -260
+            Kern '?' (U+03C0) + ?' (U+03BF) => -580
+            Kern '?' (U+03C4) + ?' (U+03BF) => -580
+            Kern '?' (U+03C7) + ?' (U+03BF) => -740
+            Kern '?' (U+03A3) + ?' (U+03C0) => -360
+            Kern '?' (U+03B4) + ?' (U+03C0) => -580
+            Kern '?' (U+03B6) + ?' (U+03C0) => -760
+            Kern '?' (U+03BF) + ?' (U+03C0) => -580
+            Kern '?' (U+03C1) + ?' (U+03C0) => -580
+            Kern '?' (U+03C6) + ?' (U+03C0) => -580
+            Kern '?' (U+03C9) + ?' (U+03C0) => -580
+            Kern '?' (U+03CC) + ?' (U+03C0) => -580
+            Kern '?' (U+03CE) + ?' (U+03C0) => -580
+            Kern '?' (U+03BA) + ?' (U+03C2) => -680
+            Kern '?' (U+03BB) + ?' (U+03C2) => -260
+            Kern '?' (U+03BE) + ?' (U+03C2) => -260
+            Kern '?' (U+03C0) + ?' (U+03C2) => -580
+            Kern '?' (U+03C4) + ?' (U+03C2) => -580
+            Kern '?' (U+03C7) + ?' (U+03C2) => -740
+            Kern '?' (U+038E) + ?' (U+03C3) => -1520
+            Kern '?' (U+039A) + ?' (U+03C3) => -480
+            Kern '?' (U+03A4) + ?' (U+03C3) => -1520
+            Kern '?' (U+03A5) + ?' (U+03C3) => -1520
+            Kern '?' (U+03A8) + ?' (U+03C3) => -380
+            Kern '?' (U+03AB) + ?' (U+03C3) => -1520
+            Kern '?' (U+03B6) + ?' (U+03C3) => -1160
+            Kern '?' (U+03BA) + ?' (U+03C3) => -680
+            Kern '?' (U+03BB) + ?' (U+03C3) => -260
+            Kern '?' (U+03BE) + ?' (U+03C3) => -260
+            Kern '?' (U+03C0) + ?' (U+03C3) => -580
+            Kern '?' (U+03C4) + ?' (U+03C3) => -580
+            Kern '?' (U+03C7) + ?' (U+03C3) => -740
+            Kern '?' (U+03A3) + ?' (U+03C4) => -360
+            Kern '?' (U+03B4) + ?' (U+03C4) => -580
+            Kern '?' (U+03B6) + ?' (U+03C4) => -760
+            Kern '?' (U+03BF) + ?' (U+03C4) => -580
+            Kern '?' (U+03C1) + ?' (U+03C4) => -580
+            Kern '?' (U+03C6) + ?' (U+03C4) => -580
+            Kern '?' (U+03C9) + ?' (U+03C4) => -580
+            Kern '?' (U+03CC) + ?' (U+03C4) => -580
+            Kern '?' (U+03CE) + ?' (U+03C4) => -580
+            Kern '?' (U+03A4) + ?' (U+03C5) => -1520
+            Kern '?' (U+03BB) + ?' (U+03C5) => -320
+            Kern '?' (U+038E) + ?' (U+03C6) => -1520
+            Kern '?' (U+039A) + ?' (U+03C6) => -480
+            Kern '?' (U+03A4) + ?' (U+03C6) => -1520
+            Kern '?' (U+03A5) + ?' (U+03C6) => -1520
+            Kern '?' (U+03A8) + ?' (U+03C6) => -380
+            Kern '?' (U+03AB) + ?' (U+03C6) => -1520
+            Kern '?' (U+03B6) + ?' (U+03C6) => -1160
+            Kern '?' (U+03BA) + ?' (U+03C6) => -680
+            Kern '?' (U+03BB) + ?' (U+03C6) => -260
+            Kern '?' (U+03BE) + ?' (U+03C6) => -260
+            Kern '?' (U+03C0) + ?' (U+03C6) => -580
+            Kern '?' (U+03C4) + ?' (U+03C6) => -580
+            Kern '?' (U+03C7) + ?' (U+03C6) => -740
+            Kern '?' (U+0386) + ?' (U+03C7) => -760
+            Kern '?' (U+0391) + ?' (U+03C7) => -760
+            Kern '?' (U+03A4) + ?' (U+03C7) => -1240
+            Kern '?' (U+03B4) + ?' (U+03C7) => -740
+            Kern '?' (U+03BF) + ?' (U+03C7) => -740
+            Kern '?' (U+03C6) + ?' (U+03C7) => -740
+            Kern '?' (U+03C9) + ?' (U+03C7) => -440
+            Kern '?' (U+03CC) + ?' (U+03C7) => -740
+            Kern '?' (U+03CE) + ?' (U+03C7) => -440
+            Kern '?' (U+03A4) + ?' (U+03C8) => -1520
+            Kern '?' (U+039A) + ?' (U+03C9) => -480
+            Kern '?' (U+03A7) + ?' (U+03C9) => -280
+            Kern '?' (U+03A8) + ?' (U+03C9) => -380
+            Kern '?' (U+03B6) + ?' (U+03C9) => -1160
+            Kern '?' (U+03BA) + ?' (U+03C9) => -680
+            Kern '?' (U+03BB) + ?' (U+03C9) => -260
+            Kern '?' (U+03C0) + ?' (U+03C9) => -580
+            Kern '?' (U+03C4) + ?' (U+03C9) => -580
+            Kern '?' (U+03C7) + ?' (U+03C9) => -440
+            Kern '?' (U+038E) + ?' (U+03CA) => 920
+            Kern '?' (U+0393) + ?' (U+03CA) => 940
+            Kern '?' (U+03A4) + ?' (U+03CA) => 920
+            Kern '?' (U+03A5) + ?' (U+03CA) => 920
+            Kern '?' (U+03AB) + ?' (U+03CA) => 920
+            Kern '?' (U+03A4) + ?' (U+03CB) => -1520
+            Kern '?' (U+03BB) + ?' (U+03CB) => -320
+            Kern '?' (U+038E) + ?' (U+03CC) => -1520
+            Kern '?' (U+039A) + ?' (U+03CC) => -480
+            Kern '?' (U+03A4) + ?' (U+03CC) => -1520
+            Kern '?' (U+03A5) + ?' (U+03CC) => -1520
+            Kern '?' (U+03A8) + ?' (U+03CC) => -380
+            Kern '?' (U+03AB) + ?' (U+03CC) => -1520
+            Kern '?' (U+03B6) + ?' (U+03CC) => -1160
+            Kern '?' (U+03BA) + ?' (U+03CC) => -680
+            Kern '?' (U+03BB) + ?' (U+03CC) => -260
+            Kern '?' (U+03BE) + ?' (U+03CC) => -260
+            Kern '?' (U+03C7) + ?' (U+03CC) => -740
+            Kern '?' (U+03A4) + ?' (U+03CD) => -1520
+            Kern '?' (U+03BB) + ?' (U+03CD) => -320
+            Kern '?' (U+039A) + ?' (U+03CE) => -480
+            Kern '?' (U+03A7) + ?' (U+03CE) => -280
+            Kern '?' (U+03A8) + ?' (U+03CE) => -380
+            Kern '?' (U+03B6) + ?' (U+03CE) => -1160
+            Kern '?' (U+03BA) + ?' (U+03CE) => -680
+            Kern '?' (U+03BB) + ?' (U+03CE) => -260
+            Kern '?' (U+03C0) + ?' (U+03CE) => -580
+            Kern '?' (U+03C4) + ?' (U+03CE) => -580
+            Kern '?' (U+03C7) + ?' (U+03CE) => -440
+            Kern '?' (U+201E) + ?' (U+0402) => -2060
+            Kern '?' (U+201E) + ?' (U+040B) => -2060
+            Kern '?' (U+0411) + ?' (U+0410) => -780
+            Kern '?' (U+0412) + ?' (U+0410) => -1020
+            Kern '?' (U+0413) + ?' (U+0410) => -1300
+            Kern '?' (U+041E) + ?' (U+0410) => -520
+            Kern '?' (U+0420) + ?' (U+0410) => -1800
+            Kern '?' (U+0421) + ?' (U+0410) => -520
+            Kern '?' (U+0422) + ?' (U+0410) => -1300
+            Kern '?' (U+0423) + ?' (U+0410) => -1540
+            Kern '?' (U+0424) + ?' (U+0410) => -520
+            Kern '?' (U+042C) + ?' (U+0410) => -520
+            Kern '?' (U+042E) + ?' (U+0410) => -520
+            Kern '?' (U+0410) + ?' (U+0414) => 760
+            Kern '?' (U+0412) + ?' (U+0414) => -280
+            Kern '?' (U+0413) + ?' (U+0414) => -520
+            Kern '?' (U+041E) + ?' (U+0414) => -280
+            Kern '?' (U+0420) + ?' (U+0414) => -1300
+            Kern '?' (U+0421) + ?' (U+0414) => -280
+            Kern '?' (U+0422) + ?' (U+0414) => -520
+            Kern '?' (U+0423) + ?' (U+0414) => -1040
+            Kern '?' (U+0424) + ?' (U+0414) => -1040
+            Kern '?' (U+042C) + ?' (U+0414) => -280
+            Kern '?' (U+042D) + ?' (U+0414) => -520
+            Kern '?' (U+042E) + ?' (U+0414) => -520
+            Kern '?' (U+0411) + ?' (U+0416) => -520
+            Kern '?' (U+0412) + ?' (U+0416) => -780
+            Kern '?' (U+0417) + ?' (U+0416) => -520
+            Kern '?' (U+041E) + ?' (U+0416) => -280
+            Kern '?' (U+0420) + ?' (U+0416) => -280
+            Kern '?' (U+0422) + ?' (U+0416) => 520
+            Kern '?' (U+042C) + ?' (U+0416) => -780
+            Kern '?' (U+042D) + ?' (U+0416) => -520
+            Kern '?' (U+042E) + ?' (U+0416) => -520
+            Kern '?' (U+0411) + ?' (U+0417) => -280
+            Kern '?' (U+0412) + ?' (U+0417) => -280
+            Kern '?' (U+0414) + ?' (U+0417) => 260
+            Kern '?' (U+0416) + ?' (U+0417) => 260
+            Kern '?' (U+041A) + ?' (U+0417) => 760
+            Kern '?' (U+0420) + ?' (U+0417) => -280
+            Kern '?' (U+0421) + ?' (U+0417) => -280
+            Kern '?' (U+0425) + ?' (U+0417) => -280
+            Kern '?' (U+042C) + ?' (U+0417) => -520
+            Kern '?' (U+042D) + ?' (U+0417) => -280
+            Kern '?' (U+0410) + ?' (U+041B) => 260
+            Kern '?' (U+0411) + ?' (U+041B) => -520
+            Kern '?' (U+0412) + ?' (U+041B) => -520
+            Kern '?' (U+0413) + ?' (U+041B) => -520
+            Kern '?' (U+0417) + ?' (U+041B) => -520
+            Kern '?' (U+041E) + ?' (U+041B) => -520
+            Kern '?' (U+0420) + ?' (U+041B) => -1300
+            Kern '?' (U+0421) + ?' (U+041B) => -520
+            Kern '?' (U+0422) + ?' (U+041B) => -520
+            Kern '?' (U+0423) + ?' (U+041B) => -780
+            Kern '?' (U+0424) + ?' (U+041B) => -780
+            Kern '?' (U+042C) + ?' (U+041B) => -780
+            Kern '?' (U+042D) + ?' (U+041B) => -780
+            Kern '?' (U+042E) + ?' (U+041B) => -780
+            Kern '?' (U+0420) + ?' (U+041C) => -280
+            Kern '?' (U+0421) + ?' (U+041C) => -280
+            Kern '?' (U+042C) + ?' (U+041C) => -520
+            Kern '?' (U+0410) + ?' (U+041E) => -280
+            Kern '?' (U+0412) + ?' (U+041E) => -520
+            Kern '?' (U+0413) + ?' (U+041E) => -280
+            Kern '?' (U+0416) + ?' (U+041E) => -280
+            Kern '?' (U+0417) + ?' (U+041E) => -280
+            Kern '?' (U+0420) + ?' (U+041E) => -280
+            Kern '?' (U+0421) + ?' (U+041E) => -520
+            Kern '?' (U+0422) + ?' (U+041E) => -520
+            Kern '?' (U+0423) + ?' (U+041E) => -520
+            Kern '?' (U+0425) + ?' (U+041E) => -540
+            Kern '?' (U+042C) + ?' (U+041E) => -280
+            Kern '?' (U+0410) + ?' (U+041F) => -280
+            Kern '?' (U+0410) + ?' (U+0421) => -520
+            Kern '?' (U+0411) + ?' (U+0421) => -280
+            Kern '?' (U+0412) + ?' (U+0421) => -780
+            Kern '?' (U+0413) + ?' (U+0421) => -280
+            Kern '?' (U+0416) + ?' (U+0421) => -520
+            Kern '?' (U+0417) + ?' (U+0421) => -520
+            Kern '?' (U+041A) + ?' (U+0421) => -280
+            Kern '?' (U+0420) + ?' (U+0421) => -520
+            Kern '?' (U+0425) + ?' (U+0421) => -780
+            Kern '?' (U+042C) + ?' (U+0421) => -520
+            Kern '?' (U+042E) + ?' (U+0421) => -280
+            Kern '?' (U+0410) + ?' (U+0422) => -1020
+            Kern '?' (U+0411) + ?' (U+0422) => -520
+            Kern '?' (U+0412) + ?' (U+0422) => -780
+            Kern '?' (U+0416) + ?' (U+0422) => 520
+            Kern '?' (U+0417) + ?' (U+0422) => -780
+            Kern '?' (U+041A) + ?' (U+0422) => 520
+            Kern '?' (U+0420) + ?' (U+0422) => -280
+            Kern '?' (U+0421) + ?' (U+0422) => -520
+            Kern '?' (U+0424) + ?' (U+0422) => -780
+            Kern '?' (U+042C) + ?' (U+0422) => -2080
+            Kern '?' (U+042E) + ?' (U+0422) => -520
+            Kern '?' (U+201E) + ?' (U+0422) => -1800
+            Kern '?' (U+0410) + ?' (U+0423) => -780
+            Kern '?' (U+0411) + ?' (U+0423) => -520
+            Kern '?' (U+0412) + ?' (U+0423) => -780
+            Kern '?' (U+0414) + ?' (U+0423) => 260
+            Kern '?' (U+0416) + ?' (U+0423) => 520
+            Kern '?' (U+0417) + ?' (U+0423) => -780
+            Kern '?' (U+041A) + ?' (U+0423) => 520
+            Kern '?' (U+041E) + ?' (U+0423) => -520
+            Kern '?' (U+0420) + ?' (U+0423) => -280
+            Kern '?' (U+0421) + ?' (U+0423) => -280
+            Kern '?' (U+0424) + ?' (U+0423) => -780
+            Kern '?' (U+0410) + ?' (U+0424) => -520
+            Kern '?' (U+0411) + ?' (U+0424) => -280
+            Kern '?' (U+0412) + ?' (U+0424) => -520
+            Kern '?' (U+0414) + ?' (U+0424) => -280
+            Kern '?' (U+0417) + ?' (U+0424) => -520
+            Kern '?' (U+041A) + ?' (U+0424) => -280
+            Kern '?' (U+0420) + ?' (U+0424) => -280
+            Kern '?' (U+0422) + ?' (U+0424) => -780
+            Kern '?' (U+0423) + ?' (U+0424) => -780
+            Kern '?' (U+0424) + ?' (U+0424) => -280
+            Kern '?' (U+0425) + ?' (U+0424) => -780
+            Kern '?' (U+042D) + ?' (U+0424) => -280
+            Kern '?' (U+0411) + ?' (U+0425) => -520
+            Kern '?' (U+0412) + ?' (U+0425) => -780
+            Kern '?' (U+041E) + ?' (U+0425) => -780
+            Kern '?' (U+0420) + ?' (U+0425) => -780
+            Kern '?' (U+0421) + ?' (U+0425) => -780
+            Kern '?' (U+042C) + ?' (U+0425) => -1040
+            Kern '?' (U+042D) + ?' (U+0425) => -520
+            Kern '?' (U+042E) + ?' (U+0425) => -780
+            Kern '?' (U+0410) + ?' (U+0427) => -1560
+            Kern '?' (U+0411) + ?' (U+0427) => -780
+            Kern '?' (U+0412) + ?' (U+0427) => -780
+            Kern '?' (U+0414) + ?' (U+0427) => -280
+            Kern '?' (U+0416) + ?' (U+0427) => 260
+            Kern '?' (U+0417) + ?' (U+0427) => -780
+            Kern '?' (U+041A) + ?' (U+0427) => 520
+            Kern '?' (U+0421) + ?' (U+0427) => -520
+            Kern '?' (U+0424) + ?' (U+0427) => -280
+            Kern '?' (U+042C) + ?' (U+0427) => -1540
+            Kern '?' (U+042E) + ?' (U+0427) => -280
+            Kern '?' (U+201E) + ?' (U+0427) => -2080
+            Kern '?' (U+0411) + ?' (U+042A) => -780
+            Kern '?' (U+0412) + ?' (U+042A) => -1020
+            Kern '?' (U+0416) + ?' (U+042A) => 760
+            Kern '?' (U+0421) + ?' (U+042A) => -280
+            Kern '?' (U+201E) + ?' (U+042A) => -1800
+            Kern '?' (U+0410) + ?' (U+042D) => -520
+            Kern '?' (U+0411) + ?' (U+042D) => -520
+            Kern '?' (U+041A) + ?' (U+042D) => 260
+            Kern '?' (U+0421) + ?' (U+042D) => -280
+            Kern '?' (U+0423) + ?' (U+042D) => -280
+            Kern '?' (U+0425) + ?' (U+042D) => -520
+            Kern '?' (U+042C) + ?' (U+042D) => -780
+            Kern '?' (U+0411) + ?' (U+042F) => -520
+            Kern '?' (U+0412) + ?' (U+042F) => -520
+            Kern '?' (U+0417) + ?' (U+042F) => -520
+            Kern '?' (U+041E) + ?' (U+042F) => -280
+            Kern '?' (U+0420) + ?' (U+042F) => -520
+            Kern '?' (U+0422) + ?' (U+042F) => -280
+            Kern '?' (U+0423) + ?' (U+042F) => -520
+            Kern '?' (U+0424) + ?' (U+042F) => -540
+            Kern '?' (U+042A) + ?' (U+042F) => -780
+            Kern '?' (U+042C) + ?' (U+042F) => -780
+            Kern '?' (U+042D) + ?' (U+042F) => -520
+            Kern '?' (U+0410) + ?' (U+0430) => 260
+            Kern '?' (U+0413) + ?' (U+0430) => -280
+            Kern '?' (U+0416) + ?' (U+0430) => 260
+            Kern '?' (U+041A) + ?' (U+0430) => 260
+            Kern '?' (U+041B) + ?' (U+0430) => 520
+            Kern '?' (U+041C) + ?' (U+0430) => 260
+            Kern '?' (U+0420) + ?' (U+0430) => -280
+            Kern '?' (U+0421) + ?' (U+0430) => 260
+            Kern '?' (U+0422) + ?' (U+0430) => -520
+            Kern '?' (U+0426) + ?' (U+0430) => 760
+            Kern '?' (U+0429) + ?' (U+0430) => 260
+            Kern '?' (U+0432) + ?' (U+0430) => -280
+            Kern '?' (U+0436) + ?' (U+0430) => 260
+            Kern '?' (U+0437) + ?' (U+0430) => -280
+            Kern '?' (U+043C) + ?' (U+0430) => -280
+            Kern '?' (U+0441) + ?' (U+0430) => 260
+            Kern '?' (U+0443) + ?' (U+0430) => -280
+            Kern '?' (U+0446) + ?' (U+0430) => 260
+            Kern '?' (U+0449) + ?' (U+0430) => 260
+            Kern '?' (U+0410) + ?' (U+0431) => -280
+            Kern '?' (U+0421) + ?' (U+0431) => -280
+            Kern '?' (U+0423) + ?' (U+0431) => -520
+            Kern '?' (U+0432) + ?' (U+0431) => -280
+            Kern '?' (U+0435) + ?' (U+0431) => -280
+            Kern '?' (U+0437) + ?' (U+0431) => -520
+            Kern '?' (U+043B) + ?' (U+0431) => -280
+            Kern '?' (U+043C) + ?' (U+0431) => -280
+            Kern '?' (U+0441) + ?' (U+0431) => -280
+            Kern '?' (U+0444) + ?' (U+0431) => -280
+            Kern '?' (U+0445) + ?' (U+0431) => -280
+            Kern '?' (U+044D) + ?' (U+0431) => -280
+            Kern '?' (U+044E) + ?' (U+0431) => -280
+            Kern '?' (U+0413) + ?' (U+0432) => -520
+            Kern '?' (U+0422) + ?' (U+0432) => -780
+            Kern '?' (U+0423) + ?' (U+0432) => -780
+            Kern '?' (U+0423) + ?' (U+0433) => -780
+            Kern '?' (U+0413) + ?' (U+0434) => -780
+            Kern '?' (U+041E) + ?' (U+0434) => -520
+            Kern '?' (U+0420) + ?' (U+0434) => -1300
+            Kern '?' (U+0423) + ?' (U+0434) => -1300
+            Kern '?' (U+042D) + ?' (U+0434) => -280
+            Kern '?' (U+042E) + ?' (U+0434) => -520
+            Kern '?' (U+0431) + ?' (U+0434) => -520
+            Kern '?' (U+0433) + ?' (U+0434) => -780
+            Kern '?' (U+043E) + ?' (U+0434) => -280
+            Kern '?' (U+0440) + ?' (U+0434) => -520
+            Kern '?' (U+0442) + ?' (U+0434) => -280
+            Kern '?' (U+0443) + ?' (U+0434) => -520
+            Kern '?' (U+0444) + ?' (U+0434) => -280
+            Kern '?' (U+044D) + ?' (U+0434) => -280
+            Kern '?' (U+044E) + ?' (U+0434) => -280
+            Kern '?' (U+0413) + ?' (U+0435) => -1040
+            Kern '?' (U+0414) + ?' (U+0435) => 260
+            Kern '?' (U+0420) + ?' (U+0435) => -520
+            Kern '?' (U+0422) + ?' (U+0435) => -1020
+            Kern '?' (U+0423) + ?' (U+0435) => -1300
+            Kern '?' (U+0426) + ?' (U+0435) => 260
+            Kern '?' (U+0432) + ?' (U+0435) => -280
+            Kern '?' (U+0436) + ?' (U+0435) => -280
+            Kern '?' (U+0437) + ?' (U+0435) => -280
+            Kern '?' (U+043B) + ?' (U+0435) => -280
+            Kern '?' (U+0443) + ?' (U+0435) => -280
+            Kern '?' (U+0444) + ?' (U+0435) => -280
+            Kern '?' (U+0445) + ?' (U+0435) => -520
+            Kern '?' (U+0421) + ?' (U+0436) => 260
+            Kern '?' (U+0423) + ?' (U+0436) => -280
+            Kern '?' (U+042D) + ?' (U+0436) => 260
+            Kern '?' (U+042E) + ?' (U+0436) => 260
+            Kern '?' (U+0431) + ?' (U+0436) => -280
+            Kern '?' (U+0432) + ?' (U+0436) => -280
+            Kern '?' (U+0435) + ?' (U+0436) => -280
+            Kern '?' (U+0437) + ?' (U+0436) => -280
+            Kern '?' (U+043E) + ?' (U+0436) => -280
+            Kern '?' (U+0440) + ?' (U+0436) => -280
+            Kern '?' (U+0442) + ?' (U+0436) => 260
+            Kern '?' (U+0443) + ?' (U+0436) => 260
+            Kern '?' (U+044D) + ?' (U+0436) => -280
+            Kern '?' (U+044E) + ?' (U+0436) => -280
+            Kern '?' (U+0414) + ?' (U+0437) => 520
+            Kern '?' (U+041A) + ?' (U+0437) => 260
+            Kern '?' (U+0423) + ?' (U+0437) => -1020
+            Kern '?' (U+0430) + ?' (U+0437) => 260
+            Kern '?' (U+0431) + ?' (U+0437) => -280
+            Kern '?' (U+0434) + ?' (U+0437) => 260
+            Kern '?' (U+0436) + ?' (U+0437) => 260
+            Kern '?' (U+0437) + ?' (U+0437) => -280
+            Kern '?' (U+043C) + ?' (U+0437) => -280
+            Kern '?' (U+043E) + ?' (U+0437) => -280
+            Kern '?' (U+0440) + ?' (U+0437) => -280
+            Kern '?' (U+0443) + ?' (U+0437) => -280
+            Kern '?' (U+0445) + ?' (U+0437) => -280
+            Kern '?' (U+0446) + ?' (U+0437) => 260
+            Kern '?' (U+044D) + ?' (U+0437) => -280
+            Kern '?' (U+0413) + ?' (U+0438) => -520
+            Kern '?' (U+0422) + ?' (U+0438) => -780
+            Kern '?' (U+0423) + ?' (U+0438) => -780
+            Kern '?' (U+0423) + ?' (U+0439) => -780
+            Kern '?' (U+0422) + ?' (U+043A) => -780
+            Kern '?' (U+0423) + ?' (U+043A) => -780
+            Kern '?' (U+0413) + ?' (U+043B) => -1020
+            Kern '?' (U+041E) + ?' (U+043B) => -280
+            Kern '?' (U+0422) + ?' (U+043B) => -1300
+            Kern '?' (U+0423) + ?' (U+043B) => -1300
+            Kern '?' (U+0424) + ?' (U+043B) => -520
+            Kern '?' (U+042D) + ?' (U+043B) => -520
+            Kern '?' (U+042E) + ?' (U+043B) => -520
+            Kern '?' (U+0431) + ?' (U+043B) => -520
+            Kern '?' (U+0432) + ?' (U+043B) => -280
+            Kern '?' (U+0433) + ?' (U+043B) => -520
+            Kern '?' (U+0437) + ?' (U+043B) => -280
+            Kern '?' (U+043A) + ?' (U+043B) => 260
+            Kern '?' (U+043E) + ?' (U+043B) => -520
+            Kern '?' (U+0440) + ?' (U+043B) => -520
+            Kern '?' (U+0442) + ?' (U+043B) => -280
+            Kern '?' (U+0443) + ?' (U+043B) => -280
+            Kern '?' (U+0444) + ?' (U+043B) => -520
+            Kern '?' (U+044D) + ?' (U+043B) => -520
+            Kern '?' (U+044E) + ?' (U+043B) => -520
+            Kern '?' (U+0413) + ?' (U+043C) => -780
+            Kern '?' (U+0422) + ?' (U+043C) => -1040
+            Kern '?' (U+0423) + ?' (U+043C) => -1020
+            Kern '?' (U+0431) + ?' (U+043C) => -280
+            Kern '?' (U+0432) + ?' (U+043C) => -280
+            Kern '?' (U+0435) + ?' (U+043C) => -280
+            Kern '?' (U+0437) + ?' (U+043C) => -520
+            Kern '?' (U+043E) + ?' (U+043C) => -280
+            Kern '?' (U+0440) + ?' (U+043C) => -280
+            Kern '?' (U+0443) + ?' (U+043C) => -280
+            Kern '?' (U+0444) + ?' (U+043C) => -280
+            Kern '?' (U+044D) + ?' (U+043C) => -280
+            Kern '?' (U+044E) + ?' (U+043C) => -280
+            Kern '?' (U+0413) + ?' (U+043D) => -520
+            Kern '?' (U+0423) + ?' (U+043D) => -780
+            Kern '?' (U+0413) + ?' (U+043E) => -1020
+            Kern '?' (U+0414) + ?' (U+043E) => 260
+            Kern '?' (U+0416) + ?' (U+043E) => -280
+            Kern '?' (U+0420) + ?' (U+043E) => -520
+            Kern '?' (U+0422) + ?' (U+043E) => -1300
+            Kern '?' (U+0423) + ?' (U+043E) => -1300
+            Kern '?' (U+0425) + ?' (U+043E) => -280
+            Kern '?' (U+0426) + ?' (U+043E) => 260
+            Kern '?' (U+0432) + ?' (U+043E) => -280
+            Kern '?' (U+0433) + ?' (U+043E) => -280
+            Kern '?' (U+0436) + ?' (U+043E) => -520
+            Kern '?' (U+0437) + ?' (U+043E) => -520
+            Kern '?' (U+043A) + ?' (U+043E) => -280
+            Kern '?' (U+043B) + ?' (U+043E) => -280
+            Kern '?' (U+043C) + ?' (U+043E) => -280
+            Kern '?' (U+0442) + ?' (U+043E) => -280
+            Kern '?' (U+0443) + ?' (U+043E) => -520
+            Kern '?' (U+0444) + ?' (U+043E) => -280
+            Kern '?' (U+0445) + ?' (U+043E) => -520
+            Kern '?' (U+0449) + ?' (U+043E) => -280
+            Kern '?' (U+0422) + ?' (U+043F) => -280
+            Kern '?' (U+0423) + ?' (U+043F) => -780
+            Kern '?' (U+0413) + ?' (U+0440) => -780
+            Kern '?' (U+0422) + ?' (U+0440) => -780
+            Kern '?' (U+0423) + ?' (U+0440) => -780
+            Kern '?' (U+0443) + ?' (U+0440) => -280
+            Kern '?' (U+0410) + ?' (U+0441) => -280
+            Kern '?' (U+041A) + ?' (U+0441) => -280
+            Kern '?' (U+041C) + ?' (U+0441) => -280
+            Kern '?' (U+0421) + ?' (U+0441) => -280
+            Kern '?' (U+0422) + ?' (U+0441) => -1300
+            Kern '?' (U+0423) + ?' (U+0441) => -1300
+            Kern '?' (U+0431) + ?' (U+0441) => -280
+            Kern '?' (U+0432) + ?' (U+0441) => -520
+            Kern '?' (U+0433) + ?' (U+0441) => -280
+            Kern '?' (U+0434) + ?' (U+0441) => -280
+            Kern '?' (U+0435) + ?' (U+0441) => -280
+            Kern '?' (U+0436) + ?' (U+0441) => -280
+            Kern '?' (U+0437) + ?' (U+0441) => -520
+            Kern '?' (U+043A) + ?' (U+0441) => -280
+            Kern '?' (U+043B) + ?' (U+0441) => -280
+            Kern '?' (U+043C) + ?' (U+0441) => -280
+            Kern '?' (U+043E) + ?' (U+0441) => -280
+            Kern '?' (U+0442) + ?' (U+0441) => -280
+            Kern '?' (U+0443) + ?' (U+0441) => -520
+            Kern '?' (U+0445) + ?' (U+0441) => -520
+            Kern '?' (U+0446) + ?' (U+0441) => -280
+            Kern '?' (U+044D) + ?' (U+0441) => -280
+            Kern '?' (U+044E) + ?' (U+0441) => -280
+            Kern '?' (U+0410) + ?' (U+0442) => -280
+            Kern '?' (U+0412) + ?' (U+0442) => -280
+            Kern '?' (U+0432) + ?' (U+0442) => -280
+            Kern '?' (U+0435) + ?' (U+0442) => -280
+            Kern '?' (U+043E) + ?' (U+0442) => -520
+            Kern '?' (U+0440) + ?' (U+0442) => -280
+            Kern '?' (U+0443) + ?' (U+0442) => 260
+            Kern '?' (U+0444) + ?' (U+0442) => -280
+            Kern '?' (U+044C) + ?' (U+0442) => -1800
+            Kern '?' (U+044D) + ?' (U+0442) => -280
+            Kern '?' (U+044E) + ?' (U+0442) => -520
+            Kern '?' (U+0411) + ?' (U+0443) => -280
+            Kern '?' (U+0413) + ?' (U+0443) => -780
+            Kern '?' (U+0414) + ?' (U+0443) => 260
+            Kern '?' (U+0422) + ?' (U+0443) => -780
+            Kern '?' (U+0425) + ?' (U+0443) => -280
+            Kern '?' (U+0431) + ?' (U+0443) => -280
+            Kern '?' (U+0432) + ?' (U+0443) => -520
+            Kern '?' (U+0434) + ?' (U+0443) => 260
+            Kern '?' (U+0435) + ?' (U+0443) => -280
+            Kern '?' (U+0437) + ?' (U+0443) => -520
+            Kern '?' (U+043B) + ?' (U+0443) => -280
+            Kern '?' (U+043C) + ?' (U+0443) => -280
+            Kern '?' (U+043E) + ?' (U+0443) => -280
+            Kern '?' (U+0440) + ?' (U+0443) => -280
+            Kern '?' (U+0442) + ?' (U+0443) => 520
+            Kern '?' (U+0444) + ?' (U+0443) => -280
+            Kern '?' (U+0445) + ?' (U+0443) => 260
+            Kern '?' (U+0421) + ?' (U+0444) => -280
+            Kern '?' (U+0432) + ?' (U+0444) => -280
+            Kern '?' (U+0437) + ?' (U+0444) => -280
+            Kern '?' (U+043A) + ?' (U+0444) => -280
+            Kern '?' (U+043C) + ?' (U+0444) => -280
+            Kern '?' (U+0443) + ?' (U+0444) => -280
+            Kern '?' (U+0445) + ?' (U+0444) => -280
+            Kern '?' (U+0412) + ?' (U+0445) => -280
+            Kern '?' (U+0422) + ?' (U+0445) => -780
+            Kern '?' (U+0423) + ?' (U+0445) => -520
+            Kern '?' (U+0431) + ?' (U+0445) => -520
+            Kern '?' (U+0435) + ?' (U+0445) => -280
+            Kern '?' (U+043E) + ?' (U+0445) => -520
+            Kern '?' (U+0440) + ?' (U+0445) => -280
+            Kern '?' (U+0441) + ?' (U+0445) => -280
+            Kern '?' (U+0443) + ?' (U+0445) => 260
+            Kern '?' (U+044D) + ?' (U+0445) => -280
+            Kern '?' (U+044E) + ?' (U+0445) => -520
+            Kern '?' (U+0423) + ?' (U+0446) => -780
+            Kern '?' (U+0412) + ?' (U+0447) => -780
+            Kern '?' (U+041C) + ?' (U+0447) => -280
+            Kern '?' (U+0421) + ?' (U+0447) => -280
+            Kern '?' (U+0430) + ?' (U+0447) => -520
+            Kern '?' (U+0431) + ?' (U+0447) => -520
+            Kern '?' (U+0432) + ?' (U+0447) => -780
+            Kern '?' (U+0435) + ?' (U+0447) => -520
+            Kern '?' (U+0436) + ?' (U+0447) => -520
+            Kern '?' (U+0437) + ?' (U+0447) => -780
+            Kern '?' (U+043A) + ?' (U+0447) => -280
+            Kern '?' (U+043B) + ?' (U+0447) => -520
+            Kern '?' (U+043E) + ?' (U+0447) => -520
+            Kern '?' (U+0440) + ?' (U+0447) => -520
+            Kern '?' (U+0441) + ?' (U+0447) => -540
+            Kern '?' (U+0444) + ?' (U+0447) => -520
+            Kern '?' (U+0445) + ?' (U+0447) => -520
+            Kern '?' (U+044C) + ?' (U+0447) => -1800
+            Kern '?' (U+044E) + ?' (U+0447) => -780
+            Kern '?' (U+0423) + ?' (U+0448) => -780
+            Kern '?' (U+0422) + ?' (U+0449) => -280
+            Kern '?' (U+0423) + ?' (U+0449) => -780
+            Kern '?' (U+0431) + ?' (U+044A) => -280
+            Kern '?' (U+0432) + ?' (U+044A) => -520
+            Kern '?' (U+0434) + ?' (U+044A) => -280
+            Kern '?' (U+0437) + ?' (U+044A) => -520
+            Kern '?' (U+0441) + ?' (U+044A) => -280
+            Kern '?' (U+0413) + ?' (U+044B) => -780
+            Kern '?' (U+0422) + ?' (U+044B) => -280
+            Kern '?' (U+0413) + ?' (U+044C) => -780
+            Kern '?' (U+0422) + ?' (U+044C) => -280
+            Kern '?' (U+0410) + ?' (U+044D) => 260
+            Kern '?' (U+0431) + ?' (U+044D) => -280
+            Kern '?' (U+043A) + ?' (U+044D) => -280
+            Kern '?' (U+043C) + ?' (U+044D) => -280
+            Kern '?' (U+043E) + ?' (U+044D) => -280
+            Kern '?' (U+0440) + ?' (U+044D) => -280
+            Kern '?' (U+0443) + ?' (U+044D) => -280
+            Kern '?' (U+0445) + ?' (U+044D) => -280
+            Kern '?' (U+044E) + ?' (U+044D) => -280
+            Kern '?' (U+0413) + ?' (U+044E) => -780
+            Kern '?' (U+0422) + ?' (U+044E) => -280
+            Kern '?' (U+0423) + ?' (U+044E) => -780
+            Kern '?' (U+0413) + ?' (U+044F) => -780
+            Kern '?' (U+0420) + ?' (U+044F) => -280
+            Kern '?' (U+0422) + ?' (U+044F) => -520
+            Kern '?' (U+0423) + ?' (U+044F) => -1020
+            Kern '?' (U+0431) + ?' (U+044F) => -280
+            Kern '?' (U+0432) + ?' (U+044F) => -280
+            Kern '?' (U+043E) + ?' (U+044F) => -280
+            Kern '?' (U+0440) + ?' (U+044F) => -280
+            Kern '?' (U+0443) + ?' (U+044F) => -280
+            Kern '?' (U+0444) + ?' (U+044F) => -280
+            Kern '?' (U+044D) + ?' (U+044F) => -280
+            Kern '?' (U+2018) + ?' (U+2018) => -760
+            Kern 'A' (U+0041) + ?' (U+2019) => -1140
+            Kern 'L' (U+004C) + ?' (U+2019) => -1140
+            Kern 'f' (U+0066) + ?' (U+2019) => 380
+            Kern 'r' (U+0072) + ?' (U+2019) => 760
+            Kern '?' (U+0391) + ?' (U+2019) => -1140
+            Kern '?' (U+0409) + ?' (U+2019) => -2060
+            Kern '?' (U+040A) + ?' (U+2019) => -2060
+            Kern '?' (U+0410) + ?' (U+2019) => -1040
+            Kern '?' (U+042A) + ?' (U+2019) => -2060
+            Kern '?' (U+042C) + ?' (U+2019) => -1540
+            Kern '?' (U+2019) + ?' (U+2019) => -760
+        }
+    }
+}

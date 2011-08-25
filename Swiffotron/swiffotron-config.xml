@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:config xmlns:con="urn:swiffotron-schemas:swiffotron-config/24/05/2011"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <con:store name="file" assembly="Swiffotron, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null" classname="SWFProcessing.Swiffotron.IO.FileStore" />
+    <con:cache name="ht" assembly="Swiffotron, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null" classname="SWFProcessing.Swiffotron.IO.HTCache" />
+
+    <con:swfprefs>
+        <con:storeWriteEnabled>false</con:storeWriteEnabled>
+        <con:stricttaglength>false</con:stricttaglength>
+        <con:compression>true</con:compression>
+        <con:debugcode>false</con:debugcode>
+    </con:swfprefs>
+
+</con:config>

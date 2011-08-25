@@ -1,0 +1,327 @@
+SWF stage=550,400, fps=24, bg=#FFFFFF
+Document class:mn QName "MainTimeline"; ns Package "one_red_circle_swiffotron"; set *
+{
+    Character '__cid##1'
+    {
+        Bounds: [Rect -0.5,-0.5->49,49]
+        Original format: DefineShape4
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=255, R=153, G=0, B=0]]
+            Line#1: [line cap Round-Round, Round join, width=20,  miterlim=,  NoHScale=False,  NoVScale=False,  HasPixelHints=False,  colour=Color [A=255, R=0, G=0, B=0]]
+            [style change move=485,0 fill0/1=,[Solid: Colour=Color [A=255, R=153, G=0, B=0]] line=1]
+            C201,0:142,142 C142,142:0,201 C0,201:-142,142 C-142,142:-201,0 C-201,0:-142,-142 C-142,-142:0,-201 C0,-201:142,-142
+            C142,-142:201,0
+        }
+    }
+    Character '__cid##2'
+    {
+        Class name:mn QName "RedCircle"; ns Package ""; set *
+        Frame# 1
+        {
+            PlaceObject char=[Shape DefineShape4:78 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##3'
+    {
+        Class name:mn QName "RedCircleMain"; ns Package "com.swiffotron"; set *
+        Frame# 1
+        {
+            PlaceObject char=[sprite '__cid##2', mn QName "RedCircle"; ns Package ""; set *], layer=[layer], name=redcircle_mc, ratio=none, matrix=[t:213,136.95, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Frame# 1
+    {
+        PlaceObject char=[sprite '__cid##3', mn QName "RedCircleMain"; ns Package "com.swiffotron"; set *], layer=[layer], name=red, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    DoABC (Lazy init)
+    {
+        Constants:
+        int #0	0
+        uint #0	0
+        double #0	0
+        string #0	"_@ny~Name#"
+        string #1	"x"
+        string #2	""
+        string #3	"Event"
+        string #4	"flash.events"
+        string #5	"ENTER_FRAME"
+        string #6	"moveit"
+        string #7	"addEventListener"
+        string #8	"RedCircleMain"
+        string #9	"com.swiffotron"
+        string #10	"Object"
+        string #11	"EventDispatcher"
+        string #12	"DisplayObject"
+        string #13	"flash.display"
+        string #14	"InteractiveObject"
+        string #15	"DisplayObjectContainer"
+        string #16	"Sprite"
+        string #17	"MovieClip"
+        string #18	"RedCircle"
+        string #19	"MainTimeline"
+        string #20	"one_red_circle_swiffotron"
+        string #21	"com.swiffotron:RedCircleMain"
+        string #22	"redcircle_mc"
+        string #23	"one_red_circle_swiffotron:MainTimeline"
+        string #24	"red"
+        ns #0	ns Ns "*"
+        ns #1	ns Package ""
+        ns #2	ns Package "flash.events"
+        ns #3	ns PackageInternal ""
+        ns #4	ns Package "com.swiffotron"
+        ns #5	ns Package "flash.display"
+        ns #6	ns Package "one_red_circle_swiffotron"
+        ns #7	ns Protected "RedCircle"
+        ns #8	ns Protected "com.swiffotron:RedCircleMain"
+        ns #9	ns Protected "one_red_circle_swiffotron:MainTimeline"
+        ns set #0	(0 items)
+        ns set #1	(1 items)
+            - ns Package "com.swiffotron"
+        ns set #2	(1 items)
+            - ns Package ""
+        multiname #0	mn Multiname "*"; ns *; set {}
+        multiname #1	mn QName "x"; ns Package ""; set *
+        multiname #2	mn QName "Event"; ns Package "flash.events"; set *
+        multiname #3	mn QName "ENTER_FRAME"; ns Package ""; set *
+        multiname #4	mn QName "moveit"; ns PackageInternal ""; set *
+        multiname #5	mn QName "addEventListener"; ns Package ""; set *
+        multiname #6	mn Multiname "RedCircleMain"; ns *; set {ns Package "com.swiffotron"}
+        multiname #7	mn QName "Object"; ns Package ""; set *
+        multiname #8	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #9	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #10	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #11	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #12	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #13	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #14	mn QName "RedCircleMain"; ns Package "com.swiffotron"; set *
+        multiname #15	mn Multiname "RedCircle"; ns *; set {ns Package ""}
+        multiname #16	mn QName "RedCircle"; ns Package ""; set *
+        multiname #17	mn QName "MainTimeline"; ns Package "one_red_circle_swiffotron"; set *
+        multiname #18	mn QName "redcircle_mc"; ns Package ""; set *
+        multiname #19	mn QName "red"; ns Package ""; set *
+        Metadata:
+        End of metadata.
+        protected package ns Protected "RedCircle"
+        {
+            class mn QName "RedCircle"; ns Package ""; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "RedCircle"; ns Package ""; set * () : Void
+                {
+                    [MaxStack:3, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 GetLocal0()
+                    #6 GetLex(mn QName "Event"; ns Package "flash.events"; set *)
+                    #7 GetProperty(mn QName "ENTER_FRAME"; ns Package ""; set *)
+                    #8 GetLex(mn QName "moveit"; ns PackageInternal ""; set *)
+                    #9 CallPropVoid(mn QName "addEventListener"; ns Package ""; set *, 2)
+                    #10 ReturnVoid()
+                }
+
+
+
+                [mn QName "moveit"; ns PackageInternal ""; set *,Method] function (anon *) (mn QName "Event"; ns Package "flash.events"; set * param1) : Void
+                {
+                    [MaxStack:3, LocalCount:2, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 GetLocal0()
+                    #5 GetProperty(mn QName "x"; ns Package ""; set *)
+                    #6 Decrement()
+                    #7 SetProperty(mn QName "x"; ns Package ""; set *)
+                    #8 ReturnVoid()
+                }
+            }
+        }
+        protected package ns Protected "com.swiffotron:RedCircleMain"
+        {
+            class mn QName "RedCircleMain"; ns Package "com.swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "RedCircleMain"; ns Package "com.swiffotron"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "redcircle_mc"; ns Package ""; set *,Slot] property type : [mn QName "RedCircle"; ns Package ""; set *], val: ConUndefined
+            }
+        }
+        protected package ns Protected "one_red_circle_swiffotron:MainTimeline"
+        {
+            class mn QName "MainTimeline"; ns Package "one_red_circle_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "MainTimeline"; ns Package "one_red_circle_swiffotron"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+
+
+
+                [mn QName "red"; ns Package ""; set *,Slot] property type : [mn QName "RedCircleMain"; ns Package "com.swiffotron"; set *], val: ConUndefined
+            }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "RedCircleMain"; ns *; set {ns Package "com.swiffotron"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "RedCircleMain"; ns Package "com.swiffotron"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "RedCircleMain"; ns Package "com.swiffotron"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "RedCircleMain"; ns Package "com.swiffotron"; set *,Class] script class trait : mn QName "RedCircleMain"; ns Package "com.swiffotron"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "RedCircle"; ns *; set {ns Package ""})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "RedCircle"; ns Package ""; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "RedCircle"; ns Package ""; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "RedCircle"; ns Package ""; set *,Class] script class trait : mn QName "RedCircle"; ns Package ""; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "one_red_circle_swiffotron"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "one_red_circle_swiffotron"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "MainTimeline"; ns Package "one_red_circle_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "one_red_circle_swiffotron"; set *
+        }
+    }
+}

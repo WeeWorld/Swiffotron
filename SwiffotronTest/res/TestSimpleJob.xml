@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--
+    A simple job. An empty SWF with a red background.
+  -->
+
+  <swf width="200" height="300" bgcolor="#ff0000" id="simple">
+    
+    <swfout store="store://store/TestSimpleJob.swf" />
+    
+  </swf>
+
+</swiffotron>

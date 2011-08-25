@@ -1,0 +1,4 @@
+SWF stage=200,300, fps=12, bg=#FF0000
+{
+    Frame# 1 ;
+}

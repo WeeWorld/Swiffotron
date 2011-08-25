@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <!--
+    Input:
+    
+    A UFO, piloted by a monocular martian. This is dangerous on two counts:
+    
+     - One-eyed martians have no depth perception, and are not legally safe
+       to pilot inter-planetary light-speed vehicles.
+     - It's dangerous to pilot such vehicles un-aided. All inter-planetary
+       travel should be carried out with a minimum of 2 vehicles in convoy
+       since chance recovery in the universal expanse of space is unlikely.
+       
+    Output:
+    
+    A minimal convoy of two interplanetary craft, both safely manned by
+    pilots with full depth perception.
+    
+  -->
+
+  <swf base="store://store/monocular-ufo-pilot.swf" id="convoy">
+
+    <swfout store="store://store/TestUFO.swf" />
+
+    <modify qname="ufo_mc.cockpit_mc.alien_mc.alienhead_mc.lefteye_mc">
+      <!-- First, move the eye over a bit to make room for another eye. -->
+      <moveRel x="-16" y="0"/>
+    </modify>
+
+    <!-- Copy the eye to a new eye, just to the right -->
+    <instance type="instance"
+              src="ufo_mc.cockpit_mc.alien_mc.alienhead_mc.lefteye_mc"
+              id="ufo_mc.cockpit_mc.alien_mc.alienhead_mc.righteye_mc"
+              relativeTo="ufo_mc.cockpit_mc.alien_mc.alienhead_mc.lefteye_mc" x="32"/>
+
+    <modify qname="ufo_mc">
+      <!-- Re-position the UFO at a jaunty angle to the right of the stage, depicting
+        his new-found agility made possible with the confidence that comes with a
+        full perception of distance. -->
+      <moveAbs x="96" y="69" rotate="20" scalex="0.7" scaley="0.7"/>
+    </modify>
+    
+    <!-- Now add in a companion UFO at an opposite, dynamic jaunty angle, depicting
+      movement in a safe, free-flowing convoy of interplanetary craft. -->
+    <instance type="instance"
+              src="ufo_mc"
+              id="companion_mc"
+              x="35" y="58" rotate="-10" scalex="0.4" scaley="0.4" />
+
+  </swf>
+
+</swiffotron>

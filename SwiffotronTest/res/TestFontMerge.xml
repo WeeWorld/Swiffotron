@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <swf id="font_merge">
+
+    <swfout store="store://store/TestFontMerge.swf" />
+
+    <instance id="fonts_one" type="extern" src="store://store/fontmerge.Fonts1.swf" class="com.ww.fonts_one"/>
+    <instance id="fonts_two" type="extern" src="store://store/fontmerge.Fonts2.swf" class="com.ww.fonts_two" x="10" y="10"/>
+
+  </swf>
+
+</swiffotron>

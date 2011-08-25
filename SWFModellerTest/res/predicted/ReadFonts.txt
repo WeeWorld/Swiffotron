@@ -1,0 +1,1739 @@
+SWF stage=550,400, fps=24, bg=#FFFFFF
+{
+    Character '__cid##2'
+    {
+        EditText: '<p align="left"><font face="Book Antiqua" size="23" color="#ff0000" letterSpacing="0.000000" kerning="1"><b>This is some text in Book Antiqua.</b></font></p>'
+        Font: 'Book Antiqua'
+        FontHeight: '460'
+    }
+    Character '__cid##4'
+    {
+        EditText: '<p align="left"><font face="Copperplate Gothic Bold" size="23" color="#ff0000" letterSpacing="0.000000" kerning="1">This is some text in Copperplate Gothic, Bold</font></p>'
+        Font: 'Copperplate Gothic Bold'
+        FontHeight: '460'
+    }
+    Frame# 1
+    {
+        PlaceObject char=[EditText '<p align="left"><font face="Book Antiqua" size="23" color="#ff0000" letterSpacing="0.000000" kerning="1"><b>This is some text in Book Antiqua.</b></font></p>'], layer=[layer], name=none, ratio=none, matrix=[t:123,96.2, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[EditText '<p align="left"><font face="Copperplate Gothic Bold" size="23" color="#ff0000" letterSpacing="0.000000" kerning="1">This is some text in Copperplate Gothic, Bold</font></p>'], layer=[layer], name=none, ratio=none, matrix=[t:286.95,100.75, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+    }
+    Fonts
+    {
+        Font: 'Book Antiqua'
+        {
+            Bold: True, Italic: False, Small: False
+            Language: Latin
+            Ascent: 18920
+            Descent: 5440
+            Leading: 3880
+            114 glyphs:
+            Glyph #1 ' ' (U+0020): [Shape DefineFont3:2 bytes]
+            Glyph #2 '!' (U+0021): [Shape DefineFont3:109 bytes]
+            Glyph #3 '"' (U+0022): [Shape DefineFont3:126 bytes]
+            Glyph #4 '#' (U+0023): [Shape DefineFont3:115 bytes]
+            Glyph #5 '$' (U+0024): [Shape DefineFont3:271 bytes]
+            Glyph #6 '%' (U+0025): [Shape DefineFont3:317 bytes]
+            Glyph #7 '&' (U+0026): [Shape DefineFont3:348 bytes]
+            Glyph #8 ''' (U+0027): [Shape DefineFont3:64 bytes]
+            Glyph #9 '(' (U+0028): [Shape DefineFont3:99 bytes]
+            Glyph #10 ')' (U+0029): [Shape DefineFont3:97 bytes]
+            Glyph #11 '*' (U+002A): [Shape DefineFont3:125 bytes]
+            Glyph #12 '+' (U+002B): [Shape DefineFont3:39 bytes]
+            Glyph #13 ',' (U+002C): [Shape DefineFont3:49 bytes]
+            Glyph #14 '-' (U+002D): [Shape DefineFont3:55 bytes]
+            Glyph #15 '.' (U+002E): [Shape DefineFont3:58 bytes]
+            Glyph #16 '/' (U+002F): [Shape DefineFont3:71 bytes]
+            Glyph #17 '0' (U+0030): [Shape DefineFont3:159 bytes]
+            Glyph #18 '1' (U+0031): [Shape DefineFont3:147 bytes]
+            Glyph #19 '2' (U+0032): [Shape DefineFont3:156 bytes]
+            Glyph #20 '3' (U+0033): [Shape DefineFont3:221 bytes]
+            Glyph #21 '4' (U+0034): [Shape DefineFont3:192 bytes]
+            Glyph #22 '5' (U+0035): [Shape DefineFont3:197 bytes]
+            Glyph #23 '6' (U+0036): [Shape DefineFont3:184 bytes]
+            Glyph #24 '7' (U+0037): [Shape DefineFont3:126 bytes]
+            Glyph #25 '8' (U+0038): [Shape DefineFont3:238 bytes]
+            Glyph #26 '9' (U+0039): [Shape DefineFont3:183 bytes]
+            Glyph #27 ':' (U+003A): [Shape DefineFont3:115 bytes]
+            Glyph #28 ';' (U+003B): [Shape DefineFont3:105 bytes]
+            Glyph #29 '<' (U+003C): [Shape DefineFont3:33 bytes]
+            Glyph #30 '=' (U+003D): [Shape DefineFont3:34 bytes]
+            Glyph #31 '>' (U+003E): [Shape DefineFont3:33 bytes]
+            Glyph #32 '?' (U+003F): [Shape DefineFont3:201 bytes]
+            Glyph #33 '@' (U+0040): [Shape DefineFont3:370 bytes]
+            Glyph #34 'A' (U+0041): [Shape DefineFont3:179 bytes]
+            Glyph #35 'B' (U+0042): [Shape DefineFont3:269 bytes]
+            Glyph #36 'C' (U+0043): [Shape DefineFont3:167 bytes]
+            Glyph #37 'D' (U+0044): [Shape DefineFont3:183 bytes]
+            Glyph #38 'E' (U+0045): [Shape DefineFont3:243 bytes]
+            Glyph #39 'F' (U+0046): [Shape DefineFont3:246 bytes]
+            Glyph #40 'G' (U+0047): [Shape DefineFont3:189 bytes]
+            Glyph #41 'H' (U+0048): [Shape DefineFont3:296 bytes]
+            Glyph #42 'I' (U+0049): [Shape DefineFont3:137 bytes]
+            Glyph #43 'J' (U+004A): [Shape DefineFont3:157 bytes]
+            Glyph #44 'K' (U+004B): [Shape DefineFont3:285 bytes]
+            Glyph #45 'L' (U+004C): [Shape DefineFont3:150 bytes]
+            Glyph #46 'M' (U+004D): [Shape DefineFont3:272 bytes]
+            Glyph #47 'N' (U+004E): [Shape DefineFont3:244 bytes]
+            Glyph #48 'O' (U+004F): [Shape DefineFont3:157 bytes]
+            Glyph #49 'P' (U+0050): [Shape DefineFont3:232 bytes]
+            Glyph #50 'Q' (U+0051): [Shape DefineFont3:262 bytes]
+            Glyph #51 'R' (U+0052): [Shape DefineFont3:248 bytes]
+            Glyph #52 'S' (U+0053): [Shape DefineFont3:241 bytes]
+            Glyph #53 'T' (U+0054): [Shape DefineFont3:191 bytes]
+            Glyph #54 'U' (U+0055): [Shape DefineFont3:236 bytes]
+            Glyph #55 'V' (U+0056): [Shape DefineFont3:145 bytes]
+            Glyph #56 'W' (U+0057): [Shape DefineFont3:182 bytes]
+            Glyph #57 'X' (U+0058): [Shape DefineFont3:193 bytes]
+            Glyph #58 'Y' (U+0059): [Shape DefineFont3:172 bytes]
+            Glyph #59 'Z' (U+005A): [Shape DefineFont3:148 bytes]
+            Glyph #60 '[' (U+005B): [Shape DefineFont3:114 bytes]
+            Glyph #61 '\' (U+005C): [Shape DefineFont3:78 bytes]
+            Glyph #62 ']' (U+005D): [Shape DefineFont3:113 bytes]
+            Glyph #63 '^' (U+005E): [Shape DefineFont3:33 bytes]
+            Glyph #64 '_' (U+005F): [Shape DefineFont3:17 bytes]
+            Glyph #65 '`' (U+0060): [Shape DefineFont3:54 bytes]
+            Glyph #66 'a' (U+0061): [Shape DefineFont3:218 bytes]
+            Glyph #67 'b' (U+0062): [Shape DefineFont3:232 bytes]
+            Glyph #68 'c' (U+0063): [Shape DefineFont3:164 bytes]
+            Glyph #69 'd' (U+0064): [Shape DefineFont3:235 bytes]
+            Glyph #70 'e' (U+0065): [Shape DefineFont3:181 bytes]
+            Glyph #71 'f' (U+0066): [Shape DefineFont3:203 bytes]
+            Glyph #72 'g' (U+0067): [Shape DefineFont3:338 bytes]
+            Glyph #73 'h' (U+0068): [Shape DefineFont3:246 bytes]
+            Glyph #74 'i' (U+0069): [Shape DefineFont3:169 bytes]
+            Glyph #75 'j' (U+006A): [Shape DefineFont3:183 bytes]
+            Glyph #76 'k' (U+006B): [Shape DefineFont3:231 bytes]
+            Glyph #77 'l' (U+006C): [Shape DefineFont3:125 bytes]
+            Glyph #78 'm' (U+006D): [Shape DefineFont3:357 bytes]
+            Glyph #79 'n' (U+006E): [Shape DefineFont3:247 bytes]
+            Glyph #80 'o' (U+006F): [Shape DefineFont3:127 bytes]
+            Glyph #81 'p' (U+0070): [Shape DefineFont3:248 bytes]
+            Glyph #82 'q' (U+0071): [Shape DefineFont3:235 bytes]
+            Glyph #83 'r' (U+0072): [Shape DefineFont3:188 bytes]
+            Glyph #84 's' (U+0073): [Shape DefineFont3:208 bytes]
+            Glyph #85 't' (U+0074): [Shape DefineFont3:169 bytes]
+            Glyph #86 'u' (U+0075): [Shape DefineFont3:229 bytes]
+            Glyph #87 'v' (U+0076): [Shape DefineFont3:140 bytes]
+            Glyph #88 'w' (U+0077): [Shape DefineFont3:187 bytes]
+            Glyph #89 'x' (U+0078): [Shape DefineFont3:173 bytes]
+            Glyph #90 'y' (U+0079): [Shape DefineFont3:197 bytes]
+            Glyph #91 'z' (U+007A): [Shape DefineFont3:142 bytes]
+            Glyph #92 '{' (U+007B): [Shape DefineFont3:142 bytes]
+            Glyph #93 '|' (U+007C): [Shape DefineFont3:18 bytes]
+            Glyph #94 '}' (U+007D): [Shape DefineFont3:137 bytes]
+            Glyph #95 '~' (U+007E): [Shape DefineFont3:104 bytes]
+            Glyph #96 '?' (U+02C6): [Shape DefineFont3:31 bytes]
+            Glyph #97 '?' (U+02DC): [Shape DefineFont3:83 bytes]
+            Glyph #98 '?' (U+2013): [Shape DefineFont3:57 bytes]
+            Glyph #99 '?' (U+2014): [Shape DefineFont3:59 bytes]
+            Glyph #100 '?' (U+2018): [Shape DefineFont3:50 bytes]
+            Glyph #101 '?' (U+2019): [Shape DefineFont3:50 bytes]
+            Glyph #102 '?' (U+201A): [Shape DefineFont3:46 bytes]
+            Glyph #103 '?' (U+201C): [Shape DefineFont3:90 bytes]
+            Glyph #104 '?' (U+201D): [Shape DefineFont3:90 bytes]
+            Glyph #105 '?' (U+201E): [Shape DefineFont3:83 bytes]
+            Glyph #106 '?' (U+2020): [Shape DefineFont3:162 bytes]
+            Glyph #107 '?' (U+2021): [Shape DefineFont3:231 bytes]
+            Glyph #108 '?' (U+2022): [Shape DefineFont3:63 bytes]
+            Glyph #109 '?' (U+2026): [Shape DefineFont3:171 bytes]
+            Glyph #110 '?' (U+2030): [Shape DefineFont3:444 bytes]
+            Glyph #111 '?' (U+2039): [Shape DefineFont3:42 bytes]
+            Glyph #112 '?' (U+203A): [Shape DefineFont3:41 bytes]
+            Glyph #113 '?' (U+20AC): [Shape DefineFont3:205 bytes]
+            Glyph #114 '?' (U+2122): [Shape DefineFont3:242 bytes]
+
+            Font has extra name info...
+            FullName: Book Antiqua Bold
+            Copyright: Digitized data copyright The Monotype Corporation 1991-1995. All rights reserved. Book Antiqua? is a trademark of The Monotype Corporation which may be registered in certain jurisdictions.
+
+            Font has layout info...
+            Layout #1 ' ' (U+0020): [Adv: 5120, Bounds: [Rect 0,0->0,0]]
+            Layout #2 '!' (U+0021): [Adv: 5700, Bounds: [Rect 0,0->0,0]]
+            Layout #3 '"' (U+0022): [Adv: 8240, Bounds: [Rect 0,0->0,0]]
+            Layout #4 '#' (U+0023): [Adv: 12420, Bounds: [Rect 0,0->0,0]]
+            Layout #5 '$' (U+0024): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #6 '%' (U+0025): [Adv: 18220, Bounds: [Rect 0,0->0,0]]
+            Layout #7 '&' (U+0026): [Adv: 17060, Bounds: [Rect 0,0->0,0]]
+            Layout #8 ''' (U+0027): [Adv: 4660, Bounds: [Rect 0,0->0,0]]
+            Layout #9 '(' (U+0028): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #10 ')' (U+0029): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #11 '*' (U+002A): [Adv: 9100, Bounds: [Rect 0,0->0,0]]
+            Layout #12 '+' (U+002B): [Adv: 12420, Bounds: [Rect 0,0->0,0]]
+            Layout #13 ',' (U+002C): [Adv: 5120, Bounds: [Rect 0,0->0,0]]
+            Layout #14 '-' (U+002D): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #15 '.' (U+002E): [Adv: 5120, Bounds: [Rect 0,0->0,0]]
+            Layout #16 '/' (U+002F): [Adv: 6060, Bounds: [Rect 0,0->0,0]]
+            Layout #17 '0' (U+0030): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #18 '1' (U+0031): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #19 '2' (U+0032): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #20 '3' (U+0033): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #21 '4' (U+0034): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #22 '5' (U+0035): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #23 '6' (U+0036): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #24 '7' (U+0037): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #25 '8' (U+0038): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #26 '9' (U+0039): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #27 ':' (U+003A): [Adv: 5120, Bounds: [Rect 0,0->0,0]]
+            Layout #28 ';' (U+003B): [Adv: 5120, Bounds: [Rect 0,0->0,0]]
+            Layout #29 '<' (U+003C): [Adv: 12420, Bounds: [Rect 0,0->0,0]]
+            Layout #30 '=' (U+003D): [Adv: 12420, Bounds: [Rect 0,0->0,0]]
+            Layout #31 '>' (U+003E): [Adv: 12420, Bounds: [Rect 0,0->0,0]]
+            Layout #32 '?' (U+003F): [Adv: 9100, Bounds: [Rect 0,0->0,0]]
+            Layout #33 '@' (U+0040): [Adv: 15300, Bounds: [Rect 0,0->0,0]]
+            Layout #34 'A' (U+0041): [Adv: 15940, Bounds: [Rect 0,0->0,0]]
+            Layout #35 'B' (U+0042): [Adv: 13660, Bounds: [Rect 0,0->0,0]]
+            Layout #36 'C' (U+0043): [Adv: 14800, Bounds: [Rect 0,0->0,0]]
+            Layout #37 'D' (U+0044): [Adv: 17060, Bounds: [Rect 0,0->0,0]]
+            Layout #38 'E' (U+0045): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #39 'F' (U+0046): [Adv: 11400, Bounds: [Rect 0,0->0,0]]
+            Layout #40 'G' (U+0047): [Adv: 17060, Bounds: [Rect 0,0->0,0]]
+            Layout #41 'H' (U+0048): [Adv: 17060, Bounds: [Rect 0,0->0,0]]
+            Layout #42 'I' (U+0049): [Adv: 7980, Bounds: [Rect 0,0->0,0]]
+            Layout #43 'J' (U+004A): [Adv: 7980, Bounds: [Rect 0,0->0,0]]
+            Layout #44 'K' (U+004B): [Adv: 15940, Bounds: [Rect 0,0->0,0]]
+            Layout #45 'L' (U+004C): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #46 'M' (U+004D): [Adv: 20480, Bounds: [Rect 0,0->0,0]]
+            Layout #47 'N' (U+004E): [Adv: 17060, Bounds: [Rect 0,0->0,0]]
+            Layout #48 'O' (U+004F): [Adv: 17060, Bounds: [Rect 0,0->0,0]]
+            Layout #49 'P' (U+0050): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #50 'Q' (U+0051): [Adv: 17060, Bounds: [Rect 0,0->0,0]]
+            Layout #51 'R' (U+0052): [Adv: 14800, Bounds: [Rect 0,0->0,0]]
+            Layout #52 'S' (U+0053): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #53 'T' (U+0054): [Adv: 13660, Bounds: [Rect 0,0->0,0]]
+            Layout #54 'U' (U+0055): [Adv: 15940, Bounds: [Rect 0,0->0,0]]
+            Layout #55 'V' (U+0056): [Adv: 15940, Bounds: [Rect 0,0->0,0]]
+            Layout #56 'W' (U+0057): [Adv: 20480, Bounds: [Rect 0,0->0,0]]
+            Layout #57 'X' (U+0058): [Adv: 13660, Bounds: [Rect 0,0->0,0]]
+            Layout #58 'Y' (U+0059): [Adv: 13660, Bounds: [Rect 0,0->0,0]]
+            Layout #59 'Z' (U+005A): [Adv: 13660, Bounds: [Rect 0,0->0,0]]
+            Layout #60 '[' (U+005B): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #61 '\' (U+005C): [Adv: 12420, Bounds: [Rect 0,0->0,0]]
+            Layout #62 ']' (U+005D): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #63 '^' (U+005E): [Adv: 12420, Bounds: [Rect 0,0->0,0]]
+            Layout #64 '_' (U+005F): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #65 '`' (U+0060): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #66 'a' (U+0061): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #67 'b' (U+0062): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #68 'c' (U+0063): [Adv: 9100, Bounds: [Rect 0,0->0,0]]
+            Layout #69 'd' (U+0064): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #70 'e' (U+0065): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #71 'f' (U+0066): [Adv: 7980, Bounds: [Rect 0,0->0,0]]
+            Layout #72 'g' (U+0067): [Adv: 11400, Bounds: [Rect 0,0->0,0]]
+            Layout #73 'h' (U+0068): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #74 'i' (U+0069): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #75 'j' (U+006A): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #76 'k' (U+006B): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #77 'l' (U+006C): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #78 'm' (U+006D): [Adv: 18220, Bounds: [Rect 0,0->0,0]]
+            Layout #79 'n' (U+006E): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #80 'o' (U+006F): [Adv: 11400, Bounds: [Rect 0,0->0,0]]
+            Layout #81 'p' (U+0070): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #82 'q' (U+0071): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #83 'r' (U+0072): [Adv: 7980, Bounds: [Rect 0,0->0,0]]
+            Layout #84 's' (U+0073): [Adv: 9100, Bounds: [Rect 0,0->0,0]]
+            Layout #85 't' (U+0074): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #86 'u' (U+0075): [Adv: 12520, Bounds: [Rect 0,0->0,0]]
+            Layout #87 'v' (U+0076): [Adv: 11400, Bounds: [Rect 0,0->0,0]]
+            Layout #88 'w' (U+0077): [Adv: 17060, Bounds: [Rect 0,0->0,0]]
+            Layout #89 'x' (U+0078): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #90 'y' (U+0079): [Adv: 11400, Bounds: [Rect 0,0->0,0]]
+            Layout #91 'z' (U+007A): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #92 '{' (U+007B): [Adv: 6360, Bounds: [Rect 0,0->0,0]]
+            Layout #93 '|' (U+007C): [Adv: 12420, Bounds: [Rect 0,0->0,0]]
+            Layout #94 '}' (U+007D): [Adv: 6360, Bounds: [Rect 0,0->0,0]]
+            Layout #95 '~' (U+007E): [Adv: 12420, Bounds: [Rect 0,0->0,0]]
+            Layout #96 '?' (U+02C6): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #97 '?' (U+02DC): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #98 '?' (U+2013): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #99 '?' (U+2014): [Adv: 20480, Bounds: [Rect 0,0->0,0]]
+            Layout #100 '?' (U+2018): [Adv: 5700, Bounds: [Rect 0,0->0,0]]
+            Layout #101 '?' (U+2019): [Adv: 5700, Bounds: [Rect 0,0->0,0]]
+            Layout #102 '?' (U+201A): [Adv: 6820, Bounds: [Rect 0,0->0,0]]
+            Layout #103 '?' (U+201C): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #104 '?' (U+201D): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #105 '?' (U+201E): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #106 '?' (U+2020): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #107 '?' (U+2021): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #108 '?' (U+2022): [Adv: 12420, Bounds: [Rect 0,0->0,0]]
+            Layout #109 '?' (U+2026): [Adv: 20480, Bounds: [Rect 0,0->0,0]]
+            Layout #110 '?' (U+2030): [Adv: 20480, Bounds: [Rect 0,0->0,0]]
+            Layout #111 '?' (U+2039): [Adv: 7980, Bounds: [Rect 0,0->0,0]]
+            Layout #112 '?' (U+203A): [Adv: 7980, Bounds: [Rect 0,0->0,0]]
+            Layout #113 '?' (U+20AC): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #114 '?' (U+2122): [Adv: 20440, Bounds: [Rect 0,0->0,0]]
+
+            Font has pixel alignment info...
+            Thickness hint: Medium
+            PixelAlignment #1 ' ' (U+0020): [HasX: False, HasY: False, {zones (AlignCoord: 0, Range: 0)(AlignCoord: 0, Range: 0)}]
+            PixelAlignment #2 '!' (U+0021): [HasX: True, HasY: True, {zones (AlignCoord: 13874, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #3 '"' (U+0022): [HasX: True, HasY: True, {zones (AlignCoord: 13281, Range: 0)(AlignCoord: 15046, Range: 17091)}]
+            PixelAlignment #4 '#' (U+0023): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 16327)}]
+            PixelAlignment #5 '$' (U+0024): [HasX: True, HasY: True, {zones (AlignCoord: 15226, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #6 '%' (U+0025): [HasX: True, HasY: True, {zones (AlignCoord: 15322, Range: 0)(AlignCoord: 16924, Range: 17074)}]
+            PixelAlignment #7 '&' (U+0026): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #8 ''' (U+0027): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #9 '(' (U+0028): [HasX: True, HasY: True, {zones (AlignCoord: 13945, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #10 ')' (U+0029): [HasX: True, HasY: True, {zones (AlignCoord: 14305, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #11 '*' (U+002A): [HasX: True, HasY: True, {zones (AlignCoord: 15198, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #12 '+' (U+002B): [HasX: True, HasY: True, {zones (AlignCoord: 15889, Range: 0)(AlignCoord: 0, Range: 16144)}]
+            PixelAlignment #13 ',' (U+002C): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #14 '-' (U+002D): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 15962)}]
+            PixelAlignment #15 '.' (U+002E): [HasX: True, HasY: True, {zones (AlignCoord: 13065, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #16 '/' (U+002F): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #17 '0' (U+0030): [HasX: True, HasY: True, {zones (AlignCoord: 12261, Range: 0)(AlignCoord: 16011, Range: 17074)}]
+            PixelAlignment #18 '1' (U+0031): [HasX: True, HasY: True, {zones (AlignCoord: 15115, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #19 '2' (U+0032): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #20 '3' (U+0033): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #21 '4' (U+0034): [HasX: True, HasY: True, {zones (AlignCoord: 15889, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #22 '5' (U+0035): [HasX: True, HasY: True, {zones (AlignCoord: 13905, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #23 '6' (U+0036): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #24 '7' (U+0037): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #25 '8' (U+0038): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #26 '9' (U+0039): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #27 ':' (U+003A): [HasX: True, HasY: True, {zones (AlignCoord: 13070, Range: 0)(AlignCoord: 0, Range: 16322)}]
+            PixelAlignment #28 ';' (U+003B): [HasX: True, HasY: True, {zones (AlignCoord: 13898, Range: 0)(AlignCoord: 0, Range: 16321)}]
+            PixelAlignment #29 '<' (U+003C): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #30 '=' (U+003D): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 16333)}]
+            PixelAlignment #31 '>' (U+003E): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #32 '?' (U+003F): [HasX: True, HasY: True, {zones (AlignCoord: 14935, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #33 '@' (U+0040): [HasX: True, HasY: True, {zones (AlignCoord: 16252, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #34 'A' (U+0041): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #35 'B' (U+0042): [HasX: True, HasY: True, {zones (AlignCoord: 14309, Range: 0)(AlignCoord: 16002, Range: 17074)}]
+            PixelAlignment #36 'C' (U+0043): [HasX: True, HasY: True, {zones (AlignCoord: 12941, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #37 'D' (U+0044): [HasX: True, HasY: True, {zones (AlignCoord: 14310, Range: 0)(AlignCoord: 16917, Range: 17074)}]
+            PixelAlignment #38 'E' (U+0045): [HasX: True, HasY: True, {zones (AlignCoord: 14308, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #39 'F' (U+0046): [HasX: True, HasY: True, {zones (AlignCoord: 14305, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #40 'G' (U+0047): [HasX: True, HasY: True, {zones (AlignCoord: 16997, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #41 'H' (U+0048): [HasX: True, HasY: True, {zones (AlignCoord: 14330, Range: 0)(AlignCoord: 16269, Range: 17074)}]
+            PixelAlignment #42 'I' (U+0049): [HasX: True, HasY: True, {zones (AlignCoord: 14849, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #43 'J' (U+004A): [HasX: True, HasY: True, {zones (AlignCoord: 14848, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #44 'K' (U+004B): [HasX: True, HasY: True, {zones (AlignCoord: 14849, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #45 'L' (U+004C): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #46 'M' (U+004D): [HasX: True, HasY: True, {zones (AlignCoord: 14280, Range: 0)(AlignCoord: 17025, Range: 17074)}]
+            PixelAlignment #47 'N' (U+004E): [HasX: True, HasY: True, {zones (AlignCoord: 14293, Range: 0)(AlignCoord: 16931, Range: 17074)}]
+            PixelAlignment #48 'O' (U+004F): [HasX: True, HasY: True, {zones (AlignCoord: 12972, Range: 0)(AlignCoord: 16998, Range: 17074)}]
+            PixelAlignment #49 'P' (U+0050): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #50 'Q' (U+0051): [HasX: True, HasY: True, {zones (AlignCoord: 12917, Range: 0)(AlignCoord: 16998, Range: 17074)}]
+            PixelAlignment #51 'R' (U+0052): [HasX: True, HasY: True, {zones (AlignCoord: 14252, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #52 'S' (U+0053): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #53 'T' (U+0054): [HasX: True, HasY: True, {zones (AlignCoord: 15891, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #54 'U' (U+0055): [HasX: True, HasY: True, {zones (AlignCoord: 14207, Range: 0)(AlignCoord: 16901, Range: 17074)}]
+            PixelAlignment #55 'V' (U+0056): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #56 'W' (U+0057): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #57 'X' (U+0058): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #58 'Y' (U+0059): [HasX: True, HasY: True, {zones (AlignCoord: 15936, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #59 'Z' (U+005A): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #60 '[' (U+005B): [HasX: True, HasY: True, {zones (AlignCoord: 13985, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #61 '\' (U+005C): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #62 ']' (U+005D): [HasX: True, HasY: True, {zones (AlignCoord: 14880, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #63 '^' (U+005E): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17078)}]
+            PixelAlignment #64 '_' (U+005F): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 13918)}]
+            PixelAlignment #65 '`' (U+0060): [HasX: True, HasY: True, {zones (AlignCoord: 13086, Range: 0)(AlignCoord: 0, Range: 17078)}]
+            PixelAlignment #66 'a' (U+0061): [HasX: True, HasY: True, {zones (AlignCoord: 15961, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #67 'b' (U+0062): [HasX: True, HasY: True, {zones (AlignCoord: 14159, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #68 'c' (U+0063): [HasX: True, HasY: True, {zones (AlignCoord: 12138, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #69 'd' (U+0064): [HasX: True, HasY: True, {zones (AlignCoord: 16169, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #70 'e' (U+0065): [HasX: True, HasY: True, {zones (AlignCoord: 12942, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #71 'f' (U+0066): [HasX: True, HasY: True, {zones (AlignCoord: 14039, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #72 'g' (U+0067): [HasX: True, HasY: True, {zones (AlignCoord: 13149, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #73 'h' (U+0068): [HasX: True, HasY: True, {zones (AlignCoord: 14091, Range: 0)(AlignCoord: 15975, Range: 16300)}]
+            PixelAlignment #74 'i' (U+0069): [HasX: True, HasY: True, {zones (AlignCoord: 14209, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #75 'j' (U+006A): [HasX: True, HasY: True, {zones (AlignCoord: 14150, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #76 'k' (U+006B): [HasX: True, HasY: True, {zones (AlignCoord: 14111, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #77 'l' (U+006C): [HasX: True, HasY: True, {zones (AlignCoord: 14181, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #78 'm' (U+006D): [HasX: True, HasY: True, {zones (AlignCoord: 14114, Range: 0)(AlignCoord: 15955, Range: 16300)}]
+            PixelAlignment #79 'n' (U+006E): [HasX: True, HasY: True, {zones (AlignCoord: 14117, Range: 0)(AlignCoord: 15979, Range: 16300)}]
+            PixelAlignment #80 'o' (U+006F): [HasX: True, HasY: True, {zones (AlignCoord: 12947, Range: 0)(AlignCoord: 16055, Range: 16300)}]
+            PixelAlignment #81 'p' (U+0070): [HasX: True, HasY: True, {zones (AlignCoord: 14126, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #82 'q' (U+0071): [HasX: True, HasY: True, {zones (AlignCoord: 16144, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #83 'r' (U+0072): [HasX: True, HasY: True, {zones (AlignCoord: 14004, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #84 's' (U+0073): [HasX: True, HasY: True, {zones (AlignCoord: 14181, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #85 't' (U+0074): [HasX: True, HasY: True, {zones (AlignCoord: 13923, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #86 'u' (U+0075): [HasX: True, HasY: True, {zones (AlignCoord: 14074, Range: 0)(AlignCoord: 15964, Range: 16300)}]
+            PixelAlignment #87 'v' (U+0076): [HasX: True, HasY: True, {zones (AlignCoord: 14181, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #88 'w' (U+0077): [HasX: True, HasY: True, {zones (AlignCoord: 14181, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #89 'x' (U+0078): [HasX: True, HasY: True, {zones (AlignCoord: 14181, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #90 'y' (U+0079): [HasX: True, HasY: True, {zones (AlignCoord: 14181, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #91 'z' (U+007A): [HasX: True, HasY: True, {zones (AlignCoord: 14181, Range: 0)(AlignCoord: 0, Range: 16300)}]
+            PixelAlignment #92 '{' (U+007B): [HasX: True, HasY: True, {zones (AlignCoord: 14096, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #93 '|' (U+007C): [HasX: True, HasY: True, {zones (AlignCoord: 15884, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #94 '}' (U+007D): [HasX: True, HasY: True, {zones (AlignCoord: 14149, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #95 '~' (U+007E): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 16212)}]
+            PixelAlignment #96 '?' (U+02C6): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #97 '?' (U+02DC): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #98 '?' (U+2013): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #99 '?' (U+2014): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #100 '?' (U+2018): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #101 '?' (U+2019): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #102 '?' (U+201A): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #103 '?' (U+201C): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #104 '?' (U+201D): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #105 '?' (U+201E): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #106 '?' (U+2020): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #107 '?' (U+2021): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #108 '?' (U+2022): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #109 '?' (U+2026): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #110 '?' (U+2030): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #111 '?' (U+2039): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #112 '?' (U+203A): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #113 '?' (U+20AC): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+            PixelAlignment #114 '?' (U+2122): [HasX: True, HasY: True, {zones (AlignCoord: 14302, Range: 0)(AlignCoord: 0, Range: 17074)}]
+        }
+        Font: 'Copperplate Gothic Bold'
+        {
+            Bold: False, Italic: False, Small: False
+            Language: Latin
+            Ascent: 18140
+            Descent: 4660
+            Leading: 2320
+            114 glyphs:
+            Glyph #1 ' ' (U+0020): [Shape DefineFont3:2 bytes]
+            Glyph #2 '!' (U+0021): [Shape DefineFont3:144 bytes]
+            Glyph #3 '"' (U+0022): [Shape DefineFont3:173 bytes]
+            Glyph #4 '#' (U+0023): [Shape DefineFont3:364 bytes]
+            Glyph #5 '$' (U+0024): [Shape DefineFont3:358 bytes]
+            Glyph #6 '%' (U+0025): [Shape DefineFont3:314 bytes]
+            Glyph #7 '&' (U+0026): [Shape DefineFont3:294 bytes]
+            Glyph #8 ''' (U+0027): [Shape DefineFont3:87 bytes]
+            Glyph #9 '(' (U+0028): [Shape DefineFont3:73 bytes]
+            Glyph #10 ')' (U+0029): [Shape DefineFont3:72 bytes]
+            Glyph #11 '*' (U+002A): [Shape DefineFont3:198 bytes]
+            Glyph #12 '+' (U+002B): [Shape DefineFont3:149 bytes]
+            Glyph #13 ',' (U+002C): [Shape DefineFont3:74 bytes]
+            Glyph #14 '-' (U+002D): [Shape DefineFont3:73 bytes]
+            Glyph #15 '.' (U+002E): [Shape DefineFont3:58 bytes]
+            Glyph #16 '/' (U+002F): [Shape DefineFont3:81 bytes]
+            Glyph #17 '0' (U+0030): [Shape DefineFont3:152 bytes]
+            Glyph #18 '1' (U+0031): [Shape DefineFont3:118 bytes]
+            Glyph #19 '2' (U+0032): [Shape DefineFont3:218 bytes]
+            Glyph #20 '3' (U+0033): [Shape DefineFont3:243 bytes]
+            Glyph #21 '4' (U+0034): [Shape DefineFont3:150 bytes]
+            Glyph #22 '5' (U+0035): [Shape DefineFont3:218 bytes]
+            Glyph #23 '6' (U+0036): [Shape DefineFont3:234 bytes]
+            Glyph #24 '7' (U+0037): [Shape DefineFont3:101 bytes]
+            Glyph #25 '8' (U+0038): [Shape DefineFont3:223 bytes]
+            Glyph #26 '9' (U+0039): [Shape DefineFont3:233 bytes]
+            Glyph #27 ':' (U+003A): [Shape DefineFont3:115 bytes]
+            Glyph #28 ';' (U+003B): [Shape DefineFont3:130 bytes]
+            Glyph #29 '<' (U+003C): [Shape DefineFont3:33 bytes]
+            Glyph #30 '=' (U+003D): [Shape DefineFont3:144 bytes]
+            Glyph #31 '>' (U+003E): [Shape DefineFont3:33 bytes]
+            Glyph #32 '?' (U+003F): [Shape DefineFont3:223 bytes]
+            Glyph #33 '@' (U+0040): [Shape DefineFont3:339 bytes]
+            Glyph #34 'A' (U+0041): [Shape DefineFont3:138 bytes]
+            Glyph #35 'B' (U+0042): [Shape DefineFont3:177 bytes]
+            Glyph #36 'C' (U+0043): [Shape DefineFont3:193 bytes]
+            Glyph #37 'D' (U+0044): [Shape DefineFont3:133 bytes]
+            Glyph #38 'E' (U+0045): [Shape DefineFont3:150 bytes]
+            Glyph #39 'F' (U+0046): [Shape DefineFont3:131 bytes]
+            Glyph #40 'G' (U+0047): [Shape DefineFont3:216 bytes]
+            Glyph #41 'H' (U+0048): [Shape DefineFont3:151 bytes]
+            Glyph #42 'I' (U+0049): [Shape DefineFont3:74 bytes]
+            Glyph #43 'J' (U+004A): [Shape DefineFont3:140 bytes]
+            Glyph #44 'K' (U+004B): [Shape DefineFont3:164 bytes]
+            Glyph #45 'L' (U+004C): [Shape DefineFont3:93 bytes]
+            Glyph #46 'M' (U+004D): [Shape DefineFont3:158 bytes]
+            Glyph #47 'N' (U+004E): [Shape DefineFont3:148 bytes]
+            Glyph #48 'O' (U+004F): [Shape DefineFont3:141 bytes]
+            Glyph #49 'P' (U+0050): [Shape DefineFont3:158 bytes]
+            Glyph #50 'Q' (U+0051): [Shape DefineFont3:221 bytes]
+            Glyph #51 'R' (U+0052): [Shape DefineFont3:186 bytes]
+            Glyph #52 'S' (U+0053): [Shape DefineFont3:273 bytes]
+            Glyph #53 'T' (U+0054): [Shape DefineFont3:112 bytes]
+            Glyph #54 'U' (U+0055): [Shape DefineFont3:156 bytes]
+            Glyph #55 'V' (U+0056): [Shape DefineFont3:120 bytes]
+            Glyph #56 'W' (U+0057): [Shape DefineFont3:202 bytes]
+            Glyph #57 'X' (U+0058): [Shape DefineFont3:171 bytes]
+            Glyph #58 'Y' (U+0059): [Shape DefineFont3:128 bytes]
+            Glyph #59 'Z' (U+005A): [Shape DefineFont3:93 bytes]
+            Glyph #60 '[' (U+005B): [Shape DefineFont3:113 bytes]
+            Glyph #61 '\' (U+005C): [Shape DefineFont3:81 bytes]
+            Glyph #62 ']' (U+005D): [Shape DefineFont3:113 bytes]
+            Glyph #63 '^' (U+005E): [Shape DefineFont3:33 bytes]
+            Glyph #64 '_' (U+005F): [Shape DefineFont3:17 bytes]
+            Glyph #65 '`' (U+0060): [Shape DefineFont3:70 bytes]
+            Glyph #66 'a' (U+0061): [Shape DefineFont3:136 bytes]
+            Glyph #67 'b' (U+0062): [Shape DefineFont3:162 bytes]
+            Glyph #68 'c' (U+0063): [Shape DefineFont3:182 bytes]
+            Glyph #69 'd' (U+0064): [Shape DefineFont3:131 bytes]
+            Glyph #70 'e' (U+0065): [Shape DefineFont3:150 bytes]
+            Glyph #71 'f' (U+0066): [Shape DefineFont3:131 bytes]
+            Glyph #72 'g' (U+0067): [Shape DefineFont3:198 bytes]
+            Glyph #73 'h' (U+0068): [Shape DefineFont3:150 bytes]
+            Glyph #74 'i' (U+0069): [Shape DefineFont3:75 bytes]
+            Glyph #75 'j' (U+006A): [Shape DefineFont3:122 bytes]
+            Glyph #76 'k' (U+006B): [Shape DefineFont3:164 bytes]
+            Glyph #77 'l' (U+006C): [Shape DefineFont3:92 bytes]
+            Glyph #78 'm' (U+006D): [Shape DefineFont3:158 bytes]
+            Glyph #79 'n' (U+006E): [Shape DefineFont3:153 bytes]
+            Glyph #80 'o' (U+006F): [Shape DefineFont3:127 bytes]
+            Glyph #81 'p' (U+0070): [Shape DefineFont3:134 bytes]
+            Glyph #82 'q' (U+0071): [Shape DefineFont3:189 bytes]
+            Glyph #83 'r' (U+0072): [Shape DefineFont3:173 bytes]
+            Glyph #84 's' (U+0073): [Shape DefineFont3:247 bytes]
+            Glyph #85 't' (U+0074): [Shape DefineFont3:111 bytes]
+            Glyph #86 'u' (U+0075): [Shape DefineFont3:152 bytes]
+            Glyph #87 'v' (U+0076): [Shape DefineFont3:119 bytes]
+            Glyph #88 'w' (U+0077): [Shape DefineFont3:204 bytes]
+            Glyph #89 'x' (U+0078): [Shape DefineFont3:161 bytes]
+            Glyph #90 'y' (U+0079): [Shape DefineFont3:124 bytes]
+            Glyph #91 'z' (U+007A): [Shape DefineFont3:93 bytes]
+            Glyph #92 '{' (U+007B): [Shape DefineFont3:208 bytes]
+            Glyph #93 '|' (U+007C): [Shape DefineFont3:19 bytes]
+            Glyph #94 '}' (U+007D): [Shape DefineFont3:208 bytes]
+            Glyph #95 '~' (U+007E): [Shape DefineFont3:94 bytes]
+            Glyph #96 '?' (U+02C6): [Shape DefineFont3:105 bytes]
+            Glyph #97 '?' (U+02DC): [Shape DefineFont3:123 bytes]
+            Glyph #98 '?' (U+2013): [Shape DefineFont3:73 bytes]
+            Glyph #99 '?' (U+2014): [Shape DefineFont3:73 bytes]
+            Glyph #100 '?' (U+2018): [Shape DefineFont3:74 bytes]
+            Glyph #101 '?' (U+2019): [Shape DefineFont3:75 bytes]
+            Glyph #102 '?' (U+201A): [Shape DefineFont3:74 bytes]
+            Glyph #103 '?' (U+201C): [Shape DefineFont3:146 bytes]
+            Glyph #104 '?' (U+201D): [Shape DefineFont3:147 bytes]
+            Glyph #105 '?' (U+201E): [Shape DefineFont3:145 bytes]
+            Glyph #106 '?' (U+2020): [Shape DefineFont3:156 bytes]
+            Glyph #107 '?' (U+2021): [Shape DefineFont3:232 bytes]
+            Glyph #108 '?' (U+2022): [Shape DefineFont3:63 bytes]
+            Glyph #109 '?' (U+2026): [Shape DefineFont3:171 bytes]
+            Glyph #110 '?' (U+2030): [Shape DefineFont3:431 bytes]
+            Glyph #111 '?' (U+2039): [Shape DefineFont3:29 bytes]
+            Glyph #112 '?' (U+203A): [Shape DefineFont3:29 bytes]
+            Glyph #113 '?' (U+20AC): [Shape DefineFont3:273 bytes]
+            Glyph #114 '?' (U+2122): [Shape DefineFont3:252 bytes]
+
+            Font has extra name info...
+            FullName: Copperplate Gothic Bold
+            Copyright: Data copyright ? URW Software & Type GbmH., additional data copyright The Font Bureau, Inc. Copyright 1994 Microsoft Corporation. All rights reserved.
+
+            Font has layout info...
+            Layout #1 ' ' (U+0020): [Adv: 5120, Bounds: [Rect 0,0->0,0]]
+            Layout #2 '!' (U+0021): [Adv: 7740, Bounds: [Rect 0,0->0,0]]
+            Layout #3 '"' (U+0022): [Adv: 11380, Bounds: [Rect 0,0->0,0]]
+            Layout #4 '#' (U+0023): [Adv: 15700, Bounds: [Rect 0,0->0,0]]
+            Layout #5 '$' (U+0024): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #6 '%' (U+0025): [Adv: 18100, Bounds: [Rect 0,0->0,0]]
+            Layout #7 '&' (U+0026): [Adv: 15840, Bounds: [Rect 0,0->0,0]]
+            Layout #8 ''' (U+0027): [Adv: 5700, Bounds: [Rect 0,0->0,0]]
+            Layout #9 '(' (U+0028): [Adv: 6840, Bounds: [Rect 0,0->0,0]]
+            Layout #10 ')' (U+0029): [Adv: 6840, Bounds: [Rect 0,0->0,0]]
+            Layout #11 '*' (U+002A): [Adv: 10340, Bounds: [Rect 0,0->0,0]]
+            Layout #12 '+' (U+002B): [Adv: 15700, Bounds: [Rect 0,0->0,0]]
+            Layout #13 ',' (U+002C): [Adv: 6280, Bounds: [Rect 0,0->0,0]]
+            Layout #14 '-' (U+002D): [Adv: 4560, Bounds: [Rect 0,0->0,0]]
+            Layout #15 '.' (U+002E): [Adv: 6280, Bounds: [Rect 0,0->0,0]]
+            Layout #16 '/' (U+002F): [Adv: 15560, Bounds: [Rect 0,0->0,0]]
+            Layout #17 '0' (U+0030): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #18 '1' (U+0031): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #19 '2' (U+0032): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #20 '3' (U+0033): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #21 '4' (U+0034): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #22 '5' (U+0035): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #23 '6' (U+0036): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #24 '7' (U+0037): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #25 '8' (U+0038): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #26 '9' (U+0039): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #27 ':' (U+003A): [Adv: 6280, Bounds: [Rect 0,0->0,0]]
+            Layout #28 ';' (U+003B): [Adv: 6280, Bounds: [Rect 0,0->0,0]]
+            Layout #29 '<' (U+003C): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #30 '=' (U+003D): [Adv: 15700, Bounds: [Rect 0,0->0,0]]
+            Layout #31 '>' (U+003E): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #32 '?' (U+003F): [Adv: 10000, Bounds: [Rect 0,0->0,0]]
+            Layout #33 '@' (U+0040): [Adv: 16820, Bounds: [Rect 0,0->0,0]]
+            Layout #34 'A' (U+0041): [Adv: 16660, Bounds: [Rect 0,0->0,0]]
+            Layout #35 'B' (U+0042): [Adv: 16520, Bounds: [Rect 0,0->0,0]]
+            Layout #36 'C' (U+0043): [Adv: 17180, Bounds: [Rect 0,0->0,0]]
+            Layout #37 'D' (U+0044): [Adv: 17180, Bounds: [Rect 0,0->0,0]]
+            Layout #38 'E' (U+0045): [Adv: 15560, Bounds: [Rect 0,0->0,0]]
+            Layout #39 'F' (U+0046): [Adv: 14900, Bounds: [Rect 0,0->0,0]]
+            Layout #40 'G' (U+0047): [Adv: 17580, Bounds: [Rect 0,0->0,0]]
+            Layout #41 'H' (U+0048): [Adv: 17580, Bounds: [Rect 0,0->0,0]]
+            Layout #42 'I' (U+0049): [Adv: 6720, Bounds: [Rect 0,0->0,0]]
+            Layout #43 'J' (U+004A): [Adv: 12380, Bounds: [Rect 0,0->0,0]]
+            Layout #44 'K' (U+004B): [Adv: 16420, Bounds: [Rect 0,0->0,0]]
+            Layout #45 'L' (U+004C): [Adv: 14500, Bounds: [Rect 0,0->0,0]]
+            Layout #46 'M' (U+004D): [Adv: 19800, Bounds: [Rect 0,0->0,0]]
+            Layout #47 'N' (U+004E): [Adv: 17860, Bounds: [Rect 0,0->0,0]]
+            Layout #48 'O' (U+004F): [Adv: 17520, Bounds: [Rect 0,0->0,0]]
+            Layout #49 'P' (U+0050): [Adv: 15680, Bounds: [Rect 0,0->0,0]]
+            Layout #50 'Q' (U+0051): [Adv: 17520, Bounds: [Rect 0,0->0,0]]
+            Layout #51 'R' (U+0052): [Adv: 16560, Bounds: [Rect 0,0->0,0]]
+            Layout #52 'S' (U+0053): [Adv: 14760, Bounds: [Rect 0,0->0,0]]
+            Layout #53 'T' (U+0054): [Adv: 13820, Bounds: [Rect 0,0->0,0]]
+            Layout #54 'U' (U+0055): [Adv: 16720, Bounds: [Rect 0,0->0,0]]
+            Layout #55 'V' (U+0056): [Adv: 15780, Bounds: [Rect 0,0->0,0]]
+            Layout #56 'W' (U+0057): [Adv: 23120, Bounds: [Rect 0,0->0,0]]
+            Layout #57 'X' (U+0058): [Adv: 15420, Bounds: [Rect 0,0->0,0]]
+            Layout #58 'Y' (U+0059): [Adv: 14600, Bounds: [Rect 0,0->0,0]]
+            Layout #59 'Z' (U+005A): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #60 '[' (U+005B): [Adv: 6840, Bounds: [Rect 0,0->0,0]]
+            Layout #61 '\' (U+005C): [Adv: 15560, Bounds: [Rect 0,0->0,0]]
+            Layout #62 ']' (U+005D): [Adv: 6840, Bounds: [Rect 0,0->0,0]]
+            Layout #63 '^' (U+005E): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #64 '_' (U+005F): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #65 '`' (U+0060): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #66 'a' (U+0061): [Adv: 14220, Bounds: [Rect 0,0->0,0]]
+            Layout #67 'b' (U+0062): [Adv: 13880, Bounds: [Rect 0,0->0,0]]
+            Layout #68 'c' (U+0063): [Adv: 14280, Bounds: [Rect 0,0->0,0]]
+            Layout #69 'd' (U+0064): [Adv: 14420, Bounds: [Rect 0,0->0,0]]
+            Layout #70 'e' (U+0065): [Adv: 13140, Bounds: [Rect 0,0->0,0]]
+            Layout #71 'f' (U+0066): [Adv: 12480, Bounds: [Rect 0,0->0,0]]
+            Layout #72 'g' (U+0067): [Adv: 14740, Bounds: [Rect 0,0->0,0]]
+            Layout #73 'h' (U+0068): [Adv: 14860, Bounds: [Rect 0,0->0,0]]
+            Layout #74 'i' (U+0069): [Adv: 5940, Bounds: [Rect 0,0->0,0]]
+            Layout #75 'j' (U+006A): [Adv: 10360, Bounds: [Rect 0,0->0,0]]
+            Layout #76 'k' (U+006B): [Adv: 14040, Bounds: [Rect 0,0->0,0]]
+            Layout #77 'l' (U+006C): [Adv: 11760, Bounds: [Rect 0,0->0,0]]
+            Layout #78 'm' (U+006D): [Adv: 16780, Bounds: [Rect 0,0->0,0]]
+            Layout #79 'n' (U+006E): [Adv: 15240, Bounds: [Rect 0,0->0,0]]
+            Layout #80 'o' (U+006F): [Adv: 14600, Bounds: [Rect 0,0->0,0]]
+            Layout #81 'p' (U+0070): [Adv: 13360, Bounds: [Rect 0,0->0,0]]
+            Layout #82 'q' (U+0071): [Adv: 14800, Bounds: [Rect 0,0->0,0]]
+            Layout #83 'r' (U+0072): [Adv: 14060, Bounds: [Rect 0,0->0,0]]
+            Layout #84 's' (U+0073): [Adv: 12620, Bounds: [Rect 0,0->0,0]]
+            Layout #85 't' (U+0074): [Adv: 11660, Bounds: [Rect 0,0->0,0]]
+            Layout #86 'u' (U+0075): [Adv: 14140, Bounds: [Rect 0,0->0,0]]
+            Layout #87 'v' (U+0076): [Adv: 13320, Bounds: [Rect 0,0->0,0]]
+            Layout #88 'w' (U+0077): [Adv: 19660, Bounds: [Rect 0,0->0,0]]
+            Layout #89 'x' (U+0078): [Adv: 13000, Bounds: [Rect 0,0->0,0]]
+            Layout #90 'y' (U+0079): [Adv: 12260, Bounds: [Rect 0,0->0,0]]
+            Layout #91 'z' (U+007A): [Adv: 12480, Bounds: [Rect 0,0->0,0]]
+            Layout #92 '{' (U+007B): [Adv: 6840, Bounds: [Rect 0,0->0,0]]
+            Layout #93 '|' (U+007C): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #94 '}' (U+007D): [Adv: 6840, Bounds: [Rect 0,0->0,0]]
+            Layout #95 '~' (U+007E): [Adv: 13660, Bounds: [Rect 0,0->0,0]]
+            Layout #96 '?' (U+02C6): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #97 '?' (U+02DC): [Adv: 10240, Bounds: [Rect 0,0->0,0]]
+            Layout #98 '?' (U+2013): [Adv: 15780, Bounds: [Rect 0,0->0,0]]
+            Layout #99 '?' (U+2014): [Adv: 13620, Bounds: [Rect 0,0->0,0]]
+            Layout #100 '?' (U+2018): [Adv: 6280, Bounds: [Rect 0,0->0,0]]
+            Layout #101 '?' (U+2019): [Adv: 6280, Bounds: [Rect 0,0->0,0]]
+            Layout #102 '?' (U+201A): [Adv: 6280, Bounds: [Rect 0,0->0,0]]
+            Layout #103 '?' (U+201C): [Adv: 11060, Bounds: [Rect 0,0->0,0]]
+            Layout #104 '?' (U+201D): [Adv: 11060, Bounds: [Rect 0,0->0,0]]
+            Layout #105 '?' (U+201E): [Adv: 11060, Bounds: [Rect 0,0->0,0]]
+            Layout #106 '?' (U+2020): [Adv: 11040, Bounds: [Rect 0,0->0,0]]
+            Layout #107 '?' (U+2021): [Adv: 11040, Bounds: [Rect 0,0->0,0]]
+            Layout #108 '?' (U+2022): [Adv: 13660, Bounds: [Rect 0,0->0,0]]
+            Layout #109 '?' (U+2026): [Adv: 18840, Bounds: [Rect 0,0->0,0]]
+            Layout #110 '?' (U+2030): [Adv: 26440, Bounds: [Rect 0,0->0,0]]
+            Layout #111 '?' (U+2039): [Adv: 6400, Bounds: [Rect 0,0->0,0]]
+            Layout #112 '?' (U+203A): [Adv: 6400, Bounds: [Rect 0,0->0,0]]
+            Layout #113 '?' (U+20AC): [Adv: 14620, Bounds: [Rect 0,0->0,0]]
+            Layout #114 '?' (U+2122): [Adv: 20840, Bounds: [Rect 0,0->0,0]]
+
+            Font has pixel alignment info...
+            Thickness hint: Thick
+            PixelAlignment #1 ' ' (U+0020): [HasX: False, HasY: False, {zones (AlignCoord: 0, Range: 0)(AlignCoord: 0, Range: 0)}]
+            PixelAlignment #2 '!' (U+0021): [HasX: True, HasY: True, {zones (AlignCoord: 14968, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #3 '"' (U+0022): [HasX: True, HasY: True, {zones (AlignCoord: 13974, Range: 0)(AlignCoord: 15986, Range: 17066)}]
+            PixelAlignment #4 '#' (U+0023): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17063)}]
+            PixelAlignment #5 '$' (U+0024): [HasX: True, HasY: True, {zones (AlignCoord: 16035, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #6 '%' (U+0025): [HasX: True, HasY: True, {zones (AlignCoord: 16905, Range: 0)(AlignCoord: 15881, Range: 17067)}]
+            PixelAlignment #7 '&' (U+0026): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #8 ''' (U+0027): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #9 '(' (U+0028): [HasX: True, HasY: True, {zones (AlignCoord: 13877, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #10 ')' (U+0029): [HasX: True, HasY: True, {zones (AlignCoord: 14878, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #11 '*' (U+002A): [HasX: True, HasY: True, {zones (AlignCoord: 15229, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #12 '+' (U+002B): [HasX: True, HasY: True, {zones (AlignCoord: 16046, Range: 0)(AlignCoord: 0, Range: 16140)}]
+            PixelAlignment #13 ',' (U+002C): [HasX: True, HasY: True, {zones (AlignCoord: 13923, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #14 '-' (U+002D): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 16029)}]
+            PixelAlignment #15 '.' (U+002E): [HasX: True, HasY: True, {zones (AlignCoord: 13916, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #16 '/' (U+002F): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #17 '0' (U+0030): [HasX: True, HasY: True, {zones (AlignCoord: 12952, Range: 0)(AlignCoord: 16349, Range: 17067)}]
+            PixelAlignment #18 '1' (U+0031): [HasX: True, HasY: True, {zones (AlignCoord: 15998, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #19 '2' (U+0032): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #20 '3' (U+0033): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #21 '4' (U+0034): [HasX: True, HasY: True, {zones (AlignCoord: 16302, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #22 '5' (U+0035): [HasX: True, HasY: True, {zones (AlignCoord: 14000, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #23 '6' (U+0036): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #24 '7' (U+0037): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #25 '8' (U+0038): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #26 '9' (U+0039): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #27 ':' (U+003A): [HasX: True, HasY: True, {zones (AlignCoord: 13913, Range: 0)(AlignCoord: 0, Range: 16953)}]
+            PixelAlignment #28 ';' (U+003B): [HasX: True, HasY: True, {zones (AlignCoord: 13937, Range: 0)(AlignCoord: 0, Range: 16953)}]
+            PixelAlignment #29 '<' (U+003C): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #30 '=' (U+003D): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 16372)}]
+            PixelAlignment #31 '>' (U+003E): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #32 '?' (U+003F): [HasX: True, HasY: True, {zones (AlignCoord: 15962, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #33 '@' (U+0040): [HasX: True, HasY: True, {zones (AlignCoord: 13202, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #34 'A' (U+0041): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #35 'B' (U+0042): [HasX: True, HasY: True, {zones (AlignCoord: 14045, Range: 0)(AlignCoord: 16903, Range: 17067)}]
+            PixelAlignment #36 'C' (U+0043): [HasX: True, HasY: True, {zones (AlignCoord: 17091, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #37 'D' (U+0044): [HasX: True, HasY: True, {zones (AlignCoord: 14055, Range: 0)(AlignCoord: 16948, Range: 17067)}]
+            PixelAlignment #38 'E' (U+0045): [HasX: True, HasY: True, {zones (AlignCoord: 14059, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #39 'F' (U+0046): [HasX: True, HasY: True, {zones (AlignCoord: 14063, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #40 'G' (U+0047): [HasX: True, HasY: True, {zones (AlignCoord: 13061, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #41 'H' (U+0048): [HasX: True, HasY: True, {zones (AlignCoord: 14056, Range: 0)(AlignCoord: 16927, Range: 17067)}]
+            PixelAlignment #42 'I' (U+0049): [HasX: True, HasY: True, {zones (AlignCoord: 14065, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #43 'J' (U+004A): [HasX: True, HasY: True, {zones (AlignCoord: 16137, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #44 'K' (U+004B): [HasX: True, HasY: True, {zones (AlignCoord: 14054, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #45 'L' (U+004C): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #46 'M' (U+004D): [HasX: True, HasY: True, {zones (AlignCoord: 14049, Range: 0)(AlignCoord: 17040, Range: 17067)}]
+            PixelAlignment #47 'N' (U+004E): [HasX: True, HasY: True, {zones (AlignCoord: 14061, Range: 0)(AlignCoord: 16952, Range: 17067)}]
+            PixelAlignment #48 'O' (U+004F): [HasX: True, HasY: True, {zones (AlignCoord: 13061, Range: 0)(AlignCoord: 17013, Range: 17067)}]
+            PixelAlignment #49 'P' (U+0050): [HasX: True, HasY: True, {zones (AlignCoord: 14071, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #50 'Q' (U+0051): [HasX: True, HasY: True, {zones (AlignCoord: 13044, Range: 0)(AlignCoord: 17015, Range: 17067)}]
+            PixelAlignment #51 'R' (U+0052): [HasX: True, HasY: True, {zones (AlignCoord: 14053, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #52 'S' (U+0053): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #53 'T' (U+0054): [HasX: True, HasY: True, {zones (AlignCoord: 15905, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #54 'U' (U+0055): [HasX: True, HasY: True, {zones (AlignCoord: 13943, Range: 0)(AlignCoord: 16925, Range: 17067)}]
+            PixelAlignment #55 'V' (U+0056): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #56 'W' (U+0057): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #57 'X' (U+0058): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #58 'Y' (U+0059): [HasX: True, HasY: True, {zones (AlignCoord: 15945, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #59 'Z' (U+005A): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #60 '[' (U+005B): [HasX: True, HasY: True, {zones (AlignCoord: 14083, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #61 '\' (U+005C): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #62 ']' (U+005D): [HasX: True, HasY: True, {zones (AlignCoord: 14856, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #63 '^' (U+005E): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17069)}]
+            PixelAlignment #64 '_' (U+005F): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 13258)}]
+            PixelAlignment #65 '`' (U+0060): [HasX: True, HasY: True, {zones (AlignCoord: 15191, Range: 0)(AlignCoord: 0, Range: 17151)}]
+            PixelAlignment #66 'a' (U+0061): [HasX: True, HasY: True, {zones (AlignCoord: 13957, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #67 'b' (U+0062): [HasX: True, HasY: True, {zones (AlignCoord: 13971, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #68 'c' (U+0063): [HasX: True, HasY: True, {zones (AlignCoord: 12909, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #69 'd' (U+0064): [HasX: True, HasY: True, {zones (AlignCoord: 13948, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #70 'e' (U+0065): [HasX: True, HasY: True, {zones (AlignCoord: 13960, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #71 'f' (U+0066): [HasX: True, HasY: True, {zones (AlignCoord: 13957, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #72 'g' (U+0067): [HasX: True, HasY: True, {zones (AlignCoord: 12910, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #73 'h' (U+0068): [HasX: True, HasY: True, {zones (AlignCoord: 13952, Range: 0)(AlignCoord: 16254, Range: 16945)}]
+            PixelAlignment #74 'i' (U+0069): [HasX: True, HasY: True, {zones (AlignCoord: 13954, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #75 'j' (U+006A): [HasX: True, HasY: True, {zones (AlignCoord: 15987, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #76 'k' (U+006B): [HasX: True, HasY: True, {zones (AlignCoord: 13952, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #77 'l' (U+006C): [HasX: True, HasY: True, {zones (AlignCoord: 13957, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #78 'm' (U+006D): [HasX: True, HasY: True, {zones (AlignCoord: 13951, Range: 0)(AlignCoord: 16925, Range: 16945)}]
+            PixelAlignment #79 'n' (U+006E): [HasX: True, HasY: True, {zones (AlignCoord: 13959, Range: 0)(AlignCoord: 16314, Range: 16945)}]
+            PixelAlignment #80 'o' (U+006F): [HasX: True, HasY: True, {zones (AlignCoord: 12910, Range: 0)(AlignCoord: 16902, Range: 16945)}]
+            PixelAlignment #81 'p' (U+0070): [HasX: True, HasY: True, {zones (AlignCoord: 13964, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #82 'q' (U+0071): [HasX: True, HasY: True, {zones (AlignCoord: 12891, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #83 'r' (U+0072): [HasX: True, HasY: True, {zones (AlignCoord: 13949, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #84 's' (U+0073): [HasX: True, HasY: True, {zones (AlignCoord: 13957, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #85 't' (U+0074): [HasX: True, HasY: True, {zones (AlignCoord: 15228, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #86 'u' (U+0075): [HasX: True, HasY: True, {zones (AlignCoord: 13859, Range: 0)(AlignCoord: 16250, Range: 16945)}]
+            PixelAlignment #87 'v' (U+0076): [HasX: True, HasY: True, {zones (AlignCoord: 13957, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #88 'w' (U+0077): [HasX: True, HasY: True, {zones (AlignCoord: 13957, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #89 'x' (U+0078): [HasX: True, HasY: True, {zones (AlignCoord: 13957, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #90 'y' (U+0079): [HasX: True, HasY: True, {zones (AlignCoord: 13957, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #91 'z' (U+007A): [HasX: True, HasY: True, {zones (AlignCoord: 13957, Range: 0)(AlignCoord: 0, Range: 16945)}]
+            PixelAlignment #92 '{' (U+007B): [HasX: True, HasY: True, {zones (AlignCoord: 13880, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #93 '|' (U+007C): [HasX: True, HasY: True, {zones (AlignCoord: 15077, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #94 '}' (U+007D): [HasX: True, HasY: True, {zones (AlignCoord: 14982, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #95 '~' (U+007E): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 16231)}]
+            PixelAlignment #96 '?' (U+02C6): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #97 '?' (U+02DC): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #98 '?' (U+2013): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #99 '?' (U+2014): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #100 '?' (U+2018): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #101 '?' (U+2019): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #102 '?' (U+201A): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #103 '?' (U+201C): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #104 '?' (U+201D): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #105 '?' (U+201E): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #106 '?' (U+2020): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #107 '?' (U+2021): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #108 '?' (U+2022): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #109 '?' (U+2026): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #110 '?' (U+2030): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #111 '?' (U+2039): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #112 '?' (U+203A): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #113 '?' (U+20AC): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+            PixelAlignment #114 '?' (U+2122): [HasX: True, HasY: True, {zones (AlignCoord: 14051, Range: 0)(AlignCoord: 0, Range: 17067)}]
+
+            Font has kerning table...
+            Kern '1' (U+0031) + ,' (U+002C) => -1640
+            Kern '7' (U+0037) + ,' (U+002C) => -2220
+            Kern 'A' (U+0041) + ,' (U+002C) => 280
+            Kern 'F' (U+0046) + ,' (U+002C) => -2100
+            Kern 'N' (U+004E) + ,' (U+002C) => 80
+            Kern 'P' (U+0050) + ,' (U+002C) => -1800
+            Kern 'T' (U+0054) + ,' (U+002C) => -1700
+            Kern 'U' (U+0055) + ,' (U+002C) => -220
+            Kern 'V' (U+0056) + ,' (U+002C) => -1760
+            Kern 'W' (U+0057) + ,' (U+002C) => -1340
+            Kern 'Y' (U+0059) + ,' (U+002C) => -1900
+            Kern 'k' (U+006B) + ,' (U+002C) => -140
+            Kern 'r' (U+0072) + ,' (U+002C) => -240
+            Kern 'v' (U+0076) + ,' (U+002C) => -1440
+            Kern 'w' (U+0077) + ,' (U+002C) => -1120
+            Kern 'y' (U+0079) + ,' (U+002C) => -1560
+            Kern '?' (U+00C0) + ,' (U+002C) => 280
+            Kern '?' (U+00C1) + ,' (U+002C) => 280
+            Kern '?' (U+00C2) + ,' (U+002C) => 280
+            Kern '?' (U+00C3) + ,' (U+002C) => 280
+            Kern '?' (U+00C4) + ,' (U+002C) => 280
+            Kern '?' (U+00C5) + ,' (U+002C) => 280
+            Kern '?' (U+00DA) + ,' (U+002C) => -220
+            Kern '?' (U+00DC) + ,' (U+002C) => -220
+            Kern '?' (U+2019) + ,' (U+002C) => -700
+            Kern 'A' (U+0041) + -' (U+002D) => 220
+            Kern 'F' (U+0046) + -' (U+002D) => -160
+            Kern 'K' (U+004B) + -' (U+002D) => -720
+            Kern 'L' (U+004C) + -' (U+002D) => 720
+            Kern 'P' (U+0050) + -' (U+002D) => 540
+            Kern 'R' (U+0052) + -' (U+002D) => 380
+            Kern 'T' (U+0054) + -' (U+002D) => -920
+            Kern 'V' (U+0056) + -' (U+002D) => -220
+            Kern 'W' (U+0057) + -' (U+002D) => 60
+            Kern 'X' (U+0058) + -' (U+002D) => -480
+            Kern 'Y' (U+0059) + -' (U+002D) => -880
+            Kern 'k' (U+006B) + -' (U+002D) => -780
+            Kern 'r' (U+0072) + -' (U+002D) => 540
+            Kern 'v' (U+0076) + -' (U+002D) => 140
+            Kern 'w' (U+0077) + -' (U+002D) => 320
+            Kern 'y' (U+0079) + -' (U+002D) => -360
+            Kern '?' (U+00C1) + -' (U+002D) => 220
+            Kern '?' (U+00C4) + -' (U+002D) => 220
+            Kern '?' (U+00C5) + -' (U+002D) => 220
+            Kern '1' (U+0031) + .' (U+002E) => -1640
+            Kern '7' (U+0037) + .' (U+002E) => -2240
+            Kern 'A' (U+0041) + .' (U+002E) => 260
+            Kern 'F' (U+0046) + .' (U+002E) => -2120
+            Kern 'N' (U+004E) + .' (U+002E) => 60
+            Kern 'P' (U+0050) + .' (U+002E) => -1800
+            Kern 'T' (U+0054) + .' (U+002E) => -1700
+            Kern 'U' (U+0055) + .' (U+002E) => -220
+            Kern 'V' (U+0056) + .' (U+002E) => -1780
+            Kern 'W' (U+0057) + .' (U+002E) => -1340
+            Kern 'Y' (U+0059) + .' (U+002E) => -1920
+            Kern 'k' (U+006B) + .' (U+002E) => -140
+            Kern 'r' (U+0072) + .' (U+002E) => -240
+            Kern 'v' (U+0076) + .' (U+002E) => -1460
+            Kern 'w' (U+0077) + .' (U+002E) => -1120
+            Kern 'y' (U+0079) + .' (U+002E) => -1580
+            Kern '?' (U+00C0) + .' (U+002E) => 260
+            Kern '?' (U+00C1) + .' (U+002E) => 260
+            Kern '?' (U+00C2) + .' (U+002E) => 260
+            Kern '?' (U+00C3) + .' (U+002E) => 260
+            Kern '?' (U+00C4) + .' (U+002E) => 260
+            Kern '?' (U+00C5) + .' (U+002E) => 260
+            Kern '?' (U+00DA) + .' (U+002E) => -220
+            Kern '?' (U+00DC) + .' (U+002E) => -220
+            Kern '?' (U+2019) + .' (U+002E) => -700
+            Kern '1' (U+0031) + 0' (U+0030) => -1680
+            Kern ',' (U+002C) + 1' (U+0031) => -2200
+            Kern '.' (U+002E) + 1' (U+0031) => -2180
+            Kern '0' (U+0030) + 1' (U+0031) => -1820
+            Kern '1' (U+0031) + 1' (U+0031) => -3540
+            Kern '2' (U+0032) + 1' (U+0031) => -1840
+            Kern '3' (U+0033) + 1' (U+0031) => -1780
+            Kern '4' (U+0034) + 1' (U+0031) => -1760
+            Kern '5' (U+0035) + 1' (U+0031) => -1780
+            Kern '6' (U+0036) + 1' (U+0031) => -1780
+            Kern '7' (U+0037) + 1' (U+0031) => -1740
+            Kern '8' (U+0038) + 1' (U+0031) => -1780
+            Kern '9' (U+0039) + 1' (U+0031) => -1860
+            Kern '1' (U+0031) + 2' (U+0032) => -1860
+            Kern '1' (U+0031) + 3' (U+0033) => -1800
+            Kern '0' (U+0030) + 4' (U+0034) => -140
+            Kern '1' (U+0031) + 4' (U+0034) => -2200
+            Kern '2' (U+0032) + 4' (U+0034) => 20
+            Kern '3' (U+0033) + 4' (U+0034) => 20
+            Kern '4' (U+0034) + 4' (U+0034) => 180
+            Kern '5' (U+0035) + 4' (U+0034) => 120
+            Kern '6' (U+0036) + 4' (U+0034) => 40
+            Kern '7' (U+0037) + 4' (U+0034) => -1920
+            Kern '8' (U+0038) + 4' (U+0034) => 60
+            Kern '9' (U+0039) + 4' (U+0034) => -240
+            Kern '1' (U+0031) + 5' (U+0035) => -1720
+            Kern '1' (U+0031) + 6' (U+0036) => -1760
+            Kern '7' (U+0037) + 6' (U+0036) => -700
+            Kern '0' (U+0030) + 7' (U+0037) => -360
+            Kern '1' (U+0031) + 7' (U+0037) => -1860
+            Kern '2' (U+0032) + 7' (U+0037) => -380
+            Kern '3' (U+0033) + 7' (U+0037) => -240
+            Kern '4' (U+0034) + 7' (U+0037) => -360
+            Kern '5' (U+0035) + 7' (U+0037) => -360
+            Kern '6' (U+0036) + 7' (U+0037) => 60
+            Kern '7' (U+0037) + 7' (U+0037) => 40
+            Kern '8' (U+0038) + 7' (U+0037) => -200
+            Kern '9' (U+0039) + 7' (U+0037) => -380
+            Kern '1' (U+0031) + 8' (U+0038) => -1640
+            Kern '1' (U+0031) + 9' (U+0039) => -1580
+            Kern '7' (U+0037) + :' (U+003A) => -580
+            Kern 'T' (U+0054) + :' (U+003A) => 0
+            Kern 'V' (U+0056) + :' (U+003A) => -740
+            Kern 'W' (U+0057) + :' (U+003A) => -640
+            Kern 'Y' (U+0059) + :' (U+003A) => -980
+            Kern 'r' (U+0072) + :' (U+003A) => -400
+            Kern 't' (U+0074) + :' (U+003A) => -40
+            Kern 'v' (U+0076) + :' (U+003A) => 0
+            Kern 'w' (U+0077) + :' (U+003A) => 40
+            Kern 'y' (U+0079) + :' (U+003A) => 80
+            Kern 'T' (U+0054) + ;' (U+003B) => 0
+            Kern 'V' (U+0056) + ;' (U+003B) => -740
+            Kern 'W' (U+0057) + ;' (U+003B) => -640
+            Kern 'Y' (U+0059) + ;' (U+003B) => -980
+            Kern 'r' (U+0072) + ;' (U+003B) => -340
+            Kern 't' (U+0074) + ;' (U+003B) => -40
+            Kern 'v' (U+0076) + ;' (U+003B) => 0
+            Kern 'w' (U+0077) + ;' (U+003B) => 40
+            Kern 'y' (U+0079) + ;' (U+003B) => 80
+            Kern '-' (U+002D) + A' (U+0041) => 240
+            Kern 'B' (U+0042) + A' (U+0041) => -440
+            Kern 'C' (U+0043) + A' (U+0041) => -280
+            Kern 'D' (U+0044) + A' (U+0041) => -940
+            Kern 'F' (U+0046) + A' (U+0041) => -1780
+            Kern 'G' (U+0047) + A' (U+0041) => -420
+            Kern 'J' (U+004A) + A' (U+0041) => -820
+            Kern 'L' (U+004C) + A' (U+0041) => 760
+            Kern 'N' (U+004E) + A' (U+0041) => 220
+            Kern 'O' (U+004F) + A' (U+0041) => -1020
+            Kern 'P' (U+0050) + A' (U+0041) => -1440
+            Kern 'S' (U+0053) + A' (U+0041) => -580
+            Kern 'T' (U+0054) + A' (U+0041) => -1540
+            Kern 'U' (U+0055) + A' (U+0041) => -900
+            Kern 'V' (U+0056) + A' (U+0041) => -1760
+            Kern 'W' (U+0057) + A' (U+0041) => -1400
+            Kern 'Y' (U+0059) + A' (U+0041) => -1740
+            Kern '?' (U+00BB) + A' (U+0041) => -860
+            Kern '?' (U+00C7) + A' (U+0041) => -240
+            Kern '?' (U+00D3) + A' (U+0041) => -1020
+            Kern '?' (U+00D6) + A' (U+0041) => -1020
+            Kern '?' (U+00D8) + A' (U+0041) => -1000
+            Kern '?' (U+00D9) + A' (U+0041) => -900
+            Kern '?' (U+00DA) + A' (U+0041) => -900
+            Kern '?' (U+00DB) + A' (U+0041) => -900
+            Kern '?' (U+00DC) + A' (U+0041) => -900
+            Kern '?' (U+2018) + A' (U+0041) => -1700
+            Kern '?' (U+2019) + A' (U+0041) => -1720
+            Kern '?' (U+201C) + A' (U+0041) => -1700
+            Kern '?' (U+201D) + A' (U+0041) => -1720
+            Kern '?' (U+201E) + A' (U+0041) => 260
+            Kern '?' (U+203A) + A' (U+0041) => -860
+            Kern 'A' (U+0041) + C' (U+0043) => -1040
+            Kern 'K' (U+004B) + C' (U+0043) => -1100
+            Kern 'L' (U+004C) + C' (U+0043) => -240
+            Kern 'N' (U+004E) + C' (U+0043) => -100
+            Kern 'R' (U+0052) + C' (U+0043) => -260
+            Kern 'T' (U+0054) + C' (U+0043) => -100
+            Kern 'V' (U+0056) + C' (U+0043) => -840
+            Kern 'W' (U+0057) + C' (U+0043) => -640
+            Kern 'X' (U+0058) + C' (U+0043) => -860
+            Kern 'Y' (U+0059) + C' (U+0043) => -960
+            Kern '?' (U+00C0) + C' (U+0043) => -1040
+            Kern '?' (U+00C1) + C' (U+0043) => -1040
+            Kern '?' (U+00C2) + C' (U+0043) => -1040
+            Kern '?' (U+00C3) + C' (U+0043) => -1040
+            Kern '?' (U+00C4) + C' (U+0043) => -1040
+            Kern '?' (U+00C5) + C' (U+0043) => -1040
+            Kern 'A' (U+0041) + G' (U+0047) => -1020
+            Kern 'K' (U+004B) + G' (U+0047) => -1100
+            Kern 'L' (U+004C) + G' (U+0047) => -240
+            Kern 'N' (U+004E) + G' (U+0047) => -80
+            Kern 'R' (U+0052) + G' (U+0047) => -260
+            Kern 'T' (U+0054) + G' (U+0047) => -120
+            Kern 'V' (U+0056) + G' (U+0047) => -840
+            Kern 'W' (U+0057) + G' (U+0047) => -620
+            Kern 'Y' (U+0059) + G' (U+0047) => -960
+            Kern '?' (U+00C0) + G' (U+0047) => -1020
+            Kern '?' (U+00C1) + G' (U+0047) => -1020
+            Kern '?' (U+00C2) + G' (U+0047) => -1020
+            Kern '?' (U+00C3) + G' (U+0047) => -1020
+            Kern '?' (U+00C4) + G' (U+0047) => -1020
+            Kern '?' (U+00C5) + G' (U+0047) => -1020
+            Kern 'C' (U+0043) + H' (U+0048) => -200
+            Kern 'D' (U+0044) + J' (U+004A) => -380
+            Kern 'F' (U+0046) + J' (U+004A) => -1880
+            Kern 'P' (U+0050) + J' (U+004A) => -1540
+            Kern 'T' (U+0054) + J' (U+004A) => -1620
+            Kern 'C' (U+0043) + K' (U+004B) => -200
+            Kern 'A' (U+0041) + O' (U+004F) => -1040
+            Kern 'B' (U+0042) + O' (U+004F) => 40
+            Kern 'C' (U+0043) + O' (U+004F) => -400
+            Kern 'F' (U+0046) + O' (U+004F) => -360
+            Kern 'K' (U+004B) + O' (U+004F) => -1100
+            Kern 'L' (U+004C) + O' (U+004F) => -220
+            Kern 'N' (U+004E) + O' (U+004F) => -100
+            Kern 'R' (U+0052) + O' (U+004F) => -260
+            Kern 'T' (U+0054) + O' (U+004F) => -140
+            Kern 'V' (U+0056) + O' (U+004F) => -840
+            Kern 'W' (U+0057) + O' (U+004F) => -640
+            Kern 'X' (U+0058) + O' (U+004F) => -860
+            Kern 'Y' (U+0059) + O' (U+004F) => -940
+            Kern '?' (U+00C0) + O' (U+004F) => -1040
+            Kern '?' (U+00C1) + O' (U+004F) => -1040
+            Kern '?' (U+00C2) + O' (U+004F) => -1040
+            Kern '?' (U+00C3) + O' (U+004F) => -1040
+            Kern '?' (U+00C4) + O' (U+004F) => -1040
+            Kern '?' (U+00C5) + O' (U+004F) => -1040
+            Kern 'A' (U+0041) + Q' (U+0051) => -1040
+            Kern 'X' (U+0058) + Q' (U+0051) => -860
+            Kern '?' (U+00C0) + Q' (U+0051) => -1040
+            Kern '?' (U+00C1) + Q' (U+0051) => -1040
+            Kern '?' (U+00C2) + Q' (U+0051) => -1040
+            Kern '?' (U+00C3) + Q' (U+0051) => -1040
+            Kern '?' (U+00C4) + Q' (U+0051) => -1040
+            Kern '?' (U+00C5) + Q' (U+0051) => -1040
+            Kern 'K' (U+004B) + S' (U+0053) => -100
+            Kern 'L' (U+004C) + S' (U+0053) => 380
+            Kern 'T' (U+0054) + S' (U+0053) => 120
+            Kern 'V' (U+0056) + S' (U+0053) => -580
+            Kern 'W' (U+0057) + S' (U+0053) => -520
+            Kern 'Y' (U+0059) + S' (U+0053) => -480
+            Kern 't' (U+0074) + S' (U+0053) => 60
+            Kern '-' (U+002D) + T' (U+0054) => -900
+            Kern 'A' (U+0041) + T' (U+0054) => -1480
+            Kern 'D' (U+0044) + T' (U+0054) => -100
+            Kern 'G' (U+0047) + T' (U+0054) => -280
+            Kern 'K' (U+004B) + T' (U+0054) => 540
+            Kern 'L' (U+004C) + T' (U+0054) => -1600
+            Kern 'O' (U+004F) + T' (U+0054) => -140
+            Kern 'R' (U+0052) + T' (U+0054) => 160
+            Kern 'S' (U+0053) + T' (U+0054) => 380
+            Kern 'V' (U+0056) + T' (U+0054) => 840
+            Kern 'W' (U+0057) + T' (U+0054) => 900
+            Kern 'Y' (U+0059) + T' (U+0054) => 940
+            Kern 'i' (U+0069) + T' (U+0054) => 240
+            Kern 'n' (U+006E) + T' (U+0054) => 220
+            Kern 'o' (U+006F) + T' (U+0054) => -1020
+            Kern '?' (U+00BB) + T' (U+0054) => -1980
+            Kern '?' (U+00C0) + T' (U+0054) => -1480
+            Kern '?' (U+00C1) + T' (U+0054) => -1480
+            Kern '?' (U+00C2) + T' (U+0054) => -1480
+            Kern '?' (U+00C3) + T' (U+0054) => -1480
+            Kern '?' (U+00C4) + T' (U+0054) => -1480
+            Kern '?' (U+00C5) + T' (U+0054) => -1480
+            Kern '?' (U+00D2) + T' (U+0054) => -140
+            Kern '?' (U+00D3) + T' (U+0054) => -140
+            Kern '?' (U+00D4) + T' (U+0054) => -140
+            Kern '?' (U+00D5) + T' (U+0054) => -140
+            Kern '?' (U+00D6) + T' (U+0054) => -140
+            Kern '?' (U+2018) + T' (U+0054) => -20
+            Kern '?' (U+201C) + T' (U+0054) => -40
+            Kern '?' (U+201D) + T' (U+0054) => 80
+            Kern '?' (U+201E) + T' (U+0054) => -1720
+            Kern '?' (U+203A) + T' (U+0054) => -1960
+            Kern 'A' (U+0041) + U' (U+0055) => -920
+            Kern 'L' (U+004C) + U' (U+0055) => -120
+            Kern 'R' (U+0052) + U' (U+0055) => -180
+            Kern '?' (U+00C0) + U' (U+0055) => -920
+            Kern '?' (U+00C1) + U' (U+0055) => -920
+            Kern '?' (U+00C2) + U' (U+0055) => -920
+            Kern '?' (U+00C3) + U' (U+0055) => -920
+            Kern '?' (U+00C4) + U' (U+0055) => -920
+            Kern '?' (U+00C5) + U' (U+0055) => -920
+            Kern '-' (U+002D) + V' (U+0056) => -200
+            Kern 'A' (U+0041) + V' (U+0056) => -1760
+            Kern 'B' (U+0042) + V' (U+0056) => -460
+            Kern 'D' (U+0044) + V' (U+0056) => -800
+            Kern 'G' (U+0047) + V' (U+0056) => -280
+            Kern 'L' (U+004C) + V' (U+0056) => -1800
+            Kern 'O' (U+004F) + V' (U+0056) => -840
+            Kern 'R' (U+0052) + V' (U+0056) => -520
+            Kern 'S' (U+0053) + V' (U+0056) => 240
+            Kern 'T' (U+0054) + V' (U+0056) => 860
+            Kern '?' (U+00BB) + V' (U+0056) => -1220
+            Kern '?' (U+00C0) + V' (U+0056) => -1760
+            Kern '?' (U+00C1) + V' (U+0056) => -1760
+            Kern '?' (U+00C2) + V' (U+0056) => -1760
+            Kern '?' (U+00C3) + V' (U+0056) => -1760
+            Kern '?' (U+00C4) + V' (U+0056) => -1760
+            Kern '?' (U+00C5) + V' (U+0056) => -1760
+            Kern '?' (U+00D2) + V' (U+0056) => -840
+            Kern '?' (U+00D3) + V' (U+0056) => -840
+            Kern '?' (U+00D4) + V' (U+0056) => -840
+            Kern '?' (U+00D5) + V' (U+0056) => -840
+            Kern '?' (U+00D6) + V' (U+0056) => -840
+            Kern '?' (U+2018) + V' (U+0056) => 20
+            Kern '?' (U+201C) + V' (U+0056) => 20
+            Kern '?' (U+201D) + V' (U+0056) => 60
+            Kern '?' (U+201E) + V' (U+0056) => -1780
+            Kern '?' (U+203A) + V' (U+0056) => -1200
+            Kern '-' (U+002D) + W' (U+0057) => 100
+            Kern 'A' (U+0041) + W' (U+0057) => -1360
+            Kern 'B' (U+0042) + W' (U+0057) => -400
+            Kern 'D' (U+0044) + W' (U+0057) => -560
+            Kern 'G' (U+0047) + W' (U+0057) => -220
+            Kern 'L' (U+004C) + W' (U+0057) => -1420
+            Kern 'O' (U+004F) + W' (U+0057) => -640
+            Kern 'R' (U+0052) + W' (U+0057) => -460
+            Kern 'S' (U+0053) + W' (U+0057) => 300
+            Kern 'T' (U+0054) + W' (U+0057) => 920
+            Kern '?' (U+00BB) + W' (U+0057) => -940
+            Kern '?' (U+00C0) + W' (U+0057) => -1360
+            Kern '?' (U+00C1) + W' (U+0057) => -1360
+            Kern '?' (U+00C2) + W' (U+0057) => -1360
+            Kern '?' (U+00C3) + W' (U+0057) => -1360
+            Kern '?' (U+00C4) + W' (U+0057) => -1360
+            Kern '?' (U+00C5) + W' (U+0057) => -1360
+            Kern '?' (U+00D3) + W' (U+0057) => -640
+            Kern '?' (U+00D6) + W' (U+0057) => -640
+            Kern '?' (U+2018) + W' (U+0057) => 140
+            Kern '?' (U+201C) + W' (U+0057) => 140
+            Kern '?' (U+201D) + W' (U+0057) => 160
+            Kern '?' (U+201E) + W' (U+0057) => -1360
+            Kern '?' (U+203A) + W' (U+0057) => -920
+            Kern 'D' (U+0044) + X' (U+0058) => -780
+            Kern 'O' (U+004F) + X' (U+0058) => -880
+            Kern '?' (U+00D6) + X' (U+0058) => -880
+            Kern '-' (U+002D) + Y' (U+0059) => -840
+            Kern 'A' (U+0041) + Y' (U+0059) => -1660
+            Kern 'B' (U+0042) + Y' (U+0059) => -360
+            Kern 'D' (U+0044) + Y' (U+0059) => -900
+            Kern 'G' (U+0047) + Y' (U+0059) => -180
+            Kern 'L' (U+004C) + Y' (U+0059) => -1780
+            Kern 'O' (U+004F) + Y' (U+0059) => -960
+            Kern 'R' (U+0052) + Y' (U+0059) => -420
+            Kern 'S' (U+0053) + Y' (U+0059) => 340
+            Kern 'T' (U+0054) + Y' (U+0059) => 960
+            Kern '?' (U+00BB) + Y' (U+0059) => -1780
+            Kern '?' (U+00C0) + Y' (U+0059) => -1660
+            Kern '?' (U+00C1) + Y' (U+0059) => -1660
+            Kern '?' (U+00C2) + Y' (U+0059) => -1660
+            Kern '?' (U+00C3) + Y' (U+0059) => -1660
+            Kern '?' (U+00C4) + Y' (U+0059) => -1660
+            Kern '?' (U+00C5) + Y' (U+0059) => -1660
+            Kern '?' (U+00D2) + Y' (U+0059) => -960
+            Kern '?' (U+00D3) + Y' (U+0059) => -960
+            Kern '?' (U+00D4) + Y' (U+0059) => -960
+            Kern '?' (U+00D5) + Y' (U+0059) => -960
+            Kern '?' (U+00D6) + Y' (U+0059) => -960
+            Kern '?' (U+2018) + Y' (U+0059) => 0
+            Kern '?' (U+201C) + Y' (U+0059) => 0
+            Kern '?' (U+201D) + Y' (U+0059) => 160
+            Kern '?' (U+201E) + Y' (U+0059) => -1920
+            Kern '?' (U+203A) + Y' (U+0059) => -1760
+            Kern 'A' (U+0041) + a' (U+0061) => 800
+            Kern 'F' (U+0046) + a' (U+0061) => -1900
+            Kern 'K' (U+004B) + a' (U+0061) => 660
+            Kern 'N' (U+004E) + a' (U+0061) => 140
+            Kern 'P' (U+0050) + a' (U+0061) => -1440
+            Kern 'R' (U+0052) + a' (U+0061) => 560
+            Kern 'T' (U+0054) + a' (U+0061) => -1620
+            Kern 'V' (U+0056) + a' (U+0061) => -1920
+            Kern 'W' (U+0057) + a' (U+0061) => -1480
+            Kern 'X' (U+0058) + a' (U+0061) => 740
+            Kern 'Y' (U+0059) + a' (U+0061) => -1820
+            Kern 'f' (U+0066) + a' (U+0061) => -1840
+            Kern 'g' (U+0067) + a' (U+0061) => -340
+            Kern 'k' (U+006B) + a' (U+0061) => 600
+            Kern 'r' (U+0072) + a' (U+0061) => 520
+            Kern 't' (U+0074) + a' (U+0061) => -1240
+            Kern 'v' (U+0076) + a' (U+0061) => -1480
+            Kern 'w' (U+0077) + a' (U+0061) => -1140
+            Kern 'x' (U+0078) + a' (U+0061) => 660
+            Kern 'y' (U+0079) + a' (U+0061) => -1380
+            Kern '?' (U+00C1) + a' (U+0061) => 800
+            Kern '?' (U+00C4) + a' (U+0061) => 800
+            Kern '?' (U+00C5) + a' (U+0061) => 800
+            Kern 'A' (U+0041) + b' (U+0062) => 340
+            Kern '?' (U+00C1) + b' (U+0062) => 340
+            Kern '?' (U+00C4) + b' (U+0062) => 340
+            Kern '?' (U+00C5) + b' (U+0062) => 340
+            Kern '?' (U+00DC) + b' (U+0062) => -60
+            Kern 'A' (U+0041) + c' (U+0063) => -780
+            Kern 'T' (U+0054) + c' (U+0063) => -1000
+            Kern 'q' (U+0071) + c' (U+0063) => -100
+            Kern 'r' (U+0072) + c' (U+0063) => -240
+            Kern 'v' (U+0076) + c' (U+0063) => -720
+            Kern 'w' (U+0077) + c' (U+0063) => -560
+            Kern 'x' (U+0078) + c' (U+0063) => -800
+            Kern 'y' (U+0079) + c' (U+0063) => -920
+            Kern '?' (U+00C1) + c' (U+0063) => -780
+            Kern '?' (U+00C4) + c' (U+0063) => -780
+            Kern '?' (U+00C5) + c' (U+0063) => -780
+            Kern 'A' (U+0041) + d' (U+0064) => 340
+            Kern 'r' (U+0072) + d' (U+0064) => 40
+            Kern '?' (U+00C1) + d' (U+0064) => 340
+            Kern '?' (U+00C4) + d' (U+0064) => 340
+            Kern '?' (U+00C5) + d' (U+0064) => 340
+            Kern '?' (U+2019) + d' (U+0064) => -60
+            Kern 'A' (U+0041) + e' (U+0065) => 340
+            Kern 'F' (U+0046) + e' (U+0065) => 20
+            Kern 'K' (U+004B) + e' (U+0065) => 200
+            Kern 'N' (U+004E) + e' (U+0065) => -20
+            Kern 'P' (U+0050) + e' (U+0065) => -60
+            Kern 'R' (U+0052) + e' (U+0065) => 100
+            Kern 'T' (U+0054) + e' (U+0065) => 240
+            Kern 'V' (U+0056) + e' (U+0065) => -360
+            Kern 'W' (U+0057) + e' (U+0065) => -280
+            Kern 'X' (U+0058) + e' (U+0065) => 280
+            Kern 'Y' (U+0059) + e' (U+0065) => -520
+            Kern 'f' (U+0066) + e' (U+0065) => 0
+            Kern 'g' (U+0067) + e' (U+0065) => -240
+            Kern 'k' (U+006B) + e' (U+0065) => 140
+            Kern 'r' (U+0072) + e' (U+0065) => 40
+            Kern 't' (U+0074) + e' (U+0065) => 140
+            Kern 'v' (U+0076) + e' (U+0065) => 240
+            Kern 'w' (U+0077) + e' (U+0065) => 280
+            Kern 'x' (U+0078) + e' (U+0065) => 180
+            Kern 'y' (U+0079) + e' (U+0065) => 320
+            Kern '?' (U+00C1) + e' (U+0065) => 340
+            Kern '?' (U+00C5) + e' (U+0065) => 340
+            Kern 'f' (U+0066) + f' (U+0066) => 0
+            Kern 'r' (U+0072) + f' (U+0066) => 40
+            Kern 'A' (U+0041) + g' (U+0067) => -780
+            Kern 'T' (U+0054) + g' (U+0067) => -1080
+            Kern 'V' (U+0056) + g' (U+0067) => -1220
+            Kern 'W' (U+0057) + g' (U+0067) => -920
+            Kern 'Y' (U+0059) + g' (U+0067) => -1660
+            Kern 'k' (U+006B) + g' (U+0067) => -1080
+            Kern 'r' (U+0072) + g' (U+0067) => -260
+            Kern 'v' (U+0076) + g' (U+0067) => -740
+            Kern 'w' (U+0077) + g' (U+0067) => -580
+            Kern 'y' (U+0079) + g' (U+0067) => -980
+            Kern '?' (U+00C1) + g' (U+0067) => -780
+            Kern '?' (U+00C4) + g' (U+0067) => -780
+            Kern '?' (U+00C5) + g' (U+0067) => -780
+            Kern 'c' (U+0063) + h' (U+0068) => -400
+            Kern 'r' (U+0072) + h' (U+0068) => 40
+            Kern 't' (U+0074) + h' (U+0068) => 140
+            Kern 'F' (U+0046) + i' (U+0069) => 20
+            Kern 'T' (U+0054) + i' (U+0069) => 240
+            Kern 'V' (U+0056) + i' (U+0069) => -460
+            Kern 'W' (U+0057) + i' (U+0069) => -360
+            Kern 'Y' (U+0059) + i' (U+0069) => -660
+            Kern 'f' (U+0066) + i' (U+0069) => 0
+            Kern 'r' (U+0072) + i' (U+0069) => 40
+            Kern 'F' (U+0046) + j' (U+006A) => -1960
+            Kern 'T' (U+0054) + j' (U+006A) => -1620
+            Kern 'a' (U+0061) + j' (U+006A) => 680
+            Kern 'f' (U+0066) + j' (U+006A) => -1520
+            Kern 'i' (U+0069) + j' (U+006A) => 180
+            Kern 'r' (U+0072) + j' (U+006A) => 460
+            Kern 'c' (U+0063) + k' (U+006B) => -400
+            Kern 'r' (U+0072) + k' (U+006B) => 40
+            Kern 'f' (U+0066) + l' (U+006C) => 0
+            Kern 'g' (U+0067) + l' (U+006C) => -240
+            Kern 'r' (U+0072) + l' (U+006C) => 40
+            Kern 'v' (U+0076) + l' (U+006C) => 240
+            Kern 'w' (U+0077) + l' (U+006C) => 280
+            Kern 'y' (U+0079) + l' (U+006C) => 320
+            Kern 'U' (U+0055) + m' (U+006D) => -60
+            Kern 'r' (U+0072) + m' (U+006D) => 40
+            Kern '?' (U+00DA) + m' (U+006D) => -60
+            Kern '?' (U+00DC) + m' (U+006D) => -60
+            Kern 'U' (U+0055) + n' (U+006E) => -60
+            Kern 'r' (U+0072) + n' (U+006E) => 40
+            Kern '?' (U+00DA) + n' (U+006E) => -60
+            Kern '?' (U+00DC) + n' (U+006E) => -60
+            Kern 'A' (U+0041) + o' (U+006F) => -780
+            Kern 'F' (U+0046) + o' (U+006F) => -1040
+            Kern 'K' (U+004B) + o' (U+006F) => -1300
+            Kern 'N' (U+004E) + o' (U+006F) => -100
+            Kern 'P' (U+0050) + o' (U+006F) => -160
+            Kern 'R' (U+0052) + o' (U+006F) => -320
+            Kern 'T' (U+0054) + o' (U+006F) => -1000
+            Kern 'V' (U+0056) + o' (U+006F) => -1200
+            Kern 'W' (U+0057) + o' (U+006F) => -900
+            Kern 'X' (U+0058) + o' (U+006F) => -1040
+            Kern 'Y' (U+0059) + o' (U+006F) => -1640
+            Kern 'f' (U+0066) + o' (U+006F) => -160
+            Kern 'k' (U+006B) + o' (U+006F) => -1060
+            Kern 'r' (U+0072) + o' (U+006F) => -260
+            Kern 't' (U+0074) + o' (U+006F) => -40
+            Kern 'v' (U+0076) + o' (U+006F) => -720
+            Kern 'w' (U+0077) + o' (U+006F) => -560
+            Kern 'x' (U+0078) + o' (U+006F) => -800
+            Kern 'y' (U+0079) + o' (U+006F) => -920
+            Kern '?' (U+00C1) + o' (U+006F) => -780
+            Kern '?' (U+00C4) + o' (U+006F) => -780
+            Kern '?' (U+00C5) + o' (U+006F) => -780
+            Kern '?' (U+2019) + o' (U+006F) => -260
+            Kern 'U' (U+0055) + p' (U+0070) => -60
+            Kern 'Y' (U+0059) + p' (U+0070) => -660
+            Kern 'm' (U+006D) + p' (U+0070) => 0
+            Kern 'n' (U+006E) + p' (U+0070) => 0
+            Kern 'r' (U+0072) + p' (U+0070) => 40
+            Kern '?' (U+00DA) + p' (U+0070) => -60
+            Kern '?' (U+00DC) + p' (U+0070) => -60
+            Kern 'A' (U+0041) + q' (U+0071) => -780
+            Kern 'r' (U+0072) + q' (U+0071) => -260
+            Kern 'x' (U+0078) + q' (U+0071) => -780
+            Kern '?' (U+00C1) + q' (U+0071) => -780
+            Kern '?' (U+00C4) + q' (U+0071) => -780
+            Kern '?' (U+00C5) + q' (U+0071) => -780
+            Kern 'F' (U+0046) + r' (U+0072) => 20
+            Kern 'T' (U+0054) + r' (U+0072) => 240
+            Kern 'U' (U+0055) + r' (U+0072) => -60
+            Kern 'V' (U+0056) + r' (U+0072) => -460
+            Kern 'W' (U+0057) + r' (U+0072) => -360
+            Kern 'g' (U+0067) + r' (U+0072) => -220
+            Kern 'r' (U+0072) + r' (U+0072) => 40
+            Kern '?' (U+00DA) + r' (U+0072) => -60
+            Kern '?' (U+00DC) + r' (U+0072) => -60
+            Kern '?' (U+2019) + r' (U+0072) => -60
+            Kern 'T' (U+0054) + s' (U+0073) => -500
+            Kern 'f' (U+0066) + s' (U+0073) => 40
+            Kern 'k' (U+006B) + s' (U+0073) => -180
+            Kern 'r' (U+0072) + s' (U+0073) => -200
+            Kern 'v' (U+0076) + s' (U+0073) => -420
+            Kern 'w' (U+0077) + s' (U+0073) => -400
+            Kern 'y' (U+0079) + s' (U+0073) => -420
+            Kern '?' (U+2019) + s' (U+0073) => 0
+            Kern 'A' (U+0041) + t' (U+0074) => -1100
+            Kern 'S' (U+0053) + t' (U+0074) => 80
+            Kern 'e' (U+0065) + t' (U+0074) => 120
+            Kern 'f' (U+0066) + t' (U+0074) => 420
+            Kern 'o' (U+006F) + t' (U+0074) => -40
+            Kern 'p' (U+0070) + t' (U+0074) => 380
+            Kern 'r' (U+0072) + t' (U+0074) => 120
+            Kern 's' (U+0073) + t' (U+0074) => 180
+            Kern '?' (U+00C1) + t' (U+0074) => -1100
+            Kern '?' (U+00C4) + t' (U+0074) => -1100
+            Kern '?' (U+00C5) + t' (U+0074) => -1100
+            Kern '?' (U+00F4) + t' (U+0074) => -40
+            Kern '?' (U+00F6) + t' (U+0074) => -40
+            Kern '?' (U+2019) + t' (U+0074) => 180
+            Kern 'A' (U+0041) + u' (U+0075) => -720
+            Kern 'F' (U+0046) + u' (U+0075) => 140
+            Kern 'K' (U+004B) + u' (U+0075) => -1080
+            Kern 'L' (U+004C) + u' (U+0075) => -40
+            Kern 'N' (U+004E) + u' (U+0075) => -80
+            Kern 'R' (U+0052) + u' (U+0075) => -220
+            Kern 'T' (U+0054) + u' (U+0075) => 360
+            Kern 'V' (U+0056) + u' (U+0075) => -300
+            Kern 'W' (U+0057) + u' (U+0075) => -220
+            Kern 'X' (U+0058) + u' (U+0075) => -840
+            Kern 'Y' (U+0059) + u' (U+0075) => -480
+            Kern 'k' (U+006B) + u' (U+0075) => 40
+            Kern 'q' (U+0071) + u' (U+0075) => -120
+            Kern 'r' (U+0072) + u' (U+0075) => -280
+            Kern '?' (U+00C1) + u' (U+0075) => -720
+            Kern '?' (U+00C4) + u' (U+0075) => -720
+            Kern '?' (U+00C5) + u' (U+0075) => -720
+            Kern 'A' (U+0041) + v' (U+0076) => -1360
+            Kern 'T' (U+0054) + v' (U+0076) => 760
+            Kern 'Y' (U+0059) + v' (U+0076) => -160
+            Kern 'Z' (U+005A) + v' (U+0076) => -420
+            Kern 'a' (U+0061) + v' (U+0076) => -1500
+            Kern 'b' (U+0062) + v' (U+0076) => -420
+            Kern 'e' (U+0065) + v' (U+0076) => 220
+            Kern 'l' (U+006C) + v' (U+0076) => -1460
+            Kern 'm' (U+006D) + v' (U+0076) => 240
+            Kern 'n' (U+006E) + v' (U+0076) => 240
+            Kern 'o' (U+006F) + v' (U+0076) => -720
+            Kern 'r' (U+0072) + v' (U+0076) => -480
+            Kern '?' (U+00C1) + v' (U+0076) => -1360
+            Kern '?' (U+00C4) + v' (U+0076) => -1360
+            Kern '?' (U+00C5) + v' (U+0076) => -1360
+            Kern '?' (U+00E0) + v' (U+0076) => -1500
+            Kern '?' (U+00E1) + v' (U+0076) => -1500
+            Kern '?' (U+00E4) + v' (U+0076) => -1500
+            Kern '?' (U+00E5) + v' (U+0076) => -1500
+            Kern '?' (U+00E6) + v' (U+0076) => 280
+            Kern '?' (U+00E9) + v' (U+0076) => 220
+            Kern '?' (U+00EA) + v' (U+0076) => 220
+            Kern '?' (U+00F2) + v' (U+0076) => -720
+            Kern '?' (U+00F3) + v' (U+0076) => -720
+            Kern '?' (U+00F6) + v' (U+0076) => -720
+            Kern '?' (U+2019) + v' (U+0076) => 100
+            Kern 'A' (U+0041) + w' (U+0077) => -1020
+            Kern 'T' (U+0054) + w' (U+0077) => 820
+            Kern 'a' (U+0061) + w' (U+0077) => -1100
+            Kern 'b' (U+0062) + w' (U+0077) => -360
+            Kern 'e' (U+0065) + w' (U+0077) => 280
+            Kern 'm' (U+006D) + w' (U+0077) => 300
+            Kern 'n' (U+006E) + w' (U+0077) => 280
+            Kern 'o' (U+006F) + w' (U+0077) => -560
+            Kern 'r' (U+0072) + w' (U+0077) => -420
+            Kern '?' (U+00C1) + w' (U+0077) => -1020
+            Kern '?' (U+00C4) + w' (U+0077) => -1020
+            Kern '?' (U+00C5) + w' (U+0077) => -1020
+            Kern '?' (U+00E0) + w' (U+0077) => -1100
+            Kern '?' (U+00E1) + w' (U+0077) => -1100
+            Kern '?' (U+00E4) + w' (U+0077) => -1100
+            Kern '?' (U+00E5) + w' (U+0077) => -1100
+            Kern '?' (U+00E6) + w' (U+0077) => 340
+            Kern '?' (U+00E9) + w' (U+0077) => 280
+            Kern '?' (U+00EA) + w' (U+0077) => 280
+            Kern '?' (U+00F2) + w' (U+0077) => -560
+            Kern '?' (U+00F3) + w' (U+0077) => -560
+            Kern '?' (U+00F6) + w' (U+0077) => -560
+            Kern '?' (U+2019) + w' (U+0077) => 180
+            Kern 'e' (U+0065) + x' (U+0078) => 340
+            Kern 'o' (U+006F) + x' (U+0078) => -740
+            Kern 'r' (U+0072) + x' (U+0078) => 520
+            Kern '?' (U+00F6) + x' (U+0078) => -740
+            Kern 'A' (U+0041) + y' (U+0079) => -1240
+            Kern 'K' (U+004B) + y' (U+0079) => -840
+            Kern 'L' (U+004C) + y' (U+0079) => -1360
+            Kern 'R' (U+0052) + y' (U+0079) => 260
+            Kern 'T' (U+0054) + y' (U+0079) => 840
+            Kern 'V' (U+0056) + y' (U+0079) => 140
+            Kern 'W' (U+0057) + y' (U+0079) => 240
+            Kern 'X' (U+0058) + y' (U+0079) => -440
+            Kern 'Z' (U+005A) + y' (U+0079) => -340
+            Kern 'a' (U+0061) + y' (U+0079) => -1340
+            Kern 'b' (U+0062) + y' (U+0079) => -400
+            Kern 'e' (U+0065) + y' (U+0079) => 320
+            Kern 'h' (U+0068) + y' (U+0079) => 320
+            Kern 'l' (U+006C) + y' (U+0079) => -1440
+            Kern 'm' (U+006D) + y' (U+0079) => 320
+            Kern 'n' (U+006E) + y' (U+0079) => 320
+            Kern 'o' (U+006F) + y' (U+0079) => -920
+            Kern 'p' (U+0070) + y' (U+0079) => -220
+            Kern 'r' (U+0072) + y' (U+0079) => -440
+            Kern '?' (U+00C1) + y' (U+0079) => -1240
+            Kern '?' (U+00C4) + y' (U+0079) => -1240
+            Kern '?' (U+00C5) + y' (U+0079) => -1240
+            Kern '?' (U+00E0) + y' (U+0079) => -1340
+            Kern '?' (U+00E1) + y' (U+0079) => -1340
+            Kern '?' (U+00E4) + y' (U+0079) => -1340
+            Kern '?' (U+00E5) + y' (U+0079) => -1340
+            Kern '?' (U+00E6) + y' (U+0079) => 380
+            Kern '?' (U+00E9) + y' (U+0079) => 320
+            Kern '?' (U+00EA) + y' (U+0079) => 320
+            Kern '?' (U+00F2) + y' (U+0079) => -920
+            Kern '?' (U+00F3) + y' (U+0079) => -920
+            Kern '?' (U+00F6) + y' (U+0079) => -920
+            Kern '?' (U+2019) + y' (U+0079) => 160
+            Kern 'r' (U+0072) + z' (U+007A) => 160
+            Kern 'A' (U+0041) + ?' (U+00AB) => -880
+            Kern 'T' (U+0054) + ?' (U+00AB) => -1980
+            Kern 'V' (U+0056) + ?' (U+00AB) => -1240
+            Kern 'W' (U+0057) + ?' (U+00AB) => -960
+            Kern 'Y' (U+0059) + ?' (U+00AB) => -1780
+            Kern '?' (U+00C1) + ?' (U+00AB) => -880
+            Kern '?' (U+00C4) + ?' (U+00AB) => -880
+            Kern '?' (U+00C5) + ?' (U+00AB) => -880
+            Kern 'D' (U+0044) + ?' (U+00C0) => -940
+            Kern 'F' (U+0046) + ?' (U+00C0) => -1780
+            Kern 'G' (U+0047) + ?' (U+00C0) => -420
+            Kern 'T' (U+0054) + ?' (U+00C0) => -1540
+            Kern 'V' (U+0056) + ?' (U+00C0) => -1760
+            Kern 'W' (U+0057) + ?' (U+00C0) => -1400
+            Kern 'Y' (U+0059) + ?' (U+00C0) => -1740
+            Kern '-' (U+002D) + ?' (U+00C1) => 240
+            Kern 'B' (U+0042) + ?' (U+00C1) => -440
+            Kern 'C' (U+0043) + ?' (U+00C1) => -280
+            Kern 'D' (U+0044) + ?' (U+00C1) => -940
+            Kern 'F' (U+0046) + ?' (U+00C1) => -1780
+            Kern 'G' (U+0047) + ?' (U+00C1) => -420
+            Kern 'L' (U+004C) + ?' (U+00C1) => 760
+            Kern 'N' (U+004E) + ?' (U+00C1) => 220
+            Kern 'O' (U+004F) + ?' (U+00C1) => -1020
+            Kern 'P' (U+0050) + ?' (U+00C1) => -1440
+            Kern 'S' (U+0053) + ?' (U+00C1) => -580
+            Kern 'T' (U+0054) + ?' (U+00C1) => -1540
+            Kern 'U' (U+0055) + ?' (U+00C1) => -900
+            Kern 'V' (U+0056) + ?' (U+00C1) => -1760
+            Kern 'W' (U+0057) + ?' (U+00C1) => -1400
+            Kern 'Y' (U+0059) + ?' (U+00C1) => -1740
+            Kern '?' (U+00BB) + ?' (U+00C1) => -860
+            Kern '?' (U+2018) + ?' (U+00C1) => -1700
+            Kern '?' (U+2019) + ?' (U+00C1) => -1720
+            Kern '?' (U+201C) + ?' (U+00C1) => -1700
+            Kern '?' (U+201D) + ?' (U+00C1) => -1720
+            Kern '?' (U+203A) + ?' (U+00C1) => -860
+            Kern 'B' (U+0042) + ?' (U+00C2) => -440
+            Kern 'D' (U+0044) + ?' (U+00C2) => -940
+            Kern 'F' (U+0046) + ?' (U+00C2) => -1780
+            Kern 'G' (U+0047) + ?' (U+00C2) => -420
+            Kern 'T' (U+0054) + ?' (U+00C2) => -1540
+            Kern 'U' (U+0055) + ?' (U+00C2) => -900
+            Kern 'V' (U+0056) + ?' (U+00C2) => -1760
+            Kern 'W' (U+0057) + ?' (U+00C2) => -1400
+            Kern 'Y' (U+0059) + ?' (U+00C2) => -1740
+            Kern 'B' (U+0042) + ?' (U+00C3) => -440
+            Kern 'D' (U+0044) + ?' (U+00C3) => -940
+            Kern 'F' (U+0046) + ?' (U+00C3) => -1780
+            Kern 'G' (U+0047) + ?' (U+00C3) => -420
+            Kern 'T' (U+0054) + ?' (U+00C3) => -1540
+            Kern 'U' (U+0055) + ?' (U+00C3) => -900
+            Kern 'V' (U+0056) + ?' (U+00C3) => -1760
+            Kern 'W' (U+0057) + ?' (U+00C3) => -1400
+            Kern 'Y' (U+0059) + ?' (U+00C3) => -1740
+            Kern '-' (U+002D) + ?' (U+00C4) => 240
+            Kern 'B' (U+0042) + ?' (U+00C4) => -440
+            Kern 'C' (U+0043) + ?' (U+00C4) => -280
+            Kern 'D' (U+0044) + ?' (U+00C4) => -940
+            Kern 'F' (U+0046) + ?' (U+00C4) => -1780
+            Kern 'G' (U+0047) + ?' (U+00C4) => -420
+            Kern 'J' (U+004A) + ?' (U+00C4) => -820
+            Kern 'L' (U+004C) + ?' (U+00C4) => 760
+            Kern 'N' (U+004E) + ?' (U+00C4) => 220
+            Kern 'O' (U+004F) + ?' (U+00C4) => -1020
+            Kern 'P' (U+0050) + ?' (U+00C4) => -1440
+            Kern 'S' (U+0053) + ?' (U+00C4) => -580
+            Kern 'T' (U+0054) + ?' (U+00C4) => -1540
+            Kern 'U' (U+0055) + ?' (U+00C4) => -900
+            Kern 'V' (U+0056) + ?' (U+00C4) => -1760
+            Kern 'W' (U+0057) + ?' (U+00C4) => -1400
+            Kern 'Y' (U+0059) + ?' (U+00C4) => -1740
+            Kern '?' (U+00BB) + ?' (U+00C4) => -860
+            Kern '?' (U+2018) + ?' (U+00C4) => -1700
+            Kern '?' (U+2019) + ?' (U+00C4) => -1720
+            Kern '?' (U+201C) + ?' (U+00C4) => -1700
+            Kern '?' (U+201D) + ?' (U+00C4) => -1720
+            Kern '?' (U+203A) + ?' (U+00C4) => -860
+            Kern '-' (U+002D) + ?' (U+00C5) => 240
+            Kern 'B' (U+0042) + ?' (U+00C5) => -440
+            Kern 'C' (U+0043) + ?' (U+00C5) => -280
+            Kern 'D' (U+0044) + ?' (U+00C5) => -940
+            Kern 'F' (U+0046) + ?' (U+00C5) => -1780
+            Kern 'G' (U+0047) + ?' (U+00C5) => -420
+            Kern 'J' (U+004A) + ?' (U+00C5) => -820
+            Kern 'L' (U+004C) + ?' (U+00C5) => 760
+            Kern 'N' (U+004E) + ?' (U+00C5) => 220
+            Kern 'O' (U+004F) + ?' (U+00C5) => -1020
+            Kern 'P' (U+0050) + ?' (U+00C5) => -1440
+            Kern 'S' (U+0053) + ?' (U+00C5) => -580
+            Kern 'T' (U+0054) + ?' (U+00C5) => -1540
+            Kern 'U' (U+0055) + ?' (U+00C5) => -900
+            Kern 'V' (U+0056) + ?' (U+00C5) => -1760
+            Kern 'W' (U+0057) + ?' (U+00C5) => -1400
+            Kern 'Y' (U+0059) + ?' (U+00C5) => -1740
+            Kern '?' (U+00BB) + ?' (U+00C5) => -860
+            Kern '?' (U+2018) + ?' (U+00C5) => -1700
+            Kern '?' (U+2019) + ?' (U+00C5) => -1720
+            Kern '?' (U+201C) + ?' (U+00C5) => -1700
+            Kern '?' (U+201D) + ?' (U+00C5) => -1720
+            Kern '?' (U+203A) + ?' (U+00C5) => -860
+            Kern '-' (U+002D) + ?' (U+00C6) => 200
+            Kern 'B' (U+0042) + ?' (U+00C6) => -200
+            Kern 'C' (U+0043) + ?' (U+00C6) => -20
+            Kern 'G' (U+0047) + ?' (U+00C6) => -220
+            Kern 'J' (U+004A) + ?' (U+00C6) => -560
+            Kern 'L' (U+004C) + ?' (U+00C6) => 920
+            Kern 'N' (U+004E) + ?' (U+00C6) => 400
+            Kern 'O' (U+004F) + ?' (U+00C6) => -1020
+            Kern 'P' (U+0050) + ?' (U+00C6) => -1540
+            Kern 'S' (U+0053) + ?' (U+00C6) => -380
+            Kern 'T' (U+0054) + ?' (U+00C6) => -1380
+            Kern 'U' (U+0055) + ?' (U+00C6) => -700
+            Kern 'V' (U+0056) + ?' (U+00C6) => -1760
+            Kern 'W' (U+0057) + ?' (U+00C6) => -1240
+            Kern 'Y' (U+0059) + ?' (U+00C6) => -1560
+            Kern '?' (U+00BB) + ?' (U+00C6) => -900
+            Kern '?' (U+2018) + ?' (U+00C6) => -1960
+            Kern '?' (U+2019) + ?' (U+00C6) => -1980
+            Kern '?' (U+201C) + ?' (U+00C6) => -1980
+            Kern '?' (U+201D) + ?' (U+00C6) => -2000
+            Kern '?' (U+201E) + ?' (U+00C6) => 400
+            Kern '?' (U+203A) + ?' (U+00C6) => -900
+            Kern 'A' (U+0041) + ?' (U+00C7) => -1040
+            Kern 'L' (U+004C) + ?' (U+00C7) => -240
+            Kern 'N' (U+004E) + ?' (U+00C7) => -100
+            Kern 'R' (U+0052) + ?' (U+00C7) => -260
+            Kern 'B' (U+0042) + ?' (U+00D2) => 40
+            Kern 'L' (U+004C) + ?' (U+00D2) => -220
+            Kern 'T' (U+0054) + ?' (U+00D2) => -140
+            Kern 'V' (U+0056) + ?' (U+00D2) => -840
+            Kern 'W' (U+0057) + ?' (U+00D2) => -640
+            Kern 'Y' (U+0059) + ?' (U+00D2) => -940
+            Kern 'B' (U+0042) + ?' (U+00D3) => 40
+            Kern 'C' (U+0043) + ?' (U+00D3) => -400
+            Kern 'K' (U+004B) + ?' (U+00D3) => -1100
+            Kern 'L' (U+004C) + ?' (U+00D3) => -220
+            Kern 'N' (U+004E) + ?' (U+00D3) => -100
+            Kern 'R' (U+0052) + ?' (U+00D3) => -260
+            Kern 'T' (U+0054) + ?' (U+00D3) => -140
+            Kern 'V' (U+0056) + ?' (U+00D3) => -840
+            Kern 'W' (U+0057) + ?' (U+00D3) => -640
+            Kern 'Y' (U+0059) + ?' (U+00D3) => -940
+            Kern 'B' (U+0042) + ?' (U+00D4) => 40
+            Kern 'L' (U+004C) + ?' (U+00D4) => -220
+            Kern 'T' (U+0054) + ?' (U+00D4) => -140
+            Kern 'V' (U+0056) + ?' (U+00D4) => -840
+            Kern 'W' (U+0057) + ?' (U+00D4) => -640
+            Kern 'Y' (U+0059) + ?' (U+00D4) => -940
+            Kern 'L' (U+004C) + ?' (U+00D5) => -220
+            Kern 'T' (U+0054) + ?' (U+00D5) => -140
+            Kern 'V' (U+0056) + ?' (U+00D5) => -840
+            Kern 'W' (U+0057) + ?' (U+00D5) => -640
+            Kern 'Y' (U+0059) + ?' (U+00D5) => -940
+            Kern 'A' (U+0041) + ?' (U+00D6) => -1040
+            Kern 'B' (U+0042) + ?' (U+00D6) => 40
+            Kern 'C' (U+0043) + ?' (U+00D6) => -400
+            Kern 'F' (U+0046) + ?' (U+00D6) => -360
+            Kern 'K' (U+004B) + ?' (U+00D6) => -1100
+            Kern 'L' (U+004C) + ?' (U+00D6) => -220
+            Kern 'N' (U+004E) + ?' (U+00D6) => -100
+            Kern 'R' (U+0052) + ?' (U+00D6) => -260
+            Kern 'T' (U+0054) + ?' (U+00D6) => -140
+            Kern 'V' (U+0056) + ?' (U+00D6) => -840
+            Kern 'W' (U+0057) + ?' (U+00D6) => -640
+            Kern 'X' (U+0058) + ?' (U+00D6) => -860
+            Kern 'Y' (U+0059) + ?' (U+00D6) => -940
+            Kern 'B' (U+0042) + ?' (U+00D8) => 80
+            Kern 'T' (U+0054) + ?' (U+00D8) => -140
+            Kern 'V' (U+0056) + ?' (U+00D8) => -820
+            Kern 'W' (U+0057) + ?' (U+00D8) => -580
+            Kern 'Y' (U+0059) + ?' (U+00D8) => -960
+            Kern 'A' (U+0041) + ?' (U+00D9) => -920
+            Kern 'A' (U+0041) + ?' (U+00DA) => -920
+            Kern 'A' (U+0041) + ?' (U+00DB) => -920
+            Kern 'A' (U+0041) + ?' (U+00DC) => -920
+            Kern 'L' (U+004C) + ?' (U+00DC) => -120
+            Kern 'R' (U+0052) + ?' (U+00DC) => -180
+            Kern 'r' (U+0072) + ?' (U+00E0) => 520
+            Kern 'v' (U+0076) + ?' (U+00E0) => -1480
+            Kern 'w' (U+0077) + ?' (U+00E0) => -1140
+            Kern 'y' (U+0079) + ?' (U+00E0) => -1380
+            Kern 'F' (U+0046) + ?' (U+00E1) => -1900
+            Kern 'N' (U+004E) + ?' (U+00E1) => 140
+            Kern 'P' (U+0050) + ?' (U+00E1) => -1440
+            Kern 'R' (U+0052) + ?' (U+00E1) => 560
+            Kern 'f' (U+0066) + ?' (U+00E1) => -1840
+            Kern 'k' (U+006B) + ?' (U+00E1) => 600
+            Kern 'r' (U+0072) + ?' (U+00E1) => 520
+            Kern 't' (U+0074) + ?' (U+00E1) => -1240
+            Kern 'v' (U+0076) + ?' (U+00E1) => -1480
+            Kern 'w' (U+0077) + ?' (U+00E1) => -1140
+            Kern 'y' (U+0079) + ?' (U+00E1) => -1380
+            Kern 'r' (U+0072) + ?' (U+00E2) => 520
+            Kern 'v' (U+0076) + ?' (U+00E2) => -1480
+            Kern 'w' (U+0077) + ?' (U+00E2) => -1140
+            Kern 'y' (U+0079) + ?' (U+00E2) => -1380
+            Kern 'v' (U+0076) + ?' (U+00E3) => -1480
+            Kern 'w' (U+0077) + ?' (U+00E3) => -1140
+            Kern 'y' (U+0079) + ?' (U+00E3) => -1380
+            Kern 'F' (U+0046) + ?' (U+00E4) => -1340
+            Kern 'K' (U+004B) + ?' (U+00E4) => 660
+            Kern 'N' (U+004E) + ?' (U+00E4) => 140
+            Kern 'P' (U+0050) + ?' (U+00E4) => -1440
+            Kern 'R' (U+0052) + ?' (U+00E4) => 560
+            Kern 'f' (U+0066) + ?' (U+00E4) => -1840
+            Kern 'g' (U+0067) + ?' (U+00E4) => -340
+            Kern 'k' (U+006B) + ?' (U+00E4) => 600
+            Kern 'r' (U+0072) + ?' (U+00E4) => 520
+            Kern 't' (U+0074) + ?' (U+00E4) => -1240
+            Kern 'v' (U+0076) + ?' (U+00E4) => -1480
+            Kern 'w' (U+0077) + ?' (U+00E4) => -1140
+            Kern 'y' (U+0079) + ?' (U+00E4) => -1380
+            Kern 'F' (U+0046) + ?' (U+00E5) => -1860
+            Kern 'K' (U+004B) + ?' (U+00E5) => 660
+            Kern 'N' (U+004E) + ?' (U+00E5) => 140
+            Kern 'P' (U+0050) + ?' (U+00E5) => -1440
+            Kern 'R' (U+0052) + ?' (U+00E5) => 560
+            Kern 'f' (U+0066) + ?' (U+00E5) => -1840
+            Kern 'g' (U+0067) + ?' (U+00E5) => -340
+            Kern 'k' (U+006B) + ?' (U+00E5) => 600
+            Kern 'r' (U+0072) + ?' (U+00E5) => 520
+            Kern 't' (U+0074) + ?' (U+00E5) => -1240
+            Kern 'v' (U+0076) + ?' (U+00E5) => -1480
+            Kern 'w' (U+0077) + ?' (U+00E5) => -1140
+            Kern 'y' (U+0079) + ?' (U+00E5) => -1380
+            Kern 'F' (U+0046) + ?' (U+00E6) => -2500
+            Kern 'K' (U+004B) + ?' (U+00E6) => 400
+            Kern 'N' (U+004E) + ?' (U+00E6) => -120
+            Kern 'P' (U+0050) + ?' (U+00E6) => -1980
+            Kern 'R' (U+0052) + ?' (U+00E6) => 300
+            Kern 'T' (U+0054) + ?' (U+00E6) => -1880
+            Kern 'V' (U+0056) + ?' (U+00E6) => -2260
+            Kern 'W' (U+0057) + ?' (U+00E6) => -1740
+            Kern 'Y' (U+0059) + ?' (U+00E6) => -2080
+            Kern 'f' (U+0066) + ?' (U+00E6) => -2400
+            Kern 'g' (U+0067) + ?' (U+00E6) => -620
+            Kern 'k' (U+006B) + ?' (U+00E6) => 340
+            Kern 'r' (U+0072) + ?' (U+00E6) => 240
+            Kern 't' (U+0074) + ?' (U+00E6) => -1500
+            Kern 'v' (U+0076) + ?' (U+00E6) => -1800
+            Kern 'w' (U+0077) + ?' (U+00E6) => -1400
+            Kern 'y' (U+0079) + ?' (U+00E6) => -1660
+            Kern 'A' (U+0041) + ?' (U+00E7) => -740
+            Kern 'r' (U+0072) + ?' (U+00E7) => -260
+            Kern 'r' (U+0072) + ?' (U+00E8) => 40
+            Kern 'v' (U+0076) + ?' (U+00E8) => 240
+            Kern 'w' (U+0077) + ?' (U+00E8) => 280
+            Kern 'y' (U+0079) + ?' (U+00E8) => 320
+            Kern 'F' (U+0046) + ?' (U+00E9) => 20
+            Kern 'N' (U+004E) + ?' (U+00E9) => -20
+            Kern 'P' (U+0050) + ?' (U+00E9) => -60
+            Kern 'R' (U+0052) + ?' (U+00E9) => 100
+            Kern 'f' (U+0066) + ?' (U+00E9) => 0
+            Kern 'g' (U+0067) + ?' (U+00E9) => -240
+            Kern 'k' (U+006B) + ?' (U+00E9) => 140
+            Kern 'r' (U+0072) + ?' (U+00E9) => 40
+            Kern 't' (U+0074) + ?' (U+00E9) => 140
+            Kern 'v' (U+0076) + ?' (U+00E9) => 240
+            Kern 'w' (U+0077) + ?' (U+00E9) => 280
+            Kern 'x' (U+0078) + ?' (U+00E9) => 180
+            Kern 'y' (U+0079) + ?' (U+00E9) => 320
+            Kern 'r' (U+0072) + ?' (U+00EA) => 40
+            Kern 'v' (U+0076) + ?' (U+00EA) => 240
+            Kern 'w' (U+0077) + ?' (U+00EA) => 280
+            Kern 'y' (U+0079) + ?' (U+00EA) => 320
+            Kern 'r' (U+0072) + ?' (U+00F2) => -260
+            Kern 'v' (U+0076) + ?' (U+00F2) => -720
+            Kern 'w' (U+0077) + ?' (U+00F2) => -560
+            Kern 'y' (U+0079) + ?' (U+00F2) => -920
+            Kern 'F' (U+0046) + ?' (U+00F3) => -1040
+            Kern 'K' (U+004B) + ?' (U+00F3) => -1300
+            Kern 'N' (U+004E) + ?' (U+00F3) => -100
+            Kern 'P' (U+0050) + ?' (U+00F3) => -160
+            Kern 'R' (U+0052) + ?' (U+00F3) => -320
+            Kern 'f' (U+0066) + ?' (U+00F3) => -160
+            Kern 'g' (U+0067) + ?' (U+00F3) => -100
+            Kern 'k' (U+006B) + ?' (U+00F3) => -1060
+            Kern 'r' (U+0072) + ?' (U+00F3) => -260
+            Kern 't' (U+0074) + ?' (U+00F3) => -40
+            Kern 'v' (U+0076) + ?' (U+00F3) => -720
+            Kern 'w' (U+0077) + ?' (U+00F3) => -560
+            Kern 'y' (U+0079) + ?' (U+00F3) => -920
+            Kern 'r' (U+0072) + ?' (U+00F4) => -260
+            Kern 'F' (U+0046) + ?' (U+00F6) => -1040
+            Kern 'K' (U+004B) + ?' (U+00F6) => -1300
+            Kern 'N' (U+004E) + ?' (U+00F6) => -100
+            Kern 'P' (U+0050) + ?' (U+00F6) => -160
+            Kern 'R' (U+0052) + ?' (U+00F6) => -320
+            Kern 'f' (U+0066) + ?' (U+00F6) => -160
+            Kern 'g' (U+0067) + ?' (U+00F6) => -100
+            Kern 'k' (U+006B) + ?' (U+00F6) => -1060
+            Kern 'r' (U+0072) + ?' (U+00F6) => -260
+            Kern 't' (U+0074) + ?' (U+00F6) => -40
+            Kern 'v' (U+0076) + ?' (U+00F6) => -720
+            Kern 'w' (U+0077) + ?' (U+00F6) => -560
+            Kern 'y' (U+0079) + ?' (U+00F6) => -920
+            Kern 'F' (U+0046) + ?' (U+00F8) => -1040
+            Kern 'N' (U+004E) + ?' (U+00F8) => -40
+            Kern 'P' (U+0050) + ?' (U+00F8) => -160
+            Kern 'T' (U+0054) + ?' (U+00F8) => -980
+            Kern 'V' (U+0056) + ?' (U+00F8) => -1120
+            Kern 'W' (U+0057) + ?' (U+00F8) => -840
+            Kern 'Y' (U+0059) + ?' (U+00F8) => -1540
+            Kern 'f' (U+0066) + ?' (U+00F8) => -160
+            Kern 'r' (U+0072) + ?' (U+00F8) => -240
+            Kern 'v' (U+0076) + ?' (U+00F8) => -680
+            Kern 'w' (U+0077) + ?' (U+00F8) => -500
+            Kern 'y' (U+0079) + ?' (U+00F8) => -900
+            Kern 'R' (U+0052) + ?' (U+00FA) => -220
+            Kern 'K' (U+004B) + ?' (U+00FC) => -1080
+            Kern 'L' (U+004C) + ?' (U+00FC) => -40
+            Kern 'N' (U+004E) + ?' (U+00FC) => -80
+            Kern 'R' (U+0052) + ?' (U+00FC) => -220
+            Kern 'k' (U+006B) + ?' (U+00FC) => 40
+            Kern 'B' (U+0042) + ?' (U+0152) => 20
+            Kern 'K' (U+004B) + ?' (U+0152) => -1120
+            Kern 'R' (U+0052) + ?' (U+0152) => -260
+            Kern 'T' (U+0054) + ?' (U+0152) => -180
+            Kern 'F' (U+0046) + ?' (U+0153) => -1020
+            Kern 'P' (U+0050) + ?' (U+0153) => -100
+            Kern 'R' (U+0052) + ?' (U+0153) => -300
+            Kern 'f' (U+0066) + ?' (U+0153) => -140
+            Kern 'r' (U+0072) + ?' (U+0153) => -180
+            Kern ',' (U+002C) + ?' (U+2019) => -720
+            Kern '.' (U+002E) + ?' (U+2019) => -660
+            Kern 'A' (U+0041) + ?' (U+2019) => -1800
+            Kern 'L' (U+004C) + ?' (U+2019) => -2060
+            Kern 'a' (U+0061) + ?' (U+2019) => -1840
+            Kern 'e' (U+0065) + ?' (U+2019) => -320
+            Kern 'f' (U+0066) + ?' (U+2019) => 60
+            Kern 'h' (U+0068) + ?' (U+2019) => -140
+            Kern 'n' (U+006E) + ?' (U+2019) => -140
+            Kern 'o' (U+006F) + ?' (U+2019) => -300
+            Kern 'r' (U+0072) + ?' (U+2019) => -120
+            Kern 's' (U+0073) + ?' (U+2019) => -360
+            Kern 't' (U+0074) + ?' (U+2019) => 80
+            Kern 'u' (U+0075) + ?' (U+2019) => -60
+            Kern '?' (U+00C1) + ?' (U+2019) => -1800
+            Kern '?' (U+00C4) + ?' (U+2019) => -1800
+            Kern '?' (U+00C5) + ?' (U+2019) => -1800
+            Kern ',' (U+002C) + ?' (U+201D) => -720
+            Kern '.' (U+002E) + ?' (U+201D) => -660
+            Kern 'A' (U+0041) + ?' (U+201D) => -1800
+            Kern 'L' (U+004C) + ?' (U+201D) => -2060
+            Kern '?' (U+00C4) + ?' (U+201D) => -1800
+            Kern '?' (U+00C5) + ?' (U+201D) => -1800
+            Kern 'A' (U+0041) + ?' (U+2039) => -880
+            Kern 'T' (U+0054) + ?' (U+2039) => -1980
+            Kern 'V' (U+0056) + ?' (U+2039) => -1240
+            Kern 'W' (U+0057) + ?' (U+2039) => -960
+            Kern 'Y' (U+0059) + ?' (U+2039) => -1780
+            Kern '?' (U+00C1) + ?' (U+2039) => -880
+            Kern '?' (U+00C4) + ?' (U+2039) => -880
+            Kern '?' (U+00C5) + ?' (U+2039) => -880
+        }
+    }
+}

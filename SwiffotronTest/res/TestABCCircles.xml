@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <swf id="two_circles">
+
+    <swfout store="store://store/TestABCCircles.swf" />
+
+    <!-- The first is a red circle that moves slowly to the left by having its own class -->
+    <instance id="red" type="extern" src="store://store/abccircles.redcircle.swf" class="com.swiffotron.RedCircleMain"/>
+    
+    <!-- The second is a blue circle that moves slowly to the right via an event listener on the stage -->
+    <instance id="blue" type="extern" src="store://store/abccircles.circle.swf" class="com.swiffotron.BlueCircleMain"/>
+
+  </swf>
+
+</swiffotron>
