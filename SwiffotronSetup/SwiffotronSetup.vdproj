@@ -15,44 +15,44 @@
     {
         "Entry"
         {
+        "MsmKey" = "8:_2D3AD826A52314DD346E8287F29CD44B"
+        "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_2D3AD826A52314DD346E8287F29CD44B"
+        "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6BDD94E62258FA33483C55F5A9D99AAD"
+        "MsmKey" = "8:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
         "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_6BDD94E62258FA33483C55F5A9D99AAD"
-        "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7542EEE1F434BD1F8E4F16175570E92E"
-        "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_7542EEE1F434BD1F8E4F16175570E92E"
+        "MsmKey" = "8:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
         "OwnerKey" = "8:_A638BF63ED2148C5A2165D61DA704275"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7542EEE1F434BD1F8E4F16175570E92E"
+        "MsmKey" = "8:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
         "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_7542EEE1F434BD1F8E4F16175570E92E"
-        "OwnerKey" = "8:_6BDD94E62258FA33483C55F5A9D99AAD"
+        "MsmKey" = "8:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
+        "OwnerKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -63,38 +63,56 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_9DF5F4FC220D2067F9B6474C2AD54C3E"
-        "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9DF5F4FC220D2067F9B6474C2AD54C3E"
-        "OwnerKey" = "8:_A638BF63ED2148C5A2165D61DA704275"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9DF5F4FC220D2067F9B6474C2AD54C3E"
-        "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_9DF5F4FC220D2067F9B6474C2AD54C3E"
-        "OwnerKey" = "8:_7542EEE1F434BD1F8E4F16175570E92E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_A638BF63ED2148C5A2165D61DA704275"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
+        "MsmKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
+        "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
+        "OwnerKey" = "8:_A638BF63ED2148C5A2165D61DA704275"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
+        "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
+        "OwnerKey" = "8:_2D3AD826A52314DD346E8287F29CD44B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2D3AD826A52314DD346E8287F29CD44B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -107,24 +125,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_6BDD94E62258FA33483C55F5A9D99AAD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_7542EEE1F434BD1F8E4F16175570E92E"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_9DF5F4FC220D2067F9B6474C2AD54C3E"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -252,7 +252,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:3.5.30729         "
+                "FrameworkVersion" = "8:3.5.30729          "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=76617"
                 }
@@ -260,14 +260,14 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_6BDD94E62258FA33483C55F5A9D99AAD"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2D3AD826A52314DD346E8287F29CD44B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Swiffotron, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_6BDD94E62258FA33483C55F5A9D99AAD"
+                    "_2D3AD826A52314DD346E8287F29CD44B"
                     {
                     "Name" = "8:Swiffotron.dll"
                     "Attributes" = "3:512"
@@ -291,20 +291,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_7542EEE1F434BD1F8E4F16175570E92E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SWFModeller, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_7542EEE1F434BD1F8E4F16175570E92E"
+                    "_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
                     {
-                    "Name" = "8:SWFModeller.dll"
+                    "Name" = "8:ICSharpCode.SharpZipLib.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:SWFModeller.dll"
+            "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_517418DDC1424232A218AE6BE3C90911"
@@ -322,20 +322,20 @@
             "IsDependency" = "11:TRUE"
             "IsolateTo" = "8:"
             }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_9DF5F4FC220D2067F9B6474C2AD54C3E"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FD08E81360C335D7D3C43685DADCCFDC"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:ICSharpCode.SharpZipLib, Version=0.86.0.518, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL"
+            "AssemblyAsmDisplayName" = "8:SWFModeller, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_9DF5F4FC220D2067F9B6474C2AD54C3E"
+                    "_FD08E81360C335D7D3C43685DADCCFDC"
                     {
-                    "Name" = "8:ICSharpCode.SharpZipLib.dll"
+                    "Name" = "8:SWFModeller.dll"
                     "Attributes" = "3:512"
                     }
                 }
-            "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
+            "SourcePath" = "8:SWFModeller.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_517418DDC1424232A218AE6BE3C90911"
@@ -410,7 +410,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Swiffotron"
         "ProductCode" = "8:{75FF24EF-0848-47A2-8AB4-8C6128F842D4}"
-        "PackageCode" = "8:{2AC5A1A4-CE33-4985-A718-CAB78FA97A52}"
+        "PackageCode" = "8:{6A89976F-4F54-46AE-A444-2E3C4896A5D2}"
         "UpgradeCode" = "8:{0F888FA2-C8AE-4A0B-A756-A3458C450878}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
