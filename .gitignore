@@ -7,3 +7,5 @@ LocalTestRun.testrunconfig
 *.docstates
 *.vsmdi
 TestResults/*
+*.msi
+setup.exe
