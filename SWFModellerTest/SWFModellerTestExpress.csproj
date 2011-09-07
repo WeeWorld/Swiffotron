@@ -37,6 +37,9 @@
     <StartupObject>SWFProcessing.SWFModeller.Test.Express.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExpressTest">
+      <HintPath>..\..\ExpressTest\bin\Debug\ExpressTest.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -80,7 +83,6 @@
     <EmbeddedResource Include="res\predicted\ReadSWFHasBool.txt" />
     <EmbeddedResource Include="res\predicted\ReadSWFTestBlobs.txt" />
     <EmbeddedResource Include="res\predicted\ReadSWFTestTween.txt" />
-    <EmbeddedResource Include="res\predicted\ReadSWFTestTweenCompressed.txt" />
     <EmbeddedResource Include="res\predicted\ReadSwiffotronLogo.txt" />
     <EmbeddedResource Include="res\predicted\ReadSwitch.txt" />
     <EmbeddedResource Include="res\predicted\ReadText.txt" />
@@ -108,10 +110,6 @@
     <EmbeddedResource Include="res\ReadTimelineSWFTest.swf" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExpressTest\ExpressTest.csproj">
-      <Project>{F97FDA69-986E-47F4-B76F-D60C1C448D7F}</Project>
-      <Name>ExpressTest</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SWFModeller\SWFModeller.csproj">
       <Project>{E584EF20-EB00-463C-8E57-2B3F5D3A5680}</Project>
       <Name>SWFModeller</Name>
@@ -122,6 +120,10 @@
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="res\express\SWFModellerTestExpress.testSet.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\predicted\ReadDefineShape2.txt" />
+    <EmbeddedResource Include="res\ReadDefineShape2.swf" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
