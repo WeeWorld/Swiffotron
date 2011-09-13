@@ -121,6 +121,7 @@
     <Compile Include="IO\IDMarshaller.cs" />
     <Compile Include="IO\IImageFinder.cs" />
     <Compile Include="IO\SWFReaderOptions.cs" />
+    <Compile Include="Process\SWFContext.cs" />
     <Compile Include="Text\PixelAlignment.cs" />
     <Compile Include="Text\SWFFont.cs" />
     <Compile Include="Text\GlyphLayout.cs" />
@@ -156,6 +157,7 @@
   <ItemGroup>
     <Content Include="ICSharpCode.SharpZipLib.dll" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

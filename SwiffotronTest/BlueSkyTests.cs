@@ -10,6 +10,7 @@ namespace SWFProcessing.Swiffotron.Test
     using ExpressTest.UnitTesting;
 #else
     using Microsoft.VisualStudio.TestTools.UnitTesting;
+    using SWFProcessing.Swiffotron.Processor;
 #endif
 
     /// <summary>
@@ -39,9 +40,13 @@ namespace SWFProcessing.Swiffotron.Test
             MockCache cache;
             swiffotron = CreateMockSwiffotron(out store, out cache);
 
-            /* TODO: Write a new commit listener that looks for PNG files and pass it in here. */
+            Process(swiffotron, @"TestPNGOut.xml");
+        }
 
-            swiffotron.Process(ResourceAsStream(@"TestPNGOut.xml"), null, null, null, null, null);
+        private void Process(Swiffotron swiffotron, string name)
+        {
+            /* TODO: Write a new commit listener that looks for PNG files and pass it in here. */
+            swiffotron.Process(ResourceAsStream(name), null, null, null, null, null);
         }
 
         /// <summary>
@@ -63,7 +68,7 @@ namespace SWFProcessing.Swiffotron.Test
 
             /* TODO: Write a new commit listener that looks for video files and pass it in here. */
 
-            swiffotron.Process(ResourceAsStream(@"TestVidOut.xml"), null, null, null, null, null);
+            Process(swiffotron, @"TestVidOut.xml");
         }
     }
 }

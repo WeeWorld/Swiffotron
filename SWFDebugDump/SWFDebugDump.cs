@@ -12,6 +12,7 @@ namespace SWFDebugDump
     using SWFProcessing.SWFModeller;
     using SWFProcessing.SWFModeller.ABC.Debug;
     using SWFProcessing.SWFModeller.ABC.IO;
+    using SWFProcessing.SWFModeller.Process;
 
     /// <summary>
     /// Disassembles SWF and bytecode to text files.
@@ -39,7 +40,7 @@ namespace SWFDebugDump
                     SWF swf = null;
                     using (FileStream fs = new FileStream(swfFile, FileMode.Open))
                     {
-                        swf = new SWFReader(fs, null, binDump, this).ReadSWF(swfFile);
+                        swf = new SWFReader(fs, null, binDump, this).ReadSWF(new SWFContext(swfFile));
                         swf.ToStringModelView(0, modelDump);
                     }
 
@@ -67,12 +68,12 @@ namespace SWFDebugDump
             new SWFDebugDump().Run(args);
         }
 
-        public void OnLoadAbc(bool lazyInit, string swfName, string abcName, int doAbcCount, byte[] bytecode)
+        public void OnLoadAbc(bool lazyInit, SWFContext ctx, string abcName, int doAbcCount, byte[] bytecode)
         {
             StringBuilder readLog = new StringBuilder();
             new AbcReader().Read(bytecode, readLog);
 
-            using (FileStream modelOut = new FileStream(swfName + ".ABCREAD" + "." + doAbcCount + ".txt", FileMode.Create))
+            using (FileStream modelOut = new FileStream(ctx.Name + ".ABCREAD" + "." + doAbcCount + ".txt", FileMode.Create))
             {
                 byte[] ascii = new ASCIIEncoding().GetBytes(readLog.ToString());
                 modelOut.Write(ascii, 0, ascii.Length);

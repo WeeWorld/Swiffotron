@@ -58,6 +58,7 @@
     <Compile Include="IO\ISwiffotronStore.cs" />
     <Compile Include="Processor\DependencyList.cs" />
     <Compile Include="Processor\Swiffotron.cs" />
+    <Compile Include="Processor\SwiffotronContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Processor\SwiffotronException.cs" />
   </ItemGroup>
@@ -77,6 +78,7 @@
   <ItemGroup>
     <Content Include="swiffotron-config.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      <SubType>Designer</SubType>
     </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

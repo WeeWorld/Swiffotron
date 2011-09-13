@@ -7,6 +7,7 @@
 namespace SWFProcessing.SWFModeller
 {
     using System;
+    using SWFProcessing.SWFModeller.Process;
 
     public enum SWFModellerError
     {
@@ -67,8 +68,29 @@ namespace SWFProcessing.SWFModeller
         /// </summary>
         /// <param name="error">The error code.</param>
         /// <param name="msg">The error message</param>
+        public SWFModellerException(SWFModellerError error, string msg, SWFContext ctx)
+            : base(error.ToString() + "; " + msg + "; " + ctx.ToString())
+        {
+            this.Error = error;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of an exception with an error message
+        /// </summary>
+        /// <param name="error">The error code.</param>
+        /// <param name="msg">The error message</param>
         public SWFModellerException(SWFModellerError error, string msg)
-                : base(error.ToString() + "; " + msg)
+            : base(error.ToString() + "; " + msg)
+        {
+            this.Error = error;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of an exception without an error message
+        /// </summary>
+        /// <param name="error">The error code.</param>
+        public SWFModellerException(SWFModellerError error, SWFContext ctx)
+            : base(error.ToString() + "; " + ctx.ToString())
         {
             this.Error = error;
         }

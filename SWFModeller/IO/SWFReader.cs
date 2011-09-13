@@ -23,6 +23,7 @@ namespace SWFProcessing.SWFModeller
     using SWFProcessing.SWFModeller.Modelling;
     using SWFProcessing.SWFModeller.Text;
     using DBug = System.Diagnostics;
+    using SWFProcessing.SWFModeller.Process;
 
     /// <summary>
     /// TODO: Look at BinaryReader. It may do a lot of what BitReader already
@@ -231,7 +232,7 @@ namespace SWFProcessing.SWFModeller
                 default:
                     throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
-                            @"Unsupported tag type: " + type);
+                            @"Unsupported tag type: " + type, swf.Context);
             }
 
             this.FinishTag(followingOffset);
@@ -260,7 +261,7 @@ namespace SWFProcessing.SWFModeller
                 if (jpegTable == null)
                 {
                     throw new SWFModellerException(SWFModellerError.SWFParsing,
-                            "DefineBits tag without a JPEGTables tag is illegal.");
+                            "DefineBits tag without a JPEGTables tag is illegal.", swf.Context);
                 }
                 image.JPEGTable = jpegTable;
             }
@@ -292,7 +293,7 @@ namespace SWFProcessing.SWFModeller
                 if ((flags & 0xF0) != 0x80)
                 {
                     /* Top 4 bits must match 1000xxxx */
-                    throw new SWFModellerException(SWFModellerError.SWFParsing, "Bad flags in DefineText");
+                    throw new SWFModellerException(SWFModellerError.SWFParsing, "Bad flags in DefineText", swf.Context);
                 }
 
                 bool hasFont = ((flags & 0x08) != 0);
@@ -396,7 +397,7 @@ namespace SWFProcessing.SWFModeller
             if (!hasFont && hasFontClass)
             {
                 throw new SWFModellerException(SWFModellerError.UnimplementedFeature,
-                        "Font classes are not yet supported.");
+                        "Font classes are not yet supported.", swf.Context);
             }
 
             if (hasFont)
@@ -439,7 +440,7 @@ namespace SWFProcessing.SWFModeller
             SWFFont font = fontDict[this.sdtr.ReadUI16()];
             if (font == null)
             {
-                throw new SWFModellerException(SWFModellerError.SWFParsing, "Bad font ID in font name data");
+                throw new SWFModellerException(SWFModellerError.SWFParsing, "Bad font ID in font name data", swf.Context);
             }
 
             font.FullName = this.sdtr.ReadString();
@@ -451,7 +452,7 @@ namespace SWFProcessing.SWFModeller
             SWFFont font = fontDict[this.sdtr.ReadUI16()];
             if (font == null)
             {
-                throw new SWFModellerException(SWFModellerError.SWFParsing, "Bad font ID in pixel alignment data");
+                throw new SWFModellerException(SWFModellerError.SWFParsing, "Bad font ID in pixel alignment data", swf.Context);
             }
 
             font.ThicknessHint = (SWFFont.Thickness)this.sdtr.ReadUBits(2);
@@ -498,7 +499,7 @@ namespace SWFProcessing.SWFModeller
             if (isShiftJIS)
             {
                 throw new SWFModellerException(SWFModellerError.UnimplementedFeature,
-                        "ShiftJIS character encoding is not supported.");
+                        "ShiftJIS character encoding is not supported.", swf.Context);
             }
 
             int language = this.sdtr.ReadUI8();
@@ -533,7 +534,7 @@ namespace SWFProcessing.SWFModeller
                 int shapeOffset = (int)sdtr.Offset - startOffset;
                 if (shapeOffsets[i] != shapeOffset)
                 {
-                    throw new SWFModellerException(SWFModellerError.SWFParsing, "Bad font data.");
+                    throw new SWFModellerException(SWFModellerError.SWFParsing, "Bad font data.", swf.Context);
                 }
 
                 int end = codeTableOffset;
@@ -618,7 +619,7 @@ namespace SWFProcessing.SWFModeller
         /// Reads a SWF from the stream.
         /// </summary>
         /// <returns>A parsed SWF object</returns>
-        public SWF ReadSWF(string name)
+        public SWF ReadSWF(SWFContext ctx)
         {
 #if DEBUG
             this.MarkDumpOffset("Start of file");
@@ -629,7 +630,7 @@ namespace SWFProcessing.SWFModeller
             this.sceneNotes = new List<FrameNote>();
             this.frameLabelNotes = new List<FrameNote>();
 
-            this.ReadHeader();
+            this.ReadHeader(ctx);
 
             this.fontDict = new Dictionary<int, SWFFont>();
 
@@ -648,10 +649,10 @@ namespace SWFProcessing.SWFModeller
             {
                 throw new SWFModellerException(
                         SWFModellerError.SWFParsing,
-                        @"AS2 and under is not supported.");
+                        @"AS2 and under is not supported.", ctx);
             }
 
-            this.swf = new SWF(name, false);
+            this.swf = new SWF(ctx, false);
             this.swf.FrameWidth = this.frameSize.Width;
             this.swf.FrameHeight = this.frameSize.Height;
             this.swf.Fps = this.fps;
@@ -692,7 +693,7 @@ namespace SWFProcessing.SWFModeller
                 {
                     throw new SWFModellerException(
                             SWFModellerError.SWFParsing,
-                            "Incorrect tag length at offset @" + this.sdtr.Offset);
+                            "Incorrect tag length at offset @" + this.sdtr.Offset, swf.Context);
                 }
                 else
                 {
@@ -704,7 +705,7 @@ namespace SWFProcessing.SWFModeller
             {
                 throw new SWFModellerException(
                         SWFModellerError.SWFParsing,
-                        @"Tag over-ran its length by " + (followingOffset - this.sdtr.Offset) + @" bytes");
+                        @"Tag over-ran its length by " + (followingOffset - this.sdtr.Offset) + @" bytes", swf.Context);
             }
         }
 
@@ -814,7 +815,7 @@ namespace SWFProcessing.SWFModeller
             {
                 throw new SWFModellerException(
                         SWFModellerError.UnimplementedFeature,
-                        @"Clip actions not yet supported."); /* TODO */
+                        @"Clip actions not yet supported.", swf.Context); /* TODO */
             }
 
             /* TODO: A null id means something in the spec. Look up how to find out what ID this should be.
@@ -883,20 +884,20 @@ namespace SWFProcessing.SWFModeller
             {
                 throw new SWFModellerException(
                         SWFModellerError.SWFParsing,
-                        @"Invalid file attributes");
+                        @"Invalid file attributes", swf.Context);
             }
 
             this.FinishTag(followingOffset);
         }
 
-        private void ReadHeader()
+        private void ReadHeader(SWFContext ctx)
         {
             int sig = this.sdtr.ReadUI24();
             if (sig != SIG_COMPRESSED && sig != SIG_UNCOMPRESSED)
             {
                 throw new SWFModellerException(
                         SWFModellerError.SWFParsing,
-                        @"Not a SWF file");
+                        @"Not a SWF file", ctx);
             }
 
             bool compressed = sig == SIG_COMPRESSED;
@@ -906,7 +907,7 @@ namespace SWFProcessing.SWFModeller
             {
                 throw new SWFModellerException(
                         SWFModellerError.SWFParsing,
-                        @"Only SWF 9+ is supported (Found " + this.version + @")");
+                        @"Only SWF 9+ is supported (Found " + this.version +")", ctx);
             }
 #if DEBUG
             this.Log("SWF version = " + this.version);
@@ -935,7 +936,7 @@ namespace SWFProcessing.SWFModeller
             this.Log("lazyInit=" + lazyInit + ", name=" + name + ", bytelen=" + bytecode.Length);
             if (this.abcInterceptor != null)
             {
-                this.abcInterceptor.OnLoadAbc(lazyInit, this.swf.Name, name, doAbcCount, bytecode);
+                this.abcInterceptor.OnLoadAbc(lazyInit, this.swf.Context, name, doAbcCount, bytecode);
             }
 #endif
             this.swf.AddScript(new DoABC(lazyInit, name, bytecode, null));
@@ -957,7 +958,7 @@ namespace SWFProcessing.SWFModeller
             {
                 throw new SWFModellerException(
                         SWFModellerError.SWFParsing,
-                        "Unexpected value in debug tag");
+                        "Unexpected value in debug tag", swf.Context);
             }
 
             string md5 = this.sdtr.ReadString();
@@ -1000,7 +1001,7 @@ namespace SWFProcessing.SWFModeller
                 {
                     throw new SWFModellerException(
                         SWFModellerError.SWFParsing,
-                        "Can't bind class " + className + " to missing character ID " + cid);
+                        "Can't bind class " + className + " to missing character ID " + cid, swf.Context);
                 }
 
                 ICharacter c = this.characterUnmarshaller[cid];
@@ -1009,7 +1010,7 @@ namespace SWFProcessing.SWFModeller
                 {
                     throw new SWFModellerException(
                         SWFModellerError.SWFParsing,
-                        "Can't bind class " + className + " to non-timeline character " + c);
+                        "Can't bind class " + className + " to non-timeline character " + c, swf.Context);
                 }
 
                 this.LateClassResolutions.Add(className, (Timeline)c);
@@ -1089,7 +1090,7 @@ namespace SWFProcessing.SWFModeller
                         {
                             throw new SWFModellerException(
                                     SWFModellerError.SWFParsing,
-                                    @"Frame count mismatch in sprite " + characterID);
+                                    @"Frame count mismatch in sprite " + characterID, swf.Context);
                         }
                         this.currentTimeline = this.swf;
                         return;
@@ -1118,12 +1119,12 @@ namespace SWFProcessing.SWFModeller
                     case Tag.DoAction:
                         throw new SWFModellerException(
                                 SWFModellerError.UnimplementedFeature,
-                                @"Unsupported tag within a sprite definition: " + ((Tag)type).ToString());
+                                @"Unsupported tag within a sprite definition: " + ((Tag)type).ToString(), swf.Context);
 
                     default:
                         throw new SWFModellerException(
                                 SWFModellerError.SWFParsing,
-                                @"Bad SWF; A " + ((Tag)type).ToString() + @" tag is not permitted within a sprite definition");
+                                @"Bad SWF; A " + ((Tag)type).ToString() + @" tag is not permitted within a sprite definition", swf.Context);
                 }
             }
         }
@@ -1191,10 +1192,10 @@ namespace SWFProcessing.SWFModeller
                     return (IImage)ch;
                 }
 
-                throw new SWFModellerException(SWFModellerError.SWFParsing, "Image reference does not point to image");
+                throw new SWFModellerException(SWFModellerError.SWFParsing, "Image reference does not point to image", swf.Context);
             }
 
-            throw new SWFModellerException(SWFModellerError.SWFParsing, "Missing image cid " + cid);
+            throw new SWFModellerException(SWFModellerError.SWFParsing, "Missing image cid " + cid, swf.Context);
         }
     }
 }

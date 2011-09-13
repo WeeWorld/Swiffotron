@@ -100,6 +100,18 @@
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_A638BF63ED2148C5A2165D61DA704275"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_2D3AD826A52314DD346E8287F29CD44B"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -113,18 +125,6 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_A638BF63ED2148C5A2165D61DA704275"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
         "MsmSig" = "8:_UNDEFINED"
         }
     }
@@ -252,7 +252,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:3.5.30729          "
+                "FrameworkVersion" = "8:3.5.30729            "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=76617"
                 }
@@ -410,7 +410,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Swiffotron"
         "ProductCode" = "8:{75FF24EF-0848-47A2-8AB4-8C6128F842D4}"
-        "PackageCode" = "8:{6A89976F-4F54-46AE-A444-2E3C4896A5D2}"
+        "PackageCode" = "8:{190416DF-FE68-4462-8129-A663CF2F83DC}"
         "UpgradeCode" = "8:{0F888FA2-C8AE-4A0B-A756-A3458C450878}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

@@ -23,6 +23,8 @@ namespace SWFProcessing.Swiffotron.Test
     using SWFProcessing.SWFModeller.IO;
     using SWFProcessing.Swiffotron.IO.Debug;
     using SWFProcessing.Swiffotron.IO;
+    using SWFProcessing.SWFModeller.Process;
+    using SWFProcessing.Swiffotron.Processor;
 
     /// <summary>
     /// These tests should always pass. Always.
@@ -99,12 +101,12 @@ namespace SWFProcessing.Swiffotron.Test
             }
         }
 
-        public void OnLoadAbc(bool lazyInit, string swfName, string abcName, int doAbcCount, byte[] bytecode)
+        public void OnLoadAbc(bool lazyInit, SWFContext ctx, string abcName, int doAbcCount, byte[] bytecode)
         {
             string abcDir = TestDir + @"\abc\";
             Directory.CreateDirectory(abcDir);
 
-            string name = swfName + "." + abcName + doAbcCount + abcName + ".abc";
+            string name = ctx.Name + "." + abcName + doAbcCount + abcName + ".abc";
 
             using (FileStream fs = new FileStream(abcDir + name, FileMode.Create))
             {
@@ -443,7 +445,7 @@ namespace SWFProcessing.Swiffotron.Test
 
             try
             {
-                swf = sr.ReadSWF(swfOut);
+                swf = sr.ReadSWF(new SWFContext(swfOut));
 
                 /* The delegate we gave to the SWF reader for trapping ABC constants will
                  * not have been run yet since the SWF reader doesn't parse the ABC unless
@@ -614,7 +616,7 @@ namespace SWFProcessing.Swiffotron.Test
                     using(MemoryStream ms = new MemoryStream(data))
                     using (SWFReader reader = new SWFReader(ms, new SWFReaderOptions() { StrictTagLength = true }, null, null))
                     {
-                        swfDump = SwfToString(reader.ReadSWF(key));
+                        swfDump = SwfToString(reader.ReadSWF(new SWFContext(key)));
                     }
                 }
                 finally

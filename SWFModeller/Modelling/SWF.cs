@@ -20,6 +20,7 @@ namespace SWFProcessing.SWFModeller
     using SWFProcessing.SWFModeller.Characters.Text;
     using SWFProcessing.SWFModeller.Modelling;
     using SWFProcessing.SWFModeller.Text;
+    using SWFProcessing.SWFModeller.Process;
 
     /// <summary>
     /// Top-level object for a SWF movie.
@@ -72,9 +73,9 @@ namespace SWFProcessing.SWFModeller
         /// </summary>
         /// <param name="name">An optional name intended solely to give error messages
         /// some context.</param>
-        public SWF(string name, bool generateScripts)
+        public SWF(SWFContext ctx, bool generateScripts)
         {
-            this.Name = name == null ? string.Empty : name;
+            this.Context = ctx;
 
             this.FrameWidth = DefaultFrameWidth;
             this.FrameHeight = DefaultFrameHeight;
@@ -132,7 +133,7 @@ namespace SWFProcessing.SWFModeller
         /// during development in the debugger, and in error messages. It is never written
         /// to the SWF binary.
         /// </summary>
-        public string Name { get; set; }
+        public SWFContext Context { get; set; }
 
         /// <summary>
         /// Gets or sets the width of the stage
@@ -589,7 +590,7 @@ namespace SWFProcessing.SWFModeller
                         "Internal error. Can't make auto-generated scripts if scripts already exist.");
             }
 
-            string flaName = this.Name.Replace('.', '_') + "_swiffotron";
+            string flaName = this.Context.Name.Replace('.', '_') + "_swiffotron";
             string className = "MainTimeline";
 
             this.scripts.Add(DoABC.GenerateDefaultScript(flaName, className, this));

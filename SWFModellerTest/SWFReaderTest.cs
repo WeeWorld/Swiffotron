@@ -19,6 +19,7 @@ namespace SWFProcessing.SWFModeller.Test
     using SWFProcessing.SWFModeller.ABC.IO;
     using SWFProcessing.SWFModeller.IO;
     using System;
+    using SWFProcessing.SWFModeller.Process;
 
     /// <summary>
     /// This is a test class for SWFReaderTest and is intended
@@ -76,12 +77,12 @@ namespace SWFProcessing.SWFModeller.Test
             Directory.CreateDirectory(this.TestDir);
         }
 
-        public void OnLoadAbc(bool lazyInit, string swfName, string abcName, int doAbcCount, byte[] bytecode)
+        public void OnLoadAbc(bool lazyInit, SWFContext ctx, string abcName, int doAbcCount, byte[] bytecode)
         {
             string abcDir = this.TestDir + @"\abc\";
             Directory.CreateDirectory(abcDir);
 
-            string name = swfName + "." + abcName + doAbcCount + abcName + ".abc";
+            string name = ctx.Name + "." + abcName + doAbcCount + abcName + ".abc";
 
             using (FileStream fs = new FileStream(abcDir + name, FileMode.Create))
             {
@@ -334,7 +335,7 @@ namespace SWFProcessing.SWFModeller.Test
                 SWF swf = null;
                 try
                 {
-                    swf = sr.ReadSWF(name);
+                    swf = sr.ReadSWF(new SWFContext(name));
                 }
                 finally
                 {
@@ -413,7 +414,7 @@ namespace SWFProcessing.SWFModeller.Test
                                 new SWFReaderOptions() { StrictTagLength = true },
                                 binDump,
                                 this)
-                            .ReadSWF("resaved." + name));
+                            .ReadSWF(new SWFContext("resaved." + name)));
             }
             finally
             {

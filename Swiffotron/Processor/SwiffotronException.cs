@@ -7,6 +7,7 @@
 namespace SWFProcessing.Swiffotron
 {
     using System;
+    using SWFProcessing.Swiffotron.Processor;
 
     public enum SwiffotronError
     {
@@ -47,8 +48,8 @@ namespace SWFProcessing.Swiffotron
         /// <param name="error">The error code.</param>
         /// <param name="msg">The error message</param>
         /// <param name="inner">The inner exception</param>
-        public SwiffotronException(SwiffotronError error, string msg, Exception inner)
-            : base(error.ToString() + "; " + msg, inner)
+        public SwiffotronException(SwiffotronError error, SwiffotronContext ctx, string msg, Exception inner)
+            : base(error.ToString() + "; " + msg + "; " + ctx.ToString(), inner)
         {
             this.Error = error;
         }
@@ -58,8 +59,8 @@ namespace SWFProcessing.Swiffotron
         /// </summary>
         /// <param name="error">The error code.</param>
         /// <param name="msg">The error message</param>
-        public SwiffotronException(SwiffotronError error, string msg)
-            : base(error.ToString() + "; " + msg)
+        public SwiffotronException(SwiffotronError error, SwiffotronContext ctx, string msg)
+            : base(error.ToString() + "; " + msg + "; " + ctx.ToString())
         {
             this.Error = error;
         }
@@ -68,8 +69,8 @@ namespace SWFProcessing.Swiffotron
         /// Initializes a new instance of an exception without an error message
         /// </summary>
         /// <param name="error">The error code.</param>
-        public SwiffotronException(SwiffotronError error)
-            : base(error.ToString())
+        public SwiffotronException(SwiffotronError error, SwiffotronContext ctx)
+            : base(error.ToString() + "; " + ctx.ToString())
         {
             this.Error = error;
         }
