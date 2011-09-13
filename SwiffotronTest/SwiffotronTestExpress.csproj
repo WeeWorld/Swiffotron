@@ -37,6 +37,9 @@
     <StartupObject>SWFProcessing.Swiffotron.Test.Express.Program</StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ExpressTest">
+      <HintPath>..\..\ExpressTest\bin\Debug\ExpressTest.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -57,14 +60,10 @@
   <ItemGroup>
     <EmbeddedResource Include="res\config.xml" />
     <EmbeddedResource Include="res\predicted\TestABCCircles.swf.txt" />
-    <EmbeddedResource Include="res\predicted\TestFlatAS3Weemee1.swf.txt" />
-    <EmbeddedResource Include="res\predicted\TestFlatAS3Weemee2.swf.txt" />
-    <EmbeddedResource Include="res\predicted\TestFlatWeemee.swf.txt" />
     <EmbeddedResource Include="res\predicted\TestFontMerge.swf.txt" />
     <EmbeddedResource Include="res\predicted\TestForwardReference.swf.txt" />
     <EmbeddedResource Include="res\predicted\TestImages.swf.txt" />
     <EmbeddedResource Include="res\predicted\TestInstanceTypeSWF.swf.txt" />
-    <EmbeddedResource Include="res\predicted\TestJustEyes.swf.txt" />
     <EmbeddedResource Include="res\predicted\TestMovieclipTypeExtern.swf.txt" />
     <EmbeddedResource Include="res\predicted\TestMovieclipTypeSWF.swf.txt" />
     <EmbeddedResource Include="res\predicted\TestOneBlueCircle.swf.txt" />
@@ -76,38 +75,6 @@
     <EmbeddedResource Include="res\predicted\TestUFO.swf.txt" />
     <EmbeddedResource Include="res\store\abccircles\circle.swf" />
     <EmbeddedResource Include="res\store\abccircles\redcircle.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\accessory1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\blank.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\body_male.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\bottoms1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\drink1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\eyes_s1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\facialHair1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\hair1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\hat1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\head_oval.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\interest1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\makeup1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\mouth2.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\shoes1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\specs1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee1\top1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\accessory2.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\blank.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\body_male.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\bottoms2.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\drink1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\eyes_s1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\facialHair1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\hair2.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\hat2.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\head_oval.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\interest2.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\makeup1.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\mouth2.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\shoes2.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\specs2.swf" />
-    <EmbeddedResource Include="res\store\as3weemee2\top2.swf" />
     <EmbeddedResource Include="res\store\fontmerge\Fonts1.swf" />
     <EmbeddedResource Include="res\store\fontmerge\Fonts2.swf" />
     <EmbeddedResource Include="res\store\images\images.swf" />
@@ -117,19 +84,6 @@
     <EmbeddedResource Include="res\store\tweens\bitmaps.swf" />
     <EmbeddedResource Include="res\store\tweens\simple.swf" />
     <EmbeddedResource Include="res\store\vidout\bounce.swf" />
-    <EmbeddedResource Include="res\store\weemee\accessories.swf" />
-    <EmbeddedResource Include="res\store\weemee\blank.swf" />
-    <EmbeddedResource Include="res\store\weemee\body.swf" />
-    <EmbeddedResource Include="res\store\weemee\bottoms.swf" />
-    <EmbeddedResource Include="res\store\weemee\drink.swf" />
-    <EmbeddedResource Include="res\store\weemee\extras.swf" />
-    <EmbeddedResource Include="res\store\weemee\eyes.swf" />
-    <EmbeddedResource Include="res\store\weemee\hair.swf" />
-    <EmbeddedResource Include="res\store\weemee\head.swf" />
-    <EmbeddedResource Include="res\store\weemee\mouths.swf" />
-    <EmbeddedResource Include="res\store\weemee\shoes.swf" />
-    <EmbeddedResource Include="res\store\weemee\specs.swf" />
-    <EmbeddedResource Include="res\store\weemee\tops.swf" />
     <EmbeddedResource Include="res\TestABCCircles.xml" />
     <EmbeddedResource Include="res\TestBrokenConfig.xml" />
     <EmbeddedResource Include="res\TestBrokenInstanceTypeExtern.xml" />
@@ -140,15 +94,11 @@
     <EmbeddedResource Include="res\TestBrokenMovieclipTypeExtern.xml" />
     <EmbeddedResource Include="res\TestBrokenMovieclipTypeSWF.xml" />
     <EmbeddedResource Include="res\TestCollidingClassname.xml" />
-    <EmbeddedResource Include="res\TestFlatAS3Weemee1.xml" />
-    <EmbeddedResource Include="res\TestFlatAS3Weemee2.xml" />
-    <EmbeddedResource Include="res\TestFlatWeemee.xml" />
     <EmbeddedResource Include="res\TestFontMerge.xml" />
     <EmbeddedResource Include="res\TestForwardReference.xml" />
     <EmbeddedResource Include="res\TestImages.xml" />
     <EmbeddedResource Include="res\TestInstanceTypeSWF.xml" />
     <EmbeddedResource Include="res\TestJobValidate.xml" />
-    <EmbeddedResource Include="res\TestJustEyes.xml" />
     <EmbeddedResource Include="res\TestMovieclipTypeExtern.xml" />
     <EmbeddedResource Include="res\TestMovieclipTypeSWF.xml" />
     <EmbeddedResource Include="res\TestOneBlueCircle.xml" />
@@ -165,10 +115,6 @@
     <None Include="app.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ExpressTest\ExpressTest.csproj">
-      <Project>{F97FDA69-986E-47F4-B76F-D60C1C448D7F}</Project>
-      <Name>ExpressTest</Name>
-    </ProjectReference>
     <ProjectReference Include="..\SWFModeller\SWFModeller.csproj">
       <Project>{E584EF20-EB00-463C-8E57-2B3F5D3A5680}</Project>
       <Name>SWFModeller</Name>
@@ -181,7 +127,14 @@
   <ItemGroup>
     <EmbeddedResource Include="res\mock-config-express.xml" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="res\predicted\TestTextReplace.swf.txt" />
+    <EmbeddedResource Include="res\store\miscparts\BadlyDrawnBeer.swf" />
+    <EmbeddedResource Include="res\store\miscparts\blank.swf" />
+    <EmbeddedResource Include="res\store\miscparts\WeirdEyes.swf" />
+    <EmbeddedResource Include="res\store\textreplace\textreplace.swf" />
+    <EmbeddedResource Include="res\TestTextReplace.xml" />
+  </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="res\express\SwiffotronTestExpress.testSet.xml" />
   </ItemGroup>

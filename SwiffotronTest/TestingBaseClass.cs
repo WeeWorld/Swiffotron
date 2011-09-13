@@ -19,10 +19,10 @@ namespace SWFProcessing.Swiffotron.Test
         protected Stream ResourceAsStream(string sRes)
         {
             Stream s = Assembly.GetExecutingAssembly().GetManifestResourceStream(@"SWFProcessing.Swiffotron.Test.res." + sRes);
+
             if (s == null)
             {
                 s = Assembly.GetCallingAssembly().GetManifestResourceStream("SwiffotronTestExpress.res." + sRes);
-                string[] names = Assembly.GetCallingAssembly().GetManifestResourceNames();
             }
             Assert.IsNotNull(s, "Test input missing! " + sRes);
             return s;

@@ -1,10 +1,4 @@
-﻿//-----------------------------------------------------------------------
-// <copyright file="Program.cs" company="WeeWorld">
-//     Copyright (c) WeeWorld. All rights reserved.
-// </copyright>
-//-----------------------------------------------------------------------
-
-namespace SWFProcessing.Swiffotron.Test.Express
+﻿namespace SWFProcessing.Swiffotron.Test.Express
 {
     using ExpressTest;
 

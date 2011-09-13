@@ -9,3 +9,4 @@ LocalTestRun.testrunconfig
 TestResults/*
 *.msi
 setup.exe
+TestResultsExpress
