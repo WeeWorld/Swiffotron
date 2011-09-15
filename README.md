@@ -9,7 +9,7 @@ Generate, combine and modify SWF files including AS3 code from a Windows service
 
 Requirements
 ------------
-If you wish to load the code using Visual Studio 2010 Express, then you'll need to build [ExpressTest](https://github.com/izb/ExpressTest) in a sibling folder.
+If you wish to load the code using Visual Studio 2010 Express, then you'll need to build [ExpressTest](https://github.com/izb/ExpressTest).
 
 
 Download
