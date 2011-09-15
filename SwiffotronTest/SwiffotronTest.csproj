@@ -60,7 +60,9 @@
     <EmbeddedResource Include="res\store\miscparts\blank.swf" />
     <EmbeddedResource Include="res\store\miscparts\WeirdEyes.swf" />
     <EmbeddedResource Include="res\predicted\TestTextReplace.swf.txt" />
-    <EmbeddedResource Include="res\TestTextReplace.xml" />
+    <EmbeddedResource Include="res\TestTextReplace.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="res\store\textreplace\textreplace.swf" />
     <EmbeddedResource Include="res\predicted\TestTweens.swf.txt" />
     <EmbeddedResource Include="res\store\tweens\bitmaps.swf" />

@@ -484,12 +484,12 @@ namespace SWFProcessing.SWFModeller.Test
             using (FileStream predIn = new FileStream(predicted, FileMode.Open))
             using (FileStream outIn = new FileStream(output, FileMode.Open))
             {
-                int p = predIn.ReadByte();
-                Assert.AreEqual(p, outIn.ReadByte(), errorMessage);
-                if (p == -1)
+                int p;
+                do
                 {
-                    return;
-                }
+                    p = predIn.ReadByte();
+                    Assert.AreEqual(p, outIn.ReadByte(), errorMessage);
+                } while (p != -1);
             }
         }
 
