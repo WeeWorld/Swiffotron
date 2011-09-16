@@ -23,10 +23,10 @@ namespace SWFProcessing.Swiffotron
     using SWFProcessing.SWFModeller.Characters.Text;
     using SWFProcessing.SWFModeller.IO;
     using SWFProcessing.SWFModeller.Modelling;
+    using SWFProcessing.SWFModeller.Process;
     using SWFProcessing.Swiffotron.IO;
     using SWFProcessing.Swiffotron.IO.Debug;
     using SWFProcessing.Swiffotron.Processor;
-    using SWFProcessing.SWFModeller.Process;
 
     /// <summary>
     /// <para>
@@ -330,9 +330,10 @@ namespace SWFProcessing.Swiffotron
             this.abcInterceptor = abcInterceptor;
             this.readLogHandler = readLogHandler;
 #endif
-            this.Context = new SwiffotronContext("<unnamed job>");
             this.commitStore = commitStore;
             this.root = this.LoadSwiffotronXML(xml);
+            string jobID = this.root.SelectSingleNode("swf:swiffotron/@id", this.namespaceMgr).ToString();
+            this.Context = new SwiffotronContext(jobID);
 
             this.processingList = new List<XPathNavigator>();
             this.dependencyMap = new List<DependencyList>();
@@ -732,6 +733,10 @@ namespace SWFProcessing.Swiffotron
             string src = insTag.GetAttribute(AttrSrc, string.Empty);
             string className = insTag.GetAttribute(AttrClass, string.Empty);
 
+            /* TODO: If the instance name (id) is the same as the class name, it can
+             * cause problems in files generated and decompiled again in sothink. We should
+             * probably detect this and warn against it. */
+
             switch (type)
             {
                 case ValSwf:
@@ -770,7 +775,8 @@ namespace SWFProcessing.Swiffotron
                             insTag.GetAttribute(AttrID, string.Empty),
                             swf,
                             insTag,
-                            clip);
+                            clip,
+                            className);
                     break;
 
                 case ValInstance:
@@ -778,18 +784,13 @@ namespace SWFProcessing.Swiffotron
                             insTag.GetAttribute(AttrID, string.Empty),
                             swf,
                             insTag,
-                            this.SpritesFromQname(src, swf, false)[0]);
+                            this.SpritesFromQname(src, swf, false)[0],
+                            className);
                     break;
 
                 case ValExtern:
                     SWF importSwf = this.SwfFromStore(src);
 
-                    if (className == string.Empty)
-                    {
-                        throw new SwiffotronException(
-                                SwiffotronError.BadInputXML, this.Context,
-                                "An external instance needs a class name to be defined.");
-                    }
                     this.CreateInstanceFromSWF(insTag, swf, className, importSwf);
 
                     break;
@@ -816,26 +817,72 @@ namespace SWFProcessing.Swiffotron
                 swf.GenerateTimelineScripts();
             }
 
-            Sprite spr = new Sprite(importSwf, swf, className);
+            bool isAdobeClassname = (className.StartsWith("flash.")
+                || (className.StartsWith("fl."))
+                || (className.StartsWith("adobe."))
+                || (className.StartsWith("air."))
+                || (className.StartsWith("flashx.")));
 
-            this.CreateInstanceIn(
-                    insTag.GetAttribute(AttrID, string.Empty),
-                    swf,
-                    insTag,
-                    spr);
-
-            spr.SpriteProc(delegate(Sprite s)
+            if (isAdobeClassname && importSwf.HasClass)
             {
-                if (s.Class != null)
+                /* Can't rename a class to an Adobe class name. That's bonkers. */
+                throw new SwiffotronException(
+                        SwiffotronError.BadInputXML, this.Context.Sentinel("InstanceClassNameInappropriate"),
+                        "You can't rename a timeline class to a reserved adobe classname (" + className + "), SWF: " + importSwf.Context);
+            }
+
+            if (className == string.Empty)
+            {
+                if (importSwf.Class == null)
                 {
-                    /* TODO: Only do this if the class hasn't already been bound. */
-                    swf.FirstScript.Code.GenerateClipClassBindingScript(s);
+                    /* No class name is fine if the imported SWF has no class to rename. We need
+                     * a class to bind it to though, so let's make it MovieClip, just like
+                     * real flash. */
+                    className = "flash.display.MovieClip";
                 }
-            });
+                else
+                {
+                    throw new SwiffotronException(
+                            SwiffotronError.BadInputXML, this.Context.Sentinel("MainTimelineInstanceNotRenamed"),
+                            "An external instance with timeline code must be explicitely renamed with the instance tag's class attribute.");
+                }
+            }
 
-            if (spr.Class != null)
+            if (className == "flash.display.MovieClip")
             {
-                swf.FirstScript.Code.GenerateClipClassBindingScript(spr);
+                Sprite spr = new Sprite(importSwf, swf);
+
+                this.CreateInstanceIn(
+                        insTag.GetAttribute(AttrID, string.Empty),
+                        swf,
+                        insTag,
+                        spr,
+                        className);
+            }
+            else
+            {
+                Sprite spr = new Sprite(importSwf, swf, className);
+
+                this.CreateInstanceIn(
+                        insTag.GetAttribute(AttrID, string.Empty),
+                        swf,
+                        insTag,
+                        spr,
+                        className);
+
+                spr.SpriteProc(delegate(Sprite s)
+                {
+                    if (s.Class != null)
+                    {
+                        /* TODO: Only do this if the class hasn't already been bound. */
+                        swf.FirstScript.Code.GenerateClipClassBindingScript(s);
+                    }
+                });
+
+                if (spr.Class != null)
+                {
+                    swf.FirstScript.Code.GenerateClipClassBindingScript(spr);
+                }
             }
         }
 
@@ -940,7 +987,7 @@ namespace SWFProcessing.Swiffotron
                     {
                         if (sme.Error == SWFModellerError.CodeMerge)
                         {
-                            throw new SwiffotronException(SwiffotronError.BadInputXML, this.Context, "Possible class name collision.", sme);
+                            throw new SwiffotronException(SwiffotronError.BadInputXML, this.Context.Sentinel("ClassNameCollision"), "Possible class name collision.", sme);
                         }
                         else
                         {
@@ -1004,7 +1051,7 @@ namespace SWFProcessing.Swiffotron
         /// <param name="transform">This is an XML node which extends transformRelativeToType in the XSD, and
         /// can be queried for transform information.</param>
         /// <param name="charToInstantiate">The character to create an instance of.</param>
-        private void CreateInstanceIn(string qname, SWF swf, XPathNavigator transform, Sprite charToInstantiate)
+        private void CreateInstanceIn(string qname, SWF swf, XPathNavigator transform, Sprite charToInstantiate, string qClassName)
         {
             string newInsName;
             Timeline parent = QNameToTimeline(qname, swf, out newInsName);
@@ -1037,7 +1084,7 @@ namespace SWFProcessing.Swiffotron
 
             /* TODO: Find out what 'ratio' does. It's a magical number that makes things work, and
              * I never use it. */
-            parent.Instantiate(1, charToInstantiate, Layer.Position.Front, m, newInsName);
+            parent.Instantiate(1, charToInstantiate, Layer.Position.Front, m, newInsName, qClassName);
         }
 
         /// <summary>
@@ -1333,7 +1380,9 @@ namespace SWFProcessing.Swiffotron
                 XPathNavigator referenced = this.root.SelectSingleNode(@"/swf:swiffotron/swf:swf[@id='" + src + "']", this.namespaceMgr);
                 if (referenced == null)
                 {
-                    throw new SwiffotronException(SwiffotronError.BadPathOrID, this.Context, "No such swf element: " + src);
+                    throw new SwiffotronException(SwiffotronError.BadPathOrID,
+                            this.Context.Sentinel("SrcSwfBadref"),
+                            "No such swf element: " + src);
                 }
                 return referenced;
             }
@@ -1351,7 +1400,9 @@ namespace SWFProcessing.Swiffotron
                 XPathNavigator referenced = this.root.SelectSingleNode(@"/swf:swiffotron/swf:swf/swf:movieclip[@id='" + src + "']", this.namespaceMgr);
                 if (referenced == null)
                 {
-                    throw new SwiffotronException(SwiffotronError.BadPathOrID, this.Context, "No such movieclip element: " + src);
+                    throw new SwiffotronException(SwiffotronError.BadPathOrID,
+                            this.Context.Sentinel("InstanceSrcMovieClipBadref"),
+                            "No such movieclip element: " + src);
                 }
                 return referenced;
             }
@@ -1506,7 +1557,9 @@ namespace SWFProcessing.Swiffotron
             }
             catch (FileNotFoundException fnfe)
             {
-                throw new SwiffotronException(SwiffotronError.BadPathOrID, this.Context, "File not found: " + key, fnfe);
+                throw new SwiffotronException(SwiffotronError.BadPathOrID,
+                        this.Context.Sentinel("FileNotFoundInStore"),
+                        "File not found: " + key, fnfe);
             }
         }
 

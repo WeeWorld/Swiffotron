@@ -65,7 +65,16 @@ namespace SWFProcessing.SWFModeller
         /// For code merging, it's useful to know what clips are bound to what classes. This takes
         /// a class name, and maps it to a clip.
         /// </summary>
-        private Dictionary<AS3Class, Timeline> clipClassMap;
+        private Dictionary<AS3ClassDef, Timeline> clipClassMap;
+
+        public bool HasMainTimelineClass
+        {
+            get
+            {
+                return true;
+            }
+        }
+
 
         /// <summary>
         /// Initializes a new instance of a SWF with the same defaults as the
@@ -96,7 +105,7 @@ namespace SWFProcessing.SWFModeller
              * use. */
             this.exportOnFirstFrame = new List<Sprite>();
 
-            this.clipClassMap = new Dictionary<AS3Class, Timeline>();
+            this.clipClassMap = new Dictionary<AS3ClassDef, Timeline>();
 
             if (generateScripts)
             {
@@ -114,7 +123,7 @@ namespace SWFProcessing.SWFModeller
         /// A delegate declaration for a class processor. See ClassProc
         /// </summary>
         /// <param name="clazz">Each class will be passed into the delegate.</param>
-        public delegate void ClassProcessor(AS3Class clazz);
+        public delegate void ClassProcessor(AS3ClassDef clazz);
 
         /// <summary>
         /// Gets the root timeline.
@@ -528,7 +537,7 @@ namespace SWFProcessing.SWFModeller
         /// </summary>
         /// <param name="clazz">The class to look up</param>
         /// <returns>The clip, or null if the classname is not bound to a clip.</returns>
-        public Timeline ClipFromClass(AS3Class clazz)
+        public Timeline ClipFromClass(AS3ClassDef clazz)
         {
             if (this.clipClassMap.ContainsKey(clazz))
             {
@@ -543,7 +552,7 @@ namespace SWFProcessing.SWFModeller
         /// </summary>
         /// <param name="name">The class name.</param>
         /// <returns>A class, or null if none match</returns>
-        public AS3Class ClassByName(string name)
+        public AS3ClassDef ClassByName(string name)
         {
             if (name == null)
             {
@@ -552,7 +561,7 @@ namespace SWFProcessing.SWFModeller
 
             foreach (DoABC script in this.scripts)
             {
-                AS3Class c = script.Code.GetClassByName(name);
+                AS3ClassDef c = script.Code.GetClassByName(name);
 
                 if (c != null)
                 {
@@ -591,9 +600,9 @@ namespace SWFProcessing.SWFModeller
             }
 
             string flaName = this.Context.Name.Replace('.', '_') + "_swiffotron";
-            string className = "MainTimeline";
+            string qClassName = flaName + ".MainTimeline";
 
-            this.scripts.Add(DoABC.GenerateDefaultScript(flaName, className, this));
+            this.scripts.Add(DoABC.GenerateDefaultScript(qClassName, this));
         }
 
         /// <summary>
@@ -603,7 +612,7 @@ namespace SWFProcessing.SWFModeller
         /// <param name="tl">The timeline to bind the class to.</param>
         internal void MapClassnameToClip(string className, Timeline tl)
         {
-            AS3Class clazz = this.ClassByName(className);
+            AS3ClassDef clazz = this.ClassByName(className);
             tl.Class = clazz;
             this.clipClassMap[clazz] = tl;
         }
@@ -624,6 +633,13 @@ namespace SWFProcessing.SWFModeller
                 return;
             }
 
+            AS3ClassDef classDef = this.Class as AS3ClassDef;
+            if (classDef == null)
+            {
+                throw new SWFModellerException(SWFModellerError.Internal, "MainTimeline class is an in-built class, which is impossible.");
+            }
+
+
             int splitPos = classQName.LastIndexOf('.');
 
             string className = classQName;
@@ -635,7 +651,7 @@ namespace SWFProcessing.SWFModeller
             }
 
             /* Class name will be a QName, so won't have a NS set */
-            Multiname oldName = this.Class.Name;
+            Multiname oldName = classDef.Name;
             Namespace oldNameNS = oldName.NS;
             Multiname newName = this.scripts[0].Code.CreateMultiname(
                     oldName.Kind,
@@ -643,14 +659,14 @@ namespace SWFProcessing.SWFModeller
                     this.scripts[0].Code.CreateNamespace(oldNameNS.Kind, newPackageName),
                     null);
 
-            Namespace oldProtectedNS = this.Class.ProtectedNS;
+            Namespace oldProtectedNS = classDef.ProtectedNS;
             Namespace newProtectedNS = null;
             if (oldProtectedNS != null)
             {
                 newProtectedNS = this.scripts[0].Code.CreateNamespace(oldProtectedNS.Kind, newPackageName + ":" + className);
             }
 
-            this.ClassProc(delegate(AS3Class c)
+            this.ClassProc(delegate(AS3ClassDef c)
             {
                 bool inRenamedClass = false;
 
@@ -709,7 +725,7 @@ namespace SWFProcessing.SWFModeller
                 });
             });
 
-            this.MethodProc(delegate(Method m, AS3Class c)
+            this.MethodProc(delegate(Method m, AS3ClassDef c)
             {
                 bool inRenamedClass = c.Name == newName;
 
@@ -838,7 +854,7 @@ namespace SWFProcessing.SWFModeller
                                     SWFModellerError.UnimplementedFeature,
                                     "As yet unsupported op arg in MethodProc: Namespace");
                         }
-                        else if (arg is AS3Class)
+                        else if (arg is AS3ClassDef)
                         {
                             throw new SWFModellerException(
                                     SWFModellerError.UnimplementedFeature,
@@ -869,7 +885,7 @@ namespace SWFProcessing.SWFModeller
         public void TextReplaceInCode(string find, string replace)
         {
             MarkCodeAsTampered();
-            MethodProc(delegate(Method m, AS3Class c)
+            MethodProc(delegate(Method m, AS3ClassDef c)
             {
                 m.OpcodeFilter(delegate(ref Opcode op, AbcCode abc)
                 {
@@ -896,7 +912,7 @@ namespace SWFProcessing.SWFModeller
             {
                 AbcCode code = script.Code;
 
-                foreach (AS3Class c in code.Classes)
+                foreach (AS3ClassDef c in code.Classes)
                 {
                     if (c == this.Class)
                     {
@@ -908,7 +924,7 @@ namespace SWFProcessing.SWFModeller
 
             if (!mainClassProcessed)
             {
-                cp(this.Class);
+                cp((AS3ClassDef)this.Class);
             }
         }
 

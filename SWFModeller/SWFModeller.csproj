@@ -56,7 +56,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ABC\ABCValues.cs" />
+    <Compile Include="ABC\Code\AdobeClass.cs" />
     <Compile Include="ABC\Code\AS3Class.cs" />
+    <Compile Include="ABC\Code\AS3ClassDef.cs" />
     <Compile Include="ABC\Code\ClassTrait.cs" />
     <Compile Include="ABC\Code\ExceptionHandler.cs" />
     <Compile Include="ABC\Code\FunctionalTrait.cs" />

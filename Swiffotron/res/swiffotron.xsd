@@ -253,6 +253,7 @@
       <sequence>
         <element name="swf" type="swf:swfType" maxOccurs="unbounded" minOccurs="1" />
       </sequence>
+      <attribute name="id" type="ID" use="required"/>
     </complexType>
   </element>
 

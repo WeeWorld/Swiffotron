@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            id="TestNotRenamedMainTimeline">
+
+    <swf id="TestNotRenamedMainTimelineSWF" base="store://store/abccircles.circle.swf">
+
+        <swfout store="store://store/TestNotRenamedMainTimeline.swf" />
+
+        <!-- A SWF with a main timeline must have a class name to rename it to. Why does it have
+             to be renamed? Well technically we could leave its name as-is and it would actually
+             work ok. We force this because this name has a higher chance of collision. It's a
+             good habit to get into to explicitely state what the name of the SWF's timeline
+             should be. -->
+        <instance type="extern"
+                  src="store://store/abccircles.redcircle.swf"
+                  id="redCircleHasCode"
+                  x="137" y="100"/>
+
+    </swf>
+
+</swiffotron>

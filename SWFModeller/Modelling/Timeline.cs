@@ -227,32 +227,40 @@ namespace SWFProcessing.SWFModeller.Modelling
             }
         }
 
-        public void Instantiate(int frameNum, Sprite sprite, Layer.Position layering, Matrix position, string name)
+        public void Instantiate(int frameNum, Sprite sprite, Layer.Position layering, Matrix position, string instanceName, string qClassName)
         {
             AS3Class instanceClass = sprite.Class;
 
-            if (instanceClass != null)
+            if (this.Class == null)
             {
-                if (this.Class == null)
-                {
-                    throw new SWFModellerException(
-                            SWFModellerError.Internal,
-                            "Can't instantiate " + name + " on timeline with no code");
-                }
+                throw new SWFModellerException(
+                        SWFModellerError.Internal,
+                        "Can't instantiate " + instanceName + " on timeline with no code");
+            }
 
-                DoABC scriptTag = this.Root.FirstScript;
-                if (scriptTag == null)
-                {
-                    /* TODO: Y'know, we can generate scripts. We should probably do that. */
-                    throw new SWFModellerException(
-                            SWFModellerError.Internal,
-                            "Can't instantiate clips in a SWF with no code.");
-                }
+            DoABC scriptTag = this.Root.FirstScript;
+            if (scriptTag == null)
+            {
+                /* TODO: Y'know, we can generate scripts. We should probably do that. */
+                throw new SWFModellerException(
+                        SWFModellerError.Internal,
+                        "Can't instantiate clips in a SWF with no code.");
+            }
 
-                Namespace propNS = scriptTag.Code.CreateNamespace(Namespace.NamespaceKind.Package, string.Empty);
-                Multiname propName = scriptTag.Code.CreateMultiname(Multiname.MultinameKind.QName, name, propNS, NamespaceSet.EmptySet);
+            if (instanceClass == null)
+            {
+                DoABC.GenerateDefaultScript(qClassName, sprite);
+                instanceClass = sprite.Class;
+            }
 
-                this.Class.AddInstanceTrait(new SlotTrait()
+            /* Create instance variable of type referenced by instanceClass */
+
+            Namespace propNS = scriptTag.Code.CreateNamespace(Namespace.NamespaceKind.Package, string.Empty);
+            Multiname propName = scriptTag.Code.CreateMultiname(Multiname.MultinameKind.QName, instanceName, propNS, NamespaceSet.EmptySet);
+
+            if (this.Class is AS3ClassDef)
+            {
+                ((AS3ClassDef)this.Class).AddInstanceTrait(new SlotTrait()
                 {
                     Kind = TraitKind.Slot,
                     TypeName = instanceClass.Name,
@@ -261,7 +269,7 @@ namespace SWFProcessing.SWFModeller.Modelling
                 });
             }
 
-            this.GetFrame(frameNum).AddTag(new PlaceObject(sprite, this.GetFreeLayer(layering), null, position, name, false, null, null, null));
+            this.GetFrame(frameNum).AddTag(new PlaceObject(sprite, this.GetFreeLayer(layering), null, position, instanceName, false, null, null, null));
         }
 
         public bool RemoveInstance(string name)

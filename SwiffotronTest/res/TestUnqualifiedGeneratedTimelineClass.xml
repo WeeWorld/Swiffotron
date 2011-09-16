@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <swf id="TestUnqualifiedGeneratedTimelineClass" base="store://store/abccircles.circle.swf">
+
+        <swfout store="store://store/TestUnqualifiedGeneratedTimelineClass.swf" />
+
+        <!-- Generated classes must have a package, so this will error. -->
+        <instance type="extern"
+                  src="store://store/simple-rect.swf"
+                  id="redRectHasNOCode"
+                  x="137" y="100"
+                  class="ClassNameNoPackage"/>
+
+    </swf>
+
+</swiffotron>

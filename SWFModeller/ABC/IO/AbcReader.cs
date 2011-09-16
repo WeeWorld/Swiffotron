@@ -423,7 +423,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 
             for (int i = 0; i < classCount; i++)
             {
-                AS3Class c = this.code.CreateClass();
+                AS3ClassDef c = this.code.CreateClass();
                 uint nameIdx = this.abcdtr.ReadU30();
                 c.Name = this.code.GetMultiname((int)nameIdx);
                 uint superIdx = this.abcdtr.ReadU30();
@@ -481,7 +481,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 
             for (int i = 0; i < classCount; i++)
             {
-                AS3Class c = this.code.GetClass(i);
+                AS3ClassDef c = this.code.GetClass(i);
                 c.Cinit = this.code.GetMethod((int)this.abcdtr.ReadU30());
                 uint traitCount = this.abcdtr.ReadU30();
 #if DEBUG

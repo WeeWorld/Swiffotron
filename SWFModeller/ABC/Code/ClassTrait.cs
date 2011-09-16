@@ -16,7 +16,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
         /// <summary>
         /// Index, not a class ref coz the refs aren't available when we create these things.
         /// </summary>
-        public AS3Class As3class;
+        public AS3ClassDef As3class;
 
         /// <summary>
         /// Numeric index of a property slot on an object.

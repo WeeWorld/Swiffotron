@@ -64,6 +64,11 @@ namespace SWFProcessing.SWFModeller
         public SWFModellerError Error { get; private set; }
 
         /// <summary>
+        /// See SWFContext for a description of sentinels.
+        /// </summary>
+        public string Sentinel { get; private set; }
+
+        /// <summary>
         /// Initializes a new instance of an exception with an error message
         /// </summary>
         /// <param name="error">The error code.</param>
@@ -72,6 +77,7 @@ namespace SWFProcessing.SWFModeller
             : base(error.ToString() + "; " + msg + "; " + ctx.ToString())
         {
             this.Error = error;
+            this.Sentinel = ctx.SentinelString;
         }
 
         /// <summary>
@@ -83,6 +89,7 @@ namespace SWFProcessing.SWFModeller
             : base(error.ToString() + "; " + msg)
         {
             this.Error = error;
+            this.Sentinel = string.Empty;
         }
 
         /// <summary>
@@ -93,6 +100,7 @@ namespace SWFProcessing.SWFModeller
             : base(error.ToString() + "; " + ctx.ToString())
         {
             this.Error = error;
+            this.Sentinel = ctx.SentinelString;
         }
 
         /// <summary>
@@ -103,6 +111,7 @@ namespace SWFProcessing.SWFModeller
             : base(error.ToString())
         {
             this.Error = error;
+            this.Sentinel = string.Empty;
         }
     }
 }

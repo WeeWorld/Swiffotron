@@ -255,7 +255,7 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenMovieclipTypeSWF()
         {
-            TestExpectedSwiffotronError(@"TestBrokenMovieclipTypeSWF.xml", SwiffotronError.BadPathOrID);
+            TestExpectedSwiffotronError(@"TestBrokenMovieclipTypeSWF.xml", SwiffotronError.BadPathOrID, "SrcSwfBadref");
         }
 
         /// <summary>
@@ -295,7 +295,7 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenMovieclipTypeExtern()
         {
-            TestExpectedSwiffotronError(@"TestBrokenMovieclipTypeExtern.xml", SwiffotronError.BadPathOrID);
+            TestExpectedSwiffotronError(@"TestBrokenMovieclipTypeExtern.xml", SwiffotronError.BadPathOrID, "FileNotFoundInStore");
         }
 
         /// <summary>
@@ -304,7 +304,36 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenInstanceTypeMovieClip()
         {
-            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeMovieClip.xml", SwiffotronError.BadPathOrID);
+            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeMovieClip.xml", SwiffotronError.BadPathOrID, "InstanceSrcMovieClipBadref");
+        }
+
+        /// <summary>
+        /// Tests a job with an instance with a main timeline class that was not renamed.
+        /// </summary>
+        [TestMethod]
+        public void TestNotRenamedMainTimeline()
+        {
+            TestExpectedSwiffotronError(@"TestNotRenamedMainTimeline.xml", SwiffotronError.BadInputXML, "MainTimelineInstanceNotRenamed");
+        }
+
+        /// <summary>
+        /// Tests a job with an instance of type movieclip and a bad src.
+        /// </summary>
+        [TestMethod]
+        public void TestInappropriateClassName()
+        {
+            TestExpectedSwiffotronError(@"TestInappropriateClassName.xml", SwiffotronError.BadInputXML, "InstanceClassNameInappropriate");
+        }
+
+        /// <summary>
+        /// Tests a job which instiantiates clips that have code and that do not have code. Both
+        /// types of clips should have instance variables automatically declared.
+        /// </summary>
+        [TestMethod]
+        public void TestClasslessInstantiation()
+        {
+            Swiffotron swiffotron;
+            PredictedOutputTest(@"TestClasslessInstantiation.xml", @"TestClasslessInstantiation.swf", out swiffotron);
         }
 
         /// <summary>
@@ -333,7 +362,7 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenInstanceTypeInstance()
         {
-            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeInstance.xml", SwiffotronError.BadPathOrID);
+            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeInstance.xml", SwiffotronError.BadPathOrID, "InstanceSrcInstanceBadref");
         }
 
         /// <summary>
@@ -350,14 +379,31 @@ namespace SWFProcessing.Swiffotron.Test
         /// Tests a job with 2 movieclips with the same class name.
         /// </summary>
         [TestMethod]
-        public void TestCollidingClassname()
+        public void TestUnqualifiedGeneratedTimelineClass()
         {
-            /* TODO: Change this from Internal to something sensible */
-            TestExpectedSwiffotronError(@"TestCollidingClassname.xml", SwiffotronError.BadInputXML, SWFModellerError.CodeMerge);
+            TestExpectedSwiffotronError(@"TestUnqualifiedGeneratedTimelineClass.xml", SwiffotronError.BadInputXML, "UnqualifiedClassName", SWFModellerError.CodeMerge, "TimelineDefaultPackage");
         }
 
-        private void TestExpectedSwiffotronError(string inputXML, SwiffotronError error, SWFModellerError? innerError = null)
+        /// <summary>
+        /// Tests a job with 2 movieclips with the same class name.
+        /// </summary>
+        [TestMethod]
+        public void TestCollidingClassname()
         {
+            TestExpectedSwiffotronError(@"TestCollidingClassname.xml", SwiffotronError.BadInputXML, "ClassNameCollision", SWFModellerError.CodeMerge, "ClassNameCollision");
+        }
+
+        private void TestExpectedSwiffotronError(
+                string inputXML,
+                SwiffotronError error,
+                string errorSentinel,
+                SWFModellerError? innerError = null,
+                string innerSentinel = null)
+        {
+            /* Why not use expected exception attributes from MSTest? Well because we want to inspect not
+             * only the extra error information that our fabulous custom exceptions provide, but we want to
+             * inspect inner exceptions too. We're that thorough. */
+
             MockStore store;
             MockCache cache;
             Swiffotron swiffotron = CreateMockSwiffotron(out store, out cache);
@@ -368,15 +414,17 @@ namespace SWFProcessing.Swiffotron.Test
             try
             {
                 swiffotron.Process(ResourceAsStream(inputXML), null, null, null, null, null);
-                Assert.Fail("An exception of type " + error + " was expected.");
+                Assert.Fail("An exception of type " + error + " was expected. No exception was thrown.");
             }
             catch (SwiffotronException se)
             {
-                Assert.AreEqual(error, se.Error, se.Message);
+                Assert.AreEqual(error, se.Error, "Error mismatch: " + se.Message);
+                Assert.AreEqual(errorSentinel, se.Sentinel, "Error sentinel mismatch: " + se.Message);
                 if (innerError != null)
                 {
                     Assert.IsTrue(se.InnerException is SWFModellerException, "Expected an inner exception of type SWFModellerException");
-                    Assert.AreEqual(innerError, (se.InnerException as SWFModellerException).Error, se.InnerException.Message);
+                    Assert.AreEqual(innerError, (se.InnerException as SWFModellerException).Error, "Error mismatch: " + se.InnerException.Message);
+                    Assert.AreEqual(innerSentinel, (se.InnerException as SWFModellerException).Sentinel, "Error sentinel mismatch: " + se.InnerException.Message);
                 }
             }
 
@@ -390,7 +438,7 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenInstanceTypeExtern()
         {
-            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeExtern.xml", SwiffotronError.BadPathOrID);
+            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeExtern.xml", SwiffotronError.BadPathOrID, "InstanceMissingStoreFile");
         }
 
         /// <summary>
@@ -400,7 +448,7 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenInstanceTypeSWF()
         {
-            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeSWF.xml", SwiffotronError.BadPathOrID);
+            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeSWF.xml", SwiffotronError.BadPathOrID, "SrcSwfBadref");
         }
 
         private void PredictedOutputTest(string xmlIn, string swfOut, out Swiffotron swiffotron)
