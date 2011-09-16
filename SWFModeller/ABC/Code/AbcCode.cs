@@ -74,7 +74,7 @@ namespace SWFProcessing.SWFModeller.ABC
         private Dictionary<string, Dictionary<string, string>> metadata = new Dictionary<string, Dictionary<string, string>>();
 
         /// <summary>The class definitions in this code.</summary>
-        private List<AS3Class> classes;
+        private List<AS3ClassDef> classes;
 
         /// <summary>The script definitions in this code. Basically the bits that get run first and
         /// set things up.</summary>
@@ -105,7 +105,7 @@ namespace SWFProcessing.SWFModeller.ABC
             this.DoubleConsts = null;
 
             this.scripts = new List<Script>();
-            this.classes = new List<AS3Class>();
+            this.classes = new List<AS3ClassDef>();
             this.methods = new List<Method>();
 
             this.nsConsts = new List<Namespace>();
@@ -124,7 +124,7 @@ namespace SWFProcessing.SWFModeller.ABC
         /// <param name="m">Callback parameter that recieves each method in turn.</param>
         /// <param name="c">Callback parameter the class for the method, or null if it
         /// doesn't belong to a class.</param>
-        public delegate void MethodProcessor(Method m, AS3Class c);
+        public delegate void MethodProcessor(Method m, AS3ClassDef c);
 
         /// <summary>Gets or sets the constant table for signed integers</summary>
         public int[] IntConsts { get; set; }
@@ -162,7 +162,7 @@ namespace SWFProcessing.SWFModeller.ABC
          * syntactic convenience. C# needs to make this sort of thing easier, really. */
 
         /// <summary>Gets an enumerable form of the classes</summary>
-        public IEnumerable<AS3Class> Classes
+        public IEnumerable<AS3ClassDef> Classes
         {
             get
             {
@@ -281,7 +281,7 @@ namespace SWFProcessing.SWFModeller.ABC
         /// Adds a class to the code.
         /// </summary>
         /// <param name="c">The class to add.</param>
-        public void AddClass(AS3Class c)
+        public void AddClass(AS3ClassDef c)
         {
             this.classes.Add(c);
         }
@@ -310,7 +310,7 @@ namespace SWFProcessing.SWFModeller.ABC
         /// <param name="idx">The index of the class, usually found as a parameter
         /// on some ABC opcode.</param>
         /// <returns>The class at the specified index</returns>
-        public AS3Class GetClass(int idx)
+        public AS3ClassDef GetClass(int idx)
         {
             return this.classes[idx];
         }
@@ -391,7 +391,7 @@ namespace SWFProcessing.SWFModeller.ABC
 
             sb.AppendLine(indent + "End of metadata.");
 
-            foreach (AS3Class c in this.Classes)
+            foreach (AS3ClassDef c in this.Classes)
             {
                 c.ToStringModelView(nest, sb);
             }
@@ -434,7 +434,7 @@ namespace SWFProcessing.SWFModeller.ABC
         /// <param name="mp">A delegate to run on each method.</param>
         public void MethodProc(MethodProcessor mp)
         {
-            foreach (AS3Class c in this.classes)
+            foreach (AS3ClassDef c in this.classes)
             {
                 c.MethodProc(mp);
             }
@@ -529,7 +529,7 @@ namespace SWFProcessing.SWFModeller.ABC
 
             Trait classTrait = new ClassTrait()
             {
-                As3class = spr.Class,
+                As3class = (AS3ClassDef)spr.Class,
                 Kind = TraitKind.Class,
                 Name = sprQName
             };
@@ -600,7 +600,7 @@ namespace SWFProcessing.SWFModeller.ABC
                 m.Disassemble();
             }
 
-            foreach (AS3Class clazz in this.Classes)
+            foreach (AS3ClassDef clazz in this.Classes)
             {
                 clazz.DisassembleInitializers();
             }
@@ -619,7 +619,7 @@ namespace SWFProcessing.SWFModeller.ABC
                 m.Tampered = true;
             }
 
-            foreach (AS3Class clazz in this.Classes)
+            foreach (AS3ClassDef clazz in this.Classes)
             {
                 clazz.MarkCodeAsTampered();
             }
@@ -640,7 +640,7 @@ namespace SWFProcessing.SWFModeller.ABC
                     }
                 }
 
-                foreach (AS3Class clazz in this.Classes)
+                foreach (AS3ClassDef clazz in this.Classes)
                 {
                     if (clazz.IsTampered)
                     {
@@ -674,9 +674,9 @@ namespace SWFProcessing.SWFModeller.ABC
         /// Replaces the classes with a new set of classes
         /// </summary>
         /// <param name="as3Classes">An array of classes to set in the code.</param>
-        internal void SetClasses(AS3Class[] as3Classes)
+        internal void SetClasses(AS3ClassDef[] as3Classes)
         {
-            this.classes = new List<AS3Class>();
+            this.classes = new List<AS3ClassDef>();
             this.classes.AddRange(as3Classes);
         }
 
@@ -731,12 +731,12 @@ namespace SWFProcessing.SWFModeller.ABC
         /// </summary>
         /// <param name="multiname">The multiname that identifies the class</param>
         /// <returns>A class or null if it wasn't found.</returns>
-        internal AS3Class FindClass(Multiname multiname)
+        internal AS3ClassDef FindClass(Multiname multiname)
         {
             /* TODO: Optimize this. Maintain a map of multinames->classes
              * Linear searches are for losers. */
 
-            foreach (AS3Class c in this.classes)
+            foreach (AS3ClassDef c in this.classes)
             {
                 if (c.Name == multiname)
                 {
@@ -836,17 +836,17 @@ namespace SWFProcessing.SWFModeller.ABC
             this.multinameConsts.AddRange(multinames);
         }
 
-        internal AS3Class CreateClass()
+        internal AS3ClassDef CreateClass()
         {
-            AS3Class c = new AS3Class(this);
+            AS3ClassDef c = new AS3ClassDef(this);
             this.classes.Add(c);
             return c;
         }
 
-        internal AS3Class GetClassByName(string className)
+        internal AS3ClassDef GetClassByName(string className)
         {
             /* TODO: This is a linear search. I HATE linear searches. */
-            foreach (AS3Class c in this.classes)
+            foreach (AS3ClassDef c in this.classes)
             {
                 if (c.QualifiedName == className)
                 {

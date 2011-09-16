@@ -252,7 +252,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:3.5.30729            "
+                "FrameworkVersion" = "8:3.5.30729             "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=76617"
                 }
@@ -410,7 +410,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Swiffotron"
         "ProductCode" = "8:{75FF24EF-0848-47A2-8AB4-8C6128F842D4}"
-        "PackageCode" = "8:{190416DF-FE68-4462-8129-A663CF2F83DC}"
+        "PackageCode" = "8:{B73236C6-705E-4AD4-BCD7-4FACD1205ABC}"
         "UpgradeCode" = "8:{0F888FA2-C8AE-4A0B-A756-A3458C450878}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

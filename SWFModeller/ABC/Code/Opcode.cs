@@ -68,7 +68,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
             typeof(Namespace), /* NamespaceU30 = 11 */
             typeof(Method), /* MethodU30 = 12 */
             typeof(uint), /* CountU30 = 13 */
-            typeof(AS3Class), /* ClassU30 = 14 */
+            typeof(AS3ClassDef), /* ClassU30 = 14 */
             typeof(uint), /* ExceptionU30 = 15 */
             typeof(byte), /* StackU8 = 16 */
             typeof(uint), /* SlotU30 = 17 */

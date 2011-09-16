@@ -14,6 +14,7 @@ namespace SWFProcessing.SWFModeller.Characters
     using SWFProcessing.SWFModeller.Modelling;
     using SWFProcessing.SWFModeller.Text;
     using SWFProcessing.SWFModeller.Util;
+    using SWFProcessing.SWFModeller.ABC.Code;
 
     /// <summary>
     /// A sprite object with its own timeline
@@ -46,7 +47,7 @@ namespace SWFProcessing.SWFModeller.Characters
         /// <param name="className">If the cloned timeline is a SWF, then
         /// you should pass in a class name here. The MainTimeline class
         /// will be renamed in here to this new name.</param>
-        public Sprite(Timeline srcTimeline, SWF root, string className)
+        public Sprite(Timeline srcTimeline, SWF root, string className = null)
         {
             this._root = root;
 
@@ -77,16 +78,34 @@ namespace SWFProcessing.SWFModeller.Characters
             {
                 SWF srcSWF = (SWF)srcTimeline;
 
-                srcSWF.RenameMainTimelineClass(className);
+                if (className != null)
+                {
+                    srcSWF.RenameMainTimelineClass(className);
+                }
 
                 RemapFonts(srcSWF, root);
 
-                foreach (DoABC abc in srcSWF.Scripts)
+                if (className != null)
                 {
-                    root.MergeScript(abc);
+                    foreach (DoABC abc in srcSWF.Scripts)
+                    {
+                        root.MergeScript(abc);
+                    }
                 }
 
-                this.Class = srcSWF.Class;
+                if (className == null)
+                {
+                    /* It's tempting to use ClassByName("flash.display.MovieClip") but
+                     * remember that that class exists in the player, not the SWF. What
+                     * we need in this case is just the name of the class, not a reference
+                     * to the class itself. Because that's complicated, we assign a
+                     * dummy class and watch for it when we write the class out. */
+                    this.Class = AdobeClass.CreateFlashDisplayMovieClip(root.FirstScript.Code);
+                }
+                else
+                {
+                    this.Class = srcSWF.Class;
+                }
             }
         }
 

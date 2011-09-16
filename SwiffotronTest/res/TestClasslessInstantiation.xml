@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            id="TestClasslessInstantiation">
+
+    <swf id="TestClasslessInstantiationSwf" base="store://store/abccircles.circle.swf">
+
+        <swfout store="store://store/TestClasslessInstantiation.swf" />
+
+        <!-- A SWF with a main timeline that will be renamed to our given class name -->
+        <instance type="extern"
+                  src="store://store/abccircles.redcircle.swf"
+                  id="redCircleHasCode"
+                  x="137" y="100"
+                  class="com.swiffotron.RedCircleHasCode"/>
+
+        <!-- A SWF with no main timeline class that will have one generated for it with our given class name -->
+        <instance type="extern"
+                  src="store://store/simple-rect.swf"
+                  id="redRectHasNOCode"
+                  x="137" y="100"
+                  class="com.swiffotron.RedRectHasNOCode"/>
+        
+        <!-- A SWF with no main timeline class that will be bound to flash.display.MovieClip -->
+        <instance type="extern"
+                  src="store://store/simple-ellipse.swf"
+                  id="ellipseHasNOCode"
+                  x="137" y="100"/>
+        
+        <!-- A SWF with no main timeline class that will be explicitely bound to flash.display.MovieClip 
+             (Basically as above, which simply defaults to this) -->
+        <instance type="extern"
+                  src="store://store/simple-pentagon.swf"
+                  id="pentagonHasNOCode"
+                  x="137" y="100"
+                  class="flash.display.MovieClip"/>
+
+    </swf>
+
+</swiffotron>

@@ -11,6 +11,7 @@ namespace SWFProcessing.SWFModeller.ABC
     using SWFProcessing.SWFModeller.ABC.Code;
     using SWFProcessing.SWFModeller.ABC.IO;
     using SWFProcessing.SWFModeller.Modelling;
+    using SWFProcessing.SWFModeller.Process;
 
     /// <summary>
     /// Represents a block of binary bytecode in a simple DoABC tag.
@@ -154,14 +155,17 @@ namespace SWFProcessing.SWFModeller.ABC
             abc.Disassemble(); /* This ensures that the code is disassembled into mergable form */
             this.Disassemble();
 
-            foreach (AS3Class clazz in abc.Code.Classes)
+            foreach (AS3ClassDef clazz in abc.Code.Classes)
             {
-                AS3Class classCollision = thisCode.FindClass(clazz.Name);
+                AS3ClassDef classCollision = thisCode.FindClass(clazz.Name);
                 if (classCollision != null)
                 {
+                    /* TODO: We create a dummy context here, which seems wrong somehow. But then
+                     * what context do we use? */
                     throw new SWFModellerException(
                             SWFModellerError.CodeMerge,
-                            "Class name collision on " + clazz.Name);
+                            "Class name collision on " + clazz.Name,
+                            new SWFContext(string.Empty).Sentinel("ClassNameCollision"));
                 }
                 thisCode.AddClass(clazz);
             }
@@ -170,23 +174,27 @@ namespace SWFProcessing.SWFModeller.ABC
         /// <summary>
         /// Generates a main timeline script for a new SWF
         /// </summary>
-        /// <param name="flaName">The name that would be the name of the fla file, if this was
-        /// a fla file. Which it isn't. Bascially it prefixes the MainTimeline class as a package
-        /// name, e.g. mygeneratedswf_fla.MainTimeline</param>
-        /// <returns>A DoABC tag that can be inserted into a new SWF.</returns>
-        internal static DoABC GenerateDefaultScript(string flaName, string className, Timeline timeline)
+        /// <param name="qClassName">Qualified class name for the MainTimeline class,
+        /// e.g. mygeneratedswf_fla.MainTimeline</param>
+        /// <returns>A DoABC tag that can be inserted into a new SWF, which may be the one
+        /// from the timeline (And so may already be in the SWF).</returns>
+        public static DoABC GenerateDefaultScript(string qClassName, Timeline timeline)
         {
-            DoABC abc = new DoABC(true, string.Empty, null, null);
+            DoABC abc = timeline.Root.FirstScript;
+            if (abc == null)
+            {
+                abc = new DoABC(true, string.Empty, null, null);
+                abc.code = new AbcCode();
+            }
 
-            abc.code = new AbcCode();
+            AS3ClassDef classDef = GenerateTimelineClass(abc.code, qClassName);
+            timeline.Class = classDef;
 
-            timeline.Class = GenerateTimelineClass(abc.code, flaName, className);
-
-            Script s = new Script() { Method = GenerateTimelineScript(abc.code, timeline.Class) };
+            Script s = new Script() { Method = GenerateTimelineScript(abc.code, classDef) };
 
             abc.code.AddScript(s);
 
-            s.AddTrait(new ClassTrait() { As3class = timeline.Class, Kind = TraitKind.Class, Name = timeline.Class.Name });
+            s.AddTrait(new ClassTrait() { As3class = classDef, Kind = TraitKind.Class, Name = timeline.Class.Name });
 
             return abc;
         }
@@ -206,7 +214,7 @@ namespace SWFProcessing.SWFModeller.ABC
         /// <param name="abc">The abc object to create the script into.</param>
         /// <param name="timelineClass">A generated timeline class. See GenerateTimelineClass</param>
         /// <returns>The new method</returns>
-        private static Method GenerateTimelineScript(AbcCode abc, AS3Class timelineClass)
+        private static Method GenerateTimelineScript(AbcCode abc, AS3ClassDef timelineClass)
         {
             Multiname mnMovieClip = timelineClass.Supername;
             Namespace nsFlashDisplay = mnMovieClip.NS;
@@ -261,26 +269,36 @@ namespace SWFProcessing.SWFModeller.ABC
         /// Factory method for a new timeline class.
         /// </summary>
         /// <param name="abc">The abc code to create the class within.</param>
-        /// <param name="flaName">Name of the fla. You can make this up, since you probably don't have
+        /// <param name="packageName">Name of the fla. You can make this up, since you probably don't have
         /// a fla.</param>
         /// <param name="className">Name of the class.</param>
         /// <returns>A bew timeline class.</returns>
-        private static AS3Class GenerateTimelineClass(AbcCode abc, string flaName, string className)
+        private static AS3ClassDef GenerateTimelineClass(AbcCode abc, string qClassName)
         {
+            int splitPos = qClassName.LastIndexOf('.');
+            if (splitPos < 0)
+            {
+                throw new SWFModellerException(SWFModellerError.CodeMerge,
+                        "A generated timeline class must have a package name.",
+                        new SWFContext(string.Empty).Sentinel("TimelineDefaultPackage"));
+            }
+            string packageName = qClassName.Substring(0, splitPos);
+            string className = qClassName.Substring(splitPos + 1);
+
             /* Class name: */
-            Namespace flaNS = abc.CreateNamespace(Namespace.NamespaceKind.Package, flaName);
+            Namespace flaNS = abc.CreateNamespace(Namespace.NamespaceKind.Package, packageName);
             Multiname classMultinameName = abc.CreateMultiname(Multiname.MultinameKind.QName, className, flaNS, null);
 
             /* Superclass: */
             Namespace nsFlashDisplay = abc.CreateNamespace(Namespace.NamespaceKind.Package, "flash.display");
             Multiname mnMovieClip = abc.CreateMultiname(Multiname.MultinameKind.QName, "MovieClip", nsFlashDisplay, null);
 
-            AS3Class newClass = abc.CreateClass();
+            AS3ClassDef newClass = abc.CreateClass();
 
             newClass.Name = classMultinameName;
             newClass.Supername = mnMovieClip;
 
-            Namespace protectedNS = abc.CreateNamespace(Namespace.NamespaceKind.Protected, flaName + ":" + className);
+            Namespace protectedNS = abc.CreateNamespace(Namespace.NamespaceKind.Protected, packageName + ":" + className);
 
             newClass.ProtectedNS = protectedNS;
 

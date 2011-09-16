@@ -56,6 +56,16 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />
+    <EmbeddedResource Include="res\TestUnqualifiedGeneratedTimelineClass.xml" />
+    <EmbeddedResource Include="res\TestInappropriateClassName.xml" />
+    <EmbeddedResource Include="res\TestNotRenamedMainTimeline.xml" />
+    <EmbeddedResource Include="res\store\simple-ellipse.swf" />
+    <EmbeddedResource Include="res\store\simple-pentagon.swf" />
+    <EmbeddedResource Include="res\predicted\TestClasslessInstantiation.swf.txt" />
+    <EmbeddedResource Include="res\store\simple-rect.swf" />
+    <EmbeddedResource Include="res\TestClasslessInstantiation.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="res\store\miscparts\BadlyDrawnBeer.swf" />
     <EmbeddedResource Include="res\store\miscparts\blank.swf" />
     <EmbeddedResource Include="res\store\miscparts\WeirdEyes.swf" />

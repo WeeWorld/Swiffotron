@@ -24,6 +24,7 @@ namespace SWFProcessing.SWFModeller
     using SWFProcessing.SWFModeller.Modelling;
     using SWFProcessing.SWFModeller.Text;
     using SWFProcessing.SWFModeller.Util;
+    using SWFProcessing.SWFModeller.ABC.Code;
 
     /// <summary>
     /// An object which can take a SWF model and produce binary SWF data.
@@ -471,7 +472,7 @@ namespace SWFProcessing.SWFModeller
                 this.WriteCharacter(cr.Character, unboundClasses);
             }
 
-            if (s.HasClass && !unboundClasses.Contains(s))
+            if (s.HasClass && !(s.Class is AdobeClass) && !unboundClasses.Contains(s))
             {
                 unboundClasses.Add(s);
             }
@@ -657,7 +658,7 @@ namespace SWFProcessing.SWFModeller
             if (ch is Timeline)
             {
                 Timeline tl = (Timeline)ch;
-                if (tl.HasClass && !unboundClasses.Contains(tl))
+                if (tl.HasClass && !(tl.Class is AdobeClass) && !unboundClasses.Contains(tl))
                 {
                     unboundClasses.Add(tl);
                 }

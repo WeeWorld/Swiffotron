@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <swf id="TestClasslessInstantiation" base="store://store/abccircles.circle.swf">
+
+        <swfout store="store://store/TestClasslessInstantiation.swf" />
+
+        <!-- A SWF with a main timeline. We try to declare it as type MovieClip, but this generates
+             an error because this would discard the main timeline class.
+             TODO: Do we want this to be optional? Who are we to say that the purpose that people
+             are using Swiffotron for is to remove timeline classes from things, as strange as
+             that may seem? -->
+        <instance type="extern"
+                  src="store://store/abccircles.redcircle.swf"
+                  id="redCircleHasCode"
+                  x="137" y="100"
+                  class="flash.display.MovieClip"/>
+
+    </swf>
+
+</swiffotron>

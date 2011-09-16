@@ -22,7 +22,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
         private IDMarshaller<Namespace> nsMarshal;
         private IDMarshaller<NamespaceSet> nsSetMarshal;
         private IDMarshaller<Multiname> multinameMarshal;
-        private IDMarshaller<AS3Class> classMarshal;
+        private IDMarshaller<AS3ClassDef> classMarshal;
         private IDMarshaller<Method> methodMarshal;
 
         private StringBuilder writeLog;
@@ -281,7 +281,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                             break;
 
                         case Opcode.ArgType.ClassU30:
-                            writer.WriteU30Packed((uint)this.classMarshal.GetIDFor((AS3Class)argOb));
+                            writer.WriteU30Packed((uint)this.classMarshal.GetIDFor((AS3ClassDef)argOb));
                             break;
 
                         case Opcode.ArgType.ByteS8:
@@ -446,7 +446,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
             MemoryStream buf = new MemoryStream();
             ABCDataTypeWriter writer = new ABCDataTypeWriter(buf);
 
-            AS3Class[] classes = this.classMarshal.ToArray();
+            AS3ClassDef[] classes = this.classMarshal.ToArray();
 
             writer.WriteU30Packed((uint)classes.Length);
 #if DEBUG
@@ -454,7 +454,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
             this.writeLog.AppendLine("Classes count " + classes.Length);
 #endif
             /* First, instance info... */
-            foreach (AS3Class clazz in classes)
+            foreach (AS3ClassDef clazz in classes)
             {
 #if DEBUG
                 this.writeLog.AppendLine((_cid++) + " Class " + clazz.Name + " (mn ID " + (uint)this.MultinameID(clazz.Name) + ")");
@@ -496,7 +496,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
             }
 
             /* Second, class info... */
-            foreach (AS3Class clazz in classes)
+            foreach (AS3ClassDef clazz in classes)
             {
 #if DEBUG
                 this.writeLog.AppendLine("Class cinit ID for '" + clazz.Name + "' " + (uint)this.methodMarshal.GetIDFor(clazz.Cinit));
@@ -869,11 +869,11 @@ namespace SWFProcessing.SWFModeller.ABC.IO
             this.nsMarshal = new IDMarshaller<Namespace>(0, Namespace.GlobalNS);
             this.nsSetMarshal = new IDMarshaller<NamespaceSet>(0, NamespaceSet.EmptySet);
             this.multinameMarshal = new IDMarshaller<Multiname>(0, Multiname.GlobalMultiname);
-            this.classMarshal = new IDMarshaller<AS3Class>(0);
+            this.classMarshal = new IDMarshaller<AS3ClassDef>(0);
             this.methodMarshal = new IDMarshaller<Method>(0);
 
-            AS3Class mainClass = null;
-            foreach (AS3Class clazz in code.Classes)
+            AS3ClassDef mainClass = null;
+            foreach (AS3ClassDef clazz in code.Classes)
             {
                 if (clazz.Name.QualifiedName == mainClassName && mainClassName != null)
                 {
@@ -901,7 +901,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 
             code.SetClasses(this.classMarshal.ToArray());
 
-            foreach (AS3Class clazz in code.Classes)
+            foreach (AS3ClassDef clazz in code.Classes)
             {
                 this.ProcessClass(clazz);
             }
@@ -921,7 +921,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
             code.SetMethods(this.methodMarshal.ToArray());
         }
 
-        private void ProcessClass(AS3Class clazz)
+        private void ProcessClass(AS3ClassDef clazz)
         {
             using (IEnumerator<Trait> i = clazz.ClassTraits)
             {

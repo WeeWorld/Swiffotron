@@ -43,6 +43,11 @@ namespace SWFProcessing.Swiffotron
         public SwiffotronError Error { get; private set; }
 
         /// <summary>
+        /// See SwiffotronContext for a description of sentinels.
+        /// </summary>
+        public string Sentinel { get; private set; }
+
+        /// <summary>
         /// Initializes a new instance of an exception with an error message
         /// </summary>
         /// <param name="error">The error code.</param>
@@ -52,6 +57,7 @@ namespace SWFProcessing.Swiffotron
             : base(error.ToString() + "; " + msg + "; " + ctx.ToString(), inner)
         {
             this.Error = error;
+            this.Sentinel = ctx.SentinelString;
         }
 
         /// <summary>
@@ -63,6 +69,7 @@ namespace SWFProcessing.Swiffotron
             : base(error.ToString() + "; " + msg + "; " + ctx.ToString())
         {
             this.Error = error;
+            this.Sentinel = ctx.SentinelString;
         }
 
         /// <summary>
@@ -73,6 +80,7 @@ namespace SWFProcessing.Swiffotron
             : base(error.ToString() + "; " + ctx.ToString())
         {
             this.Error = error;
+            this.Sentinel = ctx.SentinelString;
         }
     }
 }
