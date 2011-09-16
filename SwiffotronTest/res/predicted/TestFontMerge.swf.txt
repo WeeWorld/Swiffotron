@@ -15,6 +15,7 @@ Document class:mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set 
     }
     Character '__cid##5'
     {
+        Class name:mn QName "fonts_one"; ns Package "com.ww"; set *
         Frame# 1
         {
             PlaceObject char=[EditText '<p align="left"><font face="Book Antiqua" size="23" color="#ff0000" letterSpacing="0.000000" kerning="1"><b>This is some text in Book Antiqua.</b></font></p>'], layer=[layer], name=none, ratio=none, matrix=[t:123,96.2, sc:1,1, sk:0,0], cxform=none, clipDepth=none
@@ -35,6 +36,7 @@ Document class:mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set 
     }
     Character '__cid##9'
     {
+        Class name:mn QName "fonts_two"; ns Package "com.ww"; set *
         Frame# 1
         {
             PlaceObject char=[EditText '<p align="left"><font face="Book Antiqua" size="23" color="#ff0000" letterSpacing="0.000000" kerning="1"><b>This is some text in Book Antiqua.</b></font></p>'], layer=[layer], name=none, ratio=none, matrix=[t:123,96.2, sc:1,1, sk:0,0], cxform=none, clipDepth=none
@@ -43,8 +45,8 @@ Document class:mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set 
     }
     Frame# 1
     {
-        PlaceObject char=[sprite '__cid##5'], layer=[layer], name=fonts_one, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
-        PlaceObject char=[sprite '__cid##9'], layer=[layer], name=fonts_two, ratio=none, matrix=[t:10,10, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[sprite '__cid##5', mn QName "fonts_one"; ns Package "com.ww"; set *], layer=[layer], name=fonts_one, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        PlaceObject char=[sprite '__cid##9', mn QName "fonts_two"; ns Package "com.ww"; set *], layer=[layer], name=fonts_two, ratio=none, matrix=[t:10,10, sc:1,1, sk:0,0], cxform=none, clipDepth=none
     }
     DoABC (Lazy init)
     {
@@ -53,37 +55,107 @@ Document class:mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set 
         uint #0	0
         double #0	0
         string #0	"_@ny~Name#"
-        string #1	"Object"
+        string #1	"fonts_two"
         string #2	""
-        string #3	"EventDispatcher"
-        string #4	"flash.events"
-        string #5	"DisplayObject"
-        string #6	"flash.display"
-        string #7	"InteractiveObject"
-        string #8	"DisplayObjectContainer"
-        string #9	"Sprite"
-        string #10	"MovieClip"
-        string #11	"MainTimeline"
-        string #12	"font_merge_swiffotron"
-        string #13	"font_merge_swiffotron:MainTimeline"
+        string #3	"com.ww"
+        string #4	"Object"
+        string #5	"EventDispatcher"
+        string #6	"flash.events"
+        string #7	"DisplayObject"
+        string #8	"flash.display"
+        string #9	"InteractiveObject"
+        string #10	"DisplayObjectContainer"
+        string #11	"Sprite"
+        string #12	"MovieClip"
+        string #13	"fonts_one"
+        string #14	"MainTimeline"
+        string #15	"font_merge_swiffotron"
+        string #16	"com.ww:fonts_one"
+        string #17	"com.ww:fonts_two"
+        string #18	"font_merge_swiffotron:MainTimeline"
         ns #0	ns Ns "*"
         ns #1	ns Package ""
-        ns #2	ns Package "flash.events"
-        ns #3	ns Package "flash.display"
-        ns #4	ns Package "font_merge_swiffotron"
-        ns #5	ns Protected "font_merge_swiffotron:MainTimeline"
+        ns #2	ns Package "com.ww"
+        ns #3	ns Package "flash.events"
+        ns #4	ns Package "flash.display"
+        ns #5	ns Package "font_merge_swiffotron"
+        ns #6	ns Protected "com.ww:fonts_one"
+        ns #7	ns Protected "com.ww:fonts_two"
+        ns #8	ns Protected "font_merge_swiffotron:MainTimeline"
         ns set #0	(0 items)
+        ns set #1	(1 items)
+            - ns Package "com.ww"
         multiname #0	mn Multiname "*"; ns *; set {}
-        multiname #1	mn QName "Object"; ns Package ""; set *
-        multiname #2	mn QName "EventDispatcher"; ns Package "flash.events"; set *
-        multiname #3	mn QName "DisplayObject"; ns Package "flash.display"; set *
-        multiname #4	mn QName "InteractiveObject"; ns Package "flash.display"; set *
-        multiname #5	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
-        multiname #6	mn QName "Sprite"; ns Package "flash.display"; set *
-        multiname #7	mn QName "MovieClip"; ns Package "flash.display"; set *
-        multiname #8	mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set *
+        multiname #1	mn Multiname "fonts_two"; ns *; set {ns Package "com.ww"}
+        multiname #2	mn QName "Object"; ns Package ""; set *
+        multiname #3	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #4	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #5	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #6	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #7	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #8	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #9	mn QName "fonts_two"; ns Package "com.ww"; set *
+        multiname #10	mn Multiname "fonts_one"; ns *; set {ns Package "com.ww"}
+        multiname #11	mn QName "fonts_one"; ns Package "com.ww"; set *
+        multiname #12	mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set *
+        multiname #13	mn QName "fonts_one"; ns Package ""; set *
+        multiname #14	mn QName "fonts_two"; ns Package ""; set *
         Metadata:
         End of metadata.
+        protected package ns Protected "com.ww:fonts_one"
+        {
+            class mn QName "fonts_one"; ns Package "com.ww"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "fonts_one"; ns Package "com.ww"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+            }
+        }
+        protected package ns Protected "com.ww:fonts_two"
+        {
+            class mn QName "fonts_two"; ns Package "com.ww"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            {
+                static () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:9, MaxScopeDepth:10]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 ReturnVoid()
+                }
+
+
+
+                mn QName "fonts_two"; ns Package "com.ww"; set * () : Void
+                {
+                    [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
+
+                    #1 GetLocal0()
+                    #2 PushScope()
+                    #3 GetLocal0()
+                    #4 ConstructSuper(0)
+                    #5 ReturnVoid()
+                }
+            }
+        }
         protected package ns Protected "font_merge_swiffotron:MainTimeline"
         {
             class mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
@@ -109,7 +181,89 @@ Document class:mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set 
                     #4 ConstructSuper(0)
                     #5 ReturnVoid()
                 }
+
+
+
+                [mn QName "fonts_one"; ns Package ""; set *,Slot] property type : [mn QName "fonts_one"; ns Package "com.ww"; set *], val: ConUndefined
+
+
+
+                [mn QName "fonts_two"; ns Package ""; set *,Slot] property type : [mn QName "fonts_two"; ns Package "com.ww"; set *], val: ConUndefined
             }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "fonts_two"; ns *; set {ns Package "com.ww"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "fonts_two"; ns Package "com.ww"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "fonts_two"; ns Package "com.ww"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "fonts_two"; ns Package "com.ww"; set *,Class] script class trait : mn QName "fonts_two"; ns Package "com.ww"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "fonts_one"; ns *; set {ns Package "com.ww"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "fonts_one"; ns Package "com.ww"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "fonts_one"; ns Package "com.ww"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "fonts_one"; ns Package "com.ww"; set *,Class] script class trait : mn QName "fonts_one"; ns Package "com.ww"; set *
         }
         Script:
         {
@@ -147,6 +301,80 @@ Document class:mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set 
                 #28 ReturnVoid()
             }
             [mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "font_merge_swiffotron"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "fonts_one"; ns Package "com.ww"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "fonts_one"; ns Package "com.ww"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "fonts_one"; ns Package "com.ww"; set *,Class] script class trait : mn QName "fonts_one"; ns Package "com.ww"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 GetScopeObject(0)
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "fonts_two"; ns Package "com.ww"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "fonts_two"; ns Package "com.ww"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "fonts_two"; ns Package "com.ww"; set *,Class] script class trait : mn QName "fonts_two"; ns Package "com.ww"; set *
         }
     }
     Fonts

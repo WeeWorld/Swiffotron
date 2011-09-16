@@ -145,7 +145,7 @@ namespace SWFProcessing.SWFModeller.ABC
         /// </summary>
         /// <param name="abc">The code to merge into this object. Once merged, you should
         /// discard 'abc'.</param>
-        internal void Merge(DoABC abc)
+        internal void Merge(DoABC abc, SWFContext ctx)
         {
             /* Because we want everything to be object references... */
 
@@ -160,12 +160,10 @@ namespace SWFProcessing.SWFModeller.ABC
                 AS3ClassDef classCollision = thisCode.FindClass(clazz.Name);
                 if (classCollision != null)
                 {
-                    /* TODO: We create a dummy context here, which seems wrong somehow. But then
-                     * what context do we use? */
                     throw new SWFModellerException(
                             SWFModellerError.CodeMerge,
                             "Class name collision on " + clazz.Name,
-                            new SWFContext(string.Empty).Sentinel("ClassNameCollision"));
+                            ctx.Sentinel("ClassNameCollision"));
                 }
                 thisCode.AddClass(clazz);
             }
@@ -187,7 +185,7 @@ namespace SWFProcessing.SWFModeller.ABC
                 abc.code = new AbcCode();
             }
 
-            AS3ClassDef classDef = GenerateTimelineClass(abc.code, qClassName);
+            AS3ClassDef classDef = GenerateTimelineClass(abc.code, qClassName, timeline.Root.Context);
             timeline.Class = classDef;
 
             Script s = new Script() { Method = GenerateTimelineScript(abc.code, classDef) };
@@ -273,14 +271,14 @@ namespace SWFProcessing.SWFModeller.ABC
         /// a fla.</param>
         /// <param name="className">Name of the class.</param>
         /// <returns>A bew timeline class.</returns>
-        private static AS3ClassDef GenerateTimelineClass(AbcCode abc, string qClassName)
+        private static AS3ClassDef GenerateTimelineClass(AbcCode abc, string qClassName, SWFContext ctx)
         {
             int splitPos = qClassName.LastIndexOf('.');
             if (splitPos < 0)
             {
                 throw new SWFModellerException(SWFModellerError.CodeMerge,
                         "A generated timeline class must have a package name.",
-                        new SWFContext(string.Empty).Sentinel("TimelineDefaultPackage"));
+                        ctx.Sentinel("TimelineDefaultPackage"));
             }
             string packageName = qClassName.Substring(0, splitPos);
             string className = qClassName.Substring(splitPos + 1);

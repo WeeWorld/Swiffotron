@@ -140,6 +140,20 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\predicted\TestClasslessInstantiation.swf.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\TestClasslessInstantiation.xml" />
+    <EmbeddedResource Include="res\TestInappropriateClassName.xml" />
+    <EmbeddedResource Include="res\TestNotRenamedMainTimeline.xml" />
+    <EmbeddedResource Include="res\TestUnqualifiedGeneratedTimelineClass.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\store\simple-ellipse.swf" />
+    <EmbeddedResource Include="res\store\simple-pentagon.swf" />
+    <EmbeddedResource Include="res\store\simple-rect.swf" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

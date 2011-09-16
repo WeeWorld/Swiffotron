@@ -324,7 +324,7 @@ namespace SWFProcessing.SWFModeller
                 return;
             }
 
-            this.scripts[0].Merge(abc);
+            this.scripts[0].Merge(abc, Context);
         }
 
 #if(DEBUG)

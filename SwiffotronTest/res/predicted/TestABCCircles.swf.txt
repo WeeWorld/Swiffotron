@@ -1,5 +1,5 @@
 SWF stage=550,400, fps=24, bg=#FFFFFF
-Document class:mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set *
+Document class:mn QName "MainTimeline"; ns Package "two_circles_swf_swiffotron"; set *
 {
     Character '__cid##1'
     {
@@ -117,10 +117,10 @@ Document class:mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set
         string #45	"RedCircleMain"
         string #46	"RedCircle"
         string #47	"MainTimeline"
-        string #48	"two_circles_swiffotron"
+        string #48	"two_circles_swf_swiffotron"
         string #49	"com.swiffotron:RedCircleMain"
         string #50	"redcircle_mc"
-        string #51	"two_circles_swiffotron:MainTimeline"
+        string #51	"two_circles_swf_swiffotron:MainTimeline"
         string #52	"red"
         string #53	"blue"
         ns #0	ns Ns "*"
@@ -155,10 +155,10 @@ Document class:mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set
         ns #29	ns StaticProtected "flash.display:DisplayObject"
         ns #30	ns StaticProtected "flash.events:EventDispatcher"
         ns #31	ns StaticProtected "Object"
-        ns #32	ns Package "two_circles_swiffotron"
+        ns #32	ns Package "two_circles_swf_swiffotron"
         ns #33	ns Protected "RedCircle"
         ns #34	ns Protected "com.swiffotron:RedCircleMain"
-        ns #35	ns Protected "two_circles_swiffotron:MainTimeline"
+        ns #35	ns Protected "two_circles_swf_swiffotron:MainTimeline"
         ns set #0	(0 items)
         ns set #1	(31 items)
             - ns Private ""
@@ -221,7 +221,7 @@ Document class:mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set
         multiname #22	mn QName "RedCircleMain"; ns Package "com.swiffotron"; set *
         multiname #23	mn Multiname "RedCircle"; ns *; set {ns Package ""}
         multiname #24	mn QName "RedCircle"; ns Package ""; set *
-        multiname #25	mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set *
+        multiname #25	mn QName "MainTimeline"; ns Package "two_circles_swf_swiffotron"; set *
         multiname #26	mn QName "redcircle_mc"; ns Package ""; set *
         multiname #27	mn QName "red"; ns Package ""; set *
         multiname #28	mn QName "blue"; ns Package ""; set *
@@ -376,9 +376,9 @@ Document class:mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set
                 }
             }
         }
-        protected package ns Protected "two_circles_swiffotron:MainTimeline"
+        protected package ns Protected "two_circles_swf_swiffotron:MainTimeline"
         {
-            class mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            class mn QName "MainTimeline"; ns Package "two_circles_swf_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
             {
                 static () : Void
                 {
@@ -391,7 +391,7 @@ Document class:mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set
 
 
 
-                mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set * () : Void
+                mn QName "MainTimeline"; ns Package "two_circles_swf_swiffotron"; set * () : Void
                 {
                     [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
 
@@ -546,7 +546,7 @@ Document class:mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set
                 #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
                 #17 PushScope()
                 #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
-                #19 NewClass(mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "two_circles_swf_swiffotron"; set *)
                 #20 PopScope()
                 #21 PopScope()
                 #22 PopScope()
@@ -554,10 +554,10 @@ Document class:mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set
                 #24 PopScope()
                 #25 PopScope()
                 #26 PopScope()
-                #27 InitProperty(mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set *)
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "two_circles_swf_swiffotron"; set *)
                 #28 ReturnVoid()
             }
-            [mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "two_circles_swiffotron"; set *
+            [mn QName "MainTimeline"; ns Package "two_circles_swf_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "two_circles_swf_swiffotron"; set *
         }
     }
 }

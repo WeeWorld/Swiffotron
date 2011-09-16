@@ -1,11 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
             xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            id="TestInappropriateClassName">
 
-    <swf id="TestClasslessInstantiation" base="store://store/abccircles.circle.swf">
+    <swf id="TestInappropriateClassNameSWF" base="store://store/abccircles.circle.swf">
 
-        <swfout store="store://store/TestClasslessInstantiation.swf" />
+        <swfout store="store://store/TestInappropriateClassName.swf" />
 
         <!-- A SWF with a main timeline. We try to declare it as type MovieClip, but this generates
              an error because this would discard the main timeline class.

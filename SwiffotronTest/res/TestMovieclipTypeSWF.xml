@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
             xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            id="TestMovieclipTypeSWF">
 
     <swf id="someref">
 
@@ -13,7 +14,7 @@
 
     </swf>
 
-    <swf id="TestMovieclipTypeSWF">
+    <swf id="TestMovieclipTypeSWFSWF">
         
         <swfout store="store://store/TestMovieclipTypeSWF.swf"/>
         

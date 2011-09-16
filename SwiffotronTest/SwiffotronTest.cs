@@ -438,7 +438,7 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenInstanceTypeExtern()
         {
-            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeExtern.xml", SwiffotronError.BadPathOrID, "InstanceMissingStoreFile");
+            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeExtern.xml", SwiffotronError.BadPathOrID, "FileNotFoundInStore");
         }
 
         /// <summary>
@@ -550,15 +550,15 @@ namespace SWFProcessing.Swiffotron.Test
             //        new FileInfo(output).Length,
             //        errorMessage);
 
-            using (FileStream predIn = new FileStream(predicted, FileMode.Open))
-            using (FileStream outIn = new FileStream(output, FileMode.Open))
+            using (StreamReader predIn = new StreamReader(predicted))
+            using (StreamReader outIn = new StreamReader(output))
             {
-                int p;
+                string pline;
                 do
                 {
-                    p = predIn.ReadByte();
-                    Assert.AreEqual(p, outIn.ReadByte(), errorMessage);
-                } while (p != -1);
+                    pline = predIn.ReadLine();
+                    Assert.AreEqual(pline, outIn.ReadLine(), errorMessage);
+                } while (pline != null);
             }
         }
 

@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
             xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
-            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            id="TestMovieclipTypeExtern">
 
-    <swf id="TestMovieclipTypeExtern">
+    <swf id="TestMovieclipTypeExternSWF">
         
         <swfout store="store://store/TestMovieclipTypeExtern.swf"/>
         
