@@ -136,7 +136,9 @@
     <EmbeddedResource Include="res\TestTextReplace.xml" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="res\express\SwiffotronTestExpress.testSet.xml" />
+    <EmbeddedResource Include="res\express\SwiffotronTestExpress.testSet.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
