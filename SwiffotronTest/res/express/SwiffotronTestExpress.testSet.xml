@@ -2,10 +2,7 @@
 <tests>
     <!--<include>BlueSkyTests.TestPNGOut</include>
     <include>BlueSkyTests.TestVidOut</include>
-    <include>SwiffotronTest.TestTextReplace</include>
-    <include>SwiffotronTest.TestBrokenInstanceTypeExtern</include>-->
-    <include>SwiffotronTest.TestUFO</include>
-    <!--<include>SwiffotronTest.TestMovieclipTypeSWF</include>
+    <include>SwiffotronTest.TestUFO</include>-->
+    <include>SwiffotronTest.TestMovieclipTypeSWF</include>
     <include>SwiffotronTest.TestBrokenInstanceTypeInstance</include>
-    <include>SwiffotronTest.TestUnqualifiedGeneratedTimelineClass</include>-->
 </tests>

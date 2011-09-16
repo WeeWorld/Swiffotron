@@ -362,7 +362,7 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenInstanceTypeInstance()
         {
-            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeInstance.xml", SwiffotronError.BadPathOrID, "InstanceSrcInstanceBadref");
+            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeInstance.xml", SwiffotronError.BadPathOrID, "FindSpriteByQName");
         }
 
         /// <summary>
@@ -381,7 +381,7 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestUnqualifiedGeneratedTimelineClass()
         {
-            TestExpectedSwiffotronError(@"TestUnqualifiedGeneratedTimelineClass.xml", SwiffotronError.BadInputXML, "UnqualifiedClassName", SWFModellerError.CodeMerge, "TimelineDefaultPackage");
+            TestExpectedSwiffotronError(@"TestUnqualifiedGeneratedTimelineClass.xml", SwiffotronError.BadInputXML, "CreateInstanceIn", SWFModellerError.CodeMerge, "TimelineDefaultPackage");
         }
 
         /// <summary>

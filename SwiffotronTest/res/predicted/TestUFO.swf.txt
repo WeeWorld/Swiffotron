@@ -19,8 +19,8 @@ Document class:mn QName "MainTimeline"; ns Package "monocular_fla"; set *
         Frame# 1
         {
             PlaceObject char=[Shape DefineShape:111 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
-            PlaceObject char=[sprite '__cid##9'], layer=[layer], name=lefteye_mc, ratio=none, matrix=[t:16.95,23.8, sc:0.3910522,0.3910522, sk:0,0], cxform=none, clipDepth=none
-            PlaceObject char=[sprite '__cid##9'], layer=[layer], name=righteye_mc, ratio=none, matrix=[t:48.95,23.8, sc:0.3910522,0.3910522, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##8'], layer=[layer], name=lefteye_mc, ratio=none, matrix=[t:16.95,23.8, sc:0.3910522,0.3910522, sk:0,0], cxform=none, clipDepth=none
+            PlaceObject char=[sprite '__cid##8'], layer=[layer], name=righteye_mc, ratio=none, matrix=[t:48.95,23.8, sc:0.3910522,0.3910522, sk:0,0], cxform=none, clipDepth=none
         }
     }
     Character '__cid##11'
@@ -184,19 +184,6 @@ Document class:mn QName "MainTimeline"; ns Package "monocular_fla"; set *
     }
     Character '__cid##7'
     {
-        Bounds: [Rect 0,0->89.85,89]
-        Original format: DefineShape
-        Shape; WithStyle? True
-        {
-            Fill#1: [Solid: Colour=Color [A=0, R=0, G=102, B=0]]
-            [style change move=1797,166 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=102, B=0]] line=]
-            C0,34:-264,221 L-4,3 C211,229:0,317 C0,336:-237,237 C-237,237:-336,0 C-336,0:-237,-237 C-237,-237:0,-336
-            C0,-293:181,-218 L-71,-62 C-230,-207:0,13 C0,-149:109,-15 C92,-14:148,81 C110,61:92,85 C170,-92:209,0
-            C171,0:145,62 C87,-81:104,-61 C152,-90:96,11 C112,12:0,153
-        }
-    }
-    Character '__cid##8'
-    {
         Bounds: [Rect -0.5,-0.5->67.5,67.5]
         Original format: DefineShape4
         Shape; WithStyle? True
@@ -211,11 +198,24 @@ Document class:mn QName "MainTimeline"; ns Package "monocular_fla"; set *
             C278,0:196,196
         }
     }
-    Character '__cid##9'
+    Character '__cid##8'
     {
         Frame# 1
         {
             PlaceObject char=[Shape DefineShape4:130 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
+        }
+    }
+    Character '__cid##9'
+    {
+        Bounds: [Rect 0,0->89.85,89]
+        Original format: DefineShape
+        Shape; WithStyle? True
+        {
+            Fill#1: [Solid: Colour=Color [A=0, R=0, G=102, B=0]]
+            [style change move=1797,166 fill0/1=,[Solid: Colour=Color [A=0, R=0, G=102, B=0]] line=]
+            C0,34:-264,221 L-4,3 C211,229:0,317 C0,336:-237,237 C-237,237:-336,0 C-336,0:-237,-237 C-237,-237:0,-336
+            C0,-293:181,-218 L-71,-62 C-230,-207:0,13 C0,-149:109,-15 C92,-14:148,81 C110,61:92,85 C170,-92:209,0
+            C171,0:145,62 C87,-81:104,-61 C152,-90:96,11 C112,12:0,153
         }
     }
     Frame# 1

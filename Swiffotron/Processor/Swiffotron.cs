@@ -17,6 +17,7 @@ namespace SWFProcessing.Swiffotron
     using System.Xml;
     using System.Xml.XPath;
     using SWFProcessing.SWFModeller;
+    using SWFProcessing.SWFModeller.ABC.Code;
     using SWFProcessing.SWFModeller.ABC.Debug;
     using SWFProcessing.SWFModeller.Characters;
     using SWFProcessing.SWFModeller.Characters.Geom;
@@ -780,11 +781,25 @@ namespace SWFProcessing.Swiffotron
                     break;
 
                 case ValInstance:
+                    if (className != string.Empty)
+                    {
+                        throw new SwiffotronException(SwiffotronError.BadInputXML,
+                                this.Context.Sentinel("ClassNameInClonedInstance"),
+                                "An instance cannot be given a new classname if it is a clone of an existing instance ("+className+")");
+                    }
+
+                    Sprite srcSprite = this.SpritesFromQname(src, swf, false)[0];
+                    if (!srcSprite.HasClass)
+                    {
+                        srcSprite.Class = AdobeClass.CreateFlashDisplayMovieClip(srcSprite.Root.FirstScript.Code);
+                        className = srcSprite.Class.QualifiedName;
+                    }
+
                     this.CreateInstanceIn(
                             insTag.GetAttribute(AttrID, string.Empty),
                             swf,
                             insTag,
-                            this.SpritesFromQname(src, swf, false)[0],
+                            srcSprite,
                             className);
                     break;
 
@@ -1026,7 +1041,7 @@ namespace SWFProcessing.Swiffotron
             if (po == null)
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadPathOrID, this.Context,
+                        SwiffotronError.BadPathOrID, this.Context.Sentinel("FindSpriteByQName"),
                         @"Instance not found: " + qname);
             }
 
@@ -1084,7 +1099,16 @@ namespace SWFProcessing.Swiffotron
 
             /* TODO: Find out what 'ratio' does. It's a magical number that makes things work, and
              * I never use it. */
-            parent.Instantiate(1, charToInstantiate, Layer.Position.Front, m, newInsName, qClassName);
+            try
+            {
+                parent.Instantiate(1, charToInstantiate, Layer.Position.Front, m, newInsName, qClassName);
+            }
+            catch (SWFModellerException sme)
+            {
+                throw new SwiffotronException(SwiffotronError.BadInputXML, this.Context.Sentinel("CreateInstanceIn"),
+                        "Failed to instantiate an instance in a timeline. instance name:" + qname + ", instance class:" + qClassName,
+                        sme);
+            }
         }
 
         /// <summary>
@@ -1176,7 +1200,7 @@ namespace SWFProcessing.Swiffotron
             if (po == null)
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadPathOrID, this.Context,
+                        SwiffotronError.BadPathOrID, this.Context.Sentinel("ModifyInstance"),
                         @"Instance not found: " + qname);
             }
 
