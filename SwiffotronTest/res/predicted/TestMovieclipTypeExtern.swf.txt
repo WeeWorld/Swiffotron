@@ -1,6 +1,7 @@
 SWF stage=550,400, fps=24, bg=#FFFFFF
 Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeExternSWF_swiffotron"; set *
 {
+this is broken when loaded in flash player
     Character '__cid##1'
     {
         Bounds: [Rect 0,0->139,42]

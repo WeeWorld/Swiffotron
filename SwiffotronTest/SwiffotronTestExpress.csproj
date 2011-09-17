@@ -100,7 +100,9 @@
     <EmbeddedResource Include="res\TestInstanceTypeSWF.xml" />
     <EmbeddedResource Include="res\TestJobValidate.xml" />
     <EmbeddedResource Include="res\TestMovieclipTypeExtern.xml" />
-    <EmbeddedResource Include="res\TestMovieclipTypeSWF.xml" />
+    <EmbeddedResource Include="res\TestMovieclipTypeSWF.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="res\TestOneBlueCircle.xml" />
     <EmbeddedResource Include="res\TestOneRedCircle.xml" />
     <EmbeddedResource Include="res\TestPNGOut.xml" />

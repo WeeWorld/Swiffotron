@@ -1,6 +1,7 @@
 SWF stage=550,400, fps=24, bg=#FFFFFF
-Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffotron"; set *
+Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWFSWF_swiffotron"; set *
 {
+this is broken when loaded in flash player
     Character '__cid##1'
     {
         Bounds: [Rect 0,0->139,42]
@@ -255,7 +256,7 @@ Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffot
         string #9	"Sprite"
         string #10	"MovieClip"
         string #11	"MainTimeline"
-        string #12	"TestMovieclipTypeSWF_swiffotron"
+        string #12	"TestMovieclipTypeSWFSWF_swiffotron"
         string #13	"UFOClass2"
         string #14	"com.ww"
         string #15	"com.ww:UFOClass2"
@@ -284,13 +285,13 @@ Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffot
         string #38	"rightfoot_mc"
         string #39	"ufobody_mc"
         string #40	"cockpit_mc"
-        string #41	"TestMovieclipTypeSWF_swiffotron:MainTimeline"
+        string #41	"TestMovieclipTypeSWFSWF_swiffotron:MainTimeline"
         string #42	"mc_myinternalswf"
         ns #0	ns Ns "*"
         ns #1	ns Package ""
         ns #2	ns Package "flash.events"
         ns #3	ns Package "flash.display"
-        ns #4	ns Package "TestMovieclipTypeSWF_swiffotron"
+        ns #4	ns Package "TestMovieclipTypeSWFSWF_swiffotron"
         ns #5	ns Package "com.ww"
         ns #6	ns Protected "com.ww:UFOClass2"
         ns #7	ns Protected "com.ww:UFOClass1"
@@ -300,7 +301,7 @@ Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffot
         ns #11	ns Protected "monocular_fla:body_2"
         ns #12	ns Protected "monocular_fla:occupied_window_4"
         ns #13	ns Protected "monocular_fla:ufo_1"
-        ns #14	ns Protected "TestMovieclipTypeSWF_swiffotron:MainTimeline"
+        ns #14	ns Protected "TestMovieclipTypeSWFSWF_swiffotron:MainTimeline"
         ns set #0	(0 items)
         multiname #0	mn Multiname "*"; ns *; set {}
         multiname #1	mn QName "Object"; ns Package ""; set *
@@ -310,7 +311,7 @@ Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffot
         multiname #5	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
         multiname #6	mn QName "Sprite"; ns Package "flash.display"; set *
         multiname #7	mn QName "MovieClip"; ns Package "flash.display"; set *
-        multiname #8	mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffotron"; set *
+        multiname #8	mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWFSWF_swiffotron"; set *
         multiname #9	mn QName "UFOClass2"; ns Package "com.ww"; set *
         multiname #10	mn QName "mc_alienpilot"; ns Package ""; set *
         multiname #11	mn QName "UFOClass1"; ns Package "com.ww"; set *
@@ -570,9 +571,9 @@ Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffot
                 [mn QName "cockpit_mc"; ns Package ""; set *,Slot] property type : [mn QName "MovieClip"; ns Package "flash.display"; set *], val: ConUndefined
             }
         }
-        protected package ns Protected "TestMovieclipTypeSWF_swiffotron:MainTimeline"
+        protected package ns Protected "TestMovieclipTypeSWFSWF_swiffotron:MainTimeline"
         {
-            class mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
+            class mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWFSWF_swiffotron"; set * extends mn QName "MovieClip"; ns Package "flash.display"; set *
             {
                 static () : Void
                 {
@@ -585,7 +586,7 @@ Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffot
 
 
 
-                mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffotron"; set * () : Void
+                mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWFSWF_swiffotron"; set * () : Void
                 {
                     [MaxStack:1, LocalCount:1, InitScopeDepth:10, MaxScopeDepth:11]
 
@@ -625,7 +626,7 @@ Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffot
                 #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
                 #17 PushScope()
                 #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
-                #19 NewClass(mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffotron"; set *)
+                #19 NewClass(mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWFSWF_swiffotron"; set *)
                 #20 PopScope()
                 #21 PopScope()
                 #22 PopScope()
@@ -633,10 +634,10 @@ Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffot
                 #24 PopScope()
                 #25 PopScope()
                 #26 PopScope()
-                #27 InitProperty(mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffotron"; set *)
+                #27 InitProperty(mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWFSWF_swiffotron"; set *)
                 #28 ReturnVoid()
             }
-            [mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWF_swiffotron"; set *
+            [mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWFSWF_swiffotron"; set *,Class] script class trait : mn QName "MainTimeline"; ns Package "TestMovieclipTypeSWFSWF_swiffotron"; set *
         }
     }
 }
