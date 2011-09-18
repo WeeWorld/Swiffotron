@@ -4,4 +4,6 @@
     <include>BlueSkyTests.TestVidOut</include>
     <include>SwiffotronTest.TestUFO</include>
     <include>SwiffotronTest.TestMovieclipTypeSWF</include>-->
+    <include>SwiffotronTest.TestMovieclipTypeExtern</include>
+    <include>SwiffotronTest.TestInstanceTypeExtern</include>
 </tests>

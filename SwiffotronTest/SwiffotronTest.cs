@@ -280,7 +280,19 @@ namespace SWFProcessing.Swiffotron.Test
         }
 
         /// <summary>
-        /// Tests a job with a movieclip node of type extern
+        /// Tests a job with an instance node of type extern. This test is functionally equivalent to
+        /// TestMovieclipTypeExtern in its output.
+        /// </summary>
+        [TestMethod]
+        public void TestInstanceTypeExtern()
+        {
+            Swiffotron swiffotron;
+            PredictedOutputTest(@"TestInstanceTypeExtern.xml", @"TestInstanceTypeExtern.swf", out swiffotron);
+        }
+
+        /// <summary>
+        /// Tests a job with a movieclip node of type extern. This test is functionally equivalent to
+        /// TestInstanceTypeExtern in its output.
         /// </summary>
         [TestMethod]
         public void TestMovieclipTypeExtern()

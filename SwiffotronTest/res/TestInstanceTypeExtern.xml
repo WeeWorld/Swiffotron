@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            id="TestInstanceTypeExtern">
+
+    <!-- This test exists purely to compare and contrast the output to TestMovieclipTypeExtern which
+         is functionally equivalent, and should have identical output. -->
+    <swf id="TestInstanceTypeExternSWF">
+        
+        <swfout store="store://store/TestInstanceTypeExtern.swf"/>
+
+        <instance id="mc_alienpilot" x="40" y="40" src="store://store/monocular-ufo-pilot.swf" type="extern" class="com.ww.UFOClass"/>
+        
+    </swf>
+
+</swiffotron>
