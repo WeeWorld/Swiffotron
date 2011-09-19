@@ -15,7 +15,7 @@ If you wish to load the code using Visual Studio 2010 Express, then you'll need 
 Download
 --------
 
-You can download v1.0 [here](https://github.com/downloads/izb/Swiffotron/Swiffotron%20v1.0%20DEBUG.zip).
+You can download v1.0 [here](https://github.com/downloads/izb/Swiffotron/SwiffotronSetup-v1.0.0.1.msi).
 
 It will install itself as a service. Assemblies can be found in the installation directory.
 
