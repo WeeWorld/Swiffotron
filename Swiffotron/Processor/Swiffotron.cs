@@ -778,6 +778,19 @@ namespace SWFProcessing.Swiffotron
                             insTag,
                             clip,
                             className);
+
+                    clip.SpriteProc(delegate(Sprite s)
+                    {
+                        if (s.Class != null && !(s.Class is AdobeClass))
+                        {
+                            /* TODO: Only do this if the class hasn't already been bound.
+                             * Note that this will be a problem if one movieclip is used to create
+                             * several instances. At the time of writing, there is no unit test for
+                             * this case. */
+                            swf.FirstScript.Code.GenerateClipClassBindingScript(s);
+                        }
+                    });
+
                     break;
 
                 case ValInstance:
@@ -887,7 +900,7 @@ namespace SWFProcessing.Swiffotron
 
                 spr.SpriteProc(delegate(Sprite s)
                 {
-                    if (s.Class != null)
+                    if (s.Class != null && !(s.Class is AdobeClass))
                     {
                         /* TODO: Only do this if the class hasn't already been bound. */
                         swf.FirstScript.Code.GenerateClipClassBindingScript(s);

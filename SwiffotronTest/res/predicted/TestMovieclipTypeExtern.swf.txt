@@ -1,7 +1,6 @@
 SWF stage=550,400, fps=24, bg=#FFFFFF
 Document class:mn QName "MainTimeline"; ns Package "TestMovieclipTypeExternSWF_swiffotron"; set *
 {
-this is broken when loaded in flash player
     Character '__cid##1'
     {
         Bounds: [Rect 0,0->139,42]
@@ -237,38 +236,38 @@ this is broken when loaded in flash player
         uint #0	0
         double #0	0
         string #0	"_@ny~Name#"
-        string #1	"Object"
+        string #1	"alienhead_7"
         string #2	""
-        string #3	"EventDispatcher"
-        string #4	"flash.events"
-        string #5	"DisplayObject"
-        string #6	"flash.display"
-        string #7	"InteractiveObject"
-        string #8	"DisplayObjectContainer"
-        string #9	"Sprite"
-        string #10	"MovieClip"
-        string #11	"MainTimeline"
-        string #12	"TestMovieclipTypeExternSWF_swiffotron"
-        string #13	"UFOClass"
-        string #14	"com.ww"
-        string #15	"com.ww:UFOClass"
-        string #16	"ufo_mc"
-        string #17	"alien_5"
-        string #18	"monocular_fla"
-        string #19	"monocular_fla:alien_5"
-        string #20	"alienbody_mc"
-        string #21	"alienhead_mc"
-        string #22	"alienhead_7"
-        string #23	"monocular_fla:alienhead_7"
-        string #24	"lefteye_mc"
-        string #25	"body_2"
-        string #26	"monocular_fla:body_2"
-        string #27	"lights_mc"
-        string #28	"occupied_window_4"
-        string #29	"monocular_fla:occupied_window_4"
-        string #30	"alien_mc"
-        string #31	"window_mc"
-        string #32	"ufo_1"
+        string #3	"monocular_fla"
+        string #4	"Object"
+        string #5	"EventDispatcher"
+        string #6	"flash.events"
+        string #7	"DisplayObject"
+        string #8	"flash.display"
+        string #9	"InteractiveObject"
+        string #10	"DisplayObjectContainer"
+        string #11	"Sprite"
+        string #12	"MovieClip"
+        string #13	"alien_5"
+        string #14	"occupied_window_4"
+        string #15	"body_2"
+        string #16	"ufo_1"
+        string #17	"MainTimeline"
+        string #18	"TestMovieclipTypeExternSWF_swiffotron"
+        string #19	"UFOClass"
+        string #20	"com.ww"
+        string #21	"com.ww:UFOClass"
+        string #22	"ufo_mc"
+        string #23	"monocular_fla:alien_5"
+        string #24	"alienbody_mc"
+        string #25	"alienhead_mc"
+        string #26	"monocular_fla:alienhead_7"
+        string #27	"lefteye_mc"
+        string #28	"monocular_fla:body_2"
+        string #29	"lights_mc"
+        string #30	"monocular_fla:occupied_window_4"
+        string #31	"alien_mc"
+        string #32	"window_mc"
         string #33	"monocular_fla:ufo_1"
         string #34	"leftfoot_mc"
         string #35	"rightfoot_mc"
@@ -278,12 +277,12 @@ this is broken when loaded in flash player
         string #39	"mc_alienpilot"
         ns #0	ns Ns "*"
         ns #1	ns Package ""
-        ns #2	ns Package "flash.events"
-        ns #3	ns Package "flash.display"
-        ns #4	ns Package "TestMovieclipTypeExternSWF_swiffotron"
-        ns #5	ns Package "com.ww"
-        ns #6	ns Protected "com.ww:UFOClass"
-        ns #7	ns Package "monocular_fla"
+        ns #2	ns Package "monocular_fla"
+        ns #3	ns Package "flash.events"
+        ns #4	ns Package "flash.display"
+        ns #5	ns Package "TestMovieclipTypeExternSWF_swiffotron"
+        ns #6	ns Package "com.ww"
+        ns #7	ns Protected "com.ww:UFOClass"
         ns #8	ns Protected "monocular_fla:alien_5"
         ns #9	ns Protected "monocular_fla:alienhead_7"
         ns #10	ns Protected "monocular_fla:body_2"
@@ -291,33 +290,40 @@ this is broken when loaded in flash player
         ns #12	ns Protected "monocular_fla:ufo_1"
         ns #13	ns Protected "TestMovieclipTypeExternSWF_swiffotron:MainTimeline"
         ns set #0	(0 items)
+        ns set #1	(1 items)
+            - ns Package "monocular_fla"
         multiname #0	mn Multiname "*"; ns *; set {}
-        multiname #1	mn QName "Object"; ns Package ""; set *
-        multiname #2	mn QName "EventDispatcher"; ns Package "flash.events"; set *
-        multiname #3	mn QName "DisplayObject"; ns Package "flash.display"; set *
-        multiname #4	mn QName "InteractiveObject"; ns Package "flash.display"; set *
-        multiname #5	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
-        multiname #6	mn QName "Sprite"; ns Package "flash.display"; set *
-        multiname #7	mn QName "MovieClip"; ns Package "flash.display"; set *
-        multiname #8	mn QName "MainTimeline"; ns Package "TestMovieclipTypeExternSWF_swiffotron"; set *
-        multiname #9	mn QName "UFOClass"; ns Package "com.ww"; set *
-        multiname #10	mn QName "ufo_mc"; ns Package ""; set *
+        multiname #1	mn Multiname "alienhead_7"; ns *; set {ns Package "monocular_fla"}
+        multiname #2	mn QName "Object"; ns Package ""; set *
+        multiname #3	mn QName "EventDispatcher"; ns Package "flash.events"; set *
+        multiname #4	mn QName "DisplayObject"; ns Package "flash.display"; set *
+        multiname #5	mn QName "InteractiveObject"; ns Package "flash.display"; set *
+        multiname #6	mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *
+        multiname #7	mn QName "Sprite"; ns Package "flash.display"; set *
+        multiname #8	mn QName "MovieClip"; ns Package "flash.display"; set *
+        multiname #9	mn QName "alienhead_7"; ns Package "monocular_fla"; set *
+        multiname #10	mn Multiname "alien_5"; ns *; set {ns Package "monocular_fla"}
         multiname #11	mn QName "alien_5"; ns Package "monocular_fla"; set *
-        multiname #12	mn QName "alienbody_mc"; ns Package ""; set *
-        multiname #13	mn QName "alienhead_mc"; ns Package ""; set *
-        multiname #14	mn QName "alienhead_7"; ns Package "monocular_fla"; set *
-        multiname #15	mn QName "lefteye_mc"; ns Package ""; set *
-        multiname #16	mn QName "body_2"; ns Package "monocular_fla"; set *
-        multiname #17	mn QName "lights_mc"; ns Package ""; set *
-        multiname #18	mn QName "occupied_window_4"; ns Package "monocular_fla"; set *
-        multiname #19	mn QName "alien_mc"; ns Package ""; set *
-        multiname #20	mn QName "window_mc"; ns Package ""; set *
-        multiname #21	mn QName "ufo_1"; ns Package "monocular_fla"; set *
-        multiname #22	mn QName "leftfoot_mc"; ns Package ""; set *
-        multiname #23	mn QName "rightfoot_mc"; ns Package ""; set *
-        multiname #24	mn QName "ufobody_mc"; ns Package ""; set *
-        multiname #25	mn QName "cockpit_mc"; ns Package ""; set *
-        multiname #26	mn QName "mc_alienpilot"; ns Package ""; set *
+        multiname #12	mn Multiname "occupied_window_4"; ns *; set {ns Package "monocular_fla"}
+        multiname #13	mn QName "occupied_window_4"; ns Package "monocular_fla"; set *
+        multiname #14	mn Multiname "body_2"; ns *; set {ns Package "monocular_fla"}
+        multiname #15	mn QName "body_2"; ns Package "monocular_fla"; set *
+        multiname #16	mn Multiname "ufo_1"; ns *; set {ns Package "monocular_fla"}
+        multiname #17	mn QName "ufo_1"; ns Package "monocular_fla"; set *
+        multiname #18	mn QName "MainTimeline"; ns Package "TestMovieclipTypeExternSWF_swiffotron"; set *
+        multiname #19	mn QName "UFOClass"; ns Package "com.ww"; set *
+        multiname #20	mn QName "ufo_mc"; ns Package ""; set *
+        multiname #21	mn QName "alienbody_mc"; ns Package ""; set *
+        multiname #22	mn QName "alienhead_mc"; ns Package ""; set *
+        multiname #23	mn QName "lefteye_mc"; ns Package ""; set *
+        multiname #24	mn QName "lights_mc"; ns Package ""; set *
+        multiname #25	mn QName "alien_mc"; ns Package ""; set *
+        multiname #26	mn QName "window_mc"; ns Package ""; set *
+        multiname #27	mn QName "leftfoot_mc"; ns Package ""; set *
+        multiname #28	mn QName "rightfoot_mc"; ns Package ""; set *
+        multiname #29	mn QName "ufobody_mc"; ns Package ""; set *
+        multiname #30	mn QName "cockpit_mc"; ns Package ""; set *
+        multiname #31	mn QName "mc_alienpilot"; ns Package ""; set *
         Metadata:
         End of metadata.
         protected package ns Protected "com.ww:UFOClass"
@@ -556,6 +562,191 @@ this is broken when loaded in flash player
 
                 [mn QName "mc_alienpilot"; ns Package ""; set *,Slot] property type : [mn QName "UFOClass"; ns Package "com.ww"; set *], val: ConUndefined
             }
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "alienhead_7"; ns *; set {ns Package "monocular_fla"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "alienhead_7"; ns Package "monocular_fla"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "alienhead_7"; ns Package "monocular_fla"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "alienhead_7"; ns Package "monocular_fla"; set *,Class] script class trait : mn QName "alienhead_7"; ns Package "monocular_fla"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "alien_5"; ns *; set {ns Package "monocular_fla"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "alien_5"; ns Package "monocular_fla"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "alien_5"; ns Package "monocular_fla"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "alien_5"; ns Package "monocular_fla"; set *,Class] script class trait : mn QName "alien_5"; ns Package "monocular_fla"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "occupied_window_4"; ns *; set {ns Package "monocular_fla"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "occupied_window_4"; ns Package "monocular_fla"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "occupied_window_4"; ns Package "monocular_fla"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "occupied_window_4"; ns Package "monocular_fla"; set *,Class] script class trait : mn QName "occupied_window_4"; ns Package "monocular_fla"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "body_2"; ns *; set {ns Package "monocular_fla"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "body_2"; ns Package "monocular_fla"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "body_2"; ns Package "monocular_fla"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "body_2"; ns Package "monocular_fla"; set *,Class] script class trait : mn QName "body_2"; ns Package "monocular_fla"; set *
+        }
+        Script:
+        {
+            script () : Void
+            {
+                [MaxStack:2, LocalCount:1, InitScopeDepth:1, MaxScopeDepth:9]
+
+                #1 GetLocal0()
+                #2 PushScope()
+                #3 FindPropStrict(mn Multiname "ufo_1"; ns *; set {ns Package "monocular_fla"})
+                #4 GetLex(mn QName "Object"; ns Package ""; set *)
+                #5 PushScope()
+                #6 GetLex(mn QName "EventDispatcher"; ns Package "flash.events"; set *)
+                #7 PushScope()
+                #8 GetLex(mn QName "DisplayObject"; ns Package "flash.display"; set *)
+                #9 PushScope()
+                #10 GetLex(mn QName "InteractiveObject"; ns Package "flash.display"; set *)
+                #11 PushScope()
+                #12 GetLex(mn QName "DisplayObjectContainer"; ns Package "flash.display"; set *)
+                #13 PushScope()
+                #14 GetLex(mn QName "Sprite"; ns Package "flash.display"; set *)
+                #15 PushScope()
+                #16 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #17 PushScope()
+                #18 GetLex(mn QName "MovieClip"; ns Package "flash.display"; set *)
+                #19 NewClass(mn QName "ufo_1"; ns Package "monocular_fla"; set *)
+                #20 PopScope()
+                #21 PopScope()
+                #22 PopScope()
+                #23 PopScope()
+                #24 PopScope()
+                #25 PopScope()
+                #26 PopScope()
+                #27 InitProperty(mn QName "ufo_1"; ns Package "monocular_fla"; set *)
+                #28 ReturnVoid()
+            }
+            [mn QName "ufo_1"; ns Package "monocular_fla"; set *,Class] script class trait : mn QName "ufo_1"; ns Package "monocular_fla"; set *
         }
         Script:
         {
