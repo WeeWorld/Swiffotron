@@ -56,6 +56,8 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />
+    <EmbeddedResource Include="res\predicted\TestInstanceTypeExtern.swf.txt" />
+    <EmbeddedResource Include="res\TestInstanceTypeExtern.xml" />
     <EmbeddedResource Include="res\TestUnqualifiedGeneratedTimelineClass.xml" />
     <EmbeddedResource Include="res\TestInappropriateClassName.xml" />
     <EmbeddedResource Include="res\TestNotRenamedMainTimeline.xml" />
