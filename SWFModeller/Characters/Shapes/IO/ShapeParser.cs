@@ -91,9 +91,6 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
 
             MorphLineStyle[] mlsa = ReadMorphLineStyleArray(shapeReader, format);
 
-            /* TODO: We duplicate the fill styles in the start and end shape defs here, which
-             * feels horridly uncomfortable. Re-think this. */
-
             ShapeDef startShape = ReadShapeDef(shapeReader, format, false, mfsa, mlsa);
             ShapeDef endShape = ReadShapeDef(shapeReader, format, false, mfsa, mlsa);
 
@@ -335,7 +332,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
             return mgr;
         }
 
-        /* TODO: Instead of passing the format and reader around, perhaps they should be
+        /* ISSUE 20: Instead of passing the format and reader around, perhaps they should be
          * members? Perhaps? Hmm? */
         private FillStyle[] ReadFillStyleArray(SWFDataTypeReader shapeReader, Tag format)
         {
@@ -535,7 +532,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
                         fillBits = (int)shapeReader.ReadUBits(4);
                         lineBits = (int)shapeReader.ReadUBits(4);
 
-                        /* TODO: We're storing new styles defined in shape records in two places and
+                        /* ISSUE 21: We're storing new styles defined in shape records in two places and
                          * in such a way that we can't figure out where we got them from. This makes
                          * it impossible to reconstruct the SWF data. Kinda need to work out how to
                          * find styles. */

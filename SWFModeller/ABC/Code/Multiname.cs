@@ -231,7 +231,6 @@ namespace SWFProcessing.SWFModeller.ABC
         /// <returns>A string rendition of this multiname.</returns>
         public override string ToString()
         {
-            /* TODO: If we catch all the cases above properly, remove this fallback block. */
             string theName = this.Name;
             string theNs = (this.NS == null) ? "ns *" : this.NS.ToString();
             string theSet = (this.Set == null) ? "set *" : this.Set.ToString();

@@ -86,7 +86,8 @@ namespace SWFProcessing.SWFModeller
         {
             get
             {
-                return false; /* TODO */
+                /* AS3 apps do not have clip actions. */
+                return false;
             }
         }
 
@@ -185,7 +186,7 @@ namespace SWFProcessing.SWFModeller
 
         public IDisplayListItem Clone(Layer l, bool rename)
         {
-            /* TODO: Can't decide if we want to clone the characters, or clone them if we
+            /* ISSUE 19: Can't decide if we want to clone the characters, or clone them if we
              * pass in a flag and leave it to the swiffotron's logic to decide. */
 
             string name = this.Name;
@@ -205,7 +206,7 @@ namespace SWFProcessing.SWFModeller
                     this.ClassName,
                     this.Ratio);
 
-            /* TODO: Check that the name doesn't exist on the target layer's timeline. Remember the target
+            /* ISSUE 19: Check that the name doesn't exist on the target layer's timeline. Remember the target
              * timeline might be different to the source timeline, so name collisions may or may not happen.
              * you might think passing in 'rename == true' all the time would be a good thing, but actually
              * this just breaks all the bytecode. I'm not entirely sure it's possible to fix that.

@@ -159,7 +159,7 @@ namespace SWFProcessing.SWFModeller.ABC
 
         public Namespace GetAt(int idx)
         {
-            /* TODO: Wouldn't an index accessor be sexier? */
+            /* ISSUE 17: Wouldn't an index accessor be sexier? */
             return this.NSSet[idx];
         }
 

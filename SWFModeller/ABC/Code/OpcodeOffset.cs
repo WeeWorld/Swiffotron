@@ -8,7 +8,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
 {
     public class OpcodeOffset
     {
-        /* TODO: This class is used in exception handlers. I wonder if it'd work in jumps and switches too?.. */
+        /* ISSUE 18: This class is used in exception handlers. I wonder if it'd work in jumps and switches too?.. */
 
         public Opcode Opcode { get; private set; }
 

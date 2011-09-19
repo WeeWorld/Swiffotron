@@ -296,7 +296,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
             string[] paramDefs = new string[this.paramTypes.Count];
             for (int i = 0; i < this.paramTypes.Count; i++)
             {
-                /* TODO: Once we store parameter names, we can show those too. */
+                /* ISSUE 12: Once we store parameter names, we can show those too. */
                 paramDefs[i] = this.paramTypes[i].ToString() + " param" + (i + 1);
             }
             return string.Join(", ", paramDefs);
