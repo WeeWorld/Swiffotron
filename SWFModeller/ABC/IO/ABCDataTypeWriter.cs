@@ -70,16 +70,7 @@ namespace SWFProcessing.SWFModeller
 
         public void WriteSI32(int sv)
         {
-            uint mask = (uint)sv;
-            if (sv < 0)
-            {
-                mask = (~mask) << 1;
-                if (mask == 0)
-                {
-                    mask = 0xFFFFFFFFU;
-                }
-            }
-            WriteUI32((uint)sv, mask);
+            WriteUI32((uint)sv);
         }
 
         public void WriteSI24(int v)
@@ -87,17 +78,8 @@ namespace SWFProcessing.SWFModeller
             this.WriteUI24((uint)v);
         }
 
-        /// <summary>
-        /// TODO: Exposing this mask part on a public interface is an abhorrent
-        /// thing to do. Don't ever ever do that again. Naughty me.
-        /// </summary>
-        public void WriteUI32(uint v, uint mask = 0)
+        public void WriteUI32(uint v)
         {
-            if (mask == 0)
-            {
-                mask = v;
-            }
-
             if (v < 128U)
             {
                 this.WriteUI8(v);

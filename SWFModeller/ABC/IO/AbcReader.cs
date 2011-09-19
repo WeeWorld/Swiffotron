@@ -363,7 +363,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 #endif
                 if (m.HasOptionalArgs)
                 {
-                    /* TODO: We don't store these at the moment. */
+                    /* ISSUE 9: We don't store these at the moment. */
                     uint optionCount = this.abcdtr.ReadU30();
                     while (optionCount-- > 0)
                     {

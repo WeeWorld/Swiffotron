@@ -171,7 +171,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                 uint srcPos = (uint)this.stringMarshal.GetIDFor(method.SourceFile);
                 if (srcPos > 255)
                 {
-                    /* TODO: Best fix may be to strip out debug opcodes. */
+                    /* ISSUE 10: Best fix may be to strip out debug opcodes. */
                     throw new SWFModellerException(
                             SWFModellerError.CodeMerge,
                             "Marshaller failed to keep debug string at low index");
@@ -268,7 +268,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                             uint spos = (uint)this.stringMarshal.GetIDFor((string)argOb);
                             if (spos > 255)
                             {
-                                /* TODO: Best fix may be to strip out debug opcodes. */
+                                /* ISSUE 10: Best fix may be to strip out debug opcodes. */
                                 throw new SWFModellerException(
                                         SWFModellerError.Internal,
                                         "Marshaller failed to keep debug string at low index");

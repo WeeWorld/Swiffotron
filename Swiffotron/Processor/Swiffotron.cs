@@ -539,7 +539,7 @@ namespace SWFProcessing.Swiffotron
                         this.abcInterceptor)
                     .ReadSWF(new SWFContext(name));
 #else
-                return new SWFReader(s, new SWFReaderOptions() { StrictTagLength = true }, null, null).ReadSWF(name);
+                return new SWFReader(s, new SWFReaderOptions() { StrictTagLength = true }, null, null).ReadSWF(new SWFContext(name));
 #endif
             }
         }

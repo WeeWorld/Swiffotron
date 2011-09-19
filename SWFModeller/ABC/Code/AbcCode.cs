@@ -91,7 +91,7 @@ namespace SWFProcessing.SWFModeller.ABC
 
         private List<Method> methods;
 
-        /* TODO: Turn the array members into list members for consistency with the
+        /* ISSUE 3: Turn the array members into list members for consistency with the
          * other tables. */
 
         /// <summary>
@@ -152,7 +152,7 @@ namespace SWFProcessing.SWFModeller.ABC
             }
         }
 
-        /* TODO: On a personal note, there's a horrid mix of patterns in this project for
+        /* ISSUE 4: On a personal note, there's a horrid mix of patterns in this project for
          * exposing iterable data from classes. Here we have a list exposed as an IEnumerable,
          * which seems reasonable, but will permit data alteration if the caller is canny enough
          * to cast it back into a List. We could expose it as an IEnumerator instead, but this
@@ -464,7 +464,7 @@ namespace SWFProcessing.SWFModeller.ABC
             if (spr.Class.Name.Kind == Multiname.MultinameKind.Multiname)
             {
                 sprMultiname = spr.Class.Name;
-                /* TODO: Convert a multiname to a QName of the form:
+                /* ISSUE 5: Convert a multiname to a QName of the form:
                  * mn QName "MyClassName"; ns Package "com.mypackage"; set *
                  */
                 throw new SWFModellerException(
@@ -733,7 +733,7 @@ namespace SWFProcessing.SWFModeller.ABC
         /// <returns>A class or null if it wasn't found.</returns>
         internal AS3ClassDef FindClass(Multiname multiname)
         {
-            /* TODO: Optimize this. Maintain a map of multinames->classes
+            /* ISSUE 6: Optimize this. Maintain a map of multinames->classes
              * Linear searches are for losers. */
 
             foreach (AS3ClassDef c in this.classes)
@@ -772,7 +772,7 @@ namespace SWFProcessing.SWFModeller.ABC
                             "Invalid arg values or types in opcode " + mnemonic.ToString());
                 }
             }
-            /* TODO: There must be some way to verify lookupswitch to some degree.
+            /* ISSUE 7: There must be some way to verify lookupswitch to some degree.
              * Update: There is. The case count must be correct and the offsets must be references
              * to preceeding Label opcodes. */
 
@@ -845,7 +845,7 @@ namespace SWFProcessing.SWFModeller.ABC
 
         internal AS3ClassDef GetClassByName(string className)
         {
-            /* TODO: This is a linear search. I HATE linear searches. */
+            /* ISSUE 8: This is a linear search. I HATE linear searches. */
             foreach (AS3ClassDef c in this.classes)
             {
                 if (c.QualifiedName == className)
