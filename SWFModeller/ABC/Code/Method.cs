@@ -250,10 +250,6 @@ namespace SWFProcessing.SWFModeller.ABC.Code
             this.traits.Add(t);
         }
 
-        /*
-         * TODO: Add support for options and parameter names.
-         */
-
         /// <summary>
         /// Unit test method present in the debug build. Renders the object as text
         /// that can be written to a diffable output file.

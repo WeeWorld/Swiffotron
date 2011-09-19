@@ -40,7 +40,7 @@ namespace SWFProcessing.SWFModeller.Characters.Text
 
         public Layout LayoutInfo { get; set; }
 
-        /* TODO: A text field has a font, but it can also contain HTML which can
+        /* ISSUE 13: A text field has a font, but it can also contain HTML which can
          * reference other fonts. This is a pain. Deal with it. */
 
         public Rect Bounds { get; set; }
@@ -111,7 +111,7 @@ namespace SWFProcessing.SWFModeller.Characters.Text
         {
             get
             {
-                /* TODO: Support font classes. */
+                /* ISSUE 14: Support font classes. */
                 return false;
             }
         }

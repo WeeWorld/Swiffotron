@@ -20,9 +20,6 @@ namespace SWFProcessing.SWFModeller
     /// </summary>
     public class Frame
     {
-        /* TODO: Should the display list be independant of frames? Frames manipulate
-         * the DL, or does each frame have a DL? */
-
         /// <summary>
         /// The list of display list items on this frame.
         /// </summary>
@@ -89,7 +86,7 @@ namespace SWFProcessing.SWFModeller
 
         internal PlaceObject FindInstance(string name)
         {
-            /* TODO: Must be a faster way. */
+            /* ISSUE 15: Must be a faster way. */
             foreach (IDisplayListItem dli in this.displayList)
             {
                 if (dli.Type == DisplayListItemType.PlaceObjectX)

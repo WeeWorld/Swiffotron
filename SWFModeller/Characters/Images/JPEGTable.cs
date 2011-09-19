@@ -12,7 +12,7 @@ namespace SWFProcessing.SWFModeller.Characters.Images
     /// JPEG table to save space. There is only one of these things per SWF, so
     /// when writing images we need to take care to check that they all
     /// reference the same table.
-    /// TODO: When writing, if we encounter a second table, then the image should
+    /// ISSUE 16: When writing, if we encounter a second table, then the image should
     /// be converted from a DefineBits to a DefineJPEG2 tag by inlining the table.
     /// </summary>
     public class JPEGTable

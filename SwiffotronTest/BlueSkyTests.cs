@@ -21,7 +21,8 @@ namespace SWFProcessing.Swiffotron.Test
     [TestClass]
     public class BlueSkyTests : TestingBaseClass
     {
-        private bool ENABLED = false; /* TODO: Shady way to do this really. */
+        private bool ENABLED = false; /* Shady way to do this really. Set to true to see the blue-sky tests and
+                                       * inevitably, by definition, fail. */
 
         /// <summary>
         /// Tests a job which produces a PNG file.
@@ -45,7 +46,6 @@ namespace SWFProcessing.Swiffotron.Test
 
         private void Process(Swiffotron swiffotron, string name)
         {
-            /* TODO: Write a new commit listener that looks for PNG files and pass it in here. */
             swiffotron.Process(ResourceAsStream(name), null, null, null, null, null);
         }
 
@@ -65,8 +65,6 @@ namespace SWFProcessing.Swiffotron.Test
             MockStore store;
             MockCache cache;
             swiffotron = CreateMockSwiffotron(out store, out cache);
-
-            /* TODO: Write a new commit listener that looks for video files and pass it in here. */
 
             Process(swiffotron, @"TestVidOut.xml");
         }

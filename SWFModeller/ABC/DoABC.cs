@@ -326,8 +326,6 @@ namespace SWFProcessing.SWFModeller.ABC
                 abc.Op(Opcode.Mnemonics.GetLocal0),
                 abc.Op(Opcode.Mnemonics.ConstructSuper, 0U),
 
-                /* TODO: Initialization code to be merged here. Supply a mechanism for this please. */
-
                 abc.Op(Opcode.Mnemonics.ReturnVoid)
             );
 

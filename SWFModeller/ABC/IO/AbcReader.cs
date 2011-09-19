@@ -376,6 +376,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                 {
                     for (int j = 0; j < pcount; j++)
                     {
+                        /* ISSUE 12 */
                         /*(void)*/this.abcdtr.ReadU30();
                     }
                 }

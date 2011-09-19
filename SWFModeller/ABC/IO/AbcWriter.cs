@@ -376,7 +376,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                 writer.Write(bytecode, 0, bytecode.Length);
 
                 /* Exception handlers... */
-                /* TODO: This is a fixed list from the moment the method is loaded. You can't add and
+                /* ISSUE 11: This is a fixed list from the moment the method is loaded. You can't add and
                  * remove from exception handlers since they are referenced from newexception opcodes
                  * by index into this list. Fix this by removing the list and marshalling the references
                  * when required. */
@@ -689,7 +689,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 
                 if (method.HasOptionalArgs)
                 {
-                    /* TODO */
+                    /* ISSUE 9 */
                     throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             "Optional arguments in methods.");
@@ -697,7 +697,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 
                 if (method.HasParamNames)
                 {
-                    /* TODO */
+                    /* ISSUE 12 */
                     throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             "Named method parameters");
@@ -786,8 +786,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                 writer.WriteUI8((uint)ns.Kind);
                 writer.WriteU30Packed((uint)this.stringMarshal.GetExistingIDFor(ns.Name));
             }
-            code.SetNamespaces(namespaces); /* TODO: These methods could be replaced with just clearing the lists and calling 'add' lots of times. */
-            /* TODO: BUG! These 'set' calls will not re-add things like the global namespace at index 0. */
+            code.SetNamespaces(namespaces);
 
             /* Namespace set constants */
             NamespaceSet[] namespaceSets = this.nsSetMarshal.ToArray();

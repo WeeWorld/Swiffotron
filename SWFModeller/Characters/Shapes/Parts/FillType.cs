@@ -12,7 +12,6 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
     {
         public static bool IsBitmap(FillType t)
         {
-            /* TODO: Pretty sure the int values would let us do a 0xF0 mask here. */
             return (t == FillType.RepeatingBitmap
                     || t == FillType.ClippedBitmap
                     || t == FillType.NonSmoothClippedBitmap
