@@ -6,8 +6,8 @@
 
 namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
 {
-    using SWFProcessing.SWFModeller.Characters.Images;
     using System.Text;
+    using SWFProcessing.SWFModeller.Characters.Images;
 
     class StyleChange : IShapeRecord
     {
@@ -17,7 +17,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
         public IFillStyle FillStyle0 { get; set; }
         public IFillStyle FillStyle1 { get; set; }
 
-        /* TODO: Not sure how flash uses the new styles, or how they're indexed. Not sure
+        /* ISSUE 23: Not sure how flash uses the new styles, or how they're indexed. Not sure
          * we'll be able to find images here when parsing shapes, or tie them back together 
          * again. All this points to a massive refactoring of fill/line style recording and
          * management somewhere along the line. A hackity fix may be to store everything in the
@@ -31,7 +31,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
 
         public IImage[] GetImages()
         {
-            /* TODO: Collate all the images from all our fill styles. */
+            /* ISSUE 23: Collate all the images from all our fill styles. */
             return null;
         }
 

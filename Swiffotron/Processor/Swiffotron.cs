@@ -364,7 +364,7 @@ namespace SWFProcessing.Swiffotron
             {
                 XmlAttributeCollection attribs = ((XmlElement)outputTag.UnderlyingObject).Attributes;
 
-                /* TODO: Check the runifnotchanged thing. */
+                /* ISSUE 28: Check the runifnotchanged thing. */
 
                 string dest = outputTag.GetAttribute(AttrStore, string.Empty);
                 outputTag.MoveToParent(); /* Select SWF tag */
@@ -783,7 +783,7 @@ namespace SWFProcessing.Swiffotron
                     {
                         if (s.Class != null && !(s.Class is AdobeClass))
                         {
-                            /* TODO: Only do this if the class hasn't already been bound.
+                            /* ISSUE 29: Only do this if the class hasn't already been bound.
                              * Note that this will be a problem if one movieclip is used to create
                              * several instances. At the time of writing, there is no unit test for
                              * this case. */
@@ -902,7 +902,7 @@ namespace SWFProcessing.Swiffotron
                 {
                     if (s.Class != null && !(s.Class is AdobeClass))
                     {
-                        /* TODO: Only do this if the class hasn't already been bound. */
+                        /* ISSUE 29: Only do this if the class hasn't already been bound. */
                         swf.FirstScript.Code.GenerateClipClassBindingScript(s);
                     }
                 });
@@ -1084,7 +1084,6 @@ namespace SWFProcessing.Swiffotron
             string newInsName;
             Timeline parent = QNameToTimeline(qname, swf, out newInsName);
 
-            /* TODO: Position relative to */
             string relativeToQname = transform.GetAttribute(AttrRelativeTo, string.Empty);
             Matrix m = null;
             if (relativeToQname == null || relativeToQname == string.Empty)
@@ -1110,8 +1109,6 @@ namespace SWFProcessing.Swiffotron
                 }
             }
 
-            /* TODO: Find out what 'ratio' does. It's a magical number that makes things work, and
-             * I never use it. */
             try
             {
                 parent.Instantiate(1, charToInstantiate, Layer.Position.Front, m, newInsName, qClassName);
@@ -1166,14 +1163,13 @@ namespace SWFProcessing.Swiffotron
         }
 
         /// <summary>
-        /// Gets the transorm position of an instance.
+        /// Gets the transform position of an instance.
         /// </summary>
         /// <param name="qname">Fully qualified name of an instance.</param>
         /// <param name="swf">The SWF to search in/</param>
         /// <returns>A copy of the instance's position matrix.</returns>
         private Matrix PositionFromQname(string qname, SWF swf)
         {
-            /* TODO: Detect paths here, and error, coz they're not valid. */
             PlaceObject po = swf.LookupInstance(qname);
             return po.Matrix.Copy();
         }

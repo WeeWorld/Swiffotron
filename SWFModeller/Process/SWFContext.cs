@@ -22,7 +22,11 @@ namespace SWFProcessing.SWFModeller.Process
 
         public SWFContext(string name)
         {
-            /* TODO: Assert not null. */
+            if (name == null)
+            {
+                throw new SWFModellerException(SWFModellerError.Internal, "Can't have a null in a SWFContext name");
+            }
+
             if (name == string.Empty)
             {
                 name = "untitled";

@@ -36,9 +36,9 @@ namespace SWFProcessing.SWFModeller
         /// </summary>
         private static Color defaultBGColour = Color.White;
 
-        /* TODO: The dictionary is only of use when creating SWF files, much like the library
+        /* ISSUE 24: The dictionary is only of use when creating SWF files, much like the library
          * is only of use in a fla file. Since this is a SWF class, not a FLA class, we could
-         * probably move the dictionary out the the Swiffotron, since it is our equivalient
+         * probably move the dictionary out to the Swiffotron, since it is our equivalient
          * to the IDE. */
         private Dictionary<string, ICharacter> dictionary;
 
@@ -48,7 +48,7 @@ namespace SWFProcessing.SWFModeller
         private List<Sprite> exportOnFirstFrame;
 
         /// <summary>
-        /// TODO: We assume that a SWF can have multiple bytecode tags in it. I suspect however
+        /// ISSUE 25: We assume that a SWF can have multiple bytecode tags in it. I suspect however
         /// that this is not the case. What we will probably need to do is take two *parsed*
         /// chunks of ABC code and merge them, namespaces, scripts and all into some sort of
         /// uberscript. We'll have an array here in the meantime though because I'm still hoping
@@ -98,7 +98,7 @@ namespace SWFProcessing.SWFModeller
 
             this.BackgroundColor = defaultBGColour;
 
-            /* TODO: This list is read when the swf is written, but we never
+            /* ISSUE 30: This list is read when the swf is written, but we never
              * add to it. We should add to it on instruction from swiffotron xml
              * attributes, and also when we infer that a read sprite should be
              * exported based on its position in the source SWF relative to its first
@@ -210,10 +210,10 @@ namespace SWFProcessing.SWFModeller
         {
             get
             {
-                /* TODO: Classes have scripts. We also call high level ABC objects 'scripts'. This is
+                /* ISSUE 26: Classes have scripts. We also call high level ABC objects 'scripts'. This is
                  * unnecessary and confusing. We need to sort out our terminology. "ScriptTag" would be good.*/
 
-                /* TODO: This seems like a hack. Really we should probably only ever have one script tag anyway.
+                /* ISSUE 25: This seems like a hack. Really we should probably only ever have one script tag anyway.
                  * Just doesn't feel right until I've seen enough SWF files to accept that they only ever have
                  * one. I guess a fix would be to say we don't support multiple DoABC tags. */
 
@@ -457,7 +457,7 @@ namespace SWFProcessing.SWFModeller
         /// <returns>The placeobject displaylist item, or null if not found.</returns>
         public PlaceObject LookupInstance(string qname)
         {
-            /* TODO: In Swiffotron, we should be making a quick
+            /* ISSUE 31: In Swiffotron, we should be making a quick
              * check on qname to make sure it's not a store path since
              * if it is, and we've specified a wrong instance type, it
              * just crashes instead of supplying an informative error
@@ -696,7 +696,7 @@ namespace SWFProcessing.SWFModeller
 
                     if (!t.Name.IsEmptySet)
                     {
-                        /* TODO: Delete this once confidence is felt. */
+                        /* ISSUE 32: Delete this once confidence is felt. */
                         throw new SWFModellerException(
                                     SWFModellerError.UnimplementedFeature,
                                     "Trait name has a set. I didn't think that was possible! Following code needs fixed!!!");

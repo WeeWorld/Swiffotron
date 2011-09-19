@@ -8,7 +8,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
 {
     using SWFProcessing.SWFModeller.Util;
 
-    /* TODO: I think the little fragments of IO scattered around the project should be under
+    /* ISSUE 22: I think the little fragments of IO scattered around the project should be under
      * the main IO package, e.g. SWFModeller.IO.Shapes. Go on a refactoring exercise please. */
 
     internal class ShapeWriter

@@ -143,7 +143,7 @@ namespace SWFProcessing.SWFModeller
 
             finalWriter.WriteUI24(this.options.Compressed ? SIG_COMPRESSED : SIG_UNCOMPRESSED);
 
-            /* TODO: Hard-coded SWF version 10. Technically this should be an option but
+            /* ISSUE 27: Hard-coded SWF version 10. Technically this should be an option but
              * for now we don't want the headache of version-specific code. */
             finalWriter.WriteUI8(SWF_VERSION);
 
@@ -1013,8 +1013,7 @@ namespace SWFProcessing.SWFModeller
         {
             WriteBuffer tagWriter = this.OpenTag(Tag.FileAttributes);
 
-            /* TODO: Some of these flags are for SWF v10 - check the flash 9 spec for defaults instead. */
-            /* TODO: It'd be nicer to just write a 32-bit integer with bits set in it. */
+            /* ISSUE 27: Some of these flags are for SWF v10 - check the flash 9 spec for defaults instead. */
 
             /* No data written yet, so data will be aligned. */
             tagWriter.WriteBit(false);  /* Reserved, must be 0 */
