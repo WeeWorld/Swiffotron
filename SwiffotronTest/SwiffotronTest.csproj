@@ -87,7 +87,9 @@
     <EmbeddedResource Include="res\TestRemoveInstance.xml" />
     <EmbeddedResource Include="res\TestCollidingClassname.xml" />
     <EmbeddedResource Include="res\TestBrokenInstanceTypeExtern.xml" />
-    <EmbeddedResource Include="res\TestBrokenInstanceTypeInstance.xml" />
+    <EmbeddedResource Include="res\TestBrokenInstanceTypeInstance.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="res\TestBrokenInstanceTypeSWF.xml" />
     <EmbeddedResource Include="res\TestInstanceTypeSWF.xml" />
     <EmbeddedResource Include="res\TestBrokenInstanceTypeMovieClip.xml" />
