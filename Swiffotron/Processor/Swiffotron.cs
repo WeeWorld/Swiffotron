@@ -936,7 +936,7 @@ namespace SWFProcessing.Swiffotron
                 /* TODO: If swf attribute is present, find the swf. It should be loaded/generated. It should not be the current swf. */
                 throw new SwiffotronException(
                         SwiffotronError.UnimplementedFeature, this.Context,
-                        "swf attribute is not supported in instance tags yet.");
+                        "swf attribute is not supported in movieclip tags yet.");
             }
 
             switch (type)

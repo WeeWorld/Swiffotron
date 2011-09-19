@@ -99,7 +99,9 @@
     <EmbeddedResource Include="res\TestImages.xml" />
     <EmbeddedResource Include="res\TestInstanceTypeSWF.xml" />
     <EmbeddedResource Include="res\TestJobValidate.xml" />
-    <EmbeddedResource Include="res\TestMovieclipTypeExtern.xml" />
+    <EmbeddedResource Include="res\TestMovieclipTypeExtern.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="res\TestMovieclipTypeSWF.xml">
       <SubType>Designer</SubType>
     </EmbeddedResource>
@@ -155,6 +157,14 @@
     <EmbeddedResource Include="res\store\simple-ellipse.swf" />
     <EmbeddedResource Include="res\store\simple-pentagon.swf" />
     <EmbeddedResource Include="res\store\simple-rect.swf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\TestInstanceTypeExtern.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\predicted\TestInstanceTypeExtern.swf.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
