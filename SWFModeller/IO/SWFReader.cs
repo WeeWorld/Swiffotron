@@ -1135,7 +1135,7 @@ namespace SWFProcessing.SWFModeller
 #if DEBUG
             this.Log("maxRecurse=" + maxRecurseDepth + ", timeout=" + scriptTimeout + "s");
 #endif
-            /* TODO: Read this and store it in the sprite. */
+            /* ISSUE 43: Read this and store it in the sprite. */
         }
 
         /// <summary>

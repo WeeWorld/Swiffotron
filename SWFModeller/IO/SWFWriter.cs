@@ -184,7 +184,7 @@ namespace SWFProcessing.SWFModeller
 
             if (swf.ProtectHash != null)
             {
-                /* TODO: This should be an option of some kind. */
+                /* ISSUE 45: This should be an option of some kind. */
                 WriteBuffer protectTag = this.OpenTag(Tag.Protect);
                 protectTag.WriteUI16(0); /* Reserved, always 0 */
                 protectTag.WriteString(swf.ProtectHash);
@@ -199,7 +199,7 @@ namespace SWFProcessing.SWFModeller
                 this.CloseTag();
             }
 
-            /* TODO: Write DefineSceneAndFrameLabelData tag */
+            /* ISSUE 46: Write DefineSceneAndFrameLabelData tag */
             foreach (DoABC abc in this.swf.Scripts)
             {
                 WriteBuffer abcOut = this.OpenTag(Tag.DoABC);
@@ -315,7 +315,7 @@ namespace SWFProcessing.SWFModeller
         {
             if (po.HasClassName)
             {
-                /* TODO:
+                /* ISSUE 47:
                  * Also indicated by presence of
                  * - Surface filter list
                  * - Blend mode

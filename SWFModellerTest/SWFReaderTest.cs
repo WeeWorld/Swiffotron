@@ -447,7 +447,7 @@ namespace SWFProcessing.SWFModeller.Test
 
             using (StreamWriter viewScript = new StreamWriter(new FileStream(TestDir + "viewdiff.bat", FileMode.Create)))
             {
-                /* TODO: Since nobody other than me is using this code, I'm hard-coding this. Really though, it should be a diff tool env var */
+                /* ISSUE 44: This should be a diff tool env var */
                 viewScript.WriteLine("\"c:\\Program Files (x86)\\WinMerge\\WinMergeU.exe\" \"" + finalModelFile + "\" \"" + new FileInfo("..\\..\\..\\SWFModellerTest\\res\\predicted\\" + name + ".txt").FullName + "\"");
             }
 
@@ -472,7 +472,7 @@ namespace SWFProcessing.SWFModeller.Test
 
         private void CompareFiles(string predicted, string output, string errorMessage)
         {
-            /* TODO: I really want to be able to do this, and it does work on VS2010. Unfortunately on VS2010
+            /* I really want to be able to do this, and it does work on VS2010. Unfortunately on VS2010
              * Express, StringBuilder.AppendLine seems to use a different line ending, so the files end up different lengths
              * and this isn't simple to fix. I wish I knew why I can have 2 Windows boxes, one of which appends
              * in Windows format, the other in Unix. */
