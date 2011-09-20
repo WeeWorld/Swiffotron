@@ -17,7 +17,13 @@ namespace SWFProcessing.Swiffotron.Processor
 
         public SwiffotronContext(string name)
         {
-            /* TODO: Assert not null. */
+            if (name == null)
+            {
+                throw new SwiffotronException(SwiffotronError.Internal,
+                        new SwiffotronContext("null"), /* Yeah, I know. This looks wrong. */
+                        "Can't have a null in a SwiffotronContext name");
+            }
+
             this.Name = name;
         }
 

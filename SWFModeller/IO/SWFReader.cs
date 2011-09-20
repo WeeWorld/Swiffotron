@@ -223,6 +223,7 @@ namespace SWFProcessing.SWFModeller
                     break;
 
                 default:
+                    /* TODO */
                     throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             @"Unsupported tag type: " + type, swf.Context);
@@ -389,6 +390,7 @@ namespace SWFProcessing.SWFModeller
 
             if (!hasFont && hasFontClass)
             {
+                /* ISSUE 14 */
                 throw new SWFModellerException(SWFModellerError.UnimplementedFeature,
                         "Font classes are not yet supported.", swf.Context);
             }
@@ -497,6 +499,7 @@ namespace SWFProcessing.SWFModeller
 
             if (isShiftJIS)
             {
+                /* ISSUE 50 */
                 throw new SWFModellerException(SWFModellerError.UnimplementedFeature,
                         "ShiftJIS character encoding is not supported.", swf.Context);
             }
@@ -1116,6 +1119,7 @@ namespace SWFProcessing.SWFModeller
                     case Tag.SoundStreamHead2:
                     case Tag.SoundStreamBlock:
                     case Tag.DoAction:
+                        /* TODO */
                         throw new SWFModellerException(
                                 SWFModellerError.UnimplementedFeature,
                                 @"Unsupported tag within a sprite definition: " + ((Tag)type).ToString(), swf.Context);

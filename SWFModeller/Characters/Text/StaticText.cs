@@ -30,6 +30,7 @@ namespace SWFProcessing.SWFModeller.Characters.Text
 
             set
             {
+                /* TODO */
                 throw new SWFModellerException(SWFModellerError.UnimplementedFeature, "Can't set text across multiple records yet.");
             }
         }

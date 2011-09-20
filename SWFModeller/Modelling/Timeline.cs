@@ -145,9 +145,6 @@ namespace SWFProcessing.SWFModeller.Modelling
             return idx + 1;
         }
 
-        /* TODO: GetLayerIndex and GetLayer should be in Timeline, which should be an abstract
-         * class. The methods are copied elsewhere, which is wrong and bad. */
-
         public Layer GetLayer(int depth)
         {
             depth--;
@@ -198,7 +195,7 @@ namespace SWFProcessing.SWFModeller.Modelling
 
                         if (ch is Timeline)
                         {
-                            /* TODO: Is there any risk of infinite recursion here? Possible pass in a set
+                            /* ISSUE 69: Is there any risk of infinite recursion here? Possible pass in a set
                              * of visited objects, timelines and fonts. */
                             ((Timeline)ch).FontProc(fd);
                         }
@@ -241,7 +238,7 @@ namespace SWFProcessing.SWFModeller.Modelling
             DoABC scriptTag = this.Root.FirstScript;
             if (scriptTag == null)
             {
-                /* TODO: Y'know, we can generate scripts. We should probably do that. */
+                /* ISSUE 70: Y'know, we can generate scripts. We should probably do that. */
                 throw new SWFModellerException(
                         SWFModellerError.Internal,
                         "Can't instantiate clips in a SWF with no code.");
@@ -277,7 +274,7 @@ namespace SWFProcessing.SWFModeller.Modelling
             List<KeyValuePair<Frame, IDisplayListItem>> hitList = new List<KeyValuePair<Frame, IDisplayListItem>>();
             List<PlaceObject> openTimelines = new List<PlaceObject>();
 
-            /* TODO: The unit test for this has no RemoveObject dli items in it, so we don't really
+            /* ISSUE 71: The unit test for this has no RemoveObject dli items in it, so we don't really
              * know if the crazy timeline searching found here actually works. Make a harsher test. */
 
             foreach (Frame f in frames)
@@ -309,6 +306,7 @@ namespace SWFProcessing.SWFModeller.Modelling
                             break;
 
                         default:
+                            /* TODO */
                             throw new SWFModellerException(SWFModellerError.UnimplementedFeature, "Crazy, hitherto not seen display list item: " + dli.Type.ToString());
                     }
                 }

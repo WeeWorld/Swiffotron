@@ -34,7 +34,7 @@ namespace SWFProcessing.Swiffotron
     /// Main entry point to the swiffotron's functionality. This is the main
     /// object you need to create to start building SWF files.</para>
     /// <para>
-    /// TODO: This class needs refactored into smaller lumps. This might mean
+    /// ISSUE 54: This class needs refactored into smaller lumps. This might mean
     /// lumps such as xml wrapping services, dependency management and
     /// SWF generation.</para>
     /// </summary>
@@ -189,7 +189,7 @@ namespace SWFProcessing.Swiffotron
         public Dictionary<string, ISwiffotronCache> caches_accessor { get { return caches; } }
 #endif
 
-        /* TODO: Would be good to also store a 'processedSWFsRenderedAsMovieClips' so that
+        /* ISSUE 55: Would be good to also store a 'processedSWFsRenderedAsMovieClips' so that
          * we don't keep converting the same clip over and over again when it's re-used.
          * Mental note: pretty sure SWF objects are being subtley modified in annoying ways,
          * when cache copies should be pristine.
@@ -343,9 +343,6 @@ namespace SWFProcessing.Swiffotron
 
             this.localCache = new Dictionary<string, object>();
 
-            /* TODO: If the root node has an ID, then replace this.Context with one that has a more
-             * meaningful name. */
-
             /* Take local copies of all referenced cache objects to guard against
              * them being ejected before we access them, since we work out what we
              * need to do based on what's in the cache before we do it. */
@@ -450,7 +447,7 @@ namespace SWFProcessing.Swiffotron
         /// <returns>An integer, or null if not present.</returns>
         private int? IntegerAttribute(XPathNavigator nav, string name)
         {
-            /* TODO: Why didn't I use ValueAsInt here? Check the behaviour with
+            /* Why didn't I use ValueAsInt here? Check the behaviour with
              * ropy values. Maybe that was it...*/
 
             string stringVal = nav.GetAttribute(name, string.Empty);
@@ -574,7 +571,7 @@ namespace SWFProcessing.Swiffotron
                 /* It's a new SWF */
                 swf = new SWF(new SWFContext(swfTag.GetAttribute(AttrID, string.Empty)), true);
 
-                /* TODO: If this SWF has no output, then perhaps we can create it as a movieclip
+                /* ISSUE 56: If this SWF has no output, then perhaps we can create it as a movieclip
                  * since it'll certainly be converted into one later on. */
             }
             else
@@ -635,6 +632,7 @@ namespace SWFProcessing.Swiffotron
                             break;
 
                         default:
+                            /* TODO */
                             throw new SwiffotronException(
                                     SwiffotronError.UnimplementedFeature, this.Context,
                                     @"Unsupported tag: " + nav.LocalName);
@@ -716,7 +714,7 @@ namespace SWFProcessing.Swiffotron
 
             if (!parent.RemoveInstance(uname))
             {
-                /* TODO: Unit test for this please. Also for non-existant parent names in the qname. */
+                /* ISSUE 57: Unit test for this please. Also for non-existant parent names in the qname. */
                 throw new SwiffotronException(SwiffotronError.BadPathOrID, this.Context, "Cannot remove '" + qname + "'; it does not exist.");
             }
         }
@@ -734,7 +732,7 @@ namespace SWFProcessing.Swiffotron
             string src = insTag.GetAttribute(AttrSrc, string.Empty);
             string className = insTag.GetAttribute(AttrClass, string.Empty);
 
-            /* TODO: If the instance name (id) is the same as the class name, it can
+            /* ISSUE 58: If the instance name (id) is the same as the class name, it can
              * cause problems in files generated and decompiled again in sothink. We should
              * probably detect this and warn against it. */
 
@@ -824,6 +822,7 @@ namespace SWFProcessing.Swiffotron
                     break;
 
                 default:
+                    /* TODO */
                     throw new SwiffotronException(
                             SwiffotronError.UnimplementedFeature, this.Context,
                             "Bad instance type: " + type);
@@ -928,7 +927,7 @@ namespace SWFProcessing.Swiffotron
             string swfTag = movieClipTag.GetAttribute(AttrSwf, string.Empty);
 
             /*
-             * TODO: The examples in unit tests all put instances in the same package, e.g.
+             * ISSUE 59: The examples in unit tests all put instances in the same package, e.g.
              *  <instance blahblah class="com.swiffotron.Class1" />
              *  <instance blahblah class="com.swiffotron.Class2" />
              * both put them into com.swiffotron. These are moved from the IDE generated packages
@@ -946,7 +945,7 @@ namespace SWFProcessing.Swiffotron
             bool fromOtherSwf = swfTag != null && swfTag != string.Empty;
             if (fromOtherSwf)
             {
-                /* TODO: If swf attribute is present, find the swf. It should be loaded/generated. It should not be the current swf. */
+                /* ISSUE 60: If swf attribute is present, find the swf. It should be loaded/generated. It should not be the current swf. */
                 throw new SwiffotronException(
                         SwiffotronError.UnimplementedFeature, this.Context,
                         "swf attribute is not supported in movieclip tags yet.");
@@ -978,11 +977,11 @@ namespace SWFProcessing.Swiffotron
 
                     SWF importSwf = this.processedSWFs[src];
 
-                    /* TODO: There's a TODO up there next to the declaration of processedSWFs which is intended
+                    /* ISSUE 55: There's an issue comment up there next to the declaration of processedSWFs which is intended
                      * to cache the new Sprite() bit below. */
                     swf.AddCharacter(movieClipTag.GetAttribute(AttrID, string.Empty), new Sprite(importSwf, swf, className));
 
-                    /* TODO: The above new Sprite will merge the sprite's code into the SWF regardless of whether
+                    /* ISSUE 61: The above new Sprite will merge the sprite's code into the SWF regardless of whether
                      * it's instantiated. This should be done based on the exportforscript flag, or if the sprite
                      * is instantiated. Mind you, there is an argument that says if you declare a movieclip and
                      * never use it, and don't mark if for export, then you should probably remove it. Perhaps
@@ -1026,6 +1025,7 @@ namespace SWFProcessing.Swiffotron
                     break;
 
                 default:
+                    /* TODO */
                     throw new SwiffotronException(
                             SwiffotronError.UnimplementedFeature, this.Context,
                             "Bad instance type: " + type);
@@ -1042,12 +1042,12 @@ namespace SWFProcessing.Swiffotron
         /// <returns>An array of characters matching the qname or qname pattern.</returns>
         private Sprite[] SpritesFromQname(string qname, SWF swf, bool patternPermitted)
         {
-            /* TODO: If qname is a pattern, we should return more than one character. */
-            /* TODO: If qname is a pattern, and patternPermitted is false, throw a wobbler. */
+            /* ISSUE 62: If qname is a pattern, we should return more than one character. */
+            /* ISSUE 62: If qname is a pattern, and patternPermitted is false, throw a wobbler. */
 
             PlaceObject po = swf.LookupInstance(qname);
 
-            /* TODO: There is a question of whether to error if the instance is not found. Some are
+            /* ISSUE 63: There is a question of whether to error if the instance is not found. Some are
              * found with a pattern rather than a path, and you may not expect it to always find something. 
              * At the moment, we shall throw an exception, because it suits our development, unit testing
              * fail-fast strictness. */
@@ -1202,7 +1202,7 @@ namespace SWFProcessing.Swiffotron
 
             PlaceObject po = swf.LookupInstance(qname);
 
-            /* TODO: There is a question of whether to error if the instance is not found. Some are
+            /* ISSUE 63: There is a question of whether to error if the instance is not found. Some are
              * found with a pattern rather than a path, and you may not expect it to always find something. 
              * At the moment, we shall throw an exception, because it suits our development, unit testing
              * fail-fast strictness. */
@@ -1232,6 +1232,7 @@ namespace SWFProcessing.Swiffotron
                             break;
 
                         default:
+                            /* TODO */
                             throw new SwiffotronException(
                                     SwiffotronError.UnimplementedFeature, this.Context,
                                     @"Unsupported modification tag: " + modify.LocalName);
@@ -1241,8 +1242,6 @@ namespace SWFProcessing.Swiffotron
             while (modify.MoveToNext(XPathNodeType.Element));
 
             modify.MoveToParent();
-
-            /* TODO: finish */
         }
 
         /// <summary>
@@ -1322,15 +1321,16 @@ namespace SWFProcessing.Swiffotron
                 this.WriteToOutput(swfoutStore, swfData);
             }
 
-            /* TODO: These should be in another method (And also work): */
             if (swfNav.SelectChildren(@"pngout", SwiffotronNS).Count > 0)
             {
+                /* ISSUE 65 */
                 throw new SwiffotronException(SwiffotronError.UnimplementedFeature, this.Context,
                         "We can't do PNG output yet.");
             }
 
             if (swfNav.SelectChildren(@"vidout", SwiffotronNS).Count > 0)
             {
+                /* ISSUE 66 */
                 throw new SwiffotronException(SwiffotronError.UnimplementedFeature, this.Context,
                         "We can't do video output yet.");
             }
@@ -1348,7 +1348,7 @@ namespace SWFProcessing.Swiffotron
 
             foreach (XPathNavigator depID in node.Select(@"swf:movieclip|swf:instance", this.namespaceMgr))
             {
-                /* TODO: Work out if this is a movieclip tag. If it's cached, and in the local cache, then
+                /* ISSUE 64: Work out if this is a movieclip tag. If it's cached, and in the local cache, then
                  * we don't need to add it's dependent SWF. */
 
                 XPathNavigator swfNode = this.SwfTagFromRef(depID);
@@ -1519,7 +1519,7 @@ namespace SWFProcessing.Swiffotron
             {
                 Uri storeURI = new Uri(key);
 
-                if (storeURI.Scheme != "store") /* TODO: Constants, please. */
+                if (storeURI.Scheme != "store") /* ISSUE 67: Constants, please. */
                 {
                     throw new SwiffotronException(
                             SwiffotronError.BadInputXML, this.Context,
@@ -1568,7 +1568,7 @@ namespace SWFProcessing.Swiffotron
         {
             Uri storeURI = new Uri(key);
 
-            if (storeURI.Scheme != "store") /* TODO: Constants, please. */
+            if (storeURI.Scheme != "store") /* ISSUE 67: Constants, please. */
             {
                 throw new SwiffotronException(
                         SwiffotronError.BadInputXML, this.Context,
@@ -1712,7 +1712,7 @@ namespace SWFProcessing.Swiffotron
                 this.CreateStore(name, assembly, classname, init);
             }
 
-            /* TODO: Staggeringly inefficient xpath queries that navigate from the root node every damned
+            /* ISSUE 68: Staggeringly inefficient xpath queries that navigate from the root node every damned
              * time. Do we care? */
 
             this.EnableStoreWrites = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:storeWriteEnabled/text()", namespaceMgr).ValueAsBoolean;

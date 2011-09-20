@@ -609,6 +609,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
 
         private FocalGradient ReadFocalGradient(SWFDataTypeReader shapeReader)
         {
+            /* ISSUE 72 */
             throw new SWFModellerException(SWFModellerError.UnimplementedFeature,
                     "Can't parse focal gradients yet.");
         }

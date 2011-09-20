@@ -713,6 +713,7 @@ namespace SWFProcessing.SWFModeller
                             break;
 
                         default:
+                            /* TODO */
                             throw new SWFModellerException(
                                     SWFModellerError.UnimplementedFeature,
                                     "As yet unsupported namespace (" + traitNS.Kind + ") when remapping a class trait (" + c.Name.Name + "::" + t.Name + ")");
@@ -764,6 +765,7 @@ namespace SWFProcessing.SWFModeller
                                             break;
 
                                         default:
+                                            /* TODO */
                                             throw new SWFModellerException(
                                                     SWFModellerError.UnimplementedFeature,
                                                     "As yet unsupported multiname's NS kind (" + multinameNS.Kind.ToString() + ") in op's Multiname arg during MethodProc");
@@ -818,6 +820,7 @@ namespace SWFProcessing.SWFModeller
                                                 break;
 
                                             default:
+                                                /* TODO */
                                                 throw new SWFModellerException(
                                                         SWFModellerError.UnimplementedFeature,
                                                         "As yet unsupported multiname NS set entry kind (" + ns.Kind.ToString() + ") in op's Multiname arg during MethodProc");
@@ -845,12 +848,14 @@ namespace SWFProcessing.SWFModeller
                         }
                         else if (arg is Namespace)
                         {
+                            /* TODO */
                             throw new SWFModellerException(
                                     SWFModellerError.UnimplementedFeature,
                                     "As yet unsupported op arg in MethodProc: Namespace");
                         }
-                        else if (arg is AS3ClassDef)
+                        else if (arg is AS3Class)
                         {
+                            /* TODO */
                             throw new SWFModellerException(
                                     SWFModellerError.UnimplementedFeature,
                                     "As yet unsupported op arg in MethodProc: AS3Class");

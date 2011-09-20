@@ -447,12 +447,13 @@ namespace SWFProcessing.SWFModeller
                     if (po.HasClipActions)
                     {
                         throw new SWFModellerException(
-                                SWFModellerError.UnimplementedFeature,
-                                "Unsupported: Writing clip actions.");
+                                SWFModellerError.Internal,
+                                "Clips cannot have actions in the target SWF version.");
                     }
                     break;
 
                 default:
+                    /* TODO */
                     throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             "Unsupported PlaceObject tag: " + placeTag.ToString());
@@ -510,6 +511,7 @@ namespace SWFProcessing.SWFModeller
                             break;
 
                         default:
+                            /* TODO */
                             throw new SWFModellerException(
                                     SWFModellerError.UnimplementedFeature,
                                     "Unsupported tag in SWF sprite writer: " + dli.GetType().ToString());
@@ -520,7 +522,7 @@ namespace SWFProcessing.SWFModeller
             }
 
 
-            this.OpenTag(Tag.End, id.ToString()); /* TODO: Optimization: For bodyless tags, we can probably have a special case that doesn't go through the hoops of adding new writers to stacks etc */
+            this.OpenTag(Tag.End, id.ToString()); /* ISSUE 48: Optimization: For bodyless tags, we can probably have a special case that doesn't go through the hoops of adding new writers to stacks etc */
             this.CloseTag();
 
             this.CloseTag(); /* DefineSprite */
@@ -557,6 +559,7 @@ namespace SWFProcessing.SWFModeller
                     {
                         if (writtenJPEGTable != null && writtenJPEGTable != blob.JPEGTable)
                         {
+                            /* ISSUE 16 */
                             throw new SWFModellerException(SWFModellerError.UnimplementedFeature,
                                     "Can't process multiple JPEG encoding tables yet.");
                         }
@@ -650,6 +653,7 @@ namespace SWFProcessing.SWFModeller
             }
             else
             {
+                /* TODO */
                 throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             "Character of type " + ch.GetType().ToString() + " not currently supported in writer");
@@ -683,7 +687,7 @@ namespace SWFProcessing.SWFModeller
                 textTag.WriteMatrix(text.Position);
                 textTag.Align8();
 
-                /* TODO: We're lazy here. We max out the bits for text and advances coz we can't
+                /* ISSUE 49: We're lazy here. We max out the bits for text and advances coz we can't
                  * yet calculate them. Fix this attrocity. */
 
                 int glyphBits = 16;
@@ -815,6 +819,7 @@ namespace SWFProcessing.SWFModeller
 
                 if (text.HasFontClass)
                 {
+                    /* ISSUE 14 */
                     throw new SWFModellerException(SWFModellerError.UnimplementedFeature, "Font classes can't be written.");
                 }
 
@@ -867,11 +872,11 @@ namespace SWFProcessing.SWFModeller
 
                 fontTag.WriteBit(font.HasLayout);
 
-                fontTag.WriteBit(false); /* TODO: ShiftJIS support */
+                fontTag.WriteBit(false); /* ISSUE 50: ShiftJIS support */
                 fontTag.WriteBit(font.IsSmall);
-                fontTag.WriteBit(false); /* TODO: ANSI support, though I think this might never be false. */
+                fontTag.WriteBit(false); /* ISSUE 51: ANSI support, though I think this might never be false. */
 
-                fontTag.WriteBit(true); /* TODO: We always write wide offsets. This is because we're too lazy to measure our table. */
+                fontTag.WriteBit(true); /* ISSUE 52: We always write wide offsets. This is because we're too lazy to measure our table. */
                 fontTag.WriteBit(true); /* Spec says must be true. */
 
                 fontTag.WriteBit(font.IsItalic);
