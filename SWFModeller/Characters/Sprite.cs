@@ -80,7 +80,11 @@ namespace SWFProcessing.SWFModeller.Characters
 
                 if (className != null)
                 {
-                    srcSWF.RenameMainTimelineClass(className);
+                    if (srcSWF.Class != null)
+                    {
+                        srcSWF.RenameMainTimelineClass(className);
+                    }
+                    /* Else the class will be generated later */
                 }
 
                 RemapFonts(srcSWF, root);

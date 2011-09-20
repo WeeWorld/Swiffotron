@@ -565,7 +565,7 @@ namespace SWFProcessing.SWFModeller
 
                 if (c != null)
                 {
-                    /* TODO: The chance for different classes with the same name to appear in
+                    /* ISSUE 25: The chance for different classes with the same name to appear in
                      * different DoABC tags is enough to convince us that we should only really 
                      * have one tag, not this silly list of "scripts" */
                     return c;
@@ -625,12 +625,7 @@ namespace SWFProcessing.SWFModeller
         {
             if (this.Class == null)
             {
-                /* Nothing to do.
-                 * TODO: Or maybe create it? Or maybe this can never happen? I'd imagine
-                 * that if someone declares a class in a swiffotron XML on a SWF with no
-                 * class, they might expect it to be created.
-                 */
-                return;
+                throw new SWFModellerException(SWFModellerError.Internal, "Can't rename non-existant timeline class.");
             }
 
             AS3ClassDef classDef = this.Class as AS3ClassDef;

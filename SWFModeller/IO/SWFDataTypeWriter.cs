@@ -64,7 +64,7 @@ namespace SWFProcessing.SWFModeller
             int ymin = (int)(r.YMin * SWFValues.TwipsFactor);
             int ymax = (int)(r.YMax * SWFValues.TwipsFactor);
 
-            /* TODO: Measure the required number of bits. For now,
+            /* ISSUE 35: Measure the required number of bits. For now,
              * we just turn the size up to the max. */
             int nbits = 31;
 
@@ -256,7 +256,7 @@ namespace SWFProcessing.SWFModeller
             if (m.HasScale)
             {
                 /* Hard-coded 30-bit values, coz we don't measure the values.
-                 * TODO: Fix this, but actually I suspect that the flash IDE does this
+                 * ISSUE 36: Fix this, but actually I suspect that the flash IDE does this
                  * anyway. It'll get compressed after all. */
                 this.WriteUBits(30, 5);
                 this.WriteFB(m.ScaleX, 30);
@@ -267,7 +267,7 @@ namespace SWFProcessing.SWFModeller
             if (m.HasSkew)
             {
                 /* Hard-coded 30-bit values, coz we don't measure the values.
-                 * TODO: Fix this, but actually I suspect that the flash IDE does this
+                 * ISSUE 36: Fix this, but actually I suspect that the flash IDE does this
                  * anyway. It'll get compressed after all. */
                 this.WriteUBits(30, 5);
                 this.WriteFB(m.SkewX, 30);
@@ -275,7 +275,7 @@ namespace SWFProcessing.SWFModeller
             }
 
             /* Hard-coded 30-bit values, coz we don't measure the values.
-             * TODO: Fix this, but actually I suspect that the flash IDE does this
+             * ISSUE 36: Fix this, but actually I suspect that the flash IDE does this
              * anyway. It'll get compressed after all. */
             this.WriteUBits(30, 5);
 

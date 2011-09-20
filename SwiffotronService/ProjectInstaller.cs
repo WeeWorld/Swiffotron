@@ -18,7 +18,7 @@ namespace SWFProcessing.SwiffotronService
 
         private void serviceInstaller_AfterInstall(object sender, System.Configuration.Install.InstallEventArgs e)
         {
-            /* TODO: Somehow we need to copy the default config for Swiffotron into the
+            /* ISSUE 33: Somehow we need to copy the default config for Swiffotron into the
              * installation folder. It's an embedded resource though, and I have no
              * idea how this crazy setup stuff is meant to find it. It does get copied
              * into the project output though, along with the XSD files. You'd think 

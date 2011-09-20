@@ -506,9 +506,8 @@ namespace SWFProcessing.SWFModeller
             return b;
         }
 
-        /* TODO: This Skip stuff, with chunks and all that may be overly complicated as
-         * a Java coder hangover. Check the interfaces on C# streams to see if any of this
-         * can be simplified. */
+        /* ISSUE 34: This Skip stuff, with chunks and all that may be overly complicated.
+         * Check the interfaces on C# streams to see if any of this can be simplified. */
 
         /// <summary>
         /// Skip a given number of bytes. Note that the pointer is aligned to the next
@@ -547,7 +546,7 @@ namespace SWFProcessing.SWFModeller
         /// <param name="newOffset">The file offset you want to skip to.</param>
         public void SkipForwardTo(uint newOffset)
         {
-            /* TODO: Use Seek() */
+            /* ISSUE 34: Use Seek() */
             this.bufferedBits = 0;
 
             newOffset -= this.Offset;
