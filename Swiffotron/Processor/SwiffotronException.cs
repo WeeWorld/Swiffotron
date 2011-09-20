@@ -13,7 +13,7 @@ namespace SWFProcessing.Swiffotron
     {
         /// <summary>
         /// An error thrown when the code hits something that is unfinished, internally.
-        /// TODO: Remove this once it's all settled.
+        /// ISSUE 37: Remove this once it's all settled.
         /// </summary>
         UnimplementedFeature,
 

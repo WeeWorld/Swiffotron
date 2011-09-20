@@ -25,13 +25,6 @@ namespace SWFProcessing.SWFModeller
     using DBug = System.Diagnostics;
     using SWFProcessing.SWFModeller.Process;
 
-    /// <summary>
-    /// TODO: Look at BinaryReader. It may do a lot of what BitReader already
-    /// does, so perhaps a SWFReader should be built on top of that. Low-level
-    /// bits stuff can live in SWFReader, doing away with IOProcessing, or
-    /// it can be pushed into a LowLevelBinaryReader which adds bit buffering
-    /// to BinaryReader. Might depend on endianness. Investigate later.
-    /// </summary>
     public class SWFReader : IDisposable, IImageFinder
     {
         private SWFDataTypeReader sdtr;
@@ -274,7 +267,7 @@ namespace SWFProcessing.SWFModeller
         {
             int cid = this.sdtr.ReadUI16();
 
-            StaticText text = this.swf.NewStaticText(CID_PREFIX + cid); /* TODO: Should this silly name thing be wrapped into SWF? */
+            StaticText text = this.swf.NewStaticText(CID_PREFIX + cid); /* ISSUE 38: Should this silly name thing be wrapped into SWF? */
             this.characterUnmarshaller.Add(cid, text);
 
             text.Bounds = this.sdtr.ReadRect();
@@ -364,7 +357,7 @@ namespace SWFProcessing.SWFModeller
             this.Log("id=" + cid + ", bounds=" + editText.Bounds);
 #endif
 
-            /* TODO: This might be faster with a ReadUI16 and some masks, if we care
+            /* ISSUE 39: This might be faster with a ReadUI16 and some masks, if we care
              * about such micro-optimisations */
 
             this.sdtr.Align8();
@@ -492,9 +485,15 @@ namespace SWFProcessing.SWFModeller
             bool isSmallText = this.sdtr.ReadBit();
             bool isANSI = this.sdtr.ReadBit();
             bool isWideOffsets = this.sdtr.ReadBit();
-            bool isWideCodes = this.sdtr.ReadBit(); /* TODO: Must be true. Assert this. */
+            bool isWideCodes = this.sdtr.ReadBit();
             bool isItalic = this.sdtr.ReadBit();
             bool isBold = this.sdtr.ReadBit();
+
+            if (!isWideCodes)
+            {
+                throw new SWFModellerException(SWFModellerError.SWFParsing,
+                        "Non-wide codes in font encodings are not valid.", swf.Context);
+            }
 
             if (isShiftJIS)
             {
@@ -814,11 +813,11 @@ namespace SWFProcessing.SWFModeller
             if (hasClipActions)
             {
                 throw new SWFModellerException(
-                        SWFModellerError.UnimplementedFeature,
-                        @"Clip actions not yet supported.", swf.Context); /* TODO */
+                        SWFModellerError.SWFParsing,
+                        @"Clip actions are not supported by the target flash player version.", swf.Context);
             }
 
-            /* TODO: A null id means something in the spec. Look up how to find out what ID this should be.
+            /* ISSUE 40: A null id means something in the spec. Look up how to find out what ID this should be.
              * After that, fix the writer so that it knows when it can omit IDs of its own. This is one of
              * those areas where we're kinda exposing part of the SWF spec into the model, which feels dirty
              * and wrong. */
@@ -982,7 +981,7 @@ namespace SWFProcessing.SWFModeller
                 if (className.StartsWith("."))
                 {
                     /*
-                     * TODO: I don't know why some files do this and some don't. An example of
+                     * ISSUE 41: I don't know why some files do this and some don't. An example of
                      * a file that does this is bottoms.swf in the flat avatar unit test. I
                      * really wish I could find where this came from so that I can see what's
                      * different in the .fla
@@ -1041,7 +1040,7 @@ namespace SWFProcessing.SWFModeller
                 this.frameLabelNotes.Add(new FrameNote { frame = frameNum, note = frameLabel });
             }
 
-            /* TODO: The spec says the offsets are 'global' which appears to imply that they relate
+            /* ISSUE 42: The spec says the offsets are 'global' which appears to imply that they relate
              * to the frame's offset in the file, rather than the frame number on the main timeline.
              * This means we need to keep a 'frame offset' lookup in the reader, rather than
              * treat these as frame numbers, which we do at the moment. Damn. */
