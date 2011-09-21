@@ -453,7 +453,7 @@ namespace SWFProcessing.SWFModeller
                     break;
 
                 default:
-                    /* TODO */
+                    /* ISSUE 73 */
                     throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             "Unsupported PlaceObject tag: " + placeTag.ToString());
@@ -511,7 +511,7 @@ namespace SWFProcessing.SWFModeller
                             break;
 
                         default:
-                            /* TODO */
+                            /* ISSUE 73 */
                             throw new SWFModellerException(
                                     SWFModellerError.UnimplementedFeature,
                                     "Unsupported tag in SWF sprite writer: " + dli.GetType().ToString());
@@ -653,7 +653,7 @@ namespace SWFProcessing.SWFModeller
             }
             else
             {
-                /* TODO */
+                /* ISSUE 73 */
                 throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             "Character of type " + ch.GetType().ToString() + " not currently supported in writer");

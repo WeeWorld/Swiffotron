@@ -719,7 +719,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
                                 break;
 
                             default:
-                                /* TODO */
+                                /* ISSUE 73 */
                                 throw new SWFModellerException(
                                         SWFModellerError.UnimplementedFeature,
                                         "Oops. Not done " + type.ToString());

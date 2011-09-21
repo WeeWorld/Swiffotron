@@ -306,7 +306,7 @@ namespace SWFProcessing.SWFModeller.Modelling
                             break;
 
                         default:
-                            /* TODO */
+                            /* ISSUE 73 */
                             throw new SWFModellerException(SWFModellerError.UnimplementedFeature, "Crazy, hitherto not seen display list item: " + dli.Type.ToString());
                     }
                 }

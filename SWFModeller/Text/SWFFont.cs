@@ -282,7 +282,7 @@ namespace SWFProcessing.SWFModeller.Text
         {
             if (!font.HasExtraNameInfo || !this.HasExtraNameInfo)
             {
-                /* TODO */
+                /* ISSUE 77 */
                 throw new SWFModellerException(SWFModellerError.UnimplementedFeature, "Fonts without full names cause us problems.");
             }
 

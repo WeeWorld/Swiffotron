@@ -53,7 +53,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
                     }
 
                 default:
-                    /* TODO */
+                    /* ISSUE 73 */
                     throw new SWFModellerException(SWFModellerError.UnimplementedFeature, "Bad fill type in shape dump.");
             }
         }

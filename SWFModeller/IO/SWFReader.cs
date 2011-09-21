@@ -223,7 +223,7 @@ namespace SWFProcessing.SWFModeller
                     break;
 
                 default:
-                    /* TODO */
+                    /* ISSUE 73 */
                     throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             @"Unsupported tag type: " + type, swf.Context);
@@ -1119,7 +1119,7 @@ namespace SWFProcessing.SWFModeller
                     case Tag.SoundStreamHead2:
                     case Tag.SoundStreamBlock:
                     case Tag.DoAction:
-                        /* TODO */
+                        /* ISSUE 73 */
                         throw new SWFModellerException(
                                 SWFModellerError.UnimplementedFeature,
                                 @"Unsupported tag within a sprite definition: " + ((Tag)type).ToString(), swf.Context);

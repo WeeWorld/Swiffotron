@@ -29,12 +29,12 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
 
             if (shape is MorphShape)
             {
-                /* TODO */
+                /* ISSUE 74 */
                 throw new SWFModellerException(SWFModellerError.UnimplementedFeature, "Can't write morph shapes.");
             }
             else if (shape is Shape)
             {
-                /* TODO */
+                /* ISSUE 75 */
                 throw new SWFModellerException(SWFModellerError.UnimplementedFeature, "Can't write shapes.");
             }
             else

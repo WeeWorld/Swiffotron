@@ -632,7 +632,7 @@ namespace SWFProcessing.Swiffotron
                             break;
 
                         default:
-                            /* TODO */
+                            /* ISSUE 73 */
                             throw new SwiffotronException(
                                     SwiffotronError.UnimplementedFeature, this.Context,
                                     @"Unsupported tag: " + nav.LocalName);
@@ -822,7 +822,7 @@ namespace SWFProcessing.Swiffotron
                     break;
 
                 default:
-                    /* TODO */
+                    /* ISSUE 73 */
                     throw new SwiffotronException(
                             SwiffotronError.UnimplementedFeature, this.Context,
                             "Bad instance type: " + type);
@@ -1025,7 +1025,7 @@ namespace SWFProcessing.Swiffotron
                     break;
 
                 default:
-                    /* TODO */
+                    /* ISSUE 73 */
                     throw new SwiffotronException(
                             SwiffotronError.UnimplementedFeature, this.Context,
                             "Bad instance type: " + type);
@@ -1232,7 +1232,7 @@ namespace SWFProcessing.Swiffotron
                             break;
 
                         default:
-                            /* TODO */
+                            /* ISSUE 73 */
                             throw new SwiffotronException(
                                     SwiffotronError.UnimplementedFeature, this.Context,
                                     @"Unsupported modification tag: " + modify.LocalName);

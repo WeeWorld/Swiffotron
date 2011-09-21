@@ -302,7 +302,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                             }
                             else
                             {
-                                /* TODO */
+                                /* ISSUE 73 */
                                 throw new SWFModellerException(
                                         SWFModellerError.UnimplementedFeature,
                                         "Unsupported op arg type in " + op.Mnemonic.ToString() + ": " + argType);
@@ -321,7 +321,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                         case Opcode.ArgType.MethodU30:
                         case Opcode.ArgType.DebugTypeU30:
                         default:
-                            /* TODO */
+                            /* ISSUE 73 */
                             throw new SWFModellerException(
                                     SWFModellerError.UnimplementedFeature,
                                     "Unsupported op arg type in "+op.Mnemonic.ToString()+": " + argType);
@@ -629,7 +629,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                     break;
 
                 default:
-                    /* TODO */
+                    /* ISSUE 73 */
                     throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             "Unsupported trait kind: " + t.Kind.ToString());
@@ -980,7 +980,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                 case TraitKind.Function:
                 case TraitKind.Const:
                 default:
-                    /* TODO */
+                    /* ISSUE 73 */
                     throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             "Unsupported assembly of trait kind " + t.Kind.ToString());
@@ -1025,7 +1025,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                     break;
 
                 default:
-                    /* TODO */
+                    /* ISSUE 73 */
                     throw new SWFModellerException(
                             SWFModellerError.UnimplementedFeature,
                             "Unsupported slot value kind " + slotTrait.ValKind.ToString());

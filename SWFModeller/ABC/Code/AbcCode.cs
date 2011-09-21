@@ -485,7 +485,7 @@ namespace SWFProcessing.SWFModeller.ABC
             }
             else
             {
-                /* TODO */
+                /* ISSUE 73 */
                 throw new SWFModellerException(
                         SWFModellerError.UnimplementedFeature,
                         "Unsupported sprite class name kind in class binding script generation: " + spr.Class.Name.Kind.ToString());
