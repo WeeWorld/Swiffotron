@@ -6,12 +6,13 @@
 
 namespace SWFProcessing.SwiffotronService
 {
-    using System.Collections.Generic;
-    using System.IO;
-    using SWFProcessing.Swiffotron;
     using System;
+    using System.Collections.Generic;
+    using System.Configuration;
     using System.Diagnostics;
+    using System.IO;
     using System.Reflection;
+    using SWFProcessing.Swiffotron;
 
     // NOTE: You can use the "Rename" command on the "Refactor" menu to change the class name "SWFProcessor" in both code and config file together.
     public class SWFProcessor : ISWFProcessor
@@ -34,7 +35,19 @@ namespace SWFProcessing.SwiffotronService
             FileInfo dllInfo = new FileInfo(swiffotronDLLPath);
             DirectoryInfo dllDir = dllInfo.Directory;
 
-            FileInfo configFile = new FileInfo(dllDir + "\\swiffotron-config.xml");
+            string configName = ConfigurationSettings.AppSettings["SwiffotronConfig"];
+
+            if (configName == null || configName == string.Empty)
+            {
+                configName = @"swiffotron-config.xml";
+            }
+
+            FileInfo configFile = new FileInfo(configName);
+            if (!configFile.Exists)
+            {
+                configFile = new FileInfo(dllDir + @"\" + configName);
+            }
+
             if (!configFile.Exists)
             {
                 this.EventLog.WriteEntry("Failed to find a Swiffotron config file at "+configFile.FullName,
@@ -53,6 +66,8 @@ namespace SWFProcessing.SwiffotronService
             {
                 this.EventLog.WriteEntry(e.ToString(), EventLogEntryType.Error, (int)LogEvents.BadConfig);
             }
+
+            this.EventLog.WriteEntry("Swiffotron is using configuration found at " + configFile.FullName + " (SwiffotronConfig = '" + ConfigurationSettings.AppSettings["SwiffotronConfig"] + "')", EventLogEntryType.Information, (int)LogEvents.StartupInfo);
         }
 
         /// <returns>null if the job could not be processed. An error will be recorded in the

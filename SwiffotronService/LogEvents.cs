@@ -11,6 +11,7 @@ namespace SWFProcessing.SwiffotronService
         Start = 100,
         Stop = 101,
         BadConfig = 102,
-        BadJob = 103
+        BadJob = 103,
+        StartupInfo = 104
     }
 }

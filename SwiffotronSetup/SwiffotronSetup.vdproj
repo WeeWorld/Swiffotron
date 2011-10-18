@@ -15,37 +15,13 @@
     {
         "Entry"
         {
-        "MsmKey" = "8:_1FCB603B4DCACBF41509F4EC9F3D3D9D"
+        "MsmKey" = "8:_2D3AD826A52314DD346E8287F29CD44B"
         "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_1FCB603B4DCACBF41509F4EC9F3D3D9D"
-        "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3BD2A34ED4E7F9C094B6D5EDA5378037"
-        "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3BD2A34ED4E7F9C094B6D5EDA5378037"
-        "OwnerKey" = "8:_1FCB603B4DCACBF41509F4EC9F3D3D9D"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3BD2A34ED4E7F9C094B6D5EDA5378037"
-        "OwnerKey" = "8:_A638BF63ED2148C5A2165D61DA704275"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_3BD2A34ED4E7F9C094B6D5EDA5378037"
+        "MsmKey" = "8:_2D3AD826A52314DD346E8287F29CD44B"
         "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -64,12 +40,6 @@
         "Entry"
         {
         "MsmKey" = "8:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
-        "OwnerKey" = "8:_3BD2A34ED4E7F9C094B6D5EDA5378037"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
-        "MsmKey" = "8:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
         "OwnerKey" = "8:_A638BF63ED2148C5A2165D61DA704275"
         "MsmSig" = "8:_UNDEFINED"
         }
@@ -77,6 +47,12 @@
         {
         "MsmKey" = "8:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
         "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_87B9603FBCEA0FEAAAFDFE6AE20FDE20"
+        "OwnerKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -93,20 +69,32 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
+        "MsmKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
+        "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
+        "OwnerKey" = "8:_A638BF63ED2148C5A2165D61DA704275"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
         "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
-        "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_1FCB603B4DCACBF41509F4EC9F3D3D9D"
+        "MsmKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
+        "OwnerKey" = "8:_2D3AD826A52314DD346E8287F29CD44B"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
         {
         "MsmKey" = "8:_UNDEFINED"
-        "OwnerKey" = "8:_3BD2A34ED4E7F9C094B6D5EDA5378037"
+        "OwnerKey" = "8:_91243897D0914BA9B87835FC41706EFD"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -119,6 +107,18 @@
         {
         "MsmKey" = "8:_UNDEFINED"
         "OwnerKey" = "8:_55973FF2CB62415B95CADA21CF320E58"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_2D3AD826A52314DD346E8287F29CD44B"
+        "MsmSig" = "8:_UNDEFINED"
+        }
+        "Entry"
+        {
+        "MsmKey" = "8:_UNDEFINED"
+        "OwnerKey" = "8:_FD08E81360C335D7D3C43685DADCCFDC"
         "MsmSig" = "8:_UNDEFINED"
         }
         "Entry"
@@ -252,7 +252,7 @@
                 {
                 "Name" = "8:.NET Framework"
                 "Message" = "8:[VSDNETMSG]"
-                "FrameworkVersion" = "8:3.5.30729               "
+                "FrameworkVersion" = "8:3.5.30729                "
                 "AllowLaterVersions" = "11:FALSE"
                 "InstallUrl" = "8:http://go.microsoft.com/fwlink/?LinkId=76617"
                 }
@@ -260,51 +260,20 @@
         }
         "File"
         {
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_1FCB603B4DCACBF41509F4EC9F3D3D9D"
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_2D3AD826A52314DD346E8287F29CD44B"
             {
             "AssemblyRegister" = "3:1"
             "AssemblyIsInGAC" = "11:FALSE"
             "AssemblyAsmDisplayName" = "8:Swiffotron, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL"
                 "ScatterAssemblies"
                 {
-                    "_1FCB603B4DCACBF41509F4EC9F3D3D9D"
+                    "_2D3AD826A52314DD346E8287F29CD44B"
                     {
                     "Name" = "8:Swiffotron.dll"
                     "Attributes" = "3:512"
                     }
                 }
             "SourcePath" = "8:Swiffotron.dll"
-            "TargetName" = "8:"
-            "Tag" = "8:"
-            "Folder" = "8:_517418DDC1424232A218AE6BE3C90911"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:TRUE"
-            "IsolateTo" = "8:"
-            }
-            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_3BD2A34ED4E7F9C094B6D5EDA5378037"
-            {
-            "AssemblyRegister" = "3:1"
-            "AssemblyIsInGAC" = "11:FALSE"
-            "AssemblyAsmDisplayName" = "8:SWFModeller, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL"
-                "ScatterAssemblies"
-                {
-                    "_3BD2A34ED4E7F9C094B6D5EDA5378037"
-                    {
-                    "Name" = "8:SWFModeller.dll"
-                    "Attributes" = "3:512"
-                    }
-                }
-            "SourcePath" = "8:SWFModeller.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_517418DDC1424232A218AE6BE3C90911"
@@ -336,6 +305,37 @@
                     }
                 }
             "SourcePath" = "8:ICSharpCode.SharpZipLib.dll"
+            "TargetName" = "8:"
+            "Tag" = "8:"
+            "Folder" = "8:_517418DDC1424232A218AE6BE3C90911"
+            "Condition" = "8:"
+            "Transitive" = "11:FALSE"
+            "Vital" = "11:TRUE"
+            "ReadOnly" = "11:FALSE"
+            "Hidden" = "11:FALSE"
+            "System" = "11:FALSE"
+            "Permanent" = "11:FALSE"
+            "SharedLegacy" = "11:FALSE"
+            "PackageAs" = "3:1"
+            "Register" = "3:1"
+            "Exclude" = "11:FALSE"
+            "IsDependency" = "11:TRUE"
+            "IsolateTo" = "8:"
+            }
+            "{9F6F8455-1EF1-4B85-886A-4223BCC8E7F7}:_FD08E81360C335D7D3C43685DADCCFDC"
+            {
+            "AssemblyRegister" = "3:1"
+            "AssemblyIsInGAC" = "11:FALSE"
+            "AssemblyAsmDisplayName" = "8:SWFModeller, Version=1.0.0.1, Culture=neutral, processorArchitecture=MSIL"
+                "ScatterAssemblies"
+                {
+                    "_FD08E81360C335D7D3C43685DADCCFDC"
+                    {
+                    "Name" = "8:SWFModeller.dll"
+                    "Attributes" = "3:512"
+                    }
+                }
+            "SourcePath" = "8:SWFModeller.dll"
             "TargetName" = "8:"
             "Tag" = "8:"
             "Folder" = "8:_517418DDC1424232A218AE6BE3C90911"
@@ -410,7 +410,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:Swiffotron"
         "ProductCode" = "8:{75FF24EF-0848-47A2-8AB4-8C6128F842D4}"
-        "PackageCode" = "8:{7DBFAABE-E2D3-4047-8B24-F2EBD2F5B894}"
+        "PackageCode" = "8:{78292277-1619-4410-8809-9B53EC649C43}"
         "UpgradeCode" = "8:{0F888FA2-C8AE-4A0B-A756-A3458C450878}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"

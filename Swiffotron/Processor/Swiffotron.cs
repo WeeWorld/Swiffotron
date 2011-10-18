@@ -1547,7 +1547,7 @@ namespace SWFProcessing.Swiffotron
                 store.Commit(key);
             }
 
-            /* An interesting upshot here is that if you know you're never
+            /* ISSUE 79 - An interesting upshot here is that if you know you're never
              * going to save files back to a store, then you can get away with
              * using any string you like in swfout store keys. */
 

@@ -27,6 +27,8 @@ namespace SWFProcessing.SwiffotronService
             host = new ServiceHost(typeof(SWFProcessor));
             host.Open();
 
+            /* ISSUE 78 - Service still starts if the config is nonsense. */
+
             EventLog.WriteEntry(this.ServiceName + " has started.", EventLogEntryType.Information, (int)LogEvents.Start);
         }
 
