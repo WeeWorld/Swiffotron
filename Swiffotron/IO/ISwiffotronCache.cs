@@ -16,7 +16,8 @@ namespace SWFProcessing.Swiffotron.IO
         /// Called on creation of the cache object.
         /// </summary>
         /// <param name="init">An implementation-specific initialisation
-        /// string.</param>
+        /// string. The class should record this
+        /// string for debug interrogation later.</param>
         void Initialise(string init);
 
         /// <summary>
@@ -40,5 +41,10 @@ namespace SWFProcessing.Swiffotron.IO
         /// <param name="key">The key to the object to retrieve</param>
         /// <returns>The object, or null if it's not there.</returns>
         object Get(string key);
+
+        /// <summary>
+        /// Returns the string that was passed into Initialise
+        /// </summary>
+        string InitialisedWith { get; }
     }
 }

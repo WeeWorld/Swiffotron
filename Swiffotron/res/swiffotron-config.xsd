@@ -9,7 +9,9 @@
     <attribute name="assembly" type="string">
       <annotation>
         <documentation>
-          Omit the assembly attribute to reference classes in the Swiffotron assembly.
+            Omit the assembly attribute to reference classes in the Swiffotron assembly. Otherwise this can
+            be an assembly name (e.g. 'Swiffotron, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null')
+            or a path to a DLL (e.g. 'C:\bin\MyLib.dll'). If the latter, then it must end with '.dll'.
         </documentation>
       </annotation>
     </attribute>
@@ -22,7 +24,9 @@
     <attribute name="assembly" type="string">
       <annotation>
         <documentation>
-          Omit the assembly attribute to reference classes in the Swiffotron assembly.
+            Omit the assembly attribute to reference classes in the Swiffotron assembly. Otherwise this can
+            be an assembly name (e.g. 'Swiffotron, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null')
+            or a path to a DLL (e.g. 'C:\bin\MyLib.dll'). If the latter, then it must end with '.dll'.
         </documentation>
       </annotation>
     </attribute>

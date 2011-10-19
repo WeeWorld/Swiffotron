@@ -15,7 +15,7 @@ namespace SWFProcessing.Swiffotron.Test
 
     public class MockStore : ISwiffotronStore
     {
-        private string initString;
+        public string InitialisedWith { get; private set; }
 
         private Dictionary<string, FileStream> storedData;
 
@@ -32,12 +32,12 @@ namespace SWFProcessing.Swiffotron.Test
         /// </summary>
         public bool InitialisedProperly
         {
-            get { return this.initString == "mock"; }
+            get { return this.InitialisedWith == "mock"; }
         }
 
         public void Initialise(string init)
         {
-            this.initString = init;
+            this.InitialisedWith = init;
             this.storedData = new Dictionary<string, FileStream>();
             this.commited = new HashSet<string>();
 

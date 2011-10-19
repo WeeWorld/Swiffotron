@@ -13,6 +13,8 @@ namespace SWFProcessing.Swiffotron.IO
     /// </summary>
     public class FileStore : ISwiffotronStore
     {
+        public string InitialisedWith { get; private set; }
+
         /// <summary>
         /// The base folder under which to store things.
         /// </summary>
@@ -25,6 +27,8 @@ namespace SWFProcessing.Swiffotron.IO
         /// an XML config file.</param>
         public void Initialise(string init)
         {
+            InitialisedWith = init;
+
             if (init != null)
             {
                 this.basePath = init;

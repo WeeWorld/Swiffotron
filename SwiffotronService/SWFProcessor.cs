@@ -35,7 +35,7 @@ namespace SWFProcessing.SwiffotronService
             FileInfo dllInfo = new FileInfo(swiffotronDLLPath);
             DirectoryInfo dllDir = dllInfo.Directory;
 
-            string configName = ConfigurationSettings.AppSettings["SwiffotronConfig"];
+            string configName = ConfigurationManager.AppSettings["SwiffotronConfig"];
 
             if (configName == null || configName == string.Empty)
             {
@@ -67,7 +67,7 @@ namespace SWFProcessing.SwiffotronService
                 this.EventLog.WriteEntry(e.ToString(), EventLogEntryType.Error, (int)LogEvents.BadConfig);
             }
 
-            this.EventLog.WriteEntry("Swiffotron is using configuration found at " + configFile.FullName + " (SwiffotronConfig = '" + ConfigurationSettings.AppSettings["SwiffotronConfig"] + "')", EventLogEntryType.Information, (int)LogEvents.StartupInfo);
+            this.EventLog.WriteEntry("Swiffotron is using configuration found at " + configFile.FullName + " (SwiffotronConfig = '" + ConfigurationManager.AppSettings["SwiffotronConfig"] + "')", EventLogEntryType.Information, (int)LogEvents.StartupInfo);
         }
 
         /// <returns>null if the job could not be processed. An error will be recorded in the
@@ -87,6 +87,16 @@ namespace SWFProcessing.SwiffotronService
                 this.EventLog.WriteEntry(e.ToString(), EventLogEntryType.Error, (int)LogEvents.BadJob);
                 return null;
             }
+        }
+
+
+        public Dictionary<string, string> Interrogate()
+        {
+            Dictionary<string, string> info = this.Swiffotron.Interrogate();
+
+            /* TODO: Add some service information here, perhaps. */
+
+            return info;
         }
     }
 }

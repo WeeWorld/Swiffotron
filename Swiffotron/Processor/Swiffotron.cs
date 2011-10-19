@@ -1749,10 +1749,26 @@ namespace SWFProcessing.Swiffotron
                 assembly = null;
             }
 
-            /* Class cast problems just get thrown upwards and destroy the app. This
-             * is by design. */
-            ObjectHandle oh = Activator.CreateInstance(assembly, classname);
-            ISwiffotronStore newStore = (ISwiffotronStore)oh.Unwrap();
+
+            ISwiffotronStore newStore = null;
+
+            if (assembly != null && assembly.ToLower().EndsWith(".dll"))
+            {
+                /* Load from arbitrary DLL */
+
+                Type type = Assembly.LoadFrom(assembly).GetType(classname);
+
+                /* Class cast problems just get thrown upwards and destroy the app */
+                newStore = (ISwiffotronStore)Activator.CreateInstance(type);
+            }
+            else
+            {
+                /* Load by named assembly */
+
+                /* Class cast problems just get thrown upwards and destroy the app */
+                ObjectHandle oh = Activator.CreateInstance(assembly, classname);
+                newStore = (ISwiffotronStore)oh.Unwrap();
+            }
 
             newStore.Initialise(init);
 
@@ -1781,9 +1797,26 @@ namespace SWFProcessing.Swiffotron
                 assembly = null;
             }
 
-            /* Class cast problems just get thrown upwards and destroy the app */
-            ObjectHandle oh = Activator.CreateInstance(assembly, classname);
-            ISwiffotronCache newCache = (ISwiffotronCache)oh.Unwrap();
+            ISwiffotronCache newCache = null;
+
+            if (assembly != null && assembly.ToLower().EndsWith(".dll"))
+            {
+                /* Load from arbitrary DLL */
+
+                Type type = Assembly.LoadFrom(assembly).GetType(classname);
+
+                /* Class cast problems just get thrown upwards and destroy the app */
+                newCache = (ISwiffotronCache)Activator.CreateInstance(type);
+            }
+            else
+            {
+                /* Load by named assembly */
+
+                /* Class cast problems just get thrown upwards and destroy the app */
+                ObjectHandle oh = Activator.CreateInstance(assembly, classname);
+                newCache = (ISwiffotronCache)oh.Unwrap();
+            }
+
 
             newCache.Initialise(init);
 
@@ -1816,5 +1849,43 @@ namespace SWFProcessing.Swiffotron
             return this.LoadSwiffotronXML(swiffotronXml);
         }
 #endif
+
+        /// <summary>
+        /// Get some useful information for debug purposes letting us find out how things
+        /// are set up. I should list them all here, really.
+        /// </summary>
+        /// <returns>A big map of arbitrary string->string data that you can pick apart and
+        /// use as you so desire.</returns>
+        public Dictionary<string, string> Interrogate()
+        {
+            Dictionary<string, string> info = new Dictionary<string, string>();
+
+            List<string> cacheClasses = new List<string>();
+            foreach (KeyValuePair<string, ISwiffotronCache> cacheEntry in caches)
+            {
+                cacheClasses.Add(cacheEntry.Key + "=" + cacheEntry.Value.GetType().FullName + "[" + cacheEntry.Value.InitialisedWith+ "]");
+            }
+            cacheClasses.Sort();
+
+            /* CacheClasses holds a comma-separated list of all the cache classes used by swiffotron
+             * as key-value pairs, e.g. membase=com.blah.MyOtherClass,memcache=com.blah.MyClass
+             * sorted into alphabetical order. */
+            info.Add("CacheClasses", string.Join(",", cacheClasses.ToArray()));
+
+            List<string> storeClasses = new List<string>();
+            foreach (KeyValuePair<string, ISwiffotronStore> storeEntry in stores)
+            {
+                storeClasses.Add(storeEntry.Key + "=" + storeEntry.Value.GetType().FullName + "[" + storeEntry.Value.InitialisedWith + "]");
+            }
+            storeClasses.Sort();
+
+            /* StoreClasses holds a comma-separated list of all the cache classes used by swiffotron
+             * as key-value pairs, e.g. db=com.blah.MyOtherClass,fs=com.blah.MyClass
+             * sorted into alphabetical order. */
+            info.Add("StoreClasses", string.Join(",", storeClasses.ToArray()));
+
+
+            return info;
+        }
     }
 }

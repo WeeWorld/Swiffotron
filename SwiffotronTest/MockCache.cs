@@ -15,7 +15,7 @@ namespace SWFProcessing.Swiffotron.Test
     /// </summary>
     public class MockCache : ISwiffotronCache
     {
-        private string initString;
+        public string InitialisedWith { get; private set; }
 
         private Dictionary<string, object> cache;
 
@@ -35,12 +35,12 @@ namespace SWFProcessing.Swiffotron.Test
         /// </summary>
         public bool InitialisedProperly
         {
-            get { return this.initString == @"mock"; }
+            get { return this.InitialisedWith == @"mock"; }
         }
 
         public void Initialise(string init)
         {
-            this.initString = init;
+            this.InitialisedWith = init;
             this.cache = new Dictionary<string, object>();
             this.log = new List<string>();
         }

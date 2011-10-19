@@ -20,12 +20,16 @@ namespace SWFProcessing.Swiffotron.IO
         /// </summary>
         private Dictionary<string, object> cache;
 
+        public string InitialisedWith { get; private set; }
+
         /// <summary>
         /// Called on creation of the cache object.
         /// </summary>
         /// <param name="init">Ignored in this implementation.</param>
         public void Initialise(string init)
         {
+            this.InitialisedWith = init;
+
             /* The init string doesn't do anything here. */
             this.cache = new Dictionary<string, object>();
         }
