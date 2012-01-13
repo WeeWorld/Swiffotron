@@ -73,7 +73,7 @@ namespace SWFProcessing.Swiffotron.Test
             Stream s = null;
             try
             {
-                s = new FileStream(@"store\" + id, FileMode.Open);
+                s = new FileStream(@"store\" + id, FileMode.Open, FileAccess.Read);
             }
             catch
             {

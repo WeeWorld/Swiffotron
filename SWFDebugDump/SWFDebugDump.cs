@@ -38,7 +38,7 @@ namespace SWFDebugDump
                     StringBuilder modelDump = new StringBuilder();
 
                     SWF swf = null;
-                    using (FileStream fs = new FileStream(swfFile, FileMode.Open))
+                    using (FileStream fs = new FileStream(swfFile, FileMode.Open, FileAccess.Read))
                     {
                         swf = new SWFReader(fs, null, binDump, this).ReadSWF(new SWFContext(swfFile));
                         swf.ToStringModelView(0, modelDump);

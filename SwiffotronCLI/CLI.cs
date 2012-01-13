@@ -40,13 +40,13 @@ namespace SwiffotronCLI
             }
             else
             {
-                using (FileStream cfs = new FileStream(config, FileMode.Open))
+                using (FileStream cfs = new FileStream(config, FileMode.Open, FileAccess.Read))
                 {
                     swiffotron = new Swiffotron(cfs);
                 }
             }
 
-            using (FileStream jobfs = new FileStream(job, FileMode.Open))
+            using (FileStream jobfs = new FileStream(job, FileMode.Open, FileAccess.Read))
             {
                 swiffotron.Process(jobfs);
             }
