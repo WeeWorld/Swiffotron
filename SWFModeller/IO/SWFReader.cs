@@ -58,6 +58,7 @@ namespace SWFProcessing.SWFModeller
         /// </summary>
         private List<string> taglog = new List<string>();
         private IABCLoadInterceptor abcInterceptor;
+        private int binaryDumpNest = 0;
         private StringBuilder binaryDump;
 #endif
         /// <summary>
@@ -90,6 +91,7 @@ namespace SWFProcessing.SWFModeller
 
 #if DEBUG
             this.binaryDump = binaryDump;
+            this.binaryDumpNest = 0;
             this.abcInterceptor = abcInterceptor;
 #endif
         }
@@ -110,15 +112,20 @@ namespace SWFProcessing.SWFModeller
             this.MarkDumpOffset(
                     "Body of " + _tag + " (" + type + ") len=" + (followingOffset - this.sdtr.Offset),
                     isDefine);
+            this.binaryDumpNest++;
             this.taglog.Add(_tag.ToString());
 #endif
 
             switch ((Tag)type)
             {
                 case Tag.End:
+                    this.binaryDumpNest--;
                     return false;
 
                 case Tag.ShowFrame:
+#if DEBUG
+                    this.MarkDumpOffset("");
+#endif
                     this.frameCursor++;
                     break;
 
@@ -147,7 +154,7 @@ namespace SWFProcessing.SWFModeller
                     break;
 
                 case Tag.RemoveObject2:
-                    this.ReadRemoveObject2();
+                    this.currentTimeline.GetFrame(this.frameCursor).AddTag(this.ReadRemoveObject2());
                     break;
 
                 case Tag.DefineBits:
@@ -230,6 +237,7 @@ namespace SWFProcessing.SWFModeller
             }
 
             this.FinishTag(followingOffset);
+            this.binaryDumpNest--;
 
             return true;
         }
@@ -716,10 +724,9 @@ namespace SWFProcessing.SWFModeller
             int depth = this.sdtr.ReadUI16();
 
 #if DEBUG
-            this.Log("depth=" + depth);
+            this.Log("depth=" + depth+", frameCursor="+this.frameCursor);
 #endif
             RemoveObject ro = new RemoveObject(this.currentTimeline.GetLayer(depth));
-            this.currentTimeline.GetFrame(this.frameCursor).AddTag(ro);
             return ro;
         }
 
@@ -1079,11 +1086,15 @@ namespace SWFProcessing.SWFModeller
                 this.MarkDumpOffset(
                     "Body of " + _tag + " (" + type + ") len=" + (followingOffset - this.sdtr.Offset),
                     isDefine);
+                this.binaryDumpNest++;
 #endif
 
                 switch ((Tag)type)
                 {
                     case Tag.ShowFrame:
+#if DEBUG
+                        this.MarkDumpOffset("");
+#endif
                         currentFrame++;
                         break;
 
@@ -1095,6 +1106,7 @@ namespace SWFProcessing.SWFModeller
                                     @"Frame count mismatch in sprite " + characterID, swf.Context);
                         }
                         this.currentTimeline = this.swf;
+                        this.binaryDumpNest--;
                         return;
 
                     case Tag.PlaceObject2:
@@ -1129,6 +1141,7 @@ namespace SWFProcessing.SWFModeller
                                 SWFModellerError.SWFParsing,
                                 @"Bad SWF; A " + ((Tag)type).ToString() + @" tag is not permitted within a sprite definition", swf.Context);
                 }
+                this.binaryDumpNest--;
             }
         }
 
@@ -1158,7 +1171,7 @@ namespace SWFProcessing.SWFModeller
                 {
                     this.binaryDump.AppendLine();
                 }
-                this.binaryDump.AppendLine(comment);
+                this.binaryDump.AppendLine((new string('\t', Math.Max(0, this.binaryDumpNest))) + comment);
             }
 #endif
         }
@@ -1169,7 +1182,7 @@ namespace SWFProcessing.SWFModeller
 #if DEBUG
             if (this.binaryDump != null)
             {
-                this.binaryDump.AppendLine(" ; " + comment);
+                this.binaryDump.AppendLine((new string('\t', Math.Max(0, this.binaryDumpNest))) + "; " + comment);
             }
 #endif
         }

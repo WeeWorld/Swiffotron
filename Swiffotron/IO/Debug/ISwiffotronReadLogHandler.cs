@@ -6,6 +6,8 @@
 
 namespace SWFProcessing.Swiffotron.IO.Debug
 {
+    using SWFProcessing.SWFModeller;
+
     /// <summary>
     /// When testing swiffotron, we'd like access to the debug logs intended for
     /// the SWFModeller tests, so swiffotron handily passes them back to a test
@@ -18,6 +20,6 @@ namespace SWFProcessing.Swiffotron.IO.Debug
         /// </summary>
         /// <param name="name">The SWF name</param>
         /// <param name="log">A log of read activity</param>
-        void OnSwiffotronReadSWF(string name, string log);
+        void OnSwiffotronReadSWF(string name, SWF sfw, string log);
     }
 }

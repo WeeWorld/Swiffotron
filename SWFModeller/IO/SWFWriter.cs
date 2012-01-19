@@ -161,13 +161,17 @@ namespace SWFProcessing.SWFModeller
         }
 
         [Conditional("DEBUG")]
-        private void LogMessage(string s)
+        private void LogMessage(string s, bool boundary = false)
         {
             if (this.writeLog != null)
             {
                 /* Add 8 to the offset because when it finally makes it to disk, there
                  * will be an 8-byte header at the front. */
                 this.writeLog.AppendLine((new string('\t', this.writers.Count - 1)) + s + " @" + (this.swfOut.Offset + 8));
+                if (boundary)
+                {
+                    this.writeLog.AppendLine("");
+                }
             }
         }
 
@@ -239,6 +243,7 @@ namespace SWFProcessing.SWFModeller
                     scbuf.WriteUI16(1); /* Count */
                     scbuf.WriteUI16(0); /* Character ref */
                     scbuf.WriteString(this.swf.Class.QualifiedName); /* Name */
+                    this.LogMessage(this.swf.Class.QualifiedName);
                     this.CloseTag();
                 }
 
@@ -304,6 +309,11 @@ namespace SWFProcessing.SWFModeller
                 {
                     symbolBuf.WriteUI16((uint)this.characterMarshal.GetIDFor((ICharacter)t));
                     symbolBuf.WriteString(t.Class.QualifiedName);
+                    this.LogMessage(
+                            "ID:" +
+                            (uint)this.characterMarshal.GetIDFor((ICharacter)t) +
+                            " => " +
+                            t.Class.QualifiedName);
                 }
                 this.CloseTag();
 
@@ -1060,7 +1070,7 @@ namespace SWFProcessing.SWFModeller
             int tagCode = (int)tagWriter.Tag;
 
 #if DEBUG
-            this.LogMessage("Body length of " + tagWriter.Tag.ToString()+" " + tagData.Length + " bytes on " + tagWriter.LogData);
+            this.LogMessage("Body length of " + tagWriter.Tag.ToString()+" " + tagData.Length + " bytes on " + tagWriter.LogData, true);
 #endif
             this.writers.Pop();
 

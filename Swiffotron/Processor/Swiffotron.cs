@@ -525,7 +525,7 @@ namespace SWFProcessing.Swiffotron
                             this.abcInterceptor)
                         .ReadSWF(new SWFContext(name));
 
-                    this.readLogHandler.OnSwiffotronReadSWF(name, sb.ToString());
+                    this.readLogHandler.OnSwiffotronReadSWF(name, swf, sb.ToString());
                     return swf;
                 }
 

@@ -8,8 +8,6 @@ Document class:mn QName "MainTimeline"; ns Package "TestTweensSWF_swiffotron"; s
         Frame# 1
         {
             PlaceObject char=[Shape DefineShape4:64 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
         }
         Frame# 2 ;
         Frame# 3 ;
@@ -140,7 +138,6 @@ Document class:mn QName "MainTimeline"; ns Package "TestTweensSWF_swiffotron"; s
         Frame# 1
         {
             PlaceObject char=[MorphShape DefineMorphShape:645 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
-            RemoveObject layer=[layer]
         }
         Frame# 2
         {

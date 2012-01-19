@@ -129,15 +129,6 @@ SWF stage=550,400, fps=10, bg=#FFFFFF
         Frame# 1
         {
             PlaceObject char=[Shape DefineShape:82 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
         }
         Frame# 2
         {
@@ -324,24 +315,6 @@ SWF stage=550,400, fps=10, bg=#FFFFFF
             PlaceObject char=[Shape DefineShape:127 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
             PlaceObject char=[Shape DefineShape:105 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
             PlaceObject char=[Shape DefineShape:66 bytes], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=none, clipDepth=none
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
-            RemoveObject layer=[layer]
         }
         Frame# 2 ;
         Frame# 3

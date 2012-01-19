@@ -33,6 +33,7 @@ namespace SWFProcessing.Swiffotron.Test
     public class SwiffotronTest : TestingBaseClass, IABCLoadInterceptor, ISwiffotronReadLogHandler
     {
         private Dictionary<string, string> swfReadLogs;
+        private Dictionary<string, string> swfReadModelLogs;
 
         /// <summary>
         ///Gets or sets the test context which provides
@@ -83,6 +84,7 @@ namespace SWFProcessing.Swiffotron.Test
             Directory.CreateDirectory(TestDir);
 
             this.swfReadLogs = new Dictionary<string, string>();
+            this.swfReadModelLogs = new Dictionary<string, string>();
         }
 
         [TestCleanup]
@@ -96,6 +98,15 @@ namespace SWFProcessing.Swiffotron.Test
                 using (FileStream fs = new FileStream(readswfsDir + name + ".log.txt", FileMode.Create))
                 {
                     byte[] log = new ASCIIEncoding().GetBytes(this.swfReadLogs[name]);
+                    fs.Write(log, 0, log.Length);
+                }
+            }
+
+            foreach (string name in this.swfReadModelLogs.Keys)
+            {
+                using (FileStream fs = new FileStream(readswfsDir + name + ".model.txt", FileMode.Create))
+                {
+                    byte[] log = new ASCIIEncoding().GetBytes(this.swfReadModelLogs[name]);
                     fs.Write(log, 0, log.Length);
                 }
             }
@@ -658,13 +669,18 @@ namespace SWFProcessing.Swiffotron.Test
 
         #region SwiffotronReadLogHandler Members
 
-        public void OnSwiffotronReadSWF(string name, string log)
+        public void OnSwiffotronReadSWF(string name, SWF swf, string log)
         {
             while (swfReadLogs.ContainsKey(name))
             {
                 name = name + "_1";
             }
             swfReadLogs[name] = log;
+
+            StringBuilder sbModel = new StringBuilder();
+            swf.ToStringModelView(0, sbModel);
+
+            swfReadModelLogs[name] = sbModel.ToString();
         }
 
         #endregion
