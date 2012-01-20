@@ -528,7 +528,7 @@ namespace SWFProcessing.SWFModeller
                 this.WriteBodylessTag(Tag.ShowFrame);
             }
 
-            this.WriteBodylessTag(Tag.End, id.ToString()); /* ISSUE 48: Optimization: For bodyless tags, we can probably have a special case that doesn't go through the hoops of adding new writers to stacks etc */
+            this.WriteBodylessTag(Tag.End, id.ToString());
 
             this.CloseTag(); /* DefineSprite */
         }

@@ -653,8 +653,15 @@ namespace SWFProcessing.Swiffotron
         /// <param name="swf">The SWF being processed.</param>
         private void TextReplace(XPathNavigator nav, SWF swf)
         {
-            string find = nav.SelectSingleNode(@"swf:find/text()", this.namespaceMgr).Value;
-            string replace = nav.SelectSingleNode(@"swf:replace/text()", this.namespaceMgr).Value;
+            XPathNavigator findNode = nav.SelectSingleNode(@"swf:find/text()", this.namespaceMgr);
+            if (findNode == null)
+            {
+                throw new SwiffotronException(SwiffotronError.BadInputXML, this.Context, "The find element in textreplace operations cannot be empty.");
+            }
+            string find = findNode.Value;
+
+            XPathNavigator replaceNode = nav.SelectSingleNode(@"swf:replace/text()", this.namespaceMgr);
+            string replace = replaceNode==null?string.Empty:replaceNode.Value;
 
             foreach (XPathNavigator loc in nav.SelectChildren(@"location", SwiffotronNS))
             {

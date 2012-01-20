@@ -291,6 +291,16 @@ namespace SWFProcessing.Swiffotron.Test
         }
 
         /// <summary>
+        /// Tests text replacement with empty strings
+        /// </summary>
+        [TestMethod]
+        public void TestTextReplaceEmptyString()
+        {
+            Swiffotron swiffotron;
+            PredictedOutputTest(@"TestTextReplaceEmptyString.xml", @"TestTextReplaceEmptyString.swf", out swiffotron);
+        }
+
+        /// <summary>
         /// Tests a job with an instance node of type extern. This test is functionally equivalent to
         /// TestMovieclipTypeExtern in its output.
         /// </summary>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<swiffotron xmlns="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:swf="urn:swiffotron-schemas:swiffotron-job/24/05/2011"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            id="TestTextReplaceEmptyString">
+
+    <swf base="store://store/textreplace.textreplace.swf" id="textreplace">
+
+        <swfout store="store://store/TestTextReplaceEmptyString.swf" />
+
+        <textreplace>
+            <find>{username}</find>
+            <replace></replace>
+            <location type="movieclip" path="*"/>
+            <location type="actionscript"/>
+        </textreplace>
+
+        <textreplace>
+            <find>{placeholder}</find>
+            <replace></replace>
+            <location type="movieclip"/>
+        </textreplace>
+
+        <textreplace>
+            <find>{code}</find>
+            <replace></replace>
+            <location type="actionscript"/>
+        </textreplace>
+
+    </swf>
+
+</swiffotron>
