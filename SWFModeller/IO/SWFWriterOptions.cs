@@ -11,6 +11,14 @@ namespace SWFProcessing.SWFModeller
     /// </summary>
     public class SWFWriterOptions
     {
+        /// <summary>The configuration XML file namespace</summary>
+        private const string SwiffotronRDF = "<rdf:RDF xmlns:rdf=\"http://www.w3.org/1999/02/22-rdf-syntax-ns#\"><rdf:Description rdf:about=\"\" xmlns:xmp=\"http://ns.adobe.com/xap/1.0/\"><xmp:CreatorTool>http://github.com/izb/Swiffotron</xmp:CreatorTool></rdf:Description></rdf:RDF>";
+
+        public SWFWriterOptions()
+        {
+            this.RDFMetadata = SWFWriterOptions.SwiffotronRDF;
+        }
+
         /// <summary>
         /// true if the output should be deflated.
         /// </summary>
@@ -25,5 +33,12 @@ namespace SWFProcessing.SWFModeller
         /// debug information.
         /// </summary>
         public bool EnableDebugger { get; set; }
+
+        /// <summary>
+        /// RDF metadata. Either null (default) if you don't want any, or a string of
+        /// valid RDF if you do. SWFModeller makes no attempt to validate whatever you
+        /// pass in here.
+        /// </summary>
+        public string RDFMetadata { get; set; }
     }
 }

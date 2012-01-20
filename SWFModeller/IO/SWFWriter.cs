@@ -277,8 +277,7 @@ namespace SWFProcessing.SWFModeller
 
                     this.BindClasses(unboundClasses);
 
-                    this.OpenTag(Tag.ShowFrame);
-                    this.CloseTag();
+                    this.WriteBodylessTag(Tag.ShowFrame);
 
                     writtenFrames++;
 
@@ -288,13 +287,11 @@ namespace SWFProcessing.SWFModeller
             else
             {
                 /* No SWF should be frameless. Awwww. */
-                this.OpenTag(Tag.ShowFrame);
-                this.CloseTag();
+                this.WriteBodylessTag(Tag.ShowFrame);
             }
 
             /* Finish with an end tag */
-            this.OpenTag(Tag.End);
-            this.CloseTag();
+            this.WriteBodylessTag(Tag.End);
         }
 
         private void BindClasses(ListSet<Timeline> unboundClasses)
@@ -527,13 +524,11 @@ namespace SWFProcessing.SWFModeller
                                     "Unsupported tag in SWF sprite writer: " + dli.GetType().ToString());
                     }
                 }
-                this.OpenTag(Tag.ShowFrame);
-                this.CloseTag();
+
+                this.WriteBodylessTag(Tag.ShowFrame);
             }
 
-
-            this.OpenTag(Tag.End, id.ToString()); /* ISSUE 48: Optimization: For bodyless tags, we can probably have a special case that doesn't go through the hoops of adding new writers to stacks etc */
-            this.CloseTag();
+            this.WriteBodylessTag(Tag.End, id.ToString()); /* ISSUE 48: Optimization: For bodyless tags, we can probably have a special case that doesn't go through the hoops of adding new writers to stacks etc */
 
             this.CloseTag(); /* DefineSprite */
         }
@@ -1020,7 +1015,8 @@ namespace SWFProcessing.SWFModeller
 
         private void WriteBGColorTag()
         {
-            this.OpenTag(Tag.SetBackgroundColor).WriteRGB(this.swf.BackgroundColor.ToArgb());
+            this.OpenTag(Tag.SetBackgroundColor)
+                    .WriteRGB(this.swf.BackgroundColor.ToArgb());
             this.CloseTag();
         }
 
@@ -1034,13 +1030,42 @@ namespace SWFProcessing.SWFModeller
             tagWriter.WriteBit(false);  /* Reserved, must be 0 */
             tagWriter.WriteBit(true);  /* UseDirectBlit, TODO: We set this to '1' but I dunno what the IDE does. */
             tagWriter.WriteBit(true);  /* UseGPU, TODO: We set this to '1' but I dunno what the IDE does. */
-            tagWriter.WriteBit(false);  /* HasMetadata. TODO: Set this to 0. We won't need it unless we know how to access it from the SWF. I don't think you can. */
+            tagWriter.WriteBit(this.options.RDFMetadata != null);
             tagWriter.WriteBit(true);  /* AS3, because we don't like AS2. Boo. */
             tagWriter.WriteUBits(0, 2);  /* Reserved, must be 0 */
             tagWriter.WriteBit(false);  /* UseNetwork. TODO: Check what the IDE sets for this. */
             tagWriter.WriteUBits(0, 24); /* Reserved, must be 0 */
             this.CloseTag();
+
+            if (this.options.RDFMetadata != null)
+            {
+                this.OpenTag(Tag.Metadata)
+                        .WriteString(this.options.RDFMetadata);
+                this.CloseTag();
+            }
         }
+
+        /// <summary>
+        /// Note that if you're fixing this method, it shares functionality with
+        /// CloseTag, which may also need the same fix. Whatever it is you're fixing.
+        /// </summary>
+        private void WriteBodylessTag(Tag tag, string log = null)
+        {
+#if DEBUG
+            this.LogTag(tag, log);
+#endif
+            WriteBuffer tagWriter = this.writers.Peek();
+            int tagCode = (int)tag;
+
+#if DEBUG
+            this.LogMessage("Bodyless tag " + tag.ToString(), true);
+#endif
+
+            /* Short record header */
+            int hdr = (tagCode << 6);
+            tagWriter.WriteUI16((uint)hdr);
+        }
+
 
         private WriteBuffer OpenTag(Tag tag, string log = null)
         {
