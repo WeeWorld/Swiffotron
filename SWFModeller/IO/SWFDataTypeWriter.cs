@@ -17,6 +17,9 @@ namespace SWFProcessing.SWFModeller
     /// </summary>
     internal class SWFDataTypeWriter : IDisposable
     {
+        private static readonly uint[] LOG2_MASKS = { 0x2, 0xC, 0xF0, 0xFF00, 0xFFFF0000 };
+        private static readonly int[] LOG2_POW = { 1, 2, 4, 8, 16 };
+
         private int buffer = 0;
         private int bitCount = 0;
         private int offset = 0;
@@ -64,9 +67,9 @@ namespace SWFProcessing.SWFModeller
             int ymin = (int)(r.YMin * SWFValues.TwipsFactor);
             int ymax = (int)(r.YMax * SWFValues.TwipsFactor);
 
-            /* ISSUE 35: Measure the required number of bits. For now,
-             * we just turn the size up to the max. */
-            int nbits = 31;
+            int nbits = Math.Max(RequiredBits(xmin),
+                    Math.Max(RequiredBits(xmax),
+                            Math.Max(RequiredBits(ymin), RequiredBits(ymax))));
 
             this.WriteUBits((uint)nbits, 5);
 
@@ -74,6 +77,35 @@ namespace SWFProcessing.SWFModeller
             this.WriteSBits(xmax, nbits);
             this.WriteSBits(ymin, nbits);
             this.WriteSBits(ymax, nbits);
+        }
+
+        private int RequiredBits(int v)
+        {
+            uint uv;
+            if (v >= 0)
+            {
+                uv = (uint)v;
+            }
+            else
+            {
+                uv = (uint)(-v);
+            }
+
+            // http://graphics.stanford.edu/~seander/bithacks.html#IntegerLog
+
+            int r = 0;
+            for (int i = 4; i >= 0; i--)
+            {
+                if ((uv & LOG2_MASKS[i]) != 0)
+                {
+                    uv >>= LOG2_POW[i];
+                    r |= LOG2_POW[i];
+                } 
+            }
+
+            r += 2;
+
+            return Math.Min(31, r);
         }
 
         public void WriteFIXED8(float v)
