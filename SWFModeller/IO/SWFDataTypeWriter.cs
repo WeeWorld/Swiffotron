@@ -282,47 +282,43 @@ namespace SWFProcessing.SWFModeller
             this.WriteSBits(value1616, nbits);
         }
 
+        private void WriteVarlenFBPair(float a, float b)
+        {
+            int a1616 = (int)(a * 65536);
+            int b1616 = (int)(b * 65536);
+            int nbits = Math.Max(RequiredBits(a1616), RequiredBits(b1616));
+            this.WriteUBits((uint)nbits, 5);
+            this.WriteSBits(a1616, nbits);
+            this.WriteSBits(b1616, nbits);
+        }
+
         public void WriteMatrix(Matrix m)
         {
             this.WriteBit(m.HasScale);
             if (m.HasScale)
             {
-                /* Hard-coded 30-bit values, coz we don't measure the values.
-                 * ISSUE 36: Fix this, but actually I suspect that the flash IDE does this
-                 * anyway. It'll get compressed after all. */
-                this.WriteUBits(30, 5);
-                this.WriteFB(m.ScaleX, 30);
-                this.WriteFB(m.ScaleY, 30);
+                WriteVarlenFBPair(m.ScaleX, m.ScaleY);
             }
 
             this.WriteBit(m.HasSkew);
             if (m.HasSkew)
             {
-                /* Hard-coded 30-bit values, coz we don't measure the values.
-                 * ISSUE 36: Fix this, but actually I suspect that the flash IDE does this
-                 * anyway. It'll get compressed after all. */
-                this.WriteUBits(30, 5);
-                this.WriteFB(m.SkewX, 30);
-                this.WriteFB(m.SkewY, 30);
+                WriteVarlenFBPair(m.SkewX, m.SkewY);
             }
-
-            /* Hard-coded 30-bit values, coz we don't measure the values.
-             * ISSUE 36: Fix this, but actually I suspect that the flash IDE does this
-             * anyway. It'll get compressed after all. */
-            this.WriteUBits(30, 5);
-
 
             /* In the following code, you'd think you'd be able to inline it all. If you
              * inline it though, you get weird rounding errors messing things
              * up... (http://stackoverflow.com/questions/2509576/why-is-my-number-being-rounded-incorrectly) */
+            float floatTwipsX = m.TransX * SWFValues.TwipsFactor;
+            int intTwipsX = (int)floatTwipsX;
+            float floatTwipsY = m.TransY * SWFValues.TwipsFactor;
+            int intTwipsY = (int)floatTwipsY;
 
-            float floatTwips = m.TransX * SWFValues.TwipsFactor;
-            int intTwips = (int)floatTwips;
-            this.WriteSBits(intTwips, 30);
+            int nbits = Math.Max(RequiredBits(intTwipsX), RequiredBits(intTwipsY));
+            this.WriteUBits((uint)nbits, 5);
 
-            floatTwips = m.TransY * SWFValues.TwipsFactor;
-            intTwips = (int)floatTwips;
-            this.WriteSBits(intTwips, 30);
+            this.WriteSBits(intTwipsX, nbits);
+            this.WriteSBits(intTwipsY, nbits);
         }
 
         /// <summary>
