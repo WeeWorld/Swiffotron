@@ -206,6 +206,10 @@ namespace SWFProcessing.SWFModeller
 
                 case Tag.FrameLabel:
                     this.currentTimeline.GetFrame(this.frameCursor).Label = this.sdtr.ReadString();
+#if DEBUG
+                    this.Log("Frame label = " + this.currentTimeline.GetFrame(this.frameCursor).Label);
+#endif
+
                     break;
 
                 case Tag.DefineFont3:
@@ -1119,6 +1123,9 @@ namespace SWFProcessing.SWFModeller
 
                     case Tag.FrameLabel:
                         sprite.GetFrame(currentFrame).Label = this.sdtr.ReadString();
+#if DEBUG
+                        this.Log("Frame label = " + sprite.GetFrame(currentFrame).Label);
+#endif
                         break;
 
                     case Tag.RemoveObject2:

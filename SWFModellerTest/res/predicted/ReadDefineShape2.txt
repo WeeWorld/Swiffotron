@@ -110,6 +110,7 @@ SWF stage=200,215, fps=31, bg=#FFFFFF
     }
     Frame# 1
     {
+        Frame Label:top1
         PlaceObject char=[sprite '__cid##2'], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=[add:, mult:[r:1, g:1, b:1, a:0]], clipDepth=none
         PlaceObject char=[sprite '__cid##5'], layer=[layer], name=bounds, ratio=none, matrix=[t:97.7,142.35, sc:1,1, sk:0,0], cxform=none, clipDepth=none
     }

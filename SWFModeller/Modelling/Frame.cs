@@ -76,6 +76,13 @@ namespace SWFProcessing.SWFModeller
         public void ToStringModelView(int nest, StringBuilder sb)
         {
 #if DEBUG
+            if (this.HasLabel)
+            {
+                string indent = new string(' ', nest * 4);
+
+                sb.Append(indent + "Frame Label:" + this.Label + "\n");
+            }
+
             foreach (IDisplayListItem dli in this.displayList)
             {
                 DLItemDump.ToStringModelView(dli, nest, sb);

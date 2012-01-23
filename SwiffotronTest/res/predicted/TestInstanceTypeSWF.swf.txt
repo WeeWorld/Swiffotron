@@ -79,6 +79,7 @@ Document class:mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotr
         Class name:mn QName "eyes_3"; ns Package ""; set *
         Frame# 1
         {
+            Frame Label:green
             PlaceObject char=[sprite '__cid##5'], layer=[layer], name=none, ratio=none, matrix=[t:0,0, sc:1,1, sk:0,0], cxform=[add:[r:0.6171875, g:0.7148438, b:0.234375, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
             PlaceObject char=[sprite '__cid##6'], layer=[layer], name=none, ratio=none, matrix=[t:1.1,0.75, sc:1,1, sk:0,0], cxform=[add:[r:0.6171875, g:0.7148438, b:0.234375, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
         }
@@ -87,6 +88,7 @@ Document class:mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotr
         Frame# 4 ;
         Frame# 5
         {
+            Frame Label:blue
             PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.3046875, g:0.6875, b:0.8359375, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
             PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.3046875, g:0.6875, b:0.8359375, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
         }
@@ -96,6 +98,7 @@ Document class:mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotr
         Frame# 9 ;
         Frame# 10
         {
+            Frame Label:brown
             PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.2070313, g:0.1054688, b:0, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
             PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.2070313, g:0.1054688, b:0, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
         }
@@ -105,6 +108,7 @@ Document class:mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotr
         Frame# 14 ;
         Frame# 15
         {
+            Frame Label:grey
             PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.671875, g:0.7265625, b:0.765625, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
             PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.671875, g:0.7265625, b:0.765625, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
         }
@@ -114,6 +118,7 @@ Document class:mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotr
         Frame# 19 ;
         Frame# 20
         {
+            Frame Label:hazel
             PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.4414063, g:0.21875, b:0, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
             PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.4414063, g:0.21875, b:0, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
         }
@@ -123,6 +128,7 @@ Document class:mn QName "MainTimeline"; ns Package "miscparts_blank_swf_swiffotr
         Frame# 24 ;
         Frame# 25
         {
+            Frame Label:amber
             PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.78125, g:0.5898438, b:0.015625, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
             PlaceObject (move) char=none, layer=[layer], name=none, ratio=none, matrix=none, cxform=[add:[r:0.78125, g:0.5898438, b:0.015625, a:0], mult:[r:0, g:0, b:0]], clipDepth=none
         }
