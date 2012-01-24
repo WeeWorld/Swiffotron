@@ -561,7 +561,7 @@ namespace SWFProcessing.SWFModeller
 
             foreach (DoABC script in this.scripts)
             {
-                AS3ClassDef c = script.Code.GetClassByName(name);
+                AS3ClassDef c = script.Code.GetClassByQName(name);
 
                 if (c != null)
                 {

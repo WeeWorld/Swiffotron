@@ -157,7 +157,7 @@ namespace SWFProcessing.SWFModeller.ABC
 
             foreach (AS3ClassDef clazz in abc.Code.Classes)
             {
-                AS3ClassDef classCollision = thisCode.FindClass(clazz.Name);
+                AS3ClassDef classCollision = thisCode.GetClassByQName(clazz.Name.QualifiedName);
                 if (classCollision != null)
                 {
                     throw new SWFModellerException(

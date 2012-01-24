@@ -727,26 +727,6 @@ namespace SWFProcessing.SWFModeller.ABC
             return m;
         }
 
-        /// <summary>
-        /// Find a class with a specified name
-        /// </summary>
-        /// <param name="multiname">The multiname that identifies the class</param>
-        /// <returns>A class or null if it wasn't found.</returns>
-        internal AS3ClassDef FindClass(Multiname multiname)
-        {
-            /* ISSUE 6: Optimize this. Maintain a map of multinames->classes
-             * Linear searches are for losers. */
-
-            foreach (AS3ClassDef c in this.classes)
-            {
-                if (c.Name == multiname)
-                {
-                    return c;
-                }
-            }
-
-            return null;
-        }
 
         /// <summary>
         /// Technically, from an OO perspective, this isn't the most logical place
@@ -844,7 +824,7 @@ namespace SWFProcessing.SWFModeller.ABC
             return c;
         }
 
-        internal AS3ClassDef GetClassByName(string className)
+        internal AS3ClassDef GetClassByQName(string className)
         {
             /* ISSUE 8: This is a linear search. I HATE linear searches. */
             foreach (AS3ClassDef c in this.classes)
