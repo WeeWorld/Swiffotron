@@ -25,12 +25,15 @@ namespace SWFProcessing.SWFModeller
         /// </summary>
         private List<IDisplayListItem> displayList;
 
+        private Dictionary<string, PlaceObject> placeObjectMap;
+
         /// <summary>
         /// Initializes a new instance of a Frame.
         /// </summary>
         public Frame()
         {
             this.displayList = new List<IDisplayListItem>();
+            this.placeObjectMap = new Dictionary<string, PlaceObject>();
         }
 
         public string Label { get; set; }
@@ -63,6 +66,13 @@ namespace SWFProcessing.SWFModeller
         public void AddTag(IDisplayListItem dlistItem)
         {
             this.displayList.Add(dlistItem);
+
+            PlaceObject po = dlistItem as PlaceObject;
+
+            if (po != null && po.Name != null)
+            {
+                this.placeObjectMap.Add(po.Name, po);
+            }
         }
 
         /// <summary>
@@ -93,17 +103,9 @@ namespace SWFProcessing.SWFModeller
 
         internal PlaceObject FindInstance(string name)
         {
-            /* ISSUE 15: Must be a faster way. */
-            foreach (IDisplayListItem dli in this.displayList)
+            if (placeObjectMap.ContainsKey(name))
             {
-                if (dli.Type == DisplayListItemType.PlaceObjectX)
-                {
-                    PlaceObject po = (PlaceObject)dli;
-                    if (po.Name == name)
-                    {
-                        return po;
-                    }
-                }
+                return placeObjectMap[name];
             }
 
             return null;
@@ -112,6 +114,13 @@ namespace SWFProcessing.SWFModeller
         internal void RemoveDisplayListItem(IDisplayListItem dli)
         {
             this.displayList.Remove(dli);
+
+            PlaceObject po = dli as PlaceObject;
+
+            if (po != null && po.Name != null)
+            {
+                this.placeObjectMap.Remove(po.Name);
+            }
         }
     }
 }
