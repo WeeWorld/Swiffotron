@@ -9,12 +9,14 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
     using System.Text;
     using SWFProcessing.SWFModeller.Characters.Images;
 
-    class StyleChange : IShapeRecord
+    internal class StyleChange : IShapeRecord
     {
         public int? DX { get; set; }
+
         public int? DY { get; set; }
 
         public IFillStyle FillStyle0 { get; set; }
+
         public IFillStyle FillStyle1 { get; set; }
 
         /* ISSUE 23: Not sure how flash uses the new styles, or how they're indexed. Not sure
@@ -25,6 +27,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
          * is amiss.
          */
         public IFillStyle[] NewFillStyles { get; set; }
+
         public ILineStyle[] NewLineStyles { get; set; }
 
         public int? LineStyle { get; set; }
@@ -44,7 +47,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
             {
                 StringBuilder sb = new StringBuilder();
                 sb.Append(" {new fills ");
-                foreach (FillStyle fs in NewFillStyles)
+                foreach (FillStyle fs in this.NewFillStyles)
                 {
                     sb.Append(fs.ToString());
                 }
@@ -53,11 +56,11 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
                 fills = sb.ToString();
             }
 
-            if (NewLineStyles != null && NewLineStyles.Length > 0)
+            if (this.NewLineStyles != null && this.NewLineStyles.Length > 0)
             {
                 StringBuilder sb = new StringBuilder();
                 sb.Append(" {new lines ");
-                foreach (LineStyle ls in NewLineStyles)
+                foreach (LineStyle ls in this.NewLineStyles)
                 {
                     sb.Append(ls.ToString());
                 }
@@ -66,8 +69,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
                 lines = sb.ToString();
             }
 
-            return "[style change move=" + DX + "," + DY + " fill0/1=" + FillStyle0 + "," + FillStyle1 + " line=" + LineStyle + (lines == null ? string.Empty : lines) + (fills == null ? string.Empty : fills) + "]";
+            return "[style change move=" + this.DX + "," + this.DY + " fill0/1=" + this.FillStyle0 + "," + this.FillStyle1 + " line=" + this.LineStyle + (lines == null ? string.Empty : lines) + (fills == null ? string.Empty : fills) + "]";
         }
-
     }
 }

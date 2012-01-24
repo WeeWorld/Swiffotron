@@ -46,10 +46,11 @@ namespace SWFProcessing.SWFModeller.ABC.Code
 
         public override string ToString()
         {
-            if (Offset == null)
+            if (this.Offset == null)
             {
                 return "[@" + this.Opcode + "]";
             }
+
             return "[@" + this.Offset + "]";
         }
     }

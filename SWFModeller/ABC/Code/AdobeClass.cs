@@ -4,7 +4,6 @@
 //
 //-----------------------------------------------------------------------
 
-
 namespace SWFProcessing.SWFModeller.ABC.Code
 {
     /// <summary>
@@ -12,6 +11,11 @@ namespace SWFProcessing.SWFModeller.ABC.Code
     /// </summary>
     public class AdobeClass : AS3Class
     {
+        /// <summary>
+        /// Creates the MovieClip class. Or something that looks like it from the outside.
+        /// </summary>
+        /// <param name="abc">Where to put the namespace</param>
+        /// <returns>The MovieClip class.</returns>
         public static AdobeClass CreateFlashDisplayMovieClip(AbcCode abc)
         {
             Namespace nsFlashDisplay = abc.CreateNamespace(Namespace.NamespaceKind.Package, "flash.display");

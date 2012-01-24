@@ -12,7 +12,10 @@ namespace SWFProcessing.SwiffotronServiceClientExample
     using System.Text;
     using SWFProcessing.SwiffotronServiceClientExample.SwiffotronService;
 
-    class Program
+    /// <summary>
+    /// Application entry point.
+    /// </summary>
+    public class Program
     {
         private static string simpleJob =
 @"<?xml version=""1.0"" encoding=""UTF-8""?>
@@ -24,7 +27,7 @@ namespace SWFProcessing.SwiffotronServiceClientExample
   </swf>
 </swiffotron>";
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             Console.WriteLine("Example SWF job via windows service.");
 

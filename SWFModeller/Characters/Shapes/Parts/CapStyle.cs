@@ -4,7 +4,6 @@
 //
 //-----------------------------------------------------------------------
 
-
 namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
 {
     public enum CapStyle

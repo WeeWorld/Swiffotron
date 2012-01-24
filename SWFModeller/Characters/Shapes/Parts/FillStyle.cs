@@ -29,15 +29,15 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
 
         public override string ToString()
         {
-            switch (Type)
+            switch (this.Type)
             {
                 case FillType.Solid:
-                    return "[" + Type.ToString() + ": Colour=" + this.Colour.ToString() + "]";
+                    return "[" + this.Type.ToString() + ": Colour=" + this.Colour.ToString() + "]";
 
                 case FillType.LinearGradient:
                 case FillType.RadialGradient:
                 case FillType.FocalGradient:
-                    return "[" + Type.ToString() + ": Gradient=" + this.Gradient.ToString() + ", Pos=" + FillMatrix + "]";
+                    return "[" + this.Type.ToString() + ": Gradient=" + this.Gradient.ToString() + ", Pos=" + this.FillMatrix + "]";
 
                 case FillType.RepeatingBitmap:
                 case FillType.ClippedBitmap:
@@ -45,11 +45,11 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
                 case FillType.NonSmoothClippedBitmap:
                     if (this.Bitmap == null)
                     {
-                        return "[" + Type.ToString() + ": Bitmap=(none), Pos=" + FillMatrix + "]";
+                        return "[" + this.Type.ToString() + ": Bitmap=(none), Pos=" + this.FillMatrix + "]";
                     }
                     else
                     {
-                        return "[" + Type.ToString() + ": Bitmap=" + this.Bitmap.ToString() + ", Pos=" + FillMatrix + "]";
+                        return "[" + this.Type.ToString() + ": Bitmap=" + this.Bitmap.ToString() + ", Pos=" + this.FillMatrix + "]";
                     }
 
                 default:

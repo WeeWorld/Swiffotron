@@ -4,9 +4,11 @@
 //
 //-----------------------------------------------------------------------
 
-
 namespace SWFProcessing.SWFModeller.ABC.Code
 {
+    /// <summary>
+    /// A baseclass for all types of class in ABC bytecode.
+    /// </summary>
     public abstract class AS3Class
     {
         /// <summary>Gets or sets the class name</summary>

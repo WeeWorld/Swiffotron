@@ -16,16 +16,16 @@ namespace SWFProcessing.SwiffotronService
 
         public Service()
         {
-            InitializeComponent();
+            this.InitializeComponent();
             this.AutoLog = false;
-            EventLog.Source = "Swiffotron";
-            host = null;
+            this.EventLog.Source = "Swiffotron";
+            this.host = null;
         }
 
         protected override void OnStart(string[] args)
         {
-            host = new ServiceHost(typeof(SWFProcessor));
-            host.Open();
+            this.host = new ServiceHost(typeof(SWFProcessor));
+            this.host.Open();
 
             /* ISSUE 78 - Service still starts if the config is nonsense. */
 
@@ -34,9 +34,9 @@ namespace SWFProcessing.SwiffotronService
 
         protected override void OnStop()
         {
-            if (host != null)
+            if (this.host != null)
             {
-                host.Close();
+                this.host.Close();
             }
 
             EventLog.WriteEntry(this.ServiceName + " has stopped.", EventLogEntryType.Information, (int)LogEvents.Start);

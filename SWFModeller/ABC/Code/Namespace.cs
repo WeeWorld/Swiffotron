@@ -13,7 +13,7 @@ namespace SWFProcessing.SWFModeller.ABC
     /// </summary>
     public class Namespace : IComparable
     {
-        public static Namespace GlobalNS;
+        public static Namespace GlobalNS { get; set; }
 
         static Namespace()
         {
@@ -52,6 +52,7 @@ namespace SWFProcessing.SWFModeller.ABC
                 {
                     name = name.Substring(pos);
                 }
+
                 this.Name = prefix + name;
             }
         }
@@ -146,8 +147,8 @@ namespace SWFProcessing.SWFModeller.ABC
             {
                 /* See http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode/263416#263416 */
                 int hash = 17; /* Prime numbers automatically make code look impressive. */
-                hash = hash * 23 + (this.Name ?? string.Empty).GetHashCode();
-                hash = hash * 23 + this.Kind.GetHashCode();
+                hash = (hash * 23) + (this.Name ?? string.Empty).GetHashCode();
+                hash = (hash * 23) + this.Kind.GetHashCode();
                 return hash;
             }
         }
@@ -223,6 +224,7 @@ namespace SWFProcessing.SWFModeller.ABC
             {
                 return new Namespace(this.Kind, newPackage);
             }
+
             return new Namespace(this.Kind, newPackage + this.Name.Substring(colon));
         }
     }

@@ -15,7 +15,10 @@ namespace SWFProcessing.SWFModeller.ABC.Code
     /// </summary>
     public class AS3ClassDef : AS3Class
     {
-        public List<Multiname> interfaces;
+        /// <summary>
+        /// The list of interfaces implemented by this class.
+        /// </summary>
+        public List<Multiname> interfaces { get; set; }
 
         private Namespace protectedNS;
 
@@ -50,7 +53,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
         /// <summary>
         /// See AS3 spec
         /// </summary>
-        enum FlagMask
+        private enum FlagMask
         {
             SealedMask = 0x01,
             FinalMask = 0x02,
@@ -218,7 +221,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
         {
             get
             {
-                return (this.Iinit.Tampered || this.Cinit.Tampered);
+                return this.Iinit.Tampered || this.Cinit.Tampered;
             }
         }
 
@@ -380,7 +383,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
         /// <summary>
         /// Process all the methods with a delegate function.
         /// </summary>
-        /// <param name="td">The delegate to call on each method.</param>
+        /// <param name="mp">The delegate to call on each method.</param>
         public void MethodProc(AbcCode.MethodProcessor mp)
         {
             foreach (Trait t in this.classTraits)

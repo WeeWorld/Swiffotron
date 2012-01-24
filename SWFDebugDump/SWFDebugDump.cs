@@ -17,7 +17,7 @@ namespace SWFDebugDump
     /// <summary>
     /// Disassembles SWF and bytecode to text files.
     /// </summary>
-    class SWFDebugDump : IABCLoadInterceptor
+    public class SWFDebugDump : IABCLoadInterceptor
     {
         public void Run(string[] files)
         {
@@ -63,7 +63,7 @@ namespace SWFDebugDump
             }
         }
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             new SWFDebugDump().Run(args);
         }

@@ -50,8 +50,10 @@ namespace SWFProcessing.SwiffotronService
 
             if (!configFile.Exists)
             {
-                this.EventLog.WriteEntry("Failed to find a Swiffotron config file at "+configFile.FullName,
-                        EventLogEntryType.Error, (int)LogEvents.BadConfig);
+                this.EventLog.WriteEntry(
+                        "Failed to find a Swiffotron config file at " + configFile.FullName,
+                        EventLogEntryType.Error,
+                        (int)LogEvents.BadConfig);
                 return;
             }
 

@@ -11,7 +11,7 @@ namespace SWFProcessing.SWFModeller.ABC
     /// </summary>
     public class Multiname
     {
-        public static Multiname GlobalMultiname;
+        public static Multiname GlobalMultiname { get; set; }
 
         static Multiname()
         {
@@ -44,6 +44,7 @@ namespace SWFProcessing.SWFModeller.ABC
                                 SWFModellerError.Internal,
                                 "A " + kind.ToString() + " requires a namespace");
                     }
+
                     break;
 
                 case MultinameKind.RTQName:
@@ -62,6 +63,7 @@ namespace SWFProcessing.SWFModeller.ABC
                                 SWFModellerError.Internal,
                                 "A " + kind.ToString() + " requires a namespace set");
                     }
+
                     break;
 
                 case MultinameKind.MultinameL:
@@ -72,6 +74,7 @@ namespace SWFProcessing.SWFModeller.ABC
                                 SWFModellerError.Internal,
                                 "A " + kind.ToString() + " requires a namespace set");
                     }
+
                     break;
 
                 default:
@@ -146,7 +149,7 @@ namespace SWFProcessing.SWFModeller.ABC
         {
             get
             {
-                return Set == null || Set.Count == 0;
+                return this.Set == null || this.Set.Count == 0;
             }
         }
 
@@ -208,17 +211,17 @@ namespace SWFProcessing.SWFModeller.ABC
             {
                 /* See http://stackoverflow.com/questions/263400/what-is-the-best-algorithm-for-an-overridden-system-object-gethashcode/263416#263416 */
                 int hash = 17;
-                hash = hash * 23 + (this.Name ?? string.Empty).GetHashCode();
-                hash = hash * 23 + this.Kind.GetHashCode();
+                hash = (hash * 23) + (this.Name ?? string.Empty).GetHashCode();
+                hash = (hash * 23) + this.Kind.GetHashCode();
 
                 if (this.NS != null)
                 {
-                    hash = hash * 23 + this.NS.GetHashCode();
+                    hash = (hash * 23) + this.NS.GetHashCode();
                 }
 
                 if (this.Set != null)
                 {
-                    hash = hash * 23 + this.Set.GetHashCode();
+                    hash = (hash * 23) + this.Set.GetHashCode();
                 }
 
                 return hash;

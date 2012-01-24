@@ -80,17 +80,6 @@ namespace SWFProcessing.SWFModeller.ABC.Code
             typeof(int) /* ByteS8 = 23 ; Bytes are signed, so we store it as an int. Remember to check it. */
         };
 
-        struct OpcodeDef
-        {
-            public ArgType[] Args;
-            public Mnemonics Mnemonic;
-
-            public override string ToString()
-            {
-                return this.Mnemonic.ToString();
-            }
-        }
-
         public enum Mnemonics
         {
             Bkpt = 0x01,
@@ -263,193 +252,204 @@ namespace SWFProcessing.SWFModeller.ABC.Code
             Decode = 0xFF,
         }
 
+        private struct OpcodeDef
+        {
+            public ArgType[] Args;
+            public Mnemonics Mnemonic;
+
+            public override string ToString()
+            {
+                return this.Mnemonic.ToString();
+            }
+        }
+
         private static OpcodeDef?[] OpcodeTable = new OpcodeDef?[]
         {
             /* 0x00 */ null,
-            /* 0x01 */ new OpcodeDef{ Mnemonic = Mnemonics.Bkpt }, /* Not in the specification */
-            /* 0x02 */ new OpcodeDef{ Mnemonic = Mnemonics.Nop },
-            /* 0x03 */ new OpcodeDef{ Mnemonic = Mnemonics.Throw },
-            /* 0x04 */ new OpcodeDef{ Mnemonic = Mnemonics.GetSuper,       Args=new ArgType[] { ArgType.MultinameU30 }},
-            /* 0x05 */ new OpcodeDef{ Mnemonic = Mnemonics.SetSuper,       Args=new ArgType[] { ArgType.MultinameU30 }},
-            /* 0x06 */ new OpcodeDef{ Mnemonic = Mnemonics.Dxns,           Args=new ArgType[] { ArgType.StringU30 }},
-            /* 0x07 */ new OpcodeDef{ Mnemonic = Mnemonics.DxnsLate },
-            /* 0x08 */ new OpcodeDef{ Mnemonic = Mnemonics.Kill,           Args=new ArgType[] { ArgType.RegisterU30 }},
-            /* 0x09 */ new OpcodeDef{ Mnemonic = Mnemonics.Label },
+            /* 0x01 */ new OpcodeDef { Mnemonic = Mnemonics.Bkpt }, /* Not in the specification */
+            /* 0x02 */ new OpcodeDef { Mnemonic = Mnemonics.Nop },
+            /* 0x03 */ new OpcodeDef { Mnemonic = Mnemonics.Throw },
+            /* 0x04 */ new OpcodeDef { Mnemonic = Mnemonics.GetSuper,       Args = new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x05 */ new OpcodeDef { Mnemonic = Mnemonics.SetSuper,       Args = new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x06 */ new OpcodeDef { Mnemonic = Mnemonics.Dxns,           Args = new ArgType[] { ArgType.StringU30 } },
+            /* 0x07 */ new OpcodeDef { Mnemonic = Mnemonics.DxnsLate },
+            /* 0x08 */ new OpcodeDef { Mnemonic = Mnemonics.Kill,           Args = new ArgType[] { ArgType.RegisterU30 } },
+            /* 0x09 */ new OpcodeDef { Mnemonic = Mnemonics.Label },
             /* 0x0A-0x0B */ null, null,
-            /* 0x0C */ new OpcodeDef{ Mnemonic = Mnemonics.IfNlt,          Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x0D */ new OpcodeDef{ Mnemonic = Mnemonics.IfNle,          Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x0E */ new OpcodeDef{ Mnemonic = Mnemonics.IfNgt,          Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x0F */ new OpcodeDef{ Mnemonic = Mnemonics.IfNge,          Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x10 */ new OpcodeDef{ Mnemonic = Mnemonics.Jump,           Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x11 */ new OpcodeDef{ Mnemonic = Mnemonics.IfTrue,         Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x12 */ new OpcodeDef{ Mnemonic = Mnemonics.IfFalse,        Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x13 */ new OpcodeDef{ Mnemonic = Mnemonics.IfEq,           Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x14 */ new OpcodeDef{ Mnemonic = Mnemonics.IfNe,           Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x15 */ new OpcodeDef{ Mnemonic = Mnemonics.IfLt,           Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x16 */ new OpcodeDef{ Mnemonic = Mnemonics.IfLe,           Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x17 */ new OpcodeDef{ Mnemonic = Mnemonics.IfGt,           Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x18 */ new OpcodeDef{ Mnemonic = Mnemonics.IfGe,           Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x19 */ new OpcodeDef{ Mnemonic = Mnemonics.IfStrictEq,     Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x1A */ new OpcodeDef{ Mnemonic = Mnemonics.IfStrictNe,     Args=new ArgType[] { ArgType.OffsetS24 }},
-            /* 0x1B */ new OpcodeDef{ Mnemonic = Mnemonics.LookupSwitch }, /* This has values S24,U30,S24... but are variable, so needs to be treated as a special case */
-            /* 0x1C */ new OpcodeDef{ Mnemonic = Mnemonics.PushWith },
-            /* 0x1D */ new OpcodeDef{ Mnemonic = Mnemonics.PopScope },
-            /* 0x1E */ new OpcodeDef{ Mnemonic = Mnemonics.NextName },
-            /* 0x1F */ new OpcodeDef{ Mnemonic = Mnemonics.HasNext },
-            /* 0x20 */ new OpcodeDef{ Mnemonic = Mnemonics.PushNull },
-            /* 0x21 */ new OpcodeDef{ Mnemonic = Mnemonics.PushUndefined },
+            /* 0x0C */ new OpcodeDef { Mnemonic = Mnemonics.IfNlt,          Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x0D */ new OpcodeDef { Mnemonic = Mnemonics.IfNle,          Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x0E */ new OpcodeDef { Mnemonic = Mnemonics.IfNgt,          Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x0F */ new OpcodeDef { Mnemonic = Mnemonics.IfNge,          Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x10 */ new OpcodeDef { Mnemonic = Mnemonics.Jump,           Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x11 */ new OpcodeDef { Mnemonic = Mnemonics.IfTrue,         Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x12 */ new OpcodeDef { Mnemonic = Mnemonics.IfFalse,        Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x13 */ new OpcodeDef { Mnemonic = Mnemonics.IfEq,           Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x14 */ new OpcodeDef { Mnemonic = Mnemonics.IfNe,           Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x15 */ new OpcodeDef { Mnemonic = Mnemonics.IfLt,           Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x16 */ new OpcodeDef { Mnemonic = Mnemonics.IfLe,           Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x17 */ new OpcodeDef { Mnemonic = Mnemonics.IfGt,           Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x18 */ new OpcodeDef { Mnemonic = Mnemonics.IfGe,           Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x19 */ new OpcodeDef { Mnemonic = Mnemonics.IfStrictEq,     Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x1A */ new OpcodeDef { Mnemonic = Mnemonics.IfStrictNe,     Args = new ArgType[] { ArgType.OffsetS24 } },
+            /* 0x1B */ new OpcodeDef { Mnemonic = Mnemonics.LookupSwitch }, /* This has values S24,U30,S24... but are variable, so needs to be treated as a special case */
+            /* 0x1C */ new OpcodeDef { Mnemonic = Mnemonics.PushWith },
+            /* 0x1D */ new OpcodeDef { Mnemonic = Mnemonics.PopScope },
+            /* 0x1E */ new OpcodeDef { Mnemonic = Mnemonics.NextName },
+            /* 0x1F */ new OpcodeDef { Mnemonic = Mnemonics.HasNext },
+            /* 0x20 */ new OpcodeDef { Mnemonic = Mnemonics.PushNull },
+            /* 0x21 */ new OpcodeDef { Mnemonic = Mnemonics.PushUndefined },
             /* 0x22 */ null,
-            /* 0x23 */ new OpcodeDef{ Mnemonic = Mnemonics.NextValue },
-            /* 0x24 */ new OpcodeDef{ Mnemonic = Mnemonics.PushByte,       Args=new ArgType[] { ArgType.ByteS8 }},
-            /* 0x25 */ new OpcodeDef{ Mnemonic = Mnemonics.PushShort,      Args=new ArgType[] { ArgType.ShortS30 }},
-            /* 0x26 */ new OpcodeDef{ Mnemonic = Mnemonics.PushTrue },
-            /* 0x27 */ new OpcodeDef{ Mnemonic = Mnemonics.PushFalse },
-            /* 0x28 */ new OpcodeDef{ Mnemonic = Mnemonics.PushNaN },
-            /* 0x29 */ new OpcodeDef{ Mnemonic = Mnemonics.Pop },
-            /* 0x2A */ new OpcodeDef{ Mnemonic = Mnemonics.Dup },
-            /* 0x2B */ new OpcodeDef{ Mnemonic = Mnemonics.Swap },
-            /* 0x2C */ new OpcodeDef{ Mnemonic = Mnemonics.PushString,     Args=new ArgType[] { ArgType.StringU30 } },
-            /* 0x2D */ new OpcodeDef{ Mnemonic = Mnemonics.PushInt,        Args=new ArgType[] { ArgType.IntU30 } },
-            /* 0x2E */ new OpcodeDef{ Mnemonic = Mnemonics.PushUInt,       Args=new ArgType[] { ArgType.UintU30 } },
-            /* 0x2F */ new OpcodeDef{ Mnemonic = Mnemonics.PushDouble,     Args=new ArgType[] { ArgType.DoubleU30 } },
-            /* 0x30 */ new OpcodeDef{ Mnemonic = Mnemonics.PushScope },
-            /* 0x31 */ new OpcodeDef{ Mnemonic = Mnemonics.PushNamespace },
-            /* 0x32 */ new OpcodeDef{ Mnemonic = Mnemonics.HasNext2 },
+            /* 0x23 */ new OpcodeDef { Mnemonic = Mnemonics.NextValue },
+            /* 0x24 */ new OpcodeDef { Mnemonic = Mnemonics.PushByte,       Args = new ArgType[] { ArgType.ByteS8 } },
+            /* 0x25 */ new OpcodeDef { Mnemonic = Mnemonics.PushShort,      Args = new ArgType[] { ArgType.ShortS30 } },
+            /* 0x26 */ new OpcodeDef { Mnemonic = Mnemonics.PushTrue },
+            /* 0x27 */ new OpcodeDef { Mnemonic = Mnemonics.PushFalse },
+            /* 0x28 */ new OpcodeDef { Mnemonic = Mnemonics.PushNaN },
+            /* 0x29 */ new OpcodeDef { Mnemonic = Mnemonics.Pop },
+            /* 0x2A */ new OpcodeDef { Mnemonic = Mnemonics.Dup },
+            /* 0x2B */ new OpcodeDef { Mnemonic = Mnemonics.Swap },
+            /* 0x2C */ new OpcodeDef { Mnemonic = Mnemonics.PushString,     Args = new ArgType[] { ArgType.StringU30 } },
+            /* 0x2D */ new OpcodeDef { Mnemonic = Mnemonics.PushInt,        Args = new ArgType[] { ArgType.IntU30 } },
+            /* 0x2E */ new OpcodeDef { Mnemonic = Mnemonics.PushUInt,       Args = new ArgType[] { ArgType.UintU30 } },
+            /* 0x2F */ new OpcodeDef { Mnemonic = Mnemonics.PushDouble,     Args = new ArgType[] { ArgType.DoubleU30 } },
+            /* 0x30 */ new OpcodeDef { Mnemonic = Mnemonics.PushScope },
+            /* 0x31 */ new OpcodeDef { Mnemonic = Mnemonics.PushNamespace },
+            /* 0x32 */ new OpcodeDef { Mnemonic = Mnemonics.HasNext2 },
             /* 0x33-0x3F */ null, null, null, null, null, null, null, null, null, null, null, null, null,
-            /* 0x40 */ new OpcodeDef{ Mnemonic = Mnemonics.NewFunction,    Args=new ArgType[] { ArgType.MethodU30 } },
-            /* 0x41 */ new OpcodeDef{ Mnemonic = Mnemonics.Call,           Args=new ArgType[] { ArgType.CountU30 } },
-            /* 0x42 */ new OpcodeDef{ Mnemonic = Mnemonics.Construct,      Args=new ArgType[] { ArgType.CountU30 } },
-            /* 0x43 */ new OpcodeDef{ Mnemonic = Mnemonics.CallMethod,     Args=new ArgType[] { ArgType.MethodU30, ArgType.CountU30 } },
-            /* 0x44 */ new OpcodeDef{ Mnemonic = Mnemonics.CallStatic,     Args=new ArgType[] { ArgType.MethodU30, ArgType.CountU30 } },
-            /* 0x45 */ new OpcodeDef{ Mnemonic = Mnemonics.CallSuper,      Args=new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
-            /* 0x46 */ new OpcodeDef{ Mnemonic = Mnemonics.CallProperty,   Args=new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
-            /* 0x47 */ new OpcodeDef{ Mnemonic = Mnemonics.ReturnVoid },
-            /* 0x48 */ new OpcodeDef{ Mnemonic = Mnemonics.ReturnValue },
-            /* 0x49 */ new OpcodeDef{ Mnemonic = Mnemonics.ConstructSuper, Args=new ArgType[] { ArgType.CountU30 } },
-            /* 0x4A */ new OpcodeDef{ Mnemonic = Mnemonics.ConstructProp,  Args=new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
-            /* 0x4B */ new OpcodeDef{ Mnemonic = Mnemonics.CallSuperID },   /* Not in the specification */
-            /* 0x4C */ new OpcodeDef{ Mnemonic = Mnemonics.CallPropLex,    Args=new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
-            /* 0x4D */ new OpcodeDef{ Mnemonic = Mnemonics.CallInterface }, /* Not in the specification */
-            /* 0x4E */ new OpcodeDef{ Mnemonic = Mnemonics.CallSuperVoid,  Args=new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
-            /* 0x4F */ new OpcodeDef{ Mnemonic = Mnemonics.CallPropVoid,   Args=new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
+            /* 0x40 */ new OpcodeDef { Mnemonic = Mnemonics.NewFunction,    Args = new ArgType[] { ArgType.MethodU30 } },
+            /* 0x41 */ new OpcodeDef { Mnemonic = Mnemonics.Call,           Args = new ArgType[] { ArgType.CountU30 } },
+            /* 0x42 */ new OpcodeDef { Mnemonic = Mnemonics.Construct,      Args = new ArgType[] { ArgType.CountU30 } },
+            /* 0x43 */ new OpcodeDef { Mnemonic = Mnemonics.CallMethod,     Args = new ArgType[] { ArgType.MethodU30, ArgType.CountU30 } },
+            /* 0x44 */ new OpcodeDef { Mnemonic = Mnemonics.CallStatic,     Args = new ArgType[] { ArgType.MethodU30, ArgType.CountU30 } },
+            /* 0x45 */ new OpcodeDef { Mnemonic = Mnemonics.CallSuper,      Args = new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
+            /* 0x46 */ new OpcodeDef { Mnemonic = Mnemonics.CallProperty,   Args = new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
+            /* 0x47 */ new OpcodeDef { Mnemonic = Mnemonics.ReturnVoid },
+            /* 0x48 */ new OpcodeDef { Mnemonic = Mnemonics.ReturnValue },
+            /* 0x49 */ new OpcodeDef { Mnemonic = Mnemonics.ConstructSuper, Args = new ArgType[] { ArgType.CountU30 } },
+            /* 0x4A */ new OpcodeDef { Mnemonic = Mnemonics.ConstructProp,  Args = new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
+            /* 0x4B */ new OpcodeDef { Mnemonic = Mnemonics.CallSuperID },   /* Not in the specification */
+            /* 0x4C */ new OpcodeDef { Mnemonic = Mnemonics.CallPropLex,    Args = new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
+            /* 0x4D */ new OpcodeDef { Mnemonic = Mnemonics.CallInterface }, /* Not in the specification */
+            /* 0x4E */ new OpcodeDef { Mnemonic = Mnemonics.CallSuperVoid,  Args = new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
+            /* 0x4F */ new OpcodeDef { Mnemonic = Mnemonics.CallPropVoid,   Args = new ArgType[] { ArgType.MultinameU30, ArgType.CountU30 } },
             /* 0x50-0x54 */null, null, null, null, null,
-            /* 0x55 */ new OpcodeDef{ Mnemonic = Mnemonics.NewObject,      Args=new ArgType[] { ArgType.CountU30 } },
-            /* 0x56 */ new OpcodeDef{ Mnemonic = Mnemonics.NewArray,       Args=new ArgType[] { ArgType.CountU30 } },
-            /* 0x57 */ new OpcodeDef{ Mnemonic = Mnemonics.NewActivation },
-            /* 0x58 */ new OpcodeDef{ Mnemonic = Mnemonics.NewClass,       Args=new ArgType[] { ArgType.ClassU30 } },
-            /* 0x59 */ new OpcodeDef{ Mnemonic = Mnemonics.GetDescendants, Args=new ArgType[] { ArgType.MultinameU30 } },
-            /* 0x5A */ new OpcodeDef{ Mnemonic = Mnemonics.NewCatch,       Args=new ArgType[] { ArgType.ExceptionU30 } },
+            /* 0x55 */ new OpcodeDef { Mnemonic = Mnemonics.NewObject,      Args = new ArgType[] { ArgType.CountU30 } },
+            /* 0x56 */ new OpcodeDef { Mnemonic = Mnemonics.NewArray,       Args = new ArgType[] { ArgType.CountU30 } },
+            /* 0x57 */ new OpcodeDef { Mnemonic = Mnemonics.NewActivation },
+            /* 0x58 */ new OpcodeDef { Mnemonic = Mnemonics.NewClass,       Args = new ArgType[] { ArgType.ClassU30 } },
+            /* 0x59 */ new OpcodeDef { Mnemonic = Mnemonics.GetDescendants, Args = new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x5A */ new OpcodeDef { Mnemonic = Mnemonics.NewCatch,       Args = new ArgType[] { ArgType.ExceptionU30 } },
             /* 0x5B-0x5C */ null, null,
-            /* 0x5D */ new OpcodeDef{ Mnemonic = Mnemonics.FindPropStrict, Args=new ArgType[] { ArgType.MultinameU30 } },
-            /* 0x5E */ new OpcodeDef{ Mnemonic = Mnemonics.FindProperty,   Args=new ArgType[] { ArgType.MultinameU30 } },
-            /* 0x5F */ new OpcodeDef{ Mnemonic = Mnemonics.FindDef }, /* Not in the specification */
-            /* 0x60 */ new OpcodeDef{ Mnemonic = Mnemonics.GetLex,   Args=new ArgType[] { ArgType.MultinameU30 } },
-            /* 0x61 */ new OpcodeDef{ Mnemonic = Mnemonics.SetProperty,   Args=new ArgType[] { ArgType.MultinameU30 } },
-            /* 0x62 */ new OpcodeDef{ Mnemonic = Mnemonics.GetLocal,   Args=new ArgType[] { ArgType.RegisterU30 } },
-            /* 0x63 */ new OpcodeDef{ Mnemonic = Mnemonics.SetLocal,   Args=new ArgType[] { ArgType.RegisterU30 } },
-            /* 0x64 */ new OpcodeDef{ Mnemonic = Mnemonics.GetGlobalScope },
-            /* 0x65 */ new OpcodeDef{ Mnemonic = Mnemonics.GetScopeObject,   Args=new ArgType[] { ArgType.StackU8 } },
-            /* 0x66 */ new OpcodeDef{ Mnemonic = Mnemonics.GetProperty,   Args=new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x5D */ new OpcodeDef { Mnemonic = Mnemonics.FindPropStrict, Args = new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x5E */ new OpcodeDef { Mnemonic = Mnemonics.FindProperty,   Args = new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x5F */ new OpcodeDef { Mnemonic = Mnemonics.FindDef }, /* Not in the specification */
+            /* 0x60 */ new OpcodeDef { Mnemonic = Mnemonics.GetLex,   Args = new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x61 */ new OpcodeDef { Mnemonic = Mnemonics.SetProperty,   Args = new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x62 */ new OpcodeDef { Mnemonic = Mnemonics.GetLocal,   Args = new ArgType[] { ArgType.RegisterU30 } },
+            /* 0x63 */ new OpcodeDef { Mnemonic = Mnemonics.SetLocal,   Args = new ArgType[] { ArgType.RegisterU30 } },
+            /* 0x64 */ new OpcodeDef { Mnemonic = Mnemonics.GetGlobalScope },
+            /* 0x65 */ new OpcodeDef { Mnemonic = Mnemonics.GetScopeObject,   Args = new ArgType[] { ArgType.StackU8 } },
+            /* 0x66 */ new OpcodeDef { Mnemonic = Mnemonics.GetProperty,   Args = new ArgType[] { ArgType.MultinameU30 } },
             /* 0x67 */ null,
-            /* 0x68 */ new OpcodeDef{ Mnemonic = Mnemonics.InitProperty,   Args=new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x68 */ new OpcodeDef { Mnemonic = Mnemonics.InitProperty,   Args = new ArgType[] { ArgType.MultinameU30 } },
             /* 0x69 */ null,
-            /* 0x6A */ new OpcodeDef{ Mnemonic = Mnemonics.DeleteProperty,   Args=new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x6A */ new OpcodeDef { Mnemonic = Mnemonics.DeleteProperty,   Args = new ArgType[] { ArgType.MultinameU30 } },
             /* 0x6B */ null,
-            /* 0x6C */ new OpcodeDef{ Mnemonic = Mnemonics.GetSlot,   Args=new ArgType[] { ArgType.SlotU30 } },
-            /* 0x6D */ new OpcodeDef{ Mnemonic = Mnemonics.SetSlot,   Args=new ArgType[] { ArgType.SlotU30 } },
-            /* 0x6E */ new OpcodeDef{ Mnemonic = Mnemonics.GetGlobalSlot,   Args=new ArgType[] { ArgType.SlotU30 } },
-            /* 0x6F */ new OpcodeDef{ Mnemonic = Mnemonics.SetGlobalSlot,   Args=new ArgType[] { ArgType.SlotU30 } },
-            /* 0x70 */ new OpcodeDef{ Mnemonic = Mnemonics.ConvertS },
-            /* 0x71 */ new OpcodeDef{ Mnemonic = Mnemonics.EscXElem },
-            /* 0x72 */ new OpcodeDef{ Mnemonic = Mnemonics.EscXAttr },
-            /* 0x73 */ new OpcodeDef{ Mnemonic = Mnemonics.ConvertI },
-            /* 0x74 */ new OpcodeDef{ Mnemonic = Mnemonics.ConvertU },
-            /* 0x75 */ new OpcodeDef{ Mnemonic = Mnemonics.ConvertD },
-            /* 0x76 */ new OpcodeDef{ Mnemonic = Mnemonics.ConvertB },
-            /* 0x77 */ new OpcodeDef{ Mnemonic = Mnemonics.ConvertO },
-            /* 0x78 */ new OpcodeDef{ Mnemonic = Mnemonics.CheckFilter },
+            /* 0x6C */ new OpcodeDef { Mnemonic = Mnemonics.GetSlot,   Args = new ArgType[] { ArgType.SlotU30 } },
+            /* 0x6D */ new OpcodeDef { Mnemonic = Mnemonics.SetSlot,   Args = new ArgType[] { ArgType.SlotU30 } },
+            /* 0x6E */ new OpcodeDef { Mnemonic = Mnemonics.GetGlobalSlot,   Args = new ArgType[] { ArgType.SlotU30 } },
+            /* 0x6F */ new OpcodeDef { Mnemonic = Mnemonics.SetGlobalSlot,   Args = new ArgType[] { ArgType.SlotU30 } },
+            /* 0x70 */ new OpcodeDef { Mnemonic = Mnemonics.ConvertS },
+            /* 0x71 */ new OpcodeDef { Mnemonic = Mnemonics.EscXElem },
+            /* 0x72 */ new OpcodeDef { Mnemonic = Mnemonics.EscXAttr },
+            /* 0x73 */ new OpcodeDef { Mnemonic = Mnemonics.ConvertI },
+            /* 0x74 */ new OpcodeDef { Mnemonic = Mnemonics.ConvertU },
+            /* 0x75 */ new OpcodeDef { Mnemonic = Mnemonics.ConvertD },
+            /* 0x76 */ new OpcodeDef { Mnemonic = Mnemonics.ConvertB },
+            /* 0x77 */ new OpcodeDef { Mnemonic = Mnemonics.ConvertO },
+            /* 0x78 */ new OpcodeDef { Mnemonic = Mnemonics.CheckFilter },
             /* 0x79-0x7F */ null, null, null, null, null, null, null,
-            /* 0x80 */ new OpcodeDef{ Mnemonic = Mnemonics.Coerce,   Args=new ArgType[] { ArgType.MultinameU30 } },
-            /* 0x81 */ new OpcodeDef{ Mnemonic = Mnemonics.CoerceB }, /* Not in the specification */
-            /* 0x82 */ new OpcodeDef{ Mnemonic = Mnemonics.CoerceA },
-            /* 0x83 */ new OpcodeDef{ Mnemonic = Mnemonics.CoerceI }, /* Not in the specification */
-            /* 0x84 */ new OpcodeDef{ Mnemonic = Mnemonics.CoerceD }, /* Not in the specification */
-            /* 0x85 */ new OpcodeDef{ Mnemonic = Mnemonics.CoerceS },
-            /* 0x86 */ new OpcodeDef{ Mnemonic = Mnemonics.AsType,   Args=new ArgType[] { ArgType.MultinameU30 } },
-            /* 0x87 */ new OpcodeDef{ Mnemonic = Mnemonics.AsTypeLate },
-            /* 0x88 */ new OpcodeDef{ Mnemonic = Mnemonics.CoerceU }, /* Not in the specification */
-            /* 0x89 */ new OpcodeDef{ Mnemonic = Mnemonics.CoerceO }, /* Not in the specification */
+            /* 0x80 */ new OpcodeDef { Mnemonic = Mnemonics.Coerce,   Args = new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x81 */ new OpcodeDef { Mnemonic = Mnemonics.CoerceB }, /* Not in the specification */
+            /* 0x82 */ new OpcodeDef { Mnemonic = Mnemonics.CoerceA },
+            /* 0x83 */ new OpcodeDef { Mnemonic = Mnemonics.CoerceI }, /* Not in the specification */
+            /* 0x84 */ new OpcodeDef { Mnemonic = Mnemonics.CoerceD }, /* Not in the specification */
+            /* 0x85 */ new OpcodeDef { Mnemonic = Mnemonics.CoerceS },
+            /* 0x86 */ new OpcodeDef { Mnemonic = Mnemonics.AsType,   Args = new ArgType[] { ArgType.MultinameU30 } },
+            /* 0x87 */ new OpcodeDef { Mnemonic = Mnemonics.AsTypeLate },
+            /* 0x88 */ new OpcodeDef { Mnemonic = Mnemonics.CoerceU }, /* Not in the specification */
+            /* 0x89 */ new OpcodeDef { Mnemonic = Mnemonics.CoerceO }, /* Not in the specification */
             /* 0x8A-0x8F */ null, null, null, null, null, null,
-            /* 0x90 */ new OpcodeDef{ Mnemonic = Mnemonics.Negate },
-            /* 0x91 */ new OpcodeDef{ Mnemonic = Mnemonics.Increment },
-            /* 0x92 */ new OpcodeDef{ Mnemonic = Mnemonics.IncLocal,   Args=new ArgType[] { ArgType.RegisterU30 } },
-            /* 0x93 */ new OpcodeDef{ Mnemonic = Mnemonics.Decrement },
-            /* 0x94 */ new OpcodeDef{ Mnemonic = Mnemonics.DecLocal,   Args=new ArgType[] { ArgType.RegisterU30 } },
-            /* 0x95 */ new OpcodeDef{ Mnemonic = Mnemonics.TypeOf },
-            /* 0x96 */ new OpcodeDef{ Mnemonic = Mnemonics.Not },
-            /* 0x97 */ new OpcodeDef{ Mnemonic = Mnemonics.BitNot },
+            /* 0x90 */ new OpcodeDef { Mnemonic = Mnemonics.Negate },
+            /* 0x91 */ new OpcodeDef { Mnemonic = Mnemonics.Increment },
+            /* 0x92 */ new OpcodeDef { Mnemonic = Mnemonics.IncLocal,   Args = new ArgType[] { ArgType.RegisterU30 } },
+            /* 0x93 */ new OpcodeDef { Mnemonic = Mnemonics.Decrement },
+            /* 0x94 */ new OpcodeDef { Mnemonic = Mnemonics.DecLocal,   Args = new ArgType[] { ArgType.RegisterU30 } },
+            /* 0x95 */ new OpcodeDef { Mnemonic = Mnemonics.TypeOf },
+            /* 0x96 */ new OpcodeDef { Mnemonic = Mnemonics.Not },
+            /* 0x97 */ new OpcodeDef { Mnemonic = Mnemonics.BitNot },
             /* 0x98-0x99 */ null, null,
-            /* 0x9A */ new OpcodeDef{ Mnemonic = Mnemonics.Concat }, /* Not in the specification */
-            /* 0x9B */ new OpcodeDef{ Mnemonic = Mnemonics.AddD }, /* Not in the specification */
+            /* 0x9A */ new OpcodeDef { Mnemonic = Mnemonics.Concat }, /* Not in the specification */
+            /* 0x9B */ new OpcodeDef { Mnemonic = Mnemonics.AddD }, /* Not in the specification */
             /* 0x9C-0x9F */ null, null, null, null,
-            /* 0xA0 */ new OpcodeDef{ Mnemonic = Mnemonics.Add },
-            /* 0xA1 */ new OpcodeDef{ Mnemonic = Mnemonics.Subtract },
-            /* 0xA2 */ new OpcodeDef{ Mnemonic = Mnemonics.Multiply },
-            /* 0xA3 */ new OpcodeDef{ Mnemonic = Mnemonics.Divide },
-            /* 0xA4 */ new OpcodeDef{ Mnemonic = Mnemonics.Modulo },
-            /* 0xA5 */ new OpcodeDef{ Mnemonic = Mnemonics.LShift },
-            /* 0xA6 */ new OpcodeDef{ Mnemonic = Mnemonics.RShift },
-            /* 0xA7 */ new OpcodeDef{ Mnemonic = Mnemonics.URShift },
-            /* 0xA8 */ new OpcodeDef{ Mnemonic = Mnemonics.BitAnd },
-            /* 0xA9 */ new OpcodeDef{ Mnemonic = Mnemonics.BitOr },
-            /* 0xAA */ new OpcodeDef{ Mnemonic = Mnemonics.BitXor },
-            /* 0xAB */ new OpcodeDef{ Mnemonic = Mnemonics.Equals },
-            /* 0xAC */ new OpcodeDef{ Mnemonic = Mnemonics.StrictEquals },
-            /* 0xAD */ new OpcodeDef{ Mnemonic = Mnemonics.LessThan },
-            /* 0xAE */ new OpcodeDef{ Mnemonic = Mnemonics.LessEquals },
-            /* 0xAF */ new OpcodeDef{ Mnemonic = Mnemonics.GreaterThan },
-            /* 0xB0 */ new OpcodeDef{ Mnemonic = Mnemonics.GreaterEquals },
-            /* 0xB1 */ new OpcodeDef{ Mnemonic = Mnemonics.InstanceOf },
-            /* 0xB2 */ new OpcodeDef{ Mnemonic = Mnemonics.IsType,   Args=new ArgType[] { ArgType.MultinameU30 } },
-            /* 0xB3 */ new OpcodeDef{ Mnemonic = Mnemonics.IsTypeLate },
-            /* 0xB4 */ new OpcodeDef{ Mnemonic = Mnemonics.In },
+            /* 0xA0 */ new OpcodeDef { Mnemonic = Mnemonics.Add },
+            /* 0xA1 */ new OpcodeDef { Mnemonic = Mnemonics.Subtract },
+            /* 0xA2 */ new OpcodeDef { Mnemonic = Mnemonics.Multiply },
+            /* 0xA3 */ new OpcodeDef { Mnemonic = Mnemonics.Divide },
+            /* 0xA4 */ new OpcodeDef { Mnemonic = Mnemonics.Modulo },
+            /* 0xA5 */ new OpcodeDef { Mnemonic = Mnemonics.LShift },
+            /* 0xA6 */ new OpcodeDef { Mnemonic = Mnemonics.RShift },
+            /* 0xA7 */ new OpcodeDef { Mnemonic = Mnemonics.URShift },
+            /* 0xA8 */ new OpcodeDef { Mnemonic = Mnemonics.BitAnd },
+            /* 0xA9 */ new OpcodeDef { Mnemonic = Mnemonics.BitOr },
+            /* 0xAA */ new OpcodeDef { Mnemonic = Mnemonics.BitXor },
+            /* 0xAB */ new OpcodeDef { Mnemonic = Mnemonics.Equals },
+            /* 0xAC */ new OpcodeDef { Mnemonic = Mnemonics.StrictEquals },
+            /* 0xAD */ new OpcodeDef { Mnemonic = Mnemonics.LessThan },
+            /* 0xAE */ new OpcodeDef { Mnemonic = Mnemonics.LessEquals },
+            /* 0xAF */ new OpcodeDef { Mnemonic = Mnemonics.GreaterThan },
+            /* 0xB0 */ new OpcodeDef { Mnemonic = Mnemonics.GreaterEquals },
+            /* 0xB1 */ new OpcodeDef { Mnemonic = Mnemonics.InstanceOf },
+            /* 0xB2 */ new OpcodeDef { Mnemonic = Mnemonics.IsType,   Args = new ArgType[] { ArgType.MultinameU30 } },
+            /* 0xB3 */ new OpcodeDef { Mnemonic = Mnemonics.IsTypeLate },
+            /* 0xB4 */ new OpcodeDef { Mnemonic = Mnemonics.In },
             /* 0xB5-0xBF */ null, null, null, null, null, null, null, null, null, null, null,
-            /* 0xC0 */ new OpcodeDef{ Mnemonic = Mnemonics.IncrementI },
-            /* 0xC1 */ new OpcodeDef{ Mnemonic = Mnemonics.DecrementI },
-            /* 0xC2 */ new OpcodeDef{ Mnemonic = Mnemonics.IncLocalI,   Args=new ArgType[] { ArgType.RegisterU30 } },
-            /* 0xC3 */ new OpcodeDef{ Mnemonic = Mnemonics.DecLocalI,   Args=new ArgType[] { ArgType.RegisterU30 } },
-            /* 0xC4 */ new OpcodeDef{ Mnemonic = Mnemonics.NegateI },
-            /* 0xC5 */ new OpcodeDef{ Mnemonic = Mnemonics.AddI },
-            /* 0xC6 */ new OpcodeDef{ Mnemonic = Mnemonics.SubtractI },
-            /* 0xC7 */ new OpcodeDef{ Mnemonic = Mnemonics.MultiplyI },
+            /* 0xC0 */ new OpcodeDef { Mnemonic = Mnemonics.IncrementI },
+            /* 0xC1 */ new OpcodeDef { Mnemonic = Mnemonics.DecrementI },
+            /* 0xC2 */ new OpcodeDef { Mnemonic = Mnemonics.IncLocalI,   Args = new ArgType[] { ArgType.RegisterU30 } },
+            /* 0xC3 */ new OpcodeDef { Mnemonic = Mnemonics.DecLocalI,   Args = new ArgType[] { ArgType.RegisterU30 } },
+            /* 0xC4 */ new OpcodeDef { Mnemonic = Mnemonics.NegateI },
+            /* 0xC5 */ new OpcodeDef { Mnemonic = Mnemonics.AddI },
+            /* 0xC6 */ new OpcodeDef { Mnemonic = Mnemonics.SubtractI },
+            /* 0xC7 */ new OpcodeDef { Mnemonic = Mnemonics.MultiplyI },
             /* 0xC8-0xCF */ null, null, null, null, null, null, null, null,
-            /* 0xD0 */ new OpcodeDef{ Mnemonic = Mnemonics.GetLocal0 },
-            /* 0xD1 */ new OpcodeDef{ Mnemonic = Mnemonics.GetLocal1 },
-            /* 0xD2 */ new OpcodeDef{ Mnemonic = Mnemonics.GetLocal2 },
-            /* 0xD3 */ new OpcodeDef{ Mnemonic = Mnemonics.GetLocal3 },
-            /* 0xD4 */ new OpcodeDef{ Mnemonic = Mnemonics.SetLocal0 },
-            /* 0xD5 */ new OpcodeDef{ Mnemonic = Mnemonics.SetLocal1 },
-            /* 0xD6 */ new OpcodeDef{ Mnemonic = Mnemonics.SetLocal2 },
-            /* 0xD7 */ new OpcodeDef{ Mnemonic = Mnemonics.SetLocal3 },
+            /* 0xD0 */ new OpcodeDef { Mnemonic = Mnemonics.GetLocal0 },
+            /* 0xD1 */ new OpcodeDef { Mnemonic = Mnemonics.GetLocal1 },
+            /* 0xD2 */ new OpcodeDef { Mnemonic = Mnemonics.GetLocal2 },
+            /* 0xD3 */ new OpcodeDef { Mnemonic = Mnemonics.GetLocal3 },
+            /* 0xD4 */ new OpcodeDef { Mnemonic = Mnemonics.SetLocal0 },
+            /* 0xD5 */ new OpcodeDef { Mnemonic = Mnemonics.SetLocal1 },
+            /* 0xD6 */ new OpcodeDef { Mnemonic = Mnemonics.SetLocal2 },
+            /* 0xD7 */ new OpcodeDef { Mnemonic = Mnemonics.SetLocal3 },
             /* 0xD8-0xED */ null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null, null,
-            /* 0xEE */ new OpcodeDef{ Mnemonic = Mnemonics.AbsJump }, /* Not in the specification */
-            /* 0xEF */ new OpcodeDef{ Mnemonic = Mnemonics.Debug,   Args=new ArgType[] { ArgType.DebugU8, ArgType.DebugTypeU30, ArgType.StringU8, ArgType.RegisterU30 } },
-            /* 0xF0 */ new OpcodeDef{ Mnemonic = Mnemonics.DebugLine,   Args=new ArgType[] { ArgType.LineNumberU30 } },
-            /* 0xF1 */ new OpcodeDef{ Mnemonic = Mnemonics.DebugFile,   Args=new ArgType[] { ArgType.StringU30 } },
-            /* 0xF2 */ new OpcodeDef{ Mnemonic = Mnemonics.BkptLine }, /* Not in the specification */
-            /* 0xF3 */ new OpcodeDef{ Mnemonic = Mnemonics.Timestamp }, /* Not in the specification */
+            /* 0xEE */ new OpcodeDef { Mnemonic = Mnemonics.AbsJump }, /* Not in the specification */
+            /* 0xEF */ new OpcodeDef { Mnemonic = Mnemonics.Debug,   Args = new ArgType[] { ArgType.DebugU8, ArgType.DebugTypeU30, ArgType.StringU8, ArgType.RegisterU30 } },
+            /* 0xF0 */ new OpcodeDef { Mnemonic = Mnemonics.DebugLine,   Args = new ArgType[] { ArgType.LineNumberU30 } },
+            /* 0xF1 */ new OpcodeDef { Mnemonic = Mnemonics.DebugFile,   Args = new ArgType[] { ArgType.StringU30 } },
+            /* 0xF2 */ new OpcodeDef { Mnemonic = Mnemonics.BkptLine }, /* Not in the specification */
+            /* 0xF3 */ new OpcodeDef { Mnemonic = Mnemonics.Timestamp }, /* Not in the specification */
             /* 0xF4 */ null,
-            /* 0xF5 */ new OpcodeDef{ Mnemonic = Mnemonics.VerifyPass }, /* Not in the specification */
-            /* 0xF6 */ new OpcodeDef{ Mnemonic = Mnemonics.Alloc }, /* Not in the specification */
-            /* 0xF7 */ new OpcodeDef{ Mnemonic = Mnemonics.Mark }, /* Not in the specification */
-            /* 0xF8 */ new OpcodeDef{ Mnemonic = Mnemonics.Wb }, /* Not in the specification */
-            /* 0xF9 */ new OpcodeDef{ Mnemonic = Mnemonics.Prologue }, /* Not in the specification */
-            /* 0xFA */ new OpcodeDef{ Mnemonic = Mnemonics.SendEnter }, /* Not in the specification */
-            /* 0xFB */ new OpcodeDef{ Mnemonic = Mnemonics.DoubleToAtom }, /* Not in the specification */
-            /* 0xFC */ new OpcodeDef{ Mnemonic = Mnemonics.Sweep }, /* Not in the specification */
-            /* 0xFD */ new OpcodeDef{ Mnemonic = Mnemonics.CodeGenOp }, /* Not in the specification */
-            /* 0xFE */ new OpcodeDef{ Mnemonic = Mnemonics.VerifyOp }, /* Not in the specification */
-            /* 0xFF */ new OpcodeDef{ Mnemonic = Mnemonics.Decode }, /* Not in the specification */
+            /* 0xF5 */ new OpcodeDef { Mnemonic = Mnemonics.VerifyPass }, /* Not in the specification */
+            /* 0xF6 */ new OpcodeDef { Mnemonic = Mnemonics.Alloc }, /* Not in the specification */
+            /* 0xF7 */ new OpcodeDef { Mnemonic = Mnemonics.Mark }, /* Not in the specification */
+            /* 0xF8 */ new OpcodeDef { Mnemonic = Mnemonics.Wb }, /* Not in the specification */
+            /* 0xF9 */ new OpcodeDef { Mnemonic = Mnemonics.Prologue }, /* Not in the specification */
+            /* 0xFA */ new OpcodeDef { Mnemonic = Mnemonics.SendEnter }, /* Not in the specification */
+            /* 0xFB */ new OpcodeDef { Mnemonic = Mnemonics.DoubleToAtom }, /* Not in the specification */
+            /* 0xFC */ new OpcodeDef { Mnemonic = Mnemonics.Sweep }, /* Not in the specification */
+            /* 0xFD */ new OpcodeDef { Mnemonic = Mnemonics.CodeGenOp }, /* Not in the specification */
+            /* 0xFE */ new OpcodeDef { Mnemonic = Mnemonics.VerifyOp }, /* Not in the specification */
+            /* 0xFF */ new OpcodeDef { Mnemonic = Mnemonics.Decode }, /* Not in the specification */
         };
 
         private AbcCode abc;
@@ -492,11 +492,13 @@ namespace SWFProcessing.SWFModeller.ABC.Code
         /// Set this so that it shows up in ToString on debug output, so show up
         /// jump targets properly.
         /// </summary>
-        public int numberLabel = -1;
+        public int NumberLabel = -1;
 #endif
 
         public uint Instruction { get; private set; }
+
         public object[] Args { get; set; }
+
         public ArgType[] ArgTypes
         {
             get
@@ -624,7 +626,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
                 uint caseCount = reader.ReadU30();
                 args.Add(caseCount);
 
-                for (int i=0; i < caseCount + 1; i++)
+                for (int i = 0; i < caseCount + 1; i++)
                 {
                     args.Add(reader.ReadSI24());
                 }
@@ -775,9 +777,9 @@ namespace SWFProcessing.SWFModeller.ABC.Code
 
             string defString = def.ToString();
 
-            if (numberLabel != -1)
+            if (this.NumberLabel != -1)
             {
-                defString = "#" + numberLabel + " " + defString;
+                defString = "#" + this.NumberLabel + " " + defString;
             }
 
             return defString + "(" + string.Join(", ", args) + ")";
@@ -814,27 +816,32 @@ namespace SWFProcessing.SWFModeller.ABC.Code
         /// <returns>The new arg</returns>
         public delegate object OffsetProcMethod(object arg);
 
+        /// <summary>
+        /// Process opcode references into offset values.
+        /// </summary>
+        /// <param name="opm">A delegate that does the
+        /// processing.</param>
         public void OffsetProc(OffsetProcMethod opm)
         {
-            if (Mnemonic == Opcode.Mnemonics.LookupSwitch)
+            if (this.Mnemonic == Opcode.Mnemonics.LookupSwitch)
             {
-                for (int i = 0; i < Args.Length; i++)
+                for (int i = 0; i < this.Args.Length; i++)
                 {
                     if (i != 1)
                     {
-                        Args[i] = opm(Args[i]);
+                        this.Args[i] = opm(this.Args[i]);
                     }
                 }
                 return;
             }
 
-            Opcode.ArgType[] types = ArgTypes;
-            for (int i = 0; i < Args.Length; i++)
+            Opcode.ArgType[] types = this.ArgTypes;
+            for (int i = 0; i < this.Args.Length; i++)
             {
                 Opcode.ArgType argType = types[i];
                 if (argType == Opcode.ArgType.OffsetS24)
                 {
-                    Args[i] = opm(Args[i]);
+                    this.Args[i] = opm(this.Args[i]);
                 }
             }
         }

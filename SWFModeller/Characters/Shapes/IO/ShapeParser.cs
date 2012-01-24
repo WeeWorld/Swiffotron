@@ -32,7 +32,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
                 case Tag.DefineShape:
                 case Tag.DefineShape2:
                 case Tag.DefineShape3:
-                    newShape = ParseDefineShapeN(shapeReader, tag);
+                    newShape = this.ParseDefineShapeN(shapeReader, tag);
                     break;
 
                 case Tag.DefineFont3:
@@ -44,12 +44,12 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
                     return new Shape() { OriginalBytes = data, OriginalFormat = tag };
 
                 case Tag.DefineShape4:
-                    newShape = ParseDefineShape4(shapeReader);
+                    newShape = this.ParseDefineShape4(shapeReader);
                     break;
 
                 case Tag.DefineMorphShape:
                 case Tag.DefineMorphShape2:
-                    newShape = ParseDefineMorphShape(shapeReader, tag);
+                    newShape = this.ParseDefineMorphShape(shapeReader, tag);
                     break;
 
                 default:
@@ -87,12 +87,12 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
 
             /*(void)*/shapeReader.ReadUI32(); /* end edges offset. We don't need this */
 
-            MorphFillStyle[] mfsa = ReadMorphFillStyleArray(shapeReader);
+            MorphFillStyle[] mfsa = this.ReadMorphFillStyleArray(shapeReader);
 
-            MorphLineStyle[] mlsa = ReadMorphLineStyleArray(shapeReader, format);
+            MorphLineStyle[] mlsa = this.ReadMorphLineStyleArray(shapeReader, format);
 
-            ShapeDef startShape = ReadShapeDef(shapeReader, format, false, mfsa, mlsa);
-            ShapeDef endShape = ReadShapeDef(shapeReader, format, false, mfsa, mlsa);
+            ShapeDef startShape = this.ReadShapeDef(shapeReader, format, false, mfsa, mlsa);
+            ShapeDef endShape = this.ReadShapeDef(shapeReader, format, false, mfsa, mlsa);
 
             return new MorphShape()
             {
@@ -120,14 +120,14 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
             {
                 for (int i = 0; i < lineCount; i++)
                 {
-                    lineStyles[i] = ReadMorphLineStyle(shapeReader);
+                    lineStyles[i] = this.ReadMorphLineStyle(shapeReader);
                 }
             }
             else /* Else Tag.DefineMorphShape2 */
             {
                 for (int i = 0; i < lineCount; i++)
                 {
-                    lineStyles[i] = ReadMorphLineStyle2(shapeReader);
+                    lineStyles[i] = this.ReadMorphLineStyle2(shapeReader);
                 }
             }
 
@@ -174,14 +174,13 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
 
             if (hasFill)
             {
-                fs = ReadMorphFillStyle(shapeReader);
+                fs = this.ReadMorphFillStyle(shapeReader);
             }
             else
             {
                 startColour = shapeReader.ReadRGBA();
                 endColour = shapeReader.ReadRGBA();
             }
-
 
             return new MorphLineStyle()
             {
@@ -214,7 +213,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
             bool usesNonScalingStrokes = shapeReader.ReadBit();
             bool usesScalingStrokes = shapeReader.ReadBit();
 
-            ShapeDef sws = ReadShapeDef(shapeReader, Tag.DefineShape4, true, null, null);
+            ShapeDef sws = this.ReadShapeDef(shapeReader, Tag.DefineShape4, true, null, null);
 
             return new Shape()
             {
@@ -230,7 +229,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
         {
             Rect bounds = shapeReader.ReadRect();
             shapeReader.Align8();
-            ShapeDef sws = ReadShapeDef(shapeReader, format, true, null, null);
+            ShapeDef sws = this.ReadShapeDef(shapeReader, format, true, null, null);
 
             return new Shape()
             {
@@ -250,7 +249,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
             MorphFillStyle[] fillStyles = new MorphFillStyle[fillCount];
             for (int i = 0; i < fillCount; i++)
             {
-                fillStyles[i] = ReadMorphFillStyle(shapeReader);
+                fillStyles[i] = this.ReadMorphFillStyle(shapeReader);
             }
 
             return fillStyles;
@@ -280,7 +279,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
                 if (style.Type == FillType.LinearGradient
                         || style.Type == FillType.RadialGradient)
                 {
-                    style.Gradient = ReadMorphGradient(shapeReader);
+                    style.Gradient = this.ReadMorphGradient(shapeReader);
                 }
             }
 
@@ -292,7 +291,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
                  * bumbling simian. */
                 if (cid != 0x0000FFFF)
                 {
-                    style.Bitmap = ImageFinder.FindImage(cid);
+                    style.Bitmap = this.ImageFinder.FindImage(cid);
                 }
 
                 style.StartFillMatrix = shapeReader.ReadMatrix();
@@ -316,7 +315,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
 
             for (int i = 0; i < numGrads; i++)
             {
-                mg.Records[i] = ReadMorphGradientRecord(shapeReader);
+                mg.Records[i] = this.ReadMorphGradientRecord(shapeReader);
             }
 
             return mg;
@@ -345,7 +344,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
             FillStyle[] fillStyles = new FillStyle[fillCount];
             for (int i = 0; i < fillCount; i++)
             {
-                fillStyles[i] = ReadFillStyle(shapeReader, format);
+                fillStyles[i] = this.ReadFillStyle(shapeReader, format);
             }
 
             return fillStyles;
@@ -364,14 +363,14 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
             {
                 for (int i = 0; i < lineCount; i++)
                 {
-                    lineStyles[i] = ReadLineStyle2(shapeReader, format);
+                    lineStyles[i] = this.ReadLineStyle2(shapeReader, format);
                 }
             }
             else
             {
                 for (int i = 0; i < lineCount; i++)
                 {
-                    lineStyles[i] = ReadLineStyle(shapeReader, format);
+                    lineStyles[i] = this.ReadLineStyle(shapeReader, format);
                 }
             }
 
@@ -398,9 +397,9 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
 
             if (withStyle)
             {
-                shapeDef.FillStyles.AddRange(ReadFillStyleArray(shapeReader, format));
+                shapeDef.FillStyles.AddRange(this.ReadFillStyleArray(shapeReader, format));
                 shapeReader.Align8();
-                shapeDef.LineStyles.AddRange(ReadLineStyleArray(shapeReader, format));
+                shapeDef.LineStyles.AddRange(this.ReadLineStyleArray(shapeReader, format));
                 shapeReader.Align8();
             }
 
@@ -426,7 +425,6 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
                 bool isEdgeRecord = shapeReader.ReadBit();
                 if (isEdgeRecord)
                 {
-
                     if (shapeReader.ReadBit())
                     {
                         /* StraightEdgeRecord */
@@ -526,8 +524,8 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
 
                     if (stateNewStyles)
                     {
-                        sc.NewFillStyles = ReadFillStyleArray(shapeReader, format);
-                        sc.NewLineStyles = ReadLineStyleArray(shapeReader, format);
+                        sc.NewFillStyles = this.ReadFillStyleArray(shapeReader, format);
+                        sc.NewLineStyles = this.ReadLineStyleArray(shapeReader, format);
 
                         fillBits = (int)shapeReader.ReadUBits(4);
                         lineBits = (int)shapeReader.ReadUBits(4);
@@ -582,11 +580,11 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
                 if (style.Type == FillType.LinearGradient
                         || style.Type == FillType.RadialGradient)
                 {
-                    style.Gradient = ReadGradient(shapeReader, format);
+                    style.Gradient = this.ReadGradient(shapeReader, format);
                 }
                 else /* FocalGradient */
                 {
-                    style.Gradient = ReadFocalGradient(shapeReader);
+                    style.Gradient = this.ReadFocalGradient(shapeReader);
                 }
             }
 
@@ -598,8 +596,9 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
                  * stammering ape. */
                 if (cid != 0x0000FFFF)
                 {
-                    style.Bitmap = ImageFinder.FindImage(cid);
+                    style.Bitmap = this.ImageFinder.FindImage(cid);
                 }
+
                 style.FillMatrix = shapeReader.ReadMatrix();
                 shapeReader.Align8();
             }
@@ -610,7 +609,8 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
         private FocalGradient ReadFocalGradient(SWFDataTypeReader shapeReader)
         {
             /* ISSUE 72 */
-            throw new SWFModellerException(SWFModellerError.UnimplementedFeature,
+            throw new SWFModellerException(
+                    SWFModellerError.UnimplementedFeature,
                     "Can't parse focal gradients yet.");
         }
 
@@ -697,7 +697,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
 
             if (hasFill)
             {
-                fs = ReadFillStyle(shapeReader, format);
+                fs = this.ReadFillStyle(shapeReader, format);
             }
             else
             {

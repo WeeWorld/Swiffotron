@@ -13,7 +13,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
     using SWFProcessing.SWFModeller.ABC.Code;
     using SWFProcessing.SWFModeller.IO;
 
-    class AbcWriter
+    internal class AbcWriter
     {
         private IDMarshaller<int> intMarshal;
         private IDMarshaller<uint> uintMarshal;
@@ -120,6 +120,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                 {
                     this.nsMarshal.Register(ns);
                 }
+
                 this.nsSetMarshal.Register(mn.Set);
             }
 
@@ -138,8 +139,8 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                 while (i.MoveNext())
                 {
                     ExceptionHandler eh = i.Current;
-                    RegisterMultiname(eh.CatchType);
-                    RegisterMultiname(eh.VarName);
+                    this.RegisterMultiname(eh.CatchType);
+                    this.RegisterMultiname(eh.VarName);
                 }
             }
 
@@ -273,6 +274,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                                         SWFModellerError.Internal,
                                         "Marshaller failed to keep debug string at low index");
                             }
+
                             writer.WriteUI8(spos);
                             break;
 
@@ -307,6 +309,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                                         SWFModellerError.UnimplementedFeature,
                                         "Unsupported op arg type in " + op.Mnemonic.ToString() + ": " + argType);
                             }
+
                             break;
 
                         case Opcode.ArgType.ExceptionU30:
@@ -599,6 +602,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 
                         writer.WriteUI8((uint)st.ValKind);
                     }
+
                     break;
 
                 case TraitKind.Method:
@@ -613,6 +617,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                     {
                         writer.WriteU30Packed(0);
                     }
+
                     writer.WriteU30Packed((uint)this.methodMarshal.GetIDFor(mt.Fn));
                     break;
 
@@ -731,6 +736,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 
                 writer.WriteSI32(ints[i]);
             }
+
             code.IntConsts = ints;
 
             /* Unsigned integer constants */
@@ -743,6 +749,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 #endif
                 writer.WriteUI32(uints[i]);
             }
+
             code.UIntConsts = uints;
 
             /* Double constants */
@@ -763,6 +770,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                 writer.WriteUI32(high);
                 writer.WriteUI32(low);
             }
+
             code.DoubleConsts = doubles;
 
             /* String constants */
@@ -775,6 +783,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 #endif
                 writer.WriteString(strings[i]);
             }
+
             code.StringConsts = strings;
 
             /* Namespace constants */
@@ -789,6 +798,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                 writer.WriteUI8((uint)ns.Kind);
                 writer.WriteU30Packed((uint)this.stringMarshal.GetExistingIDFor(ns.Name));
             }
+
             code.SetNamespaces(namespaces);
 
             /* Namespace set constants */
@@ -808,6 +818,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                     writer.WriteU30Packed((uint)this.nsMarshal.GetExistingIDFor(ns));
                 }
             }
+
             code.SetNamespaceSets(namespaceSets);
 
             /* Multiname constants */
@@ -857,6 +868,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                         break;
                 }
             }
+
             code.SetMultinames(multinames);
         }
 
@@ -1041,14 +1053,17 @@ namespace SWFProcessing.SWFModeller.ABC.IO
         private int MultinameID(Multiname mn)
         {
             this.stringMarshal.Register(mn.Name);
+
             if (mn.NS != null)
             {
                 /*(void)*/this.NamespaceID(mn.NS);
             }
+
             if (mn.Set != null)
             {
                 /*(void)*/this.NamespaceSetID(mn.Set);
             }
+
             return this.multinameMarshal.GetIDFor(mn);
         }
 
@@ -1076,6 +1091,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
             {
                 /*(void)*/this.NamespaceID(ns);
             }
+
             return this.nsSetMarshal.GetIDFor(set);
         }
     }

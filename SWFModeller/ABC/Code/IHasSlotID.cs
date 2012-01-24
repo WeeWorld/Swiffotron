@@ -6,7 +6,7 @@
 
 namespace SWFProcessing.SWFModeller.ABC.Code
 {
-    interface IHasSlotID
+    internal interface IHasSlotID
     {
         uint SlotID { get; set; }
     }

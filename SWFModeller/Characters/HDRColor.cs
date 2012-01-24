@@ -21,7 +21,10 @@ namespace SWFProcessing.SWFModeller.Characters
         /// <param name="red">Red component, from fp0.0 to fp1.0 (Or beyond if you wish)</param>
         /// <param name="green">Green component, from fp0.0 to fp1.0 (Or beyond if you wish)</param>
         /// <param name="blue">Blue component, from fp0.0 to fp1.0 (Or beyond if you wish)</param>
-        public HDRColor(UFP88 red, UFP88 green, UFP88 blue) : this(red, green, blue, UFP88.ONE) { }
+        public HDRColor(UFP88 red, UFP88 green, UFP88 blue) : this(red, green, blue, UFP88.ONE)
+        {
+            /* Nothing to add. */
+        }
 
         /// <summary>
         /// Initializes a new instance of a colour with an alpha component
@@ -39,8 +42,11 @@ namespace SWFProcessing.SWFModeller.Characters
         }
 
         public UFP88 Red { get; set; }
+
         public UFP88 Green { get; set; }
+
         public UFP88 Blue { get; set; }
+
         public UFP88 Alpha { get; set; }
 
         public bool HasAlpha

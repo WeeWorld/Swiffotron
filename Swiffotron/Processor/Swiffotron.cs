@@ -268,15 +268,11 @@ namespace SWFProcessing.Swiffotron
         private Dictionary<string, object> localCache;
 
         /// <summary>
-        /// Context for enriching debug log output
-        /// </summary>
-        public SwiffotronContext Context { get; set; }
-
-        /// <summary>
         /// Initializes a new instance of the Swiffotron class. It will be created with
         /// default configuration options.
         /// </summary>
-        public Swiffotron() : this(null)
+        public Swiffotron()
+            : this(null)
         {
         }
 
@@ -302,6 +298,11 @@ namespace SWFProcessing.Swiffotron
 
             this.LoadConfigXML(configStream);
         }
+
+        /// <summary>
+        /// Context for enriching debug log output
+        /// </summary>
+        public SwiffotronContext Context { get; set; }
 
         /// <summary>
         /// Process a job XML file.
@@ -408,7 +409,8 @@ namespace SWFProcessing.Swiffotron
                 {
                     /* No progress was made, so: */
                     throw new SwiffotronException(
-                            SwiffotronError.BadInputXML, this.Context,
+                            SwiffotronError.BadInputXML,
+                            this.Context,
                             @"A circular dependency was detected.");
                 }
 
@@ -634,7 +636,8 @@ namespace SWFProcessing.Swiffotron
                         default:
                             /* ISSUE 73 */
                             throw new SwiffotronException(
-                                    SwiffotronError.UnimplementedFeature, this.Context,
+                                    SwiffotronError.UnimplementedFeature,
+                                    this.Context,
                                     @"Unsupported tag: " + nav.LocalName);
                     }
                 }
@@ -658,6 +661,7 @@ namespace SWFProcessing.Swiffotron
             {
                 throw new SwiffotronException(SwiffotronError.BadInputXML, this.Context, "The find element in textreplace operations cannot be empty.");
             }
+
             string find = findNode.Value;
 
             XPathNavigator replaceNode = nav.SelectSingleNode(@"swf:replace/text()", this.namespaceMgr);
@@ -749,7 +753,8 @@ namespace SWFProcessing.Swiffotron
                     if (className == string.Empty)
                     {
                         throw new SwiffotronException(
-                                SwiffotronError.BadInputXML, this.Context,
+                                SwiffotronError.BadInputXML,
+                                this.Context,
                                 "An instance created from a SWF needs a class name to be defined.");
                     }
 
@@ -761,7 +766,8 @@ namespace SWFProcessing.Swiffotron
                     if (!this.processedSWFs.ContainsKey(src))
                     {
                         throw new SwiffotronException(
-                                SwiffotronError.Internal, this.Context,
+                                SwiffotronError.Internal,
+                                this.Context,
                                 "Internal error. SWF tags were processed out of order (" + currentSwfTag.GetAttribute(AttrID, string.Empty) + " requres " + src + ").");
                     }
 
@@ -831,7 +837,8 @@ namespace SWFProcessing.Swiffotron
                 default:
                     /* ISSUE 73 */
                     throw new SwiffotronException(
-                            SwiffotronError.UnimplementedFeature, this.Context,
+                            SwiffotronError.UnimplementedFeature,
+                            this.Context,
                             "Bad instance type: " + type);
             }
         }
@@ -861,7 +868,8 @@ namespace SWFProcessing.Swiffotron
             {
                 /* Can't rename a class to an Adobe class name. That's bonkers. */
                 throw new SwiffotronException(
-                        SwiffotronError.BadInputXML, this.Context.Sentinel("InstanceClassNameInappropriate"),
+                        SwiffotronError.BadInputXML,
+                        this.Context.Sentinel("InstanceClassNameInappropriate"),
                         "You can't rename a timeline class to a reserved adobe classname (" + className + "), SWF: " + importSwf.Context);
             }
 
@@ -877,7 +885,8 @@ namespace SWFProcessing.Swiffotron
                 else
                 {
                     throw new SwiffotronException(
-                            SwiffotronError.BadInputXML, this.Context.Sentinel("MainTimelineInstanceNotRenamed"),
+                            SwiffotronError.BadInputXML,
+                            this.Context.Sentinel("MainTimelineInstanceNotRenamed"),
                             "An external instance with timeline code must be explicitely renamed with the instance tag's class attribute.");
                 }
             }
@@ -954,7 +963,8 @@ namespace SWFProcessing.Swiffotron
             {
                 /* ISSUE 60: If swf attribute is present, find the swf. It should be loaded/generated. It should not be the current swf. */
                 throw new SwiffotronException(
-                        SwiffotronError.UnimplementedFeature, this.Context,
+                        SwiffotronError.UnimplementedFeature,
+                        this.Context,
                         "swf attribute is not supported in movieclip tags yet.");
             }
 
@@ -964,21 +974,24 @@ namespace SWFProcessing.Swiffotron
                     if (fromOtherSwf)
                     {
                         throw new SwiffotronException(
-                                SwiffotronError.BadInputXML, this.Context,
+                                SwiffotronError.BadInputXML,
+                                this.Context,
                                 "The movieclip 'swf' attribute does not make sense when the type is set to 'swf'.");
                     }
 
                     if (!this.processedSWFs.ContainsKey(src))
                     {
                         throw new SwiffotronException(
-                                SwiffotronError.Internal, this.Context,
+                                SwiffotronError.Internal,
+                                this.Context,
                                 "Internal error. SWF tags were processed out of order (" + currentSwfTag.GetAttribute(AttrID, string.Empty) + " requres " + src + ").");
                     }
 
                     if (className == string.Empty)
                     {
                         throw new SwiffotronException(
-                                SwiffotronError.BadInputXML, this.Context,
+                                SwiffotronError.BadInputXML,
+                                this.Context,
                                 "An clip created from a SWF needs a class name to be defined.");
                     }
 
@@ -1001,14 +1014,16 @@ namespace SWFProcessing.Swiffotron
                     if (fromOtherSwf)
                     {
                         throw new SwiffotronException(
-                                SwiffotronError.BadInputXML, this.Context,
+                                SwiffotronError.BadInputXML,
+                                this.Context,
                                 "The movieclip 'swf' attribute does not make sense when the type is set to 'extern'. Try declaring the external SWF in its own tag instead, and reference it by ID.");
                     }
 
                     if (className == string.Empty)
                     {
                         throw new SwiffotronException(
-                                SwiffotronError.BadInputXML, this.Context,
+                                SwiffotronError.BadInputXML,
+                                this.Context,
                                 "An clip created from a SWF needs a class name to be defined.");
                     }
 
@@ -1034,7 +1049,8 @@ namespace SWFProcessing.Swiffotron
                 default:
                     /* ISSUE 73 */
                     throw new SwiffotronException(
-                            SwiffotronError.UnimplementedFeature, this.Context,
+                            SwiffotronError.UnimplementedFeature,
+                            this.Context,
                             "Bad instance type: " + type);
             }
         }
@@ -1061,7 +1077,8 @@ namespace SWFProcessing.Swiffotron
             if (po == null)
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadPathOrID, this.Context.Sentinel("FindSpriteByQName"),
+                        SwiffotronError.BadPathOrID,
+                        this.Context.Sentinel("FindSpriteByQName"),
                         @"Instance not found: " + qname);
             }
 
@@ -1070,7 +1087,8 @@ namespace SWFProcessing.Swiffotron
             if (sprite == null)
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadPathOrID, this.Context,
+                        SwiffotronError.BadPathOrID,
+                        this.Context,
                         @"Instance does not point to sprite: " + qname);
             }
 
@@ -1122,7 +1140,9 @@ namespace SWFProcessing.Swiffotron
             }
             catch (SWFModellerException sme)
             {
-                throw new SwiffotronException(SwiffotronError.BadInputXML, this.Context.Sentinel("CreateInstanceIn"),
+                throw new SwiffotronException(
+                        SwiffotronError.BadInputXML,
+                        this.Context.Sentinel("CreateInstanceIn"),
                         "Failed to instantiate an instance in a timeline. instance name:" + qname + ", instance class:" + qClassName,
                         sme);
             }
@@ -1152,7 +1172,8 @@ namespace SWFProcessing.Swiffotron
                 if (parentIns == null)
                 {
                     throw new SwiffotronException(
-                            SwiffotronError.BadPathOrID, this.Context,
+                            SwiffotronError.BadPathOrID,
+                            this.Context,
                             "Ancestor of '" + uname + "', i.e. '" + parentQname + "' does not exist.");
                 }
 
@@ -1161,7 +1182,8 @@ namespace SWFProcessing.Swiffotron
                 if (!(parentChar is Timeline))
                 {
                     throw new SwiffotronException(
-                            SwiffotronError.BadPathOrID, this.Context,
+                            SwiffotronError.BadPathOrID,
+                            this.Context,
                             "QName '" + parentQname + "' does not refer to a timeline.");
                 }
 
@@ -1216,7 +1238,8 @@ namespace SWFProcessing.Swiffotron
             if (po == null)
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadPathOrID, this.Context.Sentinel("ModifyInstance"),
+                        SwiffotronError.BadPathOrID,
+                        this.Context.Sentinel("ModifyInstance"),
                         @"Instance not found: " + qname);
             }
 
@@ -1241,7 +1264,8 @@ namespace SWFProcessing.Swiffotron
                         default:
                             /* ISSUE 73 */
                             throw new SwiffotronException(
-                                    SwiffotronError.UnimplementedFeature, this.Context,
+                                    SwiffotronError.UnimplementedFeature,
+                                    this.Context,
                                     @"Unsupported modification tag: " + modify.LocalName);
                     }
                 }
@@ -1316,7 +1340,8 @@ namespace SWFProcessing.Swiffotron
                 if (swfoutStore == string.Empty)
                 {
                     throw new SwiffotronException(
-                            SwiffotronError.BadInputXML, this.Context,
+                            SwiffotronError.BadInputXML,
+                            this.Context,
                             @"The swfout tag needs either a cachekey or a storeput attribute");
                 }
 
@@ -1331,14 +1356,18 @@ namespace SWFProcessing.Swiffotron
             if (swfNav.SelectChildren(@"pngout", SwiffotronNS).Count > 0)
             {
                 /* ISSUE 65 */
-                throw new SwiffotronException(SwiffotronError.UnimplementedFeature, this.Context,
+                throw new SwiffotronException(
+                        SwiffotronError.UnimplementedFeature,
+                        this.Context,
                         "We can't do PNG output yet.");
             }
 
             if (swfNav.SelectChildren(@"vidout", SwiffotronNS).Count > 0)
             {
                 /* ISSUE 66 */
-                throw new SwiffotronException(SwiffotronError.UnimplementedFeature, this.Context,
+                throw new SwiffotronException(
+                        SwiffotronError.UnimplementedFeature,
+                        this.Context,
                         "We can't do video output yet.");
             }
         }
@@ -1384,14 +1413,16 @@ namespace SWFProcessing.Swiffotron
             if (swfTag == null)
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadInputXML, this.Context,
+                        SwiffotronError.BadInputXML,
+                        this.Context,
                         "Invalid swf tag ID: " + id);
             }
 
             if (exclude != null && swfTag.ComparePosition(exclude) == XmlNodeOrder.Same)
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadInputXML, this.Context,
+                        SwiffotronError.BadInputXML,
+                        this.Context,
                         "swf tag with ID '" + id + "' refers to itself.");
             }
 
@@ -1420,10 +1451,12 @@ namespace SWFProcessing.Swiffotron
                 XPathNavigator referenced = this.root.SelectSingleNode(@"/swf:swiffotron/swf:swf[@id='" + src + "']", this.namespaceMgr);
                 if (referenced == null)
                 {
-                    throw new SwiffotronException(SwiffotronError.BadPathOrID,
+                    throw new SwiffotronException(
+                            SwiffotronError.BadPathOrID,
                             this.Context.Sentinel("SrcSwfBadref"),
                             "No such swf element: " + src);
                 }
+
                 return referenced;
             }
 
@@ -1440,10 +1473,12 @@ namespace SWFProcessing.Swiffotron
                 XPathNavigator referenced = this.root.SelectSingleNode(@"/swf:swiffotron/swf:swf/swf:movieclip[@id='" + src + "']", this.namespaceMgr);
                 if (referenced == null)
                 {
-                    throw new SwiffotronException(SwiffotronError.BadPathOrID,
+                    throw new SwiffotronException(
+                            SwiffotronError.BadPathOrID,
                             this.Context.Sentinel("InstanceSrcMovieClipBadref"),
                             "No such movieclip element: " + src);
                 }
+
                 return referenced;
             }
 
@@ -1529,7 +1564,8 @@ namespace SWFProcessing.Swiffotron
                 if (storeURI.Scheme != "store") /* ISSUE 67: Constants, please. */
                 {
                     throw new SwiffotronException(
-                            SwiffotronError.BadInputXML, this.Context,
+                            SwiffotronError.BadInputXML,
+                            this.Context,
                             @"Store paths should begin with store://");
                 }
 
@@ -1538,7 +1574,8 @@ namespace SWFProcessing.Swiffotron
                 if (!stores.ContainsKey(storeId))
                 {
                     throw new SwiffotronException(
-                            SwiffotronError.BadInputXML, this.Context,
+                            SwiffotronError.BadInputXML,
+                            this.Context,
                             @"Store '" + storeId + @"' not registered.");
                 }
 
@@ -1578,7 +1615,8 @@ namespace SWFProcessing.Swiffotron
             if (storeURI.Scheme != "store") /* ISSUE 67: Constants, please. */
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadInputXML, this.Context,
+                        SwiffotronError.BadInputXML,
+                        this.Context,
                         @"Store paths should begin with store://");
             }
 
@@ -1587,7 +1625,8 @@ namespace SWFProcessing.Swiffotron
             if (!stores.ContainsKey(storeId))
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadInputXML, this.Context,
+                        SwiffotronError.BadInputXML,
+                        this.Context,
                         @"Store '" + storeId + @"' not registered.");
             }
 
@@ -1597,7 +1636,8 @@ namespace SWFProcessing.Swiffotron
             }
             catch (FileNotFoundException fnfe)
             {
-                throw new SwiffotronException(SwiffotronError.BadPathOrID,
+                throw new SwiffotronException(
+                        SwiffotronError.BadPathOrID,
                         this.Context.Sentinel("FileNotFoundInStore"),
                         "File not found: " + key, fnfe);
             }
@@ -1615,7 +1655,8 @@ namespace SWFProcessing.Swiffotron
             if (pos < 0)
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadInputXML, this.Context,
+                        SwiffotronError.BadInputXML,
+                        this.Context,
                         @"Bad cache key (Requires prefix): " + key);
             }
 
@@ -1625,7 +1666,8 @@ namespace SWFProcessing.Swiffotron
             if (!caches.ContainsKey(cacheId))
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadInputXML, this.Context,
+                        SwiffotronError.BadInputXML,
+                        this.Context,
                         @"Cache '" + cacheId + @"' not registered.");
             }
 
@@ -1644,7 +1686,8 @@ namespace SWFProcessing.Swiffotron
             if (pos < 0)
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadInputXML, this.Context,
+                        SwiffotronError.BadInputXML,
+                        this.Context,
                         @"Bad cache key (Requires prefix): " + key);
             }
 
@@ -1654,7 +1697,8 @@ namespace SWFProcessing.Swiffotron
             if (!caches.ContainsKey(cacheId))
             {
                 throw new SwiffotronException(
-                        SwiffotronError.BadInputXML, this.Context,
+                        SwiffotronError.BadInputXML,
+                        this.Context,
                         @"Cache '" + cacheId + @"' not registered.");
             }
 
@@ -1724,7 +1768,6 @@ namespace SWFProcessing.Swiffotron
 
             this.EnableStoreWrites = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:storeWriteEnabled/text()", namespaceMgr).ValueAsBoolean;
 
-
             this.swfReaderOptions = new SWFReaderOptions()
             {
                 StrictTagLength = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:stricttaglength/text()", namespaceMgr).ValueAsBoolean
@@ -1755,7 +1798,6 @@ namespace SWFProcessing.Swiffotron
                 /* Shortcut value to say "Look in the executing assembly" */
                 assembly = null;
             }
-
 
             ISwiffotronStore newStore = null;
 
@@ -1824,7 +1866,6 @@ namespace SWFProcessing.Swiffotron
                 newCache = (ISwiffotronCache)oh.Unwrap();
             }
 
-
             newCache.Initialise(init);
 
             /* Use Add method here to ensure that the name is unique. Key errors get thrown
@@ -1872,6 +1913,7 @@ namespace SWFProcessing.Swiffotron
             {
                 cacheClasses.Add(cacheEntry.Key + "=" + cacheEntry.Value.GetType().FullName + "[" + cacheEntry.Value.InitialisedWith+ "]");
             }
+
             cacheClasses.Sort();
 
             /* CacheClasses holds a comma-separated list of all the cache classes used by swiffotron
@@ -1884,13 +1926,13 @@ namespace SWFProcessing.Swiffotron
             {
                 storeClasses.Add(storeEntry.Key + "=" + storeEntry.Value.GetType().FullName + "[" + storeEntry.Value.InitialisedWith + "]");
             }
+
             storeClasses.Sort();
 
             /* StoreClasses holds a comma-separated list of all the cache classes used by swiffotron
              * as key-value pairs, e.g. db=com.blah.MyOtherClass,fs=com.blah.MyClass
              * sorted into alphabetical order. */
             info.Add("StoreClasses", string.Join(",", storeClasses.ToArray()));
-
 
             return info;
         }

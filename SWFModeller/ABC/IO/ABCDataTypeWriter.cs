@@ -33,7 +33,13 @@ namespace SWFProcessing.SWFModeller
         /// <summary>
         /// This is different to our internal offset into our own written data.
         /// </summary>
-        public long Offset { get { return this.outputStream.Position; } }
+        public long Offset
+        {
+            get
+            {
+                return this.outputStream.Position;
+            }
+        }
 
         #region IDisposable Members
 
@@ -70,7 +76,7 @@ namespace SWFProcessing.SWFModeller
 
         public void WriteSI32(int sv)
         {
-            WriteUI32((uint)sv);
+            this.WriteUI32((uint)sv);
         }
 
         public void WriteSI24(int v)
@@ -158,6 +164,7 @@ namespace SWFProcessing.SWFModeller
             {
                 this.Align8();
             }
+
             this.outputStream.WriteByte(b);
             this.offset++;
         }
@@ -221,6 +228,7 @@ namespace SWFProcessing.SWFModeller
                 this.WriteBit(false);
                 return;
             }
+
             this.WriteBit(true);
 
             this.WriteUBits(v, 7);
@@ -230,6 +238,7 @@ namespace SWFProcessing.SWFModeller
                 this.WriteBit(false);
                 return;
             }
+
             this.WriteBit(true);
 
             this.WriteUBits(v, 7);
@@ -239,6 +248,7 @@ namespace SWFProcessing.SWFModeller
                 this.WriteBit(false);
                 return;
             }
+
             this.WriteBit(true);
 
             this.WriteUBits(v, 7);
@@ -248,6 +258,7 @@ namespace SWFProcessing.SWFModeller
                 this.WriteBit(false);
                 return;
             }
+
             this.WriteBit(true);
 
             if (v > 3)

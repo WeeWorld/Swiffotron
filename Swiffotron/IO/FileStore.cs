@@ -13,12 +13,12 @@ namespace SWFProcessing.Swiffotron.IO
     /// </summary>
     public class FileStore : ISwiffotronStore
     {
-        public string InitialisedWith { get; private set; }
-
         /// <summary>
         /// The base folder under which to store things.
         /// </summary>
         private string basePath = string.Empty;
+
+        public string InitialisedWith { get; private set; }
 
         /// <summary>
         /// Called when the store is created

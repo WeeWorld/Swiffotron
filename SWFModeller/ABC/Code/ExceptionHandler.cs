@@ -12,8 +12,19 @@ namespace SWFProcessing.SWFModeller.ABC.Code
     /// </summary>
     public class ExceptionHandler
     {
+        /// <summary>
+        /// The offset where the 'try' begins
+        /// </summary>
         public OpcodeOffset From { get; set; }
+
+        /// <summary>
+        ///  The offset where the 'try' ends
+        /// </summary>
         public OpcodeOffset To { get; set; }
+
+        /// <summary>
+        /// The offset to jump to if an exception is thrown.
+        /// </summary>
         public OpcodeOffset Target { get; set; }
 
         /// <summary>
@@ -26,6 +37,15 @@ namespace SWFProcessing.SWFModeller.ABC.Code
         /// </summary>
         public Multiname VarName { get; set; }
 
-        public bool IsCatchAll { get { return this.CatchType == Multiname.GlobalMultiname; } }
+        /// <summary>
+        /// Is this a catch-all block?
+        /// </summary>
+        public bool IsCatchAll
+        {
+            get
+            {
+                return this.CatchType == Multiname.GlobalMultiname;
+            }
+        }
     }
 }

@@ -14,19 +14,43 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes
 
     public class MorphShape : IShape
     {
-        public byte[] OriginalBytes { get; set; }
-
-        public Tag OriginalFormat { get; set; }
-
         /// <param name="shapeData">The shape data.</param>
-        /// <param name="fontType">The data format</param>
+        /// <param name="format">The data format</param>
         public void SetOriginalBytes(byte[] shapeData, Tag format)
         {
             this.OriginalBytes = shapeData;
             this.OriginalFormat = format;
         }
 
+        public byte[] OriginalBytes { get; set; }
+
+        public Tag OriginalFormat { get; set; }
+
         public Rect Bounds { get; set; }
+
+        /// <summary>
+        /// Contains at least 1 scaling stroke
+        /// </summary>
+        public bool UsesScalingStrokes { get; set; }
+
+        /// <summary>
+        /// Contains at least 1 non-scaling stroke
+        /// </summary>
+        public bool UsesNonScalingStrokes { get; set; }
+
+        public MorphFillStyle[] MorphFillStyles { get; set; }
+
+        public MorphLineStyle[] MorphLineStyles { get; set; }
+
+        public ShapeDef StartShape { get; set; }
+
+        public ShapeDef EndShape { get; set; }
+
+        public Rect EndBounds { get; set; }
+
+        public Rect StartEdgeBounds { get; set; }
+
+        public Rect EndEdgeBounds { get; set; }
 
         public IImage[] GetImages()
         {
@@ -37,7 +61,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes
                 return new IImage[0];
             }
 
-            foreach (ShapeDef sd in new ShapeDef[]{StartShape, EndShape})
+            foreach (ShapeDef sd in new ShapeDef[] { this.StartShape, this.EndShape })
             {
                 foreach (IFillStyle fs in sd.FillStyles)
                 {
@@ -67,33 +91,8 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes
                 }
             }
 
-
             return images.ToArray();
         }
-
-        /// <summary>
-        /// Contains at least 1 scaling stroke
-        /// </summary>
-        public bool UsesScalingStrokes { get; set; }
-
-        /// <summary>
-        /// Contains at least 1 non-scaling stroke
-        /// </summary>
-        public bool UsesNonScalingStrokes { get; set; }
-
-        public MorphFillStyle[] MorphFillStyles { get; set; }
-
-        public MorphLineStyle[] MorphLineStyles { get; set; }
-
-        public ShapeDef StartShape { get; set; }
-
-        public ShapeDef EndShape { get; set; }
-
-        public Rect EndBounds { get; set; }
-
-        public Rect StartEdgeBounds { get; set; }
-
-        public Rect EndEdgeBounds { get; set; }
 
 #if DEBUG
         public void ToStringModelView(int nest, StringBuilder sb, out bool oneLiner)
@@ -114,17 +113,17 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes
                 sb.Append(indent + "StartShape; WithStyle? " + this.StartShape.IsShapeWithStyle + "\n");
                 sb.Append(indent + "{\n");
 
-                StartShape.ToStringModelView(nest + 1, sb);
+                this.StartShape.ToStringModelView(nest + 1, sb);
 
                 sb.Append(indent + "}\n");
             }
 
-            if (EndShape != null)
+            if (this.EndShape != null)
             {
                 sb.Append(indent + "EndShape; WithStyle? " + this.EndShape.IsShapeWithStyle + "\n");
                 sb.Append(indent + "{\n");
 
-                EndShape.ToStringModelView(nest + 1, sb);
+                this.EndShape.ToStringModelView(nest + 1, sb);
 
                 sb.Append(indent + "}\n");
             }
@@ -133,7 +132,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes
 
         public override string ToString()
         {
-            return "[MorphShape " + OriginalFormat.ToString() + ":" + OriginalBytes.Length + " bytes]";
+            return "[MorphShape " + this.OriginalFormat.ToString() + ":" + this.OriginalBytes.Length + " bytes]";
         }
     }
 }

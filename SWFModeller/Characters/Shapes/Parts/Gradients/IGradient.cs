@@ -19,7 +19,6 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts.Gradients
         Linear = 1
     }
 
-
     /// <summary>
     /// Marker interface
     /// </summary>

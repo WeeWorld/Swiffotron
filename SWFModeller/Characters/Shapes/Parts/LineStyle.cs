@@ -39,9 +39,9 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
                     + this.Join.ToString()
                     + " join, width=" + this.Width + ", "
                     + " miterlim=" + this.MiterLimit + ", "
-                    + " NoHScale=" + NoHScaling + ", "
-                    + " NoVScale=" + NoVScaling + ", "
-                    + " HasPixelHints=" + HasPixelHints + ", "
+                    + " NoHScale=" + this.NoHScaling + ", "
+                    + " NoVScale=" + this.NoVScaling + ", "
+                    + " HasPixelHints=" + this.HasPixelHints + ", "
                     + " colour=" + this.Colour + "]";
         }
     }

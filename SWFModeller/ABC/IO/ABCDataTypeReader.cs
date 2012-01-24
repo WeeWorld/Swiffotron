@@ -19,8 +19,10 @@ namespace SWFProcessing.SWFModeller
         /// <summary>
         /// The stream being read.
         /// </summary>
-        protected Stream inputStream;
+        protected Stream InputStream { get; set; }
+
         private int buffer;
+
         private int bufferedBits = 0;
 
         /// <summary>
@@ -29,7 +31,7 @@ namespace SWFProcessing.SWFModeller
         /// <param name="inputStream">The stream to read from</param>
         public ABCDataTypeReader(Stream inputStream)
         {
-            this.inputStream = inputStream;
+            this.InputStream = inputStream;
         }
 
         /// <summary>
@@ -42,9 +44,9 @@ namespace SWFProcessing.SWFModeller
         /// <inheritdoc />
         public void Dispose()
         {
-            if (this.inputStream != null)
+            if (this.InputStream != null)
             {
-                this.inputStream.Close();
+                this.InputStream.Close();
             }
         }
 
@@ -68,7 +70,7 @@ namespace SWFProcessing.SWFModeller
         {
             this.bufferedBits = 0;
             this.Offset++;
-            return this.inputStream.ReadByte();
+            return this.InputStream.ReadByte();
         }
 
         /// <summary>
@@ -80,12 +82,15 @@ namespace SWFProcessing.SWFModeller
         {
             this.bufferedBits = 0;
             this.Offset++;
-            int b = this.inputStream.ReadByte();
+            int b = this.InputStream.ReadByte();
             if (0 != (b & 0x80000000))
-            unchecked
             {
-                b |= (int)0xFFFFFF00;
+                unchecked
+                {
+                    b |= (int)0xFFFFFF00;
+                }
             }
+
             return b;
         }
 
@@ -99,8 +104,8 @@ namespace SWFProcessing.SWFModeller
 
             this.bufferedBits = 0;
 
-            i = this.inputStream.ReadByte();
-            i |= this.inputStream.ReadByte() << 8;
+            i = this.InputStream.ReadByte();
+            i |= this.InputStream.ReadByte() << 8;
 
             if (i < 0)
             {
@@ -126,10 +131,10 @@ namespace SWFProcessing.SWFModeller
 
             this.bufferedBits = 0;
 
-            i = this.inputStream.ReadByte();
-            i |= this.inputStream.ReadByte() << 8;
-            i |= this.inputStream.ReadByte() << 16;
-            j = this.inputStream.ReadByte();
+            i = this.InputStream.ReadByte();
+            i |= this.InputStream.ReadByte() << 8;
+            i |= this.InputStream.ReadByte() << 16;
+            j = this.InputStream.ReadByte();
 
             if ((i < 0) || (j < 0))
             {
@@ -197,11 +202,14 @@ namespace SWFProcessing.SWFModeller
             if (0 == (v & 0x80))
             {
                 if (0 != (v & 0x40))
-                unchecked
                 {
-                    /* Sign extend */
-                    return v & (int)0xFFFFFFC0;
+                    unchecked
+                    {
+                        /* Sign extend */
+                        return v & (int)0xFFFFFFC0;
+                    }
                 }
+
                 return v;
             }
 
@@ -211,11 +219,14 @@ namespace SWFProcessing.SWFModeller
             if (0 == (v & 0x4000))
             {
                 if (0 != (next & 0x40))
-                unchecked
                 {
-                    /* Sign extend */
-                    return v & (int)0xFFFFE000;
+                    unchecked
+                    {
+                        /* Sign extend */
+                        return v & (int)0xFFFFE000;
+                    }
                 }
+
                 return v;
             }
 
@@ -225,11 +236,14 @@ namespace SWFProcessing.SWFModeller
             if (0 == (v & 0x200000))
             {
                 if (0 != (next & 0x40))
-                unchecked
                 {
-                    /* Sign extend */
-                    return v & (int)0xFFE00000;
+                    unchecked
+                    {
+                        /* Sign extend */
+                        return v & (int)0xFFE00000;
+                    }
                 }
+
                 return v;
             }
 
@@ -239,11 +253,14 @@ namespace SWFProcessing.SWFModeller
             if (0 == (v & 0x10000000))
             {
                 if (0 != (next & 0x40))
-                unchecked
                 {
-                    /* Sign extend */
-                    return v & (int)0xF0000000;
+                    unchecked
+                    {
+                        /* Sign extend */
+                        return v & (int)0xF0000000;
+                    }
                 }
+
                 return v;
             }
 
@@ -258,9 +275,9 @@ namespace SWFProcessing.SWFModeller
 
             this.bufferedBits = 0;
 
-            i = this.inputStream.ReadByte() << 8;
-            i |= this.inputStream.ReadByte() << 16;
-            i |= this.inputStream.ReadByte() << 24;
+            i = this.InputStream.ReadByte() << 8;
+            i |= this.InputStream.ReadByte() << 16;
+            i |= this.InputStream.ReadByte() << 24;
 
             i >>= 8;
 
@@ -280,7 +297,7 @@ namespace SWFProcessing.SWFModeller
 
             if (this.bufferedBits == 0)
             {
-                this.buffer = this.inputStream.ReadByte();
+                this.buffer = this.InputStream.ReadByte();
                 this.bufferedBits = 8;
 
                 this.Offset++;
@@ -294,7 +311,7 @@ namespace SWFProcessing.SWFModeller
                     result |= (uint)this.buffer << shift;
                     numBits -= this.bufferedBits;
 
-                    this.buffer = this.inputStream.ReadByte();
+                    this.buffer = this.InputStream.ReadByte();
                     this.bufferedBits = 8;
 
                     this.Offset++;
@@ -386,13 +403,14 @@ namespace SWFProcessing.SWFModeller
         {
             do
             {
-                int read = this.inputStream.Read(b, o, len);
-                if (read == -1 || (read == 0 && this.inputStream.Position >= this.inputStream.Length))
+                int read = this.InputStream.Read(b, o, len);
+                if (read == -1 || (read == 0 && this.InputStream.Position >= this.InputStream.Length))
                 {
                     throw new SWFModellerException(
                         SWFModellerError.ABCParsing,
                         "EOF in byte block");
                 }
+
                 len -= read;
                 o += read;
             }

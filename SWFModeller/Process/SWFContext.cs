@@ -13,13 +13,6 @@ namespace SWFProcessing.SWFModeller.Process
     /// </summary>
     public class SWFContext
     {
-        /// <summary>
-        /// What file are we working on?
-        /// </summary>
-        public string Name { get; set; }
-
-        public string SentinelString { get; set; }
-
         public SWFContext(string name)
         {
             if (name == null)
@@ -33,6 +26,13 @@ namespace SWFProcessing.SWFModeller.Process
             }
             this.Name = name;
         }
+
+        /// <summary>
+        /// What file are we working on?
+        /// </summary>
+        public string Name { get; set; }
+
+        public string SentinelString { get; set; }
 
         public override string ToString()
         {

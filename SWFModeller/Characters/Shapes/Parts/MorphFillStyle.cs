@@ -40,12 +40,12 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
             switch (Type)
             {
                 case FillType.Solid:
-                    return "[" + Type.ToString() + ": StartColour=" + this.StartColour.ToString() + ", EndColour=" + this.EndColour.ToString() + "]";
+                    return "[" + this.Type.ToString() + ": StartColour=" + this.StartColour.ToString() + ", EndColour=" + this.EndColour.ToString() + "]";
 
                 case FillType.LinearGradient:
                 case FillType.RadialGradient:
                 case FillType.FocalGradient:
-                    return "[" + Type.ToString() + ": Gradient=" + this.Gradient.ToString() + ", StartPos=" + StartFillMatrix + ", EndPos=" + EndFillMatrix + "]";
+                    return "[" + this.Type.ToString() + ": Gradient=" + this.Gradient.ToString() + ", StartPos=" + this.StartFillMatrix + ", EndPos=" + this.EndFillMatrix + "]";
 
                 case FillType.RepeatingBitmap:
                 case FillType.ClippedBitmap:
@@ -53,11 +53,11 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
                 case FillType.NonSmoothClippedBitmap:
                     if (this.Bitmap == null)
                     {
-                        return "[" + Type.ToString() + ": Bitmap=(none), StartPos=" + StartFillMatrix + ", EndPos=" + EndFillMatrix + "]";
+                        return "[" + this.Type.ToString() + ": Bitmap=(none), StartPos=" + this.StartFillMatrix + ", EndPos=" + this.EndFillMatrix + "]";
                     }
                     else
                     {
-                        return "[" + Type.ToString() + ": Bitmap=" + this.Bitmap.ToString() + ", StartPos=" + StartFillMatrix + ", EndPos=" + EndFillMatrix + "]";
+                        return "[" + this.Type.ToString() + ": Bitmap=" + this.Bitmap.ToString() + ", StartPos=" + this.StartFillMatrix + ", EndPos=" + this.EndFillMatrix + "]";
                     }
 
                 default:
@@ -65,6 +65,5 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
                     throw new SWFModellerException(SWFModellerError.UnimplementedFeature, "Bad fill type in shape dump.");
             }
         }
-
     }
 }

@@ -44,9 +44,9 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
                     + " join, startwidth=" + this.StartWidth + ", "
                     + " endwidth=" + this.EndWidth + ", "
                     + " miterlim=" + this.MiterLimit + ", "
-                    + " NoHScale=" + NoHScaling + ", "
-                    + " NoVScale=" + NoVScaling + ", "
-                    + " HasPixelHints=" + HasPixelHints + ", "
+                    + " NoHScale=" + this.NoHScaling + ", "
+                    + " NoVScale=" + this.NoVScaling + ", "
+                    + " HasPixelHints=" + this.HasPixelHints + ", "
                     + " startcolour=" + this.StartColour + ", "
                     + " endcolour=" + this.EndColour + "]";
         }

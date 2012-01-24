@@ -59,11 +59,11 @@ namespace SWFProcessing.SWFModeller.Characters
             foreach (Layer l in srcTimeline.Layers)
             {
                 Layer newLayer = new Layer(this);
-                layers.Add(newLayer);
+                LayerList.Add(newLayer);
                 newLayers.Add(l, newLayer);
             }
 
-            frames = new List<Frame>((int)srcTimeline.FrameCount);
+            FrameList = new List<Frame>((int)srcTimeline.FrameCount);
             foreach (Frame f in srcTimeline.Frames)
             {
                 Frame newFrame = new Frame();
@@ -71,7 +71,7 @@ namespace SWFProcessing.SWFModeller.Characters
                 {
                     newFrame.AddTag(dli.Clone(newLayers[dli.Layer], false));
                 }
-                frames.Add(newFrame);
+                FrameList.Add(newFrame);
             }
 
             if (srcTimeline is SWF)
@@ -206,7 +206,7 @@ namespace SWFProcessing.SWFModeller.Characters
 
         public PlaceObject FindInstance(string name)
         {
-            foreach (Frame f in frames)
+            foreach (Frame f in FrameList)
             {
                 PlaceObject po = f.FindInstance(name);
                 if (po != null)
@@ -236,9 +236,9 @@ namespace SWFProcessing.SWFModeller.Characters
             }
 
             int frameIdx = 1;
-            if (frames != null)
+            if (FrameList != null)
             {
-                foreach (Frame f in frames)
+                foreach (Frame f in FrameList)
                 {
                     StringBuilder frameSB = new StringBuilder();
                     f.ToStringModelView(nest + 1, frameSB);
@@ -303,7 +303,7 @@ namespace SWFProcessing.SWFModeller.Characters
         /// <param name="sp"></param>
         public void SpriteProc(SpriteProcessor sp)
         {
-            foreach (Frame f in frames)
+            foreach (Frame f in FrameList)
             {
                 foreach (IDisplayListItem dli in f.DisplayList)
                 {
@@ -323,7 +323,7 @@ namespace SWFProcessing.SWFModeller.Characters
 
         private ListSet<ICharacterReference> PopulateCharacterRefList(ListSet<ICharacterReference> refs)
         {
-            foreach (Frame f in frames)
+            foreach (Frame f in FrameList)
             {
                 foreach (IDisplayListItem dli in f.DisplayList)
                 {

@@ -37,5 +37,4 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
 
         NonSmoothClippedBitmap = 0x43
     }
-
 }

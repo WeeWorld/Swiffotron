@@ -16,7 +16,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts.Gradients
 
         public override string ToString()
         {
-            return "[" + Colour + ", " + Ratio + "]";
+            return "[" + this.Colour + ", " + this.Ratio + "]";
         }
     }
 }

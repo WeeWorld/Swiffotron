@@ -37,11 +37,11 @@ namespace SWFProcessing.SWFModeller.Characters.Images
         {
             if (JPEGTable != null)
             {
-                return "[Image (" + this.FormattedBytes.Length + " bytes, " + DataFormat.ToString() + ", JPEGTable " + this.JPEGTable.TableData.Length + " bytes)]";
+                return "[Image (" + this.FormattedBytes.Length + " bytes, " + this.DataFormat.ToString() + ", JPEGTable " + this.JPEGTable.TableData.Length + " bytes)]";
             }
             else
             {
-                return "[Image (" + this.FormattedBytes.Length + " bytes, " + DataFormat.ToString() + ")]";
+                return "[Image (" + this.FormattedBytes.Length + " bytes, " + this.DataFormat.ToString() + ")]";
             }
         }
 #endif

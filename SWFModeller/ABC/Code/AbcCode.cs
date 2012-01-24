@@ -259,6 +259,7 @@ namespace SWFProcessing.SWFModeller.ABC
                 return this.nsConsts;
             }
         }
+
         /// <summary>Gets a count of the number of multinames there are.</summary>
         public int MultinameCount
         {
@@ -525,8 +526,7 @@ namespace SWFProcessing.SWFModeller.ABC
                 /* 25 */ this.Op(Opcode.Mnemonics.PopScope),
                 /* 26 */ this.Op(Opcode.Mnemonics.PopScope),
                 /* 27 */ this.Op(Opcode.Mnemonics.InitProperty, sprQName),
-                /* 28 */ this.Op(Opcode.Mnemonics.ReturnVoid)
-            );
+                /* 28 */ this.Op(Opcode.Mnemonics.ReturnVoid));
 
             Trait classTrait = new ClassTrait()
             {
@@ -648,6 +648,7 @@ namespace SWFProcessing.SWFModeller.ABC
                         return true;
                     }
                 }
+
                 return false;
             }
         }
@@ -701,7 +702,6 @@ namespace SWFProcessing.SWFModeller.ABC
             return this.methods[idx];
         }
 
-
         /// <param name="sourceFile">This is used when debug output is enabled. If there's a problem in the code,
         /// then the flash player will claim that there is an error in the named source file. Of course this
         /// file doesn't exist - it just needs to be something useful to help trace it back to the code
@@ -726,7 +726,6 @@ namespace SWFProcessing.SWFModeller.ABC
 
             return m;
         }
-
 
         /// <summary>
         /// Technically, from an OO perspective, this isn't the most logical place
@@ -753,6 +752,7 @@ namespace SWFProcessing.SWFModeller.ABC
                             "Invalid arg values or types in opcode " + mnemonic.ToString());
                 }
             }
+
             /* ISSUE 7: There must be some way to verify lookupswitch to some degree.
              * Update: There is. The case count must be correct and the offsets must be references
              * to preceeding Label opcodes. */
@@ -834,6 +834,7 @@ namespace SWFProcessing.SWFModeller.ABC
                     return c;
                 }
             }
+
             return null;
         }
     }

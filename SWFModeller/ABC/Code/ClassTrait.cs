@@ -16,7 +16,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
         /// <summary>
         /// Index, not a class ref coz the refs aren't available when we create these things.
         /// </summary>
-        public AS3ClassDef As3class;
+        public AS3ClassDef As3class { get; set; }
 
         /// <summary>
         /// Numeric index of a property slot on an object.
@@ -36,6 +36,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
             {
                 modifiers += " ";
             }
+
             string indent = new string(' ', nest * 4);
             sb.AppendLine(indent + "[" + this.Name + "," + this.Kind + "] " + modifiers + "class trait : " + this.As3class.Name);
 #endif

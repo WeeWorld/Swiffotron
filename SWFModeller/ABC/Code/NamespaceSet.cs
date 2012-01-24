@@ -15,8 +15,6 @@ namespace SWFProcessing.SWFModeller.ABC
     /// </summary>
     public class NamespaceSet : IEnumerable
     {
-        public static NamespaceSet EmptySet;
-
         /// <summary>
         /// The array of namespaces in the set.
         /// </summary>
@@ -43,7 +41,46 @@ namespace SWFProcessing.SWFModeller.ABC
             this.NSSet = set;
         }
 
-        public int Count { get { return this.NSSet.Length; } }
+        public static NamespaceSet EmptySet { get; set; }
+
+        public int Count
+        {
+            get
+            {
+                return this.NSSet.Length;
+            }
+        }
+
+        /// <summary>
+        /// Strictly speaking, == is for reference equality. Namespace sets though, are
+        /// meant to be unique within the code, so we're quite justified in overriding
+        /// this for convenience.
+        /// </summary>
+        /// <param name="nss1">Left hand side</param>
+        /// <param name="nss2">Right hand side</param>
+        /// <returns>True if value-equal</returns>
+        public static bool operator ==(NamespaceSet nss1, NamespaceSet nss2)
+        {
+            // If both are null, or both are same instance, return true.
+            if (System.Object.ReferenceEquals(nss1, nss2))
+            {
+                return true;
+            }
+
+            // If one is null, but not both, return false.
+            if (System.Object.ReferenceEquals(nss1, null) || System.Object.ReferenceEquals(nss2, null))
+            {
+                return false;
+            }
+
+            // Return true if the fields match:
+            return nss1.Equals(nss2);
+        }
+
+        public static bool operator !=(NamespaceSet nss1, NamespaceSet nss2)
+        {
+            return !(nss1 == nss2);
+        }
 
         /// <summary>
         /// Compares two sets for equality. Order does not matter.
@@ -94,43 +131,12 @@ namespace SWFProcessing.SWFModeller.ABC
                 int hash = 17;
                 foreach (Namespace ns in this.NSSet)
                 {
-                    hash = hash * 23 + ns.GetHashCode();
+                    hash = (hash * 23) + ns.GetHashCode();
                 }
+
                 return hash;
             }
         }
-
-        /// <summary>
-        /// Strictly speaking, == is for reference equality. Namespace sets though, are
-        /// meant to be unique within the code, so we're quite justified in overriding
-        /// this for convenience.
-        /// </summary>
-        /// <param name="nss1">Left hand side</param>
-        /// <param name="nss2">Right hand side</param>
-        /// <returns>True if value-equal</returns>
-        public static bool operator ==(NamespaceSet nss1, NamespaceSet nss2)
-        {
-            // If both are null, or both are same instance, return true.
-            if (System.Object.ReferenceEquals(nss1, nss2))
-            {
-                return true;
-            }
-
-            // If one is null, but not both, return false.
-            if (System.Object.ReferenceEquals(nss1, null) || System.Object.ReferenceEquals(nss2, null))
-            {
-                return false;
-            }
-
-            // Return true if the fields match:
-            return nss1.Equals(nss2);
-        }
-
-        public static bool operator !=(NamespaceSet nss1, NamespaceSet nss2)
-        {
-            return !(nss1 == nss2);
-        }
-
 
         /// <summary>
         /// Renders the set as a string. Used only in test/debug console output.

@@ -41,9 +41,9 @@ namespace SWFProcessing.SWFModeller.ABC.Code
     /// </summary>
     public abstract class Trait
     {
-        public Multiname Name;
+        public Multiname Name { get; set; }
 
-        public TraitKind Kind;
+        public TraitKind Kind { get; set; }
 
         /// <summary>
         /// Unit test method present in the debug build. Renders the object as text

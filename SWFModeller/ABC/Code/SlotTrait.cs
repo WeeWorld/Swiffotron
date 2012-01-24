@@ -13,11 +13,11 @@ namespace SWFProcessing.SWFModeller.ABC.Code
     /// </summary>
     public class SlotTrait : Trait, IHasSlotID
     {
-        public Multiname TypeName;
+        public Multiname TypeName { get; set; }
 
-        public ConstantKind ValKind;
+        public ConstantKind ValKind { get; set; }
 
-        public object Val;
+        public object Val { get; set; }
 
         public uint SlotID { get; set; }
 
@@ -34,6 +34,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
             {
                 modifiers += " ";
             }
+
             string indent = new string(' ', nest * 4);
             sb.AppendLine(indent + "[" + this.Name + "," + this.Kind + "] " + modifiers + "property type : [" + this.TypeName + "], val: " + this.ValKind);
 #endif

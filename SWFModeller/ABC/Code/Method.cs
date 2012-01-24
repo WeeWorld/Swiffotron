@@ -77,8 +77,11 @@ namespace SWFProcessing.SWFModeller.ABC.Code
         }
 
         public uint MaxStack { get; set; }
+
         public uint LocalCount { get; set; }
+
         public uint InitScopeDepth { get; set; }
+
         public uint MaxScopeDepth { get; set; }
 
         public string SourceFile { get; set; }
@@ -114,13 +117,43 @@ namespace SWFProcessing.SWFModeller.ABC.Code
             }
         }
 
-        public int ExceptionHandlerCount { get { return this.exceptionHandlers.Count; } }
+        /// <summary>
+        /// The number of exception handlers in this method.
+        /// </summary>
+        public int ExceptionHandlerCount
+        {
+            get
+            {
+                return this.exceptionHandlers.Count;
+            }
+        }
 
-        public IEnumerator<ExceptionHandler> ExceptionHandlers { get { return this.exceptionHandlers.GetEnumerator(); } }
+        /// <summary>
+        /// The list of all exception handlers in this method.
+        /// </summary>
+        public IEnumerator<ExceptionHandler> ExceptionHandlers
+        {
+            get
+            {
+                return this.exceptionHandlers.GetEnumerator();
+            }
+        }
 
-        public int TraitCount { get { return this.traits.Count; } }
+        public int TraitCount
+        {
+            get
+            {
+                return this.traits.Count;
+            }
+        }
 
-        public IEnumerator<Trait> Traits { get { return this.traits.GetEnumerator(); } }
+        public IEnumerator<Trait> Traits
+        {
+            get
+            {
+                return this.traits.GetEnumerator();
+            }
+        }
 
         /// <summary>
         /// The body of code to which this method belongs.
@@ -299,6 +332,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
                 /* ISSUE 12: Once we store parameter names, we can show those too. */
                 paramDefs[i] = this.paramTypes[i].ToString() + " param" + (i + 1);
             }
+
             return string.Join(", ", paramDefs);
         }
 
@@ -342,9 +376,9 @@ namespace SWFProcessing.SWFModeller.ABC.Code
                 if (op != null)
                 {
 #if(DEBUG)
-                op.numberLabel = ++opcodeIndex;
+                    op.NumberLabel = ++this.opcodeIndex;
 #endif
-                    int len = op.Mnemonic == Opcode.Mnemonics.LookupSwitch? 0 : (int)reader.Offset - offset;
+                    int len = op.Mnemonic == Opcode.Mnemonics.LookupSwitch ? 0 : (int)reader.Offset - offset;
 
                     offsetToOpcode.Add(offset, op);
                     opcodeToOffset.Add(op, offset);
@@ -363,7 +397,7 @@ namespace SWFProcessing.SWFModeller.ABC.Code
 
             this.opcodes = ops.ToArray();
 
-            foreach (Opcode hasOffsets in this.opcodes.Where(o=>o.HasOffsets))
+            foreach (Opcode hasOffsets in this.opcodes.Where(o => o.HasOffsets))
             {
                 hasOffsets.OffsetProc(delegate(object arg)
                 {

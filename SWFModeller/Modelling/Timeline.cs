@@ -21,9 +21,13 @@ namespace SWFProcessing.SWFModeller.Modelling
     /// </summary>
     public abstract class Timeline
     {
-        protected List<Frame> frames = new List<Frame>();
+        public delegate void FontProcessor(SWFFont font);
 
-        protected List<Layer> layers = new List<Layer>();
+        public delegate void CharacterProcessor(ICharacter character);
+
+        protected List<Frame> FrameList = new List<Frame>();
+
+        protected List<Layer> LayerList = new List<Layer>();
 
         public AS3Class Class { get; set; }
 
@@ -39,20 +43,20 @@ namespace SWFProcessing.SWFModeller.Modelling
         {
             get
             {
-                if (this.frames == null)
+                if (this.FrameList == null)
                 {
                     return 0;
                 }
 
-                return (uint)this.frames.Count;
+                return (uint)this.FrameList.Count;
             }
 
             set
             {
-                this.frames = new List<Frame>((int)value);
+                this.FrameList = new List<Frame>((int)value);
                 for (int i = 0; i < value; i++)
                 {
-                    this.frames.Add(new Frame());
+                    this.FrameList.Add(new Frame());
                 }
             }
         }
@@ -61,15 +65,11 @@ namespace SWFProcessing.SWFModeller.Modelling
         {
             get
             {
-                return this.layers.Count;
+                return this.LayerList.Count;
             }
         }
 
         public abstract SWF Root { get; }
-
-        public delegate void FontProcessor(SWFFont font);
-
-        public delegate void CharacterProcessor(ICharacter character);
 
         /// <summary>
         /// Gets an iterable list of frames.
@@ -78,7 +78,7 @@ namespace SWFProcessing.SWFModeller.Modelling
         {
             get
             {
-                return this.frames.AsEnumerable();
+                return this.FrameList.AsEnumerable();
             }
         }
 
@@ -89,7 +89,7 @@ namespace SWFProcessing.SWFModeller.Modelling
         {
             get
             {
-                return this.layers.AsEnumerable();
+                return this.LayerList.AsEnumerable();
             }
         }
 
@@ -101,12 +101,12 @@ namespace SWFProcessing.SWFModeller.Modelling
         /// <returns>A frame at the desired index.</returns>
         public Frame GetFrame(int idx)
         {
-            while (this.frames.Count < idx)
+            while (this.FrameList.Count < idx)
             {
-                this.frames.Add(new Frame());
+                this.FrameList.Add(new Frame());
             }
 
-            return this.frames[idx - 1];
+            return this.FrameList[idx - 1];
         }
 
         public Layer GetFreeLayer(Layer.Position position)
@@ -115,7 +115,7 @@ namespace SWFProcessing.SWFModeller.Modelling
             {
                 case Layer.Position.Front:
                     Layer l = new Layer(this);
-                    this.layers.Add(l);
+                    this.LayerList.Add(l);
                     return l;
 
                 case Layer.Position.Back:
@@ -130,9 +130,9 @@ namespace SWFProcessing.SWFModeller.Modelling
         {
             int idx = -1;
 
-            if (this.layers != null)
+            if (this.LayerList != null)
             {
-                idx = this.layers.FindIndex(l => l == layer);
+                idx = this.LayerList.FindIndex(l => l == layer);
             }
 
             if (idx == -1)
@@ -156,25 +156,25 @@ namespace SWFProcessing.SWFModeller.Modelling
                         "Negative depth is as yet unsupported.");
             }
 
-            if (depth < this.layers.Count)
+            if (depth < this.LayerList.Count)
             {
-                return this.layers[depth];
+                return this.LayerList[depth];
             }
 
             do
             {
-                this.layers.Add(new Layer(this));
+                this.LayerList.Add(new Layer(this));
             }
-            while (this.layers.Count <= depth);
+            while (this.LayerList.Count <= depth);
 
-            return this.layers[depth];
+            return this.LayerList[depth];
         }
 
         public void FontProc(FontProcessor fd)
         {
             /* If you like delegate methods, you'll love this. */
 
-            foreach (Frame f in frames)
+            foreach (Frame f in FrameList)
             {
                 foreach (IDisplayListItem dl in f.DisplayList)
                 {
@@ -206,7 +206,7 @@ namespace SWFProcessing.SWFModeller.Modelling
 
         public void CharacterProc(CharacterProcessor cp)
         {
-            foreach (Frame f in frames)
+            foreach (Frame f in FrameList)
             {
                 foreach (IDisplayListItem dl in f.DisplayList)
                 {
@@ -277,7 +277,7 @@ namespace SWFProcessing.SWFModeller.Modelling
             /* ISSUE 71: The unit test for this has no RemoveObject dli items in it, so we don't really
              * know if the crazy timeline searching found here actually works. Make a harsher test. */
 
-            foreach (Frame f in frames)
+            foreach (Frame f in FrameList)
             {
                 foreach (IDisplayListItem dli in f.DisplayList)
                 {

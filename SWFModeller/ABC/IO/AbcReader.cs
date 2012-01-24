@@ -17,7 +17,6 @@ namespace SWFProcessing.SWFModeller.ABC.IO
     /// </summary>
     public class AbcReader
     {
-
         private AbcCode code;
         private ABCDataTypeReader abcdtr;
 
@@ -29,7 +28,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
         /// Turns bytecode into an AbcCode object.
         /// </summary>
         /// <param name="bytecode">The bytecode, as chopped out of a SWF.</param>
-        /// <param name="dbugConstFilter">Ignored in release builds. This calls back
+        /// <param name="readLog">Ignored in release builds. This logs
         /// on every constant value read for unit test inspection.</param>
         /// <returns>A string rendition of the bytecode.</returns>
         public AbcCode Read(byte[] bytecode, StringBuilder readLog)
@@ -191,6 +190,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                     {
                         name = this.code.StringConsts[sidx];
                     }
+
                     ns = this.code.CreateNamespace(kind, name);
                 }
                 else
@@ -280,6 +280,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                                 SWFModellerError.ABCParsing,
                                 "Bad multiname kind in ABC data.");
                 }
+
                 Multiname mn = this.code.CreateMultiname(kind, name, ns, set);
 #if DEBUG
                 if (this.ReadLog != null)
@@ -352,7 +353,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
 #endif
                 }
 
-                m.Name = ReadString();
+                m.Name = this.ReadString();
                 m.Flags = this.abcdtr.ReadUI8();
 #if DEBUG
                 if (this.ReadLog != null)
@@ -392,7 +393,7 @@ namespace SWFProcessing.SWFModeller.ABC.IO
             for (int i = 0; i < mdcount; i++)
             {
                 /* The AVM ignores metadata, so so do we. */
-                string group = ReadString();
+                string group = this.ReadString();
 #if DEBUG
                 if (this.ReadLog != null)
                 {
@@ -402,8 +403,8 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                 uint itemCount = this.abcdtr.ReadU30();
                 while (itemCount-- > 0)
                 {
-                    string key = ReadString();
-                    string val = ReadString();
+                    string key = this.ReadString();
+                    string val = this.ReadString();
 #if DEBUG
                     if (this.ReadLog != null)
                     {
@@ -604,11 +605,13 @@ namespace SWFProcessing.SWFModeller.ABC.IO
                     {
                         mt.OverriddenMethod = this.code.GetMethod((int)dispID);
                     }
+
                     mt.Fn = this.code.GetMethod((int)this.abcdtr.ReadU30());
 
                     t = mt;
                     break;
             }
+
             return t;
         }
 

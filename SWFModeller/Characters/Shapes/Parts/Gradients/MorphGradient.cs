@@ -4,7 +4,6 @@
 //
 //-----------------------------------------------------------------------
 
-
 namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts.Gradients
 {
     public class MorphGradient : IGradient

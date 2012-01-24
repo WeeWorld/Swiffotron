@@ -80,8 +80,10 @@ namespace SWFProcessing.SWFModeller
         /// Initializes a new instance of a SWF with the same defaults as the
         /// Flash IDE.
         /// </summary>
-        /// <param name="name">An optional name intended solely to give error messages
+        /// <param name="ctx">An optional object intended solely to give error messages
         /// some context.</param>
+        /// <param name="generateScripts">True if you want to generate the default
+        /// timeline scripts.</param>
         public SWF(SWFContext ctx, bool generateScripts)
         {
             this.Context = ctx;
@@ -116,7 +118,7 @@ namespace SWFProcessing.SWFModeller
         /// <summary>
         /// A delegate declaration for a script processor. See ScriptProc
         /// </summary>
-        /// <param name="clazz">Each script will be passed into the delegate.</param>
+        /// <param name="abc">Each script will be passed into the delegate.</param>
         public delegate void ScriptProcessor(DoABC abc);
 
         /// <summary>
@@ -402,9 +404,9 @@ namespace SWFProcessing.SWFModeller
 
             int frameIdx = 1;
 
-            if (this.frames != null)
+            if (this.FrameList != null)
             {
-                foreach (Frame f in this.frames)
+                foreach (Frame f in this.FrameList)
                 {
                     StringBuilder frameSB = new StringBuilder();
                     f.ToStringModelView(nest + 1, frameSB);
@@ -474,7 +476,7 @@ namespace SWFProcessing.SWFModeller
             PlaceObject po = null;
             ICharacter c = null;
 
-            foreach (Frame f in this.frames)
+            foreach (Frame f in this.FrameList)
             {
                 po = f.FindInstance(path[0]);
 

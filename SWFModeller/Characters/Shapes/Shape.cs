@@ -15,14 +15,6 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes
 
     public class Shape : IShape
     {
-        /// <param name="shapeData">The shape data.</param>
-        /// <param name="fontType">The data format</param>
-        public void SetOriginalBytes(byte[] shapeData, Tag format)
-        {
-            this.OriginalBytes = shapeData;
-            this.OriginalFormat = format;
-        }
-
         public byte[] OriginalBytes { get; set; }
 
         public Tag OriginalFormat { get; set; }
@@ -36,6 +28,14 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes
         public Rect Bounds { get; set; }
 
         public ShapeDef ShapeDef { get; set; }
+
+        /// <param name="shapeData">The shape data.</param>
+        /// <param name="format">The data format</param>
+        public void SetOriginalBytes(byte[] shapeData, Tag format)
+        {
+            this.OriginalBytes = shapeData;
+            this.OriginalFormat = format;
+        }
 
         public IImage[] GetImages()
         {
@@ -101,6 +101,5 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes
         {
             return "[Shape " + OriginalFormat.ToString() + ":" + OriginalBytes.Length + " bytes]";
         }
-
     }
 }

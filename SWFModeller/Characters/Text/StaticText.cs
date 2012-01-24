@@ -55,6 +55,7 @@ namespace SWFProcessing.SWFModeller.Characters.Text
                 {
                     sb.Append('\n');
                 }
+
                 TextRecord tr = Records[i];
                 tr.ToStringModelView(nest + 1, sb);
             }
@@ -86,6 +87,7 @@ namespace SWFProcessing.SWFModeller.Characters.Text
                         return true;
                     }
                 }
+
                 return false;
             }
         }

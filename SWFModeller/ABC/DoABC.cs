@@ -18,6 +18,25 @@ namespace SWFProcessing.SWFModeller.ABC
     /// </summary>
     public class DoABC
     {
+        /// <summary>
+        /// Initializes a new instance of a bytecode block.
+        /// </summary>
+        /// <param name="lazyInit">Instruct the VM to use lazy initialization on
+        /// this block.</param>
+        /// <param name="name">The name of the block</param>
+        /// <param name="bytecode">The raw bytecode data.</param>
+        /// <param name="abcReadLog">Ignored in release builds. Logs the parsing of the ABC
+        /// file.</param>
+        public DoABC(bool lazyInit, string name, byte[] bytecode, StringBuilder abcReadLog)
+        {
+            this.IsLazilyInitialized = lazyInit;
+            this.Name = name;
+            this.bytecode = bytecode;
+#if DEBUG
+            this.AbcReadLog = abcReadLog;
+#endif
+        }
+
         private byte[] bytecode = null;
 
         private AbcCode code = null;
@@ -34,31 +53,13 @@ namespace SWFProcessing.SWFModeller.ABC
         {
             get
             {
-                if (bytecode == null)
+                if (this.bytecode == null)
                 {
                     return true;
                 }
-                return code.IsTampered;
-            }
-        }
 
-        /// <summary>
-        /// Initializes a new instance of a bytecode block.
-        /// </summary>
-        /// <param name="lazyInit">Instruct the VM to use lazy initialization on
-        /// this block.</param>
-        /// <param name="name">The name of the block</param>
-        /// <param name="bytecode">The raw bytecode data.</param>
-        /// <param name="dbugConstFilter">Ignored in release builds. See AbcReader.DebugConstantFilter
-        /// for details.</param>
-        public DoABC(bool lazyInit, string name, byte[] bytecode, StringBuilder abcReadLog)
-        {
-            this.IsLazilyInitialized = lazyInit;
-            this.Name = name;
-            this.bytecode = bytecode;
-#if DEBUG
-            this.AbcReadLog = abcReadLog;
-#endif
+                return this.code.IsTampered;
+            }
         }
 
         /// <summary>
@@ -102,6 +103,7 @@ namespace SWFProcessing.SWFModeller.ABC
                 {
                     this.code = new AbcReader().Read(this.bytecode, this.AbcReadLog);
                 }
+
                 return this.code;
             }
         }
@@ -165,6 +167,7 @@ namespace SWFProcessing.SWFModeller.ABC
                             "Class name collision on " + clazz.Name,
                             ctx.Sentinel("ClassNameCollision"));
                 }
+
                 thisCode.AddClass(clazz);
             }
         }
@@ -259,8 +262,7 @@ namespace SWFProcessing.SWFModeller.ABC
                 abc.Op(Opcode.Mnemonics.PopScope),
                 abc.Op(Opcode.Mnemonics.PopScope),
                 abc.Op(Opcode.Mnemonics.InitProperty, timelineClass.Name),
-                abc.Op(Opcode.Mnemonics.ReturnVoid)
-            );
+                abc.Op(Opcode.Mnemonics.ReturnVoid));
         }
 
         /// <summary>
@@ -280,6 +282,7 @@ namespace SWFProcessing.SWFModeller.ABC
                         "A generated timeline class must have a package name.",
                         ctx.Sentinel("TimelineDefaultPackage"));
             }
+
             string packageName = qClassName.Substring(0, splitPos);
             string className = qClassName.Substring(splitPos + 1);
 
@@ -312,8 +315,7 @@ namespace SWFProcessing.SWFModeller.ABC
 
                 abc.Op(Opcode.Mnemonics.GetLocal0),
                 abc.Op(Opcode.Mnemonics.PushScope),
-                abc.Op(Opcode.Mnemonics.ReturnVoid)
-            );
+                abc.Op(Opcode.Mnemonics.ReturnVoid));
 
             newClass.Iinit = abc.CreateMethod(className + "ClassInit.abc", 1, 1, 10, 11,
 
@@ -326,8 +328,7 @@ namespace SWFProcessing.SWFModeller.ABC
                 abc.Op(Opcode.Mnemonics.GetLocal0),
                 abc.Op(Opcode.Mnemonics.ConstructSuper, 0U),
 
-                abc.Op(Opcode.Mnemonics.ReturnVoid)
-            );
+                abc.Op(Opcode.Mnemonics.ReturnVoid));
 
             return newClass;
         }

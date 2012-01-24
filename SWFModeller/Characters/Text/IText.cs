@@ -4,7 +4,6 @@
 //
 //-----------------------------------------------------------------------
 
-
 namespace SWFProcessing.SWFModeller.Characters.Text
 {
     public interface IText
