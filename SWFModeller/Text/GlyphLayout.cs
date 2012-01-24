@@ -4,7 +4,6 @@
 //
 //-----------------------------------------------------------------------
 
-
 namespace SWFProcessing.SWFModeller.Text
 {
     using SWFProcessing.SWFModeller.Characters.Geom;
@@ -17,7 +16,7 @@ namespace SWFProcessing.SWFModeller.Text
 
         public override string ToString()
         {
-            return "[Adv: " + Advance + ", Bounds: " + Bounds + "]";
+            return "[Adv: " + this.Advance + ", Bounds: " + this.Bounds + "]";
         }
     }
 }

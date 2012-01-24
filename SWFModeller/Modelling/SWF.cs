@@ -67,15 +67,6 @@ namespace SWFProcessing.SWFModeller
         /// </summary>
         private Dictionary<AS3ClassDef, Timeline> clipClassMap;
 
-        public bool HasMainTimelineClass
-        {
-            get
-            {
-                return true;
-            }
-        }
-
-
         /// <summary>
         /// Initializes a new instance of a SWF with the same defaults as the
         /// Flash IDE.
@@ -126,6 +117,14 @@ namespace SWFProcessing.SWFModeller
         /// </summary>
         /// <param name="clazz">Each class will be passed into the delegate.</param>
         public delegate void ClassProcessor(AS3ClassDef clazz);
+
+        public bool HasMainTimelineClass
+        {
+            get
+            {
+                return true;
+            }
+        }
 
         /// <summary>
         /// Gets the root timeline.
@@ -326,7 +325,7 @@ namespace SWFProcessing.SWFModeller
                 return;
             }
 
-            this.scripts[0].Merge(abc, Context);
+            this.scripts[0].Merge(abc, this.Context);
         }
 
 #if(DEBUG)
@@ -432,14 +431,15 @@ namespace SWFProcessing.SWFModeller
                 abc.ToStringModelView(nest, sb);
             }
 
-            if (fonts.Count > 0)
+            if (this.fonts.Count > 0)
             {
                 sb.Append(indent + "Fonts\n");
                 sb.Append(indent + "{\n");
-                foreach (SWFFont font in fonts)
+                foreach (SWFFont font in this.fonts)
                 {
                     font.ToStringModelView(nest + 1, sb);
                 }
+
                 sb.Append(indent + "}\n");
             }
 
@@ -602,9 +602,42 @@ namespace SWFProcessing.SWFModeller
             }
 
             string flaName = this.Context.Name.Replace('.', '_') + "_swiffotron";
-            string qClassName = flaName + ".MainTimeline";
+            string qualClassName = flaName + ".MainTimeline";
 
-            this.scripts.Add(DoABC.GenerateDefaultScript(qClassName, this));
+            this.scripts.Add(DoABC.GenerateDefaultScript(qualClassName, this));
+        }
+
+        /// <summary>
+        /// Does a search and replace on strings used in the actionscript code.
+        /// </summary>
+        /// <param name="find">The text to find.</param>
+        /// <param name="replace">The new text to replace it with.</param>
+        public void TextReplaceInCode(string find, string replace)
+        {
+            this.MarkCodeAsTampered();
+            this.MethodProc(delegate(Method m, AS3ClassDef c)
+            {
+                m.OpcodeFilter(delegate(ref Opcode op, AbcCode abc)
+                {
+                    for (int i = 0; i < op.Args.Length; i++)
+                    {
+                        if (op.Args[i] is string)
+                        {
+                            op.Args[i] = op.Args[i].ToString().Replace(find, replace);
+                        }
+                    }
+                });
+            });
+        }
+
+        /// <summary>
+        /// Gets a character from the internal dictionary.
+        /// </summary>
+        /// <param name="id">The id of the character to fetch.</param>
+        /// <returns>A character, which must exist.</returns>
+        public ICharacter GetCharacter(string id)
+        {
+            return this.dictionary[id];
         }
 
         /// <summary>
@@ -635,7 +668,6 @@ namespace SWFProcessing.SWFModeller
             {
                 throw new SWFModellerException(SWFModellerError.Internal, "MainTimeline class is an in-built class, which is impossible.");
             }
-
 
             int splitPos = classQName.LastIndexOf('.');
 
@@ -868,38 +900,12 @@ namespace SWFProcessing.SWFModeller
         }
 
         /// <summary>
-        /// Runs a delegate function over every method in the SWF.
+        /// Adds a font to the SWF.
         /// </summary>
-        /// <param name="mp">The delegate to run.</param>
-        private void MethodProc(AbcCode.MethodProcessor mp)
+        /// <param name="font">The font.</param>
+        internal void AddFont(SWFFont font)
         {
-            foreach (DoABC script in this.scripts)
-            {
-                script.MethodProc(mp);
-            }
-        }
-
-        /// <summary>
-        /// Does a search and replace on strings used in the actionscript code.
-        /// </summary>
-        /// <param name="find">The text to find.</param>
-        /// <param name="replace">The new text to replace it with.</param>
-        public void TextReplaceInCode(string find, string replace)
-        {
-            MarkCodeAsTampered();
-            MethodProc(delegate(Method m, AS3ClassDef c)
-            {
-                m.OpcodeFilter(delegate(ref Opcode op, AbcCode abc)
-                {
-                    for (int i = 0; i < op.Args.Length; i++)
-                    {
-                        if (op.Args[i] is string)
-                        {
-                            op.Args[i] = op.Args[i].ToString().Replace(find, replace);
-                        }
-                    }
-                });
-            });
+            this.fonts.Add(font);
         }
 
         /// <summary>
@@ -920,6 +926,7 @@ namespace SWFProcessing.SWFModeller
                     {
                         mainClassProcessed = true;
                     }
+
                     cp(c);
                 }
             }
@@ -931,22 +938,15 @@ namespace SWFProcessing.SWFModeller
         }
 
         /// <summary>
-        /// Adds a font to the SWF.
+        /// Runs a delegate function over every method in the SWF.
         /// </summary>
-        /// <param name="font">The font.</param>
-        internal void AddFont(SWFFont font)
+        /// <param name="mp">The delegate to run.</param>
+        private void MethodProc(AbcCode.MethodProcessor mp)
         {
-            fonts.Add(font);
-        }
-
-        /// <summary>
-        /// Gets a character from the internal dictionary.
-        /// </summary>
-        /// <param name="id">The id of the character to fetch.</param>
-        /// <returns>A character, which must exist.</returns>
-        public ICharacter GetCharacter(string id)
-        {
-            return this.dictionary[id];
+            foreach (DoABC script in this.scripts)
+            {
+                script.MethodProc(mp);
+            }
         }
     }
 }

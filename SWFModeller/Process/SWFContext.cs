@@ -24,11 +24,12 @@ namespace SWFProcessing.SWFModeller.Process
             {
                 name = "untitled";
             }
+
             this.Name = name;
         }
 
         /// <summary>
-        /// What file are we working on?
+        /// Gets or sets the name of the file we are working on.
         /// </summary>
         public string Name { get; set; }
 

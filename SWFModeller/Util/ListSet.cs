@@ -80,7 +80,7 @@ namespace SWFProcessing.SWFModeller.Util
                 return;
             }
 
-            Add(ob);
+            this.Add(ob);
         }
 
         /// <summary>
