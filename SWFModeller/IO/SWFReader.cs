@@ -119,7 +119,9 @@ namespace SWFProcessing.SWFModeller
             switch ((Tag)type)
             {
                 case Tag.End:
+#if DEBUG
                     this.binaryDumpNest--;
+#endif
                     return false;
 
                 case Tag.ShowFrame:
@@ -241,7 +243,9 @@ namespace SWFProcessing.SWFModeller
             }
 
             this.FinishTag(followingOffset);
+#if DEBUG
             this.binaryDumpNest--;
+#endif
 
             return true;
         }
@@ -1110,7 +1114,9 @@ namespace SWFProcessing.SWFModeller
                                     @"Frame count mismatch in sprite " + characterID, swf.Context);
                         }
                         this.currentTimeline = this.swf;
+#if DEBUG
                         this.binaryDumpNest--;
+#endif
                         return;
 
                     case Tag.PlaceObject2:
@@ -1148,7 +1154,9 @@ namespace SWFProcessing.SWFModeller
                                 SWFModellerError.SWFParsing,
                                 @"Bad SWF; A " + ((Tag)type).ToString() + @" tag is not permitted within a sprite definition", swf.Context);
                 }
+#if DEBUG
                 this.binaryDumpNest--;
+#endif
             }
         }
 
