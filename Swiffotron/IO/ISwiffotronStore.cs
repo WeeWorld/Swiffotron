@@ -15,7 +15,7 @@ namespace SWFProcessing.Swiffotron.IO
     public interface ISwiffotronStore
     {
         /// <summary>
-        /// Returns the string that was passed into Initialise
+        /// Gets the string that was passed into Initialise
         /// </summary>
         string InitialisedWith { get; }
 

@@ -20,6 +20,9 @@ namespace SWFProcessing.Swiffotron.IO
         /// </summary>
         private Dictionary<string, object> cache;
 
+        /// <summary>
+        /// Gets the string that was passed into Initialise
+        /// </summary>
         public string InitialisedWith { get; private set; }
 
         /// <summary>

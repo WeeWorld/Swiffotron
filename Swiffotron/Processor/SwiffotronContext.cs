@@ -6,6 +6,10 @@
 
 namespace SWFProcessing.Swiffotron.Processor
 {
+    /// <summary>
+    /// The context within which the current swiffotron job is running, so that we
+    /// can create better log information.
+    /// </summary>
     public class SwiffotronContext
     {
         public SwiffotronContext(string name)
@@ -26,6 +30,7 @@ namespace SWFProcessing.Swiffotron.Processor
         /// </summary>
         public string Name { get; set; }
 
+        /// <see cref="Sentinel"/>
         public string SentinelString { get; set; }
 
         public override string ToString()
@@ -42,6 +47,9 @@ namespace SWFProcessing.Swiffotron.Processor
         /// Secret sentinel strings have the advantages of being easy to make up on
         /// the spot and immunity to internationalisation, which makes them better
         /// than methods that compare error messages, which can change on a whim.
+        /// To mark a moment in the code, access the context object via this method
+        /// like this:
+        /// myContext.Sentinel("My meaningful string"); // returns myContext
         /// </summary>
         /// <param name="sentinelLabel">An arbitrary string.</param>
         /// <returns>The modified context.</returns>

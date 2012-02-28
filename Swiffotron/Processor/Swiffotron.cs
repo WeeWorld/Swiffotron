@@ -184,9 +184,21 @@ namespace SWFProcessing.Swiffotron
 #if(DEBUG)
         /* We could use MSTest's private access, but we want the express versions
          * to be in on the fun too. Horrible, but there you go. */
-        public Dictionary<string, ISwiffotronStore> stores_accessor { get { return this.stores; } }
+        public Dictionary<string, ISwiffotronStore> stores_accessor
+        {
+            get
+            {
+                return this.stores;
+            }
+        }
 
-        public Dictionary<string, ISwiffotronCache> caches_accessor { get { return this.caches; } }
+        public Dictionary<string, ISwiffotronCache> caches_accessor
+        {
+            get
+            {
+                return this.caches;
+            }
+        }
 #endif
 
         /* ISSUE 55: Would be good to also store a 'processedSWFsRenderedAsMovieClips' so that
@@ -308,6 +320,8 @@ namespace SWFProcessing.Swiffotron
         /// Process a job XML file.
         /// </summary>
         /// <param name="xml">An open stream to the XML data.</param>
+        /// <param name="commitStore">If not null, this will hold all store commits made
+        /// by this job.</param>
         /// <param name="writeLog">Ignored in release builds. This will accumulate a
         /// log of write operations into the output SWF file(s).</param>
         /// <param name="abcWriteLog">A log of write events to ABC data within the
@@ -318,8 +332,6 @@ namespace SWFProcessing.Swiffotron
         /// <param name="readLogHandler">Ignored in release builds. Whenever
         /// the Swiffotron reads a SWF file, this is called so that it can dump read
         /// operations to a log.</param>
-        /// <param name="commitStore">If not null, this will hold all store commits made
-        /// by this job.</param>
         public void Process(
                 Stream xml,
                 Dictionary<string, byte[]> commitStore = null,
@@ -1875,24 +1887,6 @@ namespace SWFProcessing.Swiffotron
             this.caches.Add(name, newCache);
         }
 
-        /// <summary>
-        /// Loads a swiffotron job XML file, validates it and sets the current
-        /// namespace manager so that we can do XPath queries in the 'swf' namespace.
-        /// </summary>
-        /// <param name="swiffotronXml">A stream feeding XML data.</param>
-        /// <returns>The DOM of the swiffotron job XML.</returns>
-        private XPathNavigator LoadSwiffotronXML(Stream swiffotronXml)
-        {
-            XmlDocument doc = new XmlDocument();
-
-            doc.Load(XmlReader.Create(swiffotronXml, swiffotronReaderSettings));
-
-            this.namespaceMgr = new XmlNamespaceManager(doc.NameTable);
-            this.namespaceMgr.AddNamespace(@"swf", SwiffotronNS);
-
-            return doc.CreateNavigator();
-        }
-
 #if(DEBUG)
         public XPathNavigator LoadSwiffotronXML_accesor(Stream swiffotronXml)
         {
@@ -1937,6 +1931,24 @@ namespace SWFProcessing.Swiffotron
             info.Add("StoreClasses", string.Join(",", storeClasses.ToArray()));
 
             return info;
+        }
+
+        /// <summary>
+        /// Loads a swiffotron job XML file, validates it and sets the current
+        /// namespace manager so that we can do XPath queries in the 'swf' namespace.
+        /// </summary>
+        /// <param name="swiffotronXml">A stream feeding XML data.</param>
+        /// <returns>The DOM of the swiffotron job XML.</returns>
+        private XPathNavigator LoadSwiffotronXML(Stream swiffotronXml)
+        {
+            XmlDocument doc = new XmlDocument();
+
+            doc.Load(XmlReader.Create(swiffotronXml, swiffotronReaderSettings));
+
+            this.namespaceMgr = new XmlNamespaceManager(doc.NameTable);
+            this.namespaceMgr.AddNamespace(@"swf", SwiffotronNS);
+
+            return doc.CreateNavigator();
         }
     }
 }

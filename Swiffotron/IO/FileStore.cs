@@ -18,6 +18,10 @@ namespace SWFProcessing.Swiffotron.IO
         /// </summary>
         private string basePath = string.Empty;
 
+        /// <summary>
+        /// Gets the string this store was initialised with in the config xml
+        /// for debug output purposes when it all goes wrong.
+        /// </summary>
         public string InitialisedWith { get; private set; }
 
         /// <summary>

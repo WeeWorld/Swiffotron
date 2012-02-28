@@ -14,7 +14,10 @@ namespace SWFProcessing.SWFModeller.ABC.Code
         /// <summary>Gets or sets the class name</summary>
         public Multiname Name { get; set; }
 
-        /// <summary>The name as a string, i.e. in dotted form qualified by namespace, e.g. com.swiffotron.MyClass</summary>
+        /// <summary>
+        /// Gets the name as a string, i.e. in dotted form qualified by namespace,
+        /// e.g. com.swiffotron.MyClass
+        /// </summary>
         public string QualifiedName
         {
             get
