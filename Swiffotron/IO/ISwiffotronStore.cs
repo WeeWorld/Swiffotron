@@ -15,6 +15,11 @@ namespace SWFProcessing.Swiffotron.IO
     public interface ISwiffotronStore
     {
         /// <summary>
+        /// Returns the string that was passed into Initialise
+        /// </summary>
+        string InitialisedWith { get; }
+
+        /// <summary>
         /// Called on creation of the store object.
         /// </summary>
         /// <param name="init">An implementation-specific initialisation
@@ -51,10 +56,5 @@ namespace SWFProcessing.Swiffotron.IO
         /// <returns>A stream to read from, or null of the stored object doesn't
         /// exist.</returns>
         Stream OpenInput(string id);
-
-        /// <summary>
-        /// Returns the string that was passed into Initialise
-        /// </summary>
-        string InitialisedWith { get; }
     }
 }

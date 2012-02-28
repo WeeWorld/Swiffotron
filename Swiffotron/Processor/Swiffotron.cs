@@ -184,9 +184,9 @@ namespace SWFProcessing.Swiffotron
 #if(DEBUG)
         /* We could use MSTest's private access, but we want the express versions
          * to be in on the fun too. Horrible, but there you go. */
-        public Dictionary<string, ISwiffotronStore> stores_accessor { get { return stores; } }
+        public Dictionary<string, ISwiffotronStore> stores_accessor { get { return this.stores; } }
 
-        public Dictionary<string, ISwiffotronCache> caches_accessor { get { return caches; } }
+        public Dictionary<string, ISwiffotronCache> caches_accessor { get { return this.caches; } }
 #endif
 
         /* ISSUE 55: Would be good to also store a 'processedSWFsRenderedAsMovieClips' so that
@@ -283,11 +283,11 @@ namespace SWFProcessing.Swiffotron
         /// use default configuration.</param>
         public Swiffotron(Stream configStream)
         {
-            configReaderSettings = CreateValidationSettings(@"swiffotron-config.xsd");
-            swiffotronReaderSettings = CreateValidationSettings(@"swiffotron.xsd");
+            this.configReaderSettings = this.CreateValidationSettings(@"swiffotron-config.xsd");
+            this.swiffotronReaderSettings = this.CreateValidationSettings(@"swiffotron.xsd");
 
-            caches = new Dictionary<string, ISwiffotronCache>();
-            stores = new Dictionary<string, ISwiffotronStore>();
+            this.caches = new Dictionary<string, ISwiffotronCache>();
+            this.stores = new Dictionary<string, ISwiffotronStore>();
 
             if (configStream == null)
             {
@@ -665,7 +665,7 @@ namespace SWFProcessing.Swiffotron
             string find = findNode.Value;
 
             XPathNavigator replaceNode = nav.SelectSingleNode(@"swf:replace/text()", this.namespaceMgr);
-            string replace = replaceNode==null?string.Empty:replaceNode.Value;
+            string replace = replaceNode == null ? string.Empty : replaceNode.Value;
 
             foreach (XPathNavigator loc in nav.SelectChildren(@"location", SwiffotronNS))
             {
@@ -681,7 +681,7 @@ namespace SWFProcessing.Swiffotron
                         Timeline[] clips = new Timeline[] { swf };
                         if (path != "*")
                         {
-                            clips = SpritesFromQname(path, swf, true);
+                            clips = this.SpritesFromQname(path, swf, true);
                         }
 
                         foreach (Timeline clip in clips)
@@ -721,7 +721,7 @@ namespace SWFProcessing.Swiffotron
             string qname = nav.GetAttribute(AttrQName, string.Empty);
 
             string uname;
-            Timeline parent = QNameToTimeline(qname, swf, out uname);
+            Timeline parent = this.QNameToTimeline(qname, swf, out uname);
 
             if (!parent.RemoveInstance(uname))
             {
@@ -807,9 +807,10 @@ namespace SWFProcessing.Swiffotron
                 case ValInstance:
                     if (className != string.Empty)
                     {
-                        throw new SwiffotronException(SwiffotronError.BadInputXML,
+                        throw new SwiffotronException(
+                                SwiffotronError.BadInputXML,
                                 this.Context.Sentinel("ClassNameInClonedInstance"),
-                                "An instance cannot be given a new classname if it is a clone of an existing instance ("+className+")");
+                                "An instance cannot be given a new classname if it is a clone of an existing instance (" + className + ")");
                     }
 
                     Sprite srcSprite = this.SpritesFromQname(src, swf, false)[0];
@@ -858,11 +859,11 @@ namespace SWFProcessing.Swiffotron
                 swf.GenerateTimelineScripts();
             }
 
-            bool isAdobeClassname = (className.StartsWith("flash.")
-                || (className.StartsWith("fl."))
-                || (className.StartsWith("adobe."))
-                || (className.StartsWith("air."))
-                || (className.StartsWith("flashx.")));
+            bool isAdobeClassname = className.StartsWith("flash.")
+                || className.StartsWith("fl.")
+                || className.StartsWith("adobe.")
+                || className.StartsWith("air.")
+                || className.StartsWith("flashx.");
 
             if (isAdobeClassname && importSwf.HasClass)
             {
@@ -1107,7 +1108,7 @@ namespace SWFProcessing.Swiffotron
         private void CreateInstanceIn(string qname, SWF swf, XPathNavigator transform, Sprite charToInstantiate, string qClassName)
         {
             string newInsName;
-            Timeline parent = QNameToTimeline(qname, swf, out newInsName);
+            Timeline parent = this.QNameToTimeline(qname, swf, out newInsName);
 
             string relativeToQname = transform.GetAttribute(AttrRelativeTo, string.Empty);
             Matrix m = null;
@@ -1571,7 +1572,7 @@ namespace SWFProcessing.Swiffotron
 
                 string storeId = storeURI.Host;
 
-                if (!stores.ContainsKey(storeId))
+                if (!this.stores.ContainsKey(storeId))
                 {
                     throw new SwiffotronException(
                             SwiffotronError.BadInputXML,
@@ -1579,7 +1580,7 @@ namespace SWFProcessing.Swiffotron
                             @"Store '" + storeId + @"' not registered.");
                 }
 
-                ISwiffotronStore store = stores[storeId];
+                ISwiffotronStore store = this.stores[storeId];
 
                 key = storeURI.AbsolutePath.Substring(1);
 
@@ -1622,7 +1623,7 @@ namespace SWFProcessing.Swiffotron
 
             string storeId = storeURI.Host;
 
-            if (!stores.ContainsKey(storeId))
+            if (!this.stores.ContainsKey(storeId))
             {
                 throw new SwiffotronException(
                         SwiffotronError.BadInputXML,
@@ -1632,14 +1633,15 @@ namespace SWFProcessing.Swiffotron
 
             try
             {
-                return stores[storeId].OpenInput(storeURI.LocalPath.Substring(1));
+                return this.stores[storeId].OpenInput(storeURI.LocalPath.Substring(1));
             }
             catch (FileNotFoundException fnfe)
             {
                 throw new SwiffotronException(
                         SwiffotronError.BadPathOrID,
                         this.Context.Sentinel("FileNotFoundInStore"),
-                        "File not found: " + key, fnfe);
+                        "File not found: " + key,
+                        fnfe);
             }
         }
 
@@ -1663,7 +1665,7 @@ namespace SWFProcessing.Swiffotron
             string cacheId = key.Substring(0, pos);
             key = key.Substring(pos + 1);
 
-            if (!caches.ContainsKey(cacheId))
+            if (!this.caches.ContainsKey(cacheId))
             {
                 throw new SwiffotronException(
                         SwiffotronError.BadInputXML,
@@ -1671,7 +1673,7 @@ namespace SWFProcessing.Swiffotron
                         @"Cache '" + cacheId + @"' not registered.");
             }
 
-            return caches[cacheId].Get(key);
+            return this.caches[cacheId].Get(key);
         }
 
         /// <summary>
@@ -1694,7 +1696,7 @@ namespace SWFProcessing.Swiffotron
             string cacheId = key.Substring(0, pos);
             key = key.Substring(pos + 1);
 
-            if (!caches.ContainsKey(cacheId))
+            if (!this.caches.ContainsKey(cacheId))
             {
                 throw new SwiffotronException(
                         SwiffotronError.BadInputXML,
@@ -1702,7 +1704,7 @@ namespace SWFProcessing.Swiffotron
                         @"Cache '" + cacheId + @"' not registered.");
             }
 
-            caches[cacheId].Put(key, v);
+            this.caches[cacheId].Put(key, v);
         }
 
         /// <summary>
@@ -1714,7 +1716,7 @@ namespace SWFProcessing.Swiffotron
         private void LoadConfigXML(Stream configXml)
         {
             XmlDocument config = new XmlDocument();
-            config.Load(XmlReader.Create(configXml, configReaderSettings));
+            config.Load(XmlReader.Create(configXml, this.configReaderSettings));
 
             XmlNamespaceManager namespaceMgr = new XmlNamespaceManager(config.NameTable);
 
@@ -1824,7 +1826,7 @@ namespace SWFProcessing.Swiffotron
             /* Use Add method here rather than the index operator to ensure that the
              * name is unique. Key errors get thrown upwards and destroy the app.
              * Hey, fix your config file, user. */
-            stores.Add(name, newStore);
+            this.stores.Add(name, newStore);
         }
 
         /// <summary>
@@ -1870,7 +1872,7 @@ namespace SWFProcessing.Swiffotron
 
             /* Use Add method here to ensure that the name is unique. Key errors get thrown
              * upwards and destroy the app. Hey, fix your config file, user. */
-            caches.Add(name, newCache);
+            this.caches.Add(name, newCache);
         }
 
         /// <summary>
@@ -1909,9 +1911,9 @@ namespace SWFProcessing.Swiffotron
             Dictionary<string, string> info = new Dictionary<string, string>();
 
             List<string> cacheClasses = new List<string>();
-            foreach (KeyValuePair<string, ISwiffotronCache> cacheEntry in caches)
+            foreach (KeyValuePair<string, ISwiffotronCache> cacheEntry in this.caches)
             {
-                cacheClasses.Add(cacheEntry.Key + "=" + cacheEntry.Value.GetType().FullName + "[" + cacheEntry.Value.InitialisedWith+ "]");
+                cacheClasses.Add(cacheEntry.Key + "=" + cacheEntry.Value.GetType().FullName + "[" + cacheEntry.Value.InitialisedWith + "]");
             }
 
             cacheClasses.Sort();
@@ -1922,7 +1924,7 @@ namespace SWFProcessing.Swiffotron
             info.Add("CacheClasses", string.Join(",", cacheClasses.ToArray()));
 
             List<string> storeClasses = new List<string>();
-            foreach (KeyValuePair<string, ISwiffotronStore> storeEntry in stores)
+            foreach (KeyValuePair<string, ISwiffotronStore> storeEntry in this.stores)
             {
                 storeClasses.Add(storeEntry.Key + "=" + storeEntry.Value.GetType().FullName + "[" + storeEntry.Value.InitialisedWith + "]");
             }

@@ -27,7 +27,7 @@ namespace SWFProcessing.Swiffotron.IO
         /// an XML config file.</param>
         public void Initialise(string init)
         {
-            InitialisedWith = init;
+            this.InitialisedWith = init;
 
             if (init != null)
             {

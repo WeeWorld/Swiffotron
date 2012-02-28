@@ -40,17 +40,11 @@ namespace SWFProcessing.Swiffotron
     /// </summary>
     public class SwiffotronException : ApplicationException
     {
-        public SwiffotronError Error { get; private set; }
-
-        /// <summary>
-        /// See SwiffotronContext for a description of sentinels.
-        /// </summary>
-        public string Sentinel { get; private set; }
-
         /// <summary>
         /// Initializes a new instance of an exception with an error message
         /// </summary>
         /// <param name="error">The error code.</param>
+        /// <param name="ctx">A context object that describes what was being done when the exception occured.</param>
         /// <param name="msg">The error message</param>
         /// <param name="inner">The inner exception</param>
         public SwiffotronException(SwiffotronError error, SwiffotronContext ctx, string msg, Exception inner)
@@ -64,6 +58,7 @@ namespace SWFProcessing.Swiffotron
         /// Initializes a new instance of an exception with an error message
         /// </summary>
         /// <param name="error">The error code.</param>
+        /// <param name="ctx">A context object that describes what was being done when the exception occured.</param>
         /// <param name="msg">The error message</param>
         public SwiffotronException(SwiffotronError error, SwiffotronContext ctx, string msg)
             : base(error.ToString() + "; " + msg + "; " + ctx.ToString())
@@ -76,11 +71,22 @@ namespace SWFProcessing.Swiffotron
         /// Initializes a new instance of an exception without an error message
         /// </summary>
         /// <param name="error">The error code.</param>
+        /// <param name="ctx">A context object that describes what was being done when the exception occured.</param>
         public SwiffotronException(SwiffotronError error, SwiffotronContext ctx)
             : base(error.ToString() + "; " + ctx.ToString())
         {
             this.Error = error;
             this.Sentinel = ctx.SentinelString;
         }
+
+        /// <summary>
+        /// An error code that describes the type of error that occured.
+        /// </summary>
+        public SwiffotronError Error { get; private set; }
+
+        /// <summary>
+        /// See SwiffotronContext for a description of sentinels.
+        /// </summary>
+        public string Sentinel { get; private set; }
     }
 }

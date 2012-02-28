@@ -8,24 +8,25 @@ namespace SWFProcessing.Swiffotron.Processor
 {
     public class SwiffotronContext
     {
-        /// <summary>
-        /// What file are we working on?
-        /// </summary>
-        public string Name { get; set; }
-
-        public string SentinelString { get; set; }
-
         public SwiffotronContext(string name)
         {
             if (name == null)
             {
-                throw new SwiffotronException(SwiffotronError.Internal,
+                throw new SwiffotronException(
+                        SwiffotronError.Internal,
                         new SwiffotronContext("null"), /* Yeah, I know. This looks wrong. */
                         "Can't have a null in a SwiffotronContext name");
             }
 
             this.Name = name;
         }
+
+        /// <summary>
+        /// What file are we working on?
+        /// </summary>
+        public string Name { get; set; }
+
+        public string SentinelString { get; set; }
 
         public override string ToString()
         {

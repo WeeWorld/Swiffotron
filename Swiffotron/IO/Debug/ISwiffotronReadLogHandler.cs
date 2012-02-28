@@ -19,7 +19,8 @@ namespace SWFProcessing.Swiffotron.IO.Debug
         /// Callback method called when the swiffotron reads a SWF from a store.
         /// </summary>
         /// <param name="name">The SWF name</param>
+        /// <param name="swf">The swf that was read.</param>
         /// <param name="log">A log of read activity</param>
-        void OnSwiffotronReadSWF(string name, SWF sfw, string log);
+        void OnSwiffotronReadSWF(string name, SWF swf, string log);
     }
 }
