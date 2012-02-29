@@ -8,11 +8,9 @@ namespace SWFProcessing.Swiffotron
 {
     using System;
     using System.Collections.Generic;
-    using System.Diagnostics;
     using System.Drawing;
     using System.IO;
     using System.Reflection;
-    using System.Runtime.Remoting;
     using System.Text;
     using System.Xml;
     using System.Xml.XPath;
@@ -25,7 +23,6 @@ namespace SWFProcessing.Swiffotron
     using SWFProcessing.SWFModeller.IO;
     using SWFProcessing.SWFModeller.Modelling;
     using SWFProcessing.SWFModeller.Process;
-    using SWFProcessing.Swiffotron.IO;
     using SWFProcessing.Swiffotron.IO.Debug;
     using SWFProcessing.Swiffotron.Processor;
 
@@ -33,10 +30,6 @@ namespace SWFProcessing.Swiffotron
     /// <para>
     /// Main entry point to the swiffotron's functionality. This is the main
     /// object you need to create to start building SWF files.</para>
-    /// <para>
-    /// ISSUE 54: This class needs refactored into smaller lumps. This might mean
-    /// lumps such as xml wrapping services, dependency management and
-    /// SWF generation.</para>
     /// </summary>
     public class Swiffotron
     {
@@ -1055,6 +1048,8 @@ namespace SWFProcessing.Swiffotron
 
             if (Xml.SelectChildren(swfNav, @"pngout").Count > 0)
             {
+                string swfoutStore = swfout.GetAttribute(@"store", string.Empty);
+
                 /* ISSUE 65 */
                 throw new SwiffotronException(
                         SwiffotronError.UnimplementedFeature,
