@@ -40,163 +40,20 @@ namespace SWFProcessing.Swiffotron
     /// </summary>
     public class Swiffotron
     {
-        /// <summary>The configuration XML file namespace</summary>
-        private const string ConfigNS = @"urn:swiffotron-schemas:swiffotron-config/24/05/2011";
+        private Configuration conf;
 
-        /// <summary>The swiffotron XML file namespace</summary>
-        private const string SwiffotronNS = @"urn:swiffotron-schemas:swiffotron-job/24/05/2011";
+        private Caches caches;
 
-        /* Tag attributes: */
-
-        /// <summary>XML attribute; store reference</summary>
-        private const string AttrStore = @"store";
-
-        /// <summary>XML attribute; Some cache key value</summary>
-        private const string AttrCachekey = @"cachekey";
-
-        /// <summary>XML attribute; Width pixel value</summary>
-        private const string AttrWidth = @"width";
-
-        /// <summary>XML attribute; Height pixel value</summary>
-        private const string AttrHeight = @"height";
-
-        /// <summary>XML attribute; X pixel position</summary>
-        private const string AttrX = @"x";
-
-        /// <summary>XML attribute; Y pixel position</summary>
-        private const string AttrY = @"y";
-
-        /// <summary>XML attribute; Background colour</summary>
-        private const string AttrBGColor = @"bgcolor";
-
-        /// <summary>XML attribute; Base SWF ref</summary>
-        private const string AttrBase = @"base";
-
-        /// <summary>XML attribute; Qualified name</summary>
-        private const string AttrQName = @"qname";
-
-        /// <summary>XML attribute; Copy from reference</summary>
-        private const string AttrFrom = @"from";
-
-        /// <summary>XML attribute; Copy to reference</summary>
-        private const string AttrTo = @"to";
-
-        /// <summary>XML attribute; Rotate value</summary>
-        private const string AttrRotate = @"rotate";
-
-        /// <summary>XML attribute; X-axis scale factor</summary>
-        private const string AttrScaleX = @"scalex";
-
-        /// <summary>XML attribute; Y-axis scale factor</summary>
-        private const string AttrScaleY = @"scaley";
-
-        /// <summary>XML attribute; Type of reference</summary>
-        private const string AttrType = @"type";
-
-        /// <summary>XML attribute; Path to something. A qname or a class. May be * for all.</summary>
-        private const string AttrPath = @"path";
-
-        /// <summary>XML attribute; Source reference</summary>
-        private const string AttrSrc = @"src";
-
-        /// <summary>XML attribute; Class name</summary>
-        private const string AttrClass = @"class";
-
-        /// <summary>XML attribute; SWF reference</summary>
-        private const string AttrSwf = @"swf";
-
-        /// <summary>XML attribute; Relative to reference</summary>
-        private const string AttrRelativeTo = @"relativeTo";
-
-        /// <summary>XML attribute; Element ID reference</summary>
-        private const string AttrID = @"id";
-
-        /* Tag names: */
-
-        /// <summary>XML tag name; A SWF declaration</summary>
-        private const string TagSwf = @"swf";
-
-        /// <summary>XML tag name; A SWF output declaration</summary>
-        private const string TagSwfOut = @"swfout";
-
-        /// <summary>XML tag name; A PNG image output declaration</summary>
-        private const string TagPngOut = @"pngout";
-
-        /// <summary>XML tag name; A video output declaration</summary>
-        private const string TagVidOut = @"vidout";
-
-        /// <summary>XML tag name; An instruction to modify a clip instance</summary>
-        private const string TagModify = @"modify";
-
-        /// <summary>XML tag name; A text search and replace operation</summary>
-        private const string TagTextReplace = @"textreplace";
-
-        /// <summary>XML tag name; An instance declaration</summary>
-        private const string TagInstance = @"instance";
-
-        /// <summary>XML tag name; A movie clip declaration</summary>
-        private const string TagMovieClip = @"movieclip";
-
-        /// <summary>XML tag name; Relative move instruction</summary>
-        private const string TagMoveRel = @"moveRel";
-
-        /// <summary>XML tag name; Absolute move instruction</summary>
-        private const string TagMoveAbs = @"moveAbs";
-
-        /// <summary>XML tag name; Absolute position</summary>
-        private const string TagAbsolute = @"absolute";
-
-        /// <summary>XML tag name; Relative position</summary>
-        private const string TagRelative = @"relative";
-
-        /// <summary>XML tag name; Remove an instance from a SWF</summary>
-        private const string TagRemove = @"remove";
-
-        /* Tag attribute values: */
-
-        /// <summary>XML value; SWF type</summary>
-        private const string ValSwf = @"swf";
-
-        /// <summary>XML value; Movie clip type</summary>
-        private const string ValMovieClip = @"movieclip";
-
-        /// <summary>XML value; Actionscript type</summary>
-        private const string ValActionscript = @"actionscript";
-
-        /// <summary>XML value; Instance type</summary>
-        private const string ValInstance = @"instance";
-
-        /// <summary>XML value; External SWF type</summary>
-        private const string ValExtern = @"extern";
-
-        /// <summary>XML parsing settings for reading the config file.</summary>
-        private XmlReaderSettings configReaderSettings;
-
-        /// <summary>XML parsing settings for reading swiffotron job files.</summary>
-        private XmlReaderSettings swiffotronReaderSettings;
-
-        /// <summary>A map of cache names to cache implementation instances.</summary>
-        private Dictionary<string, ISwiffotronCache> caches;
-
-        /// <summary>A map of store names to store implementation instances.</summary>
-        private Dictionary<string, ISwiffotronStore> stores;
+        private Stores stores;
 
 #if(DEBUG)
         /* We could use MSTest's private access, but we want the express versions
          * to be in on the fun too. Horrible, but there you go. */
-        public Dictionary<string, ISwiffotronStore> stores_accessor
+        public Configuration conf_accessor
         {
             get
             {
-                return this.stores;
-            }
-        }
-
-        public Dictionary<string, ISwiffotronCache> caches_accessor
-        {
-            get
-            {
-                return this.caches;
+                return this.conf;
             }
         }
 #endif
@@ -212,25 +69,6 @@ namespace SWFProcessing.Swiffotron
 
         /// <summary>A map of SWF models that have been processed already.</summary>
         private Dictionary<string, SWF> processedSWFs;
-
-        /// <summary>The namespace manager for the current job XML</summary>
-        private XmlNamespaceManager namespaceMgr;
-
-        /// <summary>An XPath navigator that points to the root of the current XML file</summary>
-        private XPathNavigator root;
-
-        /// <summary>Settings to pass to the SWF parser</summary>
-        private SWFReaderOptions swfReaderOptions;
-
-        /// <summary>Settings to pass to the SWF writer</summary>
-        private SWFWriterOptions swfWriterOptions;
-
-        /// <summary>
-        /// Prevents Swiffotron saving files to the store. Why would you do this? Well you
-        /// might prefer to get the data from a commit listener (Which will still be enabled)
-        /// and squirt it out over a network or something instead.
-        /// </summary>
-        public bool EnableStoreWrites { get; set; }
 
         /// <summary>
         /// This is a list of navigator objects pointing at SWF tags. Each of them
@@ -279,6 +117,10 @@ namespace SWFProcessing.Swiffotron
         /// </summary>
         private Dictionary<string, object> localCache;
 
+        private SWFProcessor swfProc;
+
+        private XMLHelper Xml;
+
         /// <summary>
         /// Initializes a new instance of the Swiffotron class. It will be created with
         /// default configuration options.
@@ -295,12 +137,6 @@ namespace SWFProcessing.Swiffotron
         /// use default configuration.</param>
         public Swiffotron(Stream configStream)
         {
-            this.configReaderSettings = this.CreateValidationSettings(@"swiffotron-config.xsd");
-            this.swiffotronReaderSettings = this.CreateValidationSettings(@"swiffotron.xsd");
-
-            this.caches = new Dictionary<string, ISwiffotronCache>();
-            this.stores = new Dictionary<string, ISwiffotronStore>();
-
             if (configStream == null)
             {
                 configStream = Assembly
@@ -308,7 +144,12 @@ namespace SWFProcessing.Swiffotron
                         .GetManifestResourceStream(@"SWFProcessing.Swiffotron.res.default-config.xml");
             }
 
-            this.LoadConfigXML(configStream);
+            this.conf = new Configuration(configStream);
+
+            this.Xml = new XMLHelper();
+
+            this.stores = this.conf.Stores;
+            this.caches = this.conf.Caches;
         }
 
         /// <summary>
@@ -345,9 +186,11 @@ namespace SWFProcessing.Swiffotron
             this.readLogHandler = readLogHandler;
 #endif
             this.commitStore = commitStore;
-            this.root = this.LoadSwiffotronXML(xml);
-            string jobID = this.root.SelectSingleNode("swf:swiffotron/@id", this.namespaceMgr).ToString();
+            Xml.LoadSwiffotronXML(xml);
+            string jobID = Xml.SelectString("swf:swiffotron/@id");
             this.Context = new SwiffotronContext(jobID);
+            this.Xml.SetContext(this.Context);
+            this.swfProc = new SWFProcessor(this.Context);
 
             this.processingList = new List<XPathNavigator>();
             this.dependencyMap = new List<DependencyList>();
@@ -359,10 +202,10 @@ namespace SWFProcessing.Swiffotron
             /* Take local copies of all referenced cache objects to guard against
              * them being ejected before we access them, since we work out what we
              * need to do based on what's in the cache before we do it. */
-            foreach (XPathNavigator keyNode in this.root.Select(@"//@cachekey", this.namespaceMgr))
+            foreach (XPathNavigator keyNode in Xml.Select(@"//@cachekey"))
             {
                 string key = keyNode.ToString();
-                object data = this.GetCacheItem(key);
+                object data = this.caches.Get(this.Context, key);
                 if (data != null)
                 {
                     this.localCache.Add(key, data);
@@ -370,13 +213,13 @@ namespace SWFProcessing.Swiffotron
             }
 
             /* Select all the swf tags that have some sort of output: */
-            foreach (XPathNavigator outputTag in this.root.Select(@"//swf:swfout|//swf:pngout|//swf:vidout", this.namespaceMgr))
+            foreach (XPathNavigator outputTag in Xml.Select(@"//swf:swfout|//swf:pngout|//swf:vidout"))
             {
                 XmlAttributeCollection attribs = ((XmlElement)outputTag.UnderlyingObject).Attributes;
 
                 /* ISSUE 28: Check the runifnotchanged thing. */
 
-                string dest = outputTag.GetAttribute(AttrStore, string.Empty);
+                string dest = outputTag.GetAttribute(XMLHelper.AttrStore, string.Empty);
                 outputTag.MoveToParent(); /* Select SWF tag */
                 if (!this.IsInDependenciesMap(outputTag))
                 {
@@ -434,63 +277,6 @@ namespace SWFProcessing.Swiffotron
         }
 
         /// <summary>
-        /// For a given schema name (Named resource) this loads the schema XML and
-        /// creates an XmlReaderSettings object which can be used to validate any
-        /// XML read by the Swiffotron. This is called in the static initialiser.
-        /// </summary>
-        /// <param name="schemaName">Named resource which is an XSD file.</param>
-        /// <returns>Some validation settings useful to an XmlReader.</returns>
-        private XmlReaderSettings CreateValidationSettings(string schemaName)
-        {
-            XmlReaderSettings settings = new XmlReaderSettings();
-            settings.ValidationType = ValidationType.Schema;
-
-            Stream xsd = Assembly
-                    .GetExecutingAssembly()
-                    .GetManifestResourceStream(@"SWFProcessing.Swiffotron.res." + schemaName);
-            settings.Schemas.Add(null, XmlReader.Create(xsd));
-
-            return settings;
-        }
-
-        /// <summary>
-        /// Gets an integer attribute value from an XML node
-        /// </summary>
-        /// <param name="nav">A pointer to the node</param>
-        /// <param name="name">The attribute to get</param>
-        /// <returns>An integer, or null if not present.</returns>
-        private int? IntegerAttribute(XPathNavigator nav, string name)
-        {
-            /* Why didn't I use ValueAsInt here? Check the behaviour with
-             * ropy values. Maybe that was it...*/
-
-            string stringVal = nav.GetAttribute(name, string.Empty);
-            if (stringVal != string.Empty)
-            {
-                return Convert.ToInt32(stringVal);
-            }
-
-            return null;
-        }
-
-        /// <summary>
-        /// Gets an HTML colour attribute value from an XML node
-        /// </summary>
-        /// <param name="nav">A pointer to the node</param>
-        /// <param name="name">The attribute to get</param>
-        /// <returns>A colour, or null if not present.</returns>
-        private Color? ColorAttribute(XPathNavigator nav, string name)
-        {
-            string stringVal = nav.GetAttribute(name, string.Empty);
-            if (stringVal != string.Empty)
-            {
-                return ColorTranslator.FromHtml(stringVal);
-            }
-
-            return null;
-        }
-
-        /// <summary>
         /// Once the processing list has been established, we can run over the list and
         /// process each one in turn.
         /// </summary>
@@ -504,11 +290,11 @@ namespace SWFProcessing.Swiffotron
             {
                 this.ProcessSWF(
                         swfTag,
-                        swfTag.GetAttribute(AttrBase, string.Empty),
-                        this.IntegerAttribute(swfTag, AttrWidth),
-                        this.IntegerAttribute(swfTag, AttrHeight),
-                        this.ColorAttribute(swfTag, AttrBGColor),
-                        swfTag.GetAttribute(AttrCachekey, string.Empty),
+                        swfTag.GetAttribute(XMLHelper.AttrBase, string.Empty),
+                        Xml.IntegerAttribute(swfTag, XMLHelper.AttrWidth),
+                        Xml.IntegerAttribute(swfTag, XMLHelper.AttrHeight),
+                        Xml.ColorAttribute(swfTag, XMLHelper.AttrBGColor),
+                        swfTag.GetAttribute(XMLHelper.AttrCachekey, string.Empty),
                         writeLog,
                         abcWriteLog);
             }
@@ -521,7 +307,7 @@ namespace SWFProcessing.Swiffotron
         /// <returns>A parsed SWF object.</returns>
         private SWF SwfFromStore(string path)
         {
-            using (Stream s = this.OpenFromStore(path))
+            using (Stream s = stores.Open(this.Context, path))
             {
                 string name = null;
 
@@ -583,7 +369,7 @@ namespace SWFProcessing.Swiffotron
             if (baseSwf == string.Empty)
             {
                 /* It's a new SWF */
-                swf = new SWF(new SWFContext(swfTag.GetAttribute(AttrID, string.Empty)), true);
+                swf = new SWF(new SWFContext(swfTag.GetAttribute(XMLHelper.AttrID, string.Empty)), true);
 
                 /* ISSUE 56: If this SWF has no output, then perhaps we can create it as a movieclip
                  * since it'll certainly be converted into one later on. */
@@ -613,35 +399,35 @@ namespace SWFProcessing.Swiffotron
             {
                 /* Move down to the swf tag child nodes which we will process in order. */
                 XPathNavigator nav = swfTag.Clone();
-                this.MoveToFirstChildElement(nav);
+                Xml.MoveToFirstChildElement(nav);
 
                 do
                 {
                     switch (nav.LocalName)
                     {
-                        case TagModify:
+                        case XMLHelper.TagModify:
                             this.ModifyInstance(nav, swf);
                             break;
 
-                        case TagTextReplace:
+                        case XMLHelper.TagTextReplace:
                             this.TextReplace(nav, swf);
                             break;
 
-                        case TagInstance:
+                        case XMLHelper.TagInstance:
                             this.CreateInstance(nav, swfTag, swf);
                             break;
 
-                        case TagRemove:
+                        case XMLHelper.TagRemove:
                             this.RemoveInstance(nav, swf);
                             break;
 
-                        case TagMovieClip:
+                        case XMLHelper.TagMovieClip:
                             this.CreateMovieClip(nav, swfTag, swf);
                             break;
 
-                        case TagSwfOut:
-                        case TagPngOut:
-                        case TagVidOut:
+                        case XMLHelper.TagSwfOut:
+                        case XMLHelper.TagPngOut:
+                        case XMLHelper.TagVidOut:
                             /* These are not processing steps. Skip 'em. */
                             break;
 
@@ -656,9 +442,9 @@ namespace SWFProcessing.Swiffotron
                 while (nav.MoveToNext(XPathNodeType.Element));
             }
 
-            this.processedSWFs.Add(swfTag.GetAttribute(AttrID, string.Empty), swf);
+            this.processedSWFs.Add(swfTag.GetAttribute(XMLHelper.AttrID, string.Empty), swf);
 
-            this.WriteSWFOutput(swfTag, swf, writeLog, abcWriteLog);
+            this.ProcessSWFOutput(swfTag, swf, writeLog, abcWriteLog);
         }
 
         /// <summary>
@@ -668,7 +454,7 @@ namespace SWFProcessing.Swiffotron
         /// <param name="swf">The SWF being processed.</param>
         private void TextReplace(XPathNavigator nav, SWF swf)
         {
-            XPathNavigator findNode = nav.SelectSingleNode(@"swf:find/text()", this.namespaceMgr);
+            XPathNavigator findNode = Xml.SelectNode(nav, @"swf:find/text()");
             if (findNode == null)
             {
                 throw new SwiffotronException(SwiffotronError.BadInputXML, this.Context, "The find element in textreplace operations cannot be empty.");
@@ -676,24 +462,24 @@ namespace SWFProcessing.Swiffotron
 
             string find = findNode.Value;
 
-            XPathNavigator replaceNode = nav.SelectSingleNode(@"swf:replace/text()", this.namespaceMgr);
+            XPathNavigator replaceNode = Xml.SelectNode(nav, @"swf:replace/text()");
             string replace = replaceNode == null ? string.Empty : replaceNode.Value;
 
-            foreach (XPathNavigator loc in nav.SelectChildren(@"location", SwiffotronNS))
+            foreach (XPathNavigator loc in Xml.SelectChildren(nav, @"location"))
             {
-                string type = loc.GetAttribute(AttrType, string.Empty);
+                string type = loc.GetAttribute(XMLHelper.AttrType, string.Empty);
                 switch (type)
                 {
-                    case ValActionscript:
+                    case XMLHelper.ValActionscript:
                         swf.TextReplaceInCode(find, replace);
                         break;
 
-                    case ValMovieClip:
-                        string path = loc.GetAttribute(AttrPath, string.Empty);
+                    case XMLHelper.ValMovieClip:
+                        string path = loc.GetAttribute(XMLHelper.AttrPath, string.Empty);
                         Timeline[] clips = new Timeline[] { swf };
                         if (path != "*")
                         {
-                            clips = this.SpritesFromQname(path, swf, true);
+                            clips = swfProc.SpritesFromQname(path, swf, true);
                         }
 
                         foreach (Timeline clip in clips)
@@ -730,7 +516,7 @@ namespace SWFProcessing.Swiffotron
         /// <param name="swf">The SWF to remove from</param>
         private void RemoveInstance(XPathNavigator nav, SWF swf)
         {
-            string qname = nav.GetAttribute(AttrQName, string.Empty);
+            string qname = nav.GetAttribute(XMLHelper.AttrQName, string.Empty);
 
             string uname;
             Timeline parent = this.QNameToTimeline(qname, swf, out uname);
@@ -751,9 +537,9 @@ namespace SWFProcessing.Swiffotron
         /// <param name="swf">The SWF within which to instantiate something.</param>
         private void CreateInstance(XPathNavigator insTag, XPathNavigator currentSwfTag, SWF swf)
         {
-            string type = insTag.GetAttribute(AttrType, string.Empty);
-            string src = insTag.GetAttribute(AttrSrc, string.Empty);
-            string className = insTag.GetAttribute(AttrClass, string.Empty);
+            string type = insTag.GetAttribute(XMLHelper.AttrType, string.Empty);
+            string src = insTag.GetAttribute(XMLHelper.AttrSrc, string.Empty);
+            string className = insTag.GetAttribute(XMLHelper.AttrClass, string.Empty);
 
             /* ISSUE 58: If the instance name (id) is the same as the class name, it can
              * cause problems in files generated and decompiled again in sothink. We should
@@ -761,7 +547,7 @@ namespace SWFProcessing.Swiffotron
 
             switch (type)
             {
-                case ValSwf:
+                case XMLHelper.ValSwf:
                     if (className == string.Empty)
                     {
                         throw new SwiffotronException(
@@ -780,7 +566,7 @@ namespace SWFProcessing.Swiffotron
                         throw new SwiffotronException(
                                 SwiffotronError.Internal,
                                 this.Context,
-                                "Internal error. SWF tags were processed out of order (" + currentSwfTag.GetAttribute(AttrID, string.Empty) + " requres " + src + ").");
+                                "Internal error. SWF tags were processed out of order (" + currentSwfTag.GetAttribute(XMLHelper.AttrID, string.Empty) + " requres " + src + ").");
                     }
 
                     SWF processedSWF = this.processedSWFs[src];
@@ -788,7 +574,7 @@ namespace SWFProcessing.Swiffotron
                     this.CreateInstanceFromSWF(insTag, swf, className, processedSWF);
                     break;
 
-                case ValMovieClip:
+                case XMLHelper.ValMovieClip:
                     Sprite clip = swf.GetCharacter(src) as Sprite;
                     if (clip == null)
                     {
@@ -796,7 +582,7 @@ namespace SWFProcessing.Swiffotron
                     }
 
                     this.CreateInstanceIn(
-                            insTag.GetAttribute(AttrID, string.Empty),
+                            insTag.GetAttribute(XMLHelper.AttrID, string.Empty),
                             swf,
                             insTag,
                             clip,
@@ -816,7 +602,7 @@ namespace SWFProcessing.Swiffotron
 
                     break;
 
-                case ValInstance:
+                case XMLHelper.ValInstance:
                     if (className != string.Empty)
                     {
                         throw new SwiffotronException(
@@ -825,7 +611,7 @@ namespace SWFProcessing.Swiffotron
                                 "An instance cannot be given a new classname if it is a clone of an existing instance (" + className + ")");
                     }
 
-                    Sprite srcSprite = this.SpritesFromQname(src, swf, false)[0];
+                    Sprite srcSprite = swfProc.SpritesFromQname(src, swf, false)[0];
                     if (!srcSprite.HasClass)
                     {
                         srcSprite.Class = AdobeClass.CreateFlashDisplayMovieClip(srcSprite.Root.FirstScript.Code);
@@ -833,14 +619,14 @@ namespace SWFProcessing.Swiffotron
                     }
 
                     this.CreateInstanceIn(
-                            insTag.GetAttribute(AttrID, string.Empty),
+                            insTag.GetAttribute(XMLHelper.AttrID, string.Empty),
                             swf,
                             insTag,
                             srcSprite,
                             className);
                     break;
 
-                case ValExtern:
+                case XMLHelper.ValExtern:
                     SWF importSwf = this.SwfFromStore(src);
 
                     this.CreateInstanceFromSWF(insTag, swf, className, importSwf);
@@ -909,7 +695,7 @@ namespace SWFProcessing.Swiffotron
                 Sprite spr = new Sprite(importSwf, swf);
 
                 this.CreateInstanceIn(
-                        insTag.GetAttribute(AttrID, string.Empty),
+                        insTag.GetAttribute(XMLHelper.AttrID, string.Empty),
                         swf,
                         insTag,
                         spr,
@@ -920,7 +706,7 @@ namespace SWFProcessing.Swiffotron
                 Sprite spr = new Sprite(importSwf, swf, className);
 
                 this.CreateInstanceIn(
-                        insTag.GetAttribute(AttrID, string.Empty),
+                        insTag.GetAttribute(XMLHelper.AttrID, string.Empty),
                         swf,
                         insTag,
                         spr,
@@ -950,10 +736,10 @@ namespace SWFProcessing.Swiffotron
         /// <param name="swf">The SWF to add the movie clip to</param>
         private void CreateMovieClip(XPathNavigator movieClipTag, XPathNavigator currentSwfTag, SWF swf)
         {
-            string type = movieClipTag.GetAttribute(AttrType, string.Empty);
-            string src = movieClipTag.GetAttribute(AttrSrc, string.Empty);
-            string className = movieClipTag.GetAttribute(AttrClass, string.Empty);
-            string swfTag = movieClipTag.GetAttribute(AttrSwf, string.Empty);
+            string type = movieClipTag.GetAttribute(XMLHelper.AttrType, string.Empty);
+            string src = movieClipTag.GetAttribute(XMLHelper.AttrSrc, string.Empty);
+            string className = movieClipTag.GetAttribute(XMLHelper.AttrClass, string.Empty);
+            string swfTag = movieClipTag.GetAttribute(XMLHelper.AttrSwf, string.Empty);
 
             /*
              * ISSUE 59: The examples in unit tests all put instances in the same package, e.g.
@@ -983,7 +769,7 @@ namespace SWFProcessing.Swiffotron
 
             switch (type)
             {
-                case ValSwf:
+                case XMLHelper.ValSwf:
                     if (fromOtherSwf)
                     {
                         throw new SwiffotronException(
@@ -997,7 +783,7 @@ namespace SWFProcessing.Swiffotron
                         throw new SwiffotronException(
                                 SwiffotronError.Internal,
                                 this.Context,
-                                "Internal error. SWF tags were processed out of order (" + currentSwfTag.GetAttribute(AttrID, string.Empty) + " requres " + src + ").");
+                                "Internal error. SWF tags were processed out of order (" + currentSwfTag.GetAttribute(XMLHelper.AttrID, string.Empty) + " requres " + src + ").");
                     }
 
                     if (className == string.Empty)
@@ -1012,7 +798,7 @@ namespace SWFProcessing.Swiffotron
 
                     /* ISSUE 55: There's an issue comment up there next to the declaration of processedSWFs which is intended
                      * to cache the new Sprite() bit below. */
-                    swf.AddCharacter(movieClipTag.GetAttribute(AttrID, string.Empty), new Sprite(importSwf, swf, className));
+                    swf.AddCharacter(movieClipTag.GetAttribute(XMLHelper.AttrID, string.Empty), new Sprite(importSwf, swf, className));
 
                     /* ISSUE 61: The above new Sprite will merge the sprite's code into the SWF regardless of whether
                      * it's instantiated. This should be done based on the exportforscript flag, or if the sprite
@@ -1023,7 +809,7 @@ namespace SWFProcessing.Swiffotron
 
                     break;
 
-                case ValExtern:
+                case XMLHelper.ValExtern:
                     if (fromOtherSwf)
                     {
                         throw new SwiffotronException(
@@ -1043,7 +829,7 @@ namespace SWFProcessing.Swiffotron
                     SWF forImport = this.SwfFromStore(src);
                     try
                     {
-                        swf.AddCharacter(movieClipTag.GetAttribute(AttrID, string.Empty), new Sprite(forImport, swf, className));
+                        swf.AddCharacter(movieClipTag.GetAttribute(XMLHelper.AttrID, string.Empty), new Sprite(forImport, swf, className));
                     }
                     catch (SWFModellerException sme)
                     {
@@ -1069,46 +855,6 @@ namespace SWFProcessing.Swiffotron
         }
 
         /// <summary>
-        /// Find a list of characters that match a qname pattern. If nothing is found, an
-        /// exception is thrown.
-        /// </summary>
-        /// <param name="qname">The qname to find.</param>
-        /// <param name="swf">The SWF to search.</param>
-        /// <param name="patternPermitted">If this is false, the returned array will have 1 element.</param>
-        /// <returns>An array of characters matching the qname or qname pattern.</returns>
-        private Sprite[] SpritesFromQname(string qname, SWF swf, bool patternPermitted)
-        {
-            /* ISSUE 62: If qname is a pattern, we should return more than one character. */
-            /* ISSUE 62: If qname is a pattern, and patternPermitted is false, throw a wobbler. */
-
-            PlaceObject po = swf.LookupInstance(qname);
-
-            /* ISSUE 63: There is a question of whether to error if the instance is not found. Some are
-             * found with a pattern rather than a path, and you may not expect it to always find something. 
-             * At the moment, we shall throw an exception, because it suits our development, unit testing
-             * fail-fast strictness. */
-            if (po == null)
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadPathOrID,
-                        this.Context.Sentinel("FindSpriteByQName"),
-                        @"Instance not found: " + qname);
-            }
-
-            Sprite sprite = po.Character as Sprite;
-
-            if (sprite == null)
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadPathOrID,
-                        this.Context,
-                        @"Instance does not point to sprite: " + qname);
-            }
-
-            return new Sprite[] { sprite };
-        }
-
-        /// <summary>
         /// Creates an instance within another instance's clip, e.g. creating "mc1.mc2.mc3"
         /// will create mc3 within mc2, where mc1.mc2 is mc2's qname.
         /// </summary>
@@ -1122,11 +868,11 @@ namespace SWFProcessing.Swiffotron
             string newInsName;
             Timeline parent = this.QNameToTimeline(qname, swf, out newInsName);
 
-            string relativeToQname = transform.GetAttribute(AttrRelativeTo, string.Empty);
+            string relativeToQname = transform.GetAttribute(XMLHelper.AttrRelativeTo, string.Empty);
             Matrix m = null;
             if (relativeToQname == null || relativeToQname == string.Empty)
             {
-                m = this.TransformTagToMatrix(transform);
+                m = Xml.TransformTagToMatrix(transform);
                 if (m.IsSimpleTranslate)
                 {
                     m.TransX = m.TransX;
@@ -1135,8 +881,8 @@ namespace SWFProcessing.Swiffotron
             }
             else
             {
-                m = this.PositionFromQname(relativeToQname, swf);
-                Matrix rel = this.TransformTagToMatrix(transform);
+                m = swfProc.PositionFromQname(relativeToQname, swf);
+                Matrix rel = Xml.TransformTagToMatrix(transform);
                 if (rel.IsSimpleTranslate)
                 {
                     m.Translate(rel.TransX, rel.TransY);
@@ -1205,42 +951,13 @@ namespace SWFProcessing.Swiffotron
         }
 
         /// <summary>
-        /// Gets the transform position of an instance.
-        /// </summary>
-        /// <param name="qname">Fully qualified name of an instance.</param>
-        /// <param name="swf">The SWF to search in/</param>
-        /// <returns>A copy of the instance's position matrix.</returns>
-        private Matrix PositionFromQname(string qname, SWF swf)
-        {
-            PlaceObject po = swf.LookupInstance(qname);
-            return po.Matrix.Copy();
-        }
-
-        /// <summary>
-        /// Convenience method to move a navigator to the first child element, rather
-        /// than first child node, which could be text or something.
-        /// </summary>
-        /// <param name="nav">The navigator to move</param>
-        private void MoveToFirstChildElement(XPathNavigator nav)
-        {
-            nav.MoveToFirstChild();
-
-            if (nav.NodeType == XPathNodeType.Element)
-            {
-                return;
-            }
-
-            nav.MoveToNext(XPathNodeType.Element); /* Bit of an assumption, but never mind. */
-        }
-
-        /// <summary>
         /// Executes a modify tag on a SWF
         /// </summary>
         /// <param name="modify">A navigator pointing to the modify element in the XML</param>
         /// <param name="swf">The SWF to modify</param>
         private void ModifyInstance(XPathNavigator modify, SWF swf)
         {
-            string qname = modify.GetAttribute(AttrQName, string.Empty);
+            string qname = modify.GetAttribute(XMLHelper.AttrQName, string.Empty);
 
             PlaceObject po = swf.LookupInstance(qname);
 
@@ -1256,7 +973,7 @@ namespace SWFProcessing.Swiffotron
                         @"Instance not found: " + qname);
             }
 
-            this.MoveToFirstChildElement(modify);
+            Xml.MoveToFirstChildElement(modify);
 
             do
             {
@@ -1264,13 +981,13 @@ namespace SWFProcessing.Swiffotron
                 {
                     switch (modify.LocalName)
                     {
-                        case TagMoveRel:
-                            Matrix rel = this.TransformTagToMatrix(modify);
+                        case XMLHelper.TagMoveRel:
+                            Matrix rel = Xml.TransformTagToMatrix(modify);
                             po.Matrix.Apply(rel);
                             break;
 
-                        case TagMoveAbs:
-                            Matrix abs = this.TransformTagToMatrix(modify);
+                        case XMLHelper.TagMoveAbs:
+                            Matrix abs = Xml.TransformTagToMatrix(modify);
                             po.Matrix = abs;
                             break;
 
@@ -1288,50 +1005,20 @@ namespace SWFProcessing.Swiffotron
             modify.MoveToParent();
         }
 
-        /// <summary>
-        /// Creates a new position matrix from an XML declaration of one.
-        /// </summary>
-        /// <param name="transform">The navigator pointing to the XML transform element.</param>
-        /// <returns>A new Matrix</returns>
-        private Matrix TransformTagToMatrix(XPathNavigator transform)
+        private void SaveToStore(string key, byte[] data)
         {
-            Matrix m = new Matrix();
-            m.TransX = (float)XmlConvert.ToDouble(transform.GetAttribute(AttrX, string.Empty));
-            m.TransY = (float)XmlConvert.ToDouble(transform.GetAttribute(AttrY, string.Empty));
+            string relativePath = this.stores.Save(this.Context, key, data);
 
-            string rot = transform.GetAttribute(AttrRotate, string.Empty);
-            if (rot != string.Empty)
+            /* ISSUE 79 - An interesting upshot here is that if you know you're never
+             * going to save files back to a store, then you can get away with
+             * using any string you like in swfout store keys. */
+
+            if (this.commitStore != null && relativePath != null)
             {
-                m.RotateToDegrees(XmlConvert.ToDouble(rot));
+                /* For debug purposes, we can intercept and inspect every file the
+                 * swiffotron ejects from it's glossy, futuristic core. */
+                this.commitStore.Add(relativePath, data);
             }
-
-            string scaleX = transform.GetAttribute(AttrScaleX, string.Empty);
-            string scaleY = transform.GetAttribute(AttrScaleY, string.Empty);
-
-            float sx = 1.0f;
-            float sy = 1.0f;
-
-            if (scaleX == string.Empty)
-            {
-                if (scaleY == string.Empty)
-                {
-                    return m;
-                }
-
-                sy = (float)XmlConvert.ToDouble(scaleY);
-            }
-            else
-            {
-                sx = (float)XmlConvert.ToDouble(scaleX);
-                if (scaleY != string.Empty)
-                {
-                    sy = (float)XmlConvert.ToDouble(scaleY);
-                }
-            }
-
-            m.ScaleNoTranslate(sx, sy);
-
-            return m;
         }
 
         /// <summary>
@@ -1343,10 +1030,10 @@ namespace SWFProcessing.Swiffotron
         /// to the SWF file.</param>
         /// <param name="abcWriteLog">Only used in debug builds. Accumulates a log of write operations
         /// to the ABC data within the SWF file.</param>
-        private void WriteSWFOutput(XPathNavigator swfNav, SWF swf, StringBuilder writeLog, StringBuilder abcWriteLog)
+        private void ProcessSWFOutput(XPathNavigator swfNav, SWF swf, StringBuilder writeLog, StringBuilder abcWriteLog)
         {
             byte[] swfData = null;
-            foreach (XPathNavigator swfout in swfNav.SelectChildren(@"swfout", SwiffotronNS))
+            foreach (XPathNavigator swfout in Xml.SelectChildren(swfNav, @"swfout"))
             {
                 string swfoutStore = swfout.GetAttribute(@"store", string.Empty);
 
@@ -1360,13 +1047,13 @@ namespace SWFProcessing.Swiffotron
 
                 if (swfData == null)
                 {
-                    swfData = new SWFWriter(swf, this.swfWriterOptions, writeLog, abcWriteLog).ToByteArray();
+                    swfData = new SWFWriter(swf, conf.swfWriterOptions, writeLog, abcWriteLog).ToByteArray();
                 }
 
-                this.WriteToOutput(swfoutStore, swfData);
+                this.SaveToStore(swfoutStore, swfData);
             }
 
-            if (swfNav.SelectChildren(@"pngout", SwiffotronNS).Count > 0)
+            if (Xml.SelectChildren(swfNav, @"pngout").Count > 0)
             {
                 /* ISSUE 65 */
                 throw new SwiffotronException(
@@ -1375,7 +1062,7 @@ namespace SWFProcessing.Swiffotron
                         "We can't do PNG output yet.");
             }
 
-            if (swfNav.SelectChildren(@"vidout", SwiffotronNS).Count > 0)
+            if (Xml.SelectChildren(swfNav, @"vidout").Count > 0)
             {
                 /* ISSUE 66 */
                 throw new SwiffotronException(
@@ -1395,12 +1082,12 @@ namespace SWFProcessing.Swiffotron
             /* This is the node we will work out the dependencies for. */
             XPathNavigator node = deps.Node;
 
-            foreach (XPathNavigator depID in node.Select(@"swf:movieclip|swf:instance", this.namespaceMgr))
+            foreach (XPathNavigator depID in Xml.Select(node, @"swf:movieclip|swf:instance"))
             {
                 /* ISSUE 64: Work out if this is a movieclip tag. If it's cached, and in the local cache, then
                  * we don't need to add it's dependent SWF. */
 
-                XPathNavigator swfNode = this.SwfTagFromRef(depID);
+                XPathNavigator swfNode = Xml.SwfTagFromRef(depID);
 
                 if (swfNode != null)
                 {
@@ -1411,98 +1098,6 @@ namespace SWFProcessing.Swiffotron
                     }
                 }
             }
-        }
-
-        /// <summary>
-        /// Find a swf xml node by ID
-        /// </summary>
-        /// <param name="id">The ID of the SWF node</param>
-        /// <param name="root">The root of the XML file.</param>
-        /// <param name="exclude">If the id matches the exclude id, it throws an exception.</param>
-        /// <returns>The node. Throws an exception if one isn't found.</returns>
-        private XPathNavigator SwfTagById(string id, XPathNavigator root, XPathNavigator exclude)
-        {
-            XPathNavigator swfTag = root.SelectSingleNode(@"/swf:swiffotron/swf:swf[@id='" + id + "']", this.namespaceMgr);
-            if (swfTag == null)
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadInputXML,
-                        this.Context,
-                        "Invalid swf tag ID: " + id);
-            }
-
-            if (exclude != null && swfTag.ComparePosition(exclude) == XmlNodeOrder.Same)
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadInputXML,
-                        this.Context,
-                        "swf tag with ID '" + id + "' refers to itself.");
-            }
-
-            return swfTag;
-        }
-
-        /// <summary>
-        /// Find a swf xml node by a reference
-        /// </summary>
-        /// <param name="referee">A movieclip, or instance tag</param>
-        /// <returns>The SWF tag that it references, or null if it doesn't reference one.</returns>
-        private XPathNavigator SwfTagFromRef(XPathNavigator referee)
-        {
-            string type = referee.GetAttribute(AttrType, string.Empty);
-
-            if (type == ValSwf)
-            {
-                string src = referee.GetAttribute(AttrSrc, string.Empty);
-
-                if (src.StartsWith("store://"))
-                {
-                    return null;
-                }
-
-                /* This tag declares the swf id directly in its src attribute: */
-                XPathNavigator referenced = this.root.SelectSingleNode(@"/swf:swiffotron/swf:swf[@id='" + src + "']", this.namespaceMgr);
-                if (referenced == null)
-                {
-                    throw new SwiffotronException(
-                            SwiffotronError.BadPathOrID,
-                            this.Context.Sentinel("SrcSwfBadref"),
-                            "No such swf element: " + src);
-                }
-
-                return referenced;
-            }
-
-            if (type == ValMovieClip)
-            {
-                string src = referee.GetAttribute(AttrSrc, string.Empty);
-
-                if (src.StartsWith("store://"))
-                {
-                    return null;
-                }
-
-                /* This tag declares the swf id directly in its src attribute: */
-                XPathNavigator referenced = this.root.SelectSingleNode(@"/swf:swiffotron/swf:swf/swf:movieclip[@id='" + src + "']", this.namespaceMgr);
-                if (referenced == null)
-                {
-                    throw new SwiffotronException(
-                            SwiffotronError.BadPathOrID,
-                            this.Context.Sentinel("InstanceSrcMovieClipBadref"),
-                            "No such movieclip element: " + src);
-                }
-
-                return referenced;
-            }
-
-            string swf = referee.GetAttribute(AttrSwf, string.Empty);
-            if (swf != null && swf != string.Empty)
-            {
-                /* This tag declares the swf id in its swf attribute: */
-                return this.root.SelectSingleNode(@"/swf:swiffotron/swf:swf[@id='" + swf + "']", this.namespaceMgr);
-            }
-
-            return null;
         }
 
         /// <summary>
@@ -1525,372 +1120,10 @@ namespace SWFProcessing.Swiffotron
             return false;
         }
 
-        /// <summary>
-        /// Convenience method for debugging.
-        /// </summary>
-        /// <param name="node">A node to describe in nice, neat text.</param>
-        /// <param name="desc">A string that hopefully describes the node in a way that you
-        /// can identify it in the source XML from this string in some console
-        /// output.</param>
-        [Conditional("DEBUG")]
-        private void DescribeNode(XPathNavigator node, ref string desc)
-        {
-            if (node.LocalName == TagSwf)
-            {
-                desc = "swf ";
-
-                string baseSwf = node.GetAttribute(AttrBase, string.Empty);
-                if (baseSwf != string.Empty)
-                {
-                    desc += ", base:" + baseSwf;
-                }
-
-                string width = node.GetAttribute(AttrWidth, string.Empty);
-                if (width != string.Empty)
-                {
-                    desc += ", width:" + width;
-                }
-
-                string height = node.GetAttribute(AttrHeight, string.Empty);
-                if (height != string.Empty)
-                {
-                    desc += ", height:" + height;
-                }
-            }
-
-            /* For all other nodes: */
-            desc = node.LocalName;
-        }
-
-        /// <summary>
-        /// Writes a block of data to the store specified in the fully qualified
-        /// store key of the form [store name]:[store key]
-        /// </summary>
-        /// <param name="key">The store key</param>
-        /// <param name="data">The data to store as a byte array.</param>
-        private void WriteToOutput(string key, byte[] data)
-        {
-            if (this.EnableStoreWrites)
-            {
-                Uri storeURI = new Uri(key);
-
-                if (storeURI.Scheme != "store") /* ISSUE 67: Constants, please. */
-                {
-                    throw new SwiffotronException(
-                            SwiffotronError.BadInputXML,
-                            this.Context,
-                            @"Store paths should begin with store://");
-                }
-
-                string storeId = storeURI.Host;
-
-                if (!this.stores.ContainsKey(storeId))
-                {
-                    throw new SwiffotronException(
-                            SwiffotronError.BadInputXML,
-                            this.Context,
-                            @"Store '" + storeId + @"' not registered.");
-                }
-
-                ISwiffotronStore store = this.stores[storeId];
-
-                key = storeURI.AbsolutePath.Substring(1);
-
-                using (Stream s = store.OpenOutput(key))
-                {
-                    s.Write(data, 0, data.Length);
-                }
-
-                store.Commit(key);
-            }
-
-            /* ISSUE 79 - An interesting upshot here is that if you know you're never
-             * going to save files back to a store, then you can get away with
-             * using any string you like in swfout store keys. */
-
-            if (this.commitStore != null)
-            {
-                /* For debug purposes, we can intercept and inspect every file the
-                 * swiffotron ejects from it's glossy, futuristic core. */
-                this.commitStore.Add(key, data);
-            }
-        }
-
-        /// <summary>
-        /// Opens a stream from a store by its key string.
-        /// </summary>
-        /// <param name="key">The key, including store prefix</param>
-        /// <returns>A stream, or null if not found.</returns>
-        private Stream OpenFromStore(string key)
-        {
-            Uri storeURI = new Uri(key);
-
-            if (storeURI.Scheme != "store") /* ISSUE 67: Constants, please. */
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadInputXML,
-                        this.Context,
-                        @"Store paths should begin with store://");
-            }
-
-            string storeId = storeURI.Host;
-
-            if (!this.stores.ContainsKey(storeId))
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadInputXML,
-                        this.Context,
-                        @"Store '" + storeId + @"' not registered.");
-            }
-
-            try
-            {
-                return this.stores[storeId].OpenInput(storeURI.LocalPath.Substring(1));
-            }
-            catch (FileNotFoundException fnfe)
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadPathOrID,
-                        this.Context.Sentinel("FileNotFoundInStore"),
-                        "File not found: " + key,
-                        fnfe);
-            }
-        }
-
-        /// <summary>
-        /// Retrieves a cached object given its fully qualified cache key of the form
-        /// [cache name]:[cache key]
-        /// </summary>
-        /// <param name="key">Full cache path</param>
-        /// <returns>The cached object, or null.</returns>
-        private object GetCacheItem(string key)
-        {
-            int pos = key.IndexOf(':');
-            if (pos < 0)
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadInputXML,
-                        this.Context,
-                        @"Bad cache key (Requires prefix): " + key);
-            }
-
-            string cacheId = key.Substring(0, pos);
-            key = key.Substring(pos + 1);
-
-            if (!this.caches.ContainsKey(cacheId))
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadInputXML,
-                        this.Context,
-                        @"Cache '" + cacheId + @"' not registered.");
-            }
-
-            return this.caches[cacheId].Get(key);
-        }
-
-        /// <summary>
-        /// Caches an object under a key in a given cache, specified as part of the
-        /// cache key. <see cref="GetCacheItem"/>
-        /// </summary>
-        /// <param name="key">Full cache path</param>
-        /// <param name="v">The object to cache</param>
-        private void SetCacheItem(string key, object v)
-        {
-            int pos = key.IndexOf(':');
-            if (pos < 0)
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadInputXML,
-                        this.Context,
-                        @"Bad cache key (Requires prefix): " + key);
-            }
-
-            string cacheId = key.Substring(0, pos);
-            key = key.Substring(pos + 1);
-
-            if (!this.caches.ContainsKey(cacheId))
-            {
-                throw new SwiffotronException(
-                        SwiffotronError.BadInputXML,
-                        this.Context,
-                        @"Cache '" + cacheId + @"' not registered.");
-            }
-
-            this.caches[cacheId].Put(key, v);
-        }
-
-        /// <summary>
-        /// Loads a configuration file passed to the new Swiffotron and parses it,
-        /// creating any implementing classes named in the configuration.
-        /// </summary>
-        /// <param name="configXml">A stream ready and primed with lovely XML
-        /// configuration data.</param>
-        private void LoadConfigXML(Stream configXml)
-        {
-            XmlDocument config = new XmlDocument();
-            config.Load(XmlReader.Create(configXml, this.configReaderSettings));
-
-            XmlNamespaceManager namespaceMgr = new XmlNamespaceManager(config.NameTable);
-
-            XPathNavigator nav = config.CreateNavigator();
-            namespaceMgr.AddNamespace(@"con", ConfigNS);
-
-            /* First, set up any caches: */
-            XmlAttribute attrib;
-            foreach (XPathNavigator hit in nav.Select(@"/con:config/con:cache", namespaceMgr))
-            {
-                XmlAttributeCollection attribs = ((XmlElement)hit.UnderlyingObject).Attributes;
-
-                /* The schema defines these attributes as mandatory, so they will exist: */
-                string name = attribs[@"name"].Value;
-                string classname = attribs[@"classname"].Value;
-
-                /* Optional parameters, which we default to null before we call Initialise on
-                 * any implementor. */
-                attrib = attribs[@"init"];
-                string init = (attrib == null) ? null : attrib.Value;
-                attrib = attribs[@"assembly"];
-                string assembly = (attrib == null) ? null : attrib.Value;
-
-                /* Create our named cache as specified by our config file. */
-                this.CreateCache(name, assembly, classname, init);
-            }
-
-            /* Now, set up any stores: */
-
-            foreach (XPathNavigator hit in nav.Select(@"/con:config/con:store", namespaceMgr))
-            {
-                XmlAttributeCollection attribs = ((XmlElement)hit.UnderlyingObject).Attributes;
-
-                /* The schema defines these attributes as mandatory, so they will exist: */
-                string name = attribs[@"name"].Value;
-                string classname = attribs[@"classname"].Value;
-
-                /* Optional parameter, which we default to null before we call Initialise on
-                 * any implementor. */
-                attrib = attribs[@"init"];
-                string init = (attrib == null) ? null : attrib.Value;
-                attrib = attribs[@"assembly"];
-                string assembly = (attrib == null) ? null : attrib.Value;
-
-                /* Create our named store as specified by our config file. */
-                this.CreateStore(name, assembly, classname, init);
-            }
-
-            /* ISSUE 68: Staggeringly inefficient xpath queries that navigate from the root node every damned
-             * time. Do we care? */
-
-            this.EnableStoreWrites = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:storeWriteEnabled/text()", namespaceMgr).ValueAsBoolean;
-
-            this.swfReaderOptions = new SWFReaderOptions()
-            {
-                StrictTagLength = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:stricttaglength/text()", namespaceMgr).ValueAsBoolean
-            };
-
-            this.swfWriterOptions = new SWFWriterOptions()
-            {
-                Compressed = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:compression/text()", namespaceMgr).ValueAsBoolean,
-                EnableDebugger = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:debugcode/text()", namespaceMgr).ValueAsBoolean
-            };
-        }
-
-        /// <summary>
-        /// Creates a store object by name, as specified in the config file.
-        /// </summary>
-        /// <param name="name">The name for this store that will be referenced in
-        /// any swiffotron XML files.</param>
-        /// <param name="assembly">The fully qualified assembly name. Pass an empty
-        /// string or null to reference the currently executing assembly and use
-        /// any default implementors.</param>
-        /// <param name="classname">The fully qualified class name</param>
-        /// <param name="init">An initialisation string passed in the call to Initialise
-        /// on the new store object.</param>
-        private void CreateStore(string name, string assembly, string classname, string init)
-        {
-            if (assembly == string.Empty)
-            {
-                /* Shortcut value to say "Look in the executing assembly" */
-                assembly = null;
-            }
-
-            ISwiffotronStore newStore = null;
-
-            if (assembly != null && assembly.ToLower().EndsWith(".dll"))
-            {
-                /* Load from arbitrary DLL */
-
-                Type type = Assembly.LoadFrom(assembly).GetType(classname);
-
-                /* Class cast problems just get thrown upwards and destroy the app */
-                newStore = (ISwiffotronStore)Activator.CreateInstance(type);
-            }
-            else
-            {
-                /* Load by named assembly */
-
-                /* Class cast problems just get thrown upwards and destroy the app */
-                ObjectHandle oh = Activator.CreateInstance(assembly, classname);
-                newStore = (ISwiffotronStore)oh.Unwrap();
-            }
-
-            newStore.Initialise(init);
-
-            /* Use Add method here rather than the index operator to ensure that the
-             * name is unique. Key errors get thrown upwards and destroy the app.
-             * Hey, fix your config file, user. */
-            this.stores.Add(name, newStore);
-        }
-
-        /// <summary>
-        /// Creates a cache object by name, as specified in the config file.
-        /// </summary>
-        /// <param name="name">The name for this cache that will be referenced in
-        /// any swiffotron XML files.</param>
-        /// <param name="assembly">The fully qualified assembly name. Pass an empty
-        /// string or null to reference the currently executing assembly and use
-        /// any default implementors.</param>
-        /// <param name="classname">The fully qualified class name</param>
-        /// <param name="init">An initialisation string passed in the call to Initialise
-        /// on the new cache object.</param>
-        private void CreateCache(string name, string assembly, string classname, string init)
-        {
-            if (assembly == string.Empty)
-            {
-                /* Shortcut value to say "Look in the executing assembly" */
-                assembly = null;
-            }
-
-            ISwiffotronCache newCache = null;
-
-            if (assembly != null && assembly.ToLower().EndsWith(".dll"))
-            {
-                /* Load from arbitrary DLL */
-
-                Type type = Assembly.LoadFrom(assembly).GetType(classname);
-
-                /* Class cast problems just get thrown upwards and destroy the app */
-                newCache = (ISwiffotronCache)Activator.CreateInstance(type);
-            }
-            else
-            {
-                /* Load by named assembly */
-
-                /* Class cast problems just get thrown upwards and destroy the app */
-                ObjectHandle oh = Activator.CreateInstance(assembly, classname);
-                newCache = (ISwiffotronCache)oh.Unwrap();
-            }
-
-            newCache.Initialise(init);
-
-            /* Use Add method here to ensure that the name is unique. Key errors get thrown
-             * upwards and destroy the app. Hey, fix your config file, user. */
-            this.caches.Add(name, newCache);
-        }
-
 #if(DEBUG)
-        public XPathNavigator LoadSwiffotronXML_accesor(Stream swiffotronXml)
+        public void LoadSwiffotronXML_accesor(Stream swiffotronXml)
         {
-            return this.LoadSwiffotronXML(swiffotronXml);
+            Xml.LoadSwiffotronXML(swiffotronXml);
         }
 #endif
 
@@ -1904,51 +1137,9 @@ namespace SWFProcessing.Swiffotron
         {
             Dictionary<string, string> info = new Dictionary<string, string>();
 
-            List<string> cacheClasses = new List<string>();
-            foreach (KeyValuePair<string, ISwiffotronCache> cacheEntry in this.caches)
-            {
-                cacheClasses.Add(cacheEntry.Key + "=" + cacheEntry.Value.GetType().FullName + "[" + cacheEntry.Value.InitialisedWith + "]");
-            }
-
-            cacheClasses.Sort();
-
-            /* CacheClasses holds a comma-separated list of all the cache classes used by swiffotron
-             * as key-value pairs, e.g. membase=com.blah.MyOtherClass,memcache=com.blah.MyClass
-             * sorted into alphabetical order. */
-            info.Add("CacheClasses", string.Join(",", cacheClasses.ToArray()));
-
-            List<string> storeClasses = new List<string>();
-            foreach (KeyValuePair<string, ISwiffotronStore> storeEntry in this.stores)
-            {
-                storeClasses.Add(storeEntry.Key + "=" + storeEntry.Value.GetType().FullName + "[" + storeEntry.Value.InitialisedWith + "]");
-            }
-
-            storeClasses.Sort();
-
-            /* StoreClasses holds a comma-separated list of all the cache classes used by swiffotron
-             * as key-value pairs, e.g. db=com.blah.MyOtherClass,fs=com.blah.MyClass
-             * sorted into alphabetical order. */
-            info.Add("StoreClasses", string.Join(",", storeClasses.ToArray()));
+            conf.Interrogate(info);
 
             return info;
-        }
-
-        /// <summary>
-        /// Loads a swiffotron job XML file, validates it and sets the current
-        /// namespace manager so that we can do XPath queries in the 'swf' namespace.
-        /// </summary>
-        /// <param name="swiffotronXml">A stream feeding XML data.</param>
-        /// <returns>The DOM of the swiffotron job XML.</returns>
-        private XPathNavigator LoadSwiffotronXML(Stream swiffotronXml)
-        {
-            XmlDocument doc = new XmlDocument();
-
-            doc.Load(XmlReader.Create(swiffotronXml, swiffotronReaderSettings));
-
-            this.namespaceMgr = new XmlNamespaceManager(doc.NameTable);
-            this.namespaceMgr.AddNamespace(@"swf", SwiffotronNS);
-
-            return doc.CreateNavigator();
         }
     }
 }

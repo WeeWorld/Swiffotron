@@ -56,9 +56,15 @@
     <Compile Include="IO\HTCache.cs" />
     <Compile Include="IO\ISwiffotronCache.cs" />
     <Compile Include="IO\ISwiffotronStore.cs" />
+    <Compile Include="Processor\Caches.cs" />
+    <Compile Include="Processor\Configuration.cs" />
     <Compile Include="Processor\DependencyList.cs" />
+    <Compile Include="Processor\Extern.cs" />
+    <Compile Include="Processor\Stores.cs" />
+    <Compile Include="Processor\SWFProcessor.cs" />
     <Compile Include="Processor\Swiffotron.cs" />
     <Compile Include="Processor\SwiffotronContext.cs" />
+    <Compile Include="Processor\XMLHelper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Processor\SwiffotronException.cs" />
   </ItemGroup>

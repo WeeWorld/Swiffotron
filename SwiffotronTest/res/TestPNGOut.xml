@@ -4,7 +4,7 @@
             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
             id="TestPNGOut">
 
-  <swf width="550" height="400" bgcolor="#00ff00" id="girl">
+  <swf width="550" height="400" bgcolor="#00ff00" id="swfTestPNGOut">
 
     <pngout store="store://store/TestPNGOut.png"/>
 

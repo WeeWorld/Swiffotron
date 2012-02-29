@@ -24,26 +24,6 @@ namespace SWFProcessing.Swiffotron.Test
         private bool ENABLED = false; /* Shady way to do this really. Set to true to see the blue-sky tests and
                                        * inevitably, by definition, fail. */
 
-        /// <summary>
-        /// Tests a job which produces a PNG file.
-        /// </summary>
-        [TestMethod]
-        public void TestPNGOut()
-        {
-            if (!ENABLED)
-            {
-                return;
-            }
-
-            Swiffotron swiffotron;
-
-            MockStore store;
-            MockCache cache;
-            swiffotron = CreateMockSwiffotron(out store, out cache);
-
-            Process(swiffotron, @"TestPNGOut.xml");
-        }
-
         private void Process(Swiffotron swiffotron, string name)
         {
             swiffotron.Process(ResourceAsStream(name), null, null, null, null, null);

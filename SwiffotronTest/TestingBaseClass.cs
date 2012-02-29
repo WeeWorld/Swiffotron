@@ -43,11 +43,11 @@ namespace SWFProcessing.Swiffotron.Test
             Swiffotron swiffotron = new Swiffotron(ResourceAsStream(@"mock-config.xml"));
 #endif
 
-            mockStore = (MockStore)swiffotron.stores_accessor[@"store"];
+            mockStore = (MockStore)swiffotron.conf_accessor.Stores.stores_accessor[@"store"];
             Assert.IsNotNull(mockStore, @"The store object was not created.");
             Assert.IsTrue(mockStore.InitialisedProperly, @"The store was not initialised properly");
 
-            htCache = (MockCache)swiffotron.caches_accessor[@"cache"];
+            htCache = (MockCache)swiffotron.conf_accessor.Caches.caches_accessor[@"cache"];
 
             Assert.IsNotNull(htCache, @"The cache object was not created.");
 

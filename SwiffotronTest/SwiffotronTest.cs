@@ -151,9 +151,7 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestJobValidate()
         {
-            XPathNavigator root = new Swiffotron().LoadSwiffotronXML_accesor(ResourceAsStream(@"TestJobValidate.xml"));
-
-            Assert.IsNotNull(root, @"XPath navigator not created for job XML.");
+            new Swiffotron().LoadSwiffotronXML_accesor(ResourceAsStream(@"TestJobValidate.xml"));
         }
 
         /// <summary>
@@ -164,7 +162,7 @@ namespace SWFProcessing.Swiffotron.Test
         [ExpectedException(typeof(XmlSchemaValidationException))]
         public void TestBrokenJobValidate()
         {
-            /*(void)*/new Swiffotron().LoadSwiffotronXML_accesor(ResourceAsStream(@"TestBrokenJobValidate.xml"));
+            new Swiffotron().LoadSwiffotronXML_accesor(ResourceAsStream(@"TestBrokenJobValidate.xml"));
         }
 
         /// <summary>
@@ -720,6 +718,16 @@ namespace SWFProcessing.Swiffotron.Test
                 }
             }
 
+        }
+
+        /// <summary>
+        /// Tests a job which produces a PNG file.
+        /// </summary>
+        [TestMethod]
+        public void TestPNGOut()
+        {
+            Swiffotron swiffotron;
+            PredictedOutputTest(@"TestPNGOut.xml", @"TestPNGOut.png", out swiffotron);
         }
     }
 }
