@@ -20,7 +20,12 @@ namespace SWFProcessing.SWF2Raster
 
         public Stream GetPNG()
         {
-            return new MemoryStream(new byte[0]);
+            return new MemoryStream(GetPNGAsBytes());
+        }
+
+        public byte[] GetPNGAsBytes()
+        {
+            return new byte[0];
         }
     }
 }

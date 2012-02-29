@@ -22,7 +22,12 @@ namespace SWFProcessing.SWF2SVG
 
         public Stream GetSVG()
         {
-            return new MemoryStream(ASCIIEncoding.Default.GetBytes("<svg />"));
+            return new MemoryStream(GetSVGAsBytes());
+        }
+
+        public byte[] GetSVGAsBytes()
+        {
+            return ASCIIEncoding.Default.GetBytes("<svg />");
         }
     }
 }

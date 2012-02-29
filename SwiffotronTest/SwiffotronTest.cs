@@ -218,7 +218,10 @@ namespace SWFProcessing.Swiffotron.Test
         public void TestSimplestTimelineScript()
         {
             Swiffotron swiffotron;
-            PredictedOutputTest(@"TestSimplestTimelineScript.xml", @"TestSimplestTimelineScript.swf", out swiffotron);
+            PredictedOutputTest(
+                    @"TestSimplestTimelineScript.xml",
+                    @"TestSimplestTimelineScript.swf",
+                    out swiffotron);
         }
 
         [TestMethod]
@@ -264,7 +267,10 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenMovieclipTypeSWF()
         {
-            TestExpectedSwiffotronError(@"TestBrokenMovieclipTypeSWF.xml", SwiffotronError.BadPathOrID, "SrcSwfBadref");
+            TestExpectedSwiffotronError(
+                    @"TestBrokenMovieclipTypeSWF.xml",
+                    SwiffotronError.BadPathOrID,
+                    "SrcSwfBadref");
         }
 
         /// <summary>
@@ -326,7 +332,10 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenMovieclipTypeExtern()
         {
-            TestExpectedSwiffotronError(@"TestBrokenMovieclipTypeExtern.xml", SwiffotronError.BadPathOrID, "FileNotFoundInStore");
+            TestExpectedSwiffotronError(
+                    @"TestBrokenMovieclipTypeExtern.xml",
+                    SwiffotronError.BadPathOrID,
+                    "FileNotFoundInStore");
         }
 
         /// <summary>
@@ -335,7 +344,10 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenInstanceTypeMovieClip()
         {
-            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeMovieClip.xml", SwiffotronError.BadPathOrID, "InstanceSrcMovieClipBadref");
+            TestExpectedSwiffotronError(
+                    @"TestBrokenInstanceTypeMovieClip.xml",
+                    SwiffotronError.BadPathOrID,
+                    "InstanceSrcMovieClipBadref");
         }
 
         /// <summary>
@@ -344,7 +356,10 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestNotRenamedMainTimeline()
         {
-            TestExpectedSwiffotronError(@"TestNotRenamedMainTimeline.xml", SwiffotronError.BadInputXML, "MainTimelineInstanceNotRenamed");
+            TestExpectedSwiffotronError(
+                    @"TestNotRenamedMainTimeline.xml",
+                    SwiffotronError.BadInputXML,
+                    "MainTimelineInstanceNotRenamed");
         }
 
         /// <summary>
@@ -353,7 +368,10 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestInappropriateClassName()
         {
-            TestExpectedSwiffotronError(@"TestInappropriateClassName.xml", SwiffotronError.BadInputXML, "InstanceClassNameInappropriate");
+            TestExpectedSwiffotronError(
+                    @"TestInappropriateClassName.xml",
+                    SwiffotronError.BadInputXML,
+                    "InstanceClassNameInappropriate");
         }
 
         /// <summary>
@@ -364,7 +382,10 @@ namespace SWFProcessing.Swiffotron.Test
         public void TestClasslessInstantiation()
         {
             Swiffotron swiffotron;
-            PredictedOutputTest(@"TestClasslessInstantiation.xml", @"TestClasslessInstantiation.swf", out swiffotron);
+            PredictedOutputTest(
+                    @"TestClasslessInstantiation.xml",
+                    @"TestClasslessInstantiation.swf",
+                    out swiffotron);
         }
 
         /// <summary>
@@ -393,7 +414,10 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestBrokenInstanceTypeInstance()
         {
-            TestExpectedSwiffotronError(@"TestBrokenInstanceTypeInstance.xml", SwiffotronError.BadPathOrID, "FindSpriteByQName");
+            TestExpectedSwiffotronError(
+                    @"TestBrokenInstanceTypeInstance.xml",
+                    SwiffotronError.BadPathOrID,
+                    "FindSpriteByQName");
         }
 
         /// <summary>
@@ -412,7 +436,12 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestUnqualifiedGeneratedTimelineClass()
         {
-            TestExpectedSwiffotronError(@"TestUnqualifiedGeneratedTimelineClass.xml", SwiffotronError.BadInputXML, "CreateInstanceIn", SWFModellerError.CodeMerge, "TimelineDefaultPackage");
+            TestExpectedSwiffotronError(
+                    @"TestUnqualifiedGeneratedTimelineClass.xml",
+                    SwiffotronError.BadInputXML,
+                    "CreateInstanceIn", 
+                   SWFModellerError.CodeMerge,
+                   "[SWF Context: abccircles.circle.swf, TimelineDefaultPackage]");
         }
 
         /// <summary>
@@ -421,7 +450,12 @@ namespace SWFProcessing.Swiffotron.Test
         [TestMethod]
         public void TestCollidingClassname()
         {
-            TestExpectedSwiffotronError(@"TestCollidingClassname.xml", SwiffotronError.BadInputXML, "ClassNameCollision", SWFModellerError.CodeMerge, "ClassNameCollision");
+            TestExpectedSwiffotronError(
+                    @"TestCollidingClassname.xml",
+                    SwiffotronError.BadInputXML,
+                    "ClassNameCollision",
+                    SWFModellerError.CodeMerge,
+                    "[SWF Context: TestCollidingClassnameSWF, ClassNameCollision]");
         }
 
         private void TestExpectedSwiffotronError(
@@ -480,6 +514,21 @@ namespace SWFProcessing.Swiffotron.Test
         public void TestBrokenInstanceTypeSWF()
         {
             TestExpectedSwiffotronError(@"TestBrokenInstanceTypeSWF.xml", SwiffotronError.BadPathOrID, "SrcSwfBadref");
+        }
+
+        private void ImageOutputTest(string xmlIn, string imageOut, out Swiffotron swiffotron)
+        {
+            MockStore store;
+            MockCache cache;
+            swiffotron = CreateMockSwiffotron(out store, out cache);
+
+            Dictionary<string, byte[]> commits = new Dictionary<string, byte[]>();
+            swiffotron.Process(ResourceAsStream(xmlIn), commits, null, null, this, this);
+            CheckCommits(commits);
+
+            CopyStoreToTestDir(store);
+
+            Assert.IsTrue(store.Has(imageOut), @"Output was not saved");
         }
 
         private void PredictedOutputTest(string xmlIn, string swfOut, out Swiffotron swiffotron)
@@ -698,26 +747,44 @@ namespace SWFProcessing.Swiffotron.Test
             foreach (string key in commits.Keys)
             {
                 byte[] data = commits[key];
-                string swfDump = null;
-                try
+
+                if (key.ToLower().EndsWith(".swf"))
                 {
-                    using(MemoryStream ms = new MemoryStream(data))
-                    using (SWFReader reader = new SWFReader(ms, new SWFReaderOptions() { StrictTagLength = true }, null, null))
+                    string swfDump = null;
+                    try
                     {
-                        swfDump = SwfToString(reader.ReadSWF(new SWFContext(key)));
+                        using (MemoryStream ms = new MemoryStream(data))
+                        using (SWFReader reader = new SWFReader(ms, new SWFReaderOptions() { StrictTagLength = true }, null, null))
+                        {
+                            swfDump = SwfToString(reader.ReadSWF(new SWFContext(key)));
+                        }
+                    }
+                    finally
+                    {
+                        lastCommitModelOutput = TestDir + key + ".model.txt";
+                        using (FileStream fs = new FileStream(lastCommitModelOutput, FileMode.Create))
+                        {
+                            if (swfDump != null)
+                            {
+                                byte[] modeldata = new ASCIIEncoding().GetBytes(swfDump.ToString().Replace("\r", ""));
+                                fs.Write(modeldata, 0, modeldata.Length);
+                            }
+                        }
                     }
                 }
-                finally
+                else if (key.ToLower().EndsWith(".png"))
                 {
-                    lastCommitModelOutput = TestDir + key + ".model.txt";
-                    using (FileStream fs = new FileStream(lastCommitModelOutput, FileMode.Create))
-                    {
-                        byte[] modeldata = new ASCIIEncoding().GetBytes(swfDump.ToString().Replace("\r", ""));
-                        fs.Write(modeldata, 0, modeldata.Length);
-                    }
+                    /* TODO: Check that a real PNG was committed. */
+                }
+                else if (key.ToLower().EndsWith(".svg"))
+                {
+                    /* TODO: Check that a real SVG was committed. */
+                }
+                else
+                {
+                    Assert.Fail("For unit tests, a file extension is required on output keys");
                 }
             }
-
         }
 
         /// <summary>
@@ -727,7 +794,17 @@ namespace SWFProcessing.Swiffotron.Test
         public void TestPNGOut()
         {
             Swiffotron swiffotron;
-            PredictedOutputTest(@"TestPNGOut.xml", @"TestPNGOut.png", out swiffotron);
+            ImageOutputTest(@"TestPNGOut.xml", @"TestPNGOut.png", out swiffotron);
+        }
+
+        /// <summary>
+        /// Tests a job which produces an SVG file.
+        /// </summary>
+        [TestMethod]
+        public void TestSVGOut()
+        {
+            Swiffotron swiffotron;
+            ImageOutputTest(@"TestSVGOut.xml", @"TestSVGOut.svg", out swiffotron);
         }
     }
 }

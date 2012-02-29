@@ -69,6 +69,14 @@
     <Compile Include="Processor\SwiffotronException.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SWF2Raster\SWF2Raster.csproj">
+      <Project>{27FFF49F-5595-48B7-A91D-2B470B5C8FC4}</Project>
+      <Name>SWF2Raster</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SWF2SVG\SWF2SVG.csproj">
+      <Project>{846C8538-F996-447E-BC7E-0D5D5114BE48}</Project>
+      <Name>SWF2SVG</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SWFModeller\SWFModeller.csproj">
       <Project>{E584EF20-EB00-463C-8E57-2B3F5D3A5680}</Project>
       <Name>SWFModeller</Name>

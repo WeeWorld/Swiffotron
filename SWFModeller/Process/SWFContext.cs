@@ -37,7 +37,14 @@ namespace SWFProcessing.SWFModeller.Process
 
         public override string ToString()
         {
-            return "[SWF Context: " + this.Name + "]";
+            if (this.SentinelString == null)
+            {
+                return "[SWF Context: " + this.Name + "]";
+            }
+            else
+            {
+                return "[SWF Context: " + this.Name + ", " + this.SentinelString + "]";
+            }
         }
 
         /// <summary>

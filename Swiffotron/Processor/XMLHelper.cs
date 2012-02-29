@@ -99,6 +99,9 @@ namespace SWFProcessing.Swiffotron.Processor
         /// <summary>XML tag name; A video output declaration</summary>
         public const string TagVidOut = @"vidout";
 
+        /// <summary>XML tag name; An SVG output declaration</summary>
+        public const string TagSvgOut = @"svgout";
+
         /// <summary>XML tag name; An instruction to modify a clip instance</summary>
         public const string TagModify = @"modify";
 

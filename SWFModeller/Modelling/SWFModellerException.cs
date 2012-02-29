@@ -70,7 +70,7 @@ namespace SWFProcessing.SWFModeller
             : base(error.ToString() + "; " + msg + "; " + ctx.ToString())
         {
             this.Error = error;
-            this.Sentinel = ctx.SentinelString;
+            this.Sentinel = ctx.ToString();
         }
 
         /// Initializes a new instance of an exception with an error message
@@ -92,7 +92,7 @@ namespace SWFProcessing.SWFModeller
             : base(error.ToString() + "; " + ctx.ToString())
         {
             this.Error = error;
-            this.Sentinel = ctx.SentinelString;
+            this.Sentinel = ctx.ToString();
         }
 
         /// <summary>

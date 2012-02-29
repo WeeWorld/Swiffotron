@@ -25,6 +25,8 @@ namespace SWFProcessing.Swiffotron
     using SWFProcessing.SWFModeller.Process;
     using SWFProcessing.Swiffotron.IO.Debug;
     using SWFProcessing.Swiffotron.Processor;
+    using SWF2Raster = SWFProcessing.SWF2Raster.SWF2Raster;
+    using SWF2SVG = SWFProcessing.SWF2SVG.SWF2SVG;
 
     /// <summary>
     /// <para>
@@ -206,7 +208,7 @@ namespace SWFProcessing.Swiffotron
             }
 
             /* Select all the swf tags that have some sort of output: */
-            foreach (XPathNavigator outputTag in Xml.Select(@"//swf:swfout|//swf:pngout|//swf:vidout"))
+            foreach (XPathNavigator outputTag in Xml.Select(@"//swf:swfout|//swf:pngout|//swf:vidout|//swf:svgout"))
             {
                 XmlAttributeCollection attribs = ((XmlElement)outputTag.UnderlyingObject).Attributes;
 
@@ -421,6 +423,7 @@ namespace SWFProcessing.Swiffotron
                         case XMLHelper.TagSwfOut:
                         case XMLHelper.TagPngOut:
                         case XMLHelper.TagVidOut:
+                        case XMLHelper.TagSvgOut:
                             /* These are not processing steps. Skip 'em. */
                             break;
 
@@ -1026,6 +1029,19 @@ namespace SWFProcessing.Swiffotron
         private void ProcessSWFOutput(XPathNavigator swfNav, SWF swf, StringBuilder writeLog, StringBuilder abcWriteLog)
         {
             byte[] swfData = null;
+            byte[] pngData = null;
+            byte[] svgData = null;
+
+            int swfOuts = Xml.SelectChildren(swfNav, @"swfout").Count;
+            int pngOuts = Xml.SelectChildren(swfNav, @"pngout").Count;
+            int vidOuts = Xml.SelectChildren(swfNav, @"vidout").Count;
+            int svgOuts = Xml.SelectChildren(swfNav, @"svgout").Count;
+
+            if (swfOuts > 0)
+            {
+                swfData = new SWFWriter(swf, conf.swfWriterOptions, writeLog, abcWriteLog).ToByteArray();
+            }
+
             foreach (XPathNavigator swfout in Xml.SelectChildren(swfNav, @"swfout"))
             {
                 string swfoutStore = swfout.GetAttribute(@"store", string.Empty);
@@ -1038,26 +1054,52 @@ namespace SWFProcessing.Swiffotron
                             @"The swfout tag needs either a cachekey or a storeput attribute");
                 }
 
-                if (swfData == null)
-                {
-                    swfData = new SWFWriter(swf, conf.swfWriterOptions, writeLog, abcWriteLog).ToByteArray();
-                }
-
                 this.SaveToStore(swfoutStore, swfData);
             }
 
-            if (Xml.SelectChildren(swfNav, @"pngout").Count > 0)
+            if (pngOuts > 0)
             {
-                string swfoutStore = swfout.GetAttribute(@"store", string.Empty);
-
-                /* ISSUE 65 */
-                throw new SwiffotronException(
-                        SwiffotronError.UnimplementedFeature,
-                        this.Context,
-                        "We can't do PNG output yet.");
+                SWF2Raster pngConv = new SWF2Raster(swf);
+                pngData = pngConv.GetPNGAsBytes();
             }
 
-            if (Xml.SelectChildren(swfNav, @"vidout").Count > 0)
+            foreach (XPathNavigator pngout in Xml.SelectChildren(swfNav, @"pngout"))
+            {
+                string pngoutStore = pngout.GetAttribute(@"store", string.Empty);
+
+                if (pngoutStore == string.Empty)
+                {
+                    throw new SwiffotronException(
+                            SwiffotronError.BadInputXML,
+                            this.Context,
+                            @"The pngout tag needs either a cachekey or a storeput attribute");
+                }
+
+                this.SaveToStore(pngoutStore, pngData);
+            }
+
+            if (svgOuts > 0)
+            {
+                SWF2SVG svgConv = new SWF2SVG(swf);
+                svgData = svgConv.GetSVGAsBytes();
+            }
+
+            foreach (XPathNavigator svgout in Xml.SelectChildren(swfNav, @"svgout"))
+            {
+                string svgoutStore = svgout.GetAttribute(@"store", string.Empty);
+
+                if (svgoutStore == string.Empty)
+                {
+                    throw new SwiffotronException(
+                            SwiffotronError.BadInputXML,
+                            this.Context,
+                            @"The svgout tag needs either a cachekey or a storeput attribute");
+                }
+
+                this.SaveToStore(svgoutStore, svgData);
+            }
+
+            if (vidOuts > 0)
             {
                 /* ISSUE 66 */
                 throw new SwiffotronException(
