@@ -9,7 +9,7 @@ namespace SWFProcessing.SWFModeller.Characters.Text
     using System.Collections.Generic;
     using System.Linq;
     using System.Text;
-    using SWFProcessing.SWFModeller.Characters.Geom;
+    using SWFProcessing.ModellingUtils.Geom;
 
     public class StaticText : ICharacter, IFontUserProcessor, IText
     {

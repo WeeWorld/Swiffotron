@@ -7,7 +7,7 @@
 namespace SWFProcessing.SWFModeller.Characters.Shapes
 {
     using System.Text;
-    using SWFProcessing.SWFModeller.Characters.Geom;
+    using SWFProcessing.ModellingUtils.Geom;
     using SWFProcessing.SWFModeller.Characters.Images;
 
     /// <summary>

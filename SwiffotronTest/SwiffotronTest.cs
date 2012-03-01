@@ -41,8 +41,6 @@ namespace SWFProcessing.Swiffotron.Test
         ///</summary>
         public TestContext TestContext { get; set; }
 
-        private string TestDir;
-
         /// <summary>
         /// In the commit handler, we turn the SWF commit into a model dump. We record the
         /// filename so that we can find it again after a call to Swiffotron.Process in order
@@ -516,21 +514,6 @@ namespace SWFProcessing.Swiffotron.Test
             TestExpectedSwiffotronError(@"TestBrokenInstanceTypeSWF.xml", SwiffotronError.BadPathOrID, "SrcSwfBadref");
         }
 
-        private void ImageOutputTest(string xmlIn, string imageOut, out Swiffotron swiffotron)
-        {
-            MockStore store;
-            MockCache cache;
-            swiffotron = CreateMockSwiffotron(out store, out cache);
-
-            Dictionary<string, byte[]> commits = new Dictionary<string, byte[]>();
-            swiffotron.Process(ResourceAsStream(xmlIn), commits, null, null, this, this);
-            CheckCommits(commits);
-
-            CopyStoreToTestDir(store);
-
-            Assert.IsTrue(store.Has(imageOut), @"Output was not saved");
-        }
-
         private void PredictedOutputTest(string xmlIn, string swfOut, out Swiffotron swiffotron)
         {
             MockStore store;
@@ -672,37 +655,6 @@ namespace SWFProcessing.Swiffotron.Test
             }, swiffotron.processingList_accessor);
         }
 
-        private void CopyStoreToTestDir(MockStore store)
-        {
-            foreach (string commit in store.Commits)
-            {
-                if (store.Has(commit)) /* Well it might have been deleted */
-                {
-                    using (Stream input = store.OpenInput(commit))
-                    using (FileStream output = new FileStream(TestDir + commit, FileMode.Create))
-                    {
-                        CopyStream(input, output);
-                    }
-                }
-            }
-        }
-
-        public static void CopyStream(Stream input, Stream output)
-        {
-            byte[] buffer = new byte[32768];
-            while (true)
-            {
-                int read = input.Read(buffer, 0, buffer.Length);
-
-                if (read <= 0)
-                {
-                    return;
-                }
-
-                output.Write(buffer, 0, read);
-            }
-        }
-
         private void AssertProcessingOrder(string[] expected, List<XPathNavigator> list)
         {
             Assert.AreEqual(expected.Length, list.Count, @"Processing order log is the wrong length");
@@ -772,39 +724,11 @@ namespace SWFProcessing.Swiffotron.Test
                         }
                     }
                 }
-                else if (key.ToLower().EndsWith(".png"))
-                {
-                    /* TODO: Check that a real PNG was committed. */
-                }
-                else if (key.ToLower().EndsWith(".svg"))
-                {
-                    /* TODO: Check that a real SVG was committed. */
-                }
                 else
                 {
                     Assert.Fail("For unit tests, a file extension is required on output keys");
                 }
             }
-        }
-
-        /// <summary>
-        /// Tests a job which produces a PNG file.
-        /// </summary>
-        [TestMethod]
-        public void TestPNGOut()
-        {
-            Swiffotron swiffotron;
-            ImageOutputTest(@"TestPNGOut.xml", @"TestPNGOut.png", out swiffotron);
-        }
-
-        /// <summary>
-        /// Tests a job which produces an SVG file.
-        /// </summary>
-        [TestMethod]
-        public void TestSVGOut()
-        {
-            Swiffotron swiffotron;
-            ImageOutputTest(@"TestSVGOut.xml", @"TestSVGOut.svg", out swiffotron);
         }
     }
 }

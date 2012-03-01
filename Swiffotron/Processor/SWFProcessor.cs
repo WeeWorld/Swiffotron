@@ -6,9 +6,9 @@
 
 namespace SWFProcessing.Swiffotron.Processor
 {
+    using SWFProcessing.ModellingUtils.Geom;
     using SWFProcessing.SWFModeller;
     using SWFProcessing.SWFModeller.Characters;
-    using SWFProcessing.SWFModeller.Characters.Geom;
 
     /// <summary>
     /// Support class for Swiffotron-oriented SWF manipulation tasks

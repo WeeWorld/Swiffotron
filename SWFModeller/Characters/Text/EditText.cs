@@ -8,7 +8,7 @@ namespace SWFProcessing.SWFModeller.Characters.Text
 {
     using System.Drawing;
     using System.Text;
-    using SWFProcessing.SWFModeller.Characters.Geom;
+    using SWFProcessing.ModellingUtils.Geom;
     using SWFProcessing.SWFModeller.Text;
 
     public class EditText : ICharacter, IFontUser, IFontUserProcessor, IText

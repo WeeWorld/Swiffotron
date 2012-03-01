@@ -6,7 +6,7 @@
 
 namespace SWFProcessing.SWFModeller.Characters
 {
-    using SWFProcessing.SWFModeller.Util;
+    using SWFProcessing.ModellingUtils.Util;
 
     /// <summary>
     /// A rather pretentiously named class that stores colour channels as fixed-point

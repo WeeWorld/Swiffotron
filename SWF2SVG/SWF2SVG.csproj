@@ -31,26 +31,34 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Svg, Version=0.5.2.0, Culture=neutral, processorArchitecture=MSIL" />
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IO\XmlAssist.cs" />
+    <Compile Include="Model\SVGGroup.cs" />
+    <Compile Include="Model\ISVGElement.cs" />
+    <Compile Include="Model\SVG.cs" />
     <Compile Include="SWF2SVG.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\ModellingUtils\ModellingUtils.csproj">
+      <Project>{7A5E996C-91E8-4B15-B82D-08F477F6C17F}</Project>
+      <Name>ModellingUtils</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SWFModeller\SWFModeller.csproj">
       <Project>{E584EF20-EB00-463C-8E57-2B3F5D3A5680}</Project>
       <Name>SWFModeller</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Svg.dll" />
+    <Content Include="README.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

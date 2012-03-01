@@ -4,7 +4,7 @@
 //
 //-----------------------------------------------------------------------
 
-namespace SWFProcessing.SWFModeller.Util
+namespace SWFProcessing.ModellingUtils.Util
 {
     using System.Collections.Generic;
 

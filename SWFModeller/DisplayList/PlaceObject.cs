@@ -8,8 +8,8 @@ namespace SWFProcessing.SWFModeller
 {
     using System.Diagnostics;
     using System.Text;
+    using SWFProcessing.ModellingUtils.Geom;
     using SWFProcessing.SWFModeller.Characters;
-    using SWFProcessing.SWFModeller.Characters.Geom;
     using SWFProcessing.SWFModeller.DisplayList;
     using SWFProcessing.SWFModeller.Modelling;
 

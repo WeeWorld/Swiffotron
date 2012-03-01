@@ -6,14 +6,13 @@
 
 namespace SWFProcessing.Swiffotron.Processor
 {
-    using System.Xml;
+    using System;
+    using System.Drawing;
     using System.IO;
     using System.Reflection;
+    using System.Xml;
     using System.Xml.XPath;
-    using System.Diagnostics;
-    using SWFProcessing.SWFModeller.Characters.Geom;
-    using System.Drawing;
-    using System;
+    using SWFProcessing.ModellingUtils.Geom;
 
     internal class XMLHelper
     {
@@ -101,6 +100,9 @@ namespace SWFProcessing.Swiffotron.Processor
 
         /// <summary>XML tag name; An SVG output declaration</summary>
         public const string TagSvgOut = @"svgout";
+
+        /// <summary>XML tag name; An SVG output declaration</summary>
+        public const string TagHTMLOut = @"htmlout";
 
         /// <summary>XML tag name; An instruction to modify a clip instance</summary>
         public const string TagModify = @"modify";

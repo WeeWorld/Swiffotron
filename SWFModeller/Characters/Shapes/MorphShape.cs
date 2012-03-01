@@ -7,10 +7,10 @@
 namespace SWFProcessing.SWFModeller.Characters.Shapes
 {
     using System.Text;
-    using SWFProcessing.SWFModeller.Characters.Geom;
+    using SWFProcessing.ModellingUtils.Geom;
+    using SWFProcessing.ModellingUtils.Util;
     using SWFProcessing.SWFModeller.Characters.Images;
     using SWFProcessing.SWFModeller.Characters.Shapes.Parts;
-    using SWFProcessing.SWFModeller.Util;
 
     public class MorphShape : IShape
     {

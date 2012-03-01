@@ -4,7 +4,7 @@
 //
 //-----------------------------------------------------------------------
 
-namespace SWFProcessing.SWFModeller.Characters.Geom
+namespace SWFProcessing.ModellingUtils.Geom
 {
     /// <summary>
     /// A rectangle.

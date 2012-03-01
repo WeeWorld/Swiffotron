@@ -11,11 +11,12 @@ namespace SWFProcessing.SWFModeller
     using System.IO;
     using System.Text;
     using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
+    using SWFProcessing.ModellingUtils.Geom;
+    using SWFProcessing.ModellingUtils.Util;
     using SWFProcessing.SWFModeller.ABC;
     using SWFProcessing.SWFModeller.ABC.Code;
     using SWFProcessing.SWFModeller.ABC.IO;
     using SWFProcessing.SWFModeller.Characters;
-    using SWFProcessing.SWFModeller.Characters.Geom;
     using SWFProcessing.SWFModeller.Characters.Images;
     using SWFProcessing.SWFModeller.Characters.Shapes;
     using SWFProcessing.SWFModeller.Characters.Shapes.IO;
@@ -24,7 +25,6 @@ namespace SWFProcessing.SWFModeller
     using SWFProcessing.SWFModeller.IO;
     using SWFProcessing.SWFModeller.Modelling;
     using SWFProcessing.SWFModeller.Text;
-    using SWFProcessing.SWFModeller.Util;
 
     /// <summary>
     /// An object which can take a SWF model and produce binary SWF data.

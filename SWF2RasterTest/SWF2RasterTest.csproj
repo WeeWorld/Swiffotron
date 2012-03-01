@@ -9,7 +9,7 @@
     <ProjectGuid>{C0AA5DDB-C176-4C81-9E77-C86CB5B99941}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SWF2RasterTest</RootNamespace>
+    <RootNamespace>SWFProcessing.SWF2Raster.Test</RootNamespace>
     <AssemblyName>SWF2RasterTest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

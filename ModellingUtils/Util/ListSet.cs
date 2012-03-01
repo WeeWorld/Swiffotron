@@ -4,7 +4,7 @@
 //
 //-----------------------------------------------------------------------
 
-namespace SWFProcessing.SWFModeller.Util
+namespace SWFProcessing.ModellingUtils.Util
 {
     using System.Collections.Generic;
     using System.Linq;
@@ -102,7 +102,7 @@ namespace SWFProcessing.SWFModeller.Util
             this.set.Clear();
         }
 
-        internal K[] ToArray()
+        public K[] ToArray()
         {
             return this.list.ToArray();
         }

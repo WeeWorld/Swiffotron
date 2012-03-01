@@ -9,7 +9,7 @@
     <ProjectGuid>{DD0CBBCE-8FFA-44CF-8467-F5420DF4D3F0}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SWF2SVGTest</RootNamespace>
+    <RootNamespace>SWFProcessing.SWF2SVG.Test</RootNamespace>
     <AssemblyName>SWF2SVGTest</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>

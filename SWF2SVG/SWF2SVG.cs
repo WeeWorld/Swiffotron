@@ -4,12 +4,12 @@
 //
 //-----------------------------------------------------------------------
 
-
 namespace SWFProcessing.SWF2SVG
 {
     using System.IO;
     using System.Text;
     using SWFProcessing.SWFModeller;
+    using SWFProcessing.SWF2SVG.Model;
 
     public class SWF2SVG
     {
@@ -27,7 +27,14 @@ namespace SWFProcessing.SWF2SVG
 
         public byte[] GetSVGAsBytes()
         {
-            return ASCIIEncoding.Default.GetBytes("<svg />");
+            SVG svg = new SVG()
+            {
+                Width = (int)Swf.FrameWidth,
+                Height = (int)Swf.FrameHeight,
+                BackgroundColor = Swf.BackgroundColor
+            };
+
+            return svg.Render();
         }
     }
 }

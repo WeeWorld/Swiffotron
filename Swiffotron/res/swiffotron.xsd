@@ -220,6 +220,7 @@
       <element name="pngout" type="swf:outputType" />
       <element name="vidout" type="swf:vidoutType" />
       <element name="svgout" type="swf:outputType" />
+      <element name="htmlout" type="swf:outputType" />
     </choice>
     <attribute name="bgcolor" type="string">
       <annotation>

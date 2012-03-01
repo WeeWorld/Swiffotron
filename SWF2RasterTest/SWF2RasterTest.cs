@@ -4,7 +4,7 @@
 //
 //-----------------------------------------------------------------------
 
-namespace SWF2RasterTest
+namespace SWFProcessing.SWF2Raster.Test
 {
     using SWFProcessing.SWF2Raster;
     using Microsoft.VisualStudio.TestTools.UnitTesting;

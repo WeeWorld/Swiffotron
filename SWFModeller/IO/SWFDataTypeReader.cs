@@ -12,7 +12,7 @@ namespace SWFProcessing.SWFModeller
     using System.Text;
     using ICSharpCode.SharpZipLib.Zip.Compression.Streams;
     using SWFProcessing.SWFModeller.Characters;
-    using SWFProcessing.SWFModeller.Characters.Geom;
+    using SWFProcessing.ModellingUtils.Geom;
 
     /// <summary>
     /// A binary reader with methods for reading the atomic units of

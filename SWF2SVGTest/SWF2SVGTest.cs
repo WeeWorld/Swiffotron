@@ -4,7 +4,7 @@
 //
 //-----------------------------------------------------------------------
 
-namespace SWF2SVGTest
+namespace SWFProcessing.SWF2SVG.Test
 {
     using System.IO;
 #if(EXPRESS2010)

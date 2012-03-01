@@ -10,7 +10,7 @@ namespace SWFProcessing.SWFModeller
     using System.IO;
     using System.Text;
     using SWFProcessing.SWFModeller.Characters;
-    using SWFProcessing.SWFModeller.Characters.Geom;
+    using SWFProcessing.ModellingUtils.Geom;
 
     /// <summary>
     /// A writer that can write an assortment of atomic SWF types to a stream.

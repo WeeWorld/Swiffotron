@@ -14,11 +14,11 @@ namespace SWFProcessing.Swiffotron
     using System.Text;
     using System.Xml;
     using System.Xml.XPath;
+    using SWFProcessing.ModellingUtils.Geom;
     using SWFProcessing.SWFModeller;
     using SWFProcessing.SWFModeller.ABC.Code;
     using SWFProcessing.SWFModeller.ABC.Debug;
     using SWFProcessing.SWFModeller.Characters;
-    using SWFProcessing.SWFModeller.Characters.Geom;
     using SWFProcessing.SWFModeller.Characters.Text;
     using SWFProcessing.SWFModeller.IO;
     using SWFProcessing.SWFModeller.Modelling;
@@ -27,6 +27,7 @@ namespace SWFProcessing.Swiffotron
     using SWFProcessing.Swiffotron.Processor;
     using SWF2Raster = SWFProcessing.SWF2Raster.SWF2Raster;
     using SWF2SVG = SWFProcessing.SWF2SVG.SWF2SVG;
+    using SWF2HTML = SWFProcessing.SWF2HTML.SWF2HTML;
 
     /// <summary>
     /// <para>
@@ -208,7 +209,7 @@ namespace SWFProcessing.Swiffotron
             }
 
             /* Select all the swf tags that have some sort of output: */
-            foreach (XPathNavigator outputTag in Xml.Select(@"//swf:swfout|//swf:pngout|//swf:vidout|//swf:svgout"))
+            foreach (XPathNavigator outputTag in Xml.Select(@"//swf:swfout|//swf:pngout|//swf:vidout|//swf:svgout|//swf:htmlout"))
             {
                 XmlAttributeCollection attribs = ((XmlElement)outputTag.UnderlyingObject).Attributes;
 
@@ -424,6 +425,7 @@ namespace SWFProcessing.Swiffotron
                         case XMLHelper.TagPngOut:
                         case XMLHelper.TagVidOut:
                         case XMLHelper.TagSvgOut:
+                        case XMLHelper.TagHTMLOut:
                             /* These are not processing steps. Skip 'em. */
                             break;
 
@@ -1031,11 +1033,13 @@ namespace SWFProcessing.Swiffotron
             byte[] swfData = null;
             byte[] pngData = null;
             byte[] svgData = null;
+            byte[] htmlData = null;
 
             int swfOuts = Xml.SelectChildren(swfNav, @"swfout").Count;
             int pngOuts = Xml.SelectChildren(swfNav, @"pngout").Count;
             int vidOuts = Xml.SelectChildren(swfNav, @"vidout").Count;
             int svgOuts = Xml.SelectChildren(swfNav, @"svgout").Count;
+            int htmlOuts = Xml.SelectChildren(swfNav, @"htmlout").Count;
 
             if (swfOuts > 0)
             {
@@ -1076,6 +1080,27 @@ namespace SWFProcessing.Swiffotron
                 }
 
                 this.SaveToStore(pngoutStore, pngData);
+            }
+
+            if (htmlOuts > 0)
+            {
+                SWF2HTML htmlConv = new SWF2HTML(swf);
+                htmlData = htmlConv.GetHTMLAsBytes();
+            }
+
+            foreach (XPathNavigator htmlout in Xml.SelectChildren(swfNav, @"htmlout"))
+            {
+                string htmloutStore = htmlout.GetAttribute(@"store", string.Empty);
+
+                if (htmloutStore == string.Empty)
+                {
+                    throw new SwiffotronException(
+                            SwiffotronError.BadInputXML,
+                            this.Context,
+                            @"The htmlout tag needs either a cachekey or a storeput attribute");
+                }
+
+                this.SaveToStore(htmloutStore, htmlData);
             }
 
             if (svgOuts > 0)

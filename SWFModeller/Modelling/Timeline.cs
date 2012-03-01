@@ -11,7 +11,7 @@ namespace SWFProcessing.SWFModeller.Modelling
     using SWFProcessing.SWFModeller.ABC;
     using SWFProcessing.SWFModeller.ABC.Code;
     using SWFProcessing.SWFModeller.Characters;
-    using SWFProcessing.SWFModeller.Characters.Geom;
+    using SWFProcessing.ModellingUtils.Geom;
     using SWFProcessing.SWFModeller.Text;
     using SWFProcessing.SWFModeller.DisplayList;
     using SWFProcessing.SWFModeller.Characters.Text;

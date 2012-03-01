@@ -51,11 +51,15 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SwiffotronHTMLTest.cs" />
+    <Compile Include="SwiffotronImageTest.cs" />
+    <Compile Include="SwiffotronSVGTest.cs" />
     <Compile Include="SwiffotronTest.cs" />
     <Compile Include="TestingBaseClass.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="AuthoringTests.txt" />
+    <EmbeddedResource Include="res\TestHTMLOut.xml" />
     <EmbeddedResource Include="res\TestSVGOut.xml" />
     <EmbeddedResource Include="res\predicted\TestTextReplaceEmptyString.swf.txt" />
     <EmbeddedResource Include="res\TestTextReplaceEmptyString.xml" />

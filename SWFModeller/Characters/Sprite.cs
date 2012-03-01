@@ -8,13 +8,13 @@ namespace SWFProcessing.SWFModeller.Characters
 {
     using System.Collections.Generic;
     using System.Text;
+    using SWFProcessing.ModellingUtils.Util;
     using SWFProcessing.SWFModeller.ABC;
+    using SWFProcessing.SWFModeller.ABC.Code;
     using SWFProcessing.SWFModeller.Characters.Text;
     using SWFProcessing.SWFModeller.DisplayList;
     using SWFProcessing.SWFModeller.Modelling;
     using SWFProcessing.SWFModeller.Text;
-    using SWFProcessing.SWFModeller.Util;
-    using SWFProcessing.SWFModeller.ABC.Code;
 
     /// <summary>
     /// A sprite object with its own timeline

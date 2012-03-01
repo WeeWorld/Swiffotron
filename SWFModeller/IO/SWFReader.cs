@@ -11,19 +11,19 @@ namespace SWFProcessing.SWFModeller
     using System.Diagnostics;
     using System.IO;
     using System.Text;
+    using SWFProcessing.ModellingUtils.Geom;
     using SWFProcessing.SWFModeller.ABC;
     using SWFProcessing.SWFModeller.ABC.Debug;
     using SWFProcessing.SWFModeller.Characters;
-    using SWFProcessing.SWFModeller.Characters.Geom;
     using SWFProcessing.SWFModeller.Characters.Images;
     using SWFProcessing.SWFModeller.Characters.Shapes;
     using SWFProcessing.SWFModeller.Characters.Shapes.IO;
     using SWFProcessing.SWFModeller.Characters.Text;
     using SWFProcessing.SWFModeller.IO;
     using SWFProcessing.SWFModeller.Modelling;
+    using SWFProcessing.SWFModeller.Process;
     using SWFProcessing.SWFModeller.Text;
     using DBug = System.Diagnostics;
-    using SWFProcessing.SWFModeller.Process;
 
     public class SWFReader : IDisposable, IImageFinder
     {

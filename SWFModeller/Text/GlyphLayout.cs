@@ -6,7 +6,7 @@
 
 namespace SWFProcessing.SWFModeller.Text
 {
-    using SWFProcessing.SWFModeller.Characters.Geom;
+    using SWFProcessing.ModellingUtils.Geom;
 
     public class GlyphLayout
     {

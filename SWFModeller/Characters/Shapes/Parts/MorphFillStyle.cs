@@ -7,7 +7,7 @@
 namespace SWFProcessing.SWFModeller.Characters.Shapes.Parts
 {
     using System.Drawing;
-    using SWFProcessing.SWFModeller.Characters.Geom;
+    using SWFProcessing.ModellingUtils.Geom;
     using SWFProcessing.SWFModeller.Characters.Images;
     using SWFProcessing.SWFModeller.Characters.Shapes.Parts.Gradients;
 

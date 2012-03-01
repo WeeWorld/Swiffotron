@@ -4,7 +4,7 @@
 //
 //-----------------------------------------------------------------------
 
-namespace SWFProcessing.SWFModeller.Characters.Geom
+namespace SWFProcessing.ModellingUtils.Geom
 {
     using System; /* Gotta have a system. */
 
@@ -20,6 +20,19 @@ namespace SWFProcessing.SWFModeller.Characters.Geom
         {
             this.TransX = 0.0f;
             this.TransY = 0.0f;
+            this.ScaleX = 1.0f;
+            this.ScaleY = 1.0f;
+            this.SkewX = 0.0f;
+            this.SkewY = 0.0f;
+        }
+
+        /// <summary>
+        /// Initializes a new instance of an translation matrix
+        /// </summary>
+        public Matrix(float tx, float ty)
+        {
+            this.TransX = tx;
+            this.TransY = ty;
             this.ScaleX = 1.0f;
             this.ScaleY = 1.0f;
             this.SkewX = 0.0f;

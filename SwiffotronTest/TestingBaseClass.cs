@@ -16,6 +16,8 @@ namespace SWFProcessing.Swiffotron.Test
 
     public class TestingBaseClass
     {
+        protected string TestDir;
+
         protected Stream ResourceAsStream(string sRes)
         {
             Stream s = Assembly.GetExecutingAssembly().GetManifestResourceStream(@"SWFProcessing.Swiffotron.Test.res." + sRes);
@@ -52,6 +54,37 @@ namespace SWFProcessing.Swiffotron.Test
             Assert.IsNotNull(htCache, @"The cache object was not created.");
 
             return swiffotron;
+        }
+
+        protected void CopyStoreToTestDir(MockStore store)
+        {
+            foreach (string commit in store.Commits)
+            {
+                if (store.Has(commit)) /* Well it might have been deleted */
+                {
+                    using (Stream input = store.OpenInput(commit))
+                    using (FileStream output = new FileStream(TestDir + commit, FileMode.Create))
+                    {
+                        CopyStream(input, output);
+                    }
+                }
+            }
+        }
+
+        public static void CopyStream(Stream input, Stream output)
+        {
+            byte[] buffer = new byte[32768];
+            while (true)
+            {
+                int read = input.Read(buffer, 0, buffer.Length);
+
+                if (read <= 0)
+                {
+                    return;
+                }
+
+                output.Write(buffer, 0, read);
+            }
         }
     }
 }

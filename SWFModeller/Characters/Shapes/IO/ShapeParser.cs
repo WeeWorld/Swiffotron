@@ -9,7 +9,7 @@ namespace SWFProcessing.SWFModeller.Characters.Shapes.IO
     using System.Collections.Generic;
     using System.Drawing;
     using System.IO;
-    using SWFProcessing.SWFModeller.Characters.Geom;
+    using SWFProcessing.ModellingUtils.Geom;
     using SWFProcessing.SWFModeller.Characters.Shapes.Parts;
     using SWFProcessing.SWFModeller.Characters.Shapes.Parts.Gradients;
     using SWFProcessing.SWFModeller.IO;

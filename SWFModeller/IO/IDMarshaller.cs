@@ -7,7 +7,7 @@
 namespace SWFProcessing.SWFModeller.IO
 {
     using System.Collections.Generic;
-    using SWFProcessing.SWFModeller.Util;
+    using SWFProcessing.ModellingUtils.Util;
 
     /// <summary>
     /// A class that assigns IDs to objects as we write them to the
