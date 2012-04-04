@@ -13,12 +13,11 @@ namespace SWFProcessing.Swiffotron.Processor
     using System.Collections.Generic;
     using SWFProcessing.SWFModeller.IO;
     using SWFProcessing.SWFModeller;
+    using System;
+    using SWFProcessing.SWF2HTML;
 
     public class Configuration
     {
-        /// <summary>The configuration XML file namespace</summary>
-        private const string ConfigNS = @"urn:swiffotron-schemas:swiffotron-config/24/05/2011";
-
         /// <summary>Settings to pass to the SWF parser</summary>
         public SWFReaderOptions swfReaderOptions { get; private set;}
 
@@ -32,9 +31,15 @@ namespace SWFProcessing.Swiffotron.Processor
         /// </summary>
         public bool EnableStoreWrites { get; set; }
 
+        public bool HTMLStandalone { get; set; }
+
         public Caches Caches { get; private set; }
 
         public Stores Stores { get; private set; }
+
+        public FrameworkType HTMLType { get; private set; }
+
+        private XMLHelper Xml;
 
         /// <summary>
         /// Input stream of configuration XML.
@@ -56,19 +61,14 @@ namespace SWFProcessing.Swiffotron.Processor
         /// configuration data.</param>
         private void LoadConfigXML(Stream configXml)
         {
-            XmlReaderSettings configReaderSettings = XMLHelper.CreateValidationSettings(@"swiffotron-config.xsd");
+            this.Xml = new XMLHelper();
+            this.Xml.SetContext(new SwiffotronContext("Swiffotron configuration"));
 
-            XmlDocument config = new XmlDocument();
-            config.Load(XmlReader.Create(configXml, configReaderSettings));
-
-            XmlNamespaceManager namespaceMgr = new XmlNamespaceManager(config.NameTable);
-
-            XPathNavigator nav = config.CreateNavigator();
-            namespaceMgr.AddNamespace(@"con", ConfigNS);
+            Xml.LoadConfigurationXML(configXml);
 
             /* First, set up any caches: */
             XmlAttribute attrib;
-            foreach (XPathNavigator hit in nav.Select(@"/con:config/con:cache", namespaceMgr))
+            foreach (XPathNavigator hit in Xml.Select(@"/con:config/con:cache"))
             {
                 XmlAttributeCollection attribs = ((XmlElement)hit.UnderlyingObject).Attributes;
 
@@ -94,7 +94,7 @@ namespace SWFProcessing.Swiffotron.Processor
 
             /* Now, set up any stores: */
 
-            foreach (XPathNavigator hit in nav.Select(@"/con:config/con:store", namespaceMgr))
+            foreach (XPathNavigator hit in Xml.Select(@"/con:config/con:store"))
             {
                 XmlAttributeCollection attribs = ((XmlElement)hit.UnderlyingObject).Attributes;
 
@@ -122,18 +122,22 @@ namespace SWFProcessing.Swiffotron.Processor
             /* ISSUE 68: Staggeringly inefficient xpath queries that navigate from the root node every damned
              * time. Do we care? */
 
-            this.EnableStoreWrites = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:storeWriteEnabled/text()", namespaceMgr).ValueAsBoolean;
+            this.EnableStoreWrites = Xml.SelectBoolean(@"/con:config/con:swfprefs/con:storeWriteEnabled/text()");
 
             this.swfReaderOptions = new SWFReaderOptions()
             {
-                StrictTagLength = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:stricttaglength/text()", namespaceMgr).ValueAsBoolean
+                StrictTagLength = Xml.SelectBoolean(@"/con:config/con:swfprefs/con:stricttaglength/text()")
             };
 
             this.swfWriterOptions = new SWFWriterOptions()
             {
-                Compressed = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:compression/text()", namespaceMgr).ValueAsBoolean,
-                EnableDebugger = nav.SelectSingleNode(@"/con:config/con:swfprefs/con:debugcode/text()", namespaceMgr).ValueAsBoolean
+                Compressed = Xml.SelectBoolean(@"/con:config/con:swfprefs/con:compression/text()"),
+                EnableDebugger = Xml.SelectBoolean(@"/con:config/con:swfprefs/con:debugcode/text()")
             };
+
+            string htmlType = Xml.SelectString(@"/con:config/con:htmlType/text()", "JQuery");
+            this.HTMLType = (FrameworkType)Enum.Parse(typeof(FrameworkType), htmlType);
+            this.HTMLStandalone = Xml.SelectBoolean(@"/con:config/con:htmlStandalone/text()", false);
         }
 
         /// <summary>
@@ -147,6 +151,5 @@ namespace SWFProcessing.Swiffotron.Processor
             this.Stores.Interrogate(info);
             this.Caches.Interrogate(info);
         }
-
     }
 }

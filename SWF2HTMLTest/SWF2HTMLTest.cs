@@ -15,6 +15,7 @@ namespace SWFProcessing.SWF2HTML.Test
     using SWFProcessing.SWF2HTML;
     using SWFProcessing.SWFModeller;
     using SWFProcessing.SWFModeller.Process;
+    using System.Reflection;
 
     /// <summary>
     ///This is a test class for SWF2HTMLTest and is intended
@@ -79,17 +80,48 @@ namespace SWFProcessing.SWF2HTML.Test
         [TestMethod()]
         public void ConvertSimplestSWF()
         {
-            ConvertSWF("SWF2HTMLTest.ConvertSimplestSWF");
+            string name = "SWF2HTMLTest.ConvertSimplestSWF";
+            SWF swf = new SWF(new SWFContext(name), false);
+            ConvertSWF(name, swf);
         }
 
-        public void ConvertSWF(string name)
+        /// <summary>
+        /// A test for the simplest of SWF files.
+        /// </summary>
+        [TestMethod()]
+        public void ConvertSimpleAnimation()
         {
-            SWF swf = new SWF(new SWFContext(name), false);
+            TestSWF("simple-animation.swf");
+        }
 
-            SWF2HTML converter = new SWF2HTML(swf);
+        private void TestSWF(string name)
+        {
+            using (SWFReader swfIn = new SWFReader(ResourceAsStream(name), new SWFModeller.IO.SWFReaderOptions(), null, null))
+            {
+                SWF swf = swfIn.ReadSWF(new SWFContext(name));
+                ConvertSWF(name, swf);
+            }
+        }
+
+        protected Stream ResourceAsStream(string sRes)
+        {
+            Stream s = Assembly.GetExecutingAssembly().GetManifestResourceStream(@"SWFProcessing.SWF2HTML.Test.res." + sRes);
+
+            if (s == null)
+            {
+                /* TODO: Fix this. */
+                s = Assembly.GetCallingAssembly().GetManifestResourceStream("SwiffotronTestExpress.res." + sRes);
+            }
+            Assert.IsNotNull(s, "Test input missing! " + sRes);
+            return s;
+        }
+
+        private void ConvertSWF(string name, SWF swf)
+        {
+            SWF2HTML converter = new SWF2HTML(swf, name, FrameworkType.JQuery);
 
             using (FileStream output = new FileStream(TestDir + name + ".html", FileMode.Create))
-            using (Stream htmlOut = converter.GetHTML())
+            using (Stream htmlOut = converter.GetHTML(true))
             {
                 byte[] buffer = new byte[32768];
                 while (true)

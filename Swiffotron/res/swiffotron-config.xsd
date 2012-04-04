@@ -34,6 +34,13 @@
     <attribute name="init" type="string" />
   </complexType>
 
+  <simpleType name="htmlType">
+    <restriction base="string">
+      <enumeration value="JQuery" />
+      <enumeration value="RawJS" />
+    </restriction>
+  </simpleType>
+
   <complexType name="swfPrefsType">
     <annotation>
       <documentation>
@@ -55,6 +62,8 @@
         <element name="store" type="con:storeType" minOccurs="1" maxOccurs="unbounded" />
         <element name="cache" type="con:cacheType" minOccurs="0" maxOccurs="unbounded" />
         <element name="swfprefs" type="con:swfPrefsType" minOccurs="1" maxOccurs="1" />
+        <element name="htmlType" type="con:htmlType" default="JQuery" minOccurs="0" maxOccurs="1" />
+        <element name="htmlStandalone" type="boolean" default="false" minOccurs="0" maxOccurs="1" />
       </sequence>
     </complexType>
   </element>

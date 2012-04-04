@@ -6,27 +6,52 @@
 
 namespace SWFProcessing.SWF2HTML
 {
-    using SWFProcessing.SWFModeller;
     using System.IO;
-    using System.Text;
+    using SWFProcessing.SWF2HTML.Model;
+    using SWFProcessing.SWFModeller;
+
+    public enum FrameworkType
+    {
+        JQuery,
+        RawJS
+    }
 
     public class SWF2HTML
     {
-        public SWF2HTML(SWF swf)
+        public string ID { get; set; }
+        
+        private FrameworkType Framework;
+
+        public SWF2HTML(SWF swf, string ID, FrameworkType framework)
         {
             this.Swf = swf;
+            this.ID = ID;
+            this.Framework = framework;
         }
 
         public SWF Swf { get; set; }
 
-        public Stream GetHTML()
+        public Stream GetHTML(bool standalone)
         {
-            return new MemoryStream(GetHTMLAsBytes());
+            return new MemoryStream(GetHTMLAsBytes(standalone));
         }
 
-        public byte[] GetHTMLAsBytes()
+        public byte[] GetHTMLAsBytes(bool standalone)
         {
-            return UTF8Encoding.Default.GetBytes("<!doctype html>\nHello, world.");
+            switch (this.Framework)
+            {
+                case FrameworkType.JQuery:
+                    JQueryCanvasApp canvasApp = new JQueryCanvasApp(this.ID, this.Swf);
+                    return canvasApp.Render(standalone);
+
+                case FrameworkType.RawJS:
+                default:
+                    throw new SWF2HTMLException(
+                            SWF2HTMLError.UnimplementedFeature,
+                            "Only jQuery-based output is currently supported.");
+            }
+
+
         }
     }
 }

@@ -11,9 +11,9 @@ namespace SWFProcessing.SWF2SVG.IO
 
     internal class XmlAssist
     {
-        public static void OpenTag(StringBuilder buf, string tag, string[][]attribs)
+        public static void OpenTag(StringBuilder buff, string tag, string[][]attribs)
         {
-            buf.Append('<')
+            buff.Append('<')
                 .Append(tag);
 
             if (attribs != null && attribs.Length > 0)
@@ -22,7 +22,7 @@ namespace SWFProcessing.SWF2SVG.IO
                 {
                     if (attrib[1] != null)
                     {
-                        buf.Append(' ')
+                        buff.Append(' ')
                             .Append(attrib[0])
                             .Append("=\"")
                             .Append(attrib[1])
@@ -31,7 +31,7 @@ namespace SWFProcessing.SWF2SVG.IO
                 }
             }
 
-            buf.AppendLine(">");
+            buff.AppendLine(">");
         }
     }
 }

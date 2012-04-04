@@ -1084,8 +1084,11 @@ namespace SWFProcessing.Swiffotron
 
             if (htmlOuts > 0)
             {
-                SWF2HTML htmlConv = new SWF2HTML(swf);
-                htmlData = htmlConv.GetHTMLAsBytes();
+                SWF2HTML htmlConv = new SWF2HTML(
+                        swf,
+                        swfNav.GetAttribute(XMLHelper.AttrID, string.Empty),
+                        conf.HTMLType);
+                htmlData = htmlConv.GetHTMLAsBytes(false);
             }
 
             foreach (XPathNavigator htmlout in Xml.SelectChildren(swfNav, @"htmlout"))

@@ -18,4 +18,8 @@
         <con:debugcode>false</con:debugcode>
     </con:swfprefs>
 
+    <con:htmlType>JQuery</con:htmlType>
+
+    <con:htmlStandalone>false</con:htmlStandalone>
+
 </con:config>

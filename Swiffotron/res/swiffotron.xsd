@@ -10,37 +10,42 @@
     </restriction>
   </simpleType>
 
-    <simpleType name="insRefTypeType">
-        <annotation>
-            <documentation>
-                Possible values are: 'movieclip' which references a movieclip by ID, 'swf' which
-                references a swf by ID and converts it into a movie clip, 'instance' which references
-                a movieclip via an existing instance of it, 'classname' which references a movieclip
-                that is bound to a class or 'extern' which references a swf file in the store which
-                is then loaded and converted into a movie clip.
-            </documentation>
-        </annotation>
-        <restriction base="string">
-            <pattern value="movieclip|swf|instance|extern" />
-        </restriction>
-    </simpleType>
-
-    <simpleType name="mcRefTypeType">
-        <annotation>
-            <documentation>
-                Possible values are: 'swf' which references a swf by ID and converts it into a movie
-                clip, or 'extern' which references a swf file in the store which is then loaded and
-                converted into a movie clip.
-            </documentation>
-        </annotation>
-        <restriction base="string">
-            <pattern value="swf|extern" />
-        </restriction>
-    </simpleType>
-
-    <simpleType name="vidContainerType">
+  <simpleType name="insRefTypeType">
+    <annotation>
+      <documentation>
+        Possible values are: 'movieclip' which references a movieclip by ID, 'swf' which
+        references a swf by ID and converts it into a movie clip, 'instance' which references
+        a movieclip via an existing instance of it, 'classname' which references a movieclip
+        that is bound to a class or 'extern' which references a swf file in the store which
+        is then loaded and converted into a movie clip.
+      </documentation>
+    </annotation>
     <restriction base="string">
-      <pattern value="avi|mpg" />
+      <enumeration value="movieclip" />
+      <enumeration value="swf" />
+      <enumeration value="instance" />
+      <enumeration value="extern" />
+    </restriction>
+  </simpleType>
+
+  <simpleType name="mcRefTypeType">
+    <annotation>
+      <documentation>
+        Possible values are: 'swf' which references a swf by ID and converts it into a movie
+        clip, or 'extern' which references a swf file in the store which is then loaded and
+        converted into a movie clip.
+      </documentation>
+    </annotation>
+    <restriction base="string">
+      <enumeration value="swf" />
+      <enumeration value="extern" />
+    </restriction>
+  </simpleType>
+
+  <simpleType name="vidContainerType">
+    <restriction base="string">
+      <enumeration value="avi" />
+      <enumeration value="mpg" />
     </restriction>
   </simpleType>
 
@@ -122,7 +127,8 @@
 
   <simpleType name="replaceLocationType">
     <restriction base="string">
-      <pattern value="movieclip|actionscript" />
+      <enumeration value="movieclip" />
+      <enumeration value="actionscript" />
     </restriction>
   </simpleType>
 

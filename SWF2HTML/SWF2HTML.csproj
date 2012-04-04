@@ -39,14 +39,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IO\HTMLAssist.cs" />
+    <Compile Include="Model\JQueryCanvasApp.cs" />
     <Compile Include="SWF2HTML.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SWF2HTMLException.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\SWFModeller\SWFModeller.csproj">
       <Project>{E584EF20-EB00-463C-8E57-2B3F5D3A5680}</Project>
       <Name>SWFModeller</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="res\lib\swiffotron-jquery-player-1.0.0.3.js" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

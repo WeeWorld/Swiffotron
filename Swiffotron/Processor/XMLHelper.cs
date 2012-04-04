@@ -19,6 +19,9 @@ namespace SWFProcessing.Swiffotron.Processor
         /// <summary>The swiffotron XML file namespace</summary>
         private const string SwiffotronNS = @"urn:swiffotron-schemas:swiffotron-job/24/05/2011";
 
+        /// <summary>The configuration XML file namespace</summary>
+        private const string ConfigNS = @"urn:swiffotron-schemas:swiffotron-config/24/05/2011";
+
         /* Tag attributes: */
 
         /// <summary>XML attribute; store reference</summary>
@@ -154,6 +157,9 @@ namespace SWFProcessing.Swiffotron.Processor
         /// <summary>XML parsing settings for reading swiffotron job files.</summary>
         private XmlReaderSettings swiffotronReaderSettings;
 
+        /// <summary>XML parsing settings for reading swiffotron job files.</summary>
+        private XmlReaderSettings configReaderSettings;
+
         private SwiffotronContext Context;
 
         /// <summary>An XPath navigator that points to the root of the current XML file</summary>
@@ -162,6 +168,7 @@ namespace SWFProcessing.Swiffotron.Processor
         public XMLHelper()
         {
             this.swiffotronReaderSettings = CreateValidationSettings(@"swiffotron.xsd");
+            this.configReaderSettings = CreateValidationSettings(@"swiffotron-config.xsd");
         }
 
         public void SetContext(SwiffotronContext ctx)
@@ -203,6 +210,29 @@ namespace SWFProcessing.Swiffotron.Processor
 
             this.nsMgr = new XmlNamespaceManager(doc.NameTable);
             this.nsMgr.AddNamespace(@"swf", XMLHelper.SwiffotronNS);
+
+            this.root = doc.CreateNavigator();
+
+            if (this.root == null)
+            {
+                throw new SwiffotronException(SwiffotronError.BadInputXML, this.Context.Sentinel("LoadSwiffotronXML"));
+            }
+        }
+
+        /// <summary>
+        /// Loads a swiffotron config XML file, validates it and sets the current
+        /// namespace manager so that we can do XPath queries in the 'con' namespace.
+        /// </summary>
+        /// <param name="swiffotronXml">A stream feeding XML data.</param>
+        /// <returns>The DOM of the swiffotron job XML.</returns>
+        public void LoadConfigurationXML(Stream configXml)
+        {
+            XmlDocument doc = new XmlDocument();
+
+            doc.Load(XmlReader.Create(configXml, swiffotronReaderSettings));
+
+            this.nsMgr = new XmlNamespaceManager(doc.NameTable);
+            this.nsMgr.AddNamespace(@"con", XMLHelper.ConfigNS);
 
             this.root = doc.CreateNavigator();
 
@@ -375,9 +405,42 @@ namespace SWFProcessing.Swiffotron.Processor
             return null;
         }
 
-        public string SelectString(string path)
+        public string SelectString(string path, string defaultValue = null)
         {
-            return this.root.SelectSingleNode(path, this.nsMgr).ToString();
+            XPathNavigator node = this.root.SelectSingleNode(path, this.nsMgr);
+
+            if (node == null)
+            {
+                if (defaultValue == null)
+                {
+                    throw new SwiffotronException(
+                        SwiffotronError.BadInputXML,
+                        this.Context,
+                        "Missing tag in XML at path " + path);
+                }
+                return defaultValue;
+            }
+
+            return node.ToString();
+        }
+
+        public bool SelectBoolean(string path, bool? defaultValue = null)
+        {
+            XPathNavigator node = this.root.SelectSingleNode(path, this.nsMgr);
+
+            if (node == null)
+            {
+                if (defaultValue == null)
+                {
+                    throw new SwiffotronException(
+                        SwiffotronError.BadInputXML,
+                        this.Context,
+                        "Missing tag in XML at path " + path);
+                }
+                return defaultValue.Value;
+            }
+
+            return node.ValueAsBoolean;
         }
 
         public XPathNodeIterator Select(string path)
