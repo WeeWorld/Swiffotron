@@ -21,9 +21,9 @@ namespace SWFProcessing.SwiffotronServiceClientExample
 @"<?xml version=""1.0"" encoding=""UTF-8""?>
 <swiffotron xmlns=""urn:swiffotron-schemas:swiffotron-job/24/05/2011""
             xmlns:swf=""urn:swiffotron-schemas:swiffotron-job/24/05/2011""
-            xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">
+            xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" id=""swf_simple"">
   <swf width=""200"" height=""300"" bgcolor=""#ff0000"" id=""simple"">
-    <swfout store=""redsquare"" />
+    <swfout store=""store://viscomp/redsquare.swf"" />
   </swf>
 </swiffotron>";
 
@@ -40,9 +40,17 @@ namespace SWFProcessing.SwiffotronServiceClientExample
             {
                 Console.WriteLine("No output. Check the event log.");
             }
+            else if (!output.ContainsKey("redsquare.swf"))
+            {
+                Console.WriteLine("Output was empty. Check the event log. Output keys: " + output.Keys.Count);
+            }
             else
             {
-                Console.WriteLine("out " + output["redsquare"].Length + " bytes");
+                Console.WriteLine("out " + output["redsquare.swf"].Length + " bytes");
+                using (FileStream save = new FileStream("out.swf", FileMode.Create))
+                {
+                    save.Write(output["redsquare.swf"], 0, output["redsquare.swf"].Length);
+                }
             }
 
             Console.ReadKey();

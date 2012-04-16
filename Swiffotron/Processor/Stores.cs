@@ -75,43 +75,47 @@ namespace SWFProcessing.Swiffotron.Processor
         /// "things/thing"</returns>
         public string Save(SwiffotronContext ctx, string key, byte[] data)
         {
-            if (conf.EnableStoreWrites)
+            Uri storeURI = new Uri(key);
+
+            if (storeURI.Scheme != "store") /* ISSUE 67: Constants, please. */
             {
-                Uri storeURI = new Uri(key);
+                throw new SwiffotronException(
+                        SwiffotronError.BadInputXML,
+                        ctx,
+                        @"Store paths should begin with store://");
+            }
 
-                if (storeURI.Scheme != "store") /* ISSUE 67: Constants, please. */
-                {
-                    throw new SwiffotronException(
-                            SwiffotronError.BadInputXML,
-                            ctx,
-                            @"Store paths should begin with store://");
-                }
+            string storeId = storeURI.Host;
 
-                string storeId = storeURI.Host;
+            key = storeURI.AbsolutePath.Substring(1);
 
-                if (!stores.ContainsKey(storeId))
-                {
-                    throw new SwiffotronException(
-                            SwiffotronError.BadInputXML,
-                            ctx,
-                            @"Store '" + storeId + @"' not registered.");
-                }
-
-                ISwiffotronStore store = stores[storeId];
-
-                key = storeURI.AbsolutePath.Substring(1);
-
-                using (Stream s = store.OpenOutput(key))
-                {
-                    s.Write(data, 0, data.Length);
-                }
-
-                store.Commit(key);
-
+            if (!conf.EnableStoreWrites)
+            {
+                /* Give up, but return the key we would have used. Used in debug
+                 * tests. */
                 return key;
             }
 
-            return null;
+
+            if (!stores.ContainsKey(storeId))
+            {
+                throw new SwiffotronException(
+                        SwiffotronError.BadInputXML,
+                        ctx,
+                        @"Store '" + storeId + @"' not registered.");
+            }
+
+            ISwiffotronStore store = stores[storeId];
+
+
+            using (Stream s = store.OpenOutput(key))
+            {
+                s.Write(data, 0, data.Length);
+            }
+
+            store.Commit(key);
+
+            return key;
         }
 
 

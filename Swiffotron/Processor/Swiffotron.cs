@@ -1011,7 +1011,7 @@ namespace SWFProcessing.Swiffotron
              * going to save files back to a store, then you can get away with
              * using any string you like in swfout store keys. */
 
-            if (this.commitStore != null && relativePath != null)
+            if (this.commitStore != null)
             {
                 /* For debug purposes, we can intercept and inspect every file the
                  * swiffotron ejects from it's glossy, futuristic core. */

@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>SWFProcessing.SwiffotronServiceClientExample</RootNamespace>
     <AssemblyName>SwiffotronServiceClientExample</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
     <TargetFrameworkProfile>Client</TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -60,25 +60,22 @@
     <None Include="app.config">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SwiffotronService\item.xsd">
+    <None Include="Service References\SwiffotronService\Arrays.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SwiffotronService\item1.xsd">
+    <None Include="Service References\SwiffotronService\Message.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SwiffotronService\item2.xsd">
+    <None Include="Service References\SwiffotronService\service.wsdl" />
+    <None Include="Service References\SwiffotronService\service.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SwiffotronService\item3.xsd">
+    <None Include="Service References\SwiffotronService\service1.xsd">
       <SubType>Designer</SubType>
     </None>
-    <None Include="Service References\SwiffotronService\SWFProcessor.wsdl" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadataStorage Include="Service References\SwiffotronService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Service References\SwiffotronService\item.disco" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Service References\SwiffotronService\configuration91.svcinfo" />

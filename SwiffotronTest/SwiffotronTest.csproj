@@ -130,7 +130,9 @@
     <EmbeddedResource Include="res\TestOneRedCircle.xml" />
     <EmbeddedResource Include="res\store\abccircles\circle.swf" />
     <EmbeddedResource Include="res\store\abccircles\redcircle.swf" />
-    <EmbeddedResource Include="res\TestABCCircles.xml" />
+    <EmbeddedResource Include="res\TestABCCircles.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="res\TestUFO.xml" />
     <EmbeddedResource Include="res\store\monocular-ufo-pilot.swf" />
     <EmbeddedResource Include="res\TestForwardReference.xml" />
