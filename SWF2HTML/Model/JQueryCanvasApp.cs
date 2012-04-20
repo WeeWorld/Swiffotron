@@ -45,12 +45,15 @@ namespace SWFProcessing.SWF2HTML.Model
 
         private string RootID;
 
-        public JQueryCanvasApp(string ID, SWF swf)
+        private bool OutputComments;
+
+        public JQueryCanvasApp(string ID, SWF swf, SWF2HTMLOptions options)
         {
             this.html = new HTMLAssist(ID);
             this.Swf = swf;
             this.Width = (int)Swf.FrameWidth;
             this.Height = (int)Swf.FrameHeight;
+            this.OutputComments = options.OutputComments;
         }
 
         /// <summary>
@@ -101,6 +104,11 @@ namespace SWFProcessing.SWF2HTML.Model
 
         private void BuildDictionary(Timeline timeline, StringBuilder buff)
         {
+            if (this.OutputComments)
+            {
+                buff.AppendLine("  /* timeline for "+timeline.ToString()+" */");
+            }
+
             foreach (Frame f in Swf.Frames)
             {
                 foreach (IDisplayListItem dli in f.DisplayList)
@@ -123,11 +131,12 @@ namespace SWFProcessing.SWF2HTML.Model
                                 new string[] {"width", this.Width + "px"},
                                 new string[] {"height", this.Height + "px"},
                             });
+
+                            BuildDictionary((Sprite)ch, buff);
                         }
                     }
                 }
             }
-
         }
 
         private string ShapeToJS(Shape shape)

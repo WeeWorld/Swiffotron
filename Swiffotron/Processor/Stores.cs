@@ -96,7 +96,6 @@ namespace SWFProcessing.Swiffotron.Processor
                 return key;
             }
 
-
             if (!stores.ContainsKey(storeId))
             {
                 throw new SwiffotronException(

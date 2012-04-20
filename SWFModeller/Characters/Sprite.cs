@@ -342,5 +342,10 @@ namespace SWFProcessing.SWFModeller.Characters
             }
             return refs;
         }
+
+        public override string ToString()
+        {
+            return "[Sprite "+(this.Class==null?"(no class name)":this.Class.QualifiedName)+"]";
+        }
     }
 }

@@ -10,23 +10,23 @@ namespace SWFProcessing.SWF2HTML
     using SWFProcessing.SWF2HTML.Model;
     using SWFProcessing.SWFModeller;
 
-    public enum FrameworkType
-    {
-        JQuery,
-        RawJS
-    }
-
     public class SWF2HTML
     {
         public string ID { get; set; }
         
-        private FrameworkType Framework;
+        private SWF2HTMLOptions Options;
 
-        public SWF2HTML(SWF swf, string ID, FrameworkType framework)
+        public SWF2HTML(SWF swf, string ID, SWF2HTMLOptions options = null)
         {
             this.Swf = swf;
             this.ID = ID;
-            this.Framework = framework;
+
+            if (options == null)
+            {
+                options = new SWF2HTMLOptions(); /* Defaults */
+            }
+
+            this.Options = options;
         }
 
         public SWF Swf { get; set; }
@@ -38,13 +38,13 @@ namespace SWFProcessing.SWF2HTML
 
         public byte[] GetHTMLAsBytes(bool standalone)
         {
-            switch (this.Framework)
+            switch (this.Options.Framework)
             {
-                case FrameworkType.JQuery:
-                    JQueryCanvasApp canvasApp = new JQueryCanvasApp(this.ID, this.Swf);
+                case SWF2HTMLOptions.FrameworkType.JQuery:
+                    JQueryCanvasApp canvasApp = new JQueryCanvasApp(this.ID, this.Swf, this.Options);
                     return canvasApp.Render(standalone);
 
-                case FrameworkType.RawJS:
+                case SWF2HTMLOptions.FrameworkType.RawJS:
                 default:
                     throw new SWF2HTMLException(
                             SWF2HTMLError.UnimplementedFeature,

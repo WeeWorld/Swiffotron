@@ -118,7 +118,9 @@ namespace SWFProcessing.SWF2HTML.Test
 
         private void ConvertSWF(string name, SWF swf)
         {
-            SWF2HTML converter = new SWF2HTML(swf, name, FrameworkType.JQuery);
+            SWF2HTML converter = new SWF2HTML(swf, name, new SWF2HTMLOptions() { 
+                OutputComments = true
+            });
 
             using (FileStream output = new FileStream(TestDir + name + ".html", FileMode.Create))
             using (Stream htmlOut = converter.GetHTML(true))

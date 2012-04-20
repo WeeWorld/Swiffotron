@@ -948,5 +948,10 @@ namespace SWFProcessing.SWFModeller
                 script.MethodProc(mp);
             }
         }
+
+        public override string ToString()
+        {
+            return "[SWF " + (this.Class == null ? "(no class name)" : this.Class.QualifiedName) + "]";
+        }
     }
 }
