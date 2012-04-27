@@ -261,8 +261,6 @@ namespace SWFProcessing.SWFModeller.Characters
         }
 #endif
 
-
-#if(DEBUG)
         /// <summary>
         /// Renders the sprite as a string. Used only in test/debug console output.
         /// </summary>
@@ -295,7 +293,6 @@ namespace SWFProcessing.SWFModeller.Characters
 
             }
         }
-#endif
 
         /// <summary>
         /// Calls a delegate method on each descendant sprite in this sprite.
@@ -341,11 +338,6 @@ namespace SWFProcessing.SWFModeller.Characters
                 }
             }
             return refs;
-        }
-
-        public override string ToString()
-        {
-            return "[Sprite "+(this.Class==null?"(no class name)":this.Class.QualifiedName)+"]";
         }
     }
 }

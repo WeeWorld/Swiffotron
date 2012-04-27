@@ -37,7 +37,7 @@ namespace SWFProcessing.Swiffotron.Processor
 
         public Stores Stores { get; private set; }
 
-        public FrameworkType HTMLType { get; private set; }
+        public SWF2HTMLOptions.FrameworkType HTMLType { get; private set; }
 
         private XMLHelper Xml;
 
@@ -136,7 +136,7 @@ namespace SWFProcessing.Swiffotron.Processor
             };
 
             string htmlType = Xml.SelectString(@"/con:config/con:htmlType/text()", "JQuery");
-            this.HTMLType = (FrameworkType)Enum.Parse(typeof(FrameworkType), htmlType);
+            this.HTMLType = (SWF2HTMLOptions.FrameworkType)Enum.Parse(typeof(SWF2HTMLOptions.FrameworkType), htmlType);
             this.HTMLStandalone = Xml.SelectBoolean(@"/con:config/con:htmlStandalone/text()", false);
         }
 

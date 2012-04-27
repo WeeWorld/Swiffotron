@@ -17,6 +17,7 @@ namespace SWFProcessing.Swiffotron.Test
     public class TestingBaseClass
     {
         protected string TestDir;
+        protected string TestDumpDir;
 
         protected Stream ResourceAsStream(string sRes)
         {

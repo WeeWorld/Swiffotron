@@ -16,15 +16,17 @@ namespace SWFProcessing.SWF2HTML.Test
     using SWFProcessing.SWFModeller;
     using SWFProcessing.SWFModeller.Process;
     using System.Reflection;
+    using System;
 
     /// <summary>
     ///This is a test class for SWF2HTMLTest and is intended
     ///to contain all SWF2HTMLTest Unit Tests
     ///</summary>
-    [TestClass()]
+    [TestClass]
     public class SWF2HTMLTest
     {
         private string TestDir;
+        private string TestDumpDir;
 
         /// <summary>
         ///Gets or sets the test context which provides
@@ -68,16 +70,38 @@ namespace SWFProcessing.SWF2HTML.Test
         [TestInitialize]
         public void InitilizeTests()
         {
+            DirectoryInfo di = new DirectoryInfo(this.TestContext.TestDir);
+            this.TestDumpDir = di.Parent.FullName + @"\FullDump\";
+
             this.TestDir = this.TestContext.TestDir + @"\Out\" +
                     this.GetType().Name + @"." + this.TestContext.TestName + @"\";
 
+            Directory.CreateDirectory(this.TestDumpDir);
             Directory.CreateDirectory(this.TestDir);
         }
+
+        [TestCleanup]
+        public void CopyToDump()
+        {
+            string[] files = Directory.GetFiles(
+                    this.TestDir,
+                    "*",
+                    SearchOption.AllDirectories);
+
+            // Display all the files.
+            foreach (string file in files)
+            {
+                FileInfo fi = new FileInfo(file);
+
+                File.Copy(file, this.TestDumpDir + fi.Name, true);
+            }
+        }
+
 
         /// <summary>
         /// A test for the simplest of SWF files.
         /// </summary>
-        [TestMethod()]
+        [TestMethod]
         public void ConvertSimplestSWF()
         {
             string name = "SWF2HTMLTest.ConvertSimplestSWF";
@@ -88,7 +112,7 @@ namespace SWFProcessing.SWF2HTML.Test
         /// <summary>
         /// A test for the simplest of SWF files.
         /// </summary>
-        [TestMethod()]
+        [TestMethod]
         public void ConvertSimpleAnimation()
         {
             TestSWF("simple-animation.swf");

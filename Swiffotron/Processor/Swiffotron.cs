@@ -1087,7 +1087,9 @@ namespace SWFProcessing.Swiffotron
                 SWF2HTML htmlConv = new SWF2HTML(
                         swf,
                         swfNav.GetAttribute(XMLHelper.AttrID, string.Empty),
-                        conf.HTMLType);
+                        new SWFProcessing.SWF2HTML.SWF2HTMLOptions() {
+                            Framework = conf.HTMLType
+                        });
                 htmlData = htmlConv.GetHTMLAsBytes(false);
             }
 

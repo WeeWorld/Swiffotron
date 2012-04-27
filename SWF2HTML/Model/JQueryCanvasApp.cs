@@ -6,15 +6,15 @@
 
 namespace SWFProcessing.SWF2HTML.Model
 {
-    using System.Text;
-    using SWFProcessing.SWF2HTML.IO;
+    using System.Collections.Generic;
     using System.IO;
     using System.Reflection;
-    using System.Collections.Generic;
+    using System.Text;
+    using SWFProcessing.SWF2HTML.IO;
     using SWFProcessing.SWFModeller;
-    using SWFProcessing.SWFModeller.Modelling;
     using SWFProcessing.SWFModeller.Characters;
     using SWFProcessing.SWFModeller.Characters.Shapes;
+    using SWFProcessing.SWFModeller.Modelling;
 
     class JQueryCanvasApp
     {
@@ -42,6 +42,10 @@ namespace SWFProcessing.SWF2HTML.Model
         public SWF Swf { get; set; }
 
         Dictionary<IDisplayListItem, string> Dict;
+
+        Dictionary<Timeline, int> TimelineIDs;
+
+        Dictionary<string, Timeline> NameTimelineMap;
 
         private string RootID;
 
@@ -79,6 +83,8 @@ namespace SWFProcessing.SWF2HTML.Model
 
             buff.AppendLine("</div>");
 
+            string populateFn = "populate_" + RootID;
+
             if (standalone)
             {
                 buff.AppendLine("<script src=\"http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js\"></script>");
@@ -88,18 +94,39 @@ namespace SWFProcessing.SWF2HTML.Model
             }
 
             buff.AppendLine("<script type='text/javascript'>");
-            buff.AppendLine("jQuery(function() {");
+            buff.AppendLine("function " + populateFn + "(swiffoid, root) {");
+            buff.AppendLine("  var $root = $(root);");
             buff.AppendLine("  var dict = {};");
-            buff.AppendLine("  var $root = jQuery('#"+this.RootID+"');");
+            buff.AppendLine("  var o = jQuery.noop;");
 
             this.Dict = new Dictionary<IDisplayListItem, string>();
+            this.TimelineIDs = new Dictionary<Timeline, int>();
+            this.NameTimelineMap = new Dictionary<string, Timeline>();
+            RegisterTimeline(this.Swf);
             BuildDictionary(this.Swf, buff);
 
-            buff.AppendLine("  $root.swiffoid({'fps':" + Swf.Fps + "}, dict);");
+            buff.AppendLine("}");
+
+            buff.AppendLine("jQuery(function() {");
+            buff.AppendLine("  var player = jQuery('#" + this.RootID + "').swiffoid({'fps':" + Swf.Fps + ", populate: " + populateFn + " });");
+            buff.AppendLine("  player.play();");
             buff.AppendLine("});");
+
             buff.AppendLine("</script>");
 
             return UTF8Encoding.Default.GetBytes(buff.ToString());
+        }
+
+        private string RegisterTimeline(Timeline t)
+        {
+            int num = TimelineIDs.Count;
+            TimelineIDs.Add(t, num);
+
+            string name = "s" + num;
+
+            this.NameTimelineMap.Add(name, t);
+
+            return name;
         }
 
         private void BuildDictionary(Timeline timeline, StringBuilder buff)
@@ -127,6 +154,13 @@ namespace SWFProcessing.SWF2HTML.Model
                         }
                         else if (ch is Sprite)
                         {
+                            string clipName = RegisterTimeline((Timeline)ch);
+
+                            buff.AppendLine("  var " + clipName + " = swiffoid.createMovieClipClass([o,o,o,o,o]);");
+                            buff.AppendLine("  swiffoid.addClip('" + clipName + "', " + clipName + ");");
+                            buff.AppendLine("  var instance = swiffoid.instantiateClip('" + clipName + "');");
+                            buff.AppendLine("  console.log(instance);");
+
                             html.JQueryAppendNew(buff, "  ", "$root", "canvas", new string[][] {
                                 new string[] {"width", this.Width + "px"},
                                 new string[] {"height", this.Height + "px"},

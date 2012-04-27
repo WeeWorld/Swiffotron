@@ -20,8 +20,9 @@ namespace SWFProcessing.SWF2Raster.Test
     [TestClass()]
     public class SWF2RasterTest
     {
-
         private string TestDir;
+
+        private string TestDumpDir;
 
         /// <summary>
         ///Gets or sets the test context which provides
@@ -66,10 +67,31 @@ namespace SWFProcessing.SWF2Raster.Test
         [TestInitialize]
         public void InitilizeTests()
         {
+            DirectoryInfo di = new DirectoryInfo(this.TestContext.TestDir);
+            this.TestDumpDir = di.Parent.FullName + @"\FullDump\";
+
             this.TestDir = this.TestContext.TestDir + @"\Out\" +
                     this.GetType().Name + @"." + this.TestContext.TestName + @"\";
 
+            Directory.CreateDirectory(this.TestDumpDir);
             Directory.CreateDirectory(this.TestDir);
+        }
+
+        [TestCleanup()]
+        public void CopyToDump()
+        {
+            string[] files = Directory.GetFiles(
+                    this.TestDir,
+                    "*",
+                    SearchOption.AllDirectories);
+
+            // Display all the files.
+            foreach (string file in files)
+            {
+                FileInfo fi = new FileInfo(file);
+
+                File.Copy(file, this.TestDumpDir + fi.Name, true);
+            }
         }
 
         /// <summary>

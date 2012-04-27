@@ -229,7 +229,7 @@ namespace SWFProcessing.Swiffotron.Processor
         {
             XmlDocument doc = new XmlDocument();
 
-            doc.Load(XmlReader.Create(configXml, swiffotronReaderSettings));
+            doc.Load(XmlReader.Create(configXml, configReaderSettings));
 
             this.nsMgr = new XmlNamespaceManager(doc.NameTable);
             this.nsMgr.AddNamespace(@"con", XMLHelper.ConfigNS);
@@ -238,7 +238,7 @@ namespace SWFProcessing.Swiffotron.Processor
 
             if (this.root == null)
             {
-                throw new SwiffotronException(SwiffotronError.BadInputXML, this.Context.Sentinel("LoadSwiffotronXML"));
+                throw new SwiffotronException(SwiffotronError.BadInputXML, this.Context.Sentinel("LoadConfigurationXML"));
             }
         }
 

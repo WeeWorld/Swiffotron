@@ -71,15 +71,19 @@ namespace SWFProcessing.Swiffotron.Test
         #endregion
 
         /// <summary>
-        /// Called before each test to clear out all the caches.
+        /// Called before each test.
         /// </summary>
         [TestInitialize]
         public void InitilizeTests()
         {
-            TestDir = TestContext.TestDir + @"\Out\" +
-                    this.GetType().Name + @"." + TestContext.TestName + @"\";
+            DirectoryInfo di = new DirectoryInfo(this.TestContext.TestDir);
+            this.TestDumpDir = di.Parent.FullName + @"\FullDump\";
 
-            Directory.CreateDirectory(TestDir);
+            this.TestDir = this.TestContext.TestDir + @"\Out\" +
+                    this.GetType().Name + @"." + this.TestContext.TestName + @"\";
+
+            Directory.CreateDirectory(this.TestDumpDir);
+            Directory.CreateDirectory(this.TestDir);
 
             this.swfReadLogs = new Dictionary<string, string>();
             this.swfReadModelLogs = new Dictionary<string, string>();
@@ -107,6 +111,19 @@ namespace SWFProcessing.Swiffotron.Test
                     byte[] log = new ASCIIEncoding().GetBytes(this.swfReadModelLogs[name]);
                     fs.Write(log, 0, log.Length);
                 }
+            }
+
+            string[] files = Directory.GetFiles(
+                    this.TestDir,
+                    "*",
+                    SearchOption.AllDirectories);
+
+            // Display all the files.
+            foreach (string file in files)
+            {
+                FileInfo fi = new FileInfo(file);
+
+                File.Copy(file, this.TestDumpDir + fi.Name, true);
             }
         }
 

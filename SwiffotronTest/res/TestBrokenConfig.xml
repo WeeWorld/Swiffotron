@@ -10,6 +10,13 @@
 
     <con:cache name="cache" classname="SWFProcessing.Swiffotron.IO.HTCache"
             init="memcacheport=1002" />
+    
+    <con:swfprefs>
+        <con:storeWriteEnabled>true</con:storeWriteEnabled>
+        <con:stricttaglength>true</con:stricttaglength>
+        <con:compression>true</con:compression>
+        <con:debugcode>false</con:debugcode>
+    </con:swfprefs>
 
     <con:smurf /> <!-- This smurf deliberately breaks the XML -->
 
