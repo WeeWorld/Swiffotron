@@ -18,6 +18,7 @@ namespace SWFProcessing.SWF2HTML
         {
             this.Framework = FrameworkType.JQuery;
             this.OutputComments = false;
+            this.ConsoleLogging = false;
         }
 
         /// <summary>
@@ -29,5 +30,7 @@ namespace SWFProcessing.SWF2HTML
         public FrameworkType Framework { get; set; }
 
         public bool OutputComments { get; set; }
+
+        public bool ConsoleLogging { get; set; }
     }
 }

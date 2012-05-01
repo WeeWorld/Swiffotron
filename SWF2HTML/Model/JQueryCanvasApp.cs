@@ -51,6 +51,8 @@ namespace SWFProcessing.SWF2HTML.Model
 
         private bool OutputComments;
 
+        private bool ConsoleLogging;
+
         public JQueryCanvasApp(string ID, SWF swf, SWF2HTMLOptions options)
         {
             this.html = new HTMLAssist(ID);
@@ -58,6 +60,7 @@ namespace SWFProcessing.SWF2HTML.Model
             this.Width = (int)Swf.FrameWidth;
             this.Height = (int)Swf.FrameHeight;
             this.OutputComments = options.OutputComments;
+            this.ConsoleLogging = options.ConsoleLogging;
         }
 
         /// <summary>
@@ -93,8 +96,10 @@ namespace SWFProcessing.SWF2HTML.Model
                 buff.AppendLine("</script>");
             }
 
-            buff.AppendLine("<script type='text/javascript'>");
-            buff.AppendLine("function " + populateFn + "(swiffoid, root) {");
+            buff.Append("<script type='text/javascript'>");
+            buff.Append("function ")
+                .Append(populateFn)
+                .AppendLine("(swiffoid, root) {");
             buff.AppendLine("  var $root = $(root);");
             buff.AppendLine("  var dict = {};");
             buff.AppendLine("  var o = jQuery.noop;");
@@ -107,8 +112,17 @@ namespace SWFProcessing.SWF2HTML.Model
 
             buff.AppendLine("}");
 
+            string consoleOpt = this.ConsoleLogging ? ", consoleLog: true" : string.Empty;
+
             buff.AppendLine("jQuery(function() {");
-            buff.AppendLine("  var player = jQuery('#" + this.RootID + "').swiffoid({'fps':" + Swf.Fps + ", populate: " + populateFn + " });");
+            buff.Append("  var player = jQuery('#")
+                    .Append(this.RootID)
+                    .Append("').swiffoid({'fps':")
+                    .Append(Swf.Fps)
+                    .Append(", populate: ")
+                    .Append(populateFn)
+                    .Append(consoleOpt)
+                    .AppendLine(" });");
             buff.AppendLine("  player.play();");
             buff.AppendLine("});");
 
@@ -159,7 +173,6 @@ namespace SWFProcessing.SWF2HTML.Model
                             buff.AppendLine("  var " + clipName + " = swiffoid.createMovieClipClass([o,o,o,o,o]);");
                             buff.AppendLine("  swiffoid.addClip('" + clipName + "', " + clipName + ");");
                             buff.AppendLine("  var instance = swiffoid.instantiateClip('" + clipName + "');");
-                            buff.AppendLine("  console.log(instance);");
 
                             html.JQueryAppendNew(buff, "  ", "$root", "canvas", new string[][] {
                                 new string[] {"width", this.Width + "px"},

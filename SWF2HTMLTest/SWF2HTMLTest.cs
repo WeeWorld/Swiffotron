@@ -71,7 +71,14 @@ namespace SWFProcessing.SWF2HTML.Test
         public void InitilizeTests()
         {
             DirectoryInfo di = new DirectoryInfo(this.TestContext.TestDir);
-            this.TestDumpDir = di.Parent.FullName + @"\FullDump\";
+            if (this.TestContext.TestDir.ToLower().Contains("ncrunch"))
+            {
+                this.TestDumpDir = di.Parent.Parent.Parent.Parent.FullName + @"\FullDump\";
+            }
+            else
+            {
+                this.TestDumpDir = di.Parent.FullName + @"\FullDump\";
+            }
 
             this.TestDir = this.TestContext.TestDir + @"\Out\" +
                     this.GetType().Name + @"." + this.TestContext.TestName + @"\";
@@ -88,7 +95,7 @@ namespace SWFProcessing.SWF2HTML.Test
                     "*",
                     SearchOption.AllDirectories);
 
-            // Display all the files.
+            // Copy all the files.
             foreach (string file in files)
             {
                 FileInfo fi = new FileInfo(file);
@@ -143,7 +150,8 @@ namespace SWFProcessing.SWF2HTML.Test
         private void ConvertSWF(string name, SWF swf)
         {
             SWF2HTML converter = new SWF2HTML(swf, name, new SWF2HTMLOptions() { 
-                OutputComments = true
+                OutputComments = true,
+                ConsoleLogging = true
             });
 
             using (FileStream output = new FileStream(TestDir + name + ".html", FileMode.Create))

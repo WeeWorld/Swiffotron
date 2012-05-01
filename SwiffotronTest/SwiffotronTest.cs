@@ -77,7 +77,14 @@ namespace SWFProcessing.Swiffotron.Test
         public void InitilizeTests()
         {
             DirectoryInfo di = new DirectoryInfo(this.TestContext.TestDir);
-            this.TestDumpDir = di.Parent.FullName + @"\FullDump\";
+            if (this.TestContext.TestDir.ToLower().Contains("ncrunch"))
+            {
+                this.TestDumpDir = di.Parent.Parent.Parent.Parent.FullName + @"\FullDump\";
+            }
+            else
+            {
+                this.TestDumpDir = di.Parent.FullName + @"\FullDump\";
+            }
 
             this.TestDir = this.TestContext.TestDir + @"\Out\" +
                     this.GetType().Name + @"." + this.TestContext.TestName + @"\";
@@ -118,7 +125,7 @@ namespace SWFProcessing.Swiffotron.Test
                     "*",
                     SearchOption.AllDirectories);
 
-            // Display all the files.
+            // Copy all the files.
             foreach (string file in files)
             {
                 FileInfo fi = new FileInfo(file);

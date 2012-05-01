@@ -30,6 +30,8 @@ namespace SWFProcessing.SWFModeller.Test
     {
         private string TestDir;
 
+        private string TestDumpDir;
+
         /// <summary>
         /// Gets or sets the test context which provides
         /// information about and functionality for the current test run.
@@ -71,10 +73,38 @@ namespace SWFProcessing.SWFModeller.Test
         [TestInitialize]
         public void InitilizeTests()
         {
+            DirectoryInfo di = new DirectoryInfo(this.TestContext.TestDir);
+            if (this.TestContext.TestDir.ToLower().Contains("ncrunch"))
+            {
+                this.TestDumpDir = di.Parent.Parent.Parent.Parent.FullName + @"\FullDump\";
+            }
+            else
+            {
+                this.TestDumpDir = di.Parent.FullName + @"\FullDump\";
+            }
+
             this.TestDir = this.TestContext.TestDir + @"\Out\" +
                     this.GetType().Name + @"." + this.TestContext.TestName + @"\";
 
+            Directory.CreateDirectory(this.TestDumpDir);
             Directory.CreateDirectory(this.TestDir);
+        }
+
+        [TestCleanup()]
+        public void CopyToDump()
+        {
+            string[] files = Directory.GetFiles(
+                    this.TestDir,
+                    "*",
+                    SearchOption.AllDirectories);
+
+            // Display all the files.
+            foreach (string file in files)
+            {
+                FileInfo fi = new FileInfo(file);
+
+                File.Copy(file, this.TestDumpDir + fi.Name, true);
+            }
         }
 
         public void OnLoadAbc(bool lazyInit, SWFContext ctx, string abcName, int doAbcCount, byte[] bytecode)

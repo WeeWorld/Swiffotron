@@ -68,7 +68,14 @@ namespace SWFProcessing.SWF2Raster.Test
         public void InitilizeTests()
         {
             DirectoryInfo di = new DirectoryInfo(this.TestContext.TestDir);
-            this.TestDumpDir = di.Parent.FullName + @"\FullDump\";
+            if (this.TestContext.TestDir.ToLower().Contains("ncrunch"))
+            {
+                this.TestDumpDir = di.Parent.Parent.Parent.Parent.FullName + @"\FullDump\";
+            }
+            else
+            {
+                this.TestDumpDir = di.Parent.FullName + @"\FullDump\";
+            }
 
             this.TestDir = this.TestContext.TestDir + @"\Out\" +
                     this.GetType().Name + @"." + this.TestContext.TestName + @"\";

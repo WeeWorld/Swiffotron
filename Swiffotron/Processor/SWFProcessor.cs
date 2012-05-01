@@ -38,7 +38,7 @@ namespace SWFProcessing.Swiffotron.Processor
             PlaceObject po = swf.LookupInstance(qname);
 
             /* ISSUE 63: There is a question of whether to error if the instance is not found. Some are
-             * found with a pattern rather than a path, and you may not expect it to always find something. 
+             * found with a pattern rather than a path, and you may not expect it to always find something.
              * At the moment, we shall throw an exception, because it suits our development, unit testing
              * fail-fast strictness. */
             if (po == null)
