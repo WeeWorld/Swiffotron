@@ -10,3 +10,4 @@ TestResults/*
 *.msi
 setup.exe
 TestResultsExpress
+*.crunchsolution.cache
