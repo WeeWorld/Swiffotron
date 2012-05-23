@@ -67,6 +67,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ABCCatcher.cs" />
     <Compile Include="CLI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
