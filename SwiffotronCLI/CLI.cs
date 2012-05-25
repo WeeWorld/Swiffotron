@@ -9,6 +9,9 @@ namespace SwiffotronCLI
     using System;
     using System.IO;
     using SWFProcessing.Swiffotron;
+    using SWFProcessing.SWFModeller;
+    using SWFProcessing.SWFModeller.IO;
+    using SWFProcessing.SWFModeller.Process;
 
     /// <summary>
     /// The main CLI application class. Initially this was meant to be a sample app that
@@ -24,31 +27,54 @@ namespace SwiffotronCLI
         /// <param name="args">Command line arguments</param>
         public static void Main(string[] args)
         {
-            string config;
+            try
+            {
+                string config;
+                string explode;
 
-            string job = ParseArguments(args, out config);
-            if (job == null)
-            {
-                PrintUsage();
-                Environment.Exit(-1);
-            }
-
-            Swiffotron swiffotron;
-            if (config == null)
-            {
-                swiffotron = new Swiffotron(null);
-            }
-            else
-            {
-                using (FileStream cfs = new FileStream(config, FileMode.Open, FileAccess.Read))
+                string job = ParseArguments(args, out config, out explode);
+                if (job == null && explode == null)
                 {
-                    swiffotron = new Swiffotron(cfs);
+                    PrintUsage();
+                    Environment.Exit(-1);
+                }
+
+                if (explode != null)
+                {
+                    FileInfo swfFile = new FileInfo(explode);
+                    using (FileStream swfIn = new FileStream(explode, FileMode.Open, FileAccess.Read))
+                    {
+                        ABCCatcher catcher = new ABCCatcher();
+                        SWFReader reader = new SWFReader(swfIn, new SWFReaderOptions(), null, catcher);
+                        reader.ReadSWF(new SWFContext(explode));
+                        catcher.SaveAll(explode, swfFile.DirectoryName);
+                    }
+                }
+
+                Swiffotron swiffotron;
+                if (config == null)
+                {
+                    swiffotron = new Swiffotron(null);
+                }
+                else
+                {
+                    using (FileStream cfs = new FileStream(config, FileMode.Open, FileAccess.Read))
+                    {
+                        swiffotron = new Swiffotron(cfs);
+                    }
+                }
+
+                if (job != null)
+                {
+                    using (FileStream jobfs = new FileStream(job, FileMode.Open, FileAccess.Read))
+                    {
+                        swiffotron.Process(jobfs);
+                    }
                 }
             }
-
-            using (FileStream jobfs = new FileStream(job, FileMode.Open, FileAccess.Read))
+            catch (Exception e)
             {
-                swiffotron.Process(jobfs);
+                System.Console.WriteLine(e.ToString());
             }
         }
 
@@ -62,6 +88,7 @@ namespace SwiffotronCLI
             Console.WriteLine("> swiffotron [-option value?]* <job>");
             Console.WriteLine("Options:");
             Console.WriteLine(" -config <file>; Points to a configuration XML file");
+            Console.WriteLine(" -explode <file>; Points to a SWF file you'd like to explode apart");
         }
 
         /// <summary>
@@ -71,10 +98,11 @@ namespace SwiffotronCLI
         /// <param name="args">The command line arguments</param>
         /// <param name="config">Output parameter; The config file path</param>
         /// <returns>The file path of the Swiffotron job XML</returns>
-        private static string ParseArguments(string[] args, out string config)
+        private static string ParseArguments(string[] args, out string config, out string explode)
         {
             /* Defaults: */
             config = null;
+            explode = null;
 
             for (int i = 0; i < args.Length; i++)
             {
@@ -84,7 +112,20 @@ namespace SwiffotronCLI
                     {
                         case "-config":
                             i++;
+                            if (config != null)
+                            {
+                                return null;
+                            }
                             config = args[i];
+                            break;
+
+                        case "-explode":
+                            i++;
+                            if (explode != null)
+                            {
+                                return null;
+                            }
+                            explode = args[i];
                             break;
 
                         default:
