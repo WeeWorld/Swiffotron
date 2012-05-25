@@ -48,12 +48,20 @@
       <enumeration value="mpg" />
     </restriction>
   </simpleType>
+    
+    <complexType name="postprocessType">
+        <attribute name="container" type="swf:vidContainerType" default="avi" />
+        <attribute name="compression" type="string" use="required" />
+    </complexType>
 
   <complexType name="outputType">
-    <attribute name="store" type="string" use="required" />
-    <!-- TODO: The following bool value is probably good during development, but should
-    be false otherwise. -->
-    <attribute name="overwrite" type="boolean" default="true" />
+      <choice minOccurs="0" maxOccurs="unbounded">
+          <element name="postprocess" type="swf:postprocessType" />
+      </choice>
+      <attribute name="store" type="string" use="required" />
+      <!-- TODO: The following bool value is probably good during development, but should
+        be false otherwise. -->
+      <attribute name="overwrite" type="boolean" default="true" />
   </complexType>
 
   <complexType name="vidoutType">
@@ -177,7 +185,7 @@
       <extension base="swf:transformRelativeToType">
         <attribute name="type" type="swf:insRefTypeType" use="required" />
         <attribute name="src" type="string" use="required" />
-        <attribute name="id" type="string" />
+        <attribute name="id" type="ID" use="required" />
         <attribute name="class" type="string">
           <annotation>
             <!-- This will be enforced in code. -->
@@ -198,7 +206,7 @@
   <complexType name="movieclipType">
     <attribute name="swf" type="IDREF" use="optional"/>
     <attribute name="type" type="swf:mcRefTypeType" use="required" />
-    <attribute name="id" type="string" use="required" />
+    <attribute name="id" type="ID" use="required" />
     <attribute name="src" type="string" use="required" />
     <attribute name="cachekey" type="string" />
     <attribute name="class" type="string">

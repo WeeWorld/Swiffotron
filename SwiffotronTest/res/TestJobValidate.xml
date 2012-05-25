@@ -38,14 +38,14 @@
         <swfout store="store://store/12345.swf" />
         <pngout store="store://store/12345.png" overwrite="false"/>
 
-        <movieclip id="123456" type="swf" src="s123456"/>
-        <instance id="123456" type="movieclip" src="123456" y="25"/>
+        <movieclip id="a123456" type="swf" src="s123456"/>
+        <instance id="b123456" type="movieclip" src="i123456" y="25"/>
 
-        <movieclip id="123459" type="swf" src="s123459"/>
-        <instance id="123459" type="movieclip" src="123459"/>
+        <movieclip id="c123459" type="swf" src="s123459"/>
+        <instance id="d123459" type="movieclip" src="h123459"/>
 
-        <movieclip id="1234568" type="swf" src="s1234568"/>
-        <instance id="1234568" type="movieclip" src="1234568"/>
+        <movieclip id="e1234568" type="swf" src="s1234568"/>
+        <instance id="f1234568" type="movieclip" src="g1234568"/>
 
     </swf>
 

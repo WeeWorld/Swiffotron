@@ -142,7 +142,9 @@
       <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="res\TestSimpleJob.xml" />
-    <EmbeddedResource Include="res\TestJobValidate.xml" />
+    <EmbeddedResource Include="res\TestJobValidate.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
     <EmbeddedResource Include="res\config.xml" />
   </ItemGroup>
   <ItemGroup>
