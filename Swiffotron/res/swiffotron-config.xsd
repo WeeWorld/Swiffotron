@@ -20,18 +20,48 @@
   </complexType>
 
   <complexType name="cacheType">
-    <attribute name="name" type="string" use="required" />
-    <attribute name="assembly" type="string">
-      <annotation>
-        <documentation>
-            Omit the assembly attribute to reference classes in the Swiffotron assembly. Otherwise this can
-            be an assembly name (e.g. 'Swiffotron, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null')
-            or a path to a DLL (e.g. 'C:\bin\MyLib.dll'). If the latter, then it must end with '.dll'.
-        </documentation>
-      </annotation>
-    </attribute>
-    <attribute name="classname" type="string" use="required" />
-    <attribute name="init" type="string" />
+      <attribute name="name" type="string" use="required" />
+      <attribute name="assembly" type="string">
+          <annotation>
+              <documentation>
+                  Omit the assembly attribute to reference classes in the Swiffotron assembly. Otherwise this can
+                  be an assembly name (e.g. 'Swiffotron, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null')
+                  or a path to a DLL (e.g. 'C:\bin\MyLib.dll'). If the latter, then it must end with '.dll'.
+              </documentation>
+          </annotation>
+      </attribute>
+      <attribute name="classname" type="string" use="required" />
+      <attribute name="init" type="string" />
+  </complexType>
+
+  <complexType name="postprocessorType">
+      <attribute name="name" type="string" use="required" />
+      <attribute name="assembly" type="string">
+          <annotation>
+              <documentation>
+                  Omit the assembly attribute to reference classes in the Swiffotron assembly. Otherwise this can
+                  be an assembly name (e.g. 'Swiffotron, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null')
+                  or a path to a DLL (e.g. 'C:\bin\MyLib.dll'). If the latter, then it must end with '.dll'.
+              </documentation>
+          </annotation>
+      </attribute>
+      <attribute name="classname" type="string" use="required" />
+      <attribute name="init" type="string" />
+  </complexType>
+
+  <complexType name="preprocessorType">
+      <attribute name="name" type="string" use="required" />
+      <attribute name="assembly" type="string">
+          <annotation>
+              <documentation>
+                  Omit the assembly attribute to reference classes in the Swiffotron assembly. Otherwise this can
+                  be an assembly name (e.g. 'Swiffotron, Version=0.1.0.0, Culture=neutral, PublicKeyToken=null')
+                  or a path to a DLL (e.g. 'C:\bin\MyLib.dll'). If the latter, then it must end with '.dll'.
+              </documentation>
+          </annotation>
+      </attribute>
+      <attribute name="classname" type="string" use="required" />
+      <attribute name="init" type="string" />
   </complexType>
 
   <simpleType name="htmlType">
@@ -61,6 +91,8 @@
       <sequence>
         <element name="store" type="con:storeType" minOccurs="1" maxOccurs="unbounded" />
         <element name="cache" type="con:cacheType" minOccurs="0" maxOccurs="unbounded" />
+        <element name="preprocessor" type="con:preprocessorType" minOccurs="0" maxOccurs="unbounded" />
+        <element name="postprocessor" type="con:postprocessorType" minOccurs="0" maxOccurs="unbounded" />
         <element name="swfprefs" type="con:swfPrefsType" minOccurs="1" maxOccurs="1" />
         <element name="htmlType" type="con:htmlType" default="JQuery" minOccurs="0" maxOccurs="1" />
         <element name="htmlStandalone" type="boolean" default="false" minOccurs="0" maxOccurs="1" />

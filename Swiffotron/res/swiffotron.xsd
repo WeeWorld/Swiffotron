@@ -48,20 +48,15 @@
       <enumeration value="mpg" />
     </restriction>
   </simpleType>
-    
-    <complexType name="postprocessType">
-        <attribute name="container" type="swf:vidContainerType" default="avi" />
-        <attribute name="compression" type="string" use="required" />
-    </complexType>
 
   <complexType name="outputType">
-      <choice minOccurs="0" maxOccurs="unbounded">
-          <element name="postprocess" type="swf:postprocessType" />
-      </choice>
-      <attribute name="store" type="string" use="required" />
-      <!-- TODO: The following bool value is probably good during development, but should
-        be false otherwise. -->
-      <attribute name="overwrite" type="boolean" default="true" />
+    <choice minOccurs="0" maxOccurs="unbounded">
+        <element name="postprocess" type="swf:postprocessType" />
+    </choice>
+    <attribute name="store" type="string" use="required" />
+    <!-- TODO: The following bool value is probably good during development, but should
+      be false otherwise. -->
+    <attribute name="overwrite" type="boolean" default="true" />
   </complexType>
 
   <complexType name="vidoutType">
@@ -73,7 +68,7 @@
     </complexContent>
   </complexType>
 
-    <complexType name="swfOutputType">
+  <complexType name="swfOutputType">
     <complexContent>
       <extension base="swf:outputType">
         <attribute name="protected" default="false">
@@ -176,9 +171,24 @@
      not error only if the name is a pattern. -->
     <attribute name="qname" type="string" use="required" />
   </complexType>
-  
-  
-  <!-- TODO: Consistency of terms.. id/name/swf etc etc. Esp. 'name' vs 'id'. -->
+
+  <complexType name="preprocessType">
+    <attribute name="processor" type="string" use="required" />
+    <attribute name="param" type="string" use="optional" />
+  </complexType>
+
+  <complexType name="postprocessType">
+    <!-- Destructive postprocess replaces the output of the parent output tag. Non-destructive
+     produces a whole new output. -->
+    <attribute name="destructive" type="boolean" default="false" />
+    <!-- If a cache key is specified, and the postprocess is destructive, this is an XML error -->
+    <attribute name="cache" type="string" use="optional" />
+    <attribute name="store" type="string" use="optional" />
+    <attribute name="processor" type="string" use="required" />
+    <attribute name="param" type="string" use="optional" />
+  </complexType>
+
+    <!-- TODO: Consistency of terms.. id/name/swf etc etc. Esp. 'name' vs 'id'. -->
 
   <complexType name="instanceType">
     <complexContent>

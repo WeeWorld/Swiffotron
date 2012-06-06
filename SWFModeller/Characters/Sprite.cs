@@ -267,6 +267,7 @@ namespace SWFProcessing.SWFModeller.Characters
         /// <returns>A string rendition of this sprite.</returns>
         public override string ToString()
         {
+#if DEBUG
             string id = this._root.IDFor(this);
 
             if (id == null)
@@ -292,6 +293,16 @@ namespace SWFProcessing.SWFModeller.Characters
                 }
 
             }
+#else
+            if (this.Class != null)
+            {
+                return "[sprite " + this.Class + "]";
+            }
+            else
+            {
+                return "[sprite]";
+            }
+#endif
         }
 
         /// <summary>
