@@ -306,9 +306,9 @@ namespace SWFProcessing.Swiffotron
             using (Stream s = stores.Open(this.Context, path))
             {
                 string name = null;
+                name = new Uri(path).AbsolutePath.Substring(1);
 
 #if DEBUG
-                name = new Uri(path).AbsolutePath.Substring(1);
 
                 if (this.readLogHandler != null)
                 {
