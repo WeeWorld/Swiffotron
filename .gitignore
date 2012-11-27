@@ -11,3 +11,6 @@ TestResults/*
 setup.exe
 TestResultsExpress
 *.crunchsolution.cache
+_UpgradeReport_Files
+UpgradeLog.htm
+UpgradeLog.XML
